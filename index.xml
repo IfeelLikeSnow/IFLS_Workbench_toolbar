@@ -1,27 +1,26 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <index version="1" name="IFLS Workbench Toolbar">
-  <category name="Scripts">
-    <category name="IFLS Workbench">
-      <reapack name="IFLS_Workbench_Explode_Fieldrec.lua" type="script">
-        <version name="0.1.1" author="I feel like snow" time="1767995939">
-          <source file="Scripts/IFLS Workbench/IFLS_Workbench_Explode_Fieldrec.lua" />
-        </version>
-      </reapack>
-      <reapack name="IFLS_Workbench_Explode_AutoBus_Smart_Route.lua" type="script">
-        <version name="1.0.0" author="IFLS (adapted for IFLS Workbench by I feel like snow)" time="1767995939">
-          <source file="Scripts/IFLS Workbench/IFLS_Workbench_Explode_AutoBus_Smart_Route.lua" />
-        </version>
-      </reapack>
-      <reapack name="IFLS_Workbench_PolyWAV_Toolbox.lua" type="script">
-        <version name="1.0.0" author="DF95 (ported for IFLS Workbench by I feel like snow)" time="1767995939">
-          <source file="Scripts/IFLS Workbench/IFLS_Workbench_PolyWAV_Toolbox.lua" />
-        </version>
-      </reapack>
-      <reapack name="IFLS_Workbench_Install_Toolbar.lua" type="script">
-        <version name="1.0.0" author="I feel like snow" time="1767995939">
-          <source file="Scripts/IFLS Workbench/IFLS_Workbench_Install_Toolbar.lua" />
-        </version>
-      </reapack>
-    </category>
+  <category name="IFLS Workbench">
+    <reapack name="IFLS_Workbench_Explode_Fieldrec.lua" type="script" desc="Explode polyWAV/multichannel items, create IFLSWB buses, apply basic mic EQ profiles.">
+      <version name="0.1.1" time="1767960000">
+        <source file="Scripts/IFLS_Workbench/IFLS_Workbench_Explode_Fieldrec.lua">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Scripts/IFLS_Workbench/IFLS_Workbench_Explode_Fieldrec.lua</source>
+        <source file="Scripts/IFLS_Workbench/lib/ifls_workbench_mic_profiles.lua">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Scripts/IFLS_Workbench/lib/ifls_workbench_mic_profiles.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Explode_AutoBus_Smart_Route.lua" type="script" desc="Explode + create FX/Color/Master buses + routing (standalone, based on DF95).">
+      <version name="1.0.0" time="1767960000">
+        <source file="Scripts/IFLS_Workbench/IFLS_Workbench_Explode_AutoBus_Smart_Route.lua">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Scripts/IFLS_Workbench/IFLS_Workbench_Explode_AutoBus_Smart_Route.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_PolyWAV_Toolbox.lua" type="script" desc="ImGui toolbox for PolyWAV (Zoom F6 mapping tools) (based on DF95). Requires ReaImGui.">
+      <version name="1.0.0" time="1767960000">
+        <source file="Scripts/IFLS_Workbench/IFLS_Workbench_PolyWAV_Toolbox.lua">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Scripts/IFLS_Workbench/IFLS_Workbench_PolyWAV_Toolbox.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Install_Toolbar.lua" type="script" desc="Helper: register scripts in Action List + open toolbar customization dialog.">
+      <version name="1.0.0" time="1767960000">
+        <source file="Scripts/IFLS_Workbench/IFLS_Workbench_Install_Toolbar.lua">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Scripts/IFLS_Workbench/IFLS_Workbench_Install_Toolbar.lua</source>
+      </version>
+    </reapack>
   </category>
 </index>

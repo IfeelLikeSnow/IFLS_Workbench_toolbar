@@ -1,12 +1,12 @@
-# REAPER / temp
+# REAPER
 *.RPP-bak
-*.RPP~ 
+*.RPP~
+*.reapeaks
+*.wav.reapeaks
+*.flac.reapeaks
+
+# OS / tooling
 .DS_Store
 Thumbs.db
-
-# OS/editor
-.vscode/
 .idea/
-
-# logs
-*.log
+.vscode/
