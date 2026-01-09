@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # IFLS_Workbench_toolbar
 
 Minimal REAPER Workbench Toolbar Repo für **Field Recordings → automatisch Samples bauen (später)**.
@@ -30,3 +31,56 @@ Ergebnis:
 ## Notes
 - Default ist **non-destructive** (keine Render/Glue Actions).
 - Späteres Slicing/Commit kann als separates Script ergänzt werden.
+=======
+# IFLS Workbench Toolbar (ReaPack)
+
+This repository is meant to be installed **as its own ReaPack repository** (no DF95 installation required).
+
+## Install (ReaPack)
+
+1. In REAPER: **Extensions > ReaPack > Import repositories…**
+2. Add this URL:
+
+`https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/index.xml`
+
+Then: **Extensions > ReaPack > Synchronize packages** and install the packages you want.
+
+(If you don’t see new actions immediately, restart REAPER once.)
+
+## First run: generate a toolbar file
+
+After installing the scripts, run:
+
+- **IFLS Workbench: Install / Generate Toolbar file**
+
+It will create:
+
+`REAPER/ResourcePath/MenuSets/IFLS_Workbench.Toolbar.ReaperMenuSet`
+
+Then import it via:
+
+**Options > Customize toolbars… > Import…**
+
+## Scripts included
+
+- **IFLS Workbench: Explode Fieldrec**  
+  Explode polywav/multichannel items, create a simple bus chain, and apply mic EQ based on track names.
+
+- **IFLS Workbench: Explode AutoBus + Route**  
+  Creates/ensures FX/Coloring/Master busses and routes source tracks through them.
+
+- **IFLS Workbench: PolyWAV Toolbox (ImGui)**  
+  ImGui toolbox for PolyWAV/fieldrec workflows (requires ReaImGui).
+
+## Mic profiles
+
+The mic presets live in:
+
+`Scripts/IFLS Workbench/lib/ifls_workbench_mic_profiles.lua`
+
+Edit it to add/adjust profiles.
+
+## Notes on DF95
+
+A couple of scripts in this repository are adapted from a DF95 source snapshot you provided. They have been adjusted to work as a standalone IFLS repository.
+>>>>>>> c7aa947 (IFLS Workbench Toolbar)

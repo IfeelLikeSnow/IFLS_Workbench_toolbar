@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<index version="1" name="IFLS Workbench Toolbar">
+  <category name="Scripts">
+    <category name="IFLS Workbench">
+      <reapack name="IFLS_Workbench_Explode_Fieldrec.lua" type="script">
+        <version name="0.1.1" author="I feel like snow" time="1767995939">
+          <source file="Scripts/IFLS Workbench/IFLS_Workbench_Explode_Fieldrec.lua" />
+        </version>
+      </reapack>
+      <reapack name="IFLS_Workbench_Explode_AutoBus_Smart_Route.lua" type="script">
+        <version name="1.0.0" author="IFLS (adapted for IFLS Workbench by I feel like snow)" time="1767995939">
+          <source file="Scripts/IFLS Workbench/IFLS_Workbench_Explode_AutoBus_Smart_Route.lua" />
+        </version>
+      </reapack>
+      <reapack name="IFLS_Workbench_PolyWAV_Toolbox.lua" type="script">
+        <version name="1.0.0" author="DF95 (ported for IFLS Workbench by I feel like snow)" time="1767995939">
+          <source file="Scripts/IFLS Workbench/IFLS_Workbench_PolyWAV_Toolbox.lua" />
+        </version>
+      </reapack>
+      <reapack name="IFLS_Workbench_Install_Toolbar.lua" type="script">
+        <version name="1.0.0" author="I feel like snow" time="1767995939">
+          <source file="Scripts/IFLS Workbench/IFLS_Workbench_Install_Toolbar.lua" />
+        </version>
+      </reapack>
+    </category>
+  </category>
+</index>
