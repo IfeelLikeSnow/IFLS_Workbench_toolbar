@@ -1,9 +1,9 @@
 -- @description IFLS Workbench: Explode Fieldrec + Mic FX + Buses
--- @version 0.1.1
+-- @version 0.1.2
 -- @author I feel like snow
 -- @about
 --   Select imported polywav/multichannel (or single wav) items and run:
---   - Explode multichannel items to one-channel items (Action 40894)
+--   - Explode multichannel items to one-channel items (tries common command IDs)
 --   - Create routing: Mic Tracks -> FX BUS -> COLOR BUS -> MASTER BUS
 --   - Apply basic mic cleanup (ReaEQ HPF + optional presence band) based on track name matching.
 
@@ -163,11 +163,28 @@ local function ensure_project_96k()
 end
 
 local function explode_selected_items()
-  -- 40894: Item: Explode multichannel audio or MIDI to new one-channel items
-  run_explode_multichannel()
+  -- Explode multichannel items (if selected items are multichannel).
+  -- Returns command id used, or nil if nothing changed.
+  return run_explode_multichannel()
 end
 
-local function collect_tracks_from_selected_items()
+local function track_guid(tr)
+  local _, guid = r.GetSetMediaTrackInfo_String(tr, "GUID", "", false)
+  return guid
+end
+
+local function snapshot_track_guids()
+  local set = {}
+  local n = r.CountTracks(0)
+  for i = 0, n-1 do
+    local tr = r.GetTrack(0, i)
+    local g = track_guid(tr)
+    if g and g ~= "" then set[g] = true end
+  end
+  return set
+end
+
+local function collect_source_tracks_from_selected_items()
   local map, list = {}, {}
   local n = r.CountSelectedMediaItems(0)
   for i=0,n-1 do
@@ -183,6 +200,23 @@ local function collect_tracks_from_selected_items()
   end)
   return list
 end
+
+local function collect_new_tracks_since(before_guids)
+  local list = {}
+  local n = r.CountTracks(0)
+  for i = 0, n-1 do
+    local tr = r.GetTrack(0, i)
+    local g = track_guid(tr)
+    if g and g ~= "" and not before_guids[g] then
+      list[#list+1] = tr
+    end
+  end
+  table.sort(list, function(a,b)
+    return r.GetMediaTrackInfo_Value(a, "IP_TRACKNUMBER") < r.GetMediaTrackInfo_Value(b, "IP_TRACKNUMBER")
+  end)
+  return list
+end
+
 
 local function create_bus_chain(after_track)
   local last_num = r.GetMediaTrackInfo_Value(after_track, "IP_TRACKNUMBER") -- 1-based
@@ -211,9 +245,18 @@ local function run()
   r.PreventUIRefresh(1)
 
   ensure_project_96k()
+
+  -- Snapshot tracks BEFORE explode because REAPER's explode action may not keep items selected.
+  local before = snapshot_track_guids()
+  local src_tracks = collect_source_tracks_from_selected_items()
+
   explode_selected_items()
 
-  local mic_tracks = collect_tracks_from_selected_items()
+  local new_tracks = collect_new_tracks_since(before)
+
+  -- Prefer tracks created by explode; fallback to the original source tracks (mono WAV etc.).
+  local mic_tracks = (#new_tracks > 0) and new_tracks or src_tracks
+
   if #mic_tracks == 0 then
     r.PreventUIRefresh(-1)
     r.Undo_EndBlock("IFLS Workbench: Explode + Bus Chain + Mic FX", -1)

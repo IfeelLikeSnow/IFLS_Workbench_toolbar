@@ -2,7 +2,7 @@
 <index version="1" name="IFLS Workbench Toolbar">
   <category name="IFLS Workbench">
     <reapack name="IFLS_Workbench_Explode_Fieldrec.lua" type="script" desc="Explode polyWAV/multichannel items, create IFLSWB buses, apply basic mic EQ profiles.">
-      <version name="0.1.1" time="1767960000">
+      <version name="0.1.2" time="1767998816">
         <source file="Scripts/IFLS_Workbench/IFLS_Workbench_Explode_Fieldrec.lua">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Scripts/IFLS_Workbench/IFLS_Workbench_Explode_Fieldrec.lua</source>
         <source file="Scripts/IFLS_Workbench/lib/ifls_workbench_mic_profiles.lua">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Scripts/IFLS_Workbench/lib/ifls_workbench_mic_profiles.lua</source>
       </version>
