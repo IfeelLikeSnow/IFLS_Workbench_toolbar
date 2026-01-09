@@ -1,0 +1,12 @@
+# REAPER / temp
+*.RPP-bak
+*.RPP~ 
+.DS_Store
+Thumbs.db
+
+# OS/editor
+.vscode/
+.idea/
+
+# logs
+*.log
