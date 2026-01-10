@@ -1,5 +1,5 @@
 --@description IFLS Workbench: Dump ALL FX params (EnumInstalledFX, prefer VST3, strong match, resume, CSV+NDJSON)
---@version 0.3.1
+--@version 0.3.2
 --@author IFLS (ported from DF95)
 --@about
 --  Enumerates all REAPER-recognized FX via EnumInstalledFX().
@@ -410,22 +410,6 @@ local function try_add_fx(track, fxname, fxdisplay, fxtype, basename)
 end
 
 
-  -- 3) if VST2, try VST3 with same base
-  local _, pref0 = normalize_base(display_name)
-  local pU = (pref0 or ""):upper()
-  if pU == "VST" or pU == "VST2" then
-    local c = "VST3: " .. base
-    idx = r.TrackFX_AddByName(tmp_tr, c, false, -1)
-    if idx >= 0 then return idx, c end
-  end
-
-  -- 4) base only
-  local base_only = (select(1, normalize_base(display_name)))
-  idx = r.TrackFX_AddByName(tmp_tr, base_only, false, -1)
-  if idx >= 0 then return idx, base_only end
-
-  return -1, display_name
-end
 
 local function get_param_ident(track, fx, p)
   if r.TrackFX_GetParamIdent then
