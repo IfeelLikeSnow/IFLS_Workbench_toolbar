@@ -1,5 +1,5 @@
 -- @description IFLS Workbench: Dump All FX Params (EnumInstalledFX, Resume, CSV+NDJSON)
--- @version 0.2.1
+-- @version 0.2.4
 -- @author IFLS (ported from IFLSWB)
 -- @about
 --   Scans installed FX via EnumInstalledFX() and instantiates them on a temporary track to read parameters.
@@ -346,9 +346,6 @@ local function get_steps(track, fx, p)
   return "", "", "", ""
 end
 
-  end
-  return "", "", ""
-end
 
 ----------------------------------------------------------------
 -- Scan
