@@ -1,5 +1,5 @@
 --@description IFLS Workbench: Dump ALL FX params (EnumInstalledFX, prefer VST3, strong match, resume, CSV+NDJSON)
---@version 0.2.7
+--@version 0.2.8
 --@author IFLS (ported from DF95)
 --@about
 --  Enumerates all REAPER-recognized FX via EnumInstalledFX().
@@ -436,18 +436,17 @@ local failed = 0
 
 local scanned_count = 0
 for _, fx in ipairs(final_list) do
-  if fx.idx and fx.idx < START_FROM_INDEX then goto continue_fx end
+  local skip_fx = false
   if MAX_TO_SCAN > 0 and scanned_count >= MAX_TO_SCAN then break end
-  if should_skip_fx(fx) then goto continue_fx end
-  scanned_count = scanned_count + 1
+  if not skip_fx then
+    scanned_count = scanned_count + 1
   local key = tostring(fx.ident or "")
   if key == "" then key = tostring(fx.name or "") end
   if ENUM_ONLY then
-    f_plugins:write(string.format("%s,%s,%s,%s,%d,%s,%d\n", csv_escape(fx.display), csv_escape(key), csv_escape(fx.fx_type), csv_escape(fx.base), 0, csv_escape("ENUM_ONLY"), 0))
+    f_plugins:write(string.format("%s,%s,%s,%s,%d,%s,%d\n", csv_escape(fx.name), csv_escape(key), csv_escape(fx.fx_type), csv_escape(fx.base), 0, csv_escape("ENUM_ONLY"), 0))
     f_plugins:flush()
     done[key] = true
     save_progress(progress_js, done)
-    goto continue_fx
   end
   if key == "" then key = tostring(fx.name or "") end
   if done[key] then
@@ -535,6 +534,7 @@ for _, fx in ipairs(final_list) do
   if (scanned + skipped + failed) % 50 == 0 then
     r.UpdateArrange()
   end
+  end -- if not skip_fx
 end
 
 ----------------------------------------------------------------
