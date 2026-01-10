@@ -1,26 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <index version="1" name="IFLS Workbench Toolbar">
   <category name="IFLS Workbench">
-    <reapack name="IFLS_Workbench_Explode_Fieldrec.lua" type="script" desc="Explode polyWAV/multichannel items, create IFLSWB buses, apply basic mic EQ profiles.">
-      <version name="0.1.2" time="1767998816">
+    <reapack name="IFLS_Workbench_Explode_Fieldrec.lua" type="script" desc="IFLS Workbench: Explode Fieldrec + Mic FX + Buses">
+      <version name="0.1.3" time="1768001121">
         <source file="Scripts/IFLS_Workbench/IFLS_Workbench_Explode_Fieldrec.lua">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Scripts/IFLS_Workbench/IFLS_Workbench_Explode_Fieldrec.lua</source>
         <source file="Scripts/IFLS_Workbench/lib/ifls_workbench_mic_profiles.lua">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Scripts/IFLS_Workbench/lib/ifls_workbench_mic_profiles.lua</source>
       </version>
     </reapack>
-    <reapack name="IFLS_Workbench_Explode_AutoBus_Smart_Route.lua" type="script" desc="Explode + create FX/Color/Master buses + routing (standalone, based on DF95).">
-      <version name="1.0.0" time="1767960000">
+    <reapack name="IFLS_Workbench_Explode_AutoBus_Smart_Route.lua" type="script" desc="IFLS Workbench: Explode AutoBus Smart + Route (FX/Color/Master)">
+      <version name="1.0" time="1768001121">
         <source file="Scripts/IFLS_Workbench/IFLS_Workbench_Explode_AutoBus_Smart_Route.lua">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Scripts/IFLS_Workbench/IFLS_Workbench_Explode_AutoBus_Smart_Route.lua</source>
       </version>
     </reapack>
-    <reapack name="IFLS_Workbench_PolyWAV_Toolbox.lua" type="script" desc="ImGui toolbox for PolyWAV (Zoom F6 mapping tools) (based on DF95). Requires ReaImGui.">
-      <version name="1.0.0" time="1767960000">
+    <reapack name="IFLS_Workbench_PolyWAV_Toolbox.lua" type="script" desc="IFLS Workbench: PolyWAV Toolbox (ImGui)">
+      <version name="1.0" time="1768001121">
         <source file="Scripts/IFLS_Workbench/IFLS_Workbench_PolyWAV_Toolbox.lua">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Scripts/IFLS_Workbench/IFLS_Workbench_PolyWAV_Toolbox.lua</source>
       </version>
     </reapack>
-    <reapack name="IFLS_Workbench_Install_Toolbar.lua" type="script" desc="Helper: register scripts in Action List + open toolbar customization dialog.">
-      <version name="1.0.0" time="1767960000">
+    <reapack name="IFLS_Workbench_Install_Toolbar.lua" type="script" desc="IFLS Workbench: Install helpers (register scripts + open toolbar customization)">
+      <version name="1.0" time="1768001121">
         <source file="Scripts/IFLS_Workbench/IFLS_Workbench_Install_Toolbar.lua">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Scripts/IFLS_Workbench/IFLS_Workbench_Install_Toolbar.lua</source>
       </version>
     </reapack>
-  </category>
+    <reapack name="IFLS_Workbench_MicFX_Profile_GUI.lua" type="script" desc="IFLS Workbench - MicFX Profile GUI (FXChain-aware .fxlist loader)">
+      <version name="0.1.0" time="1768001121">
+        <source file="Scripts/IFLS_Workbench/IFLS_Workbench_MicFX_Profile_GUI.lua">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Scripts/IFLS_Workbench/IFLS_Workbench_MicFX_Profile_GUI.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Apply_MicFX_ByTrackName_v2.lua" type="script" desc="IFLS Workbench: Apply MicFX By TrackName v2 (default profile)">
+      <version name="0.1.0" time="1768001121">
+        <source file="Scripts/IFLS_Workbench/IFLS_Workbench_Apply_MicFX_ByTrackName_v2.lua">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Scripts/IFLS_Workbench/IFLS_Workbench_Apply_MicFX_ByTrackName_v2.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_MicFX_ParamApply_v3_6.lua" type="script" desc="IFLS Workbench - MicFX ParamApply v3.6 (LiveAware – JSFX Meter, Drive &amp; Comp Bias)">
+      <version name="0.1.0" time="1768001121">
+        <source file="Scripts/IFLS_Workbench/IFLS_Workbench_MicFX_ParamApply_v3_6.lua">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Scripts/IFLS_Workbench/IFLS_Workbench_MicFX_ParamApply_v3_6.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_MicFX_Assets" type="data" desc="IFLS Workbench: MicFX assets (fxlists, FXChains, JSFX meter, JSON maps)">
+      <version name="0.1.0" time="1768001121">
+        <source file="Scripts/IFLS_Workbench/MicFX/B1.fxlist">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Scripts/IFLS_Workbench/MicFX/B1.fxlist</source>
+        <source file="Scripts/IFLS_Workbench/MicFX/C2.fxlist">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Scripts/IFLS_Workbench/MicFX/C2.fxlist</source>
+        <source file="Scripts/IFLS_Workbench/MicFX/CM300.fxlist">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Scripts/IFLS_Workbench/MicFX/CM300.fxlist</source>
+        <source file="Scripts/IFLS_Workbench/MicFX/Cortado MK3.fxlist">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Scripts/IFLS_Workbench/MicFX/Cortado MK3.fxlist</source>
+        <source file="Scripts/IFLS_Workbench/MicFX/Geofon.fxlist">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Scripts/IFLS_Workbench/MicFX/Geofon.fxlist</source>
+        <source file="Scripts/IFLS_Workbench/MicFX/MCM Telecoil.fxlist">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Scripts/IFLS_Workbench/MicFX/MCM Telecoil.fxlist</source>
+        <source file="Scripts/IFLS_Workbench/MicFX/MD400.fxlist">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Scripts/IFLS_Workbench/MicFX/MD400.fxlist</source>
+        <source file="Scripts/IFLS_Workbench/MicFX/NTG4+.fxlist">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Scripts/IFLS_Workbench/MicFX/NTG4+.fxlist</source>
+        <source file="Scripts/IFLS_Workbench/MicFX/SOMA Ether V2.fxlist">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Scripts/IFLS_Workbench/MicFX/SOMA Ether V2.fxlist</source>
+        <source file="Scripts/IFLS_Workbench/MicFX/TG-V35S.fxlist">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Scripts/IFLS_Workbench/MicFX/TG-V35S.fxlist</source>
+        <source file="Scripts/IFLS_Workbench/MicFX/XM8500.fxlist">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Scripts/IFLS_Workbench/MicFX/XM8500.fxlist</source>
+        <source file="Scripts/IFLS_Workbench/lib/ifls_workbench_micfx_profiles.lua">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Scripts/IFLS_Workbench/lib/ifls_workbench_micfx_profiles.lua</source>
+        <source file="Data/IFLS Workbench/DF95_ParamMaps_AO_AW.json">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Data/IFLS%20Workbench/DF95_ParamMaps_AO_AW.json</source>
+        <source file="Data/IFLS Workbench/MicFX_Profiles_v3.json">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Data/IFLS%20Workbench/MicFX_Profiles_v3.json</source>
+        <source file="FXChains/IFLS Workbench/Mic/DF95_Mic_Fallback_Clean.rfxchain">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/FXChains/IFLS%20Workbench/Mic/DF95_Mic_Fallback_Clean.rfxchain</source>
+        <source file="FXChains/IFLS Workbench/Mic/Mic_B1_Mono.rfxchain">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/FXChains/IFLS%20Workbench/Mic/Mic_B1_Mono.rfxchain</source>
+        <source file="FXChains/IFLS Workbench/Mic/Mic_C2_Mono.rfxchain">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/FXChains/IFLS%20Workbench/Mic/Mic_C2_Mono.rfxchain</source>
+        <source file="FXChains/IFLS Workbench/Mic/Mic_C2_Stereo.rfxchain">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/FXChains/IFLS%20Workbench/Mic/Mic_C2_Stereo.rfxchain</source>
+        <source file="FXChains/IFLS Workbench/Mic/Mic_CM300_Mono.rfxchain">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/FXChains/IFLS%20Workbench/Mic/Mic_CM300_Mono.rfxchain</source>
+        <source file="FXChains/IFLS Workbench/Mic/Mic_CM300_Stereo.rfxchain">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/FXChains/IFLS%20Workbench/Mic/Mic_CM300_Stereo.rfxchain</source>
+        <source file="FXChains/IFLS Workbench/Mic/Mic_Cortado_Mono.rfxchain">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/FXChains/IFLS%20Workbench/Mic/Mic_Cortado_Mono.rfxchain</source>
+        <source file="FXChains/IFLS Workbench/Mic/Mic_Cortado_Stereo.rfxchain">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/FXChains/IFLS%20Workbench/Mic/Mic_Cortado_Stereo.rfxchain</source>
+        <source file="FXChains/IFLS Workbench/Mic/Mic_Ether_Mono.rfxchain">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/FXChains/IFLS%20Workbench/Mic/Mic_Ether_Mono.rfxchain</source>
+        <source file="FXChains/IFLS Workbench/Mic/Mic_Geofon_Mono.rfxchain">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/FXChains/IFLS%20Workbench/Mic/Mic_Geofon_Mono.rfxchain</source>
+        <source file="FXChains/IFLS Workbench/Mic/Mic_MCM_Telecoil_Mono.rfxchain">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/FXChains/IFLS%20Workbench/Mic/Mic_MCM_Telecoil_Mono.rfxchain</source>
+        <source file="FXChains/IFLS Workbench/Mic/Mic_MCM_Telecoil_Stereo.rfxchain">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/FXChains/IFLS%20Workbench/Mic/Mic_MCM_Telecoil_Stereo.rfxchain</source>
+        <source file="FXChains/IFLS Workbench/Mic/Mic_MD400_Mono.rfxchain">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/FXChains/IFLS%20Workbench/Mic/Mic_MD400_Mono.rfxchain</source>
+        <source file="FXChains/IFLS Workbench/Mic/Mic_NTG4Plus_Mono.rfxchain">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/FXChains/IFLS%20Workbench/Mic/Mic_NTG4Plus_Mono.rfxchain</source>
+        <source file="FXChains/IFLS Workbench/Mic/Mic_TGV35s_Mono.rfxchain">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/FXChains/IFLS%20Workbench/Mic/Mic_TGV35s_Mono.rfxchain</source>
+        <source file="FXChains/IFLS Workbench/Mic/Mic_XM8500_Mono.rfxchain">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/FXChains/IFLS%20Workbench/Mic/Mic_XM8500_Mono.rfxchain</source>
+        <source file="FXChains/IFLS Workbench/Mic/Mono_Outdoor_WindSafe.rfxchain">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/FXChains/IFLS%20Workbench/Mic/Mono_Outdoor_WindSafe.rfxchain</source>
+        <source file="FXChains/IFLS Workbench/Mic/Stereo_Pair_Safe.rfxchain">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/FXChains/IFLS%20Workbench/Mic/Stereo_Pair_Safe.rfxchain</source>
+        <source file="Effects/IFLS Workbench/DF95_Dynamic_Meter_v1.jsfx">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Effects/IFLS%20Workbench/DF95_Dynamic_Meter_v1.jsfx</source>
+      </version>
+    </reapack>
+  <reapack name="IFLS_Workbench_Dump_All_FX_Params_EnumInstalledFX_Resume_CSV_NDJSON.lua" type="script" desc="IFLS Workbench: Dump all installed FX params (EnumInstalledFX, resume, CSV+NDJSON)"><version name="0.2.1" time="1768012183"><source file="Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Dump_All_FX_Params_EnumInstalledFX_Resume_CSV_NDJSON.lua">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/main/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Dump_All_FX_Params_EnumInstalledFX_Resume_CSV_NDJSON.lua</source></version></reapack></category>
 </index>

@@ -1,0 +1,20 @@
+
+desc: DF95 Dynamic Meter v1 (PeakNorm out)
+
+slider1:0<0,1,0.0001>PeakNorm (0..1)
+
+@init
+peak = 0;
+
+@sample
+spl0a = abs(spl0);
+spl1a = abs(spl1);
+p = max(spl0a, spl1a) + 1e-12;
+db = 20*log10(p);
+norm = (db + 60)/60; // map -60..0 to 0..1
+norm = max(0,min(1,norm));
+peak = max(peak*0.95, norm);
+slider1 = peak;
+
+@serialize
+file_var(0, peak);

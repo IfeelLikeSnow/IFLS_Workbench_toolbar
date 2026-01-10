@@ -1,0 +1,24 @@
+// META:category=mic
+// META:mode=mono
+// META:mic=SOMA_Ether
+// META:profile=emf_ambient
+<REAPER_FXCHAIN
+SHOW 0
+LASTSEL 0
+DOCKED 0
+<FX
+BYPASS 0 0 0
+VST "VST: JS: Utility/gain" gain 0
+WET 1
+>
+<FX
+BYPASS 0 0 0
+VST "VST: ReaEQ (Cockos)" reaeq.dll 0
+WET 1
+>
+<FX
+BYPASS 0 0 0
+VST "VST: ReaComp (Cockos)" reacomp.dll 0
+WET 1
+>
+>

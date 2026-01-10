@@ -46,3 +46,33 @@ ReaPack Bedienung: Extensions → ReaPack → Browse packages / Synchronize.
 Wenn du später einen „richtigen“ versionsicheren Index generieren willst, nutze **reapack-index** (Ruby gem).
 Grundprinzip: Files müssen in Subfolders liegen (nicht im Repo-Root), dann scannt `reapack-index` korrekt.
 
+
+
+
+## MicFX (neu)
+
+Dieses Repo enthält jetzt auch ein komplettes **MicFX-Pack** (Profile + FXChains + JSFX Meter + ParamMaps), **ohne** dass du das DF95-Repo in REAPER installieren musst.
+
+**Enthaltene MicFX Actions:**
+- **IFLS Workbench: MicFX Profile GUI** → wähle Mic-Profil (B1, XM8500, MD400, NTG4+, C2, Geofon, Cortado, CM300, Ether, MCM Telecoil) und setze passende FX auf allen selektierten Tracks (lädt `.fxlist`).
+- **IFLS Workbench: Apply MicFX By TrackName v2** → erkennt Mic-Namen im Track-Name und setzt Default-Profil (Gain + ReaEQ + ReaComp + optional ReaFIR/Meter).
+- **IFLS Workbench: MicFX ParamApply v3.6** → „LiveAware“ Parameter-Apply anhand Peak/Mapping (nutzt `Data/IFLS Workbench/DF95_ParamMaps_AO_AW.json`).
+
+**Mitgelieferte Assets (werden über ReaPack mitinstalliert):**
+- `Scripts/IFLS_Workbench/MicFX/*.fxlist`
+- `FXChains/IFLS Workbench/Mic/*.rfxchain`
+- `Effects/IFLS Workbench/DF95_Dynamic_Meter_v1.jsfx`
+- `Data/IFLS Workbench/DF95_ParamMaps_AO_AW.json`
+- `Data/IFLS Workbench/MicFX_Profiles_v3.json`
+
+Tipp: Wenn du bereits Explode Fieldrec nutzt, kannst du MicFX anschließend per Trackname oder GUI mit einem Klick anwenden.
+
+
+## Tools (neu)
+
+- **IFLS Workbench: Dump All FX Params (EnumInstalledFX, Resume, CSV+NDJSON)**
+  - Scannt installierte FX (EnumInstalledFX), instanziert sie auf einem Temp-Track und dump't Parameter.
+  - Output liegt unter: `REAPER resource path/Scripts/IFLS_Workbench/_ParamDumps/`
+  - Formate: CSV + NDJSON (große Datenmengen friendly)
+  - Resume: Fortschritt wird gespeichert, du kannst den Scan später fortsetzen.
+
