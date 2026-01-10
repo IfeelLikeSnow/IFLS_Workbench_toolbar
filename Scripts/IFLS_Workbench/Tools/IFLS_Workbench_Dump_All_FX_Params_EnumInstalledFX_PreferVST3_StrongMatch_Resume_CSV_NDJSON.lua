@@ -1,5 +1,5 @@
 --@description IFLS Workbench: Dump ALL FX params (EnumInstalledFX, prefer VST3, strong match, resume, CSV+NDJSON)
---@version 0.2.6
+--@version 0.2.7
 --@author IFLS (ported from DF95)
 --@about
 --  Enumerates all REAPER-recognized FX via EnumInstalledFX().
@@ -13,6 +13,40 @@ local r = reaper
 
 ----------------------------------------------------------------
 -- USER OPTIONS
+
+-- Safety / Debug switches (recommended defaults)
+local ENUM_ONLY        = false   -- true: only enumerate installed FX, do NOT instantiate (no crash risk)
+local SCAN_VST3        = true
+local SCAN_VST2        = true
+local SCAN_JSFX        = true
+local SCAN_CLAP        = false   -- CLAP can be crash-prone in some setups; enable if you want
+local SCAN_AU          = true
+local SCAN_DX          = true
+
+-- If REAPER crashes, bisect by narrowing the range:
+local START_FROM_INDEX = 0       -- start scan at this installed-FX index (EnumInstalledFX)
+local MAX_TO_SCAN      = 200     -- 0 = no limit
+
+-- Skip patterns (Lua patterns, case-insensitive via :lower())
+local SKIP_NAME_PATTERNS = {
+  -- "ilok", "pace", "license", "trial",
+}
+
+local function should_skip_fx(fx)
+  local n = (fx.name or ""):lower()
+  if n == "" then return true end
+  local t = (fx.fx_type or ""):upper()
+  if (t == "VST3" and not SCAN_VST3) or (t == "VST" and not SCAN_VST2) or (t == "JS" and not SCAN_JSFX)
+     or (t == "CLAP" and not SCAN_CLAP) or (t == "AU" and not SCAN_AU) or (t == "DX" and not SCAN_DX) then
+    return true
+  end
+  for _,pat in ipairs(SKIP_NAME_PATTERNS) do
+    if pat ~= "" and n:find(pat:lower()) then return true end
+  end
+  return false
+end
+
+
 ----------------------------------------------------------------
 -- If true, NEVER scan VST2/VST (.dll) entries. (VST3-only world)
 -- If false (default), we still scan VST2 if no matching VST3 exists.
@@ -400,8 +434,21 @@ local scanned = 0
 local skipped = 0
 local failed = 0
 
+local scanned_count = 0
 for _, fx in ipairs(final_list) do
+  if fx.idx and fx.idx < START_FROM_INDEX then goto continue_fx end
+  if MAX_TO_SCAN > 0 and scanned_count >= MAX_TO_SCAN then break end
+  if should_skip_fx(fx) then goto continue_fx end
+  scanned_count = scanned_count + 1
   local key = tostring(fx.ident or "")
+  if key == "" then key = tostring(fx.name or "") end
+  if ENUM_ONLY then
+    f_plugins:write(string.format("%s,%s,%s,%s,%d,%s,%d\n", csv_escape(fx.display), csv_escape(key), csv_escape(fx.fx_type), csv_escape(fx.base), 0, csv_escape("ENUM_ONLY"), 0))
+    f_plugins:flush()
+    done[key] = true
+    save_progress(progress_js, done)
+    goto continue_fx
+  end
   if key == "" then key = tostring(fx.name or "") end
   if done[key] then
     skipped = skipped + 1
