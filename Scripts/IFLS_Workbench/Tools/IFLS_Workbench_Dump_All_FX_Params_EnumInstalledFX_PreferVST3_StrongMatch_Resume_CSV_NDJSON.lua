@@ -1,5 +1,5 @@
 --@description IFLS Workbench: Dump ALL FX params (EnumInstalledFX, prefer VST3, strong match, resume, CSV+NDJSON)
---@version 0.2.8
+--@version 0.2.9
 --@author IFLS (ported from DF95)
 --@about
 --  Enumerates all REAPER-recognized FX via EnumInstalledFX().
@@ -433,129 +433,176 @@ local total = #final_list
 local scanned = 0
 local skipped = 0
 local failed = 0
-
 local scanned_count = 0
+
 for _, fx in ipairs(final_list) do
-  local skip_fx = false
-  if MAX_TO_SCAN > 0 and scanned_count >= MAX_TO_SCAN then break end
-  if not skip_fx then
-    scanned_count = scanned_count + 1
+  -- Range limiting / bisect
+  if fx.idx and fx.idx < START_FROM_INDEX then
+    skipped = skipped + 1
+    goto _continue
+  end
+  if MAX_TO_SCAN > 0 and scanned_count >= MAX_TO_SCAN then
+    break
+  end
+
+  if should_skip_fx(fx) then
+    skipped = skipped + 1
+    goto _continue
+  end
+
+  scanned_count = scanned_count + 1
+
   local key = tostring(fx.ident or "")
   if key == "" then key = tostring(fx.name or "") end
+
+  if key == "" then
+    skipped = skipped + 1
+    goto _continue
+  end
+
+  if done[key] then
+    skipped = skipped + 1
+    goto _continue
+  end
+
   if ENUM_ONLY then
-    f_plugins:write(string.format("%s,%s,%s,%s,%d,%s,%d\n", csv_escape(fx.name), csv_escape(key), csv_escape(fx.fx_type), csv_escape(fx.base), 0, csv_escape("ENUM_ONLY"), 0))
+    -- No instantiation: safe enumerate-only mode
+    f_plugins:write(string.format("%s,%s,%s,%s,%d,%s,%d\n",
+      csv_escape(fx.display),
+      csv_escape(key),
+      csv_escape(fx.fx_type),
+      csv_escape(fx.base),
+      0,
+      csv_escape("ENUM_ONLY"),
+      0
+    ))
     f_plugins:flush()
     done[key] = true
     save_progress(progress_js, done)
+    scanned = scanned + 1
+    goto _continue
   end
-  if key == "" then key = tostring(fx.name or "") end
-  if done[key] then
-    skipped = skipped + 1
-  else
-    clear_tmp_fx()
 
-    local fx_index, used_name = try_add_fx(fx.name)
-    local base, pref = normalize_base(used_name)
-    local fxtype = select(1, split_prefix(used_name))
-    if fxtype == "" then fxtype = pref end
+  -- Crash-safe marker BEFORE instantiation
+  write_current_fx({ idx = fx.idx, ident = fx.ident, name = fx.name })
 
-    if fx_index < 0 then
-      failed = failed + 1
-      f_fail:write(("FAILED_LOAD: %s | ident=%s\n"):format(fx.name, tostring(key)))
-      f_plugins:write(table.concat({
-        csv_escape(fx.name), csv_escape(key), csv_escape(fxtype), csv_escape(base),
-        "0", csv_escape(used_name), "0"
-      }, ",") .. "\n")
-      done[key] = true
-      save_progress(progress_js, done)
-    else
-      local num = r.TrackFX_GetNumParams(tmp_tr, fx_index)
-      if num > MAX_PARAMS_PER_PLUGIN then
-        f_fail:write(("SKIP_TOO_MANY_PARAMS: %s | ident=%s | params=%d\n"):format(used_name, tostring(key), num))
-        f_plugins:write(table.concat({
-          csv_escape(fx.name), csv_escape(key), csv_escape(fxtype), csv_escape(base),
-          "0", csv_escape(used_name), tostring(num)
-        }, ",") .. "\n")
-        done[key] = true
-        save_progress(progress_js, done)
-      else
-        -- plugin record
-        f_plugins:write(table.concat({
-          csv_escape(fx.name), csv_escape(key), csv_escape(fxtype), csv_escape(base),
-          "1", csv_escape(used_name), tostring(num)
-        }, ",") .. "\n")
-        f_plugins:flush()
+  local loaded_ok, fx_index, used_name = try_add_fx(tmp_tr, fx.name, fx.display, fx.fx_type, fx.base)
+  if not loaded_ok or fx_index < 0 then
+    failed = failed + 1
+    f_fail:write(string.format("LOAD_FAIL\tidx=%s\tident=%s\tname=%s\n",
+      tostring(fx.idx or ""),
+      tostring(fx.ident or ""),
+      tostring(fx.name or "")
+    ))
+    f_fail:flush()
 
-        -- NDJSON record (one line per plugin)
-        f_ndjson:write(string.format(
-          "{\"fx_display\":\"%s\",\"fx_ident\":\"%s\",\"fx_type\":\"%s\",\"base_name\":\"%s\",\"paramCount\":%d}\n",
-          json_escape(used_name), json_escape(key), json_escape(fxtype), json_escape(base), num
-        ))
-        f_ndjson:flush()
+    f_plugins:write(string.format("%s,%s,%s,%s,%d,%s,%d\n",
+      csv_escape(fx.display),
+      csv_escape(key),
+      csv_escape(fx.fx_type),
+      csv_escape(fx.base),
+      0,
+      csv_escape(used_name or ""),
+      0
+    ))
+    f_plugins:flush()
 
-        -- params (one line per param)
-        for p = 0, num-1 do
-          local _, pname = r.TrackFX_GetParamName(tmp_tr, fx_index, p, "")
-          local pident = get_param_ident(tmp_tr, fx_index, p)
-          local fmt = get_formatted(tmp_tr, fx_index, p)
-          local val = r.TrackFX_GetParam(tmp_tr, fx_index, p)
-          local ok, minv, maxv, midv = r.TrackFX_GetParamEx(tmp_tr, fx_index, p)
-          local _step, small, large, istoggle = get_steps(tmp_tr, fx_index, p)
+    done[key] = true
+    save_progress(progress_js, done)
+    clear_tmp_fx(tmp_tr)
+    clear_current_fx()
+    goto _continue
+  end
 
-          f_params:write(table.concat({
-            csv_escape(key),
-            csv_escape(used_name),
-            csv_escape(fxtype),
-            csv_escape(base),
-            tostring(p),
-            csv_escape(pident),
-            csv_escape(pname),
-            csv_escape(fmt),
-            string.format("%.10f", val),
-            ok and string.format("%.10f", minv) or "",
-            ok and string.format("%.10f", maxv) or "",
-            ok and string.format("%.10f", midv) or "",
-            tostring(small or ""),
-            tostring(large or ""),
-            tostring(istoggle or "")
-          }, ",") .. "\n")
-        end
-        f_params:flush()
+  -- Dump params
+  local param_count = r.TrackFX_GetNumParams(tmp_tr, fx_index) or 0
+  f_plugins:write(string.format("%s,%s,%s,%s,%d,%s,%d\n",
+    csv_escape(fx.display),
+    csv_escape(key),
+    csv_escape(fx.fx_type),
+    csv_escape(fx.base),
+    1,
+    csv_escape(used_name or ""),
+    param_count
+  ))
+  f_plugins:flush()
 
-        done[key] = true
-        save_progress(progress_js, done)
+  -- NDJSON plugin-level line
+  f_ndjson:write(string.format("{\"fx_display\":\"%s\",\"fx_ident\":\"%s\",\"fx_type\":\"%s\",\"base_name\":\"%s\",\"loaded_ok\":%s,\"load_name_used\":\"%s\",\"param_count\":%d}\n",
+    json_escape(fx.display),
+    json_escape(key),
+    json_escape(fx.fx_type),
+    json_escape(fx.base),
+    "true",
+    json_escape(used_name or ""),
+    param_count
+  ))
+  f_ndjson:flush()
 
-        scanned = scanned + 1
-      end
+  for p = 0, param_count - 1 do
+    local ok, minv, maxv, midv = r.TrackFX_GetParamEx(tmp_tr, fx_index, p)
+    local val = r.TrackFX_GetParam(tmp_tr, fx_index, p) or 0.0
+    local pname = get_param_name(tmp_tr, fx_index, p)
+    local pident = get_param_ident(tmp_tr, fx_index, p)
+    local fmt = get_formatted(tmp_tr, fx_index, p, val)
+    local _step, small, large, istoggle = get_steps(tmp_tr, fx_index, p)
+
+    f_params:write(string.format("%s,%s,%s,%s,%d,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n",
+      csv_escape(key),
+      csv_escape(fx.display),
+      csv_escape(fx.fx_type),
+      csv_escape(fx.base),
+      p,
+      csv_escape(pident),
+      csv_escape(pname),
+      csv_escape(fmt),
+      string.format("%.10f", val),
+      ok and string.format("%.10f", minv) or "",
+      ok and string.format("%.10f", maxv) or "",
+      ok and string.format("%.10f", midv) or "",
+      tostring(small or ""),
+      tostring(large or ""),
+      tostring(istoggle or "")
+    ))
+  end
+  f_params:flush()
+
+  -- Clean plugin instance and mark done
+  clear_tmp_fx(tmp_tr)
+  clear_current_fx()
+  done[key] = true
+  save_progress(progress_js, done)
+  scanned = scanned + 1
+
+  ::_continue::
+
+  -- UI responsiveness + escape hatch
+  if scanned_count % 5 == 0 then
+    r.UpdateArrange()
+    if r.EscapeKeyPressed and r.EscapeKeyPressed() then
+      f_fail:write("ABORT\tuser_pressed_esc\n")
+      f_fail:flush()
+      break
     end
   end
-
-  -- keep UI responsive on big rigs
-  if (scanned + skipped + failed) % 50 == 0 then
-    r.UpdateArrange()
-  end
-  end -- if not skip_fx
 end
 
-----------------------------------------------------------------
--- Optional plugins.json array (built from plugins.ndjson)
-----------------------------------------------------------------
+-- Optional: convert NDJSON -> JSON array (huge systems: keep NDJSON)
 if ALSO_WRITE_PLUGINS_JSON_ARRAY then
-  -- Convert NDJSON to a JSON array without loading everything into memory.
-  local fin = io.open(plugins_ndj, "r")
-  local fout = io.open(plugins_jsa, "w")
+  local fin = io.open(ndjson_path, "r")
+  local fout = io.open(json_path, "w")
   if fin and fout then
     fout:write("[\n")
     local first = true
     for line in fin:lines() do
-      line = trim(line)
+      line = (line or ""):gsub("\r",""):gsub("\n","")
       if line ~= "" then
         if not first then fout:write(",\n") end
         fout:write(line)
         first = false
       end
     end
-    fout:write("]\n")
+    fout:write("\n]\n")
     fin:close()
     fout:close()
   else
