@@ -457,21 +457,17 @@ if ALSO_WRITE_PLUGINS_JSON_ARRAY then
   local fin = io.open(plugins_ndj, "r")
   local fout = io.open(plugins_jsa, "w")
   if fin and fout then
-    fout:write("[
-")
+    fout:write("[\n")
     local first = true
     for line in fin:lines() do
       line = trim(line)
       if line ~= "" then
-        if not first then fout:write(",
-") end
+        if not first then fout:write(",\n") end
         fout:write(line)
         first = false
       end
     end
-    fout:write("
-]
-")
+    fout:write("]\n")
     fin:close()
     fout:close()
   else
