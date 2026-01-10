@@ -1,5 +1,5 @@
 --@description IFLS Workbench: Dump ALL FX params (EnumInstalledFX, prefer VST3, strong match, resume, CSV+NDJSON)
---@version 0.3.0
+--@version 0.3.1
 --@author IFLS (ported from DF95)
 --@about
 --  Enumerates all REAPER-recognized FX via EnumInstalledFX().
@@ -372,18 +372,43 @@ local function clear_tmp_fx()
   for fx = fxcount-1, 0, -1 do r.TrackFX_Delete(tmp_tr, fx) end
 end
 
-local function try_add_fx(display_name)
-  -- 1) as-is
-  local idx = r.TrackFX_AddByName(tmp_tr, display_name, false, -1)
-  if idx >= 0 then return idx, display_name end
-
-  -- 2) prefix + base
-  local base, pref = normalize_base(display_name)
-  if pref ~= "" then
-    local c = pref .. ": " .. base
-    idx = r.TrackFX_AddByName(tmp_tr, c, false, -1)
-    if idx >= 0 then return idx, c end
+local function try_add_fx(track, fxname, fxdisplay, fxtype, basename)
+  -- TrackFX_AddByName expects fxname as string; guard against userdata mixups.
+  if not track then return false, -1, "NO_TRACK" end
+  if type(fxname) ~= "string" then
+    return false, -1, "BAD_FXNAME_TYPE_" .. tostring(type(fxname))
   end
+  if fxname == "" then return false, -1, "EMPTY_FXNAME" end
+
+  -- Already prefixed? e.g. "VST3: ..." / "VST: ..." / "CLAP: ..."
+  local has_prefix = fxname:match("^[A-Z0-9]+:%s")
+  local candidates = {}
+  if has_prefix then
+    candidates = { fxname }
+  else
+    -- Try preferred order based on fxtype if provided
+    if fxtype == "VST3" then
+      candidates = { "VST3: "..fxname, "VST: "..fxname, "CLAP: "..fxname, "JS: "..fxname, fxname }
+    elseif fxtype == "VST" then
+      candidates = { "VST: "..fxname, "VST3: "..fxname, "CLAP: "..fxname, "JS: "..fxname, fxname }
+    elseif fxtype == "CLAP" then
+      candidates = { "CLAP: "..fxname, "VST3: "..fxname, "VST: "..fxname, fxname }
+    elseif fxtype == "JS" then
+      candidates = { "JS: "..fxname, fxname }
+    else
+      candidates = { "VST3: "..fxname, "VST: "..fxname, "CLAP: "..fxname, "JS: "..fxname, fxname }
+    end
+  end
+
+  for _, name in ipairs(candidates) do
+    local idx = r.TrackFX_AddByName(track, name, false, -1000)
+    if idx and idx >= 0 then
+      return true, idx, name
+    end
+  end
+  return false, -1, "NOT_FOUND"
+end
+
 
   -- 3) if VST2, try VST3 with same base
   local _, pref0 = normalize_base(display_name)
