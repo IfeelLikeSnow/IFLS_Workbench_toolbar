@@ -1,5 +1,5 @@
 --@description IFLS Workbench: Dump ALL FX params (EnumInstalledFX, prefer VST3, strong match, resume, CSV+NDJSON)
---@version 0.2.9
+--@version 0.3.0
 --@author IFLS (ported from DF95)
 --@about
 --  Enumerates all REAPER-recognized FX via EnumInstalledFX().
@@ -436,145 +436,149 @@ local failed = 0
 local scanned_count = 0
 
 for _, fx in ipairs(final_list) do
-  -- Range limiting / bisect
-  if fx.idx and fx.idx < START_FROM_INDEX then
-    skipped = skipped + 1
-    goto _continue
-  end
-  if MAX_TO_SCAN > 0 and scanned_count >= MAX_TO_SCAN then
-    break
-  end
+  -- One-iteration scope block (acts like "continue" via `break`)
+  repeat
+    -- Range limiting / bisect
+    if fx.idx and fx.idx < START_FROM_INDEX then
+      skipped = skipped + 1
+      break
+    end
+    if MAX_TO_SCAN > 0 and scanned_count >= MAX_TO_SCAN then
+      -- break out of outer loop
+      scanned_count = scanned_count -- no-op
+      goto __break_outer
+    end
 
-  if should_skip_fx(fx) then
-    skipped = skipped + 1
-    goto _continue
-  end
+    if should_skip_fx(fx) then
+      skipped = skipped + 1
+      break
+    end
 
-  scanned_count = scanned_count + 1
+    scanned_count = scanned_count + 1
 
-  local key = tostring(fx.ident or "")
-  if key == "" then key = tostring(fx.name or "") end
+    local key = tostring(fx.ident or "")
+    if key == "" then key = tostring(fx.name or "") end
 
-  if key == "" then
-    skipped = skipped + 1
-    goto _continue
-  end
+    if key == "" then
+      skipped = skipped + 1
+      break
+    end
 
-  if done[key] then
-    skipped = skipped + 1
-    goto _continue
-  end
+    if done[key] then
+      skipped = skipped + 1
+      break
+    end
 
-  if ENUM_ONLY then
-    -- No instantiation: safe enumerate-only mode
+    if ENUM_ONLY then
+      -- No instantiation: safe enumerate-only mode
+      f_plugins:write(string.format("%s,%s,%s,%s,%d,%s,%d\n",
+        csv_escape(fx.display),
+        csv_escape(key),
+        csv_escape(fx.fx_type),
+        csv_escape(fx.base),
+        0,
+        csv_escape("ENUM_ONLY"),
+        0
+      ))
+      f_plugins:flush()
+      done[key] = true
+      save_progress(progress_js, done)
+      scanned = scanned + 1
+      break
+    end
+
+    -- Crash-safe marker BEFORE instantiation
+    write_current_fx({ idx = fx.idx, ident = fx.ident, name = fx.name })
+
+    local loaded_ok, fx_index, used_name = try_add_fx(tmp_tr, fx.name, fx.display, fx.fx_type, fx.base)
+    if not loaded_ok or fx_index < 0 then
+      failed = failed + 1
+      f_fail:write(string.format("LOAD_FAIL\tidx=%s\tident=%s\tname=%s\n",
+        tostring(fx.idx or ""),
+        tostring(fx.ident or ""),
+        tostring(fx.name or "")
+      ))
+      f_fail:flush()
+
+      f_plugins:write(string.format("%s,%s,%s,%s,%d,%s,%d\n",
+        csv_escape(fx.display),
+        csv_escape(key),
+        csv_escape(fx.fx_type),
+        csv_escape(fx.base),
+        0,
+        csv_escape(used_name or ""),
+        0
+      ))
+      f_plugins:flush()
+
+      done[key] = true
+      save_progress(progress_js, done)
+      clear_tmp_fx(tmp_tr)
+      clear_current_fx()
+      break
+    end
+
+    -- Dump params
+    local param_count = r.TrackFX_GetNumParams(tmp_tr, fx_index) or 0
     f_plugins:write(string.format("%s,%s,%s,%s,%d,%s,%d\n",
       csv_escape(fx.display),
       csv_escape(key),
       csv_escape(fx.fx_type),
       csv_escape(fx.base),
-      0,
-      csv_escape("ENUM_ONLY"),
-      0
+      1,
+      csv_escape(used_name or ""),
+      param_count
     ))
     f_plugins:flush()
+
+    -- NDJSON plugin-level line
+    f_ndjson:write(string.format("{\"fx_display\":\"%s\",\"fx_ident\":\"%s\",\"fx_type\":\"%s\",\"base_name\":\"%s\",\"loaded_ok\":%s,\"load_name_used\":\"%s\",\"param_count\":%d}\n",
+      json_escape(fx.display),
+      json_escape(key),
+      json_escape(fx.fx_type),
+      json_escape(fx.base),
+      "true",
+      json_escape(used_name or ""),
+      param_count
+    ))
+    f_ndjson:flush()
+
+    for p = 0, param_count - 1 do
+      local ok, minv, maxv, midv = r.TrackFX_GetParamEx(tmp_tr, fx_index, p)
+      local val = r.TrackFX_GetParam(tmp_tr, fx_index, p) or 0.0
+      local pname = get_param_name(tmp_tr, fx_index, p)
+      local pident = get_param_ident(tmp_tr, fx_index, p)
+      local fmt = get_formatted(tmp_tr, fx_index, p, val)
+      local _step, small, large, istoggle = get_steps(tmp_tr, fx_index, p)
+
+      f_params:write(string.format("%s,%s,%s,%s,%d,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n",
+        csv_escape(key),
+        csv_escape(fx.display),
+        csv_escape(fx.fx_type),
+        csv_escape(fx.base),
+        p,
+        csv_escape(pident),
+        csv_escape(pname),
+        csv_escape(fmt),
+        string.format("%.10f", val),
+        ok and string.format("%.10f", minv) or "",
+        ok and string.format("%.10f", maxv) or "",
+        ok and string.format("%.10f", midv) or "",
+        tostring(small or ""),
+        tostring(large or ""),
+        tostring(istoggle or "")
+      ))
+    end
+    f_params:flush()
+
+    -- Clean plugin instance and mark done
+    clear_tmp_fx(tmp_tr)
+    clear_current_fx()
     done[key] = true
     save_progress(progress_js, done)
     scanned = scanned + 1
-    goto _continue
-  end
 
-  -- Crash-safe marker BEFORE instantiation
-  write_current_fx({ idx = fx.idx, ident = fx.ident, name = fx.name })
-
-  local loaded_ok, fx_index, used_name = try_add_fx(tmp_tr, fx.name, fx.display, fx.fx_type, fx.base)
-  if not loaded_ok or fx_index < 0 then
-    failed = failed + 1
-    f_fail:write(string.format("LOAD_FAIL\tidx=%s\tident=%s\tname=%s\n",
-      tostring(fx.idx or ""),
-      tostring(fx.ident or ""),
-      tostring(fx.name or "")
-    ))
-    f_fail:flush()
-
-    f_plugins:write(string.format("%s,%s,%s,%s,%d,%s,%d\n",
-      csv_escape(fx.display),
-      csv_escape(key),
-      csv_escape(fx.fx_type),
-      csv_escape(fx.base),
-      0,
-      csv_escape(used_name or ""),
-      0
-    ))
-    f_plugins:flush()
-
-    done[key] = true
-    save_progress(progress_js, done)
-    clear_tmp_fx(tmp_tr)
-    clear_current_fx()
-    goto _continue
-  end
-
-  -- Dump params
-  local param_count = r.TrackFX_GetNumParams(tmp_tr, fx_index) or 0
-  f_plugins:write(string.format("%s,%s,%s,%s,%d,%s,%d\n",
-    csv_escape(fx.display),
-    csv_escape(key),
-    csv_escape(fx.fx_type),
-    csv_escape(fx.base),
-    1,
-    csv_escape(used_name or ""),
-    param_count
-  ))
-  f_plugins:flush()
-
-  -- NDJSON plugin-level line
-  f_ndjson:write(string.format("{\"fx_display\":\"%s\",\"fx_ident\":\"%s\",\"fx_type\":\"%s\",\"base_name\":\"%s\",\"loaded_ok\":%s,\"load_name_used\":\"%s\",\"param_count\":%d}\n",
-    json_escape(fx.display),
-    json_escape(key),
-    json_escape(fx.fx_type),
-    json_escape(fx.base),
-    "true",
-    json_escape(used_name or ""),
-    param_count
-  ))
-  f_ndjson:flush()
-
-  for p = 0, param_count - 1 do
-    local ok, minv, maxv, midv = r.TrackFX_GetParamEx(tmp_tr, fx_index, p)
-    local val = r.TrackFX_GetParam(tmp_tr, fx_index, p) or 0.0
-    local pname = get_param_name(tmp_tr, fx_index, p)
-    local pident = get_param_ident(tmp_tr, fx_index, p)
-    local fmt = get_formatted(tmp_tr, fx_index, p, val)
-    local _step, small, large, istoggle = get_steps(tmp_tr, fx_index, p)
-
-    f_params:write(string.format("%s,%s,%s,%s,%d,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n",
-      csv_escape(key),
-      csv_escape(fx.display),
-      csv_escape(fx.fx_type),
-      csv_escape(fx.base),
-      p,
-      csv_escape(pident),
-      csv_escape(pname),
-      csv_escape(fmt),
-      string.format("%.10f", val),
-      ok and string.format("%.10f", minv) or "",
-      ok and string.format("%.10f", maxv) or "",
-      ok and string.format("%.10f", midv) or "",
-      tostring(small or ""),
-      tostring(large or ""),
-      tostring(istoggle or "")
-    ))
-  end
-  f_params:flush()
-
-  -- Clean plugin instance and mark done
-  clear_tmp_fx(tmp_tr)
-  clear_current_fx()
-  done[key] = true
-  save_progress(progress_js, done)
-  scanned = scanned + 1
-
-  ::_continue::
+  until true
 
   -- UI responsiveness + escape hatch
   if scanned_count % 5 == 0 then
@@ -586,6 +590,8 @@ for _, fx in ipairs(final_list) do
     end
   end
 end
+
+::__break_outer::
 
 -- Optional: convert NDJSON -> JSON array (huge systems: keep NDJSON)
 if ALSO_WRITE_PLUGINS_JSON_ARRAY then
