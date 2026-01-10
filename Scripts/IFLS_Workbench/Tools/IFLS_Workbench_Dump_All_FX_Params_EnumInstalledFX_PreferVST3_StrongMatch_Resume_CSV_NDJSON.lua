@@ -1,5 +1,5 @@
 --@description IFLS Workbench: Dump ALL FX params (EnumInstalledFX, prefer VST3, strong match, resume, CSV+NDJSON)
---@version 0.2.3
+--@version 0.2.6
 --@author IFLS (ported from DF95)
 --@about
 --  Enumerates all REAPER-recognized FX via EnumInstalledFX().
@@ -7,7 +7,7 @@
 --  Writes: plugins.csv, params.csv, plugins.ndjson, failures.txt, progress.json
 --  Resume-safe: already dumped fx_ident entries are skipped on next runs.
 --
---  Output folder: REAPER resource path / Scripts/DF95_ParamDump/
+--  Output folder: REAPER resource path / Scripts/IFLS_Workbench/_ParamDumps/
 
 local r = reaper
 
@@ -264,6 +264,29 @@ r.GetSetMediaTrackInfo_String(tmp_tr, "P_NAME", "__DF95_PARAMSCAN_TMP__", true)
 
 local res = r.GetResourcePath()
 local out_dir = res .. "/Scripts/IFLS_Workbench/_ParamDumps"
+
+local current_fx_path = out_dir .. "/current_fx.txt"
+
+local function write_current_fx(info)
+  -- info = {idx=, ident=, name=}
+  local line = string.format("%s\t%s\t%s\n", tostring(info.idx or ""), tostring(info.ident or ""), tostring(info.name or ""))
+  write_file(current_fx_path, line) -- overwrite
+end
+
+local function read_current_fx()
+  local c = read_file(current_fx_path)
+  if not c or c == "" then return nil end
+  c = c:gsub("\r",""):gsub("\n","")
+  local a,b,d = c:match("^(.-)\t(.-)\t(.*)$")
+  if not a then return nil end
+  return { idx = tonumber(a) or -1, ident = b, name = d }
+end
+
+local function clear_current_fx()
+  write_file(current_fx_path, "")
+end
+
+
 r.RecursiveCreateDirectory(out_dir, 0)
 
 local plugins_csv = out_dir .. "/plugins.csv"
@@ -274,6 +297,7 @@ local progress_js = out_dir .. "/progress.json"
 local plugins_jsa = out_dir .. "/plugins.json" -- optional array file
 
 local done = load_progress(progress_js)
+
 
 local f_plugins = open_append_with_header(plugins_csv, "fx_display,fx_ident,fx_type,base_name,loaded_ok,load_name_used,param_count\n")
 local f_params  = open_append_with_header(params_csv,  "fx_ident,fx_display,fx_type,base_name,param_index,param_ident,param_name,formatted,val,min,max,mid,step_small,step_large,is_toggle\n")
@@ -289,6 +313,23 @@ if not f_plugins or not f_params or not f_ndjson or not f_fail then
 end
 
 -- headers handled by open_append_with_header()
+
+-- Crash-safe: if REAPER crashed last run, current_fx.txt will still contain the last attempted FX.
+do
+  local crashed = read_current_fx()
+  if crashed and ((crashed.ident and crashed.ident ~= "") or (crashed.name and crashed.name ~= "")) then
+    local crash_key = tostring(crashed.ident or "")
+    if crash_key == "" then crash_key = tostring(crashed.name or "") end
+    if crash_key ~= "" and not done[crash_key] then
+      done[crash_key] = true -- skip on next run
+      f_fail:write(string.format("CRASH_LAST_RUN\tidx=%s\tident=%s\tname=%s\n",
+        tostring(crashed.idx or ""), tostring(crashed.ident or ""), tostring(crashed.name or "")))
+      f_fail:flush()
+    end
+  end
+end
+
+
 ----------------------------------------------------------------
 -- Loader / Parameter dump
 ----------------------------------------------------------------
