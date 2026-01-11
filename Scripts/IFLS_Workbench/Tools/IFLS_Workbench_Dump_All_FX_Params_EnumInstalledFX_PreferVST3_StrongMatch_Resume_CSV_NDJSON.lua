@@ -25,7 +25,10 @@ local SCAN_DX          = true
 
 -- If REAPER crashes, bisect by narrowing the range:
 local START_FROM_INDEX = 0       -- start scan at this installed-FX index (EnumInstalledFX)
-local MAX_TO_SCAN      = 25      -- 0 = no limit (start small, then set 0 once stable)
+local MAX_NEW_PER_PASS  = 100     -- number of NEW plugins to process per pass (0 = no limit)
+local AUTO_CONTINUE     = true    -- automatically start the next pass until all are done
+local SHOW_FINAL_SUMMARY = true   -- show a summary message when finished (or when AUTO_CONTINUE=false)
+local MAX_TO_SCAN      = 0       -- (legacy, unused) kept for compatibility
 
 -- Skip patterns (Lua patterns, case-insensitive via :lower())
 local SKIP_NAME_PATTERNS = {
@@ -495,35 +498,31 @@ end
 -- Scan
 ----------------------------------------------------------------
 local total = #final_list
-local scanned = 0
-local skipped = 0
-local failed = 0
-local scanned_count = 0
+local scanned = 0           -- NEW processed (incl. failures) this run
+local skipped = 0           -- resume/filtered/empty keys this run
+local failed = 0            -- load failures this run
+local new_budget = tonumber(MAX_NEW_PER_PASS) or 0
+local pass_limit_reached = false
+
+local function make_key(fx)
+  local k = tostring(fx.ident or "")
+  if k == "" then k = tostring(fx.name or "") end
+  return k
+end
+
+local function has_remaining()
+  for _, fx in ipairs(final_list) do
+    local k = make_key(fx)
+    if k ~= "" and not done[k] and not should_skip_fx(fx) then
+      return true
+    end
+  end
+  return false
+end
 
 for _, fx in ipairs(final_list) do
-  -- One-iteration scope block (acts like "continue" via `break`)
   repeat
-    -- Range limiting / bisect
-    if fx.idx and fx.idx < START_FROM_INDEX then
-      skipped = skipped + 1
-      break
-    end
-    if MAX_TO_SCAN > 0 and scanned_count >= MAX_TO_SCAN then
-      -- break out of outer loop
-      scanned_count = scanned_count -- no-op
-      goto __break_outer
-    end
-
-    if should_skip_fx(fx) then
-      skipped = skipped + 1
-      break
-    end
-
-    scanned_count = scanned_count + 1
-
-    local key = tostring(fx.ident or "")
-    if key == "" then key = tostring(fx.name or "") end
-
+    local key = make_key(fx)
     if key == "" then
       skipped = skipped + 1
       break
@@ -534,8 +533,18 @@ for _, fx in ipairs(final_list) do
       break
     end
 
+    if should_skip_fx(fx) then
+      skipped = skipped + 1
+      break
+    end
+
+    if new_budget > 0 and scanned >= new_budget then
+      pass_limit_reached = true
+      break
+    end
+
     if ENUM_ONLY then
-      -- No instantiation: safe enumerate-only mode
+      -- No instantiation: safe enumerate-only mode (counts as scanned)
       f_plugins:write(string.format("%s,%s,%s,%s,%d,%s,%d\n",
         csv_escape(fx.display),
         csv_escape(key),
@@ -556,13 +565,16 @@ for _, fx in ipairs(final_list) do
     write_current_fx({ idx = fx.idx, ident = fx.ident, name = fx.name })
 
     local _ok_call, loaded_ok, fx_index, used_name = pcall(try_add_fx, tmp_tr, fx.name, fx.display, fx.fx_type, fx.base)
-    if not _ok_call then loaded_ok=false; fx_index=-1; used_name="PCALL_ERROR" end
-    if not loaded_ok or fx_index < 0 then
+    if not _ok_call then
+      loaded_ok = false
+      fx_index = -1
+      used_name = "PCALL_ERROR"
+    end
+
+    if not loaded_ok or (not fx_index) or fx_index < 0 then
       failed = failed + 1
-      f_fail:write(string.format("LOAD_FAIL\tidx=%s\tident=%s\tname=%s\n",
-        tostring(fx.idx or ""),
-        tostring(fx.ident or ""),
-        tostring(fx.name or "")
+      f_fail:write(string.format("LOAD_FAIL\tidx=%s\tident=%s\tname=%s\tinfo=%s\n",
+        tostring(fx.idx or ""), tostring(fx.ident or ""), tostring(fx.name or ""), tostring(used_name or "")
       ))
       f_fail:flush()
 
@@ -572,7 +584,7 @@ for _, fx in ipairs(final_list) do
         csv_escape(fx.fx_type),
         csv_escape(fx.base),
         0,
-        csv_escape(used_name or ""),
+        csv_escape(tostring(used_name or "")),
         0
       ))
       f_plugins:flush()
@@ -581,11 +593,13 @@ for _, fx in ipairs(final_list) do
       save_progress(progress_js, done)
       clear_tmp_fx(tmp_tr)
       clear_current_fx()
+      scanned = scanned + 1
       break
     end
 
     -- Dump params
     local param_count = r.TrackFX_GetNumParams(tmp_tr, fx_index) or 0
+
     f_plugins:write(string.format("%s,%s,%s,%s,%d,%s,%d\n",
       csv_escape(fx.display),
       csv_escape(key),
@@ -597,7 +611,6 @@ for _, fx in ipairs(final_list) do
     ))
     f_plugins:flush()
 
-    -- NDJSON plugin-level line
     f_ndjson:write(string.format("{\"fx_display\":\"%s\",\"fx_ident\":\"%s\",\"fx_type\":\"%s\",\"base_name\":\"%s\",\"loaded_ok\":%s,\"load_name_used\":\"%s\",\"param_count\":%d}\n",
       json_escape(fx.display),
       json_escape(key),
@@ -637,7 +650,6 @@ for _, fx in ipairs(final_list) do
     end
     f_params:flush()
 
-    -- Clean plugin instance and mark done
     clear_tmp_fx(tmp_tr)
     clear_current_fx()
     done[key] = true
@@ -646,8 +658,9 @@ for _, fx in ipairs(final_list) do
 
   until true
 
-  -- UI responsiveness + escape hatch
-  if scanned_count % 5 == 0 then
+  if pass_limit_reached then break end
+
+  if scanned % 5 == 0 then
     r.UpdateArrange()
     if r.EscapeKeyPressed and r.EscapeKeyPressed() then
       f_fail:write("ABORT\tuser_pressed_esc\n")
@@ -657,33 +670,11 @@ for _, fx in ipairs(final_list) do
   end
 end
 
-::__break_outer::
-
--- Optional: convert NDJSON -> JSON array (huge systems: keep NDJSON)
-if ALSO_WRITE_PLUGINS_JSON_ARRAY then
-  local fin = io.open(ndjson_path, "r")
-  local fout = io.open(json_path, "w")
-  if fin and fout then
-    fout:write("[\n")
-    local first = true
-    for line in fin:lines() do
-      line = (line or ""):gsub("\r",""):gsub("\n","")
-      if line ~= "" then
-        if not first then fout:write(",\n") end
-        fout:write(line)
-        first = false
-      end
-    end
-    fout:write("\n]\n")
-    fin:close()
-    fout:close()
-  else
-    if fin then fin:close() end
-    if fout then fout:close() end
-  end
-end
-
 ----------------------------------------------------------------
+local auto_rerun = false
+if AUTO_CONTINUE and pass_limit_reached and has_remaining() then
+  auto_rerun = true
+end
 -- Cleanup
 ----------------------------------------------------------------
 f_plugins:close()
@@ -693,16 +684,25 @@ f_fail:close()
 
 r.DeleteTrack(tmp_tr)
 r.PreventUIRefresh(-1)
+if auto_rerun then
+  local _, _, _, cmdID = r.get_action_context()
+  if cmdID and cmdID ~= 0 then
+    r.defer(function() r.Main_OnCommand(cmdID, 0) end)
+  end
+end
+
 r.Undo_EndBlock("IFLS Workbench Param Dump", -1)
 
-local total_n  = tonumber(total) or (final_list and #final_list) or 0
-local scanned_n = tonumber(scanned) or 0
-local skipped_n = tonumber(skipped) or 0
-local failed_n  = tonumber(failed) or 0
+if (not auto_rerun) and SHOW_FINAL_SUMMARY then
+  local total_n  = tonumber(total) or (final_list and #final_list) or 0
+  local scanned_n = tonumber(scanned) or 0
+  local skipped_n = tonumber(skipped) or 0
+  local failed_n  = tonumber(failed) or 0
 
-r.MB(
-  ("Done.\nTotal candidates: %d\nScanned: %d\nSkipped(resume): %d\nFailed: %d\n\nOutput folder:\n%s")
-  :format(total_n, scanned_n, skipped_n, failed_n, out_dir),
-  "IFLS Workbench Param Dump",
-  0
-)
+  r.MB(
+    ("Done.\nTotal candidates: %d\nScanned (new): %d\nSkipped (resume/filtered): %d\nFailed: %d\n\nOutput folder:\n%s\n\nBatch size (new per pass): %s\nAuto-continue: %s")
+    :format(total_n, scanned_n, skipped_n, failed_n, out_dir, tostring(MAX_NEW_PER_PASS), tostring(AUTO_CONTINUE)),
+    "IFLS Workbench Param Dump",
+    0
+  )
+end
