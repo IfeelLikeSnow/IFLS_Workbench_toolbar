@@ -1,5 +1,5 @@
 --@description IFLS Workbench: Dump ALL FX params (EnumInstalledFX, prefer VST3, strong match, resume, CSV+NDJSON)
--- @version 0.4.2
+-- @version 0.3.8
 --@author IFLS (ported from DF95)
 --@about
 --  Enumerates all REAPER-recognized FX via EnumInstalledFX().
@@ -25,10 +25,10 @@ local SCAN_DX          = true
 
 -- If REAPER crashes, bisect by narrowing the range:
 local START_FROM_INDEX = 0       -- start scan at this installed-FX index (EnumInstalledFX)
-local MAX_TO_SCAN      = 100     -- NEW plugins per pass (0 = no limit)
-local AUTO_CONTINUE    = true    -- continue automatically until all plugins are done (within this REAPER session)
-local SHOW_PASS_SUMMARY= false   -- show a popup after each pass (otherwise only final popup)
-
+local MAX_NEW_PER_PASS  = 100     -- number of NEW plugins to process per pass (0 = no limit)
+local AUTO_CONTINUE     = true    -- automatically start the next pass until all are done
+local SHOW_FINAL_SUMMARY = true   -- show a summary message when finished (or when AUTO_CONTINUE=false)
+local MAX_TO_SCAN      = 0       -- (legacy, unused) kept for compatibility
 
 -- Skip patterns (Lua patterns, case-insensitive via :lower())
 local SKIP_NAME_PATTERNS = {
@@ -114,6 +114,59 @@ local function write_file(p, content)
   return true
 end
 
+
+-- Progress helpers (append-only done.txt)
+local function load_done_set()
+  local done = {}
+
+  -- 1) preferred: done.txt (one key per line)
+  local c = read_file(progress_done_txt)
+  if c and c ~= "" then
+    for line in c:gsub("\r",""):gmatch("([^\n]+)") do
+      line = (line or ""):gsub("^%s+",""):gsub("%s+$","")
+      if line ~= "" then done[line] = true end
+    end
+  end
+
+  -- 2) legacy import: progress.json (small JSON with {"done":{"key":true,...}})
+  local j = read_file(progress_js)
+  if j and j ~= "" then
+    for ident in j:gmatch("\"([^\"]+)\"%s*:%s*true") do
+      if ident and ident ~= "" then done[ident] = true end
+    end
+  end
+
+  return done
+end
+
+local function append_done_key(key)
+  local f = io.open(progress_done_txt, "a")
+  if not f then return false end
+  f:write(key, "\n")
+  f:close()
+  return true
+end
+
+local function mark_done(done_tbl, key)
+  if not key or key == "" then return end
+  if not done_tbl[key] then
+    done_tbl[key] = true
+    append_done_key(key)
+  end
+end
+
+local function load_cursor()
+  local c = read_file(cursor_txt)
+  if not c or c == "" then return nil end
+  local n = tonumber(c:match("(%d+)"))
+  return n
+end
+
+local function save_cursor(n)
+  if not n then return end
+  write_file(cursor_txt, tostring(math.floor(n)))
+end
+
 local function json_escape(s)
   s = tostring(s or "")
   s = s:gsub("\\","\\\\"):gsub("\"","\\\""):gsub("\n","\\n"):gsub("\r","\\r"):gsub("\t","\\t")
@@ -174,32 +227,6 @@ end
 ----------------------------------------------------------------
 -- Progress / Resume
 ----------------------------------------------------------------
-local function load_progress(path)
-  local c = read_file(path)
-  if not c or c == "" then return {} end
-  -- Very small JSON parser for {"done":{"ident":true,...}}
-  local done = {}
-  for ident in c:gmatch("\"([^\"]+)\"%s*:%s*true") do
-    done[ident] = true
-  end
-  return done
-end
-
-local function save_progress(path, done_tbl)
-  -- write minimal JSON
-  local parts = {"{\"done\":{"}
-  local first = true
-  for ident, v in pairs(done_tbl) do
-    if v then
-      if not first then parts[#parts+1] = "," end
-      first = false
-      parts[#parts+1] = string.format("%q:true", ident)
-    end
-  end
-  parts[#parts+1] = "}}"
-  write_file(path, table.concat(parts))
-end
-
 ----------------------------------------------------------------
 -- Enumerate installed FX (REAPER-recognized)
 ----------------------------------------------------------------
@@ -216,7 +243,7 @@ while true do
 end
 
 if #installed == 0 then
-  r.MB("EnumInstalledFX returned 0 entries.\nUpdate REAPER or check ReaScript support.", "IFLS Workbench Param Dump", 0)
+  r.MB("EnumInstalledFX returned 0 entries.\nUpdate REAPER or check ReaScript support.", "DF95 Param Dump V3", 0)
   return
 end
 
@@ -363,10 +390,12 @@ local plugins_csv = out_dir .. "/plugins.csv"
 local params_csv  = out_dir .. "/params.csv"
 local plugins_ndj = out_dir .. "/plugins.ndjson"
 local failures_tx = out_dir .. "/failures.txt"
-local progress_js = out_dir .. "/progress.json"
+local progress_js       = out_dir .. "/progress.json"  -- legacy (read-only / optional)
+local progress_done_txt = out_dir .. "/done.txt"       -- append-only progress
+local cursor_txt        = out_dir .. "/cursor.txt"     -- resume cursor (optional)
 local plugins_jsa = out_dir .. "/plugins.json" -- optional array file
 
-local done = load_progress(progress_js)
+local done = load_done_set()
 blacklist_set = load_blacklist_set()
 
 
@@ -378,8 +407,8 @@ local f_fail    = io.open(failures_tx, file_exists(failures_tx) and "a" or "w")
 if not f_plugins or not f_params or not f_ndjson or not f_fail then
   r.DeleteTrack(tmp_tr)
   r.PreventUIRefresh(-1)
-  r.Undo_EndBlock("IFLS Workbench Param Dump (failed open files)", -1)
-  r.MB("Could not open output files in:\n" .. out_dir, "IFLS Workbench Param Dump", 0)
+  r.Undo_EndBlock("DF95 Param Dump V3 (failed open files)", -1)
+  r.MB("Could not open output files in:\n" .. out_dir, "DF95 Param Dump V3", 0)
   return
 end
 
@@ -394,8 +423,8 @@ do
     local crash_key = tostring(crashed.ident or "")
     if crash_key == "" then crash_key = tostring(crashed.name or "") end
     if crash_key ~= "" and not done[crash_key] then
-      done[crash_key] = true -- skip in this and future runs
-      save_progress(progress_js, done)
+      mark_done(done, crash_key) -- skip in this and future runs
+      -- save_progress disabled (using done.txt)
 
       f_fail:write(string.format("CRASH_LAST_RUN\tidx=%s\tident=%s\tname=%s\n",
         tostring(crashed.idx or ""), tostring(crashed.ident or ""), tostring(crashed.name or "")))
@@ -498,41 +527,35 @@ end
 -- Scan
 ----------------------------------------------------------------
 local total = #final_list
-local scanned = 0         -- newly processed (this pass)
-local skipped = 0         -- skipped due to resume/filters (this pass)
-local failed = 0          -- load failures (this pass)
-local new_processed = 0   -- count only NEW plugins (not resume skips)
-local stop_outer = false
+local scanned = 0           -- NEW processed (incl. failures) this run
+local skipped = 0           -- resume/filtered/empty keys this run
+local failed = 0            -- load failures this run
+local new_budget = tonumber(MAX_NEW_PER_PASS) or 0
+local pass_limit_reached = false
 
-local function count_remaining()
-  local rem = 0
-  for _, fx in ipairs(final_list) do
-    local key = tostring(fx.ident or "")
-    if key == "" then key = tostring(fx.name or "") end
-    if key ~= "" and (not done[key]) and (not should_skip_fx(fx)) then
-      rem = rem + 1
-    end
-  end
-  return rem
+local function make_key(fx)
+  local k = tostring(fx.ident or "")
+  if k == "" then k = tostring(fx.name or "") end
+  return k
 end
 
-for _, fx in ipairs(final_list) do
-  if stop_outer then break end
+local function has_remaining()
+  local start_i = load_cursor() or 1
+for i = start_i, #final_list do
+  local fx = final_list[i]
+    local k = make_key(fx)
+    if k ~= "" and not done[k] and not should_skip_fx(fx) then
+      return true
+    end
+  end
+  return false
+end
 
+local start_i = load_cursor() or 1
+for i = start_i, #final_list do
+  local fx = final_list[i]
   repeat
-    -- Range limiting / bisect
-    if fx.idx and fx.idx < START_FROM_INDEX then
-      skipped = skipped + 1
-      break
-    end
-
-    if should_skip_fx(fx) then
-      skipped = skipped + 1
-      break
-    end
-
-    local key = tostring(fx.ident or "")
-    if key == "" then key = tostring(fx.name or "") end
+    local key = make_key(fx)
     if key == "" then
       skipped = skipped + 1
       break
@@ -543,15 +566,18 @@ for _, fx in ipairs(final_list) do
       break
     end
 
-    -- Chunk limit: counts ONLY newly processed plugins (not resume skips)
-    if MAX_TO_SCAN > 0 and new_processed >= MAX_TO_SCAN then
-      stop_outer = true
+    if should_skip_fx(fx) then
+      skipped = skipped + 1
       break
     end
 
-    new_processed = new_processed + 1
+    if new_budget > 0 and scanned >= new_budget then
+      pass_limit_reached = true
+      break
+    end
 
     if ENUM_ONLY then
+      -- No instantiation: safe enumerate-only mode (counts as scanned)
       f_plugins:write(string.format("%s,%s,%s,%s,%d,%s,%d\n",
         csv_escape(fx.display),
         csv_escape(key),
@@ -562,8 +588,8 @@ for _, fx in ipairs(final_list) do
         0
       ))
       f_plugins:flush()
-      done[key] = true
-      save_progress(progress_js, done)
+      mark_done(done, key)
+      -- save_progress disabled (using done.txt)
       scanned = scanned + 1
       break
     end
@@ -572,15 +598,16 @@ for _, fx in ipairs(final_list) do
     write_current_fx({ idx = fx.idx, ident = fx.ident, name = fx.name })
 
     local _ok_call, loaded_ok, fx_index, used_name = pcall(try_add_fx, tmp_tr, fx.name, fx.display, fx.fx_type, fx.base)
-    if not _ok_call then loaded_ok=false; fx_index=-1; used_name="PCALL_ERROR" end
+    if not _ok_call then
+      loaded_ok = false
+      fx_index = -1
+      used_name = "PCALL_ERROR"
+    end
 
     if not loaded_ok or (not fx_index) or fx_index < 0 then
       failed = failed + 1
-      f_fail:write(string.format("LOAD_FAIL\tidx=%s\tident=%s\tname=%s\tused=%s\n",
-        tostring(fx.idx or ""),
-        tostring(fx.ident or ""),
-        tostring(fx.name or ""),
-        tostring(used_name or "")
+      f_fail:write(string.format("LOAD_FAIL\tidx=%s\tident=%s\tname=%s\tinfo=%s\n",
+        tostring(fx.idx or ""), tostring(fx.ident or ""), tostring(fx.name or ""), tostring(used_name or "")
       ))
       f_fail:flush()
 
@@ -590,19 +617,22 @@ for _, fx in ipairs(final_list) do
         csv_escape(fx.fx_type),
         csv_escape(fx.base),
         0,
-        csv_escape(used_name or ""),
+        csv_escape(tostring(used_name or "")),
         0
       ))
       f_plugins:flush()
 
-      done[key] = true
-      save_progress(progress_js, done)
+      mark_done(done, key)
+      -- save_progress disabled (using done.txt)
       clear_tmp_fx(tmp_tr)
       clear_current_fx()
+      scanned = scanned + 1
       break
     end
 
+    -- Dump params
     local param_count = r.TrackFX_GetNumParams(tmp_tr, fx_index) or 0
+
     f_plugins:write(string.format("%s,%s,%s,%s,%d,%s,%d\n",
       csv_escape(fx.display),
       csv_escape(key),
@@ -655,40 +685,32 @@ for _, fx in ipairs(final_list) do
 
     clear_tmp_fx(tmp_tr)
     clear_current_fx()
-    done[key] = true
-    save_progress(progress_js, done)
+    mark_done(done, key)
+    -- save_progress disabled (using done.txt)
     scanned = scanned + 1
 
   until true
 
-  if new_processed % 5 == 0 then
+  save_cursor(i + 1)
+
+  if pass_limit_reached then break end
+
+  if scanned % 5 == 0 then
     r.UpdateArrange()
     if r.EscapeKeyPressed and r.EscapeKeyPressed() then
       f_fail:write("ABORT\tuser_pressed_esc\n")
       f_fail:flush()
-      stop_outer = true
+      break
     end
   end
 end
 
-local remaining = count_remaining()
-
--- Auto-continue: if enabled and remaining > 0, schedule another pass by re-running this action.
--- Note: if REAPER crashes due to a plugin, you still need to restart REAPER and run the script again once.
-local scheduled_next = false
-if AUTO_CONTINUE and remaining > 0 then
-  local is_new_value, filename, sectionID, cmdID = r.get_action_context()
-  if cmdID and cmdID >= 0 then
-    scheduled_next = true
-    r.ShowConsoleMsg(string.format("IFLS Param Dump: pass done (new=%d, skipped=%d, failed=%d). Remaining=%d. Scheduling next pass...\n",
-      scanned, skipped, failed, remaining))
-    r.defer(function() r.Main_OnCommand(cmdID, 0) end)
-  else
-    r.ShowConsoleMsg("IFLS Param Dump: AUTO_CONTINUE is enabled, but script has no cmdID (not run from Action List). Run it again manually.\n")
-  end
-end
-
 ----------------------------------------------------------------
+local auto_rerun = false
+if not pass_limit_reached then save_cursor(1) end
+if AUTO_CONTINUE and pass_limit_reached and has_remaining() then
+  auto_rerun = true
+end
 -- Cleanup
 ----------------------------------------------------------------
 f_plugins:close()
@@ -698,11 +720,25 @@ f_fail:close()
 
 r.DeleteTrack(tmp_tr)
 r.PreventUIRefresh(-1)
+if auto_rerun then
+  local _, _, _, cmdID = r.get_action_context()
+  if cmdID and cmdID ~= 0 then
+    r.defer(function() r.Main_OnCommand(cmdID, 0) end)
+  end
+end
+
 r.Undo_EndBlock("IFLS Workbench Param Dump", -1)
 
-r.MB(
-  ("Done.\nTotal candidates: %d\nScanned: %d\nSkipped(resume): %d\nFailed: %d\n\nOutput folder:\n%s")
-  :format(total, scanned, skipped, failed, out_dir),
-  "IFLS Workbench Param Dump",
-  0
-)
+if (not auto_rerun) and SHOW_FINAL_SUMMARY then
+  local total_n  = tonumber(total) or (final_list and #final_list) or 0
+  local scanned_n = tonumber(scanned) or 0
+  local skipped_n = tonumber(skipped) or 0
+  local failed_n  = tonumber(failed) or 0
+
+  r.MB(
+    ("Done.\nTotal candidates: %d\nScanned (new): %d\nSkipped (resume/filtered): %d\nFailed: %d\n\nOutput folder:\n%s\n\nBatch size (new per pass): %s\nAuto-continue: %s")
+    :format(total_n, scanned_n, skipped_n, failed_n, out_dir, tostring(MAX_NEW_PER_PASS), tostring(AUTO_CONTINUE)),
+    "IFLS Workbench Param Dump",
+    0
+  )
+end
