@@ -33,7 +33,7 @@ end
 local function join(a,b)
   if not a or a == "" then return b end
   local last = a:sub(-1)
-  if last == "/" or last == "\" then return a .. b end
+  if last == "/" or last == sep then return a .. b end
   return a .. sep .. b
 end
 
