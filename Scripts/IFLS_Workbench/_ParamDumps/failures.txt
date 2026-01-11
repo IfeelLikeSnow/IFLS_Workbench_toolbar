@@ -1,1 +1,0 @@
-CRASH_LAST_RUN	idx=1415	ident=dev.bertolaccini.ogler	name=CLAP: ogler (Francesco Bertolaccini)

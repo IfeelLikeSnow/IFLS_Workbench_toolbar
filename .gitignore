@@ -10,3 +10,7 @@
 Thumbs.db
 .idea/
 .vscode/
+# generated outputs (do not version)
+Scripts/IFLS_Workbench/_ParamDumps/
+# release artifacts (use GitHub Releases instead)
+*.zip
