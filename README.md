@@ -3,10 +3,14 @@
 Minimal **IFLS-only** repository for REAPER field recording workflows (PolyWAV / Multichannel), routing + quick mic cleanup.
 
 Enthaltene Scripts (Action List):
+- **IFLS Workbench: Slicing Dropdown (auto-categories + fades)**
+- **IFLS Workbench: Slice Direct (cursor or time selection)**
+- **IFLS Workbench: Toggle Zero-Cross Respect (Slicing)**
+
 - **IFLS Workbench: Explode Fieldrec + Mic FX + Buses**
 - **IFLS Workbench: Explode AutoBus Smart + Route (FX/Color/Master)** (standalone, basiert auf DF95)
 - **IFLS Workbench: PolyWAV Toolbox (ImGui)** (basiert auf DF95, benötigt ReaImGui)
-- **IFLS Workbench: Install helpers** (registriert Scripts + öffnet Toolbar-Customize)
+- **IFLS Workbench: Install helpers** (registriert **ALLE** Scripts + öffnet Toolbar-Customize)
 
 ## Installation (ReaPack)
 
@@ -76,3 +80,11 @@ Tipp: Wenn du bereits Explode Fieldrec nutzt, kannst du MicFX anschließend per 
   - Formate: CSV + NDJSON (große Datenmengen friendly)
   - Resume: Fortschritt wird gespeichert, du kannst den Scan später fortsetzen.
 
+
+
+## Troubleshooting: Scripts tauchen nicht in der Action List auf?
+
+REAPER lädt neue Scripts nicht immer automatisch als Actions.
+
+1) Starte einmal: **IFLS Workbench: Install helpers (register ALL scripts...)**
+2) Alternativ in ReaPack: **Browse packages → Actions… → Add/Remove scripts…**
