@@ -21,11 +21,6 @@ end
 
 local function main()
   local cnt = r.CountSelectedMediaItems(0)
-  if cnt == 0 then
-    r.ShowMessageBox("Bitte mindestens ein Item auswählen (oder vorher den Print/Stem erzeugen).", "IFLS Slice Direct", 0)
-    r.Undo_EndBlock("IFLS Workbench: Slice Direct (no items)", -1)
-    return
-  end
   if cnt == 0 then return end
 
   local ts_start, ts_end = get_time_sel()
