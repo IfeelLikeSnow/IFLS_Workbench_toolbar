@@ -203,7 +203,7 @@ while true do
 end
 
 if #installed == 0 then
-  r.MB("EnumInstalledFX returned 0 entries.\nUpdate REAPER or check ReaScript support.", "DF95 Param Dump V3", 0)
+  r.MB("EnumInstalledFX returned 0 entries.\nUpdate REAPER or check ReaScript support.", "IFLS Workbench Param Dump", 0)
   return
 end
 
@@ -343,7 +343,7 @@ if not f_plugins or not f_params or not f_ndjson or not f_fail then
   r.DeleteTrack(tmp_tr)
   r.PreventUIRefresh(-1)
   r.Undo_EndBlock("DF95 Param Dump V3 (failed open files)", -1)
-  r.MB("Could not open output files in:\n" .. out_dir, "DF95 Param Dump V3", 0)
+  r.MB("Could not open output files in:\n" .. out_dir, "IFLS Workbench Param Dump", 0)
   return
 end
 
@@ -470,7 +470,6 @@ for _, fx in ipairs(final_list) do
       break
     end
 
-    scanned_count = scanned_count + 1
 
     local key = tostring(fx.ident or "")
     if key == "" then key = tostring(fx.name or "") end
@@ -484,6 +483,7 @@ for _, fx in ipairs(final_list) do
       skipped = skipped + 1
       break
     end
+    scanned_count = scanned_count + 1  -- counts NEW scans only (resume skips don't consume budget)
 
     if ENUM_ONLY then
       -- No instantiation: safe enumerate-only mode
@@ -644,11 +644,11 @@ f_fail:close()
 
 r.DeleteTrack(tmp_tr)
 r.PreventUIRefresh(-1)
-r.Undo_EndBlock("DF95 Param Dump V3", -1)
+r.Undo_EndBlock("IFLS Workbench Param Dump", -1)
 
 r.MB(
-  ("Done.\nTotal candidates: %d\nScanned: %d\nSkipped(resume): %d\nFailed: %d\n\nOutput folder:\n%s")
-  :format(total, scanned, skipped, failed, out_dir),
-  "DF95 Param Dump V3",
+  ("Done.\nTotal candidates: %d\nNewly scanned this run: %d\nSkipped(resume): %d\nFailed: %d\n\nChunk limit MAX_TO_SCAN: %d (set 0 for full scan)\n\nOutput folder:\n%s")
+  :format(total, scanned, skipped, failed, MAX_TO_SCAN, out_dir),
+  "IFLS Workbench Param Dump",
   0
 )
