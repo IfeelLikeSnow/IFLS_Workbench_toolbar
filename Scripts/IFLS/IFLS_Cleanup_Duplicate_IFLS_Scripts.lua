@@ -53,10 +53,15 @@ else
   msg("\nRecommendation: keep ONLY the newest copy (this repo), delete older duplicates.")
 end
 
--- Open Scripts folder (SWS preferred; fallback to OS)
-local CF_ShellExecute = r.CF_ShellExecute
-if CF_ShellExecute then
-  CF_ShellExecute(scripts_dir:gsub("/", sep))
-else
-  r.ShowMessageBox("Open this folder manually:\n\n"..scripts_dir, "IFLS Cleanup", 0)
+-- Open Scripts folder (SWS preferred; fallback to message)
+do
+  local CF = reaper.CF_ShellExecute -- SWS: bool CF_ShellExecute(const char* file) citeturn0search9
+  if CF then
+    -- IMPORTANT: must be called with '.' (not ':') and with ONE argument
+    CF(scripts_dir:gsub("/", sep))
+  else
+    reaper.ShowMessageBox("Open this folder manually:
+
+"..scripts_dir, "IFLS Cleanup", 0)
+  end
 end

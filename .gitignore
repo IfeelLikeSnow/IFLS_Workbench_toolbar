@@ -2,3 +2,5 @@
 Scripts/IFLS_Workbench/_ParamDumps/
 # release artifacts
 *.zip
+Scripts/IFLS_Workbench/_ParamDumps/
+*.zip

@@ -21,7 +21,10 @@ end
 
 local function main()
   local cnt = r.CountSelectedMediaItems(0)
-  if cnt == 0 then return end
+  if cnt == 0 then
+    r.ShowMessageBox("No items selected.\n\nSelect the item you want to slice (or run Slice Smart).", "IFLS Workbench: Slice Direct", 0)
+    return
+  end
 
   local ts_start, ts_end = get_time_sel()
   local cursor = r.GetCursorPosition()
