@@ -1,0 +1,1826 @@
+com.auburnsounds.Couture
+com.auburnsounds.Inner-Pitch--
+dev.bertolaccini.ogler
+com.auburnsounds.Panagement--
+org.surge-synth-team.surge-xt-fx
+org.surge-synth-team.surge-xt
+com.u-he.TyrellN6
+com.u-he.ZebraHZ
+Container
+ReaTeam JSFX/Utility/ReaperBlog_-12dB Dim.jsfx
+sstillwell/1175
+X-Raym Scripts/JSFX/MIDI/X-Raym_16 pads MIDI Notes Map.jsfx
+ReaTeam JSFX/Synth/TiaR_2op PM Synth.jsfx
+loser/3BandEQ
+loser/3BandJoiner
+Liteon/3bandpeakfilter
+loser/3BandSplitter
+sstillwell/3x3
+sstillwell/3x3_6dbSlope
+X-Raym Scripts/JSFX/X-Raym_4 Mono channels switcher.jsfx
+X-Raym Scripts/JSFX/X-Raym_4 Stereo channels switcher.jsfx
+loser/4BandEQ
+loser/4BandJoiner
+loser/4BandSplitter
+guitar/phaser
+sstillwell/4x4
+loser/5BandJoiner
+loser/5BandSplitter
+ReaTeam JSFX/Routing/MDF_51 to DMS.jsfx
+loser/50HzKicker
+IX/Switcher2
+IX/Mixer_8xM-1xS
+IX/Mixer_8xS-1xS
+misc/adpcm_simulator
+ReaTeam JSFX/MIDI/tomaszpio_AKAI APC mini grid toggle.jsfx
+loser/amplitudeModulator
+ReaTeam JSFX/MIDI/tomaszpio_APC Pad Blinker (Sync to Transport).jsfx
+Liteon/applefilter72db
+Liteon/applefilter12db
+schwa/audio_statistics
+midi/drumtrigger
+sstillwell/autoexpand
+loopsamplers/autoloop
+ReaTeam Extensions/Control Surfaces/Splits/JS/(Auto Vol - Add Receive)
+ReaTeam Extensions/Control Surfaces/Splits/JS/(Auto Vol - Send)
+ReaTeam Extensions/Control Surfaces/Splits/JS/(Auto Vol - Split Receive)
+Till/Auto-Wideness v1.0
+ReaTeam JSFX/Utility/dylanmadigan_Automatic Gain Stager.jsfx
+ReaTeam JSFX/Utility/CoreyScogin_AutoMixer.jsfx
+ReaTeam JSFX/Utility/az_Automute.jsfx
+remaincalm_org/avocado_glitch
+sstillwell/badbussmojo
+sstillwell/badbussmojo_aa
+ReaTeam JSFX/Dynamic/mrelwood_BandbAss.jsfx
+Liteon/bassmanager
+meters/bit_meter
+old_unsupported/dither
+utility/dither_psycho
+ReaTeam JSFX/Utility/mrelwood_Blipper.jsfx
+Liteon/butterworth24db
+loser/CenterCanceler
+utility/channel_mapper
+utility/channelmixer
+loser/phaseMeter
+IX/StereoPhaseInvert
+IX/PhaseAdjustingRouter
+loser/TimeDelayer
+Liteon/cheby24db
+guitar/chorus
+sstillwell/chorus
+sstillwell/chorus_stereo
+ReaTeam JSFX/Synth/TiaR_Chua Oscillator.jsfx
+loser/Compciter
+ReaTeam JSFX/Synth/TiaR_Complex X Filter Synth.jsfx
+MPL Scripts/JSFX/Convert Pitch(L) Gate(R) pair from Reaktor Blocks to MIDI.jsfx
+guitar/amp-model
+guitar/amp-model-dual
+filters/dc_remove
+MPL Scripts/JSFX/DC offset.jsfx
+Liteon/deesser
+delay/delay
+remaincalm_org/floaty_delay
+delay/delay_lowres
+ReaTeam JSFX/Modulation/mschnell_Delay_Modulator.jsfx
+delay/delay_chorus
+delay/delay_varlen
+misc/reverseness
+delay/delay_chfun
+delay/delay_sustain
+sstillwell/delay_tempo
+sstillwell/delay_pong
+delay/delay_tone
+loser/DDC
+loser/DVCJS
+loser/DVC2JS
+sstillwell/dirtsqueeze
+guitar/distortion
+guitar/distort-fuzz
+ReaTeam JSFX/Routing/MDF_DMS to 51.jsfx
+ReaTeam JSFX/Routing/MDF_DMS to FOA.jsfx
+ReaTeam JSFX/Routing/MDF_DMS to Quad.jsfx
+ReaTeam JSFX/Routing/MDF_DMS to Stereo.jsfx
+sstillwell/expander
+ReaTeam JSFX/MIDI/XQ_Drum Deviator.jsfx
+ReaTeam JSFX/MIDI/XQ_Drum Equalizer.jsfx
+ReaTeam JSFX/Utility/mschnell_Dual Time adjustment.jsfx
+meters/dynamics_meter
+ReaTeam JSFX/Filter/bellesondes_eq1979.jsfx
+sstillwell/eventhorizon
+sstillwell/eventhorizon2
+ReaTeam JSFX/MIDI/willdevelop_every_note_the_same.jsfx
+loser/Exciter
+sstillwell/exciter
+sstillwell/expressbus
+sstillwell/fairlychildish
+sstillwell/fairlychildish2
+filters/autopeakfilter
+schwa/fft_splitter
+sstillwell/flangebaby
+guitar/flanger
+ReaTeam JSFX/Routing/MDF_FOA to DMS.jsfx
+analysis/gfxanalyzer
+analysis/gain_reduction_scope
+schwa/gaussian_noise_generator
+dynamics/general_dynamics
+loser/gfxGoniometer
+ReaTeam JSFX/Utility/belovw_Goniometer.jsfx
+loopsamplers/loopsampler-granul
+waveshapers/graphdist-dyn
+waveshapers/graphdist
+ReaTeam JSFX/Reverb/TiaR_HadamVerb.jsfx
+ReaTeam JSFX/Dynamic/sinefabula_Hard Clipper.jsfx
+sstillwell/hugebooty
+ReaTeam JSFX/Utility/jsh_Inline Input Viewer (MCP embedded).jsfx
+ReaTeam JSFX/Utility/mschnell_Inter Track Parameter Modulation.jsfx
+ReaTeam JSFX/Synth/tilr_JS3Osc.jsfx
+ReaTeam JSFX/Synth/tilr_JSAdditiv.jsfx
+ReaTeam JSFX/Synth/tilr_JSDrumpad.jsfx
+ReaTeam JSFX/Synth/tilr_JSDrumsynth.jsfx
+ReaTeam JSFX/Synth/tilr_JSModulator.jsfx
+ReaTeam JSFX/Synth/tilr_JSWavesynth.jsfx
+ReaTeam JSFX/MIDI/juan_r_Keyboard MirrorInvert (Juan_R).jsfx
+X-Raym Scripts/JSFX/MIDI/X-Raym_Last MIDI event monitor.jsfx
+ReaTeam JSFX/Filter/TiaR_Lattice Filter.jsfx
+ReaTeam JSFX/MIDI/mathphreak_Learningbaby.jsfx
+ReaTeam JSFX/MIDI/mbncp_Legato Control.jsfx
+ReaTeam JSFX/Modulation/snjuk2_LFO.jsfx
+ReaTeam JSFX/Misc/brumbear_LiveBeatRepeater.jsfx
+ReaTeam JSFX/Misc/brumbear_LiveScrubberDucky.jsfx
+loopsamplers/loopsampler-m2
+loopsamplers/loopsampler-m2-midi
+Liteon/lorenzattractor
+ReaTeam JSFX/Distortion/Loudener.jsfx
+sstillwell/louderizer
+sstillwell/louderizer_lpf
+analysis/loudness_meter
+sstillwell/majortom
+MPL Scripts/Various/mpl_MappingPanel_master.jsfx
+MPL Scripts/Various/mpl_MappingPanel_slave.jsfx
+loser/masterLimiter
+sstillwell/mastertom
+ReaTeam JSFX/MIDI/MB_MIDI Event Filter.jsfx
+ReaTeam JSFX/MIDI/MB_ReautoMate.jsfx
+Liteon/pseudostereo
+filters/mdct-filter
+pitch/mdct-shift
+filters/mdct-volsweep
+ReaTeam JSFX/Distortion/reincore_MegaGrit.jsfx
+loser/MGA_JSLimiter
+loser/MGA_JSLimiterST
+utility/KanakaMS5
+utility/KanakaMSEncoder1
+X-Raym Scripts/JSFX/MIDI/X-Raym_MIDI Aftertouch eater.jsfx
+midi/midi_arp
+ReaTeam JSFX/Utility/mschnell_Midi Auto Engage.jsfx
+ReaTeam JSFX/MIDI/talagan_MIDI CC Bistate Button.jsfx
+X-Raym Scripts/JSFX/MIDI/X-Raym_MIDI CC Channel Router.jsfx
+ReaTeam JSFX/MIDI/mschnell_MIDI CC fluctuation.jsfx
+IX/MIDI_CCRider
+midi/midi_CC_mapper
+X-Raym Scripts/JSFX/MIDI/X-Raym_MIDI CC Mapper (-24 +24 range).jsfx
+X-Raym Scripts/JSFX/MIDI/X-Raym_MIDI CC Mapper (scale).jsfx
+ReaTeam JSFX/MIDI/talagan_MIDI CC Mapper X.jsfx
+ReaTeam JSFX/Utility/mschnell_Midi CC Table.jsfx
+ReaTeam JSFX/MIDI/rekseffeks_MIDI CC to pitchbend.jsfx
+ReaTeam JSFX/Utility/mschnell_MIDI CC2SYSEX.jsfx
+ReaTeam JSFX/MIDI/albthealbatross_MIDI Channel Cycler.jsfx
+ReaTeam JSFX/MIDI/talagan_MIDI Channel Matrix Router.jsfx
+ReaTeam JSFX/MIDI/eralumin_MIDI Channel Toggle.jsfx
+midi/midi_choke
+midi/midi_chordkey
+ReaTeam JSFX/MIDI/albthealbatross_MIDI Chord Strummer.jsfx
+midi/midi_chorderizer
+ReaTeam JSFX/MIDI/bertbouwhuis_MIDI controller for S8 looper with fade in and out.jsfx
+ReaTeam JSFX/Utility/mschnell_MIDI Convert to CC.jsfx
+midi/midi_delay
+ReaTeam JSFX/MIDI/talagan_MIDI Delay X.jsfx
+ReaTeam JSFX/Utility/mschnell_MIDI Display 3 CCs.jsfx
+ReaTeam JSFX/Utility/mschnell_MIDI Display Patch Name.jsfx
+IX/MIDI_DuplicateFilter
+ReaTeam JSFX/MIDI/polgo_MIDI Envelocity.jsfx
+loser/MIDI_EQ_Ducker
+ReaTeam JSFX/MIDI/willdevelop_MIDI every note the same.jsfx
+ReaTeam JSFX/Utility/mschnell_MIDI Fade.jsfx
+ReaTeam JSFX/MIDI/talagan_MIDI Force Notes to Range.jsfx
+ReaTeam JSFX/MIDI/juan_r_MIDI Fret and Pick.jsfx
+ReaTeam JSFX/MIDI/mschnell_MIDI glissando.jsfx
+ReaTeam JSFX/MIDI/urtzurd_MIDI Glissando.jsfx
+ReaTeam JSFX/MIDI/tomaszpio_MIDI hold notes range.jsfx
+ReaTeam JSFX/MIDI/amagalma_MIDI Keyboard Split Route Transpose.jsfx
+ReaTeam Scripts/Tracks/tilr_Keyboard splitter/MIDI Keyvel Filter.jsfx
+midi/midi_logger
+midi/midi_maptokey
+IX/MIDI_KeyMap
+schwa/midi_modal_randomness
+ReaTeam JSFX/Utility/TimeWaster MIDI-Mouse.jsfx
+ReaTeam JSFX/MIDI/mschnell_MIDI MPE to single channel.jsfx
+ReaTeam JSFX/MIDI/talagan_MIDI Multi Channel Pre-Delay.jsfx
+ReaTeam JSFX/MIDI/talagan_MIDI Multi Channel Pre-Delay Live Flagger.jsfx
+midi/midi_note_filter
+midi/midi_note_hold
+ReaTeam JSFX/MIDI/cfillion_MIDI note length control.jsfx
+sstillwell/randomizer
+ReaTeam JSFX/MIDI/talagan_MIDI Note Remapper.jsfx
+midi/midi_note_repeater
+ReaTeam JSFX/MIDI/willdevelop_MIDI Note Repeater [Default Key Map B1 - A4].jsfx
+midi/midi_note_sanitizer
+ReaTeam JSFX/MIDI/TJA_MIDI note-banked CC multiplier.jsfx
+midi/midinoteondelay
+X-Raym Scripts/JSFX/MIDI/X-Raym_MIDI notes octave transpose shift.jsfx
+X-Raym Scripts/JSFX/MIDI/X-Raym_MIDI notes sequence from CSV file.jsfx
+IX/MIDI_Variant
+ReaTeam JSFX/MIDI/TJA_MIDI Performer2.jsfx
+ReaTeam JSFX/MIDI/mschnell_MIDI PB x X.jsfx
+IX/MIDI_Wobulator
+ReaTeam JSFX/Misc/TiaR_PM_Resynth.jsfx
+ReaTeam JSFX/MIDI/talagan_MIDI Poly Aftertouch CC Multiplexer.jsfx
+midi/program_bank_onload
+ReaTeam JSFX/MIDI/erantalmor_MIDI Rhythm Trainer.jsfx
+midi/midi_note2channel
+ReaTeam JSFX/MIDI/mschnell_MIDI route via GMEM.jsfx
+IX/MIDI_Router
+ReaTeam JSFX/MIDI/boreg_MIDI routing matrix.jsfx
+midi/sequencer_baby
+midi/sequencer_baby_v2
+midi/sequencer_megababy
+X-Raym Scripts/JSFX/MIDI/X-Raym_MIDI single note map.jsfx
+IX/MIDI_KeySnap
+ReaTeam JSFX/MIDI/talagan_MIDI Split Pitch Bend to CCs.jsfx
+ReaTeam JSFX/MIDI/cfillion_MIDI Taps Repeater.jsfx
+IX/MIDI_Tool
+IX/MIDI_Tool II
+midi/midi_transpose
+ReaTeam JSFX/Utility/mschnell_MIDI Trigger CC.jsfx
+ReaTeam JSFX/MIDI/polgo_MIDI Varocity.jsfx
+schwa/midi_humanizer
+midi/midi_velocitycontrol
+ReaTeam JSFX/MIDI/willdevelop_MIDI Velocity Filter.jsfx
+sstillwell/volscale
+IX/MIDI_Velocifier II
+ReaTeam JSFX/Utility/mschnell_MIDI Volume Control.jsfx
+ReaTeam JSFX/MIDI/bor-T_MIDI_XY_Pad_Controller.jsfx
+Liteon/moog24db
+midi/mtc_logger
+ReaTeam JSFX/Utility/mschnell_Multi_Sin_Generator.jsfx
+Liteon/waveshapermulti
+ReaTeam JSFX/MIDI/albthealbatross_Multi-Channel MIDI Timing Randomizer.jsfx
+ReaTeam JSFX/Utility/ReaperBlog_Multichannel Volume Trim.jsfx
+ReaTeam JSFX/Utility/ReaperBlog_Multichannel Volume Trim 2.jsfx
+ReaTeam JSFX/Utility/mschnell_Mute monitor when recording.jsfx
+X-Raym Scripts/JSFX/X-Raym_Mute on loop.jsfx
+Liteon/nonlinear
+ReaTeam JSFX/MIDI/cfillion_Note Duplicator.jsfx
+X-Raym Scripts/JSFX/MIDI/X-Raym_MIDI note generator.jsfx
+ReaTeam JSFX/MIDI/mschnell_Note On Delay Tool.jsfx
+X-Raym Scripts/JSFX/MIDI/X-Raym_Note On under X velocity to Note Off.jsfx
+ReaTeam JSFX/MIDI/mschnell_Note On under X velocity to Note Off and send All Notes Off.jsfx
+ReaTeam JSFX/MIDI/mschnell_Note On Velocity Tool.jsfx
+ReaTeam Scripts/MIDI Editor/kl_Preset velocity/Note Preview.jsfx
+X-Raym Scripts/JSFX/MIDI/X-Raym_Note to CC.jsfx
+ReaTeam JSFX/MIDI/tilr_Notes to CC.jsfx
+Liteon/np1136peaklimiter
+ReaTeam Scripts/MIDI Editor/talagan_OneSmallStep/One Small Step Helper.jsfx
+analysis/gfxscope
+ReaTeam JSFX/Utility/jw_gfxscope-beat-retrigger.jsfx
+sstillwell/ozzifier
+remaincalm_org/paranoia_mangler
+utility/phase_adjust
+loser/ppp
+Liteon/pinknoisegen
+pitch/octavedown
+pitch/octaveup
+pitch/pitchdown
+pitch/pitch2
+pitch/superpitch
+ReaTeam JSFX/MIDI/mbncp_PitchWheel.jsfx
+ReaTeam JSFX/MIDI/gofer_Poly Aftertouch Converter.jsfx
+ReaTeam JSFX/Utility/jcgurango_Pre-Arranged Looper.jsfx
+ReaTeam JSFX/Utility/jcgurango_MIDI Arranged Looper.jsfx
+Liteon/presenceeq
+ReaTeam JSFX/Routing/MDF_Quad to DMS.jsfx
+ReaTeam JSFX/Filter/tilr_QuickFilter.jsfx
+sstillwell/rbj1073
+Teej/rbj4notch-teej
+sstillwell/rbj4eq
+Teej/rbj4eq-teej
+sstillwell/rbj7eq
+sstillwell/hpflpf
+Liteon/rbjstereofilter12db
+ReaTeam JSFX/Distortion/rcjach_RCInflator.jsfx
+ReaTeam JSFX/Distortion/RCInflator2_Ideal.jsfx
+ReaTeam JSFX/Distortion/RCInflator2_Oxford.jsfx
+sstillwell/realoud
+sstillwell/realoud_lpf
+ReaTeam JSFX/Synth/ReaRack Modular Synth/TimeWaster_ReaRack2 Amplifier.jsfx
+ReaTeam JSFX/Synth/ReaRack Modular Synth/TimeWaster_ReaRack2 Audio-MIDI.jsfx
+ReaTeam JSFX/Synth/ReaRack Modular Synth/TimeWaster_ReaRack2 EnvGen.jsfx
+ReaTeam JSFX/Synth/ReaRack Modular Synth/TimeWaster_ReaRack2 EnvMultiTool.jsfx
+ReaTeam JSFX/Synth/ReaRack Modular Synth/TimeWaster_ReaRack2 Filter.jsfx
+ReaTeam JSFX/Synth/ReaRack Modular Synth/TimeWaster_ReaRack2 FilterMoog24db.jsfx
+ReaTeam JSFX/Synth/ReaRack Modular Synth/TimeWaster_ReaRack2 KSDelay.jsfx
+ReaTeam JSFX/Synth/ReaRack Modular Synth/TimeWaster_ReaRack2 KeyFollower.jsfx
+ReaTeam JSFX/Synth/ReaRack Modular Synth/TimeWaster_ReaRack2 LFO.jsfx
+ReaTeam JSFX/Synth/ReaRack Modular Synth/TimeWaster_ReaRack2 MIDImixer.jsfx
+ReaTeam JSFX/Synth/ReaRack Modular Synth/TimeWaster_ReaRack2 Nonlinearizer.jsfx
+ReaTeam JSFX/Synth/ReaRack Modular Synth/TimeWaster_ReaRack2 NoteFilter.jsfx
+ReaTeam JSFX/Synth/ReaRack Modular Synth/TimeWaster_ReaRack2 NoteScope.jsfx
+ReaTeam JSFX/Synth/ReaRack Modular Synth/TimeWaster_ReaRack2 Oscillator-Additive.jsfx
+ReaTeam JSFX/Synth/ReaRack Modular Synth/TimeWaster_ReaRack2 Oscillator-Noise.jsfx
+ReaTeam JSFX/Synth/ReaRack Modular Synth/TimeWaster_ReaRack2 Oscillator-Trapezoidal.jsfx
+ReaTeam JSFX/Synth/ReaRack Modular Synth/TimeWaster_ReaRack2 Oscillator-TwinSaw.jsfx
+ReaTeam JSFX/Synth/ReaRack Modular Synth/TimeWaster_ReaRack2 PolySplitter.jsfx
+ReaTeam JSFX/Synth/ReaRack Modular Synth/Timewaster_ReaRack2 SampleAndHold.jsfx
+ReaTeam JSFX/Synth/ReaRack Modular Synth/TimeWaster_ReaRack2 Trigger.jsfx
+ReaTeam JSFX/Filter/tilr_SKFilter/skf.Saike_Yutani_upsamplers
+ReaTeam JSFX/Utility/ReaperBlog_Macro Controller.jsfx
+filters/resonantlowpass
+Liteon/ringmodulator
+ReaTeam JSFX/Routing/mschnell_Midi_Route_Note_On.jsfx
+ReaTeam JSFX/Routing/mrelwood_Routter.jsfx
+MPL Scripts/FX specific/mpl_RS5k_manager_MacroControls.jsfx
+MPL Scripts/FX specific/mpl_RS5K_manager_MIDIBUS_choke.jsfx
+MPL Scripts/FX specific/mpl_RS5K_manager_sysex_handler.jsfx
+loser/Saturation
+ReaTeam JSFX/MIDI/mschnell_Send All Notes Off.jsfx
+X-Raym Scripts/JSFX/X-Raym_Send MIDI text at playstate change.jsfx
+Liteon/shelvingfilter
+ReaTeam JSFX/Synth/TiaR_Shepard Paradoxical Synth.jsfx
+X-Raym Scripts/JSFX/X-Raym_Silence meter.jsfx
+Liteon/simplelp6db
+loser/SP1LimiterJS
+ReaTeam JSFX/Utility/denisfilippov_Simple Stereo Width Control.jsfx
+synthesis/sine_sweep
+ReaTeam JSFX/Filter/tilr_SKFilter.jsfx
+ReaTeam JSFX/MIDI/mschnell_MIDI Slider and MIDI CC.jsfx
+ReaTeam JSFX/MIDI/mschnell_Slider to MIDI NRPM.jsfx
+ReaTeam JSFX/Utility/mschnell_Slider to Midi PS.jsfx
+utility/smpte_ltc_reader
+schwa/soft_clipper
+synthesis/spectral_hold
+analysis/gfxspectrograph
+filters/spectro_filter_paint
+analysis/spectropaint
+ReaTeam Extensions/Control Surfaces/Splits/JS/(LR-Split)
+ReaTeam Extensions/Control Surfaces/Splits/JS/(LH-Split)
+ReaTeam Extensions/Control Surfaces/Splits/JS/(LMMH-Split)
+ReaTeam Extensions/Control Surfaces/Splits/JS/(LMH-Split)
+ReaTeam Extensions/Control Surfaces/Splits/JS/(MS-Split)
+Liteon/statevariable
+ReaTeam Scripts/MIDI Editor/cfillion_Step sequencing (replace mode).jsfx
+utility/chanmix2
+ReaTeam JSFX/Modulation/TiaR_ChopChop.jsfx
+X-Raym Scripts/JSFX/X-Raym_Stereo downmixer.jsfx
+loser/stereoEnhancer
+loser/StereoField
+loser/stereo
+sstillwell/stereowidth
+sstillwell/width
+loopsamplers/super8
+ReaTeam JSFX/MIDI/cfillion_Sustain pedal to note length.jsfx
+filters/sweepinglowpass
+IX/SwixMitch
+sstillwell/thunderkick
+Liteon/tilteq
+delay/time_adjustment
+ReaTeam JSFX/Utility/CoreyScogin_TimeDelayByDistance.jsfx
+loser/timeDifferencePan
+remaincalm_org/tonegate
+synthesis/tonegenerator
+X-Raym Scripts/JSFX/X-Raym_Tone generator with playstate.jsfx
+misc/tonifier
+misc/tonifier2
+loser/TransientController
+ReaTeam JSFX/Dynamic/ersh_Transient Controller 2.jsfx
+loser/TransientKiller
+Till/Transient-driven Auto-Pan v1.0 (Receiver)
+Till/Transient-driven Auto-Pan v1.0 (Transmitter)
+Till/Transient-driven Auto-Pan v1.1 (Receiver)
+Till/Transient-driven Auto-Pan v1.1 (Transmitter)
+guitar/tremolo
+ReaTeam JSFX/MIDI/ee33_Triggered Random Modal Riffer.jsfx
+loser/UpwardExpander
+utility/vca_follow
+ReaTeam Scripts/MIDI Editor/kl_Preset velocity/Velocity Slider.jsfx
+misc/video_sample_peeker
+utility/volume
+ReaTeam JSFX/Utility/nofish_Volume utility +-10db (sample accurate automation).jsfx
+utility/volume_pan
+utility/volume_pan_sample_accurate_auto
+Liteon/vumetergfx
+Liteon/vumetergfxsum
+ReaTeam JSFX/Utility/zenomod_VU Meter (ZenoMOD).jsfx
+guitar/wah
+loser/waveShapingDstr
+loser/WhiteNoise
+analysis/WigMCVUMeter
+X-Raym Scripts/JSFX/X-Raym_Tap tempo.jsfx
+ReaTeam JSFX/MIDI/mschnell_XY Pad.jsfx
+ReaTeam JSFX/MIDI/mschnellsid_XY Pad X.jsfx
+ReaTeam JSFX/Modulation/TiaR_Ze Big Chorus.jsfx
+ReaTeam JSFX/Synth/TiaR_Ze Cheesy Harmonic Synth.jsfx
+ReaTeam JSFX/Synth/TiaR_Ze DigiThArmOrgan.jsfx
+ReaTeam JSFX/Distortion/TiaR_Ze Morpho Dist.jsfx
+ReaTeam JSFX/Synth/TiaR_Ze Musette Organ.jsfx
+ReaTeam JSFX/Modulation/TiaR_Ze Little Scanner Chorus.jsfx
+loser/ZeroCrossingMaximizer
+analysis/zoomanalyzer
+ReWire: [Disabled]Ableton Live
+ReWire: REAPER
+Video processor
+C:\Program Files\Common Files\VST3\7Q.vst3
+C:\Program Files\Common Files\VST3\A1AUDIO.de\A1StereoControl-x64.vst3
+C:\Program Files\Common Files\VST3\A1AUDIO.de\A1TriggerGate-x64.vst3
+C:\Program Files\Common Files\VST3\Acon Digital\Multiply.vst3
+C:\Program Files\Common Files\VST3\adc Crush 2.vst3
+C:\Program Files\Common Files\VST3\adc Extra Pan.vst3
+C:\Program Files\Common Files\VST3\adc Haas 2.vst3
+C:\Program Files\Common Files\VST3\adc Mono.vst3
+C:\Program Files\Common Files\VST3\adc Ring 2.vst3
+C:\Program Files\Common Files\VST3\adc Shape Lite 2.vst3
+C:\Program Files\Common Files\VST3\adc Spread Delay.vst3
+C:\Program Files\Common Files\VST3\adc Spread Delay Lite.vst3
+C:\Program Files\Common Files\VST3\adc Transient.vst3
+C:\Program Files\Common Files\VST3\adc Transient Lite.vst3
+C:\Program Files\Common Files\VST3\adc Vectorscope 2.vst3
+C:\Program Files\Common Files\VST3\Bertom_AirShelf.vst3
+C:\Program Files\Common Files\VST3\AirMusic.vst3
+C:\Program Files\Common Files\VST3\Airwindows (with BaconPaul and members of the Surge Synth Team)\Airwindows Consolidated.vst3\Contents\x86_64-win\Airwindows Consolidated.vst3
+C:\Program Files\Common Files\VST3\Diagnostic Studio\Analista\Analista.vst3
+C:\Program Files\Common Files\VST3\AnSpec.vst3
+C:\Program Files\Common Files\VST3\Backmask.vst3
+C:\Program Files\Common Files\VST3\Boz Digital Labs\Bark of Dog 3.vst3
+C:\Program Files\Common Files\VST3\Basslane.vst3
+C:\Program Files\Common Files\VST3\BaxterEQ (64).vst3
+C:\Program Files\Common Files\VST3\Beat Slammer.vst3\Contents\x86_64-win\Beat Slammer.vst3
+C:\Program Files\Common Files\VST3\Beeper.vst3
+C:\Program Files\Common Files\VST3\BLENDEQ.vst3\Contents\x86_64-win\BLENDEQ.vst3
+C:\Program Files\Common Files\VST3\BlindfoldEQ.vst3
+C:\Program Files\Common Files\VST3\BC Chorus 4 VST3(Mono).vst3
+C:\Program Files\Common Files\VST3\BC Chorus 4 VST3(Stereo).vst3
+C:\Program Files\Common Files\VST3\BC Flanger 3 VST3(Mono).vst3
+C:\Program Files\Common Files\VST3\BC Flanger 3 VST3(Stereo).vst3
+C:\Program Files\Common Files\VST3\BC Free Amp VST3.vst3
+C:\Program Files\Common Files\VST3\BC FreqAnalyst 2 VST3(Mono).vst3
+C:\Program Files\Common Files\VST3\BC FreqAnalyst 2 VST3(Stereo).vst3
+C:\Program Files\Common Files\VST3\BC Gain 3 VST3(Dual).vst3
+C:\Program Files\Common Files\VST3\BC Gain 3 VST3(Mono).vst3
+C:\Program Files\Common Files\VST3\BC Gain 3 VST3(Stereo).vst3
+C:\Program Files\Common Files\VST3\BC Phaser 3 VST3(Mono).vst3
+C:\Program Files\Common Files\VST3\BC Phaser 3 VST3(Stereo).vst3
+C:\Program Files\Common Files\VST3\BC Triple EQ 4 VST3(Dual).vst3
+C:\Program Files\Common Files\VST3\BC Triple EQ 4 VST3(Mono).vst3
+C:\Program Files\Common Files\VST3\BC Triple EQ 4 VST3(Stereo).vst3
+C:\Program Files\Common Files\VST3\BPB Saturator Plus.vst3
+C:\Program Files\Common Files\VST3\Brandulator.vst3
+C:\Program Files\Common Files\VST3\BreadSlicer.vst3\Contents\x86_64-win\BreadSlicer.vst3
+C:\Program Files\Common Files\VST3\BritChannel.vst3\Contents\x86_64-win\BritChannel.vst3
+C:\Program Files\Common Files\VST3\BritPre.vst3\Contents\x86_64-win\BritPre.vst3
+C:\Program Files\Common Files\VST3\Britpressor.vst3\Contents\x86_64-win\Britpressor.vst3
+C:\Program Files\Common Files\VST3\BT-Clipper.vst3
+C:\Program Files\Common Files\VST3\bx_2098 EQ.vst3
+C:\Program Files\Common Files\VST3\bx_aura.vst3
+C:\Program Files\Common Files\VST3\bx_bassdude.vst3
+C:\Program Files\Common Files\VST3\bx_blackdist2.vst3
+C:\Program Files\Common Files\VST3\bx_bluechorus2.vst3
+C:\Program Files\Common Files\VST3\bx_boom.vst3
+C:\Program Files\Common Files\VST3\bx_boom V3.vst3
+C:\Program Files\Common Files\VST3\bx_cleansweep Pro.vst3
+C:\Program Files\Common Files\VST3\bx_cleansweep V2.vst3
+C:\Program Files\Common Files\VST3\bx_clipper.vst3
+C:\Program Files\Common Files\VST3\bx_console AMEK 200.vst3
+C:\Program Files\Common Files\VST3\bx_console AMEK 9099.vst3
+C:\Program Files\Common Files\VST3\bx_console Focusrite SC.vst3
+C:\Program Files\Common Files\VST3\bx_console N.vst3
+C:\Program Files\Common Files\VST3\bx_console SSL 4000 E.vst3
+C:\Program Files\Common Files\VST3\bx_console SSL 4000 G.vst3
+C:\Program Files\Common Files\VST3\bx_console SSL 9000 J.vst3
+C:\Program Files\Common Files\VST3\bx_control V2.vst3
+C:\Program Files\Common Files\VST3\bx_crispyscale.vst3
+C:\Program Files\Common Files\VST3\bx_crispytuner.vst3
+C:\Program Files\Common Files\VST3\bx_delay2500.vst3
+C:\Program Files\Common Files\VST3\bx_digital V3.vst3
+C:\Program Files\Common Files\VST3\bx_digital V3 mix.vst3
+C:\Program Files\Common Files\VST3\bx_dynEQ V2.vst3
+C:\Program Files\Common Files\VST3\bx_dynEQ V2 Mono.vst3
+C:\Program Files\Common Files\VST3\bx_enhancer.vst3
+C:\Program Files\Common Files\VST3\bx_glue.vst3
+C:\Program Files\Common Files\VST3\bx_greenscreamer.vst3
+C:\Program Files\Common Files\VST3\bx_hybrid V2.vst3
+C:\Program Files\Common Files\VST3\bx_hybrid V2 mix.vst3
+C:\Program Files\Common Files\VST3\bx_limiter.vst3
+C:\Program Files\Common Files\VST3\bx_limiter True Peak.vst3
+C:\Program Files\Common Files\VST3\bx_masterdesk.vst3
+C:\Program Files\Common Files\VST3\bx_masterdesk Classic.vst3
+C:\Program Files\Common Files\VST3\bx_masterdesk Pro.vst3
+C:\Program Files\Common Files\VST3\bx_masterdesk True Peak.vst3
+C:\Program Files\Common Files\VST3\bx_megadual.vst3
+C:\Program Files\Common Files\VST3\bx_megasingle.vst3
+C:\Program Files\Common Files\VST3\bx_metal2.vst3
+C:\Program Files\Common Files\VST3\bx_meter.vst3
+C:\Program Files\Common Files\VST3\bx_opto.vst3
+C:\Program Files\Common Files\VST3\bx_opto Pedal.vst3
+C:\Program Files\Common Files\VST3\bx_panEQ.vst3
+C:\Program Files\Common Files\VST3\bx_refinement.vst3
+C:\Program Files\Common Files\VST3\bx_refinement V3.vst3
+C:\Program Files\Common Files\VST3\bx_rockergain100.vst3
+C:\Program Files\Common Files\VST3\bx_rockrack V3.vst3
+C:\Program Files\Common Files\VST3\bx_rockrack V3 Player.vst3
+C:\Program Files\Common Files\VST3\bx_rooMS.vst3
+C:\Program Files\Common Files\VST3\bx_saturator V2.vst3
+C:\Program Files\Common Files\VST3\bx_shredspread.vst3
+C:\Program Files\Common Files\VST3\bx_solo.vst3
+C:\Program Files\Common Files\VST3\bx_stereomaker.vst3
+C:\Program Files\Common Files\VST3\bx_subfilter.vst3
+C:\Program Files\Common Files\VST3\bx_subsynth.vst3
+C:\Program Files\Common Files\VST3\bx_townhouse Buss Compressor.vst3
+C:\Program Files\Common Files\VST3\bx_tuner.vst3
+C:\Program Files\Common Files\VST3\bx_XL V2.vst3
+C:\Program Files\Common Files\VST3\bx_XL V3.vst3
+C:\Program Files\Common Files\VST3\bx_yellowdrive.vst3
+C:\Program Files\Common Files\VST3\BYOD.vst3\Contents\x86_64-win\BYOD.vst3
+C:\Program Files\Common Files\VST3\CHANNEV.vst3\Contents\x86_64-win\CHANNEV.vst3
+C:\Program Files\Common Files\VST3\ChowCentaur.vst3\Contents\x86_64-win\ChowCentaur.vst3
+C:\Program Files\Common Files\VST3\ChowMatrix.vst3\Contents\x86_64-win\ChowMatrix.vst3
+C:\Program Files\Common Files\VST3\ChowMultiTool.vst3\Contents\x86_64-win\ChowMultiTool.vst3
+C:\Program Files\Common Files\VST3\ChowPhaserMono.vst3\Contents\x86_64-win\ChowPhaserMono.vst3
+C:\Program Files\Common Files\VST3\ChowPhaserStereo.vst3\Contents\x86_64-win\ChowPhaserStereo.vst3
+C:\Program Files\Common Files\VST3\CHOWTapeModel.vst3\Contents\x86_64-win\CHOWTapeModel.vst3
+C:\Program Files\Common Files\VST3\Clamp 2.2.0\Clamp.vst3
+C:\Program Files\Common Files\VST3\ClipShifter_x64.vst3
+C:\Program Files\Common Files\VST3\codec.vst3\Contents\x86_64-win\codec.vst3
+C:\Program Files\Common Files\VST3\CodeRedFree.vst3
+C:\Program Files\Common Files\VST3\COMBOX.vst3\Contents\x86_64-win\COMBOX.vst3
+C:\Program Files\Common Files\VST3\Convex.vst3
+C:\Program Files\Common Files\VST3\Correlometer.vst3
+C:\Program Files\Common Files\VST3\Auburn Sounds Couture-64.vst3
+C:\Program Files\Common Files\VST3\Cramit.vst3\Contents\x86_64-win\Cramit.vst3
+C:\Program Files\Common Files\VST3\Cryogen.vst3
+C:\Program Files\Common Files\VST3\DC1A3.vst3
+C:\Program Files\Common Files\VST3\Deelay.vst3\Contents\x86_64-win\Deelay.vst3
+C:\Program Files\Common Files\VST3\Deft Compressor.vst3
+C:\Program Files\Common Files\VST3\Delay M-ST\Delay M-ST.vst3
+C:\Program Files\Common Files\VST3\Delay ST\Delay ST.vst3
+C:\Program Files\Common Files\VST3\Distox.vst3\Contents\x86_64-win\Distox.vst3
+C:\Program Files\Common Files\VST3\Imaginando\DLYM.vst3\Contents\x86_64-win\DLYM.vst3
+C:\Program Files\Common Files\VST3\TBProAudio\dpMeter5.vst3
+C:\Program Files\Common Files\VST3\Driftmaker\Driftmaker.vst3
+C:\Program Files\Common Files\VST3\DS Tantra 2.vst3
+C:\Program Files\Common Files\VST3\Dualcut 1.2.0\Dualcut.vst3
+C:\Program Files\Common Files\VST3\Dynastia 2.1.1\Dynastia.vst3
+C:\Program Files\Common Files\VST3\Dynastor 1.1.1\Dynastor.vst3
+C:\Program Files\Common Files\VST3\Elephant.vst3
+C:\Program Files\Common Files\VST3\Emergence.vst3
+C:\Program Files\Common Files\VST3\EnveLover.vst3
+C:\Program Files\Common Files\VST3\epicCLOUDS (64).vst3
+C:\Program Files\Common Files\VST3\EMSFilter_64.vst3
+C:\Program Files\Common Files\VST3\epicPLATEmkII (64).vst3
+C:\Program Files\Common Files\VST3\EQ1979\EQ1979.vst3
+C:\Program Files\Common Files\VST3\Extend 1.1.0\Extend.vst3
+C:\Program Files\Common Files\VST3\fbvc.vst3
+C:\Program Files\Common Files\VST3\FeenstaubHDR (64).vst3
+C:\Program Files\Common Files\VST3\FeenstaubTC (64).vst3
+C:\Program Files\Common Files\VST3\FetDrive.vst3\Contents\x86_64-win\FetDrive.vst3
+C:\Program Files\Common Files\VST3\FETish.vst3\Contents\x86_64-win\FETish.vst3
+C:\Program Files\Common Files\VST3\FetSnap.vst3\Contents\x86_64-win\FetSnap.vst3
+C:\Program Files\Common Files\VST3\Filterjam_x64.vst3
+C:\Program Files\Common Files\VST3\Filterstep_64.vst3
+C:\Program Files\Common Files\VST3\Filtron.vst3
+C:\Program Files\Common Files\VST3\Fire.vst3
+C:\Program Files\Common Files\VST3\FIVER.vst3
+C:\Program Files\Common Files\VST3\FKFX Noise Bleach.vst3
+C:\Program Files\Common Files\VST3\FlavourMTC (64).vst3
+C:\Program Files\Common Files\VST3\Flux Mini 2.vst3
+C:\Program Files\Common Files\VST3\fogpad.vst3
+C:\Program Files\Common Files\VST3\Fracture.vst3
+C:\Program Files\Common Files\VST3\FractureXT.vst3
+C:\Program Files\Common Files\VST3\Free Clip 2.vst3
+C:\Program Files\Common Files\VST3\Free Comp.vst3
+C:\Program Files\Common Files\VST3\Free Convolve.vst3
+C:\Program Files\Common Files\VST3\Free Delay.vst3
+C:\Program Files\Common Files\VST3\Free EQ.vst3
+C:\Program Files\Common Files\VST3\Free Gain.vst3
+C:\Program Files\Common Files\VST3\Free Meter.vst3
+C:\Program Files\Common Files\VST3\Free Tone.vst3
+C:\Program Files\Common Files\VST3\Frequalizer.vst3
+C:\Program Files\Common Files\VST3\Ohm Force\Frohmager.vst3
+C:\Program Files\Common Files\VST3\D16 Group\Frontier.vst3
+C:\Program Files\Common Files\VST3\freqshifter.vst3
+C:\Program Files\Common Files\VST3\OT FUNimator x64.vst3
+C:\Program Files\Common Files\VST3\Gatelab_64.vst3
+C:\Program Files\Common Files\VST3\grainstrain.vst3
+C:\Program Files\Common Files\VST3\TBProAudio\GSatPlus.vst3
+C:\Program Files\Common Files\VST3\HoRNetMagnusLite_x64.vst3
+C:\Program Files\Common Files\VST3\HY-Filter4 free(x64).vst3
+C:\Program Files\Common Files\VST3\Hysteresis.vst3
+C:\Program Files\Common Files\VST3\Auburn Sounds Inner Pitch 2.vst3\Contents\x86_64-win\Auburn Sounds Inner Pitch 2.vst3
+C:\Program Files\Common Files\VST3\iZotope\Insight 2.vst3
+C:\Program Files\Common Files\VST3\TBProAudio\ISOL8.vst3
+C:\Program Files\Common Files\VST3\IVGI2.vst3
+C:\Program Files\Common Files\VST3\JET.vst3\Contents\x86_64-win\JET.vst3
+C:\Program Files\Common Files\VST3\JETMIX.vst3\Contents\x86_64-win\JETMIX.vst3
+C:\Program Files\Common Files\VST3\JETMIXZL.vst3\Contents\x86_64-win\JETMIXZL.vst3
+C:\Program Files\Common Files\VST3\JETZL.vst3\Contents\x86_64-win\JETZL.vst3
+C:\Program Files\Common Files\VST3\Karanyi Sounds Wavesurfer.vst3
+C:\Program Files\Common Files\VST3\KClip Zero.vst3\Contents\x86_64-win\KClip Zero.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs 3-Band EQ.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Bitcrush.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Channel Mixer.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Chorus.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Clipper.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Comb Filter.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Compactor.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Compressor.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Delay.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Distortion.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Dual Delay.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Dynamics.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Ensemble.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Filter.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Flanger.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Formant Filter.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Frequency Shifter.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Gain.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Gate.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Haas.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Ladder Filter.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Limiter.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Nonlinear Filter.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Phase Distortion.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Phaser.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Pitch Shifter.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Resonator.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Reverb.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Reverser.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Ring Mod.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Shaper.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Stereo.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Tape Stop.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Trance Gate.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\kHs Transient Shaper.vst3
+C:\Program Files\Common Files\VST3\Kolin.vst3\Contents\x86_64-win\Kolin.vst3
+C:\Program Files\Common Files\VST3\KONSOL.vst3
+C:\Program Files\Common Files\VST3\Diagnostic Studio\Krame\Krame.vst3
+C:\Program Files\Common Files\VST3\Krush.vst3\Contents\x86_64-win\Krush.vst3
+C:\Program Files\Common Files\VST3\Lagrange\Lagrange.vst3
+C:\Program Files\Common Files\VST3\LALA.vst3\Contents\x86_64-win\LALA.vst3
+C:\Program Files\Common Files\VST3\Latency Delay.vst3
+C:\Program Files\Common Files\VST3\LatticeReverb.vst3
+C:\Program Files\Common Files\VST3\Auburn Sounds Lens-64.vst3
+C:\Program Files\Common Files\VST3\Lindell 254E.vst3
+C:\Program Files\Common Files\VST3\Lindell 354E.vst3
+C:\Program Files\Common Files\VST3\Lindell 50 Buss.vst3
+C:\Program Files\Common Files\VST3\Lindell 50 Channel.vst3
+C:\Program Files\Common Files\VST3\Lindell 69 Buss.vst3
+C:\Program Files\Common Files\VST3\Lindell 69 Channel.vst3
+C:\Program Files\Common Files\VST3\Lindell 6X-500.vst3
+C:\Program Files\Common Files\VST3\Lindell 7X-500.vst3
+C:\Program Files\Common Files\VST3\Lindell 80 Bus.vst3
+C:\Program Files\Common Files\VST3\Lindell 80 Channel.vst3
+C:\Program Files\Common Files\VST3\Lindell 902 De-esser.vst3
+C:\Program Files\Common Files\VST3\Lindell ChannelX.vst3
+C:\Program Files\Common Files\VST3\Lindell MBC.vst3
+C:\Program Files\Common Files\VST3\Lindell MU-66.vst3
+C:\Program Files\Common Files\VST3\Lindell PEX-500.vst3
+C:\Program Files\Common Files\VST3\Lindell SBC.vst3
+C:\Program Files\Common Files\VST3\Lindell TE-100.vst3
+C:\Program Files\Common Files\VST3\lkjb_seesaw_x64.vst3
+C:\Program Files\Common Files\VST3\LOADED.vst3
+C:\Program Files\Common Files\VST3\LOADES.vst3
+C:\Program Files\Common Files\VST3\LoudMax.vst3
+C:\Program Files\Common Files\VST3\Love.vst3
+C:\Program Files\Common Files\VST3\LOVEND.vst3
+C:\Program Files\Common Files\VST3\viator-LV50A-windows.vst3\Contents\x86_64-win\viator-LV50A.vst3
+C:\Program Files\Common Files\VST3\LV50A.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Dynamics\MAGC.vst3
+C:\Program Files\Common Files\VST3\Magic Dice.vst3\Contents\x86_64-win\Magic Dice.vst3
+C:\Program Files\Common Files\VST3\Magic Switch.vst3\Contents\x86_64-win\Magic Switch.vst3
+C:\Program Files\Common Files\VST3\Malibu.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Distortion\MAmp.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Tools\MAnalyzer.vst3
+C:\Program Files\Common Files\VST3\Marvel GEQ.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Tools\MAutoAlign.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\EQ\MAutoDynamicEq.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\EQ\MAutoEqualizerLP.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Modulation\MAutopan.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Modulation\MAutopanMB.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Pitch Shift\MAutoPitch.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Stereo\MAutoStereoFix.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Dynamics\MAutoVolume.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Filter\MBandPass.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\MBassador.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Distortion\MBitFun.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Distortion\MBitFunMB.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Filter\MCabinet.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Filter\MCabinetMB.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Tools\MCCGenerator.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Stereo\MCenter.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Tools\MChannelMatrix.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\MCharacter.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Reverb\MCharmVerb.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Modulation\MChorusMB.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Filter\MComb.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Filter\MCombMB.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Tools\MCompare.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Dynamics\MCompressor.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Reverb\MConvolutionEZ.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Reverb\MConvolutionMB.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Delay\MDelay.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Delay\MDelayMB.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Distortion\MDistortionMB.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Stereo\MDoubleTracker.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Stereo\MDoubleTrackerMB.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\MDrumEnhancer.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Dynamics\MDrumLeveler.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\MDrumReplacer.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\MDrumStrip.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\EQ\MDynamicEq.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Dynamics\MDynamics.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Dynamics\MDynamicsMB.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Dynamics\MDynamicsMBLarge.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\EQ\MEqualizer.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\EQ\MEqualizerLP.vst3
+C:\Program Files\Common Files\VST3\MERICA.vst3\Contents\x86_64-win\MERICA.vst3
+C:\Program Files\Steinberg\HALion Sonic\VST3\metronome.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Filter\MFilter.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Modulation\MFlanger.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Modulation\MFlangerMB.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\EQ\MFreeformAnalogEq.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\EQ\MFreeformEqualizer.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Tools\MFreeformPhase.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Modulation\MFreqShifter.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Modulation\MFreqShifterMB.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Time\MGranularMB.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\MGuitarArchitect.vst3
+C:\Program Files\Common Files\VST3\MH Thump.vst3\Contents\x86_64-win\MH Thump.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Pitch Shift\MHarmonizerMB.vst3
+C:\Program Files\Common Files\VST3\MJUCjr.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Dynamics\MLimiterMB.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Dynamics\MLimiterX.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Tools\MLoudnessAnalyzer.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Tools\MMatcher.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Tools\MMetronome.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Tools\MMicSim.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Dynamics\MModernCompressor.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\MMorph.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Tools\MMultiAnalyzer.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Tools\MNoiseGenerator.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Tools\MNotepad.vst3
+C:\Program Files\Common Files\VST3\Diagnostic Studio\Monitor-X\Monitor-X.vst3
+C:\Program Files\Common Files\VST3\MoonEcho.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Tools\MOscillator.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Tools\MOscilloscope.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Modulation\MPhaser.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Modulation\MPhaserMB.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Dynamics\MPhatik.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\MPolySaturator.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Tools\MRatio.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Tools\MRatioMB.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Tools\MRecorder.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Reverb\MReverb.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Reverb\MReverbMB.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Time\MRhythmizer.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Time\MRhythmizerMB.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Modulation\MRingModulator.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Modulation\MRingModulatorMB.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Modulation\MRotary.vst3
+C:\Program Files\Common Files\VST3\Diagnostic Studio\MS-Meter\MS-Meter.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Distortion\MSaturator.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Distortion\MSaturatorMB.vst3
+C:\Program Files\Common Files\VST3\MSED.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Delay\MSpectralDelay.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Dynamics\MSpectralDynamics.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Dynamics\MSpectralDynamicsMini.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Stereo\MSpectralPan.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Stereo\MStereoExpander.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Stereo\MStereoGenerator.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Stereo\MStereoProcessor.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Stereo\MStereoScope.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Stereo\MStereoSpread.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\MSuperLooper.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\MSuperLooper16in16out.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\MSuperLooper16out.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\MTrackAlign.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Dynamics\MTransient.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Dynamics\MTransientMB.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Modulation\MTremolo.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Modulation\MTremoloMB.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Tools\MTuner.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Distortion\MTurboAmp.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Dynamics\MTurboComp.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Dynamics\MTurboCompMB.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Delay\MTurboDelay.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Delay\MTurboDelayMB.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\EQ\MTurboEQ.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Filter\MTurboFilter.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Reverb\MTurboReverb.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Reverb\MTurboReverbMB.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Dynamics\MUltraMaximizer.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\MUnison.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Tools\MUtility.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Modulation\MVibrato.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Modulation\MVibratoMB.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Modulation\MVintageRotary.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Filter\MVocoder.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Distortion\MWaveFolder.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Distortion\MWaveFolderMB.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Distortion\MWaveShaper.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Distortion\MWaveShaperMB.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Filter\MWobbler.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Filter\MWobblerMB.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\MXXX.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\MXXX1.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\MXXX6in6out.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\MXXX6out.vst3
+C:\Program Files\Common Files\VST3\NastyDLAmkIII (64).vst3
+C:\Program Files\Common Files\VST3\NEOLD BIG AL.vst3
+C:\Program Files\Common Files\VST3\NEOLD OLDTIMER.vst3
+C:\Program Files\Common Files\VST3\NEOLD U17.vst3
+C:\Program Files\Common Files\VST3\NEOLD U2A.vst3
+C:\Program Files\Common Files\VST3\NEOLD V76U73.vst3
+C:\Program Files\Common Files\VST3\NEOLD WARBLE.vst3
+C:\Program Files\Common Files\VST3\NEOLD WUNDERLICH.vst3
+C:\Program Files\Common Files\VST3\Neutone FX.vst3\Contents\x86_64-win\Neutone FX.vst3
+C:\Program Files\Common Files\VST3\viator-de-noiser-windows.vst3
+C:\Program Files\Common Files\VST3\OkaiR2R.vst3
+C:\Program Files\Common Files\VST3\OldComms.vst3
+C:\Program Files\Common Files\VST3\OldSkoolVerb.vst3
+C:\Program Files\Common Files\VST3\OSS.vst3
+C:\Program Files\Common Files\VST3\OTT.vst3
+C:\Program Files\Common Files\VST3\Acon Digital\OverHeat.vst3
+C:\Program Files\Common Files\VST3\Overtone GEQ.vst3
+C:\Program Files\Common Files\VST3\iZotope\Ozone 12 Equalizer.vst3
+C:\Program Files\Common Files\VST3\iZotope\Ozone Imager 2.vst3
+C:\Program Files\Common Files\VST3\Auburn Sounds Panagement 2-64.vst3
+C:\Program Files\Common Files\VST3\Panflow.vst3
+C:\Program Files\Common Files\VST3\PaulXStretch.vst3\Contents\x86_64-win\PaulXStretch.vst3
+C:\Program Files\Common Files\VST3\Pitch Drift.vst3\Contents\x86_64-win\Pitch Drift.vst3
+C:\Program Files\Common Files\VST3\lkjb_PitchedDelay.vst3
+C:\Program Files\Common Files\VST3\Platone Studio Alton Limiter.vst3
+C:\Program Files\Common Files\VST3\PreBOX.vst3\Contents\x86_64-win\PreBOX.vst3
+C:\Program Files\Common Files\VST3\Protoverb(x64).vst3
+C:\Program Files\Common Files\VST3\PSPaudioware\PSP Chamber.vst3
+C:\Program Files\Common Files\VST3\PSPaudioware\PSP PianoVerb.vst3
+C:\Program Files\Common Files\VST3\PSPaudioware\PSP stepDelay.vst3
+C:\Program Files\Common Files\VST3\PTEq-X.vst3
+C:\Program Files\Common Files\VST3\Quadrant.vst3
+C:\Program Files\Common Files\VST3\Rare.vst3\Contents\x86_64-win\Rare.vst3
+C:\Program Files\Common Files\VST3\RareSE.vst3\Contents\x86_64-win\RareSE.vst3
+C:\Program Files\Common Files\VST3\Raum.vst3
+C:\Program Files\Common Files\VST3\ReCenter.vst3
+C:\Program Files\Common Files\VST3\Rechoir.vst3
+C:\Program Files\Common Files\VST3\Refire.vst3
+C:\Program Files\Common Files\VST3\regrader.vst3
+C:\Program Files\Common Files\VST3\Auburn Sounds Renegate-64.vst3
+C:\Program Files\Common Files\VST3\Replika.vst3
+C:\Program Files\Common Files\VST3\RezzoEQ.vst3
+C:\Program Files\Common Files\VST3\RoughRider3.vst3
+C:\Program Files\Common Files\VST3\Noise Engineering\Ruina.vst3
+C:\Program Files\Common Files\VST3\SoiferSound_SampleSwap.vst3
+C:\Program Files\Common Files\VST3\VST3\SC AutoFilter.vst3
+C:\Program Files\Common Files\VST3\VST3\SC BitCrusher.vst3
+C:\Program Files\Common Files\VST3\Auburn Sounds Selene.vst3\Contents\x86_64-win\Auburn Sounds Selene.vst3
+C:\Program Files\Common Files\VST3\Shadow Hills Class A Mastering Comp.vst3
+C:\Program Files\Common Files\VST3\Shadow Hills Mastering Compressor.vst3
+C:\Program Files\Common Files\VST3\Smooth Operator.vst3\Contents\x86_64-win\Smooth Operator.vst3
+C:\Program Files\Common Files\VST3\Kilohearts\Snap Heap.vst3
+C:\Program Files\Common Files\VST3\Sonicrusher.vst3
+C:\Program Files\Common Files\VST3\Sound Delay.vst3
+C:\Program Files\Common Files\VST3\Spaced Out.vst3\Contents\x86_64-win\Spaced Out.vst3
+C:\Program Files\Common Files\VST3\SPAN Plus.vst3
+C:\Program Files\Common Files\VST3\Stereo Touch.vst3
+C:\Program Files\Common Files\VST3\Stimulate.vst3
+C:\Program Files\Common Files\VST3\Mastrcode Music\Substrate\Substrate.vst3\Contents\x86_64-win\Substrate.vst3
+C:\Program Files\Common Files\VST3\Subvert2.vst3
+C:\Program Files\Common Files\VST3\Supercharger.vst3
+C:\Program Files\Common Files\VST3\Surge Synth Team\Surge XT Effects.vst3\Contents\x86_64-win\Surge XT Effects.vst3
+C:\Program Files\Common Files\VST3\sweep.vst3\Contents\x86_64-win\sweep.vst3
+C:\Program Files\Common Files\VST3\TAL-Reverb-4.vst3
+C:\Program Files\Common Files\VST3\TAL-Chorus-LX.vst3
+C:\Program Files\Common Files\VST3\TAL-Filter-2.vst3
+C:\Program Files\Common Files\VST3\TAL-Vocoder-2.vst3
+C:\Program Files\Common Files\VST3\Tape Cassette 2.vst3
+C:\Program Files\Common Files\VST3\TDR Kotelnikov.vst3
+C:\Program Files\Common Files\VST3\TDR Nova.vst3
+C:\Program Files\Common Files\VST3\TDR Prism.vst3
+C:\Program Files\Common Files\VST3\TDR VOS SlickEQ.vst3
+C:\Program Files\Common Files\VST3\Tempo Delay.vst3
+C:\Program Files\Common Files\VST3\TENSjr.vst3
+C:\Program Files\Common Files\VST3\TEOTE.vst3
+C:\Program Files\Common Files\VST3\TEQ-421.vst3
+C:\Program Files\Common Files\VST3\Termos 1.1.0\Termos.vst3
+C:\Program Files\Common Files\VST3\TesslaSEmkIII (64).vst3
+C:\Program Files\Common Files\VST3\THE OVEN.vst3
+C:\Program Files\Common Files\VST3\ThrillseekerXTCmkIII (64).vst3
+C:\Program Files\Common Files\VST3\Toned_x64.vst3
+C:\Program Files\Common Files\VST3\Toner 1.0.0\Toner.vst3
+C:\Program Files\Common Files\VST3\Transperc.vst3
+C:\Program Files\Common Files\VST3\iZotope\Trash.vst3
+C:\Program Files\Common Files\VST3\TremODeath.vst3
+C:\Program Files\Common Files\VST3\TubeSaturatorVintage_64.vst3
+C:\Program Files\Common Files\VST3\TugGlicento.vst3
+C:\Program Files\Common Files\VST3\TuPRE.vst3\Contents\x86_64-win\TuPRE.vst3
+C:\Program Files\Common Files\VST3\Uberloud.vst3
+C:\Program Files\Common Files\VST3\Unfiltered Audio Bass Mint.vst3
+C:\Program Files\Common Files\VST3\Unfiltered Audio Fault.vst3
+C:\Program Files\Common Files\VST3\Unfiltered Audio G8.vst3
+C:\Program Files\Common Files\VST3\Unfiltered Audio lo-fi-af.vst3
+C:\Program Files\Common Files\VST3\Unfiltered Audio Sandman Pro.vst3
+C:\Program Files\Common Files\VST3\Unfiltered Audio Silo.vst3
+C:\Program Files\Common Files\VST3\Unfiltered Audio Zip.vst3
+C:\Program Files\Common Files\VST3\ValhallaFreqEcho.vst3
+C:\Program Files\Common Files\VST3\ValhallaSpaceModulator.vst3
+C:\Program Files\Common Files\VST3\ValhallaSupermassive.vst3
+C:\Program Files\Common Files\VST3\iZotope\Vinyl.vst3
+C:\Program Files\Common Files\VST3\VISION 4X.vst3\Contents\x86_64-win\VISION 4X.vst3
+C:\Program Files\Common Files\VST3\Voltage Modular\Voltage Modular FX.vst3
+C:\Program Files\Common Files\VST3\Fuse Audio Labs\VPRE-72.vst3
+C:\Program Files\Common Files\VST3\Warmy EP1A V2.vst3
+C:\Program Files\Common Files\VST3\Warp.vst3
+C:\Program Files\Common Files\VST3\Wave 1.2.0\Wave.vst3
+C:\Program Files\Common Files\VST3\Wider.vst3
+C:\Program Files\Common Files\VST3\Youlean Loudness Meter 2.vst3
+C:\Program Files\Common Files\VST3\ZL Equalizer.vst3\Contents\x86_64-win\ZL Equalizer.vst3
+C:\Program Files\Common Files\VST3\adc Clap.vst3
+C:\Program Files\Common Files\VST3\ADSR Sample Manager.vst3
+C:\Program Files\Common Files\VST3\Attracktive.vst3\Contents\x86_64-win\Attracktive.vst3
+C:\Program Files\Common Files\VST3\beatassist.eu\BAT-S12\BAT-S12.vst3
+C:\Program Files\Common Files\VST3\bucketpops.vst3
+C:\Program Files\Common Files\VST3\bx_oberhausen.vst3
+C:\Program Files\Common Files\VST3\ChowKick.vst3\Contents\x86_64-win\ChowKick.vst3
+C:\Program Files\Common Files\VST3\Dexed.vst3\Contents\x86_64-win\Dexed.vst3
+C:\Program Files\Common Files\VST3\Elsita\Elsita.vst3
+C:\Program Files\Common Files\VST3\ExaktLite.vst3\Contents\x86_64-win\ExaktLite.vst3
+C:\Program Files\Common Files\VST3\Expanse\includes\Expanse.vst3
+C:\Program Files\Common Files\VST3\Extended DSF Algorithms VST3.vst3
+C:\Program Files\Common Files\VST3\gRainbow.vst3\Contents\x86_64-win\gRainbow.vst3
+C:\Program Files\Common Files\VST3\Steinberg\HALion Sonic.vst3\Contents\x86_64-win\HALion Sonic.vst3
+C:\Program Files\Common Files\VST3\Helm\helm.vst3
+C:\Program Files\Common Files\VST3\Just a Sample\Just a Sample.vst3
+C:\Program Files\Common Files\VST3\Leems\Leems.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\MDrummer.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\MDrummer16out.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\MDrummer1out.vst3
+C:\Program Files\Common Files\VST3\MNDALA 2.vst3
+C:\Program Files\Common Files\VST3\Momentum.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\MPowerSynth.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\MSoundFactory.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\MSoundFactory6out.vst3
+C:\Program Files\Common Files\VST3\OB-Xd 3.vst3\Contents\x86_64-win\OB-Xd 3.vst3
+C:\Program Files\Common Files\VST3\Odin2.vst3
+C:\Program Files\Common Files\VST3\Newfangled Audio\Pendulate.vst3
+C:\Program Files\Common Files\VST3\Podolski(x64).vst3
+C:\Program Files\Common Files\VST3\Noise Engineering\Sinc Vereor.vst3
+C:\Program Files\Common Files\VST3\Sitala.vst3
+C:\Program Files\Common Files\VST3\SQKONE.vst3
+C:\Program Files\Common Files\VST3\Stochas.vst3
+C:\Program Files\Common Files\VST3\Surge Synth Team\Surge XT.vst3\Contents\x86_64-win\Surge XT.vst3
+C:\Program Files\Common Files\VST3\SyndtSphere.vst3
+C:\Program Files\Common Files\VST3\Mastrcode Music\T-Force Zenith\T-Force Zenith\T-Force Zenith.vst3
+C:\Program Files\Common Files\VST3\Tactic.vst3
+C:\Program Files\Common Files\VST3\TAL-NoiseMaker.vst3
+C:\Program Files\Common Files\VST3\Thump One.vst3\Contents\x86_64-win\Thump One.vst3
+C:\Program Files\Common Files\VST3\Triaz Player.vst3
+C:\Program Files\Common Files\VST3\TripleCheese(x64).vst3
+C:\Program Files\Common Files\VST3\TyrellN6(x64).vst3
+C:\Program Files\Common Files\VST3\Unfiltered Audio Battalion.vst3
+C:\Program Files\Common Files\VST3\Verv\Verv.vst3
+C:\Program Files\Common Files\VST3\Noise Engineering\Virt Vereor.vst3
+C:\Program Files\Common Files\VST3\Vital.vst3
+C:\Program Files\Common Files\VST3\Voltage Modular\Voltage Modular.vst3
+C:\Program Files\Common Files\VST3\ZebraHZ(x64).vst3
+C:\Program Files\Common Files\VST3\Zyklop.vst3
+C:\Program Files\Common Files\VST2\HBC-5.x64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Acceleration64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Acceleration264.dll
+C:\Program Files\Common Files\VST2\Airwindows\ADClip764.dll
+C:\Program Files\Common Files\VST2\Airwindows\ADClip864.dll
+C:\Program Files\Common Files\VST2\Airwindows\ADT64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Air64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Air264.dll
+C:\Program Files\Common Files\VST2\Airwindows\Air364.dll
+C:\Program Files\Common Files\VST2\Airwindows\Air464.dll
+C:\Program Files\Steinberg\VSTPlugins\Ambience.dll
+C:\Program Files\Common Files\VST2\Airwindows\AngleEQ64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Apicolypse64.dll
+C:\Program Files\Common Files\VST2\Airwindows\AQuickVoiceClip64.dll
+C:\Program Files\Common Files\VST2\Airwindows\AtmosphereBuss64.dll
+C:\Program Files\Common Files\VST2\Airwindows\AtmosphereChannel64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Aura64.dll
+C:\Program Files\Common Files\VST2\Airwindows\AutoPan64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Average64.dll
+C:\Program Files\Common Files\VST2\Airwindows\AverMatrix64.dll
+C:\Program Files\VSTPlugins\Acon Digital\Backmask.dll
+C:\Program Files\Common Files\VST2\Airwindows\Balanced64.dll
+C:\Program Files\Steinberg\VSTPlugins\Boz Digital Labs\Bark of Dog 3.dll
+C:\Program Files\Common Files\VST2\Airwindows\BassAmp64.dll
+C:\Program Files\Common Files\VST2\Airwindows\BassDrive64.dll
+C:\Program Files\Common Files\VST2\Airwindows\BassKit64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Baxandall64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Baxandall264.dll
+C:\Program Files\Common Files\VST2\Airwindows\Beam64.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\Beat Slammer.dll
+C:\Program Files\Common Files\VST2\Airwindows\BezEQ64.dll
+C:\Program Files\Common Files\VST2\Airwindows\BigAmp64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Biquad64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Biquad264.dll
+C:\Program Files\Common Files\VST2\Airwindows\BiquadDouble64.dll
+C:\Program Files\Common Files\VST2\Airwindows\BiquadHiLo64.dll
+C:\Program Files\Common Files\VST2\Airwindows\BiquadNonLin64.dll
+C:\Program Files\Common Files\VST2\Airwindows\BiquadOneHalf64.dll
+C:\Program Files\Common Files\VST2\Airwindows\BiquadPlus64.dll
+C:\Program Files\Common Files\VST2\Airwindows\BiquadStack64.dll
+C:\Program Files\Common Files\VST2\Airwindows\BiquadTriple64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Bite64.dll
+C:\Program Files\Common Files\VST2\Airwindows\BitGlitter64.dll
+C:\Program Files\Common Files\VST2\Airwindows\BitShiftGain64.dll
+C:\Program Files\Common Files\VST2\Airwindows\BitShiftPan64.dll
+C:\Program Files\Common Files\VST2\Airwindows\BlockParty64.dll
+C:\Program Files\Common Files\VST2\Airwindows\BrassRider64.dll
+C:\Program Files\Common Files\VST2\Airwindows\BrightAmbience64.dll
+C:\Program Files\Common Files\VST2\Airwindows\BrightAmbience264.dll
+C:\Program Files\Common Files\VST2\Airwindows\BrightAmbience364.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\dfx Buffer Override.dll
+C:\Program Files\Common Files\VST2\Airwindows\BuildATPDF64.dll
+C:\Program Files\Common Files\VST2\Airwindows\BussColors464.dll
+C:\Program Files\Common Files\VST2\Airwindows\ButterComp64.dll
+C:\Program Files\Common Files\VST2\Airwindows\ButterComp264.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_2098 EQ.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_aura.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_bassdude.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_boom V3.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_cleansweep Pro.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_clipper.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_console AMEK 200.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_console AMEK 9099.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_console Focusrite SC.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_console N.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_console SSL 4000 E.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_console SSL 4000 G.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_console SSL 9000 J.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_control V2.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_crispyscale.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_crispytuner.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_delay2500.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_digital V3.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_digital V3 mix.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_dynEQ V2.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_dynEQ V2 Mono.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_enhancer.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_glue.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_hybrid V2.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_hybrid V2 mix.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_limiter.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_limiter True Peak.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_masterdesk.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_masterdesk Pro.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_masterdesk True Peak.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_megadual.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_opto.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_panEQ.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_refinement.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_refinement V3.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_rockergain100.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_rockrack V3.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_rooMS.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_saturator V2.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_stereomaker.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_subfilter.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_subsynth.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_townhouse Buss Compressor.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_XL V2.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_XL V3.dll
+C:\Program Files\Common Files\VST2\Airwindows\C5RawBuss64.dll
+C:\Program Files\Common Files\VST2\Airwindows\C5RawChannel64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Cabs64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Calibre64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Cans64.dll
+C:\Program Files\Common Files\VST2\Airwindows\CansAW64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Capacitor64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Capacitor264.dll
+C:\Program Files\Common Files\VST2\Airwindows\Chamber64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Chamber264.dll
+C:\Program Files\Common Files\VST2\Airwindows\Channel464.dll
+C:\Program Files\Common Files\VST2\Airwindows\Channel664.dll
+C:\Program Files\Common Files\VST2\Airwindows\Channel764.dll
+C:\Program Files\Common Files\VST2\Airwindows\Channel864.dll
+C:\Program Files\Common Files\VST2\Airwindows\Channel964.dll
+C:\Program Files\Common Files\VST2\Airwindows\Chorus64.dll
+C:\Program Files\Common Files\VST2\Airwindows\ChorusEnsemble64.dll
+C:\Program Files\Common Files\VST2\Airwindows\ChromeOxide64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Cider64.dll
+C:\Program Files\Common Files\VST2\Airwindows\ClearCoat64.dll
+C:\Program Files\Common Files\VST2\Airwindows\ClipOnly64.dll
+C:\Program Files\Common Files\VST2\Airwindows\ClipOnly264.dll
+C:\Program Files\Common Files\VST2\Airwindows\ClipSoftly64.dll
+C:\Program Files\Common Files\VST2\Airwindows\CloudCoat64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Coils64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Coils264.dll
+C:\Program Files\Common Files\VST2\Airwindows\Cojones64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Compresaturator64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Console0Buss64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Console0Channel64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Console4Buss64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Console4Channel64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Console5Buss64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Console5Channel64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Console5DarkCh64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Console6Buss64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Console6Channel64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Console7Buss64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Console7Cascade64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Console7Channel64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Console7Crunch64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Console8BussHype64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Console8BussIn64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Console8BussOut64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Console8ChannelHype64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Console8ChannelIn64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Console8ChannelOut64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Console8LiteBuss64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Console8LiteChannel64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Console8SubHype64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Console8SubIn64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Console8SubOut64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Console9Buss64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Console9Channel64.dll
+C:\Program Files\Common Files\VST2\Airwindows\ConsoleLABuss64.dll
+C:\Program Files\Common Files\VST2\Airwindows\ConsoleLAChannel64.dll
+C:\Program Files\Common Files\VST2\Airwindows\ConsoleMCBuss64.dll
+C:\Program Files\Common Files\VST2\Airwindows\ConsoleMCChannel64.dll
+C:\Program Files\Common Files\VST2\Airwindows\ConsoleMDBuss64.dll
+C:\Program Files\Common Files\VST2\Airwindows\ConsoleMDChannel64.dll
+C:\Program Files\Common Files\VST2\Airwindows\ConsoleXBuss64.dll
+C:\Program Files\Common Files\VST2\Airwindows\ConsoleXChannel64.dll
+C:\Program Files\Common Files\VST2\Airwindows\ConsoleXPre64.dll
+C:\Program Files\Common Files\VST2\Airwindows\ContentHideD64.dll
+C:\Program Files (x86)\VST PlugIns\Convoluter.dll
+C:\Program Files (x86)\VST PlugIns\Corkscrew.dll
+C:\Program Files\Common Files\VST2\Airwindows\CreamCoat64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Creature64.dll
+C:\Program Files\Common Files\VST2\Airwindows\CrickBass64.dll
+C:\Program Files\Common Files\VST2\Airwindows\CrunchCoat64.dll
+C:\Program Files\Common Files\VST2\Airwindows\CrunchyGrooveWear64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Crystal64.dll
+C:\Program Files\Common Files\VST2\Airwindows\CStrip64.dll
+C:\Program Files\Common Files\VST2\Airwindows\CStrip264.dll
+C:\Program Files\Common Files\VST2\Airwindows\curve64.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\Danaides.dll
+C:\Program Files\Common Files\VST2\Airwindows\Dark64.dll
+C:\Program Files\Common Files\VST2\Airwindows\DarkNoise64.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\dblue_Crusher.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\dblue_Glitch_v1_3.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\dblue_Stretch.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\dblue_TapeStop.dll
+C:\Program Files\Common Files\VST2\Airwindows\DCVoltage64.dll
+C:\Program Files\Common Files\VST2\DD Channel.dll
+C:\Program Files\Common Files\VST2\Airwindows\DeBess64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Deckwrecka64.dll
+C:\Program Files\Common Files\VST2\Airwindows\DeEss64.dll
+C:\Program Files\Common Files\VST2\Voxengo\Deft Compressor.dll
+C:\Program Files\Common Files\VST2\Airwindows\DeHiss64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Density64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Density264.dll
+C:\Program Files\Common Files\VST2\Airwindows\DeRez64.dll
+C:\Program Files\Common Files\VST2\Airwindows\DeRez264.dll
+C:\Program Files\Common Files\VST2\Airwindows\DeRez364.dll
+C:\Program Files\Common Files\VST2\Airwindows\Desk64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Desk464.dll
+C:\Program Files\Common Files\VST2\Airwindows\DigitalBlack64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Dirt64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Discontinuity64.dll
+C:\Program Files\Steinberg\VSTPlugins\Audio Damage\Discord 3.dll
+C:\Program Files\Common Files\VST2\Airwindows\Disintegrate64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Distance64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Distance264.dll
+C:\Program Files\Common Files\VST2\Airwindows\Distance364.dll
+C:\Program Files\Common Files\VST2\Airwindows\Distortion64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Ditherbox64.dll
+C:\Program Files\Common Files\VST2\Airwindows\DitherFloat64.dll
+C:\Program Files\Common Files\VST2\Airwindows\DitherMeDiskers64.dll
+C:\Program Files\Common Files\VST2\Airwindows\DitherMeTimbers64.dll
+C:\Program Files\Common Files\VST2\Imaginando\DLYM.dll
+C:\Program Files\Common Files\VST2\Airwindows\Doublelay64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Drive64.dll
+C:\Program Files\Common Files\VST2\Airwindows\DrumSlam64.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\DS Tantra 2.dll
+C:\Program Files\Steinberg\VSTPlugins\DtBlkFx-x64\DtBlkFx.dll
+C:\Program Files\Common Files\VST2\Airwindows\DubCenter64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Dubly64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Dubly264.dll
+C:\Program Files\Common Files\VST2\Airwindows\Dubly364.dll
+C:\Program Files\Common Files\VST2\Airwindows\DubPlate64.dll
+C:\Program Files\Common Files\VST2\Airwindows\DubPlate264.dll
+C:\Program Files\Common Files\VST2\Airwindows\DubSub64.dll
+C:\Program Files\Common Files\VST2\Airwindows\DubSub264.dll
+C:\Program Files\Common Files\VST2\Airwindows\DustBunny64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Dynamics64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Dyno64.dll
+C:\Program Files\Common Files\VST2\easyGater_x64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Edge64.dll
+C:\Program Files\Common Files\VST2\Airwindows\EdIsDim64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Elation64.dll
+C:\Program Files\Common Files\VST2\Airwindows\ElectroHat64.dll
+C:\Program Files\Common Files\VST2\Voxengo\Elephant.dll
+C:\Program Files\Common Files\VST2\Airwindows\Elliptical64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Energy64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Energy264.dll
+C:\Program Files\Common Files\VST2\Airwindows\Ensemble64.dll
+C:\Program Files\Common Files\VST2\Airwindows\EQ64.dll
+C:\Program Files\Common Files\VST2\Airwindows\EveryConsole64.dll
+C:\Program Files\Common Files\VST2\Airwindows\EverySlew64.dll
+C:\Program Files\Common Files\VST2\Airwindows\EveryTrim64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Exciter64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Facet64.dll
+C:\Program Files\Common Files\VST2\Airwindows\FathomFive64.dll
+C:\Program Files\Common Files\VST2\FerricTDSmkII (64).dll
+C:\Program Files\Common Files\VST3\Acon Digital\Filterstep_64.dll
+C:\Program Files\Common Files\VST2\Airwindows\FinalClip64.dll
+C:\Program Files\Common Files\VST2\Airwindows\FireAmp64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Flipity64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Floor64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Flutter64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Flutter264.dll
+C:\Program Files\Common Files\VST2\Airwindows\Focus64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Fracture64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Fracture264.dll
+C:\Program Files\Common Files\VST3\FREE87 FR-COMP(x64).dll
+C:\Program Files\Common Files\VST3\FREE87 FR-EQUA(x64).dll
+C:\Program Files\Common Files\VST3\FREE87 FR-GATE(x64).dll
+C:\Program Files\Common Files\VST3\FREE87 FR-LIMIT(x64).dll
+C:\Program Files\Common Files\VST2\FreeClip.dll
+C:\Program Files\Common Files\VST2\Airwindows\FromTape64.dll
+C:\Program Files\Common Files\VST2\fbphaser64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Galactic64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Galactic264.dll
+C:\Program Files\Common Files\VST2\Airwindows\Galactic364.dll
+C:\Program Files\Common Files\VST2\Airwindows\GalacticVibe64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Gatelope64.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\dfx Geometer.dll
+C:\Program Files\Common Files\VST2\Giant Verb (Win VST2 64)\Giant Verb.dll
+C:\Program Files\Common Files\VST2\Airwindows\GlitchShifter64.dll
+C:\Program Files\Common Files\VST2\Airwindows\GoldenSlew64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Golem64.dll
+C:\Program Files\Common Files\VST2\Airwindows\GrindAmp64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Gringer64.dll
+C:\Program Files\Common Files\VST2\Airwindows\GrooveWear64.dll
+C:\Program Files\Common Files\VST2\Airwindows\GuitarConditioner64.dll
+C:\Program Files\VSTPlugins\Hadron\hadron64.dll
+C:\Program Files (x86)\Vstplugins\Hadron\hadron32.dll
+C:\Program Files\Common Files\VST2\Airwindows\HardVacuum64.dll
+C:\Program Files (x86)\VST PlugIns\Harmonic Adder.dll
+C:\Program Files\VSTPlugins\Hematohm_vstwin_x64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Hermepass64.dll
+C:\Program Files\Common Files\VST2\Airwindows\HermeTrim64.dll
+C:\Program Files\Common Files\VST2\Airwindows\HighGlossDither64.dll
+C:\Program Files\Common Files\VST2\Airwindows\HighImpact64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Highpass64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Highpass264.dll
+C:\Program Files\Common Files\VST2\Airwindows\Holt64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Holt264.dll
+C:\Program Files\Common Files\VST2\Airwindows\Hombre64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Huge64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Hull64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Hull264.dll
+C:\Program Files\Common Files\VST2\Airwindows\Hype64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Hypersoft64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Hypersonic64.dll
+C:\Program Files\Common Files\VST2\Airwindows\HypersonX64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Infinity64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Infinity264.dll
+C:\Program Files\Common Files\VST2\Airwindows\Inflamer64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Infrasonic64.dll
+C:\Program Files\Steinberg\VSTPlugins\Insight 2.dll
+C:\Program Files\Common Files\VST2\Airwindows\Interstage64.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\IO-Filter.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\IO-Panner.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\IO-Phaser.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\IO-Pitch-Shifter.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\IO-RingMod.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\IO-Volume.dll
+C:\Program Files\Common Files\VST2\Airwindows\IronOxide564.dll
+C:\Program Files\Common Files\VST2\Airwindows\IronOxideClassic64.dll
+C:\Program Files\Common Files\VST2\Airwindows\IronOxideClassic264.dll
+C:\Program Files\Common Files\VST2\Airwindows\Isolator264.dll
+C:\Program Files\Common Files\VST2\Airwindows\Isolator364.dll
+C:\Program Files\Common Files\VST2\Airwindows\Kalman64.dll
+C:\Program Files\Common Files\VST2\Airwindows\kCathedral64.dll
+C:\Program Files\Common Files\VST2\Airwindows\kCathedral264.dll
+C:\Program Files\Common Files\VST2\Airwindows\kCathedral364.dll
+C:\Program Files\Common Files\VST2\Airwindows\kChamberAR64.dll
+C:\Program Files\Common Files\VST2\Airwindows\kGuitarHall64.dll
+C:\Program Files\Common Files\VST2\Airwindows\kPlate14064.dll
+C:\Program Files\Common Files\VST2\Airwindows\kPlate24064.dll
+C:\Program Files\Common Files\VST2\Airwindows\kPlateA64.dll
+C:\Program Files\Common Files\VST2\Airwindows\kPlateB64.dll
+C:\Program Files\Common Files\VST2\Airwindows\kPlateC64.dll
+C:\Program Files\Common Files\VST2\Airwindows\kPlateD64.dll
+C:\Program Files\Common Files\VST2\Krush.dll
+C:\Program Files\Common Files\VST2\Airwindows\LeadAmp64.dll
+C:\Program Files\Common Files\VST2\Airwindows\LeftoMono64.dll
+C:\Program Files (x86)\VST PlugIns\Length Separator.dll
+C:\Program Files\Common Files\VST2\Airwindows\LilAmp64.dll
+C:\Program Files\Common Files\VST2\Limiter6-x64.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\Lindell 254E.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\Lindell 354E.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\Lindell 50 Buss.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\Lindell 50 Channel.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\Lindell 69 Buss.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\Lindell 69 Channel.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\Lindell 6X-500.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\Lindell 7X-500.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\Lindell 80 Bus.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\Lindell 80 Channel.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\Lindell 902 De-esser.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\Lindell ChannelX.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\Lindell MBC.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\Lindell MU-66.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\Lindell PEX-500.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\Lindell SBC.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\Lindell TE-100.dll
+C:\Program Files\Common Files\VST2\Airwindows\Logical464.dll
+C:\Program Files\Common Files\VST2\Airwindows\Loud64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Lowpass64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Lowpass264.dll
+C:\Program Files\Common Files\VST2\Airwindows\LRConvolve64.dll
+C:\Program Files\Common Files\VST2\Airwindows\LRConvolve264.dll
+C:\Program Files\Common Files\VST2\Airwindows\LRFlipTimer64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Luxor64.dll
+C:\Program Files\Common Files\VST2\Airwindows\MackEQ64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Mackity64.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Dynamics\MAGC.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\Magic Dice.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\Magic Switch.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Distortion\MAmp.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Tools\MAnalyzer.dll
+C:\Program Files\Common Files\VST2\Mangleverb x64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Mastering64.dll
+C:\Program Files\Common Files\VST2\Airwindows\MatrixVerb64.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Tools\MAutoAlign.dll
+C:\Program Files\VSTPlugins\MeldaProduction\EQ\MAutoDynamicEq.dll
+C:\Program Files\VSTPlugins\MeldaProduction\EQ\MAutoEqualizer.dll
+C:\Program Files\VSTPlugins\MeldaProduction\EQ\MAutoEqualizerLP.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Modulation\MAutopan.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Modulation\MAutopanMB.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Pitch Shift\MAutoPitch.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Stereo\MAutoStereoFix.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Dynamics\MAutoVolume.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Filter\MBandPass.dll
+C:\Program Files\VSTPlugins\MeldaProduction\MBassador.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Distortion\MBitFun.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Distortion\MBitFunMB.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Filter\MCabinet.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Filter\MCabinetMB.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Tools\MCCGenerator.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Stereo\MCenter.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Tools\MChannelMatrix.dll
+C:\Program Files\VSTPlugins\MeldaProduction\MCharacter.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Reverb\MCharmVerb.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Modulation\MChorusMB.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Filter\MComb.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Filter\MCombMB.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Tools\MCompare.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Dynamics\MCompressor.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Reverb\MConvolutionEZ.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Reverb\MConvolutionMB.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Delay\MDelay.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Delay\MDelayMB.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Distortion\MDistortionMB.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Stereo\MDoubleTracker.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Stereo\MDoubleTrackerMB.dll
+C:\Program Files\VSTPlugins\MeldaProduction\MDrumEnhancer.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Dynamics\MDrumLeveler.dll
+C:\Program Files\VSTPlugins\MeldaProduction\MDrumReplacer.dll
+C:\Program Files\VSTPlugins\MeldaProduction\MDrumStrip.dll
+C:\Program Files\VSTPlugins\MeldaProduction\EQ\MDynamicEq.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Dynamics\MDynamics.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Dynamics\MDynamicsMB.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Dynamics\MDynamicsMBLarge.dll
+C:\Program Files\Common Files\VST2\Airwindows\Melt64.dll
+C:\Program Files\VSTPlugins\MeldaProduction\EQ\MEqualizer.dll
+C:\Program Files\VSTPlugins\MeldaProduction\EQ\MEqualizerLP.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Filter\MFilter.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Modulation\MFlanger.dll
+C:\Program Files\VSTPlugins\MeldaProduction\EQ\MFreeformAnalogEq.dll
+C:\Program Files\VSTPlugins\MeldaProduction\EQ\MFreeformEqualizer.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Tools\MFreeformPhase.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Modulation\MFreqShifter.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Modulation\MFreqShifterMB.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Time\MGranularMB.dll
+C:\Program Files\VSTPlugins\MeldaProduction\MGuitarArchitect.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Pitch Shift\MHarmonizerMB.dll
+C:\Program Files\Common Files\VST2\MiaLaboratories\MIAFat.dll
+C:\Program Files\Common Files\VST2\MiaLaboratories\MIAMuscle.dll
+C:\Program Files\Common Files\VST2\Airwindows\MidAmp64.dll
+C:\Program Files\Common Files\VST2\Airwindows\MidSide64.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Dynamics\MLimiterMB.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Dynamics\MLimiterX.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Tools\MLoudnessAnalyzer.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Tools\MMatcher.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Tools\MMetronome.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Tools\MMicSim.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Dynamics\MModernCompressor.dll
+C:\Program Files\VSTPlugins\MeldaProduction\MMorph.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Tools\MMultiAnalyzer.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Tools\MNoiseGenerator.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Tools\MNotepad.dll
+C:\Program Files\VSTPlugins\Mobilohm_vstwin_x64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Mojo64.dll
+C:\Program Files\Common Files\VST3\Molot03-x64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Monitoring64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Monitoring264.dll
+C:\Program Files\Common Files\VST2\Airwindows\Monitoring364.dll
+C:\Program Files\Common Files\VST2\Airwindows\MoNoam64.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Tools\MOscillator.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Tools\MOscilloscope.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Modulation\MPhaser.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Modulation\MPhaserMB.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Dynamics\MPhatik.dll
+C:\Program Files\VSTPlugins\MeldaProduction\MPolySaturator.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Tools\MRatio.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Tools\MRatioMB.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Tools\MRecorder.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Reverb\MReverb.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Reverb\MReverbMB.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Time\MRhythmizer.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Time\MRhythmizerMB.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Modulation\MRingModulator.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Modulation\MRingModulatorMB.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Modulation\MRotary.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Distortion\MSaturator.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Distortion\MSaturatorMB.dll
+C:\Program Files\Common Files\VST2\Airwindows\MSFlipTimer64.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Delay\MSpectralDelay.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Dynamics\MSpectralDynamics.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Dynamics\MSpectralDynamicsMini.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Stereo\MSpectralPan.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Stereo\MStereoExpander.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Stereo\MStereoGenerator.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Stereo\MStereoProcessor.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Stereo\MStereoScope.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Stereo\MStereoSpread.dll
+C:\Program Files\VSTPlugins\MeldaProduction\MSuperLooper.dll
+C:\Program Files\VSTPlugins\MeldaProduction\MSuperLooper16in16out.dll
+C:\Program Files\VSTPlugins\MeldaProduction\MSuperLooper16out.dll
+C:\Program Files\VSTPlugins\MeldaProduction\MTrackAlign.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Pitch Shift\MTransformer.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Dynamics\MTransient.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Dynamics\MTransientMB.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Modulation\MTremolo.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Modulation\MTremoloMB.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Tools\MTuner.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Distortion\MTurboAmp.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Dynamics\MTurboComp.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Dynamics\MTurboCompMB.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Delay\MTurboDelay.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Delay\MTurboDelayMB.dll
+C:\Program Files\VSTPlugins\MeldaProduction\EQ\MTurboEQ.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Filter\MTurboFilter.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Reverb\MTurboReverb.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Reverb\MTurboReverbMB.dll
+C:\Program Files\Common Files\VST2\Airwindows\MultiBandDistortion64.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Dynamics\MUltraMaximizer.dll
+C:\Program Files\VSTPlugins\MeldaProduction\MUnison.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Tools\MUtility.dll
+C:\Program Files\Common Files\VST2\Airwindows\MV64.dll
+C:\Program Files\Common Files\VST2\Airwindows\MV264.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Modulation\MVibrato.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Modulation\MVibratoMB.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Modulation\MVintageRotary.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Filter\MVocoder.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Distortion\MWaveFolder.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Distortion\MWaveFolderMB.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Distortion\MWaveShaper.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Distortion\MWaveShaperMB.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Filter\MWobbler.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Filter\MWobblerMB.dll
+C:\Program Files\VSTPlugins\MeldaProduction\MXXX.dll
+C:\Program Files\VSTPlugins\MeldaProduction\MXXX1.dll
+C:\Program Files\VSTPlugins\MeldaProduction\MXXX6in6out.dll
+C:\Program Files\VSTPlugins\MeldaProduction\MXXX6out.dll
+C:\Program Files\Common Files\VST2\Airwindows\NaturalizeDither64.dll
+C:\Program Files\Common Files\VST2\Airwindows\NC-1764.dll
+C:\Program Files\Common Files\VST2\NCAR.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\NEOLD OLDTIMER.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\NEOLD U17.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\NEOLD U2A.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\NEOLD V76U73.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\NEOLD WARBLE.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\NEOLD WUNDERLICH.dll
+C:\Program Files\Common Files\VST2\Airwindows\Neverland64.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\Nibiru 3.dll
+C:\Program Files\Common Files\VST2\Airwindows\Nikola64.dll
+C:\Program Files\Common Files\VST2\Airwindows\NodeDither64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Noise64.dll
+C:\Program Files\Common Files\VST2\Airwindows\NonlinearSpace64.dll
+C:\Program Files\Common Files\VST2\Airwindows\NotJustAnotherCD64.dll
+C:\Program Files\Common Files\VST2\Airwindows\NotJustAnotherDither64.dll
+C:\Program Files\Common Files\VST2\Airwindows\OneCornerClip64.dll
+C:\Program Files\Common Files\VST2\Airwindows\OrbitKick64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Overheads64.dll
+C:\Program Files\Steinberg\VSTPlugins\Ozone Imager 2.dll
+C:\Program Files\Common Files\VST2\Airwindows\Pafnuty64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Pafnuty264.dll
+C:\Program Files\Common Files\VST2\Airwindows\Parametric64.dll
+C:\Program Files\Common Files\VST2\Airwindows\PaulDither64.dll
+C:\Program Files\Common Files\VST2\Airwindows\PaulWide64.dll
+C:\Program Files\Common Files\VST2\Airwindows\PDBuss64.dll
+C:\Program Files\Common Files\VST2\Airwindows\PDChannel64.dll
+C:\Program Files\Common Files\VST2\Airwindows\PeaksOnly64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Pear64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Pear264.dll
+C:\Program Files\Common Files\VST2\Airwindows\PhaseNudge64.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\Pitch Drift.dll
+C:\Program Files\Common Files\VST2\Airwindows\PitchDelay64.dll
+C:\Program Files\Common Files\VST2\Airwindows\PitchNasty64.dll
+C:\Program Files\Common Files\VST2\Airwindows\PlatinumSlew64.dll
+C:\Program Files\Common Files\VST2\Airwindows\PocketVerbs64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Pockey64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Pockey264.dll
+C:\Program Files\Common Files\VST2\Airwindows\Podcast64.dll
+C:\Program Files\Common Files\VST2\Airwindows\PodcastDeluxe64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Point64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Pop64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Pop264.dll
+C:\Program Files\Common Files\VST2\Airwindows\Pop364.dll
+C:\Program Files\Common Files\VST2\Airwindows\PowerSag64.dll
+C:\Program Files\Common Files\VST2\Airwindows\PowerSag264.dll
+C:\Program Files\Common Files\VST2\Airwindows\Precious64.dll
+C:\Program Files\VSTPlugins\Predatohm_vstwin_x64.dll
+C:\Program Files\Common Files\VST3\preFIX (64).dll
+C:\Program Files\Common Files\VST2\Airwindows\Preponderant64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Pressure464.dll
+C:\Program Files\Common Files\VST2\Airwindows\Pressure564.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\Protoverb.dll
+C:\Program Files\Common Files\VST2\Airwindows\PurestAir64.dll
+C:\Program Files\Common Files\VST2\Airwindows\PurestConsole2Buss64.dll
+C:\Program Files\Common Files\VST2\Airwindows\PurestConsole2Channel64.dll
+C:\Program Files\Common Files\VST2\Airwindows\PurestConsole3Buss64.dll
+C:\Program Files\Common Files\VST2\Airwindows\PurestConsole3Channel64.dll
+C:\Program Files\Common Files\VST2\Airwindows\PurestConsoleBuss64.dll
+C:\Program Files\Common Files\VST2\Airwindows\PurestConsoleChannel64.dll
+C:\Program Files\Common Files\VST2\Airwindows\PurestDrive64.dll
+C:\Program Files\Common Files\VST2\Airwindows\PurestEcho64.dll
+C:\Program Files\Common Files\VST2\Airwindows\PurestFade64.dll
+C:\Program Files\Common Files\VST2\Airwindows\PurestGain64.dll
+C:\Program Files\Common Files\VST2\Airwindows\PurestSquish64.dll
+C:\Program Files\Common Files\VST2\Airwindows\PurestWarm64.dll
+C:\Program Files\Common Files\VST2\Airwindows\PurestWarm264.dll
+C:\Program Files\Common Files\VST2\Airwindows\Pyewacket64.dll
+C:\Program Files\VSTPlugins\QuadFrohmage_vstwin_x64.dll
+C:\Program Files\Common Files\VST2\QuickHaas.dll
+C:\Program Files\Common Files\VST2\Quilcom 4ds\Quilcom 4DS v1.00 (64).dll
+C:\Program Files\Common Files\VST2\Quilcom-GONGVERB_(64)\Quilcom GONGVERB v1.00 (64).dll
+C:\Program Files\VSTPlugins\Acon Digital\Raum.dll
+C:\Program Files\Common Files\VST2\Airwindows\RawGlitters64.dll
+C:\Program Files\Common Files\VST2\Airwindows\RawTimbers64.dll
+C:\Program Files\REAPER (x64)\Plugins\FX\reacast.dll
+C:\Program Files\REAPER (x64)\Plugins\FX\reacomp.dll
+C:\Program Files\Common Files\VST2\VSTPlugins\reacomp-standalone.dll
+C:\Program Files\REAPER (x64)\Plugins\FX\reacontrolmidi.dll
+C:\Program Files\Common Files\VST2\VSTPlugins\reacontrolmidi-standalone.dll
+C:\Program Files\REAPER (x64)\Plugins\FX\readelay.dll
+C:\Program Files\Common Files\VST2\VSTPlugins\readelay-standalone.dll
+C:\Program Files\REAPER (x64)\Plugins\FX\reaeq.dll
+C:\Program Files\Common Files\VST2\VSTPlugins\reaeq-standalone.dll
+C:\Program Files\REAPER (x64)\Plugins\FX\reafir.dll
+C:\Program Files\Common Files\VST2\VSTPlugins\reafir_standalone.dll
+C:\Program Files\REAPER (x64)\Plugins\FX\reagate.dll
+C:\Program Files\Common Files\VST2\VSTPlugins\reagate-standalone.dll
+C:\Program Files\REAPER (x64)\Plugins\FX\reainsert.dll
+C:\Program Files\Common Files\VST2\VSTPlugins\reajs.dll
+C:\Program Files\REAPER (x64)\Plugins\FX\realimit.dll
+C:\Program Files\REAPER (x64)\Plugins\FX\reaninjam.dll
+C:\Program Files\REAPER (x64)\Plugins\FX\reapitch.dll
+C:\Program Files\REAPER (x64)\Plugins\FX\reastream.dll
+C:\Program Files\Common Files\VST2\VSTPlugins\reastream-standalone.dll
+C:\Program Files\REAPER (x64)\Plugins\FX\reasurround.dll
+C:\Program Files\REAPER (x64)\Plugins\FX\reasurround2.dll
+C:\Program Files\REAPER (x64)\Plugins\FX\reatune.dll
+C:\Program Files\REAPER (x64)\Plugins\FX\reaverb.dll
+C:\Program Files\REAPER (x64)\Plugins\FX\reaverbate.dll
+C:\Program Files\REAPER (x64)\Plugins\FX\reavocode.dll
+C:\Program Files\REAPER (x64)\Plugins\FX\reavoice.dll
+C:\Program Files\Common Files\VST2\VSTPlugins\reaxcomp-standalone.dll
+C:\Program Files\Steinberg\VSTPlugins\ReCenter.dll
+C:\Program Files\Common Files\VST2\Airwindows\Recurve64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Remap64.dll
+C:\Program Files\Steinberg\VSTPlugins\Audio Damage\Replicant.dll
+C:\Program Files\VSTPlugins\Acon Digital\Replika.dll
+C:\Program Files\Common Files\VST2\Airwindows\ResEQ64.dll
+C:\Program Files\Common Files\VST2\Airwindows\ResEQ264.dll
+C:\Program Files\Common Files\VST2\Airwindows\Reverb64.dll
+C:\Program Files\Common Files\VST2\reverseDelay_x64.dll
+C:\Program Files\Steinberg\VSTPlugins\RhythmDelayFree.dll
+C:\Program Files\VSTPlugins\Ribs_x64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Righteous464.dll
+C:\Program Files\Common Files\VST2\Airwindows\RightoMono64.dll
+C:\Program Files\Common Files\VST2\Airwindows\RingModulator64.dll
+C:\Program Files\Steinberg\VSTPlugins\Audio Damage\RoughRider3.dll
+C:\Program Files\Common Files\VST2\Airwindows\SampleDelay64.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\dfx Scrubby.dll
+C:\Program Files\Common Files\VST2\SEGX2 Gate.x64.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\Shadow Hills Class A Mastering Comp.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\Shadow Hills Mastering Compressor.dll
+C:\Program Files\Common Files\VST2\Airwindows\Shape64.dll
+C:\Program Files\Common Files\VST2\Airwindows\ShortBuss64.dll
+C:\Program Files\Common Files\VST2\Airwindows\SideDull64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Sidepass64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Silhouette64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Sinew64.dll
+C:\Program Files\Common Files\VST2\Airwindows\SingleEndedTriode64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Slew64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Slew264.dll
+C:\Program Files\Common Files\VST2\Airwindows\Slew364.dll
+C:\Program Files\Common Files\VST2\Airwindows\SlewOnly64.dll
+C:\Program Files\Common Files\VST2\Airwindows\SlewSonic64.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\Smear.dll
+C:\Program Files\Common Files\VST2\Airwindows\Smooth64.dll
+C:\Program Files\Common Files\VST2\Airwindows\SmoothEQ64.dll
+C:\Program Files\Common Files\VST2\Airwindows\SoftGate64.dll
+C:\Program Files\Common Files\VST2\Voxengo\SPAN Plus.dll
+C:\Program Files\Common Files\VST2\Airwindows\SpatializeDither64.dll
+C:\Program Files (x86)\VST PlugIns\Spectral Autopan.dll
+C:\Program Files\Common Files\VST2\Airwindows\Spiral64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Spiral264.dll
+C:\Program Files\Common Files\VST2\SplineEQ.dll
+C:\Program Files\Common Files\VST2\Airwindows\SquareRoot64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Srsly64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Srsly264.dll
+C:\Program Files\Common Files\VST2\Airwindows\Srsly364.dll
+C:\Program Files\Common Files\VST2\Airwindows\StarChild64.dll
+C:\Program Files\Common Files\VST2\Airwindows\StarChild264.dll
+C:\Program Files\Common Files\VST2\HBC-2.x64.dll
+C:\Program Files\Common Files\VST2\Voxengo\Stereo Touch.dll
+C:\Program Files\Common Files\VST2\Airwindows\StereoChorus64.dll
+C:\Program Files\Common Files\VST2\Airwindows\StereoDoubler64.dll
+C:\Program Files\Common Files\VST2\Airwindows\StereoEnsemble64.dll
+C:\Program Files\Common Files\VST2\Airwindows\StereoFX64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Stonefire64.dll
+C:\Program Files\Common Files\VST2\Airwindows\StoneFireComp64.dll
+C:\Program Files\Common Files\VST2\Airwindows\StudioTan64.dll
+C:\Program Files\Common Files\VST2\Airwindows\SubsOnly64.dll
+C:\Program Files\Common Files\VST2\Airwindows\SubTight64.dll
+C:\Program Files\VSTPlugins\Acon Digital\Supercharger.dll
+C:\Program Files\Common Files\VST2\Airwindows\Surge64.dll
+C:\Program Files\Common Files\VST2\Airwindows\SurgeTide64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Sweeten64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Swell64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Tape64.dll
+C:\Program Files\Common Files\VST2\Airwindows\TapeBias64.dll
+C:\Program Files\Common Files\VST2\Airwindows\TapeDelay64.dll
+C:\Program Files\Common Files\VST2\Airwindows\TapeDelay264.dll
+C:\Program Files\Common Files\VST2\Airwindows\TapeDither64.dll
+C:\Program Files\Common Files\VST2\Airwindows\TapeDust64.dll
+C:\Program Files\Common Files\VST2\Airwindows\TapeFat64.dll
+C:\Program Files\Common Files\VST2\Voxengo\TEOTE.dll
+C:\Program Files\Common Files\VST2\Airwindows\Texturize64.dll
+C:\Program Files\Common Files\VST2\Airwindows\TexturizeMS64.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\THE OVEN.dll
+C:\Program Files\Common Files\VST3\ThrillseekerXTCmkII (64).dll
+C:\Program Files\Common Files\VST2\Airwindows\Thunder64.dll
+C:\Program Files\VSTPlugins\Acon Digital\Toned_x64.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\Toned.dll
+C:\Program Files\Common Files\VST2\Airwindows\ToneSlant64.dll
+C:\Program Files\Common Files\VST2\Airwindows\ToTape564.dll
+C:\Program Files\Common Files\VST2\Airwindows\ToTape664.dll
+C:\Program Files\Common Files\VST2\Airwindows\ToTape764.dll
+C:\Program Files\Common Files\VST2\Airwindows\ToTape864.dll
+C:\Program Files\Common Files\VST2\Airwindows\ToVinyl464.dll
+C:\Program Files\Common Files\VST2\Airwindows\TPDFDither64.dll
+C:\Program Files\Common Files\VST2\Airwindows\TPDFWide64.dll
+C:\Program Files\Common Files\VST2\Airwindows\TransDesk64.dll
+C:\Program Files\Common Files\VST2\Transpire.x64.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\dfx Transverb.dll
+C:\Program Files\Common Files\VST2\Airwindows\Tremolo64.dll
+C:\Program Files\Common Files\VST2\Airwindows\TremoSquare64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Trianglizer64.dll
+C:\Program Files\Common Files\VST2\Airwindows\TripleSpread64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Tube64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Tube264.dll
+C:\Program Files\Common Files\VST2\Airwindows\TubeDesk64.dll
+C:\Program Files\Common Files\VST2\Airwindows\uLawDecode64.dll
+C:\Program Files\Common Files\VST2\Airwindows\uLawEncode64.dll
+C:\Program Files\Common Files\VST2\Airwindows\UltrasonicLite64.dll
+C:\Program Files\Common Files\VST2\Airwindows\UltrasonicMed64.dll
+C:\Program Files\Common Files\VST2\Airwindows\UltrasonX64.dll
+C:\Program Files\Common Files\VST2\Airwindows\UnBox64.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\Unfiltered Audio Bass Mint.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\Unfiltered Audio Fault.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\Unfiltered Audio G8.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\Unfiltered Audio lo-fi-af.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\Unfiltered Audio Sandman Pro.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\Unfiltered Audio Silo.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\Unfiltered Audio Zip.dll
+C:\Program Files\Common Files\VST3\Unlimited.x64.dll
+C:\Program Files\Common Files\VST2\Utility.dll
+C:\Program Files\Common Files\VST2\Airwindows\VariMu64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Verbity64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Verbity264.dll
+C:\Program Files\Common Files\VST2\Airwindows\Vibrato64.dll
+C:\Program Files\Steinberg\VSTPlugins\Vinyl.dll
+C:\Program Files\Common Files\VST2\Airwindows\VinylDither64.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\VISION 4X.dll
+C:\Program Files\Common Files\VST2\Airwindows\VoiceOfTheStarship64.dll
+C:\Program Files\Common Files\VST2\Airwindows\VoiceTrick64.dll
+C:\Program Files\Steinberg\VSTPlugins\Voltage Modular\Voltage Modular FX.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\Warp.dll
+C:\Program Files\Common Files\VST2\Airwindows\Weight64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Wider64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Wolfbot64.dll
+C:\Program Files\Common Files\VST2\Airwindows\XBandpass64.dll
+C:\Program Files\Common Files\VST2\Airwindows\XHighpass64.dll
+C:\Program Files\Common Files\VST2\Airwindows\XLowpass64.dll
+C:\Program Files\Common Files\VST2\Airwindows\XNotch64.dll
+C:\Program Files\Common Files\VST2\Airwindows\XRegion64.dll
+C:\Program Files\Common Files\VST2\Airwindows\YBandpass64.dll
+C:\Program Files\Common Files\VST2\Airwindows\YHighpass64.dll
+C:\Program Files\Common Files\VST2\Airwindows\YLowpass64.dll
+C:\Program Files\Common Files\VST2\Airwindows\YNotBandpass64.dll
+C:\Program Files\Common Files\VST2\Airwindows\YNotch64.dll
+C:\Program Files\Common Files\VST2\Airwindows\YNotHighpass64.dll
+C:\Program Files\Common Files\VST2\Airwindows\YNotLowpass64.dll
+C:\Program Files\Common Files\VST2\Airwindows\YNotNotch64.dll
+C:\Program Files\Steinberg\VSTPlugins\Youlean Loudness Meter 2.dll
+C:\Program Files\Common Files\VST2\Airwindows\ZBandpass64.dll
+C:\Program Files\Common Files\VST2\Airwindows\ZBandpass264.dll
+C:\Program Files\Common Files\VST2\Airwindows\ZHighpass64.dll
+C:\Program Files\Common Files\VST2\Airwindows\ZHighpass264.dll
+C:\Program Files\Common Files\VST2\Airwindows\ZLowpass64.dll
+C:\Program Files\Common Files\VST2\Airwindows\ZLowpass264.dll
+C:\Program Files\Common Files\VST2\Airwindows\ZNotch64.dll
+C:\Program Files\Common Files\VST2\Airwindows\ZNotch264.dll
+C:\Program Files\Common Files\VST2\Airwindows\Zoom64.dll
+C:\Program Files\Common Files\VST2\Airwindows\ZOutputStage64.dll
+C:\Program Files\Common Files\VST2\Airwindows\ZRegion64.dll
+C:\Program Files\Common Files\VST2\Airwindows\ZRegion264.dll
+C:\Program Files\Common Files\VST2\Attracktive.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\bong.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\bx_oberhausen.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\Drum Boxx Synth Free.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\Drumatic_v3_02\Drumatic 3.dll
+C:\Program Files\Common Files\VST2\Elsita\Elsita.dll
+C:\Program Files\Common Files\VST2\Elsita-V (VST2) [RECOMMENDED]\Elsita-V.dll
+C:\Program Files\Common Files\VST2\Harsh Digital Nose.dll
+C:\Program Files\Steinberg\VSTPlugins\helm64.dll
+C:\Program Files\Steinberg\VSTPlugins\helm.dll
+C:\Program Files\VSTPlugins\MeldaProduction\MDrummer.dll
+C:\Program Files\VSTPlugins\MeldaProduction\MDrummer16out.dll
+C:\Program Files\VSTPlugins\MeldaProduction\MDrummer1out.dll
+C:\Program Files\Common Files\VST2\MidiKeySwitcher.x64.dll
+C:\Program Files\VSTPlugins\Big Fish Audio\Momentum.dll
+C:\Program Files\VSTPlugins\MeldaProduction\MPowerSynth.dll
+C:\Program Files\VSTPlugins\MeldaProduction\MSoundFactory.dll
+C:\Program Files\VSTPlugins\MeldaProduction\MSoundFactory6out.dll
+C:\Program Files\Common Files\VST3\Podolski(x64).dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\Podolski.dll
+C:\Program Files\Common Files\VST2\PolyGAS32.dll
+C:\Program Files\Common Files\VST2\Quilcom_B-2_BELLY_(64)\Quilcom B-2 BELLY v1.000 (64).dll
+C:\Program Files\Common Files\VST2\Quilcom-B2-CYMBALLIC_Win64\Quilcom B-2 CYMBALLIC v1.002 (64).dll
+C:\Program Files\Common Files\VST2\Quilcom B-2 KICK v1.005 (64).dll
+C:\Program Files\Common Files\VST2\Quilcom-B2-SHAKE-SCRAPE_Win64\Quilcom B-2 SHAKE & SCRAPE v1.006 (64).dll
+C:\Program Files\Common Files\VST2\Quilcom-B2-TOMSNARE_Win64\Quilcom B-2 TOMSNARE v1.007 (64).dll
+C:\Program Files\Common Files\VST2\Quilcom-Chaos_Win64\Quilcom Chaos v1.03 (64).dll
+C:\Program Files\Common Files\VST2\Quilcom-PTS_Win64\Quilcom PTS v1.002 (64).dll
+C:\Program Files\Common Files\VST2\Quilcom_SIM-DJEMBE_(64)\Quilcom SIM-DJEMBE v1.00 (64).dll
+C:\Program Files\Common Files\VST2\Quilcom_SIM-DUNUN_(64)\Quilcom SIM-DUNUN v1.001 (64).dll
+C:\Program Files\Common Files\VST2\Quilcom-SIM-RHYTHMICON_(64)\Quilcom SIM-RHYTHMICON v1.00 (64).dll
+C:\Program Files\REAPER (x64)\Plugins\FX\reasamplomatic.dll
+C:\Program Files\REAPER (x64)\Plugins\FX\reasyndr.dll
+C:\Program Files\REAPER (x64)\Plugins\FX\reasynth.dll
+C:\Program Files\Steinberg\VSTPlugins\Sitala.dll
+C:\Program Files\Common Files\VST3\SQKONE.dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\stoooner.dll
+C:\Program Files\Common Files\VST2\Supermatic S12 (Win64 VST2)\Supermatic S12.dll
+C:\Program Files\VSTPlugins\Symptohm_vstwin_x64.dll
+C:\Program Files\Common Files\VST2\Synsonics-V (Win VST2)\Synsonics-V.dll
+C:\Program Files\Common Files\VST3\Synth1 VST64.dll
+C:\Program Files\Common Files\VST3\Synth1 VST.dll
+C:\Program Files\Common Files\VST3\TripleCheese(x64).dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\TripleCheese.dll
+C:\Program Files\Common Files\VST3\TyrellN6(x64).dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\TyrellN6.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\Unfiltered Audio Battalion.dll
+C:\Program Files\Common Files\VST2\VK-1 Viking Synthesizer.dll
+C:\Program Files\Steinberg\VSTPlugins\Voltage Modular\Voltage Modular.dll
+C:\Program Files\Common Files\VST2\Xsub.dll
+C:\Program Files\Common Files\VST3\ZebraHZ(x64).dll
+C:\Program Files (x86)\Steinberg\VSTPlugins\ZebraHZ.dll
+ReaTeam JSFX/MIDI/XQ_Drum Converter.jsfx
+schwa/midi_examine
+Teej/rbj12eq-teej
+utility/vca_lead
+C:\Program Files\Common Files\VST3\bx_distorange.vst3
+C:\Program Files\Common Files\VST3\Free Pan.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\EQ\MAutoEqualizer.vst3
+C:\Program Files\Common Files\VST3\MeldaProduction\Pitch Shift\MTransformer.vst3
+C:\Program Files\Common Files\VST3\TDR Molotok.vst3
+C:\Program Files (x86)\VST PlugIns\AnarchyRhythms.dll
+C:\Program Files\Common Files\VST2\Airwindows\Channel564.dll
+C:\Program Files\Common Files\VST2\Airwindows\DoublePaul64.dll
+C:\Program Files\Common Files\VST2\Airwindows\Isolator64.dll
+C:\Program Files\VSTPlugins\MeldaProduction\Modulation\MFlangerMB.dll
+C:\Program Files\Steinberg\VSTPlugins\Plugin Alliance\NEOLD BIG AL.dll
+C:\Program Files\REAPER (x64)\Plugins\FX\reaxcomp.dll
+C:\Program Files\Common Files\VST2\Airwindows\Ultrasonic64.dll
+C:\Program Files\Steinberg\VSTPlugins\Vital.dll
