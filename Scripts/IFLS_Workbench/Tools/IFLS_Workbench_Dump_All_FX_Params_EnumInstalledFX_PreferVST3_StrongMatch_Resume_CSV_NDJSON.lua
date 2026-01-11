@@ -1,5 +1,5 @@
 --@description IFLS Workbench: Dump ALL FX params (EnumInstalledFX, prefer VST3, strong match, resume, CSV+NDJSON)
--- @version 0.4.3
+-- @version 0.4.4
 --@author IFLS (ported from DF95)
 --@about
 --  Enumerates all REAPER-recognized FX via EnumInstalledFX().
@@ -709,11 +709,17 @@ for i = start_i, #final_list do
 end
 
 ----------------------------------------------------------------
-local auto_rerun = false
-if not pass_limit_reached then save_cursor(1) end
-if AUTO_CONTINUE and pass_limit_reached and has_remaining() then
-  auto_rerun = true
+local remaining = has_remaining()
+
+-- If we reached the end before hitting the batch size, reset cursor so the next pass starts from the beginning.
+if not pass_limit_reached then
+  save_cursor(1)
 end
+
+-- Auto-continue should run again as long as there are remaining NEW candidates,
+-- even if this pass ended early due to reaching the end of the list.
+local auto_rerun = (AUTO_CONTINUE and remaining)
+
 -- Cleanup
 ----------------------------------------------------------------
 f_plugins:close()
@@ -739,8 +745,8 @@ if (not auto_rerun) and SHOW_FINAL_SUMMARY then
   local failed_n  = tonumber(failed) or 0
 
   r.MB(
-    ("Done.\nTotal candidates: %d\nScanned (new): %d\nSkipped (resume/filtered): %d\nFailed: %d\n\nOutput folder:\n%s\n\nBatch size (new per pass): %s\nAuto-continue: %s")
-    :format(total_n, scanned_n, skipped_n, failed_n, out_dir, tostring(MAX_NEW_PER_PASS), tostring(AUTO_CONTINUE)),
+    ("Done.\nTotal candidates: %d\nScanned (new): %d\nSkipped (resume/filtered): %d\nFailed: %d\n\nOutput folder:\n%s\n\nBatch size (new per pass): %s\nAuto-continue: %s\nRemaining: %s")
+    :format(total_n, scanned_n, skipped_n, failed_n, out_dir, tostring(MAX_NEW_PER_PASS), tostring(AUTO_CONTINUE), tostring(remaining)),
     "IFLS Workbench Param Dump",
     0
   )
