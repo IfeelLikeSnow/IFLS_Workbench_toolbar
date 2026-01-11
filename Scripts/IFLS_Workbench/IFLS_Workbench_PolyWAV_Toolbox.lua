@@ -666,7 +666,15 @@ local function loop()
     r.ImGui_Dummy(ctx, 0, 10)
     r.ImGui_Separator(ctx)
     r.ImGui_Text(ctx, "Log:")
-    r.ImGui_BeginChild(ctx, "IFLSWB_PolyWAV_Log", -1, 100, true)
+    local child_flags = 0
+    local ok_child
+    if r.ImGui_ChildFlags_Border then
+      child_flags = r.ImGui_ChildFlags_Border()
+      ok_child = r.ImGui_BeginChild(ctx, "IFLSWB_PolyWAV_Log", -1, 100, child_flags)
+    else
+      -- Backwards compatibility: older ReaImGui used a boolean "border" parameter at arg #5
+      ok_child = r.ImGui_BeginChild(ctx, "IFLSWB_PolyWAV_Log", -1, 100, true)
+    end
     local start_idx = math.max(1, #log_lines - 50)
     for i = start_idx, #log_lines do
       r.ImGui_Text(ctx, log_lines[i])

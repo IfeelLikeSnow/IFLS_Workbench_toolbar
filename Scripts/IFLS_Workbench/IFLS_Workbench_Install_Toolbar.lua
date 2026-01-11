@@ -30,10 +30,15 @@ local function is_excluded_dir(name)
   return name == "lib" or name == "_private" or name == ".git"
 end
 
-local function join(a,b)
-  if not a or a == "" then return b end
+local function join(a, b)
+  a = tostring(a or "")
+  b = tostring(b or "")
+  if a == "" then return b end
+  if b == "" then return a end
   local last = a:sub(-1)
-  if last == "/" or last == sep then return a .. b end
+  if last == "/" or last == "\\" then
+    return a .. b
+  end
   return a .. sep .. b
 end
 
