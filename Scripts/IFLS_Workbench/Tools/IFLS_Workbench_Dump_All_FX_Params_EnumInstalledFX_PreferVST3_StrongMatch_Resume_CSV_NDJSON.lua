@@ -25,7 +25,7 @@ local SCAN_DX          = true
 
 -- If REAPER crashes, bisect by narrowing the range:
 local START_FROM_INDEX = 0       -- start scan at this installed-FX index (EnumInstalledFX)
-local MAX_TO_SCAN      = 200     -- 0 = no limit
+local MAX_TO_SCAN      = 25      -- 0 = no limit (start small, then set 0 once stable)
 
 -- Skip patterns (Lua patterns, case-insensitive via :lower())
 local SKIP_NAME_PATTERNS = {
@@ -300,6 +300,7 @@ local res = r.GetResourcePath()
 local out_dir = res .. "/Scripts/IFLS_Workbench/_ParamDumps"
 
 local current_fx_path = out_dir .. "/current_fx.txt"
+local crash_blacklist_path = out_dir .. "/crash_blacklist.txt"
 
 local function write_current_fx(info)
   -- info = {idx=, ident=, name=}
@@ -505,7 +506,8 @@ for _, fx in ipairs(final_list) do
     -- Crash-safe marker BEFORE instantiation
     write_current_fx({ idx = fx.idx, ident = fx.ident, name = fx.name })
 
-    local loaded_ok, fx_index, used_name = try_add_fx(tmp_tr, fx.name, fx.display, fx.fx_type, fx.base)
+    local _ok_call, loaded_ok, fx_index, used_name = pcall(try_add_fx, tmp_tr, fx.name, fx.display, fx.fx_type, fx.base)
+    if not _ok_call then loaded_ok=false; fx_index=-1; used_name="PCALL_ERROR" end
     if not loaded_ok or fx_index < 0 then
       failed = failed + 1
       f_fail:write(string.format("LOAD_FAIL\tidx=%s\tident=%s\tname=%s\n",
