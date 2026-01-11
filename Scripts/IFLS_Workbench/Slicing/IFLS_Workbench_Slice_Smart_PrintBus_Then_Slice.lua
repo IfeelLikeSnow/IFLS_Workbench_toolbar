@@ -122,9 +122,7 @@ end
 if not ok_render then
   r.PreventUIRefresh(-1)
   r.Undo_EndBlock("IFLS Slice Smart: print bus -> slice (FAILED)", -1)
-  r.ShowMessageBox("Couldn't render stem track (render action not found?).
-
-Try running the render-to-stem action manually from the Action List, then run Slice Direct.", "IFLS Slice Smart", 0)
+  r.ShowMessageBox("Couldn\\'t render stem track (render action not found?).\n\nTry running the render-to-stem action manually from the Action List, then run Slice Direct.", "IFLS Slice Smart", 0)
   return
 end
 
