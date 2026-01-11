@@ -1,5 +1,11 @@
-# Generated / local stuff
-Scripts/IFLS_Workbench/_ParamDumps/
-*.zip
+# Generated / local artifacts
+Scripts/**/_ParamDumps/
+**/*.ndjson
+**/*.csv
+**/*.zip
+
+# OS / IDE
 .DS_Store
 Thumbs.db
+.vscode/
+.idea/

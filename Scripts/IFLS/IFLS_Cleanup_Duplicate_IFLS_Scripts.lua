@@ -55,7 +55,7 @@ end
 
 -- Open Scripts folder (SWS preferred; fallback to OS)
 if r.CF_ShellExecute then
-  r.CF_ShellExecute((scripts_dir:gsub("/", sep)))
+  r.CF_ShellExecute(scripts_dir:gsub("/", sep))
 else
   r.ShowMessageBox("Open this folder manually:\n\n"..scripts_dir, "IFLS Cleanup", 0)
 end

@@ -158,7 +158,7 @@ local function dispatch()
 -- optional ZeroCross PostFix (if enabled)
 local zc_flag = ({r.GetProjExtState(0,"IFLS_SLICING","ZC_RESPECT")})[2]
 if zc_flag == "1" then
-  dofile((res.."/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_ZeroCross_PostFix.lua"):gsub("\\", "/"))
+  dofile((res.."/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_ZeroCross_PostFix.lua"):gsub("\\","/"))
 end
 return
       end

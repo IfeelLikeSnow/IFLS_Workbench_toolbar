@@ -114,9 +114,9 @@ end
 local ok_render = false
 if any_stereo then
   -- Some REAPER versions/lists report 40405, others 40406 for this action.
-  ok_render = try_render(40405) or try_render(40406) or try_render(40788) -- non post-fader fallback
+  ok_render = try_render(40788) or try_render(40405) or try_render(40406) -- prefer stereo stem tracks and mute originals
 else
-  ok_render = try_render(40537) -- mono post-fader stem tracks (and mute originals)
+  ok_render = try_render(40789) or try_render(40537) -- prefer mono stem tracks and mute originals
 end
 
 if not ok_render then
