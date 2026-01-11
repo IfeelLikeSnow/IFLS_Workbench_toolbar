@@ -1,7 +1,7 @@
 
 -- @description IFLS Workbench: PolyWAV Toolbox (ImGui)
 -- @author I feel like snow (based on IFLSWB)
--- @version 1.0.1
+-- @version 1.0
 -- @about
 --   ImGui-Toolbox für Multichannel/PolyWAV-Items (z.B. Zoom F6).
 --   Funktionen:
@@ -14,13 +14,6 @@
 --   * Extra-Buttons: Nur Mapping / Nur SampleDB
 
 local r = reaper
-
--- ReaImGui API compatibility (BeginChild signature changed to ChildFlags in newer builds)
-local function ChildBorderFlag()
-  if r.ImGui_ChildFlags_Border then return r.ImGui_ChildFlags_Border() end
-  return 0
-end
-
 
 ------------------------------------------------------------
 -- Basic Helpers
@@ -673,7 +666,10 @@ local function loop()
     r.ImGui_Dummy(ctx, 0, 10)
     r.ImGui_Separator(ctx)
     r.ImGui_Text(ctx, "Log:")
-    r.ImGui_BeginChild(ctx, "IFLSWB_PolyWAV_Log", -1, 100, ChildBorderFlag())
+    local child_flags = 0
+    if r.ImGui_ChildFlags_Border then child_flags = r.ImGui_ChildFlags_Border() end
+    if r.ImGui_ChildFlags_Borders then child_flags = r.ImGui_ChildFlags_Borders() end -- ReaImGui v0.9+ rename
+    r.ImGui_BeginChild(ctx, "IFLSWB_PolyWAV_Log", -1, 100, child_flags)
     local start_idx = math.max(1, #log_lines - 50)
     for i = start_idx, #log_lines do
       r.ImGui_Text(ctx, log_lines[i])
@@ -695,3 +691,4 @@ end
 ------------------------------------------------------------
 
 loop()
+
