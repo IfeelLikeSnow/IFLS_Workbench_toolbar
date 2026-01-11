@@ -1,6 +1,5 @@
-# generated outputs (do not version)
-Scripts/IFLS_Workbench/_ParamDumps/
-# release artifacts
-*.zip
+# generated / local-only
 Scripts/IFLS_Workbench/_ParamDumps/
 *.zip
+.DS_Store
+Thumbs.db

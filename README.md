@@ -1,24 +1,16 @@
-# IFLS Workbench Toolbar
+# IFLS Workbench Toolbar (REAPER)
 
-REAPER Workbench scripts + assets (MicFX + Slicing) with toolbar generator.
+This repository is laid out like the REAPER resource folder (Scripts/, FXChains/, Effects/, Data/, MenuSets/).
 
-## Install (manual)
-Extract this ZIP into your REAPER resource folder:
-`Options -> Show REAPER resource path...`
+## Manual install
+1. In REAPER: **Options → Show REAPER resource path…**
+2. Extract this repository contents into that folder.
+3. In REAPER: Actions → Show action list → Run **IFLS_Workbench_Toolbar_Generate_ReaperMenu.lua**.
+4. Import the generated toolbar via **Options → Customize toolbars/menus…**
 
-It will create/update:
-- Scripts/IFLS_Workbench/...
-- Scripts/IFLS/...
-- FXChains/IFLS Workbench/...
-- Effects/IFLS Workbench/...
-- Data/IFLS Workbench/...
-- MenuSets/...
-
-## Toolbar
-Run:
-`Scripts/IFLS_Workbench/IFLS_Workbench_Toolbar_Generate_ReaperMenu.lua`
-
-Then import the generated `.ReaperMenu` from `MenuSets/`.
+## ReaPack (optional)
+Import repository URL:
+`https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/index.xml`
 
 ## Notes
-Avoid having a second copy under `Scripts/IFLS_Workbench_toolbar/...` (duplicates).
+- Avoid duplicates: keep only `Scripts/IFLS_Workbench/` (do not unpack older zips into `Scripts/IFLS_Workbench_toolbar/`).
