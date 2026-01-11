@@ -40,6 +40,9 @@ local function should_skip_fx(fx)
      or (t == "CLAP" and not SCAN_CLAP) or (t == "AU" and not SCAN_AU) or (t == "DX" and not SCAN_DX) then
     return true
   end
+    -- skip explicit blacklist entries
+  if blacklist_set and (blacklist_set[fx.ident or ""] or blacklist_set[fx.name or ""] or blacklist_set[fx.display or ""]) then return true end
+
   for _,pat in ipairs(SKIP_NAME_PATTERNS) do
     if pat ~= "" and n:find(pat:lower()) then return true end
   end
@@ -203,7 +206,7 @@ while true do
 end
 
 if #installed == 0 then
-  r.MB("EnumInstalledFX returned 0 entries.\nUpdate REAPER or check ReaScript support.", "IFLS Workbench Param Dump", 0)
+  r.MB("EnumInstalledFX returned 0 entries.\nUpdate REAPER or check ReaScript support.", "DF95 Param Dump V3", 0)
   return
 end
 
@@ -301,6 +304,30 @@ local out_dir = res .. "/Scripts/IFLS_Workbench/_ParamDumps"
 
 local current_fx_path = out_dir .. "/current_fx.txt"
 local crash_blacklist_path = out_dir .. "/crash_blacklist.txt"
+local user_blacklist_path  = out_dir .. "/user_blacklist.txt"
+
+
+local function load_blacklist_set()
+  local set = {}
+  local function load_file(path)
+    local c = read_file(path)
+    if not c or c == "" then return end
+    for line in c:gsub("
+",""):gmatch("([^
+]+)") do
+      -- accept "idx<TAB>ident<TAB>name" or just "ident" / "name"
+      local a,b,d = line:match("^(.-)	(.-)	(.*)$")
+      if b and b ~= "" then set[b] = true end
+      if d and d ~= "" then set[d] = true end
+      if not b and line ~= "" then set[line] = true end
+    end
+  end
+  load_file(crash_blacklist_path)
+  load_file(user_blacklist_path)
+  return set
+end
+
+
 
 local function write_current_fx(info)
   -- info = {idx=, ident=, name=}
@@ -343,25 +370,41 @@ if not f_plugins or not f_params or not f_ndjson or not f_fail then
   r.DeleteTrack(tmp_tr)
   r.PreventUIRefresh(-1)
   r.Undo_EndBlock("DF95 Param Dump V3 (failed open files)", -1)
-  r.MB("Could not open output files in:\n" .. out_dir, "IFLS Workbench Param Dump", 0)
+  r.MB("Could not open output files in:\n" .. out_dir, "DF95 Param Dump V3", 0)
   return
 end
 
 -- headers handled by open_append_with_header()
 
 -- Crash-safe: if REAPER crashed last run, current_fx.txt will still contain the last attempted FX.
+-- We persistently blacklist that FX by writing it into progress.json immediately,
+-- so we don't keep re-crashing on the same one.
 do
   local crashed = read_current_fx()
   if crashed and ((crashed.ident and crashed.ident ~= "") or (crashed.name and crashed.name ~= "")) then
     local crash_key = tostring(crashed.ident or "")
     if crash_key == "" then crash_key = tostring(crashed.name or "") end
     if crash_key ~= "" and not done[crash_key] then
-      done[crash_key] = true -- skip on next run
+      done[crash_key] = true -- skip in this and future runs
+      save_progress(progress_js, done)
+
       f_fail:write(string.format("CRASH_LAST_RUN\tidx=%s\tident=%s\tname=%s\n",
         tostring(crashed.idx or ""), tostring(crashed.ident or ""), tostring(crashed.name or "")))
       f_fail:flush()
+
+      local line = string.format("%s\t%s\t%s\n", tostring(crashed.idx or ""), tostring(crashed.ident or ""), tostring(crashed.name or ""))
+      local f = io.open(crash_blacklist_path, "a")
+      if f then f:write(line) f:close() end
+
+      if blacklist_set then
+        blacklist_set[crash_key] = true
+        if crashed.name and crashed.name ~= "" then blacklist_set[crashed.name] = true end
+      end
+
+      r.MB("Last run crashed while loading:\n\n" .. tostring(crash_key) .. "\n\nIt was added to crash_blacklist.txt and progress.json.\nRun the script again to continue scanning.", "IFLS Workbench Param Dump", 0)
     end
   end
+  clear_current_fx() -- clear marker (we only need it once)
 end
 
 
@@ -470,6 +513,7 @@ for _, fx in ipairs(final_list) do
       break
     end
 
+    scanned_count = scanned_count + 1
 
     local key = tostring(fx.ident or "")
     if key == "" then key = tostring(fx.name or "") end
@@ -483,7 +527,6 @@ for _, fx in ipairs(final_list) do
       skipped = skipped + 1
       break
     end
-    scanned_count = scanned_count + 1  -- counts NEW scans only (resume skips don't consume budget)
 
     if ENUM_ONLY then
       -- No instantiation: safe enumerate-only mode
@@ -644,11 +687,11 @@ f_fail:close()
 
 r.DeleteTrack(tmp_tr)
 r.PreventUIRefresh(-1)
-r.Undo_EndBlock("IFLS Workbench Param Dump", -1)
+r.Undo_EndBlock("DF95 Param Dump V3", -1)
 
 r.MB(
-  ("Done.\nTotal candidates: %d\nNewly scanned this run: %d\nSkipped(resume): %d\nFailed: %d\n\nChunk limit MAX_TO_SCAN: %d (set 0 for full scan)\n\nOutput folder:\n%s")
-  :format(total, scanned, skipped, failed, MAX_TO_SCAN, out_dir),
-  "IFLS Workbench Param Dump",
+  ("Done.\nTotal candidates: %d\nScanned: %d\nSkipped(resume): %d\nFailed: %d\n\nOutput folder:\n%s")
+  :format(total, scanned, skipped, failed, out_dir),
+  "DF95 Param Dump V3",
   0
 )
