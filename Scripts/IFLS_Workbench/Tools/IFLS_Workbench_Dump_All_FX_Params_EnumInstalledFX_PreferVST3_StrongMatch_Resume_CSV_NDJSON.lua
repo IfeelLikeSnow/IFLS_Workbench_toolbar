@@ -1,5 +1,5 @@
 --@description IFLS Workbench: Dump ALL FX params (EnumInstalledFX, prefer VST3, strong match, resume, CSV+NDJSON)
--- @version 0.3.3
+-- @version 0.3.8
 --@author IFLS (ported from DF95)
 --@about
 --  Enumerates all REAPER-recognized FX via EnumInstalledFX().
@@ -32,6 +32,8 @@ local SKIP_NAME_PATTERNS = {
   -- "ilok", "pace", "license", "trial",
 }
 
+local blacklist_set = nil
+
 local function should_skip_fx(fx)
   local n = (fx.name or ""):lower()
   if n == "" then return true end
@@ -40,8 +42,13 @@ local function should_skip_fx(fx)
      or (t == "CLAP" and not SCAN_CLAP) or (t == "AU" and not SCAN_AU) or (t == "DX" and not SCAN_DX) then
     return true
   end
-    -- skip explicit blacklist entries
-  if blacklist_set and (blacklist_set[fx.ident or ""] or blacklist_set[fx.name or ""] or blacklist_set[fx.display or ""]) then return true end
+
+  -- skip explicit blacklist entries
+  if blacklist_set then
+    if blacklist_set[fx.ident or ""] or blacklist_set[fx.name or ""] or blacklist_set[fx.display or ""] then
+      return true
+    end
+  end
 
   for _,pat in ipairs(SKIP_NAME_PATTERNS) do
     if pat ~= "" and n:find(pat:lower()) then return true end
@@ -312,9 +319,7 @@ local function load_blacklist_set()
   local function load_file(path)
     local c = read_file(path)
     if not c or c == "" then return end
-    for line in c:gsub("
-",""):gmatch("([^
-]+)") do
+    for line in c:gsub("\r",""):gmatch("([^\n]+)") do
       -- accept "idx<TAB>ident<TAB>name" or just "ident" / "name"
       local a,b,d = line:match("^(.-)	(.-)	(.*)$")
       if b and b ~= "" then set[b] = true end
@@ -359,6 +364,7 @@ local progress_js = out_dir .. "/progress.json"
 local plugins_jsa = out_dir .. "/plugins.json" -- optional array file
 
 local done = load_progress(progress_js)
+blacklist_set = load_blacklist_set()
 
 
 local f_plugins = open_append_with_header(plugins_csv, "fx_display,fx_ident,fx_type,base_name,loaded_ok,load_name_used,param_count\n")
