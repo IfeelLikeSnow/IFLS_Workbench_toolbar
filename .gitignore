@@ -3,3 +3,5 @@ Scripts/IFLS_Workbench/_ParamDumps/
 *.zip
 .DS_Store
 Thumbs.db
+Scripts/IFLS_Workbench/_ParamDumps/
+*.zip
