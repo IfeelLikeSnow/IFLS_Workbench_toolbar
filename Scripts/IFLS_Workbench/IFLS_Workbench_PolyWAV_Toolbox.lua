@@ -667,8 +667,19 @@ local function loop()
     r.ImGui_Separator(ctx)
     r.ImGui_Text(ctx, "Log:")
     local child_flags = 0
-    if r.ImGui_ChildFlags_Border then child_flags = r.ImGui_ChildFlags_Border() end
-    if r.ImGui_ChildFlags_Borders then child_flags = r.ImGui_ChildFlags_Borders() end -- ReaImGui v0.9+ rename
+    -- ReaImGui compatibility: constants can be functions (preferred) or numbers, depending on version
+    local function flag_value(name)
+      local v = r[name]
+      if type(v) == "function" then
+        local ok, val = pcall(v)
+        if ok and type(val) == "number" then return val end
+      elseif type(v) == "number" then
+        return v
+      end
+      return nil
+    end
+    child_flags = flag_value("ImGui_ChildFlags_Border") or flag_value("ImGui_ChildFlags_Borders") or 0
+    if type(child_flags) ~= "number" then child_flags = 0 end
     r.ImGui_BeginChild(ctx, "IFLSWB_PolyWAV_Log", -1, 100, child_flags)
     local start_idx = math.max(1, #log_lines - 50)
     for i = start_idx, #log_lines do

@@ -1,18 +1,2 @@
-[Floating toolbar 16]
-title=IFLS Workbench (run generator to populate)
-item_0=-1
-item_1=-1
-item_2=-1
-item_3=-1
-item_4=-1
-item_5=-1
-item_6=-1
-item_7=-1
-item_8=-1
-item_9=-1
-item_10=-1
-item_11=-1
-item_12=-1
-item_13=-1
-item_14=-1
-item_15=-1
+// IFLS Workbench Toolbar placeholder
+// Run Scripts/IFLS_Workbench/IFLS_Workbench_Toolbar_Generate_ReaperMenu.lua in REAPER to generate correct toolbar file with valid command IDs.

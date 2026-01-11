@@ -1,13 +1,3 @@
-This folder is provided because you requested the path:
-  C:\Users\ifeel\AppData\Roaming\REAPER\Scripts\IFLS_Workbench_toolbar
-
-Note:
-- The actual scripts used by IFLS Workbench are installed in:
-  Scripts\IFLS_Workbench\...
-  Scripts\IFLS\...
-- Assets are installed in:
-  FXChains\IFLS Workbench\...
-  Effects\IFLS Workbench\...
-  Data\IFLS Workbench\...
-
-You can optionally keep your GitHub working copy elsewhere (e.g. Documents\GitHub) to avoid nesting.
+This folder is intentionally minimal.
+Do NOT put a second copy of IFLS Workbench here.
+Workbench scripts live in Scripts/IFLS_Workbench/.
