@@ -1,5 +1,5 @@
 --@description IFLS Workbench: Dump ALL FX params (EnumInstalledFX, prefer VST3, strong match, resume, CSV+NDJSON)
--- @version 0.3.8
+-- @version 0.4.3
 --@author IFLS (ported from DF95)
 --@about
 --  Enumerates all REAPER-recognized FX via EnumInstalledFX().
@@ -10,6 +10,9 @@
 --  Output folder: REAPER resource path / Scripts/IFLS_Workbench/_ParamDumps/
 
 local r = reaper
+
+-- Paths (declared early so helper closures capture locals)
+local progress_js, progress_done_txt, cursor_txt
 
 ----------------------------------------------------------------
 -- USER OPTIONS
@@ -390,9 +393,9 @@ local plugins_csv = out_dir .. "/plugins.csv"
 local params_csv  = out_dir .. "/params.csv"
 local plugins_ndj = out_dir .. "/plugins.ndjson"
 local failures_tx = out_dir .. "/failures.txt"
-local progress_js       = out_dir .. "/progress.json"  -- legacy (read-only / optional)
-local progress_done_txt = out_dir .. "/done.txt"       -- append-only progress
-local cursor_txt        = out_dir .. "/cursor.txt"     -- resume cursor (optional)
+progress_js       = out_dir .. "/progress.json"  -- legacy (read-only / optional)
+progress_done_txt = out_dir .. "/done.txt"       -- append-only progress
+cursor_txt        = out_dir .. "/cursor.txt"     -- resume cursor (optional)
 local plugins_jsa = out_dir .. "/plugins.json" -- optional array file
 
 local done = load_done_set()
