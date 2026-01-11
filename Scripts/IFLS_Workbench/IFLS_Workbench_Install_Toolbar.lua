@@ -1,5 +1,5 @@
 -- @description IFLS Workbench: Install helpers (register ALL scripts + open toolbar customization)
--- @version 1.1
+-- @version 1.1.1
 -- @author I feel like snow
 -- @about
 --   Convenience helper after installing via ReaPack/ZIP:
@@ -33,7 +33,7 @@ end
 local function join(a,b)
   if not a or a == "" then return b end
   local last = a:sub(-1)
-  if last == "/" or last == "\" then return a .. b end
+  if last == "/" or last == "\\" then return a .. b end
   return a .. sep .. b
 end
 

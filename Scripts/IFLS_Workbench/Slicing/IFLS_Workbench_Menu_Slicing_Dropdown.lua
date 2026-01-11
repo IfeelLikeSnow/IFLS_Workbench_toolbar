@@ -1,6 +1,6 @@
 
 -- @description IFLS Workbench: Slicing Dropdown (auto-categories + fades)
--- @version 1.0
+-- @version 1.0.1
 -- @about Scannt FXChains/IFLS Workbench/Slicing_* und baut Menü automatisch. Enthält Fade-Submenü & Help.
 local r = reaper
 local sep = package.config:sub(1,1)
