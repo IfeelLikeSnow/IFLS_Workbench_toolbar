@@ -1,0 +1,196 @@
+{
+  "airwindows": {
+    "purestdrive": {
+      "drive": {
+        "match": [
+          "drive",
+          "intensity"
+        ],
+        "scale": 1.0
+      },
+      "output": {
+        "match": [
+          "output"
+        ],
+        "scale": 1.0
+      }
+    },
+    "totape": {
+      "drive": {
+        "match": [
+          "drive"
+        ],
+        "scale": 0.75
+      },
+      "output": {
+        "match": [
+          "output"
+        ],
+        "scale": 1.0
+      },
+      "soft_caps": {
+        "match": [
+          "soft",
+          "soften"
+        ],
+        "max": 0.65
+      },
+      "headbump_caps": {
+        "match": [
+          "head",
+          "bump"
+        ],
+        "max": 0.55
+      }
+    },
+    "channel": {
+      "drive": {
+        "match": [
+          "drive"
+        ],
+        "scale": 0.85
+      },
+      "output": {
+        "match": [
+          "out",
+          "output"
+        ],
+        "scale": 1.0
+      }
+    },
+    "console": {
+      "drive": {
+        "match": [
+          "drive"
+        ],
+        "scale": 0.85
+      },
+      "output": {
+        "match": [
+          "out",
+          "output"
+        ],
+        "scale": 1.0
+      }
+    },
+    "pressure": {
+      "drive": {
+        "match": [
+          "drive"
+        ],
+        "scale": 0.6
+      },
+      "output": {
+        "match": [
+          "makeup",
+          "output"
+        ],
+        "scale": 1.0
+      },
+      "weights": {
+        "drive_vs_compress": [
+          0.6,
+          0.4
+        ]
+      }
+    },
+    "adclip": {
+      "drive": {
+        "match": [
+          "drive",
+          "threshold"
+        ],
+        "scale": 0.5
+      },
+      "output": {
+        "match": [
+          "output"
+        ],
+        "scale": 1.0
+      }
+    },
+    "busscolors": {
+      "drive": {
+        "match": [
+          "mojo",
+          "drive"
+        ],
+        "scale": 0.7
+      },
+      "output": {
+        "match": [
+          "output"
+        ],
+        "scale": 1.0
+      }
+    }
+  },
+  "analogobsession": {
+    "britpre": {
+      "drive": {
+        "match": [
+          "gain",
+          "drive",
+          "mic"
+        ],
+        "scale": 0.9
+      },
+      "output": {
+        "match": [
+          "out",
+          "output",
+          "fader"
+        ],
+        "scale": 1.0
+      },
+      "link_output_to_input": true
+    },
+    "burier": {
+      "drive": {
+        "match": [
+          "drive",
+          "input"
+        ],
+        "scale": 0.9
+      },
+      "output": {
+        "match": [
+          "out",
+          "output"
+        ],
+        "scale": 1.0
+      },
+      "link_output_to_input": true
+    },
+    "fetish": {
+      "drive": {
+        "match": [
+          "input"
+        ],
+        "scale": 0.8
+      },
+      "output": {
+        "match": [
+          "output",
+          "makeup"
+        ],
+        "scale": 1.0
+      }
+    },
+    "comper": {
+      "drive": {
+        "match": [
+          "input"
+        ],
+        "scale": 0.8
+      },
+      "output": {
+        "match": [
+          "output",
+          "makeup"
+        ],
+        "scale": 1.0
+      }
+    }
+  }
+}

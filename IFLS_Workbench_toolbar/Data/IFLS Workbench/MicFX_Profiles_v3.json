@@ -1,0 +1,1290 @@
+{
+  "Rode_NTG4_plus": {
+    "Neutral": {
+      "mode": "Neutral",
+      "eq": {
+        "bands": [
+          {
+            "freq": "180",
+            "gain_db": "-1.2",
+            "q": "1.0",
+            "type": "0"
+          },
+          {
+            "freq": "6500",
+            "gain_db": "1.5",
+            "q": "0.7",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    },
+    "Artist": {
+      "mode": "Artist",
+      "eq": {
+        "bands": [
+          {
+            "freq": "250",
+            "gain_db": "-1.5",
+            "q": "1.0",
+            "type": "0"
+          },
+          {
+            "freq": "8000",
+            "gain_db": "2.0",
+            "q": "0.7",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.1
+      }
+    }
+  },
+  "Behringer_B1": {
+    "Neutral": {
+      "mode": "Neutral",
+      "eq": {
+        "bands": [
+          {
+            "freq": "200",
+            "gain_db": "-1.0",
+            "q": "1.0",
+            "type": "0"
+          },
+          {
+            "freq": "7000",
+            "gain_db": "1.2",
+            "q": "0.7",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    },
+    "Artist": {
+      "mode": "Artist",
+      "eq": {
+        "bands": [
+          {
+            "freq": "250",
+            "gain_db": "-1.2",
+            "q": "1.0",
+            "type": "0"
+          },
+          {
+            "freq": "9000",
+            "gain_db": "2.0",
+            "q": "0.7",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.12
+      }
+    }
+  },
+  "Behringer_C2_Mono": {
+    "Neutral": {
+      "mode": "Neutral",
+      "eq": {
+        "bands": [
+          {
+            "freq": "300",
+            "gain_db": "-1.0",
+            "q": "1.1",
+            "type": "0"
+          },
+          {
+            "freq": "12000",
+            "gain_db": "1.0",
+            "q": "0.7",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    },
+    "Artist": {
+      "mode": "Artist",
+      "eq": {
+        "bands": [
+          {
+            "freq": "350",
+            "gain_db": "-1.2",
+            "q": "1.1",
+            "type": "0"
+          },
+          {
+            "freq": "14000",
+            "gain_db": "1.8",
+            "q": "0.7",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.1
+      }
+    },
+    "Indoor": {
+      "mode": "Neutral",
+      "eq": {
+        "bands": [
+          {
+            "freq": "300",
+            "gain_db": "-1.0",
+            "q": "1.1",
+            "type": "0"
+          },
+          {
+            "freq": "12000",
+            "gain_db": "1.0",
+            "q": "0.7",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    },
+    "Outdoor": {
+      "mode": "Artist",
+      "eq": {
+        "bands": [
+          {
+            "freq": "80",
+            "gain_db": "-1.5",
+            "q": "1.00",
+            "type": "0"
+          },
+          {
+            "freq": "12000",
+            "gain_db": "+0.8",
+            "q": "0.70",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -15,
+        "ratio": 2.0,
+        "att_ms": 12,
+        "rel_ms": 160
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    }
+  },
+  "Behringer_C2_Stereo": {
+    "Neutral": {
+      "mode": "Neutral",
+      "eq": {
+        "bands": [
+          {
+            "freq": "300",
+            "gain_db": "-1.0",
+            "q": "1.1",
+            "type": "0"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    },
+    "Artist": {
+      "mode": "Artist",
+      "eq": {
+        "bands": [
+          {
+            "freq": "350",
+            "gain_db": "-1.2",
+            "q": "1.1",
+            "type": "0"
+          },
+          {
+            "freq": "14000",
+            "gain_db": "1.5",
+            "q": "0.7",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.1
+      }
+    },
+    "Indoor": {
+      "mode": "Neutral",
+      "eq": {
+        "bands": [
+          {
+            "freq": "300",
+            "gain_db": "-1.0",
+            "q": "1.1",
+            "type": "0"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    },
+    "Outdoor": {
+      "mode": "Artist",
+      "eq": {
+        "bands": [
+          {
+            "freq": "80",
+            "gain_db": "-1.5",
+            "q": "1.00",
+            "type": "0"
+          },
+          {
+            "freq": "12000",
+            "gain_db": "+0.8",
+            "q": "0.70",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -15,
+        "ratio": 2.0,
+        "att_ms": 12,
+        "rel_ms": 160
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    }
+  },
+  "Sennheiser_MD400": {
+    "Neutral": {
+      "mode": "Neutral",
+      "eq": {
+        "bands": [
+          {
+            "freq": "180",
+            "gain_db": "-1.0",
+            "q": "1.0",
+            "type": "0"
+          },
+          {
+            "freq": "6000",
+            "gain_db": "0.8",
+            "q": "0.7",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    },
+    "Artist": {
+      "mode": "Artist",
+      "eq": {
+        "bands": [
+          {
+            "freq": "220",
+            "gain_db": "-1.5",
+            "q": "1.0",
+            "type": "0"
+          },
+          {
+            "freq": "7000",
+            "gain_db": "1.5",
+            "q": "0.7",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.1
+      }
+    },
+    "Indoor": {
+      "mode": "Neutral",
+      "eq": {
+        "bands": [
+          {
+            "freq": "180",
+            "gain_db": "-1.0",
+            "q": "1.0",
+            "type": "0"
+          },
+          {
+            "freq": "6000",
+            "gain_db": "0.8",
+            "q": "0.7",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    },
+    "Outdoor": {
+      "mode": "Artist",
+      "eq": {
+        "bands": [
+          {
+            "freq": "80",
+            "gain_db": "-1.5",
+            "q": "1.00",
+            "type": "0"
+          },
+          {
+            "freq": "12000",
+            "gain_db": "+0.8",
+            "q": "0.70",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -15,
+        "ratio": 2.0,
+        "att_ms": 12,
+        "rel_ms": 160
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    }
+  },
+  "Beyerdynamic_TG_V35s": {
+    "Neutral": {
+      "mode": "Neutral",
+      "eq": {
+        "bands": [
+          {
+            "freq": "160",
+            "gain_db": "-1.0",
+            "q": "1.0",
+            "type": "0"
+          },
+          {
+            "freq": "5000",
+            "gain_db": "1.0",
+            "q": "0.7",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    },
+    "Artist": {
+      "mode": "Artist",
+      "eq": {
+        "bands": [
+          {
+            "freq": "220",
+            "gain_db": "-1.4",
+            "q": "1.0",
+            "type": "0"
+          },
+          {
+            "freq": "8000",
+            "gain_db": "1.8",
+            "q": "0.7",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.11
+      }
+    },
+    "Indoor": {
+      "mode": "Neutral",
+      "eq": {
+        "bands": [
+          {
+            "freq": "160",
+            "gain_db": "-1.0",
+            "q": "1.0",
+            "type": "0"
+          },
+          {
+            "freq": "5000",
+            "gain_db": "1.0",
+            "q": "0.7",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    },
+    "Outdoor": {
+      "mode": "Artist",
+      "eq": {
+        "bands": [
+          {
+            "freq": "80",
+            "gain_db": "-1.5",
+            "q": "1.00",
+            "type": "0"
+          },
+          {
+            "freq": "12000",
+            "gain_db": "+0.8",
+            "q": "0.70",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -15,
+        "ratio": 2.0,
+        "att_ms": 12,
+        "rel_ms": 160
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    }
+  },
+  "Behringer_XM8500": {
+    "Neutral": {
+      "mode": "Neutral",
+      "eq": {
+        "bands": [
+          {
+            "freq": "170",
+            "gain_db": "-1.2",
+            "q": "1.0",
+            "type": "0"
+          },
+          {
+            "freq": "4500",
+            "gain_db": "1.2",
+            "q": "0.8",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    },
+    "Artist": {
+      "mode": "Artist",
+      "eq": {
+        "bands": [
+          {
+            "freq": "200",
+            "gain_db": "-1.5",
+            "q": "1.0",
+            "type": "0"
+          },
+          {
+            "freq": "6000",
+            "gain_db": "2.0",
+            "q": "0.8",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.12
+      }
+    },
+    "Indoor": {
+      "mode": "Neutral",
+      "eq": {
+        "bands": [
+          {
+            "freq": "170",
+            "gain_db": "-1.2",
+            "q": "1.0",
+            "type": "0"
+          },
+          {
+            "freq": "4500",
+            "gain_db": "1.2",
+            "q": "0.8",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    },
+    "Outdoor": {
+      "mode": "Artist",
+      "eq": {
+        "bands": [
+          {
+            "freq": "80",
+            "gain_db": "-1.5",
+            "q": "1.00",
+            "type": "0"
+          },
+          {
+            "freq": "12000",
+            "gain_db": "+0.8",
+            "q": "0.70",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -15,
+        "ratio": 2.0,
+        "att_ms": 12,
+        "rel_ms": 160
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    }
+  },
+  "Cortado_MK3_Mono": {
+    "Neutral": {
+      "mode": "Neutral",
+      "eq": {
+        "bands": [
+          {
+            "freq": "120",
+            "gain_db": "-1.0",
+            "q": "1.0",
+            "type": "0"
+          },
+          {
+            "freq": "8000",
+            "gain_db": "0.6",
+            "q": "0.7",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    },
+    "Artist": {
+      "mode": "Artist",
+      "eq": {
+        "bands": [
+          {
+            "freq": "140",
+            "gain_db": "-1.2",
+            "q": "1.0",
+            "type": "0"
+          },
+          {
+            "freq": "10000",
+            "gain_db": "1.2",
+            "q": "0.7",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.09
+      }
+    },
+    "Indoor": {
+      "mode": "Neutral",
+      "eq": {
+        "bands": [
+          {
+            "freq": "120",
+            "gain_db": "-1.0",
+            "q": "1.0",
+            "type": "0"
+          },
+          {
+            "freq": "8000",
+            "gain_db": "0.6",
+            "q": "0.7",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    },
+    "Outdoor": {
+      "mode": "Artist",
+      "eq": {
+        "bands": [
+          {
+            "freq": "80",
+            "gain_db": "-1.5",
+            "q": "1.00",
+            "type": "0"
+          },
+          {
+            "freq": "12000",
+            "gain_db": "+0.8",
+            "q": "0.70",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -15,
+        "ratio": 2.0,
+        "att_ms": 12,
+        "rel_ms": 160
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    }
+  },
+  "Cortado_MK3_Stereo": {
+    "Neutral": {
+      "mode": "Neutral",
+      "eq": {
+        "bands": [
+          {
+            "freq": "120",
+            "gain_db": "-1.0",
+            "q": "1.0",
+            "type": "0"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    },
+    "Artist": {
+      "mode": "Artist",
+      "eq": {
+        "bands": [
+          {
+            "freq": "140",
+            "gain_db": "-1.2",
+            "q": "1.0",
+            "type": "0"
+          },
+          {
+            "freq": "10000",
+            "gain_db": "1.0",
+            "q": "0.7",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.09
+      }
+    },
+    "Indoor": {
+      "mode": "Neutral",
+      "eq": {
+        "bands": [
+          {
+            "freq": "120",
+            "gain_db": "-1.0",
+            "q": "1.0",
+            "type": "0"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    },
+    "Outdoor": {
+      "mode": "Artist",
+      "eq": {
+        "bands": [
+          {
+            "freq": "80",
+            "gain_db": "-1.5",
+            "q": "1.00",
+            "type": "0"
+          },
+          {
+            "freq": "12000",
+            "gain_db": "+0.8",
+            "q": "0.70",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -15,
+        "ratio": 2.0,
+        "att_ms": 12,
+        "rel_ms": 160
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    }
+  },
+  "Korg_CM300_Mono": {
+    "Neutral": {
+      "mode": "Neutral",
+      "eq": {
+        "bands": [
+          {
+            "freq": "250",
+            "gain_db": "-1.0",
+            "q": "1.0",
+            "type": "0"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    },
+    "Artist": {
+      "mode": "Artist",
+      "eq": {
+        "bands": [
+          {
+            "freq": "280",
+            "gain_db": "-1.4",
+            "q": "1.0",
+            "type": "0"
+          },
+          {
+            "freq": "6000",
+            "gain_db": "1.0",
+            "q": "0.7",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.1
+      }
+    },
+    "Indoor": {
+      "mode": "Neutral",
+      "eq": {
+        "bands": [
+          {
+            "freq": "250",
+            "gain_db": "-1.0",
+            "q": "1.0",
+            "type": "0"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    },
+    "Outdoor": {
+      "mode": "Artist",
+      "eq": {
+        "bands": [
+          {
+            "freq": "80",
+            "gain_db": "-1.5",
+            "q": "1.00",
+            "type": "0"
+          },
+          {
+            "freq": "12000",
+            "gain_db": "+0.8",
+            "q": "0.70",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -15,
+        "ratio": 2.0,
+        "att_ms": 12,
+        "rel_ms": 160
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    }
+  },
+  "Korg_CM300_Stereo": {
+    "Neutral": {
+      "mode": "Neutral",
+      "eq": {
+        "bands": [
+          {
+            "freq": "250",
+            "gain_db": "-1.0",
+            "q": "1.0",
+            "type": "0"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    },
+    "Artist": {
+      "mode": "Artist",
+      "eq": {
+        "bands": [
+          {
+            "freq": "280",
+            "gain_db": "-1.4",
+            "q": "1.0",
+            "type": "0"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.1
+      }
+    },
+    "Indoor": {
+      "mode": "Neutral",
+      "eq": {
+        "bands": [
+          {
+            "freq": "250",
+            "gain_db": "-1.0",
+            "q": "1.0",
+            "type": "0"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    },
+    "Outdoor": {
+      "mode": "Artist",
+      "eq": {
+        "bands": [
+          {
+            "freq": "80",
+            "gain_db": "-1.5",
+            "q": "1.00",
+            "type": "0"
+          },
+          {
+            "freq": "12000",
+            "gain_db": "+0.8",
+            "q": "0.70",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -15,
+        "ratio": 2.0,
+        "att_ms": 12,
+        "rel_ms": 160
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    }
+  },
+  "MCM_36_010_Telephone_Pickup_Mono": {
+    "Neutral": {
+      "mode": "Neutral",
+      "eq": {
+        "bands": [
+          {
+            "freq": "300",
+            "gain_db": "-1.2",
+            "q": "1.0",
+            "type": "0"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    },
+    "Artist": {
+      "mode": "Artist",
+      "eq": {
+        "bands": [
+          {
+            "freq": "350",
+            "gain_db": "-1.4",
+            "q": "1.0",
+            "type": "0"
+          },
+          {
+            "freq": "7000",
+            "gain_db": "0.8",
+            "q": "0.7",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    }
+  },
+  "MCM_36_010_Telephone_Pickup_Stereo": {
+    "Neutral": {
+      "mode": "Neutral",
+      "eq": {
+        "bands": [
+          {
+            "freq": "300",
+            "gain_db": "-1.2",
+            "q": "1.0",
+            "type": "0"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    },
+    "Artist": {
+      "mode": "Artist",
+      "eq": {
+        "bands": [
+          {
+            "freq": "350",
+            "gain_db": "-1.4",
+            "q": "1.0",
+            "type": "0"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    }
+  },
+  "LOM_Geofon": {
+    "Neutral": {
+      "mode": "Neutral",
+      "eq": {
+        "bands": [
+          {
+            "freq": "70",
+            "gain_db": "-1.2",
+            "q": "1.0",
+            "type": "0"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    },
+    "Artist": {
+      "mode": "Artist",
+      "eq": {
+        "bands": [
+          {
+            "freq": "90",
+            "gain_db": "-1.5",
+            "q": "1.0",
+            "type": "0"
+          },
+          {
+            "freq": "7000",
+            "gain_db": "0.8",
+            "q": "0.7",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.07
+      }
+    },
+    "Indoor": {
+      "mode": "Neutral",
+      "eq": {
+        "bands": [
+          {
+            "freq": "70",
+            "gain_db": "-1.2",
+            "q": "1.0",
+            "type": "0"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -14,
+        "ratio": 2.0,
+        "att_ms": 10,
+        "rel_ms": 150
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    },
+    "Outdoor": {
+      "mode": "Artist",
+      "eq": {
+        "bands": [
+          {
+            "freq": "80",
+            "gain_db": "-1.5",
+            "q": "1.00",
+            "type": "0"
+          },
+          {
+            "freq": "12000",
+            "gain_db": "+0.8",
+            "q": "0.70",
+            "type": "5"
+          }
+        ]
+      },
+      "comp": {
+        "thr_db": -15,
+        "ratio": 2.0,
+        "att_ms": 12,
+        "rel_ms": 160
+      },
+      "flavor": {
+        "drive": 0.08
+      }
+    }
+  }
+}

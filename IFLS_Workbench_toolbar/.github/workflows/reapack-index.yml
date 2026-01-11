@@ -1,0 +1,13 @@
+name: ReaPack Index (manual)
+on:
+  workflow_dispatch:
+
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Info
+        run: |
+          echo "This repository ships a hand-written index.xml for now."
+          echo "If you want automated indexing, install Ruby + reapack-index locally and commit the regenerated index.xml."

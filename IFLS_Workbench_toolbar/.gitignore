@@ -1,0 +1,12 @@
+# REAPER
+*.RPP-bak
+*.RPP~
+*.reapeaks
+*.wav.reapeaks
+*.flac.reapeaks
+
+# OS / tooling
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
