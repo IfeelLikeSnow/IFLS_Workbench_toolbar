@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index version="1" name="IFLS Workbench Toolbar" commit="8d1e55af7a10e1a44694e61b09e80f46d35484b5">
+  <category name="Scripts/IFLS_Workbench">
+    <reapack name="IFLS_Workbench_MicFX_ParamApply_v3_6.lua" type="script" desc="IFLS Workbench - MicFX ParamApply v3.6 (LiveAware – JSFX Meter, Drive &amp; Comp Bias)">
+      <version name="0.1.0" time="2026-01-10T21:09:47Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/64a07b10de71781255dc6ef52855522c712794cf/Scripts/IFLS_Workbench/IFLS_Workbench_MicFX_ParamApply_v3_6.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="Scripts/IFLS_Workbench/Slicing">
+    <reapack name="IFLS_Workbench_Slicing_FadeShape_Set_Fast.lua" type="script" desc="IFLS Workbench: Slicing FadeShape Set – Fast (2/5 ms)">
+      <version name="1.0" time="2026-01-11T16:25:07Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/d83ba6a5864946d01b8c4472b2db369ba00a39f2/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_FadeShape_Set_Fast.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Slicing_FadeShape_Set_Linear.lua" type="script" desc="IFLS Workbench: Slicing FadeShape Set – Linear (5/8 ms)">
+      <version name="1.0" time="2026-01-11T16:25:07Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/d83ba6a5864946d01b8c4472b2db369ba00a39f2/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_FadeShape_Set_Linear.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Slicing_FadeShape_Set_Slow.lua" type="script" desc="IFLS Workbench: Slicing FadeShape Set – Slow (10/14 ms)">
+      <version name="1.0" time="2026-01-11T16:25:07Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/d83ba6a5864946d01b8c4472b2db369ba00a39f2/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_FadeShape_Set_Slow.lua</source>
+      </version>
+    </reapack>
+  </category>
+</index>
