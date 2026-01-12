@@ -1,6 +1,0 @@
-// META:category=mic
-// META:mode=mono
-// META:profile=outdoor
-// META:lufs_target=-20
-<VST "VST: ReaEQ (Cockos)" reacomp.dll>
-<VST "VST: ReaComp (Cockos)" reacomp.dll>
