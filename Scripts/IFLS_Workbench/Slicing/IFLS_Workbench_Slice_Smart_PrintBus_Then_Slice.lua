@@ -1,5 +1,5 @@
 -- @description IFLS Workbench: Slice Smart (print IFLS bus mono/stereo, then Slice Direct)
--- @version 0.2
+-- @version 0.3
 -- @author I feel like snow
 -- @about
 --   Workflow helper for exploded PolyWAV / multi-mic field recordings:
@@ -122,7 +122,12 @@ end
 if not ok_render then
   r.PreventUIRefresh(-1)
   r.Undo_EndBlock("IFLS Slice Smart: print bus -> slice (FAILED)", -1)
-  r.ShowMessageBox("Couldn't render stem track (render action not found?).\n\nTry running the render-to-stem action manually from the Action List, then run Slice Direct.", "IFLS Slice Smart", 0)
+  r.ShowMessageBox(
+    "Couldn\'t render stem track (render action not found?).\n\n" ..
+    "Try running a \"Render tracks to stem tracks\" action manually from the Action List, " ..
+    "then run this script again.",
+    "IFLS Slice Smart", 0
+  )
   return
 end
 
@@ -148,6 +153,95 @@ if stem then
 else
   msg("[IFLS Slice Smart] Couldn't detect the printed stem track. (Still continuing...)")
 end
+
+-- 3.5) Create slices automatically (preferred: SWS transients split), then move to a dedicated SLICES track
+local function select_items_on_track_in_bounds(tr, bounds)
+  local n = r.CountTrackMediaItems(tr)
+  for i=0,n-1 do
+    local it = r.GetTrackMediaItem(tr, i)
+    local pos = r.GetMediaItemInfo_Value(it, "D_POSITION")
+    local len = r.GetMediaItemInfo_Value(it, "D_LENGTH")
+    local it_end = pos + len
+    local hit = false
+    for _,b in ipairs(bounds) do
+      if it_end > b.s and pos < b.e then hit = true break end
+    end
+    r.SetMediaItemSelected(it, hit)
+  end
+end
+
+local function ensure_track_before(ref_tr, name)
+  local idx = math.floor(r.GetMediaTrackInfo_Value(ref_tr, "IP_TRACKNUMBER") - 1) -- 0-based
+  if idx < 0 then idx = 0 end
+  r.InsertTrackAtIndex(idx, true)
+  local tr = r.GetTrack(0, idx)
+  if name then r.GetSetMediaTrackInfo_String(tr, "P_NAME", name, true) end
+  return tr
+end
+
+local function ensure_track_after(ref_tr, name)
+  local idx = math.floor(r.GetMediaTrackInfo_Value(ref_tr, "IP_TRACKNUMBER")) -- insert after -> current index is 1-based
+  if idx < 0 then idx = 0 end
+  r.InsertTrackAtIndex(idx, true)
+  local tr = r.GetTrack(0, idx)
+  if name then r.GetSetMediaTrackInfo_String(tr, "P_NAME", name, true) end
+  return tr
+end
+
+local did_auto_slice = false
+if stem then
+  -- bounds from items currently on stem (before splitting)
+  local bounds = {}
+  local n_it = r.CountTrackMediaItems(stem)
+  for i=0,n_it-1 do
+    local it = r.GetTrackMediaItem(stem, i)
+    local pos = r.GetMediaItemInfo_Value(it, "D_POSITION")
+    local len = r.GetMediaItemInfo_Value(it, "D_LENGTH")
+    bounds[#bounds+1] = {s=pos, e=pos+len}
+  end
+
+  -- select those items and split at transients (SWS) if available
+  set_only_selected_track(stem)
+  select_items_on_track_in_bounds(stem, bounds)
+  local sws_split = r.NamedCommandLookup("_XENAKIOS_SPLIT_ITEMSATRANSIENTS")
+  if sws_split ~= 0 then
+    r.Main_OnCommand(sws_split, 0)
+    did_auto_slice = true
+  end
+
+  -- optional ZeroCross PostFix
+  local zc_flag = ({r.GetProjExtState(0,"IFLS_SLICING","ZC_RESPECT")})[2]
+  if zc_flag == "1" then
+    run_script_relative("Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_ZeroCross_PostFix.lua")
+  end
+
+  -- move resulting slices to a dedicated track (before FX bus if present)
+  local slices_tr
+  if fxbus then
+    slices_tr = ensure_track_before(fxbus, "IFLS WB - SLICES")
+  else
+    slices_tr = ensure_track_after(stem, "IFLS WB - SLICES")
+  end
+
+  -- move anything that overlaps original bounds
+  select_items_on_track_in_bounds(stem, bounds)
+  local moved = 0
+  for i = r.CountSelectedMediaItems(0)-1, 0, -1 do
+    local it = r.GetSelectedMediaItem(0, i)
+    if it then
+      r.MoveMediaItemToTrack(it, slices_tr)
+      moved = moved + 1
+    end
+  end
+
+  -- mute the printed stem track (requested behaviour)
+  r.SetMediaTrackInfo_Value(stem, "B_MUTE", 1)
+
+  -- focus slices track
+  set_only_selected_track(slices_tr)
+  msg(string.format("[IFLS Slice Smart] Auto-slice=%s, moved %d items to IFLS WB - SLICES\n", tostring(did_auto_slice), moved))
+end
+
 
 r.PreventUIRefresh(-1)
 
