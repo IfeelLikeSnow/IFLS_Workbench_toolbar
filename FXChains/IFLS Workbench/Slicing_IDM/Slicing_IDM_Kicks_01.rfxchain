@@ -1,0 +1,9 @@
+<FXCHAIN
+SHOW 0
+LASTSEL 0
+DOCKED 0
+<JS "DF95/DF95_Euclid_Slicer.jsfx"
+>
+<JS "DF95/DF95_IDM_Kick_BusTone.jsfx"
+>
+>
