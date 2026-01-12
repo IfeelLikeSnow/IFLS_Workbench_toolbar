@@ -1,21 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <index version="1" name="IFLS Workbench Toolbar">
   <category name="IFLS Workbench">
     <reapack name="IFLS Workbench (bundle)" type="script">
-      <metadata>
-        <description>IFLS Workbench Toolbar (scripts + FXChains + MenuSets + icons)</description>
-        <link rel="website">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar</link>
-      </metadata>
-      <version name="0.7.4" author="IfeelLikeSnow" time="2026-01-12T21:42:22Z">
+      <version name="0.7.5" author="IfeelLikeSnow" time="2026-01-12T22:22:47Z">
         <source file="Data/IFLS Workbench/DF95_ParamMaps_AO_AW.json">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Data/IFLS%20Workbench/DF95_ParamMaps_AO_AW.json</source>
         <source file="Data/IFLS Workbench/MicFX_Profiles_v3.json">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Data/IFLS%20Workbench/MicFX_Profiles_v3.json</source>
-        <source file="Data/toolbar_icons/IFLSWB_cleanup.png">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Data/toolbar_icons/IFLSWB_cleanup.png</source>
-        <source file="Data/toolbar_icons/IFLSWB_diag.png">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Data/toolbar_icons/IFLSWB_diag.png</source>
-        <source file="Data/toolbar_icons/IFLSWB_explode.png">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Data/toolbar_icons/IFLSWB_explode.png</source>
-        <source file="Data/toolbar_icons/IFLSWB_install.png">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Data/toolbar_icons/IFLSWB_install.png</source>
-        <source file="Data/toolbar_icons/IFLSWB_polywav.png">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Data/toolbar_icons/IFLSWB_polywav.png</source>
-        <source file="Data/toolbar_icons/IFLSWB_slicemenu.png">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Data/toolbar_icons/IFLSWB_slicemenu.png</source>
-        <source file="Data/toolbar_icons/IFLSWB_slicesmart.png">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Data/toolbar_icons/IFLSWB_slicesmart.png</source>
         <source file="Effects/IFLS Workbench/DF95_Dynamic_Meter_v1.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS%20Workbench/DF95_Dynamic_Meter_v1.jsfx</source>
         <source file="FXChains/IFLS Workbench/Mic/DF95_Mic_Fallback_Clean.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS%20Workbench/Mic/DF95_Mic_Fallback_Clean.rfxchain</source>
         <source file="FXChains/IFLS Workbench/Mic/Mic_B1_Mono.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS%20Workbench/Mic/Mic_B1_Mono.rfxchain</source>
@@ -70,9 +59,6 @@
         <source file="FXChains/IFLS Workbench/Slicing_IDM/Slicing_IDM_MicroPerc_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS%20Workbench/Slicing_IDM/Slicing_IDM_MicroPerc_01.rfxchain</source>
         <source file="FXChains/IFLS Workbench/Slicing_IDM/Slicing_IDM_NoiseBursts_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS%20Workbench/Slicing_IDM/Slicing_IDM_NoiseBursts_01.rfxchain</source>
         <source file="FXChains/IFLS Workbench/Slicing_IDM/Slicing_IDM_Snares_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS%20Workbench/Slicing_IDM/Slicing_IDM_Snares_01.rfxchain</source>
-        <source file="MenuSets/IFLS_Workbench_TB16.ReaperMenu">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/MenuSets/IFLS_Workbench_TB16.ReaperMenu</source>
-        <source file="README.md">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/README.md</source>
-        <source file="README_TOOLBAR_ICONS.txt">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/README_TOOLBAR_ICONS.txt</source>
         <source file="Scripts/IFLS/IFLS_Cleanup_Duplicate_IFLS_Scripts.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Scripts/IFLS/IFLS_Cleanup_Duplicate_IFLS_Scripts.lua</source>
         <source file="Scripts/IFLS/IFLS_Diagnostics.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Scripts/IFLS/IFLS_Diagnostics.lua</source>
         <source file="Scripts/IFLS_Workbench/IFLS_Workbench_Apply_MicFX_ByTrackName_v2.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Scripts/IFLS_Workbench/IFLS_Workbench_Apply_MicFX_ByTrackName_v2.lua</source>
@@ -103,12 +89,11 @@
         <source file="Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_Toggle_ZeroCross.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_Toggle_ZeroCross.lua</source>
         <source file="Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_ZeroCross_PostFix.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_ZeroCross_PostFix.lua</source>
         <source file="Scripts/IFLS_Workbench/Slicing/_IFLS_Slicing_FadeCommon.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Scripts/IFLS_Workbench/Slicing/_IFLS_Slicing_FadeCommon.lua</source>
-        <source file="Scripts/IFLS_Workbench/Tools/IFLS_Export_InstalledFX_List.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Scripts/IFLS_Workbench/Tools/IFLS_Export_InstalledFX_List.lua</source>
         <source file="Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Dump_All_FX_Params_EnumInstalledFX_PreferVST3_StrongMatch_Resume_CSV_NDJSON.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Dump_All_FX_Params_EnumInstalledFX_PreferVST3_StrongMatch_Resume_CSV_NDJSON.lua</source>
         <source file="Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Dump_All_FX_Params_EnumInstalledFX_Resume_CSV_NDJSON.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Dump_All_FX_Params_EnumInstalledFX_Resume_CSV_NDJSON.lua</source>
         <source file="Scripts/IFLS_Workbench/lib/ifls_workbench_mic_profiles.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Scripts/IFLS_Workbench/lib/ifls_workbench_mic_profiles.lua</source>
         <source file="Scripts/IFLS_Workbench/lib/ifls_workbench_micfx_profiles.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Scripts/IFLS_Workbench/lib/ifls_workbench_micfx_profiles.lua</source>
-      </version>
+      <source file="Scripts/IFLS_Workbench/Tools/IFLS_Export_InstalledFX_List.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Scripts/IFLS_Workbench/Tools/IFLS_Export_InstalledFX_List.lua</source><source file="Scripts/IFLS_Workbench/Tools/IFLS_Workbench_SyntaxScan_All.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_SyntaxScan_All.lua</source><source file="Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Transients_CloseGaps.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Transients_CloseGaps.lua</source></version>
     </reapack>
   </category>
 </index>
