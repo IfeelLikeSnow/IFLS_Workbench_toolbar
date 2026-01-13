@@ -46,3 +46,19 @@ In REAPER, register scripts if needed:
 - `Actions → Show action list…`
 - `ReaScript → Load…`
 - Load & run: `Scripts/IFLS_Workbench/IFLS_Workbench_Install_Toolbar.lua`
+
+
+## Avoid nested installs (common mistake)
+
+Do **not** extract the whole bundle into `<ResourcePath>/Scripts/`.
+That creates a wrong nested layout like:
+
+`<ResourcePath>/Scripts/IFLS Workbench Toolbar/IFLS Workbench/...`
+
+Correct is:
+- Install via **ReaPack** (recommended), or
+- Run `TOOLS/Install_Zip_To_ReaperResourcePath.ps1` (copies into the right places), or
+- Extract the ZIP to a temp folder and copy `Scripts/`, `Effects/`, `FXChains/`, `Data/` into the ResourcePath root.
+
+If you already have a nested install, run:
+`IFLS Workbench: Fix Misinstalled Nested Folders` (Action List).
