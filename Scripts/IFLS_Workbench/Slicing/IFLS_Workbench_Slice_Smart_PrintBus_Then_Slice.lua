@@ -1,13 +1,10 @@
 -- @description IFLS Workbench - Smart Slice (Print bus -> Auto slice -> Close gaps)
 -- @author IFLS / DF95
--- @version 0.7.4
+-- @version 0.7.6
 -- @changelog
---   + Fix Lua syntax error (broken string)
---   + Print selected bus to mono/stereo stem track (auto detect)
---   + Move stem item(s) to a new "IFLS Slices" track (before stem track)
---   + Slice: percussive -> split at transients (SWS) + remove-silence (native); otherwise remove-silence
---   + Close gaps between resulting slices (SWS Fill gaps quick)
---   + Optional ZeroCross post-fix (if IFLS slicing toggle enabled)
+--   + Fix: insert Slices track directly before each new stem track (off-by-one index)
+--   + Fix: keep script header/version in sync with repo
+--   + Safety: more robust selection restore and no-op if nothing to slice
 --
 -- @about
 --   Workflow for IDM/glitch from field recordings:
@@ -41,6 +38,22 @@ local function track_ptr_set(tracks)
   local set = {}
   for _,tr in ipairs(tracks) do set[tr] = true end
   return set
+end
+
+local function selection_has_nonunity_playrate(eps)
+  eps = eps or 1e-9
+  local n = r.CountSelectedMediaItems(0)
+  for i=0,n-1 do
+    local it = r.GetSelectedMediaItem(0,i)
+    if it then
+      local take = r.GetActiveTake(it)
+      if take and not r.TakeIsMIDI(take) then
+        local pr = r.GetMediaItemTakeInfo_Value(take, "D_PLAYRATE") or 1.0
+        if math.abs(pr - 1.0) > eps then return true end
+      end
+    end
+  end
+  return false
 end
 
 local function is_all_sources_mono(tracks)
@@ -119,7 +132,7 @@ end
 local function insert_track_before(tr)
   local idx = r.GetMediaTrackInfo_Value(tr, "IP_TRACKNUMBER") -- 1-based
   if not idx then return nil end
-  local ins = math.max(0, idx-1-1) -- insert at (idx-1) in 0-based
+  local ins = math.max(0, idx-1) -- insert BEFORE this track (0-based index)
   r.InsertTrackAtIndex(ins, true)
   local new_tr = r.GetTrack(0, ins)
   return new_tr
@@ -302,7 +315,10 @@ local function main()
       else
         -- just silence trim + fill gaps
         try_main_cmd(40315)
-        local did_fill2 = try_named_cmd("_SWS_AWFILLGAPSQUICK")
+        local did_fill2 = false
+        if not selection_has_nonunity_playrate() then
+          did_fill2 = try_named_cmd("_SWS_AWFILLGAPSQUICK")
+        end
         if not did_fill2 then close_gaps_fallback() end
       end
 

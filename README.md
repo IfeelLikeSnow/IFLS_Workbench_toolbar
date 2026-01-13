@@ -43,3 +43,17 @@ ReaPack repository for IFLS Workbench.
 5. **Export Installed FX**
    - Run: `Tools/IFLS_Export_InstalledFX_List.lua`
    - Check output folder: `<resource>/IFLS_Exports/`
+
+
+## Docs
+- [REAPER Test Plan](DOCS/REAPER_TEST_PLAN_v0.7.5.md)
+- [Duplicate Removal](DOCS/DUPLICATES.md)
+- [GitHub Push](DOCS/GITHUB_PUSH.md)
+
+
+## ReaPack Import URL
+Paste this into: Extensions → ReaPack → Import repositories…
+
+```
+https://raw.githubusercontent.com/<YOUR_USER>/<YOUR_REPO>/main/index.xml
+```
