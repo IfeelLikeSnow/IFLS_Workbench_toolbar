@@ -228,8 +228,8 @@ local function do_slicing_on_selected_items()
   try_main_cmd(40315)
 
   -- 3) Close gaps (SWS)
-  local did_fill = local did_fill2 = try_named_cmd("_SWS_AWFILLGAPSQUICK")
-        if not did_fill2 then close_gaps_fallback() end
+  local did_fill = try_named_cmd("_SWS_AWFILLGAPSQUICK")
+  if not did_fill then close_gaps_fallback() end
 
   return did_trans, did_fill
 end
