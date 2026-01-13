@@ -1,165 +1,318 @@
--- @description IFLS Workbench: Slice Smart (print IFLS bus mono/stereo, then Slice Direct)
--- @version 0.2
--- @author I feel like snow
+-- @description IFLS Workbench - Smart Slice (Print bus -> Auto slice -> Close gaps)
+-- @author IFLS / DF95
+-- @version 0.7.4
+-- @changelog
+--   + Fix Lua syntax error (broken string)
+--   + Print selected bus to mono/stereo stem track (auto detect)
+--   + Move stem item(s) to a new "IFLS Slices" track (before stem track)
+--   + Slice: percussive -> split at transients (SWS) + remove-silence (native); otherwise remove-silence
+--   + Close gaps between resulting slices (SWS Fill gaps quick)
+--   + Optional ZeroCross post-fix (if IFLS slicing toggle enabled)
+--
 -- @about
---   Workflow helper for exploded PolyWAV / multi-mic field recordings:
---   1) Finds your IFLS master bus (default name: "IFLS WB - MASTER BUS").
---   2) Detects if ALL mic-source items are mono. If yes -> print MONO stem, else -> STEREO stem.
---   3) Runs "IFLS Workbench: Slice Direct" on the printed stem track.
---
---   Notes:
---   - Printing bakes your MicFX and bus FX into ONE track (avoids "zig samples" across tracks).
---   - Printing uses REAPER's built-in stem render actions (post-fader).
---
-local r = reaper
+--   Workflow for IDM/glitch from field recordings:
+--     1) Select the track(s) you want to print (bus or group).
+--     2) Run this script.
+--   It renders ("prints") the selection to a new stem track, mutes originals (render action does this),
+--   then creates a Slices track and performs slicing + gap removal on the printed audio.
 
-local MASTER_NAME = "IFLS WB - MASTER BUS"
-local FXBUS_NAME  = "IFLS WB - FX BUS"
+local r = reaper
 
 local function msg(s) r.ShowConsoleMsg(tostring(s) .. "\n") end
 
-local function find_track_by_exact_name(name)
-  for i = 0, r.CountTracks(0) - 1 do
-    local tr = r.GetTrack(0, i)
-    local _, trname = r.GetTrackName(tr)
-    if trname == name then return tr end
-  end
+local function get_script_dir()
+  local _, _, _, _, _, script_path = r.get_action_context()
+  return script_path:match("^(.*)[/\\]") or ""
 end
 
-local function set_only_selected_track(tr)
-  r.Main_OnCommand(40297, 0) -- Unselect all tracks
-  if tr then r.SetTrackSelected(tr, true) end
+local function path_join(a,b)
+  if a:sub(-1) == "/" or a:sub(-1) == "\\" then return a .. b end
+  return a .. "/" .. b
 end
 
-local function detect_any_stereo_in_tracks(tracks)
-  for _, tr in ipairs(tracks) do
-    local item_count = r.CountTrackMediaItems(tr)
-    for i = 0, item_count - 1 do
-      local item = r.GetTrackMediaItem(tr, i)
+local function get_selected_tracks()
+  local t = {}
+  local n = r.CountSelectedTracks(0)
+  for i=0,n-1 do t[#t+1] = r.GetSelectedTrack(0,i) end
+  return t
+end
+
+local function track_ptr_set(tracks)
+  local set = {}
+  for _,tr in ipairs(tracks) do set[tr] = true end
+  return set
+end
+
+local function is_all_sources_mono(tracks)
+  -- Scan items on the selected tracks. If any take source has >1 channel => not all mono.
+  for _,tr in ipairs(tracks) do
+    local item_cnt = r.CountTrackMediaItems(tr)
+    for i=0,item_cnt-1 do
+      local item = r.GetTrackMediaItem(tr,i)
       local take = r.GetActiveTake(item)
       if take then
         local src = r.GetMediaItemTake_Source(take)
         if src then
           local ch = r.GetMediaSourceNumChannels(src)
-          if ch and ch > 1 then return true end
+          if ch and ch > 1 then return false end
         end
       end
     end
   end
+  return true
+end
+
+local function try_main_cmd(cmd)
+  if cmd and cmd > 0 then
+    r.Main_OnCommand(cmd, 0)
+    return true
+  end
   return false
 end
 
-local function collect_tracks_sending_to(dest_tr)
-  local out = {}
-  if not dest_tr then return out end
-  for i = 0, r.CountTracks(0) - 1 do
-    local tr = r.GetTrack(0, i)
-    if tr ~= dest_tr then
-      local ns = r.GetTrackNumSends(tr, 0)
-      for s = 0, ns - 1 do
-        local dt = r.GetTrackSendInfo_Value(tr, 0, s, "P_DESTTRACK")
-        if dt == dest_tr then
-          table.insert(out, tr)
-          break
-        end
-      end
+local function try_named_cmd(named)
+  local cmd = r.NamedCommandLookup(named)
+  if cmd and cmd > 0 then
+    r.Main_OnCommand(cmd, 0)
+    return true
+  end
+  return false
+end
+
+local function render_to_stem(all_mono)
+  -- Prefer modern action IDs (REAPER 7.x action list):
+  -- 40788: Render selected tracks to mono stem tracks (and mute originals)
+  -- 40789: Render selected tracks to stereo stem tracks (and mute originals)
+  local ok = false
+  if all_mono then
+    ok = try_main_cmd(40788) or try_main_cmd(40537)
+  else
+    ok = try_main_cmd(40789) or try_main_cmd(40538)
+  end
+  return ok
+end
+
+local function get_new_selected_tracks(pre_sel_set)
+  local new = {}
+  local n = r.CountSelectedTracks(0)
+  for i=0,n-1 do
+    local tr = r.GetSelectedTrack(0,i)
+    if tr and not pre_sel_set[tr] then new[#new+1] = tr end
+  end
+  return new
+end
+
+local function select_only_track(tr)
+  r.Main_OnCommand(40297,0) -- Unselect all tracks
+  r.SetTrackSelected(tr, true)
+end
+
+local function select_only_items_on_track(tr)
+  r.Main_OnCommand(40289,0) -- Unselect all items
+  local cnt = r.CountTrackMediaItems(tr)
+  for i=0,cnt-1 do
+    local it = r.GetTrackMediaItem(tr,i)
+    r.SetMediaItemSelected(it, true)
+  end
+end
+
+local function insert_track_before(tr)
+  local idx = r.GetMediaTrackInfo_Value(tr, "IP_TRACKNUMBER") -- 1-based
+  if not idx then return nil end
+  local ins = math.max(0, idx-1-1) -- insert at (idx-1) in 0-based
+  r.InsertTrackAtIndex(ins, true)
+  local new_tr = r.GetTrack(0, ins)
+  return new_tr
+end
+
+local function set_track_name(tr, name)
+  r.GetSetMediaTrackInfo_String(tr, "P_NAME", name, true)
+end
+
+local function move_items(from_tr, to_tr)
+  local cnt = r.CountTrackMediaItems(from_tr)
+  -- iterate backwards because moving changes indexing
+  for i=cnt-1,0,-1 do
+    local it = r.GetTrackMediaItem(from_tr, i)
+    r.MoveMediaItemToTrack(it, to_tr)
+  end
+end
+
+local function compute_peaks_metrics(item)
+  -- Lightweight analysis: crest factor + transient-ish count
+  local take = r.GetActiveTake(item)
+  if not take or not r.new_array or not r.APIExists("GetMediaItemTake_Peaks") then
+    return nil
+  end
+
+  local src = r.GetMediaItemTake_Source(take)
+  if not src then return nil end
+  local ch = r.GetMediaSourceNumChannels(src)
+  if not ch or ch < 1 then ch = 1 end
+  ch = math.min(ch, 2)
+
+  local samples = 2048
+  local buf = r.new_array(ch * samples * 2) -- max + min
+  local peakrate = 1000.0
+  local starttime = 0.0
+  local want_extra = 0
+
+  local retval = r.GetMediaItemTake_Peaks(take, peakrate, starttime, ch, samples, want_extra, buf)
+  if not retval or retval == 0 then return nil end
+
+  local returned = retval & 0xFFFFF
+  if returned < 16 then return nil end
+
+  local peak = 0.0
+  local sum = 0.0
+  local count = 0
+
+  -- maxima block first: [0 .. ch*samples-1]
+  local maxN = ch * returned
+  for i=1,maxN do
+    local v = math.abs(buf[i])
+    if v > peak then peak = v end
+    sum = sum + v
+    count = count + 1
+  end
+  if count == 0 then return nil end
+  local mean = sum / count
+  if mean <= 1e-9 then return nil end
+  local crest = peak / mean
+
+  -- transient-ish count: count of points above 70% peak with simple local maxima check (mono'd)
+  local thr = peak * 0.70
+  local trans = 0
+  for s=2,returned-1 do
+    local v = math.abs(buf[s]) -- first channel only
+    local prev = math.abs(buf[s-1])
+    local nxt = math.abs(buf[s+1])
+    if v > thr and v >= prev and v >= nxt then
+      trans = trans + 1
     end
   end
-  return out
+
+  return {crest=crest, trans=trans, returned=returned}
 end
 
-local function run_script_relative(rel)
-  local path = r.GetResourcePath() .. "/" .. rel
-  local f = io.open(path, "rb")
-  if f then f:close(); dofile(path); return true end
-  return false
+
+local function close_gaps_fallback()
+  -- Pure Lua gap closing: pack selected items on the same track so there is no space between them.
+  local n = r.CountSelectedMediaItems(0)
+  if n < 2 then return end
+
+  -- collect
+  local items = {}
+  for i=0,n-1 do
+    local it = r.GetSelectedMediaItem(0,i)
+    local pos = r.GetMediaItemInfo_Value(it, "D_POSITION")
+    local len = r.GetMediaItemInfo_Value(it, "D_LENGTH")
+    items[#items+1] = {it=it, pos=pos, len=len}
+  end
+  table.sort(items, function(a,b) return a.pos < b.pos end)
+
+  local cur = items[1].pos + items[1].len
+  for i=2,#items do
+    local it = items[i].it
+    r.SetMediaItemInfo_Value(it, "D_POSITION", cur)
+    cur = cur + items[i].len
+  end
 end
 
--- 1) Find IFLS buses
-local master = find_track_by_exact_name(MASTER_NAME)
-local fxbus  = find_track_by_exact_name(FXBUS_NAME)
+local function do_slicing_on_selected_items()
+  -- 1) Optional split at transients (SWS Xenakios)
+  local did_trans = try_named_cmd("_XENAKIOS_SPLIT_ITEMSATRANSIENTS")
 
--- Fallback: if no master found, allow user selection
-if not master then
-  master = r.GetSelectedTrack(0, 0)
-  if not master then
-    r.ShowMessageBox(
-      "Couldn't find IFLS bus tracks.\n\nSelect your IFLS master/bus track, then run this script again.",
-      "IFLS Slice Smart", 0
-    )
+  -- 2) Remove-silence split (native). Uses last settings if you previously opened the dialog.
+  --    Action: "Item: Auto trim/split items (remove silence)..." = 40315
+  try_main_cmd(40315)
+
+  -- 3) Close gaps (SWS)
+  local did_fill = local did_fill2 = try_named_cmd("_SWS_AWFILLGAPSQUICK")
+        if not did_fill2 then close_gaps_fallback() end
+
+  return did_trans, did_fill
+end
+
+local function maybe_run_zerocross_postfix()
+  -- uses the existing IFLS toggle script state, if present
+  local _, on = r.GetProjExtState(0, "IFLS_SLICING", "ZC_RESPECT")
+  if on == "1" then
+    local dir = get_script_dir()
+    local postfix = path_join(dir, "IFLS_Workbench_Slicing_ZeroCross_PostFix.lua")
+    if r.file_exists and r.file_exists(postfix) then
+      dofile(postfix)
+    else
+      -- fallback: try relative to Slicing folder
+      local alt = path_join(dir, "Slicing/IFLS_Workbench_Slicing_ZeroCross_PostFix.lua")
+      if r.file_exists and r.file_exists(alt) then dofile(alt) end
+    end
+  end
+end
+
+local function main()
+  local pre_sel = get_selected_tracks()
+  if #pre_sel == 0 then
+    r.MB("Select the track(s) you want to print/slice first.", "IFLS Smart Slice", 0)
     return
   end
-end
 
--- 2) Determine mono vs stereo by scanning tracks that send into FX bus (preferred), otherwise master
-local source_bus = fxbus or master
-local mic_tracks = collect_tracks_sending_to(source_bus)
-local any_stereo = detect_any_stereo_in_tracks(mic_tracks)
+  local pre_set = track_ptr_set(pre_sel)
+  local mono = is_all_sources_mono(pre_sel)
 
--- 3) Print stem from bus track (post-fader), but keep original unmuted afterwards
-local old_mute = r.GetMediaTrackInfo_Value(master, "B_MUTE")
+  r.Undo_BeginBlock()
+  r.PreventUIRefresh(1)
 
-r.Undo_BeginBlock()
-r.PreventUIRefresh(1)
-
-set_only_selected_track(master)
-
-local n_before = r.CountTracks(0)
-
-local function try_render(cmd)
-  r.Main_OnCommand(cmd, 0)
-  return r.CountTracks(0) > n_before
-end
-
-local ok_render = false
-if any_stereo then
-  -- Some REAPER versions/lists report 40405, others 40406 for this action.
-  ok_render = try_render(40405) or try_render(40406) or try_render(40788) -- non post-fader fallback
-else
-  ok_render = try_render(40537) -- mono post-fader stem tracks (and mute originals)
-end
-
-if not ok_render then
-  r.PreventUIRefresh(-1)
-  r.Undo_EndBlock("IFLS Slice Smart: print bus -> slice (FAILED)", -1)
-  r.ShowMessageBox("Couldn't render stem track (render action not found?).
-
-Try running the render-to-stem action manually from the Action List, then run Slice Direct.", "IFLS Slice Smart", 0)
-  return
-end
-
-
--- After rendering, REAPER typically selects the newly created stem track(s).
--- Restore the master mute state (render action mutes originals).
-r.SetMediaTrackInfo_Value(master, "B_MUTE", old_mute)
-
--- Identify the new stem track: first selected track that is NOT the master
-local stem = nil
-for i = 0, r.CountTracks(0) - 1 do
-  local tr = r.GetTrack(0, i)
-  if tr ~= master and r.IsTrackSelected(tr) then
-    stem = tr
-    break
+  local ok = render_to_stem(mono)
+  if not ok then
+    r.PreventUIRefresh(-1)
+    r.Undo_EndBlock("IFLS Smart Slice - failed (render action not found)", -1)
+    r.MB("Couldn't render stem track (render action not found?).\n\nTry:\n- REAPER 7.5+ (for 40788/40789)\n- Or customize render action IDs in the script.", "IFLS Smart Slice", 0)
+    return
   end
+
+  -- new stem track(s) should be selected after render
+  local new_stems = get_new_selected_tracks(pre_set)
+  if #new_stems == 0 then
+    r.PreventUIRefresh(-1)
+    r.Undo_EndBlock("IFLS Smart Slice - failed (no new stem track detected)", -1)
+    r.MB("Rendered, but couldn't detect the new stem track.\n\nTry selecting ONLY the source tracks and re-run.", "IFLS Smart Slice", 0)
+    return
+  end
+
+  -- For each stem track: create slices track right above it, move items, then slice
+  for _,stem_tr in ipairs(new_stems) do
+    local slices_tr = insert_track_before(stem_tr)
+    if slices_tr then
+      set_track_name(slices_tr, "IFLS Slices")
+      move_items(stem_tr, slices_tr)
+
+      -- keep stem track muted (it should already be empty now, but safe)
+      r.SetMediaTrackInfo_Value(stem_tr, "B_MUTE", 1)
+
+      select_only_track(slices_tr)
+      select_only_items_on_track(slices_tr)
+
+      -- analyze first selected item to decide if transient split is worth it (optional)
+      local first_item = r.GetSelectedMediaItem(0,0)
+      local m = first_item and compute_peaks_metrics(first_item) or nil
+      if m and (m.crest >= 6.0 or m.trans >= 8) then
+        -- do transients + silence trim
+        do_slicing_on_selected_items()
+      else
+        -- just silence trim + fill gaps
+        try_main_cmd(40315)
+        local did_fill2 = try_named_cmd("_SWS_AWFILLGAPSQUICK")
+        if not did_fill2 then close_gaps_fallback() end
+      end
+
+      maybe_run_zerocross_postfix()
+    end
+  end
+
+  r.PreventUIRefresh(-1)
+  r.UpdateArrange()
+  r.Undo_EndBlock("IFLS Smart Slice (print -> slice -> close gaps)", -1)
 end
 
-if stem then
-  local suffix = any_stereo and "STEREO" or "MONO"
-  r.GetSetMediaTrackInfo_String(stem, "P_NAME", "IFLS WB - SLICE SOURCE ("..suffix..")", true)
-  set_only_selected_track(stem)
-else
-  msg("[IFLS Slice Smart] Couldn't detect the printed stem track. (Still continuing...)")
-end
-
-r.PreventUIRefresh(-1)
-
--- 4) Run Slice Direct (cursor or time selection)
-local ok = run_script_relative("Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Transients_CloseGaps.lua")
-if not ok then
-  r.ShowMessageBox(
-    "Printed stem created, but couldn't find the Transients+CloseGaps slicer.\n\nExpected:\nScripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Transients_CloseGaps.lua",
-    "IFLS Slice Smart", 0
-  )
-end
-
-r.Undo_EndBlock("IFLS Slice Smart: print bus -> slice", -1)
+main()

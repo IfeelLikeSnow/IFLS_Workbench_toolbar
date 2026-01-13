@@ -52,7 +52,7 @@ if tb_num > 16 then tb_num = 16 end
 local entries = {
   {"Explode Fieldrec + MicFX + Buses", "Scripts/IFLS_Workbench/IFLS_Workbench_Explode_Fieldrec.lua", "IFLSWB_explode"},
   {"PolyWAV Toolbox (ImGui)",          "Scripts/IFLS_Workbench/IFLS_Workbench_PolyWAV_Toolbox.lua", "IFLSWB_polywav"},
-  {"Slice Transients + Close gaps", "Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Transients_CloseGaps.lua", "IFLSWB_slicesmart"},
+  {"Slice Smart (print bus -> slice)", "Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Smart_PrintBus_Then_Slice.lua", "IFLSWB_slicesmart"},
   {"Slicing dropdown menu",            "Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Menu_Slicing_Dropdown.lua", "IFLSWB_slicemenu"},
   {"Install helpers (register scripts)", "Scripts/IFLS_Workbench/IFLS_Workbench_Install_Toolbar.lua", "IFLSWB_install"},
   {"Diagnostics",                      "Scripts/IFLS/IFLS_Diagnostics.lua", "IFLSWB_diag"},
