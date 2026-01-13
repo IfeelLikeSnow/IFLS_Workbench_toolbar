@@ -1,10 +1,10 @@
 # IFLS Workbench Toolbar
 
 ReaPack repository for IFLS Workbench.
-## New in v0.7.5
+## New in v0.7.8
 - Added FX Param Catalog exporter (no MIDI CC + toggle flags + prefer VST3).
 
-## New in v0.7.4
+## New in v0.7.8
 - **Smart Slice** now actually slices (prints -> slices -> closes gaps) and fixes a Lua syntax error.
 - Added **IFLS_Export_InstalledFX_List.lua** (dedupe + prefer VST3) which exports TSV + JSON to:
   `<REAPER resource path>/IFLS_Exports/`
@@ -46,7 +46,7 @@ ReaPack repository for IFLS Workbench.
 
 
 ## Docs
-- [REAPER Test Plan](DOCS/REAPER_TEST_PLAN_v0.7.5.md)
+- [REAPER Test Plan](DOCS/REAPER_TEST_PLAN_v0.7.8.md)
 - [Duplicate Removal](DOCS/DUPLICATES.md)
 - [GitHub Push](DOCS/GITHUB_PUSH.md)
 
@@ -57,3 +57,20 @@ Paste this into: Extensions → ReaPack → Import repositories…
 ```
 https://raw.githubusercontent.com/<YOUR_USER>/<YOUR_REPO>/main/index.xml
 ```
+
+## Smart Slicing Modes (v0.7.8)
+
+New optional tools:
+- **Smart Slicing Mode Menu**: choose Normal / Clicks & Pops / Drones.
+- **Clickify**: post-process slices into micro-clicks/pops around peaks.
+- **Drone Chop**: glue + chop into longer segments with fades.
+
+See `DOCS/IFLS_SMART_SLICING_MODES_v0.7.8.md`.
+
+## Folder naming (0.7.8)
+To reduce path issues and simplify installation, the repo uses consistent folder names without spaces:
+- Effects/IFLS_Workbench/
+- FXChains/IFLS_Workbench/
+- Data/IFLS_Workbench/
+
+JSFX names are unified as IFLS_Workbench_*.jsfx and show up in REAPER as "IFLS Workbench - ...".

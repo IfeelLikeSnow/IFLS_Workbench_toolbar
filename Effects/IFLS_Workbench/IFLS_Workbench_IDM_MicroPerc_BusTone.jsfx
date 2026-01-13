@@ -1,0 +1,58 @@
+desc:IFLS Workbench - IDM MicroPerc Bus Tone
+author: DF95
+version: 1.0
+
+slider1:250<60,800,10>HPF freq (Hz)
+slider2:2<0,8,0.1>Presence boost (dB @ 4k)
+slider3:1<0,6,0.1>Air boost (dB @ 10k)
+slider4:0.2<0,1,0.01>Saturation
+slider5:0.5<0,1,0.01>Dry/Wet
+
+@init
+two_pi = 2*$pi;
+yl = 0; yr = 0;
+p_l = 0; p_r = 0;
+a_l = 0; a_r = 0;
+
+@slider
+hpf_freq = slider1;
+presence_gain = 10^(slider2/20);
+air_gain      = 10^(slider3/20);
+sat_amt       = slider4;
+mix           = slider5;
+
+hpf_wc = two_pi*hpf_freq/srate;
+hpf_alpha = hpf_wc/(hpf_wc+1);
+
+p_wc = two_pi*4000/srate;
+p_alpha = p_wc/(p_wc+1);
+
+a_wc = two_pi*10000/srate;
+a_alpha = a_wc/(a_wc+1);
+
+@sample
+in_l = spl0;
+in_r = spl1;
+
+yl = yl + hpf_alpha*(in_l-yl);
+yr = yr + hpf_alpha*(in_r-yr);
+l = in_l - yl;
+r = in_r - yr;
+
+p_l = p_l + p_alpha*(l-p_l);
+p_r = p_r + p_alpha*(r-p_r);
+
+a_l = a_l + a_alpha*(l-a_l);
+a_r = a_r + a_alpha*(r-a_r);
+
+l = l + (p_l-l)*(presence_gain-1);
+r = r + (p_r-r)*(presence_gain-1);
+
+l = l + (a_l-l)*(air_gain-1);
+r = r + (a_r-r)*(air_gain-1);
+
+l_sat = tanh(l*(1+sat_amt*4));
+r_sat = tanh(r*(1+sat_amt*4));
+
+spl0 = in_l*(1-mix) + l_sat*mix;
+spl1 = in_r*(1-mix) + r_sat*mix;

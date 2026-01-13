@@ -1,4 +1,5 @@
-desc: DF95 Dynamic Meter v1 (PeakNorm out)
+
+desc:IFLS Workbench - Dynamic Meter v1 (PeakNorm out)
 
 slider1:0<0,1,0.0001>PeakNorm (0..1)
 

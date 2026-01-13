@@ -50,15 +50,32 @@ if tb_num < 1 then tb_num = 1 end
 if tb_num > 16 then tb_num = 16 end
 
 local entries = {
+  {"JSFX Menu (DSP Tools)", "Scripts/IFLS_Workbench/Tools/JSFX/IFLS_Workbench_Menu_JSFX_DSP_Tools.lua", "IFLSWB_jsfx_menu"},
+  {"Insert JSFX: Dynamic Meter", "Scripts/IFLS_Workbench/Tools/JSFX/IFLS_Workbench_Insert_JSFX_ifls_workbench_dynamic_meter_v1_peaknorm_out.lua", "IFLSWB_jsfx_meter"},
+  {"Insert JSFX: Analyzer FFT", "Scripts/IFLS_Workbench/Tools/JSFX/IFLS_Workbench_Insert_JSFX_ifls_workbench_reampsuite_analyzer_fft.lua", "IFLSWB_jsfx_fft"},
+  {"Insert JSFX: Euclid Slicer", "Scripts/IFLS_Workbench/Tools/JSFX/IFLS_Workbench_Insert_JSFX_ifls_workbench_euclid_slicer_tempo_synced_euclidean_gate.lua", "IFLSWB_jsfx_euclid"},
+  {"Insert JSFX: IDM Chopper", "Scripts/IFLS_Workbench/Tools/JSFX/IFLS_Workbench_Insert_JSFX_ifls_workbench_idm_chopper_tempo_synced_gate.lua", "IFLSWB_jsfx_idm"},
+  {"Insert JSFX: Drone Granular", "Scripts/IFLS_Workbench/Tools/JSFX/IFLS_Workbench_Insert_JSFX_ifls_workbench_drone_granular_texture.lua", "IFLSWB_jsfx_drone"},
+
   {"Explode Fieldrec + MicFX + Buses", "Scripts/IFLS_Workbench/IFLS_Workbench_Explode_Fieldrec.lua", "IFLSWB_explode"},
   {"PolyWAV Toolbox (ImGui)",          "Scripts/IFLS_Workbench/IFLS_Workbench_PolyWAV_Toolbox.lua", "IFLSWB_polywav"},
-  {"Slice Smart (print bus -> slice)", "Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Smart_PrintBus_Then_Slice.lua", "IFLSWB_slicesmart"},
-  {"Slicing dropdown menu",            "Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Menu_Slicing_Dropdown.lua", "IFLSWB_slicemenu"},
-  {"Install helpers (register scripts)", "Scripts/IFLS_Workbench/IFLS_Workbench_Install_Toolbar.lua", "IFLSWB_install"},
-  {"Diagnostics",                      "Scripts/IFLS/IFLS_Diagnostics.lua", "IFLSWB_diag"},
-  {"Cleanup duplicates",               "Scripts/IFLS/IFLS_Cleanup_Duplicate_IFLS_Scripts.lua", "IFLSWB_cleanup"},
-}
 
+  {"Slicing dropdown menu",            "Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Menu_Slicing_Dropdown.lua", "IFLSWB_slice_menu"},
+  {"Smart Slice (PrintBus -> Slice)",  "Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Smart_PrintBus_Then_Slice.lua", "IFLSWB_smart_slice"},
+  {"SmartSlicing Mode Menu",           "Scripts/IFLS_Workbench/Tools/IFLS_Workbench_SmartSlicing_Mode_Menu.lua", "IFLSWB_smart_slicing_mode_menu"},
+  {"Slicing Control Panel (ReaImGui)", "Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Slicing_Control_Panel_ReaImGui.lua", "IFLSWB_slicing_control_panel"},
+
+  {"TailTrim selected slices",         "Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Slicing_TailTrim_SelectedItems.lua", "IFLSWB_tailtrim"},
+  {"Spread slices with gaps",          "Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Slicing_Spread_SelectedItems_With_Gaps.lua", "IFLSWB_spread_slices"},
+  {"Clickify (Clicks & Pops)",         "Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Slicing_Clickify_SelectedItems.lua", "IFLSWB_clickify"},
+  {"DroneChop (Drones)",               "Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Slicing_DroneChop_SelectedItems.lua", "IFLSWB_dronechop"},
+  {"Toggle ZeroCross",                 "Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_Toggle_ZeroCross.lua", "IFLSWB_toggle_zerocross"},
+  {"ZeroCross PostFix",                "Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_ZeroCross_PostFix.lua", "IFLSWB_zerocross_postfix"},
+
+  {"Install helpers (register scripts)", "Scripts/IFLS_Workbench/IFLS_Workbench_Install_Toolbar.lua", "IFLSWB_install"},
+  {"Diagnostics",                      "Scripts/IFLS_Workbench/Tools/Diagnostics/IFLS_Workbench_Diagnostics.lua", "IFLSWB_diag"},
+  {"Cleanup duplicates",               "Scripts/IFLS_Workbench/Tools/Diagnostics/IFLS_Workbench_Cleanup_Duplicate_Workbench_Scripts.lua", "IFLSWB_cleanup"},
+}
 
 -- Register scripts to Action List (main section = 0)
 local cmd_ids = {}

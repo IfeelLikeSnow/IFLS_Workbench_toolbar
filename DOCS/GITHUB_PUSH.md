@@ -1,4 +1,4 @@
-# GitHub Push Guide (IFLS Workbench Toolbar)
+# GitHub Push Guide (IFLS_Workbench Toolbar)
 
 ## 0) Prereqs
 - Install **Git**
@@ -26,7 +26,7 @@ Open a terminal in the repo root (`IFLS_Workbench_toolbar/`) and run:
 ```bash
 git init
 git add -A
-git commit -m "IFLS Workbench Toolbar v0.7.5"
+git commit -m "IFLS_Workbench Toolbar v0.7.5"
 git branch -M main
 git remote add origin https://github.com/<YOUR_USER>/<YOUR_REPO>.git
 git push -u origin main

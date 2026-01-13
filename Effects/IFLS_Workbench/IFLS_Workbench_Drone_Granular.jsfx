@@ -1,0 +1,147 @@
+desc:IFLS Workbench - Drone Granular Texture
+author:DF95
+version:1.0
+about:
+  Ein einfacher granularer Textur-Prozessor für Drones/Atmos.
+  Nutzt mehrere überlappende Grains aus einem zirkulären Buffer
+  mit Hann-Fenster, leichter Pitch-Randomisierung und Jitter.
+
+slider1:grain_len=0.150<0.020,0.800,0.005>Grain length (s)
+slider2:density=0.8<0.10,2.00,0.05>Grain density
+slider3:pitch_var=8<0,50,1>Pitch random (cents)
+slider4:jitter=0.10<0,0.50,0.01>Start jitter
+slider5:stereo_off=0.010<0,0.050,0.001>Stereo offset (s)
+slider6:fb=0.10<0,0.60,0.01>Feedback
+slider7:mix=0.65<0,1,0.01>Wet Mix
+
+@init
+  max_buf_s = 4.0; // max Buffer 4s
+  buf_sz = floor(srate*max_buf_s);
+  bufL_sz = buf_sz;
+  bufR_sz = buf_sz;
+  bufL_sz > 0 ? (
+    bufL_sz -= 1;
+    bufR_sz = bufL_sz;
+  );
+  grain_count = 4;
+
+  // Arrays für Grain-State
+  i = 0;
+  loop(grain_count,
+    g_phase[i] = 0;
+    g_len_spls[i] = 0;
+    g_rate[i] = 1;
+    g_pos[i] = 0;
+    g_on[i] = 0;
+    g_ch_off[i] = 0;
+    i += 1;
+  );
+
+  wpos = 0;
+
+@slider
+  grain_len_s = max(0.02, grain_len);
+  grain_len_spls = grain_len_s * srate;
+  density_clamped = max(0.05, density);
+  pitch_var_cents = pitch_var;
+  jitter_amt = jitter;
+  stereo_off_spls = stereo_off * srate;
+  fb_gain = fb;
+  mix_wet = mix;
+
+@sample
+  // Circular Buffer schreiben
+  bufL[wpos] = spl0 + bufL[wpos]*fb_gain;
+  bufR[wpos] = spl1 + bufR[wpos]*fb_gain;
+
+  // neue Grains zufällig triggern
+  // Wahrscheinlichkeit ~ density * (grain_len / Buffer-Länge)
+  prob = density_clamped * (grain_len_s / max_buf_s);
+  prob > 1 ? prob = 1;
+  rnd = rand(1);
+  (rnd < prob) ? (
+    // freien Grain-Slot suchen
+    gi = 0;
+    while(gi < grain_count && g_on[gi] == 1,
+      gi += 1;
+    );
+    gi < grain_count ? (
+      g_on[gi] = 1;
+      g_phase[gi] = 0;
+      g_len_spls[gi] = grain_len_spls;
+
+      // Startposition etwas in der Vergangenheit des Buffers
+      off_base = grain_len_spls;
+      off_jit = (rand(2)-1)*jitter_amt*grain_len_spls;
+      start_pos = wpos - off_base + off_jit;
+      while(start_pos < 0) start_pos += bufL_sz;
+      while(start_pos > bufL_sz) start_pos -= bufL_sz;
+      g_pos[gi] = start_pos;
+
+      // Pitch als Playrate
+      detune_cents = (rand(2)-1)*pitch_var_cents;
+      g_rate[gi] = 2^(detune_cents/1200);
+
+      // Stereo-Offset
+      g_ch_off[gi] = (rand(2)-1)*stereo_off_spls;
+    );
+  );
+
+  // Grains berechnen
+  outL = 0;
+  outR = 0;
+
+  gi = 0;
+  loop(grain_count,
+    g_on[gi] == 1 ? (
+      ph = g_phase[gi];
+      len_s = g_len_spls[gi];
+
+      ph >= len_s ? (
+        g_on[gi] = 0;
+      ) : (
+        // Hann-Fenster
+        env = 0.5 - 0.5*cos(2*$pi*ph/len_s);
+
+        // Lesepositionen (L/R) im Buffer
+        posL = g_pos[gi] + ph*g_rate[gi];
+        posR = posL + g_ch_off[gi];
+
+        // Wrap
+        while(posL < 0) posL += bufL_sz;
+        while(posL > bufL_sz) posL -= bufL_sz;
+        while(posR < 0) posR += bufR_sz;
+        while(posR > bufR_sz) posR -= bufR_sz;
+
+        // Linear-Interpolation
+        idxL = floor(posL);
+        fracL = posL - idxL;
+        idxL1 = (idxL+1);
+        idxL1 > bufL_sz ? idxL1 -= bufL_sz;
+
+        idxR = floor(posR);
+        fracR = posR - idxR;
+        idxR1 = (idxR+1);
+        idxR1 > bufR_sz ? idxR1 -= bufR_sz;
+
+        sL = bufL[idxL] + (bufL[idxL1]-bufL[idxL])*fracL;
+        sR = bufR[idxR] + (bufR[idxR1]-bufR[idxR])*fracR;
+
+        outL += sL*env;
+        outR += sR*env;
+
+        g_phase[gi] += 1;
+      );
+    );
+    gi += 1;
+  );
+
+  dryL = spl0;
+  dryR = spl1;
+
+  spl0 = dryL*(1-mix_wet) + outL*mix_wet;
+  spl1 = dryR*(1-mix_wet) + outR*mix_wet;
+
+  // Writepos inkrementieren
+  wpos += 1;
+  wpos > bufL_sz ? wpos = 0;

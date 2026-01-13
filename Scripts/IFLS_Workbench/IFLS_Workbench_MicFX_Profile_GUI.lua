@@ -4,7 +4,7 @@
 -- @about
 --   Kleine GUI zum Laden von MicFX‑Profilen.
 --   Erwartet .fxlist‑Dateien unter Scripts/IFLS/MicFX
---   sowie optionale META‑Tags in FXChains/IFLS Workbench/Mic/*.rfxchain.
+--   sowie optionale META‑Tags in FXChains/IFLS_Workbench/Mic/*.rfxchain.
 --
 --   Workflow:
 --     1. Mic auswählen (z.B. B1, NTG4+, XM8500, Geofon, Ether ...).

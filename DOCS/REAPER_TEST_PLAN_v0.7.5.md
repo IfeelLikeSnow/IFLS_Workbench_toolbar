@@ -1,4 +1,4 @@
-# REAPER Test Plan (v0.7.5)
+# REAPER Test Plan (v0.7.8)
 
 ## 1) Prereqs
 - Install **ReaPack**

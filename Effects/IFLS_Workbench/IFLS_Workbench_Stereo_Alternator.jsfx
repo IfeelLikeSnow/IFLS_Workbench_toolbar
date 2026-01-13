@@ -1,0 +1,43 @@
+desc:IFLS Workbench - Stereo Alternator (tempo-synced L/R switcher)
+author: DF95
+version: 1.0
+
+slider1:8<1,32,1>Note division (1/x)
+slider2:0.1<0,1,0.01>Smoothing
+slider3:0<0,1,1>Invert phase L/R
+slider4:1<0,1,1>Randomize on play
+
+@init
+phase = 0;
+env = 1;
+last_state = -1;
+
+@slider
+div      = slider1|0;
+smooth   = slider2;
+invert   = slider3|0;
+rand_on  = slider4|0;
+
+@block
+bpm = tempo > 0 ? tempo : 120;
+step_hz = (bpm/60) * div;
+
+(play_state != last_state && play_state == 1 && rand_on) ? (
+  phase = rand(1);
+);
+last_state = play_state;
+
+@sample
+phase += step_hz / srate;
+phase >= 1 ? phase -= 1;
+
+env_target = (phase < 0.5) ? 1 : -1;
+invert ? env_target = -env_target;
+
+env += (env_target - env) * (1 - smooth);
+
+l_gain = (env > 0) ? 1 : 0.2;
+r_gain = (env < 0) ? 1 : 0.2;
+
+spl0 *= l_gain;
+spl1 *= r_gain;

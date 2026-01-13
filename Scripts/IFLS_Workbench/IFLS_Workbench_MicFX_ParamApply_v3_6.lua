@@ -85,7 +85,7 @@ r.UpdateArrange()
 
 -- DF95 ParamMap loader
 local function load_param_maps()
-  local p = reaper.GetResourcePath() .. "/Data/IFLS Workbench/DF95_ParamMaps_AO_AW.json"
+  local p = reaper.GetResourcePath() .. "/Data/IFLS_Workbench/IFLS_Workbench_ParamMaps_AO_AW.json"
   local f = io.open(p,"rb"); if not f then return nil end
   local d = f:read("*all"); f:close()
   if reaper.JSON_Decode then return reaper.JSON_Decode(d) end
