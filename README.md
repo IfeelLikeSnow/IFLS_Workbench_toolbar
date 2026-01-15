@@ -16,9 +16,20 @@ ReaPack repository for IFLS Workbench.
 4. Synchronize packages, then install **IFLS Workbench (bundle)**.
 
 ## Install (manual ZIP)
-- Unzip this repository into:
-  `C:\Users\<YOU>\AppData\Roaming\REAPER\`
-  so that you get folders like `Scripts/IFLS_Workbench/...` and `Data/toolbar_icons/...`.
+1. In REAPER: **Options → Show REAPER resource path in explorer/finder…**
+2. Unzip the ZIP **into that resource folder** (the folder that already contains `Scripts/`, `Effects/`, `Data/`, `FXChains/` …).
+   - **DO NOT unzip into `Scripts/`** (that creates a nested/duplicated folder structure and breaks paths).
+3. After unzip you should have (examples):
+   - `<ResourcePath>/Scripts/IFLS_Workbench/...`
+   - `<ResourcePath>/Effects/IFLS_Workbench/...`
+   - `<ResourcePath>/Data/toolbar_icons/...`
+
+If you accidentally ended up with something like:
+`<ResourcePath>/Scripts/IFLS Workbench Toolbar/IFLS Workbench/...`
+
+Run the repair script:
+`Scripts/IFLS_Workbench/Tools/Diagnostics/IFLS_Workbench_InstallDoctor_Fix_Nested_Folders.lua`
+(merges everything back to the correct locations and offers to rename the bad folder).
 
 ## Toolbar + icons
 - Run: `Scripts/IFLS_Workbench/IFLS_Workbench_Install_Toolbar.lua`

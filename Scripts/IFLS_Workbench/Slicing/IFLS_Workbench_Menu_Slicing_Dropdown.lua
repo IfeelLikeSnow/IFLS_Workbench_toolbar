@@ -52,9 +52,9 @@ end
 
 -- discover slicing roots
 local roots = {
-  res..sep.."FXChains"..sep.."IFLS Workbench"..sep.."Slicing_IDM",
-  res..sep.."FXChains"..sep.."IFLS Workbench"..sep.."Slicing_Euclid",
-  res..sep.."FXChains"..sep.."IFLS Workbench"..sep.."Slicing_Artists_Granular"
+  res..sep.."FXChains"..sep.."IFLS_Workbench"..sep.."Slicing_IDM",
+  res..sep.."FXChains"..sep.."IFLS_Workbench"..sep.."Slicing_Euclid",
+  res..sep.."FXChains"..sep.."IFLS_Workbench"..sep.."Slicing_Artists_Granular"
 }
 
 local cats = {}

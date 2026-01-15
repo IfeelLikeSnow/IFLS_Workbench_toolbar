@@ -82,6 +82,22 @@ Next:
 - Actions > Show action list... and search for "IFLS".
 - Add the scripts to a toolbar via: right-click toolbar > Customize... > Add.]], added, total)
 
+
+-- Try to install FXChains/MenuSets assets from the Data cache (ReaPack "Assets" package).
+do
+  local assets = r.GetResourcePath() .. "/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Install_Assets_From_Data.lua"
+  local f = io.open(assets, "rb")
+  if f then
+    f:close()
+    IFLSWB_ASSETS_DO_NOT_AUTORUN = true
+    pcall(dofile, assets)
+    if type(IFLSWB_InstallAssetsFromData) == "function" then
+      pcall(IFLSWB_InstallAssetsFromData, {silent=true})
+    end
+    IFLSWB_ASSETS_DO_NOT_AUTORUN = nil
+  end
+end
+
 local ret = r.ShowMessageBox(info .. "\n\nGenerate a Floating Toolbar import file now?", "IFLS Workbench", 4)
 if r.ShowActionList then r.ShowActionList() end
 
