@@ -1,5 +1,65 @@
-<?xml version='1.0' encoding='utf-8'?>
-<index version="1" name="IFLS_Workbench">
+<?xml version="1.0" encoding="utf-8"?>
+<index version="1" name="IFLS_Workbench" commit="621308a62e8d77cd2c520d502412e2b91874f15b">
+  <category name="Assets">
+    <reapack name="IFLS Workbench Assets (FXChains + MenuSets)" type="data" desc="Installs FXChains/MenuSets into Data cache; run 'IFLS Workbench: Install Assets' to copy them to ResourcePath.">
+      <version name="0.7.13" author="IfeelLikeSnow" time="2026-01-17T12:00:00Z">
+        <source file="../_assets/FXChains/IFLS_Workbench/Mic/DF95_Mic_Fallback_Clean.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/DF95_Mic_Fallback_Clean.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_B1_Mono.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_B1_Mono.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_C2_Mono.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_C2_Mono.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_C2_Stereo.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_C2_Stereo.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_CM300_Mono.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_CM300_Mono.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_CM300_Stereo.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_CM300_Stereo.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_Cortado_Mono.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_Cortado_Mono.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_Cortado_Stereo.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_Cortado_Stereo.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_DF95_Mic_Fallback_Clean.RfxChain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_DF95_Mic_Fallback_Clean.RfxChain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_Ether_Mono.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_Ether_Mono.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_Geofon_Mono.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_Geofon_Mono.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_MCM_Telecoil_Mono.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_MCM_Telecoil_Mono.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_MCM_Telecoil_Stereo.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_MCM_Telecoil_Stereo.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_MD400_Mono.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_MD400_Mono.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_Mono_Outdoor_WindSafe.RfxChain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_Mono_Outdoor_WindSafe.RfxChain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_NTG4Plus_Mono.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_NTG4Plus_Mono.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_Stereo_Pair_Safe.RfxChain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_Stereo_Pair_Safe.RfxChain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_TGV35s_Mono.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_TGV35s_Mono.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_XM8500_Mono.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_XM8500_Mono.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mono_Outdoor_WindSafe.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mono_Outdoor_WindSafe.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Stereo_Pair_Safe.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Stereo_Pair_Safe.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_AphexTwin_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_AphexTwin_Granular_Medium_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Apparat_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Apparat_Granular_Medium_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Arovane_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Arovane_Granular_Medium_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Autechre_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Autechre_Granular_Medium_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_BoC_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_BoC_Granular_Medium_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Bogdan_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Bogdan_Granular_Medium_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_FlyingLotus_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_FlyingLotus_Granular_Medium_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_JanJelinek_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_JanJelinek_Granular_Medium_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Jega_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Jega_Granular_Medium_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Monoceros_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Monoceros_Granular_Medium_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_MouseOnMars_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_MouseOnMars_Granular_Medium_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Plaid_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Plaid_Granular_Medium_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Proem_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Proem_Granular_Medium_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Squarepusher_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Squarepusher_Granular_Medium_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Styrofoam_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Styrofoam_Granular_Medium_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_TelefonTelAviv_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_TelefonTelAviv_Granular_Medium_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_ThomYorke_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_ThomYorke_Granular_Medium_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E3_8_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E3_8_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E4_12_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E4_12_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E5_12_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E5_12_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E5_16_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E5_16_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E5_8_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E5_8_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E7_12_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E7_12_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E7_16_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E7_16_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E9_16_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E9_16_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_IDM/Slicing_IDM_ClicksPops_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_IDM/Slicing_IDM_ClicksPops_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_IDM/Slicing_IDM_GlitchGrains_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_IDM/Slicing_IDM_GlitchGrains_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_IDM/Slicing_IDM_Hats_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_IDM/Slicing_IDM_Hats_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_IDM/Slicing_IDM_Kicks_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_IDM/Slicing_IDM_Kicks_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_IDM/Slicing_IDM_MicroPerc_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_IDM/Slicing_IDM_MicroPerc_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_IDM/Slicing_IDM_NoiseBursts_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_IDM/Slicing_IDM_NoiseBursts_01.rfxchain</source>
+        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_IDM/Slicing_IDM_Snares_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_IDM/Slicing_IDM_Snares_01.rfxchain</source>
+        <source file="../_assets/MenuSets/IFLS_Workbench_TB16.ReaperMenu">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/MenuSets/IFLS_Workbench_TB16.ReaperMenu</source>
+      </version>
+    </reapack>
+  </category>
   <category name="Core">
     <reapack name="IFLS Workbench (bundle)" type="script" desc="Core Workbench scripts (install + slicing + micfx + tools).">
       <version name="0.7.13" author="IfeelLikeSnow" time="2026-01-17T12:00:00Z">
@@ -64,29 +124,6 @@
       </version>
     </reapack>
   </category>
-
-  <category name="JSFX (DSP)">
-    <reapack name="IFLS Workbench JSFX (DSP pack)" type="effect" desc="Drone/Granular, Euclid slicer, IDM chopper, meters/analyzer, MIDI utilities.">
-      <version name="0.7.13" author="IfeelLikeSnow" time="2026-01-17T12:00:00Z">
-        <source file="../IFLS_Workbench_Drone_Granular.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_Drone_Granular.jsfx</source>
-        <source file="../IFLS_Workbench_Drum_RR_Velocity_Mapper_Phase112.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_Drum_RR_Velocity_Mapper_Phase112.jsfx</source>
-        <source file="../IFLS_Workbench_Dynamic_Meter_v1.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_Dynamic_Meter_v1.jsfx</source>
-        <source file="../IFLS_Workbench_Euclid_Slicer.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_Euclid_Slicer.jsfx</source>
-        <source file="../IFLS_Workbench_Granular_Hold.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_Granular_Hold.jsfx</source>
-        <source file="../IFLS_Workbench_IDM_Chopper.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_IDM_Chopper.jsfx</source>
-        <source file="../IFLS_Workbench_IDM_ClicksPops_BusTone.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_IDM_ClicksPops_BusTone.jsfx</source>
-        <source file="../IFLS_Workbench_IDM_Hats_BusTone.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_IDM_Hats_BusTone.jsfx</source>
-        <source file="../IFLS_Workbench_IDM_Kick_BusTone.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_IDM_Kick_BusTone.jsfx</source>
-        <source file="../IFLS_Workbench_IDM_MicroPerc_BusTone.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_IDM_MicroPerc_BusTone.jsfx</source>
-        <source file="../IFLS_Workbench_IDM_Snare_BusTone.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_IDM_Snare_BusTone.jsfx</source>
-        <source file="../IFLS_Workbench_MIDIProcessor.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_MIDIProcessor.jsfx</source>
-        <source file="../IFLS_Workbench_ReampSuite_Analyzer_FFT.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_ReampSuite_Analyzer_FFT.jsfx</source>
-        <source file="../IFLS_Workbench_RoundRobin_NoteChannelCycler.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_RoundRobin_NoteChannelCycler.jsfx</source>
-        <source file="../IFLS_Workbench_Stereo_Alternator.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_Stereo_Alternator.jsfx</source>
-      </version>
-    </reapack>
-  </category>
-
   <category name="Data + Icons">
     <reapack name="IFLS Workbench Data (profiles + toolbar_icons)" type="data" desc="JSON profiles + toolbar icons (installs to Data/IFLS_Workbench and Data/toolbar_icons).">
       <version name="0.7.13" author="IfeelLikeSnow" time="2026-01-17T12:00:00Z">
@@ -118,64 +155,805 @@
       </version>
     </reapack>
   </category>
-
-  <category name="Assets">
-    <reapack name="IFLS Workbench Assets (FXChains + MenuSets)" type="data" desc="Installs FXChains/MenuSets into Data cache; run 'IFLS Workbench: Install Assets' to copy them to ResourcePath.">
+  <category name="Effects/IFLS_Workbench">
+    <reapack name="IFLS_Workbench_Drone_Granular.jsfx" type="effect" desc="IFLS_Workbench_Drone_Granular.jsfx">
+      <version name="1.0" author="DF95" time="2026-01-13T21:00:15Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Effects/IFLS_Workbench/IFLS_Workbench_Drone_Granular.jsfx</source>
+      </version>
+      <version name="0.0.1" time="2026-01-17T15:12:30Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Effects/IFLS_Workbench/IFLS_Workbench_Drone_Granular.jsfx</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Drum_RR_Velocity_Mapper_Phase112.jsfx" type="effect">
+      <version name="0.0.1" time="2026-01-17T15:12:30Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Effects/IFLS_Workbench/IFLS_Workbench_Drum_RR_Velocity_Mapper_Phase112.jsfx</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Dynamic_Meter_v1.jsfx" type="effect">
+      <version name="0.0.1" time="2026-01-17T15:12:30Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Effects/IFLS_Workbench/IFLS_Workbench_Dynamic_Meter_v1.jsfx</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Euclid_Slicer.jsfx" type="effect" desc="IFLS_Workbench_Euclid_Slicer.jsfx">
+      <version name="1.0" author="DF95" time="2026-01-13T21:00:15Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Effects/IFLS_Workbench/IFLS_Workbench_Euclid_Slicer.jsfx</source>
+      </version>
+      <version name="0.0.1" time="2026-01-17T15:12:30Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Effects/IFLS_Workbench/IFLS_Workbench_Euclid_Slicer.jsfx</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Granular_Hold.jsfx" type="effect" desc="IFLS_Workbench_Granular_Hold.jsfx">
+      <version name="1.0" author="DF95" time="2026-01-13T21:00:15Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Effects/IFLS_Workbench/IFLS_Workbench_Granular_Hold.jsfx</source>
+      </version>
+      <version name="0.0.1" time="2026-01-17T15:12:30Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Effects/IFLS_Workbench/IFLS_Workbench_Granular_Hold.jsfx</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_IDM_Chopper.jsfx" type="effect" desc="IFLS_Workbench_IDM_Chopper.jsfx">
+      <version name="1.0" author="DF95" time="2026-01-13T21:00:15Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Effects/IFLS_Workbench/IFLS_Workbench_IDM_Chopper.jsfx</source>
+      </version>
+      <version name="0.0.1" time="2026-01-17T15:12:30Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Effects/IFLS_Workbench/IFLS_Workbench_IDM_Chopper.jsfx</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_IDM_ClicksPops_BusTone.jsfx" type="effect" desc="IFLS_Workbench_IDM_ClicksPops_BusTone.jsfx">
+      <version name="1.0" author="DF95" time="2026-01-13T21:00:15Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Effects/IFLS_Workbench/IFLS_Workbench_IDM_ClicksPops_BusTone.jsfx</source>
+      </version>
+      <version name="0.0.1" time="2026-01-17T15:12:30Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Effects/IFLS_Workbench/IFLS_Workbench_IDM_ClicksPops_BusTone.jsfx</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_IDM_Hats_BusTone.jsfx" type="effect" desc="IFLS_Workbench_IDM_Hats_BusTone.jsfx">
+      <version name="1.0" author="DF95" time="2026-01-13T21:00:15Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Effects/IFLS_Workbench/IFLS_Workbench_IDM_Hats_BusTone.jsfx</source>
+      </version>
+      <version name="0.0.1" time="2026-01-17T15:12:30Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Effects/IFLS_Workbench/IFLS_Workbench_IDM_Hats_BusTone.jsfx</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_IDM_Kick_BusTone.jsfx" type="effect" desc="IFLS_Workbench_IDM_Kick_BusTone.jsfx">
+      <version name="1.0" author="DF95" time="2026-01-13T21:00:15Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Effects/IFLS_Workbench/IFLS_Workbench_IDM_Kick_BusTone.jsfx</source>
+      </version>
+      <version name="0.0.1" time="2026-01-17T15:12:30Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Effects/IFLS_Workbench/IFLS_Workbench_IDM_Kick_BusTone.jsfx</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_IDM_MicroPerc_BusTone.jsfx" type="effect" desc="IFLS_Workbench_IDM_MicroPerc_BusTone.jsfx">
+      <version name="1.0" author="DF95" time="2026-01-13T21:00:15Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Effects/IFLS_Workbench/IFLS_Workbench_IDM_MicroPerc_BusTone.jsfx</source>
+      </version>
+      <version name="0.0.1" time="2026-01-17T15:12:30Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Effects/IFLS_Workbench/IFLS_Workbench_IDM_MicroPerc_BusTone.jsfx</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_IDM_Snare_BusTone.jsfx" type="effect" desc="IFLS_Workbench_IDM_Snare_BusTone.jsfx">
+      <version name="1.0" author="DF95" time="2026-01-13T21:00:15Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Effects/IFLS_Workbench/IFLS_Workbench_IDM_Snare_BusTone.jsfx</source>
+      </version>
+      <version name="0.0.1" time="2026-01-17T15:12:30Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Effects/IFLS_Workbench/IFLS_Workbench_IDM_Snare_BusTone.jsfx</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_MIDIProcessor.jsfx" type="effect">
+      <version name="0.0.1" time="2026-01-17T15:12:30Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Effects/IFLS_Workbench/IFLS_Workbench_MIDIProcessor.jsfx</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_ReampSuite_Analyzer_FFT.jsfx" type="effect" desc="IFLS_Workbench_ReampSuite_Analyzer_FFT.jsfx">
+      <version name="0.0.1" time="2026-01-17T15:12:30Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Effects/IFLS_Workbench/IFLS_Workbench_ReampSuite_Analyzer_FFT.jsfx</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_RoundRobin_NoteChannelCycler.jsfx" type="effect" desc="IFLS_Workbench_RoundRobin_NoteChannelCycler.jsfx">
+      <version name="1.1" author="DF95" time="2026-01-13T21:00:15Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Effects/IFLS_Workbench/IFLS_Workbench_RoundRobin_NoteChannelCycler.jsfx</source>
+      </version>
+      <version name="0.0.1" time="2026-01-17T15:12:30Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Effects/IFLS_Workbench/IFLS_Workbench_RoundRobin_NoteChannelCycler.jsfx</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Stereo_Alternator.jsfx" type="effect" desc="IFLS_Workbench_Stereo_Alternator.jsfx">
+      <version name="1.0" author="DF95" time="2026-01-13T21:00:15Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Effects/IFLS_Workbench/IFLS_Workbench_Stereo_Alternator.jsfx</source>
+      </version>
+      <version name="0.0.1" time="2026-01-17T15:12:30Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Effects/IFLS_Workbench/IFLS_Workbench_Stereo_Alternator.jsfx</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="JSFX (DSP)">
+    <reapack name="IFLS Workbench JSFX (DSP pack)" type="effect" desc="Drone/Granular, Euclid slicer, IDM chopper, meters/analyzer, MIDI utilities.">
       <version name="0.7.13" author="IfeelLikeSnow" time="2026-01-17T12:00:00Z">
-        <source file="../_assets/FXChains/IFLS_Workbench/Mic/DF95_Mic_Fallback_Clean.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/DF95_Mic_Fallback_Clean.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_B1_Mono.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_B1_Mono.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_C2_Mono.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_C2_Mono.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_C2_Stereo.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_C2_Stereo.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_CM300_Mono.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_CM300_Mono.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_CM300_Stereo.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_CM300_Stereo.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_Cortado_Mono.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_Cortado_Mono.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_Cortado_Stereo.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_Cortado_Stereo.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_DF95_Mic_Fallback_Clean.RfxChain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_DF95_Mic_Fallback_Clean.RfxChain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_Ether_Mono.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_Ether_Mono.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_Geofon_Mono.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_Geofon_Mono.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_MCM_Telecoil_Mono.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_MCM_Telecoil_Mono.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_MCM_Telecoil_Stereo.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_MCM_Telecoil_Stereo.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_MD400_Mono.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_MD400_Mono.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_Mono_Outdoor_WindSafe.RfxChain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_Mono_Outdoor_WindSafe.RfxChain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_NTG4Plus_Mono.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_NTG4Plus_Mono.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_Stereo_Pair_Safe.RfxChain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_Stereo_Pair_Safe.RfxChain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_TGV35s_Mono.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_TGV35s_Mono.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mic_XM8500_Mono.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mic_XM8500_Mono.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Mono_Outdoor_WindSafe.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Mono_Outdoor_WindSafe.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Mic/Stereo_Pair_Safe.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Mic/Stereo_Pair_Safe.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_AphexTwin_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_AphexTwin_Granular_Medium_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Apparat_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Apparat_Granular_Medium_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Arovane_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Arovane_Granular_Medium_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Autechre_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Autechre_Granular_Medium_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_BoC_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_BoC_Granular_Medium_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Bogdan_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Bogdan_Granular_Medium_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_FlyingLotus_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_FlyingLotus_Granular_Medium_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_JanJelinek_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_JanJelinek_Granular_Medium_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Jega_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Jega_Granular_Medium_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Monoceros_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Monoceros_Granular_Medium_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_MouseOnMars_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_MouseOnMars_Granular_Medium_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Plaid_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Plaid_Granular_Medium_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Proem_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Proem_Granular_Medium_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Squarepusher_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Squarepusher_Granular_Medium_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Styrofoam_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_Styrofoam_Granular_Medium_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_TelefonTelAviv_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_TelefonTelAviv_Granular_Medium_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_ThomYorke_Granular_Medium_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Artists_Granular/Slicing_ThomYorke_Granular_Medium_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E3_8_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E3_8_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E4_12_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E4_12_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E5_12_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E5_12_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E5_16_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E5_16_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E5_8_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E5_8_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E7_12_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E7_12_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E7_16_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E7_16_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E9_16_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_Euclid/Slicing_Euclid_E9_16_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_IDM/Slicing_IDM_ClicksPops_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_IDM/Slicing_IDM_ClicksPops_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_IDM/Slicing_IDM_GlitchGrains_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_IDM/Slicing_IDM_GlitchGrains_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_IDM/Slicing_IDM_Hats_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_IDM/Slicing_IDM_Hats_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_IDM/Slicing_IDM_Kicks_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_IDM/Slicing_IDM_Kicks_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_IDM/Slicing_IDM_MicroPerc_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_IDM/Slicing_IDM_MicroPerc_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_IDM/Slicing_IDM_NoiseBursts_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_IDM/Slicing_IDM_NoiseBursts_01.rfxchain</source>
-        <source file="../_assets/FXChains/IFLS_Workbench/Slicing_IDM/Slicing_IDM_Snares_01.rfxchain">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/FXChains/IFLS_Workbench/Slicing_IDM/Slicing_IDM_Snares_01.rfxchain</source>
-        <source file="../_assets/MenuSets/IFLS_Workbench_TB16.ReaperMenu">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/MenuSets/IFLS_Workbench_TB16.ReaperMenu</source>
+        <source file="../IFLS_Workbench_Drone_Granular.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_Drone_Granular.jsfx</source>
+        <source file="../IFLS_Workbench_Drum_RR_Velocity_Mapper_Phase112.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_Drum_RR_Velocity_Mapper_Phase112.jsfx</source>
+        <source file="../IFLS_Workbench_Dynamic_Meter_v1.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_Dynamic_Meter_v1.jsfx</source>
+        <source file="../IFLS_Workbench_Euclid_Slicer.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_Euclid_Slicer.jsfx</source>
+        <source file="../IFLS_Workbench_Granular_Hold.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_Granular_Hold.jsfx</source>
+        <source file="../IFLS_Workbench_IDM_Chopper.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_IDM_Chopper.jsfx</source>
+        <source file="../IFLS_Workbench_IDM_ClicksPops_BusTone.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_IDM_ClicksPops_BusTone.jsfx</source>
+        <source file="../IFLS_Workbench_IDM_Hats_BusTone.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_IDM_Hats_BusTone.jsfx</source>
+        <source file="../IFLS_Workbench_IDM_Kick_BusTone.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_IDM_Kick_BusTone.jsfx</source>
+        <source file="../IFLS_Workbench_IDM_MicroPerc_BusTone.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_IDM_MicroPerc_BusTone.jsfx</source>
+        <source file="../IFLS_Workbench_IDM_Snare_BusTone.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_IDM_Snare_BusTone.jsfx</source>
+        <source file="../IFLS_Workbench_MIDIProcessor.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_MIDIProcessor.jsfx</source>
+        <source file="../IFLS_Workbench_ReampSuite_Analyzer_FFT.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_ReampSuite_Analyzer_FFT.jsfx</source>
+        <source file="../IFLS_Workbench_RoundRobin_NoteChannelCycler.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_RoundRobin_NoteChannelCycler.jsfx</source>
+        <source file="../IFLS_Workbench_Stereo_Alternator.jsfx">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_Workbench_toolbar/main/Effects/IFLS_Workbench/IFLS_Workbench_Stereo_Alternator.jsfx</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="Scripts/IFLS">
+    <reapack name="IFLS_Cleanup_Duplicate_IFLS_Scripts.lua" type="script" desc="IFLS (compat stub): IFLS_Cleanup_Duplicate_IFLS_Scripts.lua -&gt; IFLS_Workbench_Cleanup_Duplicate_Workbench_Scripts.lua">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Compatibility wrapper. Use the IFLS_Workbench version going forward.\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.1" author="I feel like snow" time="2026-01-12T21:17:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/d3157be310a6e3e08780a2ae37841dee0e8c2d24/Scripts/IFLS/IFLS_Cleanup_Duplicate_IFLS_Scripts.lua</source>
+      </version>
+      <version name="0.7.8" author="IFLS" time="2026-01-13T21:00:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Scripts/IFLS/IFLS_Cleanup_Duplicate_IFLS_Scripts.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Diagnostics.lua" type="script" desc="IFLS (compat stub): IFLS_Diagnostics.lua -&gt; IFLS_Workbench_Diagnostics.lua">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Compatibility wrapper. Use the IFLS_Workbench version going forward.\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.1" author="I feel like snow" time="2026-01-12T21:17:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/d3157be310a6e3e08780a2ae37841dee0e8c2d24/Scripts/IFLS/IFLS_Diagnostics.lua</source>
+      </version>
+      <version name="0.7.8" author="IFLS" time="2026-01-13T21:00:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Scripts/IFLS/IFLS_Diagnostics.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="Scripts/IFLS_Workbench">
+    <reapack name="IFLS_Workbench_Apply_MicFX_ByTrackName_v2.lua" type="script" desc="IFLS Workbench: Apply MicFX By TrackName v2 (default profile)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Scans selected tracks, detects mic keyword from track name, applies default MicFX chain (Gain + ReaEQ + ReaComp + optional ReaFIR/Meter).\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.1.0" author="IFLS (ported from DF95)" time="2026-01-12T21:17:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/d3157be310a6e3e08780a2ae37841dee0e8c2d24/Scripts/IFLS_Workbench/IFLS_Workbench_Apply_MicFX_ByTrackName_v2.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Explode_AutoBus_Smart_Route.lua" type="script" desc="IFLS Workbench: Explode AutoBus Smart + Route (FX/Color/Master)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Stellt sicher, dass IFLSWB FX/Coloring/Master-Busse existieren, explodiert bei Bedarf Polywav/Multichannel-Items zu Einzelspuren und richtet anschlie\u195 ?\u376 ?end ein Basis-Routing ein:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab alle Quelltracks -> FX Bus (Send, Post-Fader, 0 dB)\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab FX Bus -> Coloring Bus\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Coloring Bus -> Master Bus Optional k\u195 ?\u182 ?nnen Master/FX/Coloring-Selector-Actions ausgef\u195 ?\u188 ?hrt werden.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="I feel like snow (based on IFLSWB)" time="2026-01-12T21:17:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/d3157be310a6e3e08780a2ae37841dee0e8c2d24/Scripts/IFLS_Workbench/IFLS_Workbench_Explode_AutoBus_Smart_Route.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Explode_Fieldrec.lua" type="script" desc="IFLS Workbench: Explode Fieldrec + Mic FX + Buses">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Select imported polywav/multichannel (or single wav) items and run:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Explode multichannel items to one-channel items (tries common command IDs)\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Create routing: Mic Tracks -> FX BUS -> COLOR BUS -> MASTER BUS\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Apply basic mic cleanup (ReaEQ HPF + optional presence band) based on track name matching.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.1.3" author="I feel like snow" time="2026-01-12T21:17:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/d3157be310a6e3e08780a2ae37841dee0e8c2d24/Scripts/IFLS_Workbench/IFLS_Workbench_Explode_Fieldrec.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Install_Toolbar.lua" type="script" desc="IFLS Workbench: Install helpers (register scripts + open Action List / generate toolbar file)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Convenience helper after installing via ReaPack/ZIP:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 1)\tx360\tab Registers IFLS Workbench scripts into the Action List.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 2)\tx360\tab Opens the Action List (so you can search/add to toolbars).\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 3)\tx360\tab Optional: generate a Floating Toolbar import file (.ReaperMenu).\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.2" author="I feel like snow" time="2026-01-17T15:12:30Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Scripts/IFLS_Workbench/IFLS_Workbench_Install_Toolbar.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_MicFX_ParamApply_v3_6.lua" type="script" desc="IFLS Workbench - MicFX ParamApply v3.6 (LiveAware â€“ JSFX Meter, Drive &amp; Comp Bias)">
+      <version name="0.1.0" time="2026-01-12T21:17:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/d3157be310a6e3e08780a2ae37841dee0e8c2d24/Scripts/IFLS_Workbench/IFLS_Workbench_MicFX_ParamApply_v3_6.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_MicFX_Profile_GUI.lua" type="script" desc="IFLS Workbench - MicFX Profile GUI (FXChain-aware .fxlist loader)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Kleine GUI zum Laden von MicFX\u226 ?\u8364 ?\u8216'Profilen. Erwartet .fxlist\u226 ?\u8364 ?\u8216'Dateien unter Scripts/IFLS/MicFX sowie optionale META\u226 ?\u8364 ?\u8216'Tags in FXChains/IFLS_Workbench/Mic/*.rfxchain.\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.1.0" author="IFLS (ported from DF95)" time="2026-01-12T21:17:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/d3157be310a6e3e08780a2ae37841dee0e8c2d24/Scripts/IFLS_Workbench/IFLS_Workbench_MicFX_Profile_GUI.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_PolyWAV_Toolbox.lua" type="script">
+      <version name="0.0.1" time="2026-01-17T15:12:30Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Scripts/IFLS_Workbench/IFLS_Workbench_PolyWAV_Toolbox.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Toolbar_Generate_ReaperMenu.lua" type="script" desc="IFLS Workbench: Generate toolbar .ReaperMenu (floating toolbar import file)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Creates a ready-to-import .ReaperMenu file for a Floating Toolbar (1-16). This avoids the "custom script command IDs differ per install" problem by:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab registering the scripts into your Action List (AddRemoveReaScript),\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab writing the toolbar file using the returned command ID numbers.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.3" author="I feel like snow" time="2026-01-12T21:17:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/d3157be310a6e3e08780a2ae37841dee0e8c2d24/Scripts/IFLS_Workbench/IFLS_Workbench_Toolbar_Generate_ReaperMenu.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="Scripts/IFLS_Workbench/Slicing">
+    <reapack name="IFLS_Workbench_Menu_Slicing_Dropdown.lua" type="script">
+      <version name="0.7.6" author="IFLS / DF95" time="2026-01-13T12:30:57Z">
+        <changelog><![CDATA[+ Fix: GetMousePosition() only returns (x,y) -> menu now opens at the correct mouse position
++ Improvement: auto-detect all FXChain folders starting with 'Slicing_' (no hard-coded list)
++ Improvement: remember last chosen FadeShape, Auto uses it
++ Safety: only runs ZeroCross post-fix when items are selected]]></changelog>
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/20b3d009f88765f7fe1ede98697f1845242906ac/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Menu_Slicing_Dropdown.lua</source>
+      </version>
+      <version name="0.0.1" time="2026-01-17T15:12:30Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Menu_Slicing_Dropdown.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Slice_Direct.lua" type="script" desc="IFLS Workbench: Slice Direct (cursor or time selection)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Schneidet ausgew\u195 ?\u164 ?hlte Items direkt an Time Selection oder Edit-Cursor.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" time="2026-01-12T21:17:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/d3157be310a6e3e08780a2ae37841dee0e8c2d24/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Direct.lua</source>
+      </version>
+      <version name="0.7.6" author="IFLS / DF95" time="2026-01-13T12:30:57Z">
+        <changelog><![CDATA[+ Fix: time-selection mode now splits at BOTH boundaries reliably
++ Safer: snapshot selected items before splitting (new items won't break iteration)
++ Add undo block + UI refresh guard]]></changelog>
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/20b3d009f88765f7fe1ede98697f1845242906ac/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Direct.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Slice_Smart_PrintBus_Then_Slice.lua" type="script" desc="IFLS Workbench - Smart Slice (Print bus -&gt; Slice -&gt; TailTrim -&gt; Spread gaps)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa0 \li360 \fi-360 1)\tx360\tab Select track(s) you want to print/render to stems.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 2)\tx360\tab Run this script. It renders selected tracks to stem tracks (mono/stereo auto-detect), mutes originals, moves the rendered items to "IFLS Slices" tracks, then slices, trims tails, and spreads the slices with gaps so FX tails can ring out.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.2" author="I feel like snow" time="2026-01-12T21:17:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/d3157be310a6e3e08780a2ae37841dee0e8c2d24/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Smart_PrintBus_Then_Slice.lua</source>
+      </version>
+      <version name="0.3" author="I feel like snow" time="2026-01-12T21:54:02Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/cb03737557ed7517c1a606f3ced07155391ab5c5/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Smart_PrintBus_Then_Slice.lua</source>
+      </version>
+      <version name="0.7.4" author="IFLS / DF95" time="2026-01-13T09:41:51Z">
+        <changelog><![CDATA[+ Fix Lua syntax error (broken string)
++ Print selected bus to mono/stereo stem track (auto detect)
++ Move stem item(s) to a new "IFLS Slices" track (before stem track)
++ Slice: percussive -> split at transients (SWS) + remove-silence (native); otherwise remove-silence
++ Close gaps between resulting slices (SWS Fill gaps quick)
++ Optional ZeroCross post-fix (if IFLS slicing toggle enabled)]]></changelog>
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/b7dca698cfbb96baf646dd4ba166707e32ae0619/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Smart_PrintBus_Then_Slice.lua</source>
+      </version>
+      <version name="0.7.6" author="IFLS / DF95" time="2026-01-13T12:30:57Z">
+        <changelog><![CDATA[+ Fix: insert Slices track directly before each new stem track (off-by-one index)
++ Fix: keep script header/version in sync with repo
++ Safety: more robust selection restore and no-op if nothing to slice]]></changelog>
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/20b3d009f88765f7fe1ede98697f1845242906ac/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Smart_PrintBus_Then_Slice.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Slice_Smart_Trim_And_Spread.lua" type="script" desc="IFLS Workbench: Smart Slice -&gt; TailTrim -&gt; Spread (one-shot macro)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Convenience macro if you prefer one entry in the Action List. Calls the Smart Slice script, then trims tails and spreads slices with gaps.\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.7.6" author="IFLS / DF95" time="2026-01-13T21:00:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Smart_Trim_And_Spread.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Slicing_FadeShape_Set_Fast.lua" type="script" desc="IFLS Workbench: Slicing FadeShape Set â€“ Fast (2/5 ms)">
+      <version name="1.0" time="2026-01-12T21:17:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/d3157be310a6e3e08780a2ae37841dee0e8c2d24/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_FadeShape_Set_Fast.lua</source>
+      </version>
+      <version name="0.7.6" time="2026-01-13T12:30:57Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/20b3d009f88765f7fe1ede98697f1845242906ac/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_FadeShape_Set_Fast.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Slicing_FadeShape_Set_Linear.lua" type="script" desc="IFLS Workbench: Slicing FadeShape Set â€“ Linear (5/8 ms)">
+      <version name="1.0" time="2026-01-12T21:17:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/d3157be310a6e3e08780a2ae37841dee0e8c2d24/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_FadeShape_Set_Linear.lua</source>
+      </version>
+      <version name="0.7.6" time="2026-01-13T12:30:57Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/20b3d009f88765f7fe1ede98697f1845242906ac/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_FadeShape_Set_Linear.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Slicing_FadeShape_Set_Slow.lua" type="script" desc="IFLS Workbench: Slicing FadeShape Set â€“ Slow (10/14 ms)">
+      <version name="1.0" time="2026-01-12T21:17:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/d3157be310a6e3e08780a2ae37841dee0e8c2d24/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_FadeShape_Set_Slow.lua</source>
+      </version>
+      <version name="0.7.6" time="2026-01-13T12:30:57Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/20b3d009f88765f7fe1ede98697f1845242906ac/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_FadeShape_Set_Slow.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Slicing_Toggle_ZeroCross.lua" type="script">
+      <version name="0.0.1" time="2026-01-17T15:12:30Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_Toggle_ZeroCross.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Slicing_ZeroCross_PostFix.lua" type="script">
+      <version name="0.7.6" author="IFLS / DF95" time="2026-01-13T12:30:57Z">
+        <changelog><![CDATA[+ Remove unreliable/made-up action IDs (caused no-ops / errors on some systems)
++ Safer: apply minimal fades only (prevents clicks after slicing)
++ Preserve existing fades (only increases if needed)]]></changelog>
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/20b3d009f88765f7fe1ede98697f1845242906ac/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_ZeroCross_PostFix.lua</source>
+      </version>
+      <version name="0.0.1" time="2026-01-17T15:12:30Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_ZeroCross_PostFix.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="Scripts/IFLS_Workbench/Tools">
+    <reapack name="IFLS_Export_FX_ParamCatalog_NoMidiCC_Toggles_VST3Preferred.lua" type="script" desc="IFLS: Export FX Param Catalog (No MIDI CC + Toggle Info + Prefer VST3)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Scans installed FX via EnumInstalledFX(), prefers VST3 when duplicates exist, instantiates each FX on a temp track, then exports parameter metadata:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab skips noisy "MIDI CC" params by name\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab adds toggle info via TrackFX_GetParameterStepSizes()\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="IFLS" time="2026-01-13T09:41:51Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/b7dca698cfbb96baf646dd4ba166707e32ae0619/Scripts/IFLS_Workbench/Tools/IFLS_Export_FX_ParamCatalog_NoMidiCC_Toggles_VST3Preferred.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Export_InstalledFX_List.lua" type="script" desc="IFLS: Export Installed FX List (Prefer VST3, dedupe)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Exports installed FX using EnumInstalledFX(). Dedupe by base name (prefix stripped) and prefer VST3/VST3i over VST/VSTi.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="IFLS" time="2026-01-12T21:17:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/d3157be310a6e3e08780a2ae37841dee0e8c2d24/Scripts/IFLS_Workbench/Tools/IFLS_Export_InstalledFX_List.lua</source>
+      </version>
+      <version name="1.2" author="IFLS" time="2026-01-13T09:41:51Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/b7dca698cfbb96baf646dd4ba166707e32ae0619/Scripts/IFLS_Workbench/Tools/IFLS_Export_InstalledFX_List.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Dump_All_FX_Params_EnumInstalledFX_PreferVST3_StrongMatch_Resume_CSV_NDJSON.lua" type="script" desc="IFLS Workbench: Dump ALL FX params (EnumInstalledFX, prefer VST3, strong match, resume, CSV+NDJSON)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Enumerates all REAPER-recognized FX via EnumInstalledFX(). Stronger matching + dedupe: prefers VST3 when VST2 and VST3 appear to be the same plugin.\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.4.4" author="IFLS (ported from DF95)" time="2026-01-17T15:12:30Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Dump_All_FX_Params_EnumInstalledFX_PreferVST3_StrongMatch_Resume_CSV_NDJSON.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Dump_All_FX_Params_EnumInstalledFX_Resume_CSV_NDJSON.lua" type="script" desc="IFLS Workbench: Dump All FX Params (EnumInstalledFX, Resume, CSV+NDJSON)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Scans installed FX via EnumInstalledFX() and instantiates them on a temporary track to read parameters.\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.3.1" author="IFLS (ported from IFLSWB)" time="2026-01-12T21:17:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/d3157be310a6e3e08780a2ae37841dee0e8c2d24/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Dump_All_FX_Params_EnumInstalledFX_Resume_CSV_NDJSON.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Eliminate_Duplicate_Installations_v0.7.5.lua" type="script" desc="IFLS Workbench: Eliminate Duplicate Installations (Quarantine) v0.7.5">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Moves duplicate IFLS_Workbench installations out of /Scripts into /Scripts/_IFLS_QUARANTINE//.\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.7.5" author="IFLS" time="2026-01-13T10:48:41Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/c5820a3692d838c6084a2c7314f16ab57b886b9d/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Eliminate_Duplicate_Installations_v0.7.5.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Install_Assets_From_Data.lua" type="script" desc="IFLS Workbench: Install Assets (FXChains + MenuSets) from ReaPack Data cache">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 ReaPack can install "Scripts/Effects/Data" cleanly, but it has no native package type for FXChains/MenuSets.\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.7.10" author="I feel like snow" time="2026-01-15T20:36:17Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/527eb7e19422f34e59b65cface15b2fd55cb22e6/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Install_Assets_From_Data.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Install_Toolbar_Icons.lua" type="script" desc="IFLS Workbench: Install toolbar icons (copy into REAPER/Data/toolbar_icons)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 See README.md for usage / docs.\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.7.6" author="IFLS" time="2026-01-13T21:00:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Install_Toolbar_Icons.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Select_Items_On_IFLS_Slices_Tracks.lua" type="script" desc="IFLS Workbench: Select all items on IFLS Slices tracks">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Selects all items on tracks named "IFLS Slices" or starting with "IFLS Slices -". Helper for post-processing (trim tails, spread, clickify, drones).\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.7.6" author="IFLS" time="2026-01-13T21:00:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Select_Items_On_IFLS_Slices_Tracks.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Slicing_Clickify_SelectedItems.lua" type="script" desc="IFLS Workbench: Clickify selected slices (turn each into a click/pop)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 See README.md for usage / docs.\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.7.6" author="IFLS" time="2026-01-13T21:00:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Slicing_Clickify_SelectedItems.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Slicing_Control_Panel_ReaImGui.lua" type="script" desc="IFLS Workbench: Slicing Control Panel (ReaImGui)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 See README.md for usage / docs.\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.7.6" author="IFLS" time="2026-01-13T21:00:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Slicing_Control_Panel_ReaImGui.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Slicing_DroneChop_SelectedItems.lua" type="script" desc="IFLS Workbench: Drone Chop selected material (glue -&gt; time chops with fades)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 See README.md for usage / docs.\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.7.6" author="IFLS" time="2026-01-13T21:00:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Slicing_DroneChop_SelectedItems.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Slicing_Set_PostFX_Settings.lua" type="script" desc="IFLS Workbench: Set Spread/Trim settings (project)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 See README.md for usage / docs.\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.7.6" author="IFLS / DF95" time="2026-01-13T21:00:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Slicing_Set_PostFX_Settings.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Slicing_Spread_SelectedItems_With_Gaps.lua" type="script" desc="IFLS Workbench: Spread selected slices with gaps (for delay/reverb tails)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Repositions selected items sequentially starting at the edit cursor. Adds a gap between items (min..max seconds). Great after slicing to let FX tails ring out.\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.7.6" author="IFLS / DF95" time="2026-01-13T21:00:15Z">
+        <changelog><![CDATA[+ Initial release]]></changelog>
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Slicing_Spread_SelectedItems_With_Gaps.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Slicing_TailTrim_SelectedItems.lua" type="script" desc="IFLS Workbench: Trim tails of selected items (AudioAccessor)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Trims trailing silence on selected audio items using Take AudioAccessor sampling. Designed to be used after Smart Slice (to shorten overly long tails).\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.7.6" author="IFLS / DF95" time="2026-01-13T21:00:15Z">
+        <changelog><![CDATA[+ Initial release (integrates with Smart Slice workflow)]]></changelog>
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Slicing_TailTrim_SelectedItems.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_SmartSlicing_Mode_Menu.lua" type="script" desc="IFLS Workbench: Smart Slicing Mode Menu (Normal / Clicks&amp;Pops / Drones)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 See README.md for usage / docs.\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.7.6" author="IFLS" time="2026-01-13T21:00:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_SmartSlicing_Mode_Menu.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Test_SWS_Split_Items_At_Transients.lua" type="script" desc="IFLS Workbench: Test SWS Xenakios Split Items At Transients">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Verifies that the SWS action "Xenakios/SWS: Split items at transients" is available and actually produces splits. Reports before/after item counts and gives troubleshooting hints if 0 splits happen.\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.7.5" time="2026-01-13T10:48:41Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/c5820a3692d838c6084a2c7314f16ab57b886b9d/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Test_SWS_Split_Items_At_Transients.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="Scripts/IFLS_Workbench/Tools/Diagnostics">
+    <reapack name="IFLS_Workbench_Cleanup_Duplicate_IFLS_Scripts.lua" type="script" desc="IFLS (compat stub): IFLS_Cleanup_Duplicate_IFLS_Scripts.lua -&gt; IFLS_Workbench_Cleanup_Duplicate_Workbench_Scripts.lua">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Compatibility wrapper. Use the IFLS_Workbench version going forward.\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.7.8" author="IFLS" time="2026-01-15T20:36:17Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/527eb7e19422f34e59b65cface15b2fd55cb22e6/Scripts/IFLS_Workbench/Tools/Diagnostics/IFLS_Workbench_Cleanup_Duplicate_IFLS_Scripts.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Cleanup_Duplicate_Workbench_Scripts.lua" type="script" desc="IFLS: Cleanup helper (find duplicate IFLS scripts)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Safe cleanup helper for "duplicate script installs":\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Finds multiple copies of common IFLS scripts in REAPER/Scripts\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Opens the Scripts folder so you can remove old copies manually\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.1" author="I feel like snow" time="2026-01-13T21:00:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Scripts/IFLS_Workbench/Tools/Diagnostics/IFLS_Workbench_Cleanup_Duplicate_Workbench_Scripts.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Diagnostics.lua" type="script" desc="IFLS: Diagnostics (ReaPack/Dependencies/Paths)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 See README.md for usage / docs.\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.1" author="I feel like snow" time="2026-01-13T21:00:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Scripts/IFLS_Workbench/Tools/Diagnostics/IFLS_Workbench_Diagnostics.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Diagnostics_Legacy_IFLS.lua" type="script" desc="IFLS (compat stub): IFLS_Diagnostics.lua -&gt; IFLS_Workbench_Diagnostics.lua">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Compatibility wrapper. Use the IFLS_Workbench version going forward.\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.7.8" author="IFLS" time="2026-01-15T20:36:17Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/527eb7e19422f34e59b65cface15b2fd55cb22e6/Scripts/IFLS_Workbench/Tools/Diagnostics/IFLS_Workbench_Diagnostics_Legacy_IFLS.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Fix_Misinstalled_Nested_Folders.lua" type="script" desc="IFLS Workbench: Fix Misinstalled Nested Folders (move/merge to ResourcePath root)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 See README.md for usage / docs.\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.7.9" author="IFLS" time="2026-01-13T21:58:43Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/5b2f08d080ad4880f7b2d81e2f8f502db0df95c3/Scripts/IFLS_Workbench/Tools/Diagnostics/IFLS_Workbench_Fix_Misinstalled_Nested_Folders.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_InstallDoctor_Fix_Nested_Folders.lua" type="script" desc="IFLS Workbench: Install Doctor (Fix nested &quot;Scripts/IFLS Workbench Toolbar&quot; installs)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 See README.md for usage / docs.\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.7.9" author="I feel like snow" time="2026-01-17T15:12:30Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Scripts/IFLS_Workbench/Tools/Diagnostics/IFLS_Workbench_InstallDoctor_Fix_Nested_Folders.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="Scripts/IFLS_Workbench/Tools/JSFX">
+    <reapack name="IFLS_Workbench_Insert_JSFX_ifls_workbench_drone_granular_texture.lua" type="script" desc="IFLS Workbench: Insert JSFX - IFLS Workbench - Drone Granular Texture">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Inserts the JSFX "IFLS Workbench - Drone Granular Texture" onto all selected tracks (or last touched track).\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.7.8" author="IFLS" time="2026-01-13T21:00:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Scripts/IFLS_Workbench/Tools/JSFX/IFLS_Workbench_Insert_JSFX_ifls_workbench_drone_granular_texture.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Insert_JSFX_ifls_workbench_dynamic_meter_v1_peaknorm_out.lua" type="script" desc="IFLS Workbench: Insert JSFX - IFLS Workbench - Dynamic Meter v1 (PeakNorm out)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Inserts the JSFX "IFLS Workbench - Dynamic Meter v1 (PeakNorm out)" onto all selected tracks (or last touched track).\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.7.8" author="IFLS" time="2026-01-13T21:00:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Scripts/IFLS_Workbench/Tools/JSFX/IFLS_Workbench_Insert_JSFX_ifls_workbench_dynamic_meter_v1_peaknorm_out.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Insert_JSFX_ifls_workbench_euclid_slicer_tempo_synced_euclidean_gate.lua" type="script" desc="IFLS Workbench: Insert JSFX - IFLS Workbench - Euclid Slicer (tempo-synced Euclidean gate)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Inserts the JSFX "IFLS Workbench - Euclid Slicer (tempo-synced Euclidean gate)" onto all selected tracks (or last touched track).\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.7.8" author="IFLS" time="2026-01-13T21:00:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Scripts/IFLS_Workbench/Tools/JSFX/IFLS_Workbench_Insert_JSFX_ifls_workbench_euclid_slicer_tempo_synced_euclidean_gate.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Insert_JSFX_ifls_workbench_idm_chopper_tempo_synced_gate.lua" type="script" desc="IFLS Workbench: Insert JSFX - IFLS Workbench - IDM Chopper (tempo-synced gate)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Inserts the JSFX "IFLS Workbench - IDM Chopper (tempo-synced gate)" onto all selected tracks (or last touched track).\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.7.8" author="IFLS" time="2026-01-13T21:00:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Scripts/IFLS_Workbench/Tools/JSFX/IFLS_Workbench_Insert_JSFX_ifls_workbench_idm_chopper_tempo_synced_gate.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Insert_JSFX_ifls_workbench_reampsuite_analyzer_fft.lua" type="script" desc="IFLS Workbench: Insert JSFX - IFLS Workbench - ReampSuite Analyzer FFT">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Inserts the JSFX "IFLS Workbench - ReampSuite Analyzer FFT" onto all selected tracks (or last touched track).\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.7.8" author="IFLS" time="2026-01-13T21:00:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Scripts/IFLS_Workbench/Tools/JSFX/IFLS_Workbench_Insert_JSFX_ifls_workbench_reampsuite_analyzer_fft.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Menu_JSFX_DSP_Tools.lua" type="script" desc="IFLS Workbench: JSFX Menu (DSP Tools)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Dropdown menu to insert IFLS Workbench JSFX (DSP) onto selected tracks. JSFX live in /Effects/IFLS_Workbench/ After installing/updating, use FX browser or TrackFX_AddByName with "JS:".\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.7.8" author="IFLS" time="2026-01-13T21:00:15Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Scripts/IFLS_Workbench/Tools/JSFX/IFLS_Workbench_Menu_JSFX_DSP_Tools.lua</source>
       </version>
     </reapack>
   </category>
