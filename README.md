@@ -85,13 +85,3 @@ To reduce path issues and simplify installation, the repo uses consistent folder
 - Data/IFLS_Workbench/
 
 JSFX names are unified as IFLS_Workbench_*.jsfx and show up in REAPER as "IFLS Workbench - ...".
-
-
-## ReaPack install path (v0.7.11+)
-
-Installs into:
-- Scripts/IFLS_Workbench/
-- Effects/IFLS_Workbench/
-- Data/IFLS_Workbench/
-
-If you previously had nested folders like `Scripts/IFLS Workbench Toolbar/IFLS Workbench/Core/...`, run the included InstallDoctor scripts to clean up.

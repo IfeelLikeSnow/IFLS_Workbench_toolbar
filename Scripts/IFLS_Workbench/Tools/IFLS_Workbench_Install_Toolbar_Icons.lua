@@ -1,12 +1,5 @@
-
-local function script_dir()
-  local src = debug.getinfo(1, "S").source
-  src = src:gsub("^@", "")
-  return src:match("^(.*)[/\\].-$") or r.GetResourcePath()
-end
-
 -- @description IFLS Workbench: Install toolbar icons (copy into REAPER/Data/toolbar_icons)
--- @version 0.7.11
+-- @version 0.7.6
 -- @author IFLS
 -- @about
 --   Checks if IFLSWB toolbar icons are present in:
@@ -70,7 +63,7 @@ end
 -- Locations
 local rp = r.GetResourcePath()
 local dest_dir  = join(join(rp, "Data"), "toolbar_icons")
-local asset_dir = join(script_dir(), join("_assets", "toolbar_icons"))
+local asset_dir = join(join(join(join(rp, "Scripts"), "IFLS_Workbench"), "Tools"), join("_assets", "toolbar_icons"))
 
 -- Build icon list from assets (single source of truth)
 local icons = {}

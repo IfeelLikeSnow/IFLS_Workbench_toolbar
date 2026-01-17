@@ -1,5 +1,5 @@
 -- @description IFLS Workbench: Install helpers (register scripts + open Action List / generate toolbar file)
--- @version 0.7.11
+-- @version 1.2
 -- @author I feel like snow
 -- @about
 --   Convenience helper after installing via ReaPack/ZIP:
@@ -85,7 +85,7 @@ Next:
 
 -- Try to install FXChains/MenuSets assets from the Data cache (ReaPack "Assets" package).
 do
-  local assets = join(script_dir(), join("Tools","IFLS_Workbench_Install_Assets_From_Data.lua"))
+  local assets = r.GetResourcePath() .. "/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Install_Assets_From_Data.lua"
   local f = io.open(assets, "rb")
   if f then
     f:close()
@@ -102,7 +102,7 @@ local ret = r.ShowMessageBox(info .. "\n\nGenerate a Floating Toolbar import fil
 if r.ShowActionList then r.ShowActionList() end
 
 if ret == 6 then
-  local gen = join(script_dir(), "IFLS_Workbench_Toolbar_Generate_ReaperMenu.lua")
+  local gen = r.GetResourcePath() .. "/Scripts/IFLS_Workbench/IFLS_Workbench_Toolbar_Generate_ReaperMenu.lua"
   local f = io.open(gen, "rb")
   if f then f:close(); dofile(gen) end
 end
