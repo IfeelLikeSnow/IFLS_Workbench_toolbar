@@ -1,7 +1,9 @@
--- @description IFLS Workbench: Smart Slicing Mode Menu (Normal / Clicks&Pops / Drones)
+﻿-- @description IFLS Workbench: Smart Slicing Mode Menu (Normal / Clicks&Pops / Drones)
 -- @version 0.7.6
 -- @author IFLS
 -- @about
+--   See README.md for usage / docs.
+
 --   Dropdown menu to choose Smart Slicing flavor:
 --   1) Normal (runs your IFLS pipeline: Smart Slice -> Trim -> Spread)
 --   2) Clicks & Pops (pipeline + clickify)

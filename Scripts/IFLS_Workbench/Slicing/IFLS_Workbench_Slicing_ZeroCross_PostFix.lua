@@ -1,6 +1,8 @@
+﻿-- @version 0.0.1
 
--- @description IFLS Workbench: Slicing – ZeroCross PostFix (gentle fades + best-effort actions)
+-- @description IFLS Workbench: Slicing â€“ ZeroCross PostFix (gentle fades + best-effort actions)
 -- @version 1.0
+
 local r = reaper
 local _, zc = r.GetProjExtState(0,"IFLS_SLICING","ZC_RESPECT")
 if zc ~= "1" then return end

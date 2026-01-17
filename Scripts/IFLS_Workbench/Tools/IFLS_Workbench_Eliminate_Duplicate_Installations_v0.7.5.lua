@@ -3,6 +3,7 @@
 -- @author IFLS
 -- @about
 --   Moves duplicate IFLS_Workbench installations out of <resource>/Scripts into <resource>/Scripts/_IFLS_QUARANTINE/<timestamp>/.
+
 --   Canonical install folder is: <resource>/Scripts/IFLS_Workbench/
 --
 --   Optionally tries to remove quarantined scripts from the Action List.

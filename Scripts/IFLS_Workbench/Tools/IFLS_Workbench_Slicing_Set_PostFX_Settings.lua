@@ -1,7 +1,9 @@
--- @description IFLS Workbench: Set Spread/Trim settings (project)
+﻿-- @description IFLS Workbench: Set Spread/Trim settings (project)
 -- @author IFLS / DF95
 -- @version 0.7.6
 -- @about
+--   See README.md for usage / docs.
+
 --   Opens one dialog to configure Smart Slice post-processing:
 --   Tail trim threshold/pad and Spread gap range.
 --   Settings are stored in project extstate (IFLS_SLICING).

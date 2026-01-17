@@ -1,5 +1,6 @@
--- @description IFLS Workbench - MicFX ParamApply v3.6 (LiveAware – JSFX Meter, Drive & Comp Bias)
+﻿-- @description IFLS Workbench - MicFX ParamApply v3.6 (LiveAware â€“ JSFX Meter, Drive & Comp Bias)
 -- @version 0.1.0
+
 local r = reaper
 
 local function find_fx(tr)
@@ -49,7 +50,7 @@ local function apply_track(tr)
       end
       if ln:find("pressure") and maps and maps.airwindows and maps.airwindows.pressure and maps.airwindows.pressure.weights then
         -- optional: adjust drive/compress balance (heuristic)
-        -- intentionally conservative – handled in apply_mapped_drive scaling
+        -- intentionally conservative â€“ handled in apply_mapped_drive scaling
       end
       if (ln:find("britpre") or ln:find("burier")) and maps and maps.analogobsession then
         link_output_to_input(tr, fx.flavor)

@@ -1,3 +1,5 @@
+// @version 0.0.1
+
 desc:IFLS Workbench - Drum RR & Velocity Mapper (Phase 112)
 
 // IFLS Drum RR & Velocity Mapper
@@ -6,8 +8,8 @@ desc:IFLS Workbench - Drum RR & Velocity Mapper (Phase 112)
 // IDEE
 // =====
 // Dieses Plugin sitzt VOR deinem RS5k-Kit (oder sonstigen Drum-Sampler) und
-// übersetzt eintreffende MIDI-Noten (z.B. eine einzige "Kick-Trigger-Note")
-// in unterschiedliche Zielnoten abhängig von Velocity und einem Round-Robin-Counter.
+// Ã¼bersetzt eintreffende MIDI-Noten (z.B. eine einzige "Kick-Trigger-Note")
+// in unterschiedliche Zielnoten abhÃ¤ngig von Velocity und einem Round-Robin-Counter.
 //
 // Damit kannst du:
 //   * eine Note auf mehrere Samples verteilen (RR1..RR4).
@@ -18,7 +20,7 @@ desc:IFLS Workbench - Drum RR & Velocity Mapper (Phase 112)
 //        Hard  -> Notes 40, 41
 //
 // STANDARD-SETUP:
-//   * Input-Channel: 10 (Drum-Channel) – konfigurierbar
+//   * Input-Channel: 10 (Drum-Channel) â€“ konfigurierbar
 //   * Default Trigger-Notes pro Kategorie:
 //       Kick   : 36
 //       Snare  : 38
@@ -27,7 +29,7 @@ desc:IFLS Workbench - Drum RR & Velocity Mapper (Phase 112)
 //       Clap   : 39
 //       FX     : 49
 //
-//   * Für jede Kategorie gibt es 3 Velocity-Bereiche:
+//   * FÃ¼r jede Kategorie gibt es 3 Velocity-Bereiche:
 //       Soft:  1..50
 //       Med : 51..100
 //       Hard:101..127
@@ -41,7 +43,7 @@ desc:IFLS Workbench - Drum RR & Velocity Mapper (Phase 112)
 // HINWEIS:
 //   * Nur Note-On/Off werden gemappt, andere Events (CC, Pitchbend, etc.)
 //     werden einfach durchgereicht.
-//   * Wenn für einen Bereich keine Zielnoten gesetzt sind (0),
+//   * Wenn fÃ¼r einen Bereich keine Zielnoten gesetzt sind (0),
 //     wird die Originalnote durchgelassen.
 //
 
@@ -177,7 +179,7 @@ in_chan = slider1|0;
 soft_med_border = slider200|0;
 med_hard_border = slider201|0;
 
-// Hilfsfunktion, um Note aus 4er-Liste zu wählen
+// Hilfsfunktion, um Note aus 4er-Liste zu wÃ¤hlen
 function pick_rr_note(noteA, noteB, noteC, noteD, rr_counter_ref) (
   local notes[4];
   local count = 0;
@@ -241,10 +243,10 @@ while (
       cat = map_category(note);
       band = vel_band(vel);
 
-      new_note = note; // default: keine Änderung
+      new_note = note; // default: keine Ã„nderung
 
       status == 0x90 && vel > 0 && cat > 0 ? (
-        // Note-On für bekannte Kategorie
+        // Note-On fÃ¼r bekannte Kategorie
         band == 1 ? (
           // Soft
           cat == 1 ? new_note = pick_rr_note(slider11, slider12, slider13, slider14, kick_rr_soft);
@@ -276,10 +278,10 @@ while (
         new_note < 0 ? new_note = note;
       );
 
-      // Note-Offs sollten zur gemappten Note-On Note passen – hier einfach
-      // original NoteOff durchlassen; für exakte "NoteOff-Matching" wäre
-      // ein State-Tracking nötig (Mapping-Table), was dieses Minimal-Plugin
-      // bewusst weglässt.
+      // Note-Offs sollten zur gemappten Note-On Note passen â€“ hier einfach
+      // original NoteOff durchlassen; fÃ¼r exakte "NoteOff-Matching" wÃ¤re
+      // ein State-Tracking nÃ¶tig (Mapping-Table), was dieses Minimal-Plugin
+      // bewusst weglÃ¤sst.
       msg1 = (status | (chan-1));
       msg23 = (msg23 & 0xFF00) | (new_note & 0x7F);
 

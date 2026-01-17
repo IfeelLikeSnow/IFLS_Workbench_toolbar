@@ -1,4 +1,4 @@
--- @description IFLS Workbench: Generate toolbar .ReaperMenu (floating toolbar import file)
+﻿-- @description IFLS Workbench: Generate toolbar .ReaperMenu (floating toolbar import file)
 -- @version 0.3
 -- @author I feel like snow
 -- @about
@@ -7,9 +7,11 @@
 --     - registering the scripts into your Action List (AddRemoveReaScript),
 --     - writing the toolbar file using the returned command ID numbers.
 --
+
 --   After running:
 --     Options -> Customize toolbars... -> (pick toolbar) -> Import... -> select the created .ReaperMenu
 --
+
 local r = reaper
 
 local function join(a,b)

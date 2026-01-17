@@ -1,5 +1,6 @@
 -- @description IFLS Workbench: MicFX Profiles Library
 -- @version 0.1.0
+-- @noindex
 -- @author IFLS (ported from DF95)
 -- @about
 --   Shared MicFX profile logic + mic name parsing for IFLS Workbench MicFX tools.
@@ -65,13 +66,13 @@ M.MIC_MODE = {
 
 ------------------------------------------------------------
 -- MIC_PROFILES:
--- Mehrere Varianten pro Mic-Schlüssel
+-- Mehrere Varianten pro Mic-SchlÃ¼ssel
 ------------------------------------------------------------
 
 M.MIC_PROFILES = {
 
   XM8500 = {
-    desc = "Behringer XM8500 – dynamisch, SM58-ähnlich",
+    desc = "Behringer XM8500 â€“ dynamisch, SM58-Ã¤hnlich",
     profiles = {
       default = {
         label = "Neutral",
@@ -106,7 +107,7 @@ M.MIC_PROFILES = {
   },
 
   TG_V35S = {
-    desc = "beyerdynamic TG V35 s – superniere",
+    desc = "beyerdynamic TG V35 s â€“ superniere",
     profiles = {
       default = {
         label = "Neutral",
@@ -130,7 +131,7 @@ M.MIC_PROFILES = {
   },
 
   MD400 = {
-    desc = "Sennheiser MD400 – Speech/Gitarre",
+    desc = "Sennheiser MD400 â€“ Speech/Gitarre",
     profiles = {
       default = {
         label = "Neutral",
@@ -154,7 +155,7 @@ M.MIC_PROFILES = {
   },
 
   B1 = {
-    desc = "Behringer B1 – LDC, eher bright",
+    desc = "Behringer B1 â€“ LDC, eher bright",
     profiles = {
       default = {
         label = "Neutral Vox",
@@ -178,7 +179,7 @@ M.MIC_PROFILES = {
   },
 
   NTG4P = {
-    desc = "Rode NTG4+ – Shotgun",
+    desc = "Rode NTG4+ â€“ Shotgun",
     profiles = {
       default = {
         label = "Dialog",
@@ -201,7 +202,7 @@ M.MIC_PROFILES = {
   },
 
   C2_MONO = {
-    desc = "Behringer C-2 – SDC",
+    desc = "Behringer C-2 â€“ SDC",
     profiles = {
       default = {
         label = "Neutral Overhead/FX",
@@ -230,7 +231,7 @@ M.MIC_PROFILES = {
   },
 
   GEOFON = {
-    desc = "LOM Geofón – tieffrequente Quellen",
+    desc = "LOM GeofÃ³n â€“ tieffrequente Quellen",
     profiles = {
       default = {
         label = "Sub Detail",
@@ -256,7 +257,7 @@ M.MIC_PROFILES = {
   },
 
   ETHER = {
-    desc = "SOMA Ether – EM-Receiver",
+    desc = "SOMA Ether â€“ EM-Receiver",
     profiles = {
       default = {
         label = "Texture",
@@ -280,7 +281,7 @@ M.MIC_PROFILES = {
   },
 
   CM300_MONO = {
-    desc = "Korg CM-300 – Kontakt-Piezo",
+    desc = "Korg CM-300 â€“ Kontakt-Piezo",
     profiles = {
       default = {
         label = "Neutral Contact",
@@ -309,7 +310,7 @@ M.MIC_PROFILES = {
   },
 
   CORTADO_MONO = {
-    desc = "Zeppelin Cortado MkIII – Kontaktmic + Preamp",
+    desc = "Zeppelin Cortado MkIII â€“ Kontaktmic + Preamp",
     profiles = {
       default = {
         label = "Resonant",
@@ -339,7 +340,7 @@ M.MIC_PROFILES = {
   },
 
   MCM_TELECOIL_MONO = {
-    desc = "MCM 36-010 Telephone Pick-Up Coil – Telefonband / EM-Pickup",
+    desc = "MCM 36-010 Telephone Pick-Up Coil â€“ Telefonband / EM-Pickup",
     profiles = {
       default = {
         label = "Telephone Band",
@@ -370,7 +371,7 @@ M.MIC_PROFILES = {
 
 function M.normalize_name(s)
   s = (s or ""):lower()
-  s = s:gsub("ä","ae"):gsub("ö","oe"):gsub("ü","ue"):gsub("ß","ss")
+  s = s:gsub("Ã¤","ae"):gsub("Ã¶","oe"):gsub("Ã¼","ue"):gsub("ÃŸ","ss")
   s = s:gsub("[^a-z0-9]+","")
   return s
 end
@@ -479,7 +480,7 @@ local function apply_eq_profile(track, fx_eq, profile)
     set_eq_band(track, fx_eq, BANDTYPE.LOPASS, 0, profile.lpf_freq, nil, 0.7)
   end
 
-  -- zusätzliche Bänder
+  -- zusÃ¤tzliche BÃ¤nder
   local band_counts = {}
   if profile.eq_bands then
     for _,b in ipairs(profile.eq_bands) do

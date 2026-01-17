@@ -1,7 +1,9 @@
--- @description IFLS Workbench: Install Doctor (Fix nested "Scripts/IFLS Workbench Toolbar" installs)
+﻿-- @description IFLS Workbench: Install Doctor (Fix nested "Scripts/IFLS Workbench Toolbar" installs)
 -- @version 0.7.9
 -- @author I feel like snow
 -- @about
+--   See README.md for usage / docs.
+
 --   Repairs the most common manual-install mistake:
 --     Unzipping the whole repository into <ResourcePath>/Scripts/
 --   which creates:
@@ -16,6 +18,7 @@
 --   Safe by default: it MERGES (overwrites newer or same-name files).
 --   Close REAPER before running if you want a guaranteed clean move/rename.
 --
+
 local r = reaper
 local sep = package.config:sub(1,1)
 

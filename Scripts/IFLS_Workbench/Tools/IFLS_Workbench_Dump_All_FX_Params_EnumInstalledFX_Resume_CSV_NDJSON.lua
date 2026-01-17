@@ -3,6 +3,7 @@
 -- @author IFLS (ported from IFLSWB)
 -- @about
 --   Scans installed FX via EnumInstalledFX() and instantiates them on a temporary track to read parameters.
+
 --   Outputs:
 --     1) CSV (summary)  2) NDJSON (one FX per line, easy for big datasets)
 --   Resume: keeps a progress file so you can continue after cancel/crash.
