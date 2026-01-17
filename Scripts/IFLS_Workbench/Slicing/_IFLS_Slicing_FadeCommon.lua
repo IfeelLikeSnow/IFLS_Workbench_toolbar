@@ -1,3 +1,5 @@
+-- @version 0.0.1
+-- @noindex
 -- IFLS Workbench Slicing Fade Common
 
 local r = reaper

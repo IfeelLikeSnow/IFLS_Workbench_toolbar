@@ -3,6 +3,7 @@
 -- @author I feel like snow
 -- @about
 --   ReaPack can install "Scripts/Effects/Data" cleanly, but it has no native package type for FXChains/MenuSets.
+
 --   This tool copies those assets from:
 --     <ResourcePath>/Data/IFLS_Workbench/_assets/{FXChains,MenuSets}
 --   to:
@@ -114,7 +115,7 @@ function IFLSWB_InstallAssetsFromData(opts)
         end
       end
     end
-    log(("OK: %s → %s (%d files)"):format(norm(srcBase), norm(dstBase), #items))
+    log(("OK: %s â†’ %s (%d files)"):format(norm(srcBase), norm(dstBase), #items))
   end
 
   copy_tree(src_fx, join(res, "FXChains"))

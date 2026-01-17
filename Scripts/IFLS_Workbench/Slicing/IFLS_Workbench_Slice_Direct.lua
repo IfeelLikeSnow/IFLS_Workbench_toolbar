@@ -1,6 +1,6 @@
 -- @description IFLS Workbench: Slice Direct (cursor or time selection)
 -- @version 1.0
--- @about Schneidet ausgewählte Items direkt an Time Selection oder Edit-Cursor.
+-- @about Schneidet ausgewÃ¤hlte Items direkt an Time Selection oder Edit-Cursor.
 
 local r = reaper
 

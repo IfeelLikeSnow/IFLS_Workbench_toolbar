@@ -1,9 +1,10 @@
---@description IFLS Workbench: Dump ALL FX params (EnumInstalledFX, prefer VST3, strong match, resume, CSV+NDJSON)
+﻿--@description IFLS Workbench: Dump ALL FX params (EnumInstalledFX, prefer VST3, strong match, resume, CSV+NDJSON)
 -- @version 0.4.4
 --@author IFLS (ported from DF95)
 --@about
 --  Enumerates all REAPER-recognized FX via EnumInstalledFX().
 --  Stronger matching + dedupe: prefers VST3 when VST2 and VST3 appear to be the same plugin.
+
 --  Writes: plugins.csv, params.csv, plugins.ndjson, failures.txt, progress.json
 --  Resume-safe: already dumped fx_ident entries are skipped on next runs.
 --

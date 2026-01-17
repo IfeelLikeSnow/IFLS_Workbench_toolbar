@@ -32,7 +32,7 @@ end
 
 local function show_fallback_mb()
   if SHOW_STATUS_MB_ON_FALLBACK and #log_lines > 0 then
-    r.MB(table.concat(log_lines, "\n"), "IFLS Workbench – Status", 0)
+    r.MB(table.concat(log_lines, "\n"), "IFLS Workbench â€“ Status", 0)
   end
 end
 
@@ -404,7 +404,7 @@ end
 
 local function run()
   if r.CountSelectedMediaItems(0) == 0 then
-    r.MB("Bitte zuerst mindestens ein Item auswählen (PolyWAV oder WAV).", "IFLS Workbench", 0)
+    r.MB("Bitte zuerst mindestens ein Item auswÃ¤hlen (PolyWAV oder WAV).", "IFLS Workbench", 0)
     return
   end
 
@@ -434,7 +434,7 @@ local function run()
 
   if #new_tracks == 0 then
     fallback_used = true
-    log("Explode hat keine neuen Tracks erzeugt → nutze Source-Tracks (z.B. Mono WAV oder Selection verloren).")
+    log("Explode hat keine neuen Tracks erzeugt â†’ nutze Source-Tracks (z.B. Mono WAV oder Selection verloren).")
   else
     log(("Explode: %d neue Tracks erzeugt (CMD=%s)"):format(#new_tracks, tostring(used_cmd or "unknown")))
   end

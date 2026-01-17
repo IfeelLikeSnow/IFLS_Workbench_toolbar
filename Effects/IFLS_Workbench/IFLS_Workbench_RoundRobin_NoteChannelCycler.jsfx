@@ -1,24 +1,28 @@
+﻿// @description IFLS_Workbench_RoundRobin_NoteChannelCycler.jsfx
+// @version 0.0.1
+
 desc:IFLS Workbench - RoundRobin Note Channel Cycler
 // @version 1.1
 // @author DF95
 // @about
-//   MIDI-Effekt für RoundRobin mit ReaSamplomatic5000-basierten Kits.
+//   MIDI-Effekt fÃ¼r RoundRobin mit ReaSamplomatic5000-basierten Kits.
+
 //   Annahme:
 //     - Pro Instrument existieren mehrere RS5k-Instanzen auf derselben Note,
-//       aber mit UNTERSCHIEDLICHEN MIDI-Kanälen (z.B. Kanal 1, 2, 3, 4).
+//       aber mit UNTERSCHIEDLICHEN MIDI-KanÃ¤len (z.B. Kanal 1, 2, 3, 4).
 //     - Dieses Plugin nimmt eingehende Note-On/Off auf einem Basis-Kanal
-//       entgegen (z.B. Kanal 1) und verteilt sie auf die Kanäle 1..N_VARIANTS.
+//       entgegen (z.B. Kanal 1) und verteilt sie auf die KanÃ¤le 1..N_VARIANTS.
 //   Verwendung:
 //     1. RoundRobin-Kit mit DF95_Sampler_Build_RoundRobin_Kit.lua bauen,
 //        so dass pro Layer ein anderer MIDI-Kanal gesetzt ist.
-//     2. Dieses JSFX VOR der RS5k-Kette auf der Spur einfügen.
+//     2. Dieses JSFX VOR der RS5k-Kette auf der Spur einfÃ¼gen.
 //     3. In den Slidern Anzahl Variationen, Eingangs-Kanal & Mode einstellen.
 //
 //   Hinweis:
 //     - Die Zuweisung erfolgt pro Note-Pitch (d.h. jede Note hat ihren
-//       eigenen Zähler).
+//       eigenen ZÃ¤hler).
 //     - Mode 0 = Cycle: deterministische Reihenfolge 1 -> 2 -> ... -> N -> 1.
-//     - Mode 1 = Random: zufällige Auswahl, optional "No immediate repeat".
+//     - Mode 1 = Random: zufÃ¤llige Auswahl, optional "No immediate repeat".
 
 slider1:4<1,8,1>Varianten (Layers) pro Instrument
 slider2:1<1,16,1>Eingangs-MIDI-Kanal

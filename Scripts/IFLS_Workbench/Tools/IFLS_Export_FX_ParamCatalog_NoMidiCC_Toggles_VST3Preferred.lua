@@ -6,6 +6,7 @@
 --   instantiates each FX on a temp track, then exports parameter metadata:
 --     - skips noisy "MIDI CC" params by name
 --     - adds toggle info via TrackFX_GetParameterStepSizes()
+
 --   Output: NDJSON + stats in:
 --     <REAPER resource path>/Scripts/IFLS_Workbench/_ParamDumps/
 

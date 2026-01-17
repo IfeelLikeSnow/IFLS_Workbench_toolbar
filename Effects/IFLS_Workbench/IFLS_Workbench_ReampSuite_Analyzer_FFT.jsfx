@@ -1,14 +1,18 @@
+﻿// @description IFLS_Workbench_ReampSuite_Analyzer_FFT.jsfx
+// @version 0.0.1
+
 \
 // @description DF95_ReampSuite_Analyzer_FFT
 // @version 1.0
 // @author DF95
 // @about
-//   Einfache FFT-basierte Anzeige für ReampReturn-Signale.
+//   Einfache FFT-basierte Anzeige fÃ¼r ReampReturn-Signale.
 //   - Zeigt ein grobes 3-Band-Meter (Low/Mid/High) sowie Gesamtlevel.
 //   - Output ist Dry-Through, das Plugin ist als Meter gedacht.
 //
+
 //   Hinweis:
-//   - Dies ist ein minimalistisches JSFX, kein vollständiger RTA.
+//   - Dies ist ein minimalistisches JSFX, kein vollstÃ¤ndiger RTA.
 //
 // sliders:
 //   0:0<0,1,0.01>Output Gain

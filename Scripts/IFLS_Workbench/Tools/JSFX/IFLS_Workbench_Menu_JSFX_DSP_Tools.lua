@@ -6,6 +6,7 @@
 --   JSFX live in <ResourcePath>/Effects/IFLS_Workbench/
 --   After installing/updating, use FX browser or TrackFX_AddByName with "JS:".
 --
+
 --   Notes:
 --   - Inserts as last FX on each selected track.
 --   - If no track selected, inserts on the last touched track (if any), else shows a message.

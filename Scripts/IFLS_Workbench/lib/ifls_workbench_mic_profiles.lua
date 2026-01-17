@@ -1,5 +1,8 @@
+-- @version 0.0.1
+-- @noindex
 -- ifls_workbench_mic_profiles.lua
 -- Simple, editable mic EQ starting points (field recording cleanup).
+
 -- Values are intentionally conservative: mostly HPF + small presence shaping.
 
 return {
@@ -45,7 +48,7 @@ return {
   -- Shotgun
   {
     id="rode_ntg4plus",
-    aliases={"ntg4","ntg4+","ntg 4+","rode ntg4+","røde ntg4+","rode ntg4plus"},
+    aliases={"ntg4","ntg4+","ntg 4+","rode ntg4+","rÃ¸de ntg4+","rode ntg4plus"},
     hpf_hz=80,
     presence={freq_hz=4200, gain_db=0.8, q=1.0},
     notes="Shotgun. Conservative EQ; avoid over-brightening."
@@ -68,10 +71,10 @@ return {
   },
   {
     id="lom_geofon",
-    aliases={"geofon","geofón","lom geofon","lom geofón"},
+    aliases={"geofon","geofÃ³n","lom geofon","lom geofÃ³n"},
     hpf_hz=25,
     presence={freq_hz=1600, gain_db=-0.5, q=1.0},
-    notes="Geofón (contact). Usually: rumble management, then taste."
+    notes="GeofÃ³n (contact). Usually: rumble management, then taste."
   },
   {
     id="korg_cm300",

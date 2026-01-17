@@ -1,7 +1,9 @@
+﻿-- @version 0.0.1
 
 -- @description IFLS Workbench: Slicing Dropdown (auto-categories + fades)
 -- @version 1.0
--- @about Scannt FXChains/IFLS_Workbench/Slicing_* und baut Menü automatisch. Enthält Fade-Submenü & Help.
+-- @about Scannt FXChains/IFLS_Workbench/Slicing_* und baut MenÃ¼ automatisch. EnthÃ¤lt Fade-SubmenÃ¼ & Help.
+
 local r = reaper
 local sep = package.config:sub(1,1)
 local res = r.GetResourcePath()
@@ -18,11 +20,11 @@ local function help_once()
   local _, seen = r.GetProjExtState(0, "IFLS_UI", "SLICE_HELP_SEEN")
   if seen ~= "1" then
     r.ShowConsoleMsg([[
-[IFLS] Slicing Dropdown – Hilfe
-• Linksklick: Kategorien → Presets laden
-• Fade-Submenü: Linear/Slow/Fast/AutoFromPreset
-• ExtState: IFLS_SLICING CATEGORY/PRESET steuert Auto-Fade
-• Mehr in Data/IFLS_Workbench/... (optional)
+[IFLS] Slicing Dropdown â€“ Hilfe
+â€¢ Linksklick: Kategorien â†’ Presets laden
+â€¢ Fade-SubmenÃ¼: Linear/Slow/Fast/AutoFromPreset
+â€¢ ExtState: IFLS_SLICING CATEGORY/PRESET steuert Auto-Fade
+â€¢ Mehr in Data/IFLS_Workbench/... (optional)
 ]])
     r.SetProjExtState(0, "IFLS_UI", "SLICE_HELP_SEEN", "1")
   end
@@ -147,14 +149,14 @@ local function dispatch()
         -- load chain to all selected tracks
         local sel = r.CountSelectedTracks(0)
         if sel == 0 then
-          r.ShowMessageBox("Keine Tracks ausgewählt. Bitte Zielspuren markieren.", "IFLS Workbench Slicing", 0)
+          r.ShowMessageBox("Keine Tracks ausgewÃ¤hlt. Bitte Zielspuren markieren.", "IFLS Workbench Slicing", 0)
           return
         end
         for i=0,sel-1 do
           local tr = r.GetSelectedTrack(0,i)
           r.TrackFX_AddByName(tr, c.path, false, 1) -- add from .rfxchain
         end
-        r.ShowConsoleMsg(string.format("[IFLS] Slicing preset geladen: %s → %d Tracks\n", c.name, sel))
+        r.ShowConsoleMsg(string.format("[IFLS] Slicing preset geladen: %s â†’ %d Tracks\n", c.name, sel))
 -- optional ZeroCross PostFix (if enabled)
 local zc_flag = ({r.GetProjExtState(0,"IFLS_SLICING","ZC_RESPECT")})[2]
 if zc_flag == "1" then

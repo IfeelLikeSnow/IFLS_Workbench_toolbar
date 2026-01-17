@@ -1,3 +1,6 @@
+﻿// @description IFLS_Workbench_Stereo_Alternator.jsfx
+// @version 0.0.1
+
 desc:IFLS Workbench - Stereo Alternator (tempo-synced L/R switcher)
 author: DF95
 version: 1.0

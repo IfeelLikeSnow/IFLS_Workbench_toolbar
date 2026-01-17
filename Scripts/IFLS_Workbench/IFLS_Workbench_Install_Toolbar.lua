@@ -1,4 +1,4 @@
--- @description IFLS Workbench: Install helpers (register scripts + open Action List / generate toolbar file)
+﻿-- @description IFLS Workbench: Install helpers (register scripts + open Action List / generate toolbar file)
 -- @version 1.2
 -- @author I feel like snow
 -- @about
@@ -7,6 +7,7 @@
 --   2) Opens the Action List (so you can search/add to toolbars).
 --   3) Optional: generate a Floating Toolbar import file (.ReaperMenu).
 --
+
 local r = reaper
 local sep = package.config:sub(1,1)
 

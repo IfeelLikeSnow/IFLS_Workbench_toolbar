@@ -1,7 +1,9 @@
--- @description IFLS Workbench: Drone Chop selected material (glue -> time chops with fades)
+﻿-- @description IFLS Workbench: Drone Chop selected material (glue -> time chops with fades)
 -- @version 0.7.6
 -- @author IFLS
 -- @about
+--   See README.md for usage / docs.
+
 --   Creates drone-friendly slices from selected items:
 --   1) Optionally glue selected items (built-in action 41588).
 --   2) Split into segments of random or fixed length (seconds).
