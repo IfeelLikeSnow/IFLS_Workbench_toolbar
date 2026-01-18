@@ -1,0 +1,294 @@
+// @version 0.0.1
+
+desc:IFLS Workbench - Drum RR & Velocity Mapper (Phase 112)
+
+// IFLS Drum RR & Velocity Mapper
+// Phase 112: JSFX zur Round-Robin- und Velocity-Zuordnung im MIDI-Stream
+//
+// IDEE
+// =====
+// Dieses Plugin sitzt VOR deinem RS5k-Kit (oder sonstigen Drum-Sampler) und
+// Ã¼bersetzt eintreffende MIDI-Noten (z.B. eine einzige "Kick-Trigger-Note")
+// in unterschiedliche Zielnoten abhÃ¤ngig von Velocity und einem Round-Robin-Counter.
+//
+// Damit kannst du:
+//   * eine Note auf mehrere Samples verteilen (RR1..RR4).
+//   * pro Velocity-Bereich (Soft/Med/Hard) unterschiedliche Zielnoten nutzen.
+//   * z.B. 36 = Kick-Sammelnote, intern aber:
+//        Soft  -> Notes 36, 37
+//        Med   -> Notes 38, 39
+//        Hard  -> Notes 40, 41
+//
+// STANDARD-SETUP:
+//   * Input-Channel: 10 (Drum-Channel) â€“ konfigurierbar
+//   * Default Trigger-Notes pro Kategorie:
+//       Kick   : 36
+//       Snare  : 38
+//       Hats   : 42
+//       Tom    : 45
+//       Clap   : 39
+//       FX     : 49
+//
+//   * FÃ¼r jede Kategorie gibt es 3 Velocity-Bereiche:
+//       Soft:  1..50
+//       Med : 51..100
+//       Hard:101..127
+//
+//   * In jedem Bereich kannst du bis zu 4 Zielnoten definieren.
+//     Das Plugin rotiert durch diese Noten (Round-Robin):
+//       Erstes Triggern: Note A
+//       Zweites:        Note B
+//       usw. (Wrap)
+//
+// HINWEIS:
+//   * Nur Note-On/Off werden gemappt, andere Events (CC, Pitchbend, etc.)
+//     werden einfach durchgereicht.
+//   * Wenn fÃ¼r einen Bereich keine Zielnoten gesetzt sind (0),
+//     wird die Originalnote durchgelassen.
+//
+
+in_pin:none
+out_pin:none
+
+@init
+
+// Default: Drums auf MIDI-Kanal 10
+slider1:10<1,16,1>Input MIDI Channel (1-16, 0=alle)
+
+// Kick
+slider10:36<0,127,1>Kick Trigger Note
+slider11:36<0,127,1>Kick Soft Note A
+slider12:0<0,127,1>Kick Soft Note B
+slider13:0<0,127,1>Kick Soft Note C
+slider14:0<0,127,1>Kick Soft Note D
+slider15:38<0,127,1>Kick Med Note A
+slider16:0<0,127,1>Kick Med Note B
+slider17:0<0,127,1>Kick Med Note C
+slider18:0<0,127,1>Kick Med Note D
+slider19:40<0,127,1>Kick Hard Note A
+slider20:0<0,127,1>Kick Hard Note B
+slider21:0<0,127,1>Kick Hard Note C
+slider22:0<0,127,1>Kick Hard Note D
+
+// Snare
+slider30:38<0,127,1>Snare Trigger Note
+slider31:38<0,127,1>Snare Soft Note A
+slider32:0<0,127,1>Snare Soft Note B
+slider33:0<0,127,1>Snare Soft Note C
+slider34:0<0,127,1>Snare Soft Note D
+slider35:40<0,127,1>Snare Med Note A
+slider36:0<0,127,1>Snare Med Note B
+slider37:0<0,127,1>Snare Med Note C
+slider38:0<0,127,1>Snare Med Note D
+slider39:42<0,127,1>Snare Hard Note A
+slider40:0<0,127,1>Snare Hard Note B
+slider41:0<0,127,1>Snare Hard Note C
+slider42:0<0,127,1>Snare Hard Note D
+
+// Hats (Closed/Open gemeinsam als ein Trigger, du kannst getrennt nutzen)
+slider50:42<0,127,1>Hats Trigger Note
+slider51:42<0,127,1>Hats Soft Note A
+slider52:0<0,127,1>Hats Soft Note B
+slider53:0<0,127,1>Hats Soft Note C
+slider54:0<0,127,1>Hats Soft Note D
+slider55:44<0,127,1>Hats Med Note A
+slider56:0<0,127,1>Hats Med Note B
+slider57:0<0,127,1>Hats Med Note C
+slider58:0<0,127,1>Hats Med Note D
+slider59:46<0,127,1>Hats Hard Note A
+slider60:0<0,127,1>Hats Hard Note B
+slider61:0<0,127,1>Hats Hard Note C
+slider62:0<0,127,1>Hats Hard Note D
+
+// Tom
+slider70:45<0,127,1>Tom Trigger Note
+slider71:45<0,127,1>Tom Soft Note A
+slider72:0<0,127,1>Tom Soft Note B
+slider73:0<0,127,1>Tom Soft Note C
+slider74:0<0,127,1>Tom Soft Note D
+slider75:47<0,127,1>Tom Med Note A
+slider76:0<0,127,1>Tom Med Note B
+slider77:0<0,127,1>Tom Med Note C
+slider78:0<0,127,1>Tom Med Note D
+slider79:50<0,127,1>Tom Hard Note A
+slider80:0<0,127,1>Tom Hard Note B
+slider81:0<0,127,1>Tom Hard Note C
+slider82:0<0,127,1>Tom Hard Note D
+
+// Clap
+slider90:39<0,127,1>Clap Trigger Note
+slider91:39<0,127,1>Clap Soft Note A
+slider92:0<0,127,1>Clap Soft Note B
+slider93:0<0,127,1>Clap Soft Note C
+slider94:0<0,127,1>Clap Soft Note D
+slider95:41<0,127,1>Clap Med Note A
+slider96:0<0,127,1>Clap Med Note B
+slider97:0<0,127,1>Clap Med Note C
+slider98:0<0,127,1>Clap Med Note D
+slider99:43<0,127,1>Clap Hard Note A
+slider100:0<0,127,1>Clap Hard Note B
+slider101:0<0,127,1>Clap Hard Note C
+slider102:0<0,127,1>Clap Hard Note D
+
+// FX
+slider110:49<0,127,1>FX Trigger Note
+slider111:49<0,127,1>FX Soft Note A
+slider112:0<0,127,1>FX Soft Note B
+slider113:0<0,127,1>FX Soft Note C
+slider114:0<0,127,1>FX Soft Note D
+slider115:51<0,127,1>FX Med Note A
+slider116:0<0,127,1>FX Med Note B
+slider117:0<0,127,1>FX Med Note C
+slider118:0<0,127,1>FX Med Note D
+slider119:53<0,127,1>FX Hard Note A
+slider120:0<0,127,1>FX Hard Note B
+slider121:0<0,127,1>FX Hard Note C
+slider122:0<0,127,1>FX Hard Note D
+
+// Velocity Grenzen
+slider200:50<1,126,1>Soft/Med Grenze (Velocity)
+slider201:100<2,127,1>Med/Hard Grenze (Velocity)
+
+// RR Counter pro Kategorie & Velocity-Bereich
+kick_rr_soft = 0;
+kick_rr_med  = 0;
+kick_rr_hard = 0;
+
+snare_rr_soft = 0;
+snare_rr_med  = 0;
+snare_rr_hard = 0;
+
+hats_rr_soft = 0;
+hats_rr_med  = 0;
+hats_rr_hard = 0;
+
+tom_rr_soft = 0;
+tom_rr_med  = 0;
+tom_rr_hard = 0;
+
+clap_rr_soft = 0;
+clap_rr_med  = 0;
+clap_rr_hard = 0;
+
+fx_rr_soft = 0;
+fx_rr_med  = 0;
+fx_rr_hard = 0;
+
+@slider
+in_chan = slider1|0;
+soft_med_border = slider200|0;
+med_hard_border = slider201|0;
+
+// Hilfsfunktion, um Note aus 4er-Liste zu wÃ¤hlen
+function pick_rr_note(noteA, noteB, noteC, noteD, rr_counter_ref) (
+  local notes[4];
+  local count = 0;
+  notes[0] = noteA;
+  notes[1] = noteB;
+  notes[2] = noteC;
+  notes[3] = noteD;
+  i = 0;
+  loop(4,
+    notes[i] > 0 ? count += 1;
+    i += 1;
+  );
+  count <= 0 ? (
+    -1; // kein Mapping -> original lassen
+  ) : (
+    rr_counter_ref += 1;
+    idx = (rr_counter_ref-1) % count;
+    idx >= 0 ? (
+      // ntes gesetztes Element finden
+      j = 0;
+      nth = 0;
+      res = -1;
+      loop(4,
+        notes[j] > 0 ? (
+          nth == idx ? res = notes[j] : nth += 1;
+        );
+        j += 1;
+      );
+      res;
+    ) : -1;
+  );
+);
+
+// Kategorie-Bestimmung anhand Trigger-Note
+function map_category(note) (
+  note == slider10 ? 1 :        // Kick
+  note == slider30 ? 2 :        // Snare
+  note == slider50 ? 3 :        // Hats
+  note == slider70 ? 4 :        // Tom
+  note == slider90 ? 5 :        // Clap
+  note == slider110 ? 6 : 0;    // FX / sonst
+);
+
+// Velocity-Bereich bestimmen
+function vel_band(vel) (
+  vel <= soft_med_border ? 1 :
+  vel <= med_hard_border ? 2 : 3;
+);
+
+@block
+while (
+  midirecv(offset, msg1, msg23) ?
+  (
+    status = msg1 & 0xF0;
+    chan   = (msg1 & 0x0F) + 1;
+    note   = msg23 & 0x7F;
+    vel    = (msg23 / 256) & 0x7F;
+
+    // Nur Note-On/Off auf konfiguriertem Kanal anfassen
+    (status == 0x90 || status == 0x80) && (in_chan == 0 || chan == in_chan) ? (
+      cat = map_category(note);
+      band = vel_band(vel);
+
+      new_note = note; // default: keine Ã„nderung
+
+      status == 0x90 && vel > 0 && cat > 0 ? (
+        // Note-On fÃ¼r bekannte Kategorie
+        band == 1 ? (
+          // Soft
+          cat == 1 ? new_note = pick_rr_note(slider11, slider12, slider13, slider14, kick_rr_soft);
+          cat == 2 ? new_note = pick_rr_note(slider31, slider32, slider33, slider34, snare_rr_soft);
+          cat == 3 ? new_note = pick_rr_note(slider51, slider52, slider53, slider54, hats_rr_soft);
+          cat == 4 ? new_note = pick_rr_note(slider71, slider72, slider73, slider74, tom_rr_soft);
+          cat == 5 ? new_note = pick_rr_note(slider91, slider92, slider93, slider94, clap_rr_soft);
+          cat == 6 ? new_note = pick_rr_note(slider111, slider112, slider113, slider114, fx_rr_soft);
+        ) :
+        band == 2 ? (
+          // Med
+          cat == 1 ? new_note = pick_rr_note(slider15, slider16, slider17, slider18, kick_rr_med);
+          cat == 2 ? new_note = pick_rr_note(slider35, slider36, slider37, slider38, snare_rr_med);
+          cat == 3 ? new_note = pick_rr_note(slider55, slider56, slider57, slider58, hats_rr_med);
+          cat == 4 ? new_note = pick_rr_note(slider75, slider76, slider77, slider78, tom_rr_med);
+          cat == 5 ? new_note = pick_rr_note(slider95, slider96, slider97, slider98, clap_rr_med);
+          cat == 6 ? new_note = pick_rr_note(slider115, slider116, slider117, slider118, fx_rr_med);
+        ) : (
+          // Hard
+          cat == 1 ? new_note = pick_rr_note(slider19, slider20, slider21, slider22, kick_rr_hard);
+          cat == 2 ? new_note = pick_rr_note(slider39, slider40, slider41, slider42, snare_rr_hard);
+          cat == 3 ? new_note = pick_rr_note(slider59, slider60, slider61, slider62, hats_rr_hard);
+          cat == 4 ? new_note = pick_rr_note(slider79, slider80, slider81, slider82, tom_rr_hard);
+          cat == 5 ? new_note = pick_rr_note(slider99, slider100, slider101, slider102, clap_rr_hard);
+          cat == 6 ? new_note = pick_rr_note(slider119, slider120, slider121, slider122, fx_rr_hard);
+        );
+
+        // Falls kein Mapping gesetzt: new_note bleibt original
+        new_note < 0 ? new_note = note;
+      );
+
+      // Note-Offs sollten zur gemappten Note-On Note passen â€“ hier einfach
+      // original NoteOff durchlassen; fÃ¼r exakte "NoteOff-Matching" wÃ¤re
+      // ein State-Tracking nÃ¶tig (Mapping-Table), was dieses Minimal-Plugin
+      // bewusst weglÃ¤sst.
+      msg1 = (status | (chan-1));
+      msg23 = (msg23 & 0xFF00) | (new_note & 0x7F);
+
+      midisend(offset, msg1, msg23);
+    ) : (
+      // alles andere einfach durchreichen
+      midisend(offset, msg1, msg23);
+    );
+  );
+);

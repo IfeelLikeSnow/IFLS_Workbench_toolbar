@@ -1,0 +1,62 @@
+﻿// @description IFLS_Workbench_IDM_Kick_BusTone.jsfx
+// @version 0.0.1
+
+desc:IFLS Workbench - IDM Kick Bus Tone
+author: DF95
+version: 1.0
+
+slider1:30<20,60,1>Sub HPF (Hz)
+slider2:80<40,140,1>Low boost freq (Hz)
+slider3:3<0,8,0.1>Low boost (dB)
+slider4:3<0,8,0.1>Punch boost (dB @ 3k)
+slider5:0.2<0,1,0.01>Saturation
+
+@init
+two_pi = 2*$pi;
+lp_l = 0; lp_r = 0;
+p_l = 0; p_r = 0;
+
+
+low_l = 0; low_r = 0;
+@slider
+sub_hpf = slider1;
+low_f   = slider2;
+low_gain = 10^(slider3/20);
+punch_gain = 10^(slider4/20);
+sat_amt = slider5;
+
+sub_wc = two_pi*sub_hpf/srate;
+sub_a  = sub_wc/(sub_wc+1);
+
+low_wc = two_pi*low_f/srate;
+low_a  = low_wc/(low_wc+1);
+
+punch_wc = two_pi*3000/srate;
+punch_a  = punch_wc/(punch_wc+1);
+
+@sample
+in_l = spl0;
+in_r = spl1;
+
+lp_l = lp_l + sub_a*(in_l-lp_l);
+lp_r = lp_r + sub_a*(in_r-lp_r);
+l = in_l - lp_l;
+r = in_r - lp_r;
+
+low_l += low_a*(l-low_l);
+low_r += low_a*(r-low_r);
+
+p_l += punch_a*(l-p_l);
+p_r += punch_a*(r-p_r);
+
+l = l + (low_l-l)*(low_gain-1);
+r = r + (low_r-r)*(low_gain-1);
+
+l = l + (p_l-l)*(punch_gain-1);
+r = r + (p_r-r)*(punch_gain-1);
+
+l = tanh(l*(1+sat_amt*4));
+r = tanh(r*(1+sat_amt*4));
+
+spl0 = l;
+spl1 = r;
