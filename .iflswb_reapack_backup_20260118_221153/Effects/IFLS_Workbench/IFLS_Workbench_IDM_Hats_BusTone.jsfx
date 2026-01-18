@@ -1,0 +1,70 @@
+﻿// @description IFLS_Workbench_IDM_Hats_BusTone.jsfx
+// @version 0.0.1
+
+desc:IFLS Workbench - IDM Hats Bus Tone
+author: DF95
+version: 1.0
+
+slider1:350<150,800,1>HPF (Hz)
+slider2:8000<5000,12000,10>Presence freq (Hz)
+slider3:3<0,8,0.1>Presence boost (dB)
+slider4:12000<8000,16000,10>Air freq (Hz)
+slider5:3<0,8,0.1>Air boost (dB)
+slider6:-2<-6,0,0.1>Deharsh @ 6k (dB)
+
+@init
+two_pi = 2*$pi;
+hp_l = 0; hp_r = 0;
+pres_l = 0; pres_r = 0;
+air_l = 0; air_r = 0;
+harsh_l = 0; harsh_r = 0;
+
+@slider
+hpf_f     = slider1;
+pres_f    = slider2;
+pres_g    = 10^(slider3/20);
+air_f     = slider4;
+air_g     = 10^(slider5/20);
+deharsh_g = 10^(slider6/20);
+
+hpf_wc   = two_pi*hpf_f/srate;
+hpf_a    = hpf_wc/(hpf_wc+1);
+
+pres_wc  = two_pi*pres_f/srate;
+pres_a   = pres_wc/(pres_wc+1);
+
+air_wc   = two_pi*air_f/srate;
+air_a    = air_wc/(air_wc+1);
+
+harsh_wc = two_pi*6000/srate;
+harsh_a  = harsh_wc/(harsh_wc+1);
+
+@sample
+in_l = spl0;
+in_r = spl1;
+
+hp_l += hpf_a*(in_l-hp_l);
+hp_r += hpf_a*(in_r-hp_r);
+l = in_l - hp_l;
+r = in_r - hp_r;
+
+pres_l += pres_a*(l-pres_l);
+pres_r += pres_a*(r-pres_r);
+
+air_l += air_a*(l-air_l);
+air_r += air_a*(r-air_r);
+
+harsh_l += harsh_a*(l-harsh_l);
+harsh_r += harsh_a*(r-harsh_r);
+
+l = l + (pres_l-l)*(pres_g-1);
+r = r + (pres_r-r)*(pres_g-1);
+
+l = l + (air_l-l)*(air_g-1);
+r = r + (air_r-r)*(air_g-1);
+
+l = l + (harsh_l-l)*(deharsh_g-1);
+r = r + (harsh_r-r)*(deharsh_g-1);
+
+spl0 = l;
+spl1 = r;

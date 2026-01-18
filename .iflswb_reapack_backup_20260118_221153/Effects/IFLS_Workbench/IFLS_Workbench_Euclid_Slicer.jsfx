@@ -1,0 +1,87 @@
+﻿// @description IFLS_Workbench_Euclid_Slicer.jsfx
+// @version 0.0.1
+
+desc:IFLS Workbench - Euclid Slicer (tempo-synced Euclidean gate)
+author: DF95
+version: 1.0
+
+slider1:16<1,32,1>Steps (n)
+slider2:5<0,32,1>Pulses (k)
+slider3:0<0,31,1>Rotation
+slider4:0.9<0,1,0.01>Gate width
+slider5:4<1,32,1>Note division (1/x)
+
+@init
+steps = 16;
+pulses = 5;
+rotation = 0;
+gate_width = 0.9;
+note_div = 4;
+
+need_rebuild = 1;
+
+function build_euclid(steps, pulses) (
+  steps = max(1, floor(steps+0.5));
+  pulses = max(0, floor(pulses+0.5));
+  pulses > steps ? pulses = steps;
+  i = 0;
+  loop(32, pattern[i] = 0; i += 1;);
+  pulses <= 0 ? (
+    i = 0;
+    loop(steps, pattern[i] = 0; i+=1;);
+  ) : (
+    bucket = 0;
+    i = 0;
+    loop(steps,
+      bucket += pulses;
+      bucket >= steps ? (
+        bucket -= steps;
+        pattern[i] = 1;
+      ) : (
+        pattern[i] = 0;
+      );
+      i += 1;
+    );
+  );
+);
+
+@slider
+new_steps    = slider1|0;
+new_pulses   = slider2|0;
+new_rot      = slider3|0;
+new_gate_w   = slider4;
+new_div      = slider5|0;
+
+(new_steps != steps) || (new_pulses != pulses) || (new_rot != rotation) ||
+(new_gate_w != gate_width) || (new_div != note_div) ? (
+  steps      = new_steps;
+  pulses     = new_pulses;
+  rotation   = new_rot;
+  gate_width = new_gate_w;
+  note_div   = new_div;
+  need_rebuild = 1;
+);
+
+@block
+bpm   = tempo > 0 ? tempo : 120;
+spb   = 60 / bpm;
+step_sec = spb / max(1, note_div);
+
+need_rebuild ? (
+  build_euclid(steps, pulses);
+  need_rebuild = 0;
+);
+
+pos_sec = play_position;
+pos_sec < 0 ? pos_sec = 0;
+step_pos = pos_sec / step_sec;
+cur_step = floor(step_pos) % max(1, steps);
+cur_step < 0 ? cur_step += steps;
+rot_step = (cur_step + rotation) % steps;
+step_phase = step_pos - floor(step_pos);
+
+@sample
+is_on = pattern[rot_step] == 1 && (step_phase <= gate_width) ? 1 : 0;
+gate_env += (is_on - gate_env) * 0.2;
+spl0 *= gate_env;
+spl1 *= gate_env;
