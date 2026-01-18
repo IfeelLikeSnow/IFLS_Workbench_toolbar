@@ -1,6 +1,6 @@
-﻿-- @description IFLS Workbench - Smart Slice (Print bus -> Slice -> TailTrim -> Spread gaps)
+-- @description IFLS Workbench - Smart Slice (Print bus -> Slice -> TailTrim -> Spread gaps)
 -- @author IFLS / DF95
--- @version 0.7.7
+-- @version 0.7.6
 -- @changelog
 --   + Multi-stem aware: creates/uses per-stem "IFLS Slices" tracks (multi-track routing)
 --   + Optional TailTrim (AudioAccessor) to remove trailing silence on slices
@@ -361,7 +361,7 @@ local function spread_selected_items(cfg)
   end
   table.sort(items, function(a,b) return a.pos < b.pos end)
 
-  math.randomseed(tonumber((tostring(r.time_precise()):gsub("%D","")) or os.time()))
+  math.randomseed(tonumber(tostring(r.time_precise()):gsub("%D","")) or os.time())
 
   local t = r.GetCursorPosition()
   for _,x in ipairs(items) do
