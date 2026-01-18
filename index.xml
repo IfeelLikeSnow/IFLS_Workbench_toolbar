@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="IFLS_Workbench" commit="17c6a97e1145b2423485e9098dc55945e43faa86">
+<index version="1" name="IFLS_Workbench" commit="c15a40bc31fc3ba081b39287e2c60e71eb6839a5">
   <category name=".iflswb_reapack_backup_20260118_221153/Effects/IFLS_Workbench">
     <reapack name="IFLS_Workbench_Drone_Granular.jsfx" type="effect" desc="IFLS_Workbench_Drone_Granular.jsfx">
       <version name="0.0.1" time="2026-01-18T21:12:05Z">
@@ -1188,6 +1188,13 @@
 + Fix: keep script header/version in sync with repo
 + Safety: more robust selection restore and no-op if nothing to slice]]></changelog>
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/20b3d009f88765f7fe1ede98697f1845242906ac/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Smart_PrintBus_Then_Slice.lua</source>
+      </version>
+      <version name="0.7.7" author="IFLS / DF95" time="2026-01-18T21:42:29Z">
+        <changelog><![CDATA[+ Multi-stem aware: creates/uses per-stem "IFLS Slices" tracks (multi-track routing)
++ Optional TailTrim (AudioAccessor) to remove trailing silence on slices
++ Optional Spread: arrange slices sequentially with user-configurable gaps (for delay/reverb tails)
++ Keeps FXChains dropdown workflow: slices remain on "IFLS Slices" tracks]]></changelog>
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/c15a40bc31fc3ba081b39287e2c60e71eb6839a5/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Smart_PrintBus_Then_Slice.lua</source>
       </version>
     </reapack>
     <reapack name="IFLS_Workbench_Slice_Smart_Trim_And_Spread.lua" type="script" desc="IFLS Workbench: Smart Slice -&gt; TailTrim -&gt; Spread (one-shot macro)">
