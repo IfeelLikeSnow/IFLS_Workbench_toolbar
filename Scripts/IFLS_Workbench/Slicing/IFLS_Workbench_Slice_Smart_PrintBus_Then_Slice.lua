@@ -14,6 +14,10 @@
 --   moves the rendered items to "IFLS Slices" tracks, then slices, trims tails, and spreads
 --   the slices with gaps so FX tails can ring out.
 
+-- IFLSWB safety: swallow multi-return (e.g. string.gsub returns (str,count))
+local function tonumber1(v) return tonumber(v) end
+
+
 local r = reaper
 
 -- ---------- helpers ----------
@@ -361,7 +365,7 @@ local function spread_selected_items(cfg)
   end
   table.sort(items, function(a,b) return a.pos < b.pos end)
 
-  math.randomseed(tonumber((tostring(r.time_precise()):gsub("%D","")) or os.time()))
+  math.randomseed(tonumber1((tostring(r.time_precise()):gsub("%D","")) or os.time()))
 
   local t = r.GetCursorPosition()
   for _,x in ipairs(items) do

@@ -1,4 +1,4 @@
--- @description IFLS Workbench: Spread selected slices with gaps (for delay/reverb tails)
+﻿-- @description IFLS Workbench: Spread selected slices with gaps (for delay/reverb tails)
 -- @author IFLS / DF95
 -- @version 0.7.6
 -- @about
@@ -101,7 +101,7 @@ local function main()
   r.Undo_BeginBlock()
   r.PreventUIRefresh(1)
 
-  math.randomseed(tonumber(tostring(r.time_precise()):gsub("%D","")) or os.time())
+  math.randomseed(tonumber((tostring(r.time_precise()):gsub("%D","")) or os.time()))
 
   for _,x in ipairs(items) do
     r.SetMediaItemInfo_Value(x.it, "D_POSITION", t)

@@ -73,7 +73,7 @@ end
 
 -- build menu
 local function naturalsort(a,b)
-  local function pad(s) return s:lower():gsub("(%d+)", function(n) return string.format("%09d", tonumber(n)) end) end
+  local function pad(s) return s:lower():gsub("(%d+)", function(n) return string.format("%09d", tonumber((n)) end) end
   return pad(a) < pad(b)
 end
 
