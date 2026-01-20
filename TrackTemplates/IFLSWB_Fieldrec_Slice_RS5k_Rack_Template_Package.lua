@@ -1,0 +1,8 @@
+-- @description IFLSWB Fieldrec Slice RS5k Rack Track Template
+-- @about
+--   Provides the IFLSWB track template used by the Fieldrec -> Smart Slicer -> RS5k rack workflow.
+-- @version 1.0
+-- @author IFeelLikeSnow
+-- @metapackage
+-- @provides
+--   [tracktpl] ../IFLSWB_Fieldrec_Slice_RS5k_Rack_Template.RTrackTemplate > TrackTemplates/IFLSWB_Fieldrec_Slice_RS5k_Rack_Template.RTrackTemplate

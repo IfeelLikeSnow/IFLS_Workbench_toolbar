@@ -10,9 +10,8 @@
 -- Changelog:
 --   1.2.0 - Fix metaheader (@about indentation, remove accidental tag-like lines), store bus GUIDs, stronger heuristics & safety checks.
 --
--- Implementation notes:
+-- Implementation notes - 
 --   - Detection is routing-first (receives/sends). Name is only a fallback.
---   - We never rely on current selection for finalize: GUIDs are persisted on the REAMP track.
 
 local r = reaper
 
