@@ -1,14 +1,8 @@
--- @description IFLS Workbench - Generate Fieldrec SmartSlicer Toolbar (ReaperMenu)
+﻿-- @description IFLS Workbench - Generate Fieldrec SmartSlicer Toolbar (ReaperMenu)
 -- @version 1.0.0
 -- @author IFLS Workbench
 -- @about
--- Generates a .ReaperMenu file that can be imported into a REAPER toolbar.
--- It references these scripts by their installed actions (named command IDs).
--- Steps:
---  1) Load the scripts into Action List first (so named IDs exist)
---  2) Run this script
---  3) Import the generated .ReaperMenu in Customize toolbar
-
+--   Generates a .ReaperMenu file that can be imported into a REAPER toolbar.--   It references these scripts by their installed actions (named command IDs).--   Steps:--   1) Load the scripts into Action List first (so named IDs exist)--   2) Run this script--   3) Import the generated .ReaperMenu in Customize toolbar
 local r = reaper
 
 local function join(a,b)

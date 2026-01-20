@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="IFLS_Workbench" commit="3e72724f49326eb4a3263427660f3103fa4d8b4d">
+<index version="1" name="IFLS_Workbench" commit="b0898410e66b75be42e72f76f0687586aaf71874">
   <category name=".iflswb_reapack_backup_20260118_221153/Effects/IFLS_Workbench">
     <reapack name="IFLS_Workbench_Drone_Granular.jsfx" type="effect" desc="IFLS_Workbench_Drone_Granular.jsfx">
       <version name="0.0.1" time="2026-01-18T21:12:05Z">
@@ -981,6 +981,22 @@
       </version>
     </reapack>
   </category>
+  <category name="reaper">
+    <reapack name="IFLSWB_TestSuite_CompileAll.lua" type="script" desc="IFLSWB TestSuite - Compile all Lua scripts in a repo folder">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Scans a repo root and tries to load/compile every *.lua (no execution). Prints FAIL list to console.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0.0" author="IFLS" time="2026-01-20T21:16:57Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/cc1fea1aafe457911b6db48f842cfe2435cb1080/reaper/IFLSWB_TestSuite_CompileAll.lua</source>
+      </version>
+    </reapack>
+  </category>
   <category name="Scripts/IFLS">
     <reapack name="IFLS_Cleanup_Duplicate_IFLS_Scripts.lua" type="script" desc="IFLS (compat stub): IFLS_Cleanup_Duplicate_IFLS_Scripts.lua -&gt; IFLS_Workbench_Cleanup_Duplicate_Workbench_Scripts.lua">
       <metadata>
@@ -1125,6 +1141,68 @@
     </reapack>
   </category>
   <category name="Scripts/IFLS_Workbench/Slicing">
+    <reapack name="IFLS_Workbench_Fieldrec_SmartSlice_Hits.lua" type="script" desc="IFLS Workbench - Fieldrec SmartSlice (HITS) [v3]">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Slices selected items (or items on selected tracks) as short one-shots. Includes: iterative threshold calibration + hysteresis/backtrack + HQ zero-cross snap (toggle).\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 HQ toggle is stored in ExtState (IFLSWB_SmartSlicer/HQ). Default is ON in v3.\par}
+}
+]]></description>
+      </metadata>
+      <version name="3.0.0" author="IFLS Workbench" time="2026-01-20T21:16:57Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/cc1fea1aafe457911b6db48f842cfe2435cb1080/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Fieldrec_SmartSlice_Hits.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Fieldrec_SmartSlice_HQ_Toggle.lua" type="script" desc="IFLS Workbench - Fieldrec SmartSlice HQ Toggle (Zero-Cross Snap) [v3]">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Toolbar toggle for HQ Mode. HQ = snap split points to nearest zero crossing.\par}
+}
+]]></description>
+      </metadata>
+      <version name="3.0.0" author="IFLS Workbench" time="2026-01-20T21:16:57Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/cc1fea1aafe457911b6db48f842cfe2435cb1080/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Fieldrec_SmartSlice_HQ_Toggle.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Fieldrec_SmartSlice_ModeMenu.lua" type="script" desc="IFLS Workbench - Fieldrec SmartSlice (Mode Menu + HQ Toggle) [v3]">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Popup menu:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 1)\tx360\tab SmartSlice: Hits\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 2)\tx360\tab SmartSlice: Textures\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 3)\tx360\tab SmartSlice: Auto (per-item classification)\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 4)\tx360\tab Toggle HQ Mode (zero-cross snap) [stored]\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="3.0.0" author="IFLS Workbench" time="2026-01-20T21:16:57Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/cc1fea1aafe457911b6db48f842cfe2435cb1080/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Fieldrec_SmartSlice_ModeMenu.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_Workbench_Fieldrec_SmartSlice_Textures.lua" type="script" desc="IFLS Workbench - Fieldrec SmartSlice (TEXTURES) [v3]">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Slices selected items (or items on selected tracks) into longer chunks for textures/scrapes. Includes: iterative threshold calibration + hysteresis/backtrack + HQ zero-cross snap (toggle).\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 HQ toggle is stored in ExtState (IFLSWB_SmartSlicer/HQ). Default is ON in v3.\par}
+}
+]]></description>
+      </metadata>
+      <version name="3.0.0" author="IFLS Workbench" time="2026-01-20T21:16:57Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/cc1fea1aafe457911b6db48f842cfe2435cb1080/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Fieldrec_SmartSlice_Textures.lua</source>
+      </version>
+    </reapack>
     <reapack name="IFLS_Workbench_Menu_Slicing_Dropdown.lua" type="script">
       <version name="0.7.6" author="IFLS / DF95" time="2026-01-13T12:30:57Z">
         <changelog><![CDATA[+ Fix: GetMousePosition() only returns (x,y) -> menu now opens at the correct mouse position
@@ -1157,14 +1235,13 @@
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/20b3d009f88765f7fe1ede98697f1845242906ac/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Direct.lua</source>
       </version>
     </reapack>
-    <reapack name="IFLS_Workbench_Slice_Smart_PrintBus_Then_Slice.lua" type="script" desc="IFLS Workbench - Smart Slice (Print bus -&gt; Slice -&gt; TailTrim -&gt; Spread gaps)">
+    <reapack name="IFLS_Workbench_Slice_Smart_PrintBus_Then_Slice.lua" type="script" desc="IFLS Workbench - Smart Slice (Pre-Analyze Onsets + Peak Tail Detection)">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa0 \li360 \fi-360 1)\tx360\tab Select track(s) you want to print/render to stems.\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 2)\tx360\tab Run this script. It renders selected tracks to stem tracks (mono/stereo auto-detect), mutes originals, moves the rendered items to "IFLS Slices" tracks, then slices, trims tails, and spreads the slices with gaps so FX tails can ring out.\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 One-click smart slicing: pre-analyze onsets, detect tails by silence (peak-based), then split+trim.\par}
 }
 ]]></description>
       </metadata>
@@ -1195,6 +1272,9 @@
 + Optional Spread: arrange slices sequentially with user-configurable gaps (for delay/reverb tails)
 + Keeps FXChains dropdown workflow: slices remain on "IFLS Slices" tracks]]></changelog>
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/c15a40bc31fc3ba081b39287e2c60e71eb6839a5/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Smart_PrintBus_Then_Slice.lua</source>
+      </version>
+      <version name="3.0.0" author="IFLS" time="2026-01-20T21:16:57Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/cc1fea1aafe457911b6db48f842cfe2435cb1080/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Smart_PrintBus_Then_Slice.lua</source>
       </version>
     </reapack>
     <reapack name="IFLS_Workbench_Slice_Smart_Trim_And_Spread.lua" type="script" desc="IFLS Workbench: Smart Slice -&gt; TailTrim -&gt; Spread (one-shot macro)">
@@ -1235,13 +1315,13 @@
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/20b3d009f88765f7fe1ede98697f1845242906ac/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_FadeShape_Set_Slow.lua</source>
       </version>
     </reapack>
-    <reapack name="IFLS_Workbench_Slicing_PostFix_Extend_And_TailDetect.lua" type="script" desc="IFLS Workbench - Slicing PostFix: Extend slices + Tail detect last">
+    <reapack name="IFLS_Workbench_Slicing_PostFix_Extend_And_TailDetect.lua" type="script" desc="IFLS WB: PostFix HQ (Extend + TailDetect to Silence)">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Fix micro-slices by extending each selected item to next selected item's start (minus gap). Then extends the LAST selected item until "silence" using peak scanning (GetMediaItemTake_Peaks).\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Extends selected slices to the next start, and for the last slice per track detects the tail end (to silence) using audio RMS analysis.\par}
 }
 ]]></description>
       </metadata>
@@ -1249,13 +1329,13 @@
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/2129bd347e381a25790b742d338e9cccb73636b3/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_PostFix_Extend_And_TailDetect.lua</source>
       </version>
     </reapack>
-    <reapack name="IFLS_Workbench_Slicing_PostFix_ExtendSlices_ToNextStart.lua" type="script" desc="IFLS Workbench - Slicing PostFix: Extend slices to next start">
+    <reapack name="IFLS_Workbench_Slicing_PostFix_ExtendSlices_ToNextStart.lua" type="script" desc="IFLS WB: PostFix (Extend slices to next start)">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Fixes micro-slices by extending each selected item to the next selected item's start (minus gap). Use after Smart Slicing (PrintBus) to restore meaningful slice lengths.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Extends each selected slice's length so it reaches the next slice start (per track). Useful after transient-only slicing.\par}
 }
 ]]></description>
       </metadata>
@@ -1277,6 +1357,34 @@
       </version>
       <version name="0.0.1" time="2026-01-17T15:12:30Z">
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_ZeroCross_PostFix.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLSWB_Fieldrec_SmartSlicer_Core.lua" type="script" desc="IFLSWB Fieldrec SmartSlicer Core (v3) - iterative threshold calibration + hysteresis/backtrack + HQ zero-cross snap">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Core library used by:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab IFLS_Workbench_Fieldrec_SmartSlice_Hits.lua\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab IFLS_Workbench_Fieldrec_SmartSlice_Textures.lua\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab IFLS_Workbench_Fieldrec_SmartSlice_ModeMenu.lua\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Improvements in v3:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 1)\tx360\tab Iterative threshold calibration (auto) to hit a target onset-count range\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 2)\tx360\tab Hysteresis + backtracking in onset detection (less retrigger, earlier onsets)\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 3)\tx360\tab HQ Mode (toggle): snap split points to nearest zero crossing (audio-accessor)\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Uses:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab GetMediaItemTake_Peaks (fast envelope) + CreateTakeAudioAccessor/GetAudioAccessorSamples (HQ snap)\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Safety:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Works on selected items (or all items on selected tracks if none selected).\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Non-destructive-ish: splits items but does not glue/render. Use Undo if needed.\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Notes:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab HQ zero-cross snap is heavier. It only runs on split points and reads a tiny window around them.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="3.0.0" author="IFLS Workbench (generated)" time="2026-01-20T21:16:57Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/cc1fea1aafe457911b6db48f842cfe2435cb1080/Scripts/IFLS_Workbench/Slicing/IFLSWB_Fieldrec_SmartSlicer_Core.lua</source>
       </version>
     </reapack>
   </category>
@@ -1390,16 +1498,13 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Topology-first auto-detection of FX/Coloring/Master buses via routing graph (sends/receives). First run (ARM): creates/arms "REAMP PRINT (from FX Bus)" right after the FX bus and routes FX->REAMP post-FX. Second run (FINALIZE): disarms REAMP, routes REAMP to Coloring/Master (if found), and mutes/bypasses FX + sources. Safety: stores bus GUIDs on the REAMP track for reliable finalize, and aborts if detection confidence is low. Tip: If your project uses folder-only routing or detection is ambiguous, select the FX bus track and run again.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Topology-first auto-detection of FX/Coloring/Master buses via routing graph (sends/receives). Topology-first auto-detection of FX/Coloring/Master buses via routing graph (sends/receives). First run (ARM): creates/arms "REAMP PRINT (from FX Bus)" right after the FX bus and routes FX->REAMP post-FX. Second run (FINALIZE): disarms REAMP, routes REAMP to Coloring/Master (if found), and mutes/bypasses FX + sources. Safety: stores bus GUIDs on the REAMP track for reliable finalize, and aborts if detection confidence is low. Tip: If your project uses folder-only routing or detection is ambiguous, select the FX bus track and run again.\par}
 }
 ]]></description>
       </metadata>
       <version name="1.2.0" author="IFLS Workbench" time="2026-01-19T22:17:31Z">
-        <changelog><![CDATA[1.2.0 - Fix metaheader (@about indentation, remove accidental tag-like lines), store bus GUIDs, stronger heuristics & safety checks.
-
-Implementation notes: 
-- We never rely on current selection for finalize: GUIDs are persisted on the REAMP track.]]></changelog>
-        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/3e72724f49326eb4a3263427660f3103fa4d8b4d/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Reamp_Print_Toggle_From_FXBus.lua</source>
+        <changelog><![CDATA[1.2.0 - Fix metaheader (@about indentation, remove accidental tag-like lines), store bus GUIDs, stronger heuristics & safety checks.]]></changelog>
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/b0898410e66b75be42e72f76f0687586aaf71874/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Reamp_Print_Toggle_From_FXBus.lua</source>
       </version>
     </reapack>
     <reapack name="IFLS_Workbench_Select_Items_On_IFLS_Slices_Tracks.lua" type="script" desc="IFLS Workbench: Select all items on IFLS Slices tracks">
@@ -1530,6 +1635,34 @@ Implementation notes:
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/c5820a3692d838c6084a2c7314f16ab57b886b9d/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Test_SWS_Split_Items_At_Transients.lua</source>
       </version>
     </reapack>
+    <reapack name="IFLSWB_Create_Fieldrec_IDM_Template.lua" type="script" desc="IFLS Workbench - Create Fieldrec → Slice → RS5K Rack + Resample Bus (IDM-friendly)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Builds a small track layout for field recordings and IDM slicing workflows.\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.4.0" author="IFLS / DF95" time="2026-01-20T21:54:36Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/b0898410e66b75be42e72f76f0687586aaf71874/Scripts/IFLS_Workbench/Tools/IFLSWB_Create_Fieldrec_IDM_Template.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLSWB_Generate_Fieldrec_SmartSlicer_Toolbar_ReaperMenu.lua" type="script" desc="IFLS Workbench - Generate Fieldrec SmartSlicer Toolbar (ReaperMenu)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Generates a .ReaperMenu file that can be imported into a REAPER toolbar.-- It references these scripts by their installed actions (named command IDs).-- Steps:-- 1) Load the scripts into Action List first (so named IDs exist)-- 2) Run this script-- 3) Import the generated .ReaperMenu in Customize toolbar\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0.0" author="IFLS Workbench" time="2026-01-20T21:54:36Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/b0898410e66b75be42e72f76f0687586aaf71874/Scripts/IFLS_Workbench/Tools/IFLSWB_Generate_Fieldrec_SmartSlicer_Toolbar_ReaperMenu.lua</source>
+      </version>
+    </reapack>
     <reapack name="IFLSWB_Generate_IFLSWB_Toolbar_ReaperMenu_v2.lua" type="script" desc="IFLS WB: Generate Toolbar v2 (no individual JSFX buttons)">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
@@ -1542,6 +1675,48 @@ Implementation notes:
       </metadata>
       <version name="2.0.0" author="IFLS Workbench" time="2026-01-19T22:12:05Z">
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/981712752f60304a3c609472fc762505d0a3b30e/Scripts/IFLS_Workbench/Tools/IFLSWB_Generate_IFLSWB_Toolbar_ReaperMenu_v2.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLSWB_Generate_IFLSWB_Toolbar_ReaperMenu_v3.lua" type="script" desc="IFLS WB: Generate Toolbar v3 (SmartSlicing + SamplePack + ReampPrint)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Generates IFLSWB_Toolbar_v3.ReaperMenu (JSFX menu only + SmartSlicing + SamplePack buttons + ReampPrint + AutoSplit AUTO).\par}
+}
+]]></description>
+      </metadata>
+      <version name="3.1.3" author="IFLS Workbench" time="2026-01-20T21:16:57Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/cc1fea1aafe457911b6db48f842cfe2435cb1080/Scripts/IFLS_Workbench/Tools/IFLSWB_Generate_IFLSWB_Toolbar_ReaperMenu_v3.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLSWB_RS5K_Rack_From_SelectedItems.lua" type="script" desc="IFLS Workbench - Build RS5K Rack from Selected Items (basic)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Creates a new track "RS5K Rack" and inserts one ReaSamplOmatic5000 instance per selected item,-- loading the item's source file into FILE0 and committing via "DONE".-- Note: mapping (note ranges) is left at defaults; adjust within RS5K or extend this script later.\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.4.0" author="IFLS / DF95" time="2026-01-20T21:54:36Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/b0898410e66b75be42e72f76f0687586aaf71874/Scripts/IFLS_Workbench/Tools/IFLSWB_RS5K_Rack_From_SelectedItems.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLSWB_SmartSlicer_Store_CommandIDs_Helper.lua" type="script" desc="IFLS Workbench - SmartSlicer: Store Command IDs (one-time helper)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Stores this script's Named Command ID (and known filenames) into ExtState so the toolbar generator can reference them.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0.0" author="IFLS Workbench" time="2026-01-20T21:54:36Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/b0898410e66b75be42e72f76f0687586aaf71874/Scripts/IFLS_Workbench/Tools/IFLSWB_SmartSlicer_Store_CommandIDs_Helper.lua</source>
       </version>
     </reapack>
   </category>
@@ -1716,6 +1891,178 @@ Implementation notes:
       </metadata>
       <version name="0.7.8" author="IFLS" time="2026-01-13T21:00:15Z">
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Scripts/IFLS_Workbench/Tools/JSFX/IFLS_Workbench_Menu_JSFX_DSP_Tools.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="Scripts/IFLS_Workbench/Tools/SamplePack">
+    <reapack name="IFLSWB_AutoSplit_MixedContent.lua" type="script" desc="IFLS WB: AutoSplit Mixed Content (analyze -&gt; split into HIT/TEX chunks)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Analyzes selected audio items and splits them into HIT_/TEX_/MIX_ chunks using transient density, duration and confidence scoring (fieldrec mixed content).\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0.3" author="IFLS Workbench" time="2026-01-20T21:16:57Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/cc1fea1aafe457911b6db48f842cfe2435cb1080/Scripts/IFLS_Workbench/Tools/SamplePack/IFLSWB_AutoSplit_MixedContent.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLSWB_AutoSplit_Then_SmartSlice_AUTO.lua" type="script" desc="IFLS WB: AutoSplit + SmartSlice AUTO (mixed content heuristic)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 One-click: AutoSplit mixed content into HIT_/TEX_/MIX_ chunks using confidence scoring, then runs SmartSlice(Hits) for HIT and SmartSlice(Textures) for TEX+MIX. Optional PostFix HQ over the affected time-range.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0.3" author="IFLS Workbench" time="2026-01-20T21:16:57Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/cc1fea1aafe457911b6db48f842cfe2435cb1080/Scripts/IFLS_Workbench/Tools/SamplePack/IFLSWB_AutoSplit_Then_SmartSlice_AUTO.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLSWB_SamplePack_Export_Menu.lua" type="script" desc="IFLS WB: SamplePack Export Menu (DRY / POST-BUS / Last settings)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Popup menu that runs one of the export scripts: DRY (selected media items), POST-BUS (selected media items via master), or legacy export (last settings).\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0.0" author="IFLS Workbench" time="2026-01-20T21:16:57Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/cc1fea1aafe457911b6db48f842cfe2435cb1080/Scripts/IFLS_Workbench/Tools/SamplePack/IFLSWB_SamplePack_Export_Menu.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLSWB_SamplePack_Export_SelectedItems_DRY.lua" type="script" desc="IFLS WB: SamplePack Export DRY (Selected media items)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Renders each selected item from its media source (no track FX), using render bounds=Selected media items and render source=Selected media items.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0.1" author="IFLS Workbench" time="2026-01-20T21:16:57Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/cc1fea1aafe457911b6db48f842cfe2435cb1080/Scripts/IFLS_Workbench/Tools/SamplePack/IFLSWB_SamplePack_Export_SelectedItems_DRY.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLSWB_SamplePack_Export_SelectedItems_LastSettings.lua" type="script" desc="IFLS WB: SamplePack Export (Render selected items via master, last settings)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Sets render bounds to selected media items, sets output folder/pattern, then triggers "Render project using the most recent render settings" (41824).\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0.0" author="IFLS Workbench" time="2026-01-20T21:16:57Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/cc1fea1aafe457911b6db48f842cfe2435cb1080/Scripts/IFLS_Workbench/Tools/SamplePack/IFLSWB_SamplePack_Export_SelectedItems_LastSettings.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLSWB_SamplePack_Export_SelectedItems_POSTBUS.lua" type="script" desc="IFLS WB: SamplePack Export POST-BUS (Selected items via master)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Renders each selected item {\i via master} (includes FX-Bus -> Coloring -> Master routing), using render bounds=Selected media items and render source=Selected media items via master.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0.1" author="IFLS Workbench" time="2026-01-20T21:16:57Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/cc1fea1aafe457911b6db48f842cfe2435cb1080/Scripts/IFLS_Workbench/Tools/SamplePack/IFLSWB_SamplePack_Export_SelectedItems_POSTBUS.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLSWB_SamplePack_GainStage_Loops_LUFSI_TP.lua" type="script" desc="IFLS WB: SamplePack GainStage (Loops LUFS-I -&gt; TP safe)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Normalizes selected loop items to a LUFS-I target, then clamps to a true-peak ceiling (-1 dBTP). Targets are sample-pack friendly.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0.0" author="IFLS Workbench" time="2026-01-20T21:16:57Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/cc1fea1aafe457911b6db48f842cfe2435cb1080/Scripts/IFLS_Workbench/Tools/SamplePack/IFLSWB_SamplePack_GainStage_Loops_LUFSI_TP.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLSWB_SamplePack_GainStage_SelectedItems_DRY.lua" type="script" desc="IFLS WB: SamplePack GainStage (DRY one-shots peak -3 dBFS)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Applies item gain so SAMPLE PEAK reaches -3 dBFS (headroom-friendly DRY standard).\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0.0" author="IFLS Workbench" time="2026-01-20T21:16:57Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/cc1fea1aafe457911b6db48f842cfe2435cb1080/Scripts/IFLS_Workbench/Tools/SamplePack/IFLSWB_SamplePack_GainStage_SelectedItems_DRY.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLSWB_SamplePack_GainStage_SelectedItems_WET.lua" type="script" desc="IFLS WB: SamplePack GainStage (WET one-shots true peak -1 dBTP)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Applies item gain so TRUE PEAK reaches -1.0 dBTP (safe ceiling for WET prints).\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0.0" author="IFLS Workbench" time="2026-01-20T21:16:57Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/cc1fea1aafe457911b6db48f842cfe2435cb1080/Scripts/IFLS_Workbench/Tools/SamplePack/IFLSWB_SamplePack_GainStage_SelectedItems_WET.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLSWB_SamplePack_Pipeline_PostFixHQ_GainDry_ExportPostBus.lua" type="script" desc="IFLS WB: SamplePack Pipeline (PostFix HQ -&gt; GainStage DRY -&gt; Export POST-BUS)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Runs: PostFix HQ (extend+tail-detect) -> GainStage DRY (peak -3) -> Export POST-BUS (selected items via master: FX-Bus -> Coloring -> Master).\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0.0" author="IFLS Workbench" time="2026-01-20T21:16:57Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/cc1fea1aafe457911b6db48f842cfe2435cb1080/Scripts/IFLS_Workbench/Tools/SamplePack/IFLSWB_SamplePack_Pipeline_PostFixHQ_GainDry_ExportPostBus.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLSWB_SamplePack_Pipeline_PostFixHQ_GainWet_Export.lua" type="script" desc="IFLS WB: SamplePack Pipeline (PostFix HQ -&gt; GainStage WET -&gt; Export)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Runs: PostFix HQ (extend+tail-detect) -> GainStage WET (TP -1) -> Export selected items (last render settings).\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0.0" author="IFLS Workbench" time="2026-01-20T21:16:57Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/cc1fea1aafe457911b6db48f842cfe2435cb1080/Scripts/IFLS_Workbench/Tools/SamplePack/IFLSWB_SamplePack_Pipeline_PostFixHQ_GainWet_Export.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="TrackTemplates">
+    <reapack name="IFLSWB_Fieldrec_Slice_RS5k_Rack_Template_Package.lua" type="script" desc="IFLSWB Fieldrec Slice RS5k Rack Track Template">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Provides the IFLSWB track template used by the Fieldrec -> Smart Slicer -> RS5k rack workflow.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="IFeelLikeSnow" time="2026-01-20T21:54:36Z">
+        <source type="tracktpl" file="TrackTemplates/IFLSWB_Fieldrec_Slice_RS5k_Rack_Template.RTrackTemplate">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/b0898410e66b75be42e72f76f0687586aaf71874/IFLSWB_Fieldrec_Slice_RS5k_Rack_Template.RTrackTemplate</source>
       </version>
     </reapack>
   </category>
