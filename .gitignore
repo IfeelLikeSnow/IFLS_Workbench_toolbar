@@ -6,3 +6,6 @@ Scripts/IFLS_Workbench/_ParamDumps/
 
 *.bak_*
 
+.bak_*
+*.bak
+.iflswb_reapack_backup_*
