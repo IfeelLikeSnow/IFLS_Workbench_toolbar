@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="IFLS_Workbench" commit="cc1fea1aafe457911b6db48f842cfe2435cb1080">
+<index version="1" name="IFLS_Workbench" commit="b0898410e66b75be42e72f76f0687586aaf71874">
   <category name=".iflswb_reapack_backup_20260118_221153/Effects/IFLS_Workbench">
     <reapack name="IFLS_Workbench_Drone_Granular.jsfx" type="effect" desc="IFLS_Workbench_Drone_Granular.jsfx">
       <version name="0.0.1" time="2026-01-18T21:12:05Z">
@@ -1498,16 +1498,13 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Topology-first auto-detection of FX/Coloring/Master buses via routing graph (sends/receives). First run (ARM): creates/arms "REAMP PRINT (from FX Bus)" right after the FX bus and routes FX->REAMP post-FX. Second run (FINALIZE): disarms REAMP, routes REAMP to Coloring/Master (if found), and mutes/bypasses FX + sources. Safety: stores bus GUIDs on the REAMP track for reliable finalize, and aborts if detection confidence is low. Tip: If your project uses folder-only routing or detection is ambiguous, select the FX bus track and run again.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Topology-first auto-detection of FX/Coloring/Master buses via routing graph (sends/receives). Topology-first auto-detection of FX/Coloring/Master buses via routing graph (sends/receives). First run (ARM): creates/arms "REAMP PRINT (from FX Bus)" right after the FX bus and routes FX->REAMP post-FX. Second run (FINALIZE): disarms REAMP, routes REAMP to Coloring/Master (if found), and mutes/bypasses FX + sources. Safety: stores bus GUIDs on the REAMP track for reliable finalize, and aborts if detection confidence is low. Tip: If your project uses folder-only routing or detection is ambiguous, select the FX bus track and run again.\par}
 }
 ]]></description>
       </metadata>
       <version name="1.2.0" author="IFLS Workbench" time="2026-01-19T22:17:31Z">
-        <changelog><![CDATA[1.2.0 - Fix metaheader (@about indentation, remove accidental tag-like lines), store bus GUIDs, stronger heuristics & safety checks.
-
-Implementation notes: 
-- We never rely on current selection for finalize: GUIDs are persisted on the REAMP track.]]></changelog>
-        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/3e72724f49326eb4a3263427660f3103fa4d8b4d/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Reamp_Print_Toggle_From_FXBus.lua</source>
+        <changelog><![CDATA[1.2.0 - Fix metaheader (@about indentation, remove accidental tag-like lines), store bus GUIDs, stronger heuristics & safety checks.]]></changelog>
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/b0898410e66b75be42e72f76f0687586aaf71874/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Reamp_Print_Toggle_From_FXBus.lua</source>
       </version>
     </reapack>
     <reapack name="IFLS_Workbench_Select_Items_On_IFLS_Slices_Tracks.lua" type="script" desc="IFLS Workbench: Select all items on IFLS Slices tracks">
@@ -1638,6 +1635,34 @@ Implementation notes:
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/c5820a3692d838c6084a2c7314f16ab57b886b9d/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Test_SWS_Split_Items_At_Transients.lua</source>
       </version>
     </reapack>
+    <reapack name="IFLSWB_Create_Fieldrec_IDM_Template.lua" type="script" desc="IFLS Workbench - Create Fieldrec → Slice → RS5K Rack + Resample Bus (IDM-friendly)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Builds a small track layout for field recordings and IDM slicing workflows.\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.4.0" author="IFLS / DF95" time="2026-01-20T21:54:36Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/b0898410e66b75be42e72f76f0687586aaf71874/Scripts/IFLS_Workbench/Tools/IFLSWB_Create_Fieldrec_IDM_Template.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLSWB_Generate_Fieldrec_SmartSlicer_Toolbar_ReaperMenu.lua" type="script" desc="IFLS Workbench - Generate Fieldrec SmartSlicer Toolbar (ReaperMenu)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Generates a .ReaperMenu file that can be imported into a REAPER toolbar.-- It references these scripts by their installed actions (named command IDs).-- Steps:-- 1) Load the scripts into Action List first (so named IDs exist)-- 2) Run this script-- 3) Import the generated .ReaperMenu in Customize toolbar\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0.0" author="IFLS Workbench" time="2026-01-20T21:54:36Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/b0898410e66b75be42e72f76f0687586aaf71874/Scripts/IFLS_Workbench/Tools/IFLSWB_Generate_Fieldrec_SmartSlicer_Toolbar_ReaperMenu.lua</source>
+      </version>
+    </reapack>
     <reapack name="IFLSWB_Generate_IFLSWB_Toolbar_ReaperMenu_v2.lua" type="script" desc="IFLS WB: Generate Toolbar v2 (no individual JSFX buttons)">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
@@ -1664,6 +1689,34 @@ Implementation notes:
       </metadata>
       <version name="3.1.3" author="IFLS Workbench" time="2026-01-20T21:16:57Z">
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/cc1fea1aafe457911b6db48f842cfe2435cb1080/Scripts/IFLS_Workbench/Tools/IFLSWB_Generate_IFLSWB_Toolbar_ReaperMenu_v3.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLSWB_RS5K_Rack_From_SelectedItems.lua" type="script" desc="IFLS Workbench - Build RS5K Rack from Selected Items (basic)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Creates a new track "RS5K Rack" and inserts one ReaSamplOmatic5000 instance per selected item,-- loading the item's source file into FILE0 and committing via "DONE".-- Note: mapping (note ranges) is left at defaults; adjust within RS5K or extend this script later.\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.4.0" author="IFLS / DF95" time="2026-01-20T21:54:36Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/b0898410e66b75be42e72f76f0687586aaf71874/Scripts/IFLS_Workbench/Tools/IFLSWB_RS5K_Rack_From_SelectedItems.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLSWB_SmartSlicer_Store_CommandIDs_Helper.lua" type="script" desc="IFLS Workbench - SmartSlicer: Store Command IDs (one-time helper)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Stores this script's Named Command ID (and known filenames) into ExtState so the toolbar generator can reference them.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0.0" author="IFLS Workbench" time="2026-01-20T21:54:36Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/b0898410e66b75be42e72f76f0687586aaf71874/Scripts/IFLS_Workbench/Tools/IFLSWB_SmartSlicer_Store_CommandIDs_Helper.lua</source>
       </version>
     </reapack>
   </category>
@@ -1994,6 +2047,22 @@ Implementation notes:
       </metadata>
       <version name="1.0.0" author="IFLS Workbench" time="2026-01-20T21:16:57Z">
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/cc1fea1aafe457911b6db48f842cfe2435cb1080/Scripts/IFLS_Workbench/Tools/SamplePack/IFLSWB_SamplePack_Pipeline_PostFixHQ_GainWet_Export.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="TrackTemplates">
+    <reapack name="IFLSWB_Fieldrec_Slice_RS5k_Rack_Template_Package.lua" type="script" desc="IFLSWB Fieldrec Slice RS5k Rack Track Template">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Provides the IFLSWB track template used by the Fieldrec -> Smart Slicer -> RS5k rack workflow.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="IFeelLikeSnow" time="2026-01-20T21:54:36Z">
+        <source type="tracktpl" file="TrackTemplates/IFLSWB_Fieldrec_Slice_RS5k_Rack_Template.RTrackTemplate">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/b0898410e66b75be42e72f76f0687586aaf71874/IFLSWB_Fieldrec_Slice_RS5k_Rack_Template.RTrackTemplate</source>
       </version>
     </reapack>
   </category>
