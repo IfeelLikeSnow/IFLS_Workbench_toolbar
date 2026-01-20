@@ -1,161 +1,157 @@
-﻿-- @description IFLS Workbench - Slicing PostFix: Extend slices + Tail detect last
+-- @description IFLS WB: PostFix HQ (Extend + TailDetect to Silence)
 -- @version 1.0.0
--- @author IFLS
--- @about
---   Fix micro-slices by extending each selected item to next selected item's start (minus gap).
---   Then extends the LAST selected item until "silence" using peak scanning (GetMediaItemTake_Peaks).
+-- @author IFLS Workbench
+-- @about Extends selected slices to the next start, and for the last slice per track detects the tail end (to silence) using audio RMS analysis.
 -- @provides [main] .
 
--- =========================
--- User settings
--- =========================
-local GAP_MS              = 5       -- gap between slices (avoid overlaps)
-local MIN_LEN_MS          = 40      -- never shorter than this
-local EXTEND_LAST         = true
-local DISABLE_LOOP_SOURCE_LAST = true
+local r = reaper
+local function db_to_amp(db) return 10^(db/20) end
 
--- Tail detection settings
-local SILENCE_DB          = -45.0   -- threshold
-local HOLD_MS             = 140     -- must stay silent this long to count as end
-local PEAKRATE            = 200.0   -- peaks/sec (higher = more accurate)
-local LAST_MAX_SEARCH_MS  = 8000    -- cap search window (ms)
+local CFG = {
+  samplerate = 12000,
+  channels = 2,
+  block = 512,
+  hop = 256,
+  silence_db = -60.0,
+  hold_s = 0.12,
+  pad_s = 0.01,
+  max_tail_s = 12.0,
+}
 
--- =========================
--- Helpers
--- =========================
-local function db_to_lin(db) return 10^(db/20) end
-
-local function band20(x)
-  -- GetMediaItemTake_Peaks packs sample count in low 20 bits
-  if _VERSION:match("5%.3") or _VERSION:match("5%.4") then
-    return x & 0xFFFFF
-  elseif bit32 then
-    return bit32.band(x, 0xFFFFF)
-  else
-    return x
-  end
+local function sort_items_by_pos(items)
+  table.sort(items, function(a,b)
+    return r.GetMediaItemInfo_Value(a,"D_POSITION") < r.GetMediaItemInfo_Value(b,"D_POSITION")
+  end)
 end
 
-local function get_sel_items_sorted()
-  local t = {}
-  local n = reaper.CountSelectedMediaItems(0)
+local function get_selected_items_by_track()
+  local by_tr = {}
+  local n = r.CountSelectedMediaItems(0)
   for i=0,n-1 do
-    local it = reaper.GetSelectedMediaItem(0,i)
-    local pos = reaper.GetMediaItemInfo_Value(it, "D_POSITION")
-    t[#t+1] = {item=it, pos=pos}
+    local it = r.GetSelectedMediaItem(0,i)
+    local tr = r.GetMediaItem_Track(it)
+    by_tr[tr] = by_tr[tr] or {}
+    table.insert(by_tr[tr], it)
   end
-  table.sort(t, function(a,b) return a.pos < b.pos end)
-  return t
+  return by_tr
 end
 
-local function set_item_len(it, len_s)
-  local min_s = MIN_LEN_MS/1000.0
-  if len_s < min_s then len_s = min_s end
-  reaper.SetMediaItemInfo_Value(it, "D_LENGTH", len_s)
+local function get_take(item)
+  local take = r.GetActiveTake(item)
+  if not take or r.TakeIsMIDI(take) then return nil end
+  return take
 end
 
-local function find_tail_end_by_peaks(take, start_time, max_search_s, thresh_lin, hold_s)
-  if not take or reaper.TakeIsMIDI(take) then return nil end
+local function get_max_item_end_from_source(item)
+  local take = get_take(item)
+  if not take then return nil end
+  local src = r.GetMediaItemTake_Source(take)
+  if not src then return nil end
 
-  local numch = 2 -- robust for stereo
-  local hold_frames = math.max(1, math.ceil(hold_s * PEAKRATE))
-  local max_frames  = math.max(1, math.ceil(max_search_s * PEAKRATE))
-  local chunk_frames = 2000
+  local src_len = select(1, r.GetMediaSourceLength(src))
+  local startoffs = r.GetMediaItemTakeInfo_Value(take, "D_STARTOFFS")
+  local playrate = r.GetMediaItemTakeInfo_Value(take, "D_PLAYRATE")
+  if playrate <= 0 then playrate = 1.0 end
 
-  local heard_signal = false
-  local silent_run = 0
-  local first_silent_frame = nil
-  local fetched = 0
+  local item_pos = r.GetMediaItemInfo_Value(item, "D_POSITION")
+  local item_len = r.GetMediaItemInfo_Value(item, "D_LENGTH")
 
-  while fetched < max_frames do
-    local want = math.min(chunk_frames, max_frames - fetched)
-    local block_sz = want * numch
-    local buf = reaper.new_array(block_sz * 2)
-    local t0 = start_time + (fetched / PEAKRATE)
+  local end_src = startoffs + (item_len * playrate)
+  local remaining_src = src_len - end_src
+  if remaining_src < 0 then remaining_src = 0 end
+  local remaining_proj = remaining_src / playrate
+  return item_pos + item_len + remaining_proj
+end
 
-    local ret = reaper.GetMediaItemTake_Peaks(take, PEAKRATE, t0, numch, want, 0, buf)
-    local got = band20(ret)
-    if not got or got <= 0 then break end
+local function detect_tail_end_project_time(item)
+  local take = get_take(item)
+  if not take then return nil end
 
-    for frame=0,got-1 do
-      local max_abs = 0.0
-      for ch=0,numch-1 do
-        local i_max = frame*numch + ch + 1
-        local i_min = block_sz + frame*numch + ch + 1
-        local v1 = math.abs(buf[i_max] or 0.0)
-        local v2 = math.abs(buf[i_min] or 0.0)
-        local v = (v1 > v2) and v1 or v2
-        if v > max_abs then max_abs = v end
+  local item_pos = r.GetMediaItemInfo_Value(item, "D_POSITION")
+  local item_len = r.GetMediaItemInfo_Value(item, "D_LENGTH")
+  local scan_start = item_pos + item_len
+
+  local max_end = get_max_item_end_from_source(item) or (scan_start + CFG.max_tail_s)
+  max_end = math.min(max_end, scan_start + CFG.max_tail_s)
+  if max_end <= scan_start + 1e-6 then return scan_start end
+
+  local aa = r.CreateTakeAudioAccessor(take)
+  if not aa then return nil end
+
+  local sr, nch = CFG.samplerate, CFG.channels
+  local block, hop = CFG.block, CFG.hop
+  local silence_amp = db_to_amp(CFG.silence_db)
+
+  local buf = r.new_array(block*nch)
+  local silent_run = 0.0
+  local t = scan_start
+  local found = nil
+
+  while t < max_end do
+    buf.clear()
+    local ok = r.GetAudioAccessorSamples(aa, sr, nch, t, math.floor(block), buf)
+    if ok <= 0 then break end
+    local arr = buf.table()
+    local sumsq = 0.0
+    local n = ok*nch
+    for i=1,n do
+      local v = arr[i]
+      sumsq = sumsq + v*v
+    end
+    local rms = math.sqrt(sumsq / math.max(1,n))
+    local dt = ok / sr
+
+    if rms <= silence_amp then
+      silent_run = silent_run + dt
+      if silent_run >= CFG.hold_s then
+        found = t - (silent_run - CFG.hold_s)
+        break
       end
-
-      if max_abs >= thresh_lin then
-        heard_signal = true
-        silent_run = 0
-        first_silent_frame = nil
-      else
-        if heard_signal then
-          silent_run = silent_run + 1
-          if silent_run == 1 then
-            first_silent_frame = fetched + frame
-          end
-          if silent_run >= hold_frames then
-            local end_frame = first_silent_frame -- start of silence run
-            return start_time + (end_frame / PEAKRATE)
-          end
-        end
-      end
+    else
+      silent_run = 0.0
     end
 
-    fetched = fetched + got
-    if got < want then break end
+    t = t + (hop/sr)
   end
 
-  return nil
+  r.DestroyAudioAccessor(aa)
+  if not found then found = max_end end
+  return found + CFG.pad_s
 end
 
--- =========================
--- Main
--- =========================
 local function main()
-  local items = get_sel_items_sorted()
-  if #items < 1 then return end
+  local by_tr = get_selected_items_by_track()
+  local any = false
 
-  reaper.Undo_BeginBlock()
-  reaper.PreventUIRefresh(1)
-
-  local gap_s = GAP_MS/1000.0
-
-  -- 1) Extend all but last to next start
-  for i=1,#items-1 do
-    local it  = items[i].item
-    local pos = items[i].pos
-    local next_pos = items[i+1].pos
-    set_item_len(it, (next_pos - gap_s) - pos)
-  end
-
-  -- 2) Tail-detect last
-  if EXTEND_LAST and #items >= 1 then
-    local last = items[#items].item
-    local pos  = items[#items].pos
-
-    if DISABLE_LOOP_SOURCE_LAST then
-      reaper.SetMediaItemInfo_Value(last, "B_LOOPSRC", 0)
-    end
-
-    local take = reaper.GetActiveTake(last)
-    local thresh_lin = db_to_lin(SILENCE_DB)
-    local hold_s = HOLD_MS/1000.0
-    local max_search_s = LAST_MAX_SEARCH_MS/1000.0
-
-    local end_t = find_tail_end_by_peaks(take, pos, max_search_s, thresh_lin, hold_s)
-    if end_t and end_t > pos then
-      set_item_len(last, end_t - pos)
+  for _, items in pairs(by_tr) do
+    if #items >= 1 then
+      any = true
+      sort_items_by_pos(items)
+      for i=1,#items-1 do
+        local a, b = items[i], items[i+1]
+        local a_pos = r.GetMediaItemInfo_Value(a,"D_POSITION")
+        local b_pos = r.GetMediaItemInfo_Value(b,"D_POSITION")
+        r.SetMediaItemInfo_Value(a,"D_LENGTH", math.max(0.0, b_pos - a_pos))
+      end
+      local last = items[#items]
+      local last_pos = r.GetMediaItemInfo_Value(last,"D_POSITION")
+      local tail_end = detect_tail_end_project_time(last)
+      if tail_end then
+        r.SetMediaItemInfo_Value(last, "D_LENGTH", math.max(0.0, tail_end - last_pos))
+      end
     end
   end
 
-  reaper.UpdateArrange()
-  reaper.PreventUIRefresh(-1)
-  reaper.Undo_EndBlock("IFLSWB PostFix: Extend + TailDetect last", -1)
+  if not any then
+    r.MB("Select slices to post-fix (per track).", "IFLSWB PostFix HQ", 0)
+    return
+  end
+
+  r.UpdateArrange()
 end
 
+r.Undo_BeginBlock()
+r.PreventUIRefresh(1)
 main()
+r.PreventUIRefresh(-1)
+r.Undo_EndBlock("IFLS WB: PostFix HQ Extend + TailDetect", -1)

@@ -1,491 +1,309 @@
-﻿-- @description IFLS Workbench - Smart Slice (Print bus -> Slice -> TailTrim -> Spread gaps)
--- @author IFLS / DF95
--- @version 0.7.7
--- @changelog
---   + Multi-stem aware: creates/uses per-stem "IFLS Slices" tracks (multi-track routing)
---   + Optional TailTrim (AudioAccessor) to remove trailing silence on slices
---   + Optional Spread: arrange slices sequentially with user-configurable gaps (for delay/reverb tails)
---   + Keeps FXChains dropdown workflow: slices remain on "IFLS Slices" tracks
---
--- @about
---   1) Select track(s) you want to print/render to stems.
---   2) Run this script.
---   It renders selected tracks to stem tracks (mono/stereo auto-detect), mutes originals,
---   moves the rendered items to "IFLS Slices" tracks, then slices, trims tails, and spreads
---   the slices with gaps so FX tails can ring out.
+-- @description IFLS Workbench - Smart Slice (Pre-Analyze Onsets + Peak Tail Detection)
+-- @version 3.0.0
+-- @author IFLS
+-- @about One-click smart slicing: pre-analyze onsets, detect tails by silence (peak-based), then split+trim.
+-- @provides [main] .
 
--- IFLSWB safety: swallow multi-return (e.g. string.gsub returns (str,count))
-local function tonumber1(v) return tonumber(v) end
+local R = reaper
 
+local CFG = {
+  peakrate_onset = 400.0,
+  onset_rel_db   = -26.0,
+  onset_abs_db   = -80.0,
+  onset_confirm_frames = 3,
+  onset_min_gap_ms = 70,
 
-local r = reaper
+  peakrate_tail  = 200.0,
+  tail_peak_win_ms = 50,
+  tail_rel_db    = -45.0,
+  tail_abs_floor_db = -90.0,
+  tail_abs_ceil_db  = -30.0,
+  tail_hold_ms   = 140,
+  tail_min_len_ms = 25,
+  tail_max_search_ms_last = 12000,
 
--- ---------- helpers ----------
-local function join(a,b)
-  local sep = package.config:sub(1,1)
-  if a:sub(-1) == sep then return a..b end
-  return a..sep..b
+  gap_ms         = 2,
+  fadeout_ms     = 5,
+  keep_selection = true,
+  verbose_log    = false,
+}
+
+local function msg(s)
+  if CFG.verbose_log then R.ShowConsoleMsg(tostring(s).."\n") end
 end
 
-local function parse_num(v, default)
-  v = tostring(v or ""):gsub(",", ".")
-  local n = tonumber(v)
-  if not n then return default end
-  return n
+local function amp_to_db(a)
+  if not a or a <= 0 then return -150.0 end
+  return 20.0 * (math.log(a, 10))
 end
 
-local function parse_bool(v, default)
-  if v == nil or v == "" then return default end
-  v = tostring(v):lower()
-  if v == "1" or v == "true" or v == "yes" then return true end
-  if v == "0" or v == "false" or v == "no" then return false end
-  return default
+local function db_to_amp(db) return 10.0 ^ (db / 20.0) end
+
+local function get_item_bounds(it)
+  local pos = R.GetMediaItemInfo_Value(it, "D_POSITION")
+  local len = R.GetMediaItemInfo_Value(it, "D_LENGTH")
+  return pos, pos + len, len
 end
 
-local function get_ext(key, default)
-  local _, v = r.GetProjExtState(0, "IFLS_SLICING", key)
-  if v == nil or v == "" then return default end
-  return v
-end
-
-local function set_ext(key, value)
-  r.SetProjExtState(0, "IFLS_SLICING", key, tostring(value))
-end
-
-local function db_to_lin(db) return 10^(db/20) end
-local function clamp(x,a,b) if x<a then return a elseif x>b then return b else return x end end
-
-local function try_main_cmd(cmd)
-  if cmd and cmd > 0 then r.Main_OnCommand(cmd, 0); return true end
-  return false
-end
-
-local function try_named_cmd(named)
-  local cmd = r.NamedCommandLookup(named)
-  if cmd and cmd > 0 then r.Main_OnCommand(cmd, 0); return true end
-  return false
-end
-
-local function unselect_all_tracks() r.Main_OnCommand(40297,0) end
-local function unselect_all_items() r.Main_OnCommand(40289,0) end
-
-local function get_selected_tracks()
-  local t = {}
-  local n = r.CountSelectedTracks(0)
-  for i=0,n-1 do t[#t+1] = r.GetSelectedTrack(0,i) end
-  return t
-end
-
-local function get_track_name(tr)
-  local _, name = r.GetTrackName(tr)
-  return name or ""
-end
-
-local function set_track_name(tr, name)
-  r.GetSetMediaTrackInfo_String(tr, "P_NAME", name, true)
-end
-
-local function get_track_guid_set()
-  local set = {}
-  local n = r.CountTracks(0)
-  for i=0,n-1 do
-    local tr = r.GetTrack(0,i)
-    set[r.GetTrackGUID(tr)] = true
-  end
-  return set
-end
-
-local function get_new_tracks_since(before_set)
-  local out = {}
-  local n = r.CountTracks(0)
-  for i=0,n-1 do
-    local tr = r.GetTrack(0,i)
-    local g = r.GetTrackGUID(tr)
-    if not before_set[g] then
-      out[#out+1] = tr
-    end
-  end
-  -- sort by track index
-  table.sort(out, function(a,b)
-    local ia = r.GetMediaTrackInfo_Value(a, "IP_TRACKNUMBER")
-    local ib = r.GetMediaTrackInfo_Value(b, "IP_TRACKNUMBER")
-    return ia < ib
-  end)
-  return out
-end
-
-local function is_all_sources_mono(tracks)
-  for _,tr in ipairs(tracks) do
-    local item_cnt = r.CountTrackMediaItems(tr)
-    for i=0,item_cnt-1 do
-      local item = r.GetTrackMediaItem(tr,i)
-      local take = r.GetActiveTake(item)
-      if take then
-        local src = r.GetMediaItemTake_Source(take)
-        if src then
-          local ch = r.GetMediaSourceNumChannels(src)
-          if ch and ch > 1 then return false end
-        end
-      end
-    end
-  end
-  return true
-end
-
-local function select_only_track(tr)
-  unselect_all_tracks()
-  r.SetTrackSelected(tr, true)
-end
-
-local function select_only_items_on_track(tr)
-  unselect_all_items()
-  local cnt = r.CountTrackMediaItems(tr)
-  for i=0,cnt-1 do
-    r.SetMediaItemSelected(r.GetTrackMediaItem(tr,i), true)
-  end
-end
-
-local function move_items(from_tr, to_tr)
-  local cnt = r.CountTrackMediaItems(from_tr)
-  for i=cnt-1,0,-1 do
-    local it = r.GetTrackMediaItem(from_tr, i)
-    r.MoveMediaItemToTrack(it, to_tr)
-  end
-end
-
-local function compute_peaks_metrics(item)
-  local take = r.GetActiveTake(item)
-  if not take or not r.new_array or not r.APIExists("GetMediaItemTake_Peaks") then return nil end
-
-  local len = r.GetMediaItemInfo_Value(item, "D_LENGTH")
-  local start = 0.0
-  local win = math.min(len, 0.6) -- first 600ms
-  local peakrate = 2000 -- 2kHz peak sampling
-  local ch = 1
-  local samples = math.max(64, math.floor(win * peakrate))
-  local want_extra = 0
-  local buf = r.new_array(samples * ch)
-
-  local retval = r.GetMediaItemTake_Peaks(take, peakrate, start, ch, samples, want_extra, buf)
-  if not retval or retval <= 0 then return nil end
-
-  local maxv, sumsq, trans = 0, 0, 0
-  local prev = 0
-  for i=1,samples do
-    local v = buf[i]
-    if v < 0 then v = -v end
-    if v > maxv then maxv = v end
-    sumsq = sumsq + (v*v)
-    if i > 1 then
-      local dv = v - prev
-      if dv > 0.15 then trans = trans + 1 end
-    end
-    prev = v
-  end
-  local rms = math.sqrt(sumsq / samples)
-  local crest = (rms > 1e-9) and (maxv / rms) or 0
-  return {crest=crest, trans=trans, max=maxv, rms=rms}
-end
-
-local function is_percussive_track(tr)
-  local cnt = r.CountTrackMediaItems(tr)
-  if cnt == 0 then return false end
-  local it = r.GetTrackMediaItem(tr, 0)
-  local m = compute_peaks_metrics(it)
-  if not m then return false end
-  -- heuristic: crest + transient-ish count
-  if m.crest >= 3.0 and m.trans >= 8 then return true end
-  if m.max >= 0.6 and m.trans >= 6 then return true end
-  return false
-end
-
--- ---------- Tail trim (AudioAccessor) ----------
-local function proj_srate_fallback()
-  local sr = r.GetSetProjectInfo(0, "PROJECT_SRATE", 0, false)
-  if not sr or sr < 1000 then sr = 48000 end
-  return math.floor(sr + 0.5)
-end
-
-local function tailtrim_cfg()
-  return {
-    enable = parse_bool(get_ext("TAILTRIM_ENABLE", "1"), true),
-    thresh_db = parse_num(get_ext("TAILTRIM_DB", "-50"), -50),
-    pad_ms = parse_num(get_ext("TAILTRIM_PAD_MS", "5"), 5),
-    win_ms = parse_num(get_ext("TAILTRIM_WIN_MS", "10"), 10),
-    maxscan_s = parse_num(get_ext("TAILTRIM_MAXSCAN_S", "12"), 12),
-    min_len_ms = 15,
-  }
-end
-
-local function tailtrim_prompt(cfg)
-  local ok, out = r.GetUserInputs(
-    "IFLS TailTrim",
-    4,
-    "Threshold dB,Pad ms,Window ms,Max scan seconds",
-    string.format("%.1f,%.1f,%.1f,%.1f", cfg.thresh_db, cfg.pad_ms, cfg.win_ms, cfg.maxscan_s)
-  )
-  if not ok then return cfg end
-  local a,b,c,d = out:match("^%s*([^,]+),%s*([^,]+),%s*([^,]+),%s*([^,]+)%s*$")
-  if a then
-    cfg.thresh_db = parse_num(a, cfg.thresh_db)
-    cfg.pad_ms = parse_num(b, cfg.pad_ms)
-    cfg.win_ms = parse_num(c, cfg.win_ms)
-    cfg.maxscan_s = parse_num(d, cfg.maxscan_s)
-    set_ext("TAILTRIM_DB", cfg.thresh_db)
-    set_ext("TAILTRIM_PAD_MS", cfg.pad_ms)
-    set_ext("TAILTRIM_WIN_MS", cfg.win_ms)
-    set_ext("TAILTRIM_MAXSCAN_S", cfg.maxscan_s)
-  end
-  return cfg
-end
-
-local function tailtrim_selected_items(cfg)
-  if not cfg.enable then return 0 end
-  local n = r.CountSelectedMediaItems(0)
-  if n == 0 then return 0 end
-
-  local thr = db_to_lin(cfg.thresh_db)
-  local pad = cfg.pad_ms / 1000.0
-  local win = cfg.win_ms / 1000.0
-  local maxscan = cfg.maxscan_s
-  local min_len = cfg.min_len_ms / 1000.0
-
-  local changed = 0
-
-  for i=0,n-1 do
-    local item = r.GetSelectedMediaItem(0,i)
-    local take = item and r.GetActiveTake(item) or nil
-    if take and not r.TakeIsMIDI(take) then
-      local src = r.GetMediaItemTake_Source(take)
-      local ch = r.GetMediaSourceNumChannels(src)
-      if not ch or ch < 1 then ch = 2 end
-
-      local accessor = r.CreateTakeAudioAccessor(take)
-      if accessor then
-        local a0 = r.GetAudioAccessorStartTime(accessor)
-        local a1 = r.GetAudioAccessorEndTime(accessor)
-
-        local item_pos = r.GetMediaItemInfo_Value(item, "D_POSITION")
-        local item_len = r.GetMediaItemInfo_Value(item, "D_LENGTH")
-
-        local sr = r.GetMediaSourceSampleRate(src)
-        if not sr or sr < 1000 then sr = proj_srate_fallback() end
-        sr = math.floor(sr + 0.5)
-
-        local scan_end = a1
-        local scan_start = math.max(a0, a1 - maxscan)
-
-        if scan_end > scan_start + win and r.new_array then
-          local ns = math.max(1, math.floor(win * sr))
-          local buf = r.new_array(ns * ch)
-
-          local function window_maxabs(t0)
-            buf.clear()
-            local rv = r.GetAudioAccessorSamples(accessor, sr, ch, t0, ns, buf)
-            if rv <= 0 then return 0 end
-            local m = 0
-            for j=1,ns*ch do
-              local v = buf[j]
-              if v < 0 then v = -v end
-              if v > m then m = v end
-            end
-            return m
-          end
-
-          local last_audio_t = nil
-          local t = scan_end - win
-          while t >= scan_start do
-            if window_maxabs(t) > thr then
-              last_audio_t = t + win
-              break
-            end
-            t = t - win
-          end
-
-          if last_audio_t then
-            local new_len = (last_audio_t - item_pos) + pad
-            new_len = clamp(new_len, min_len, item_len)
-            if new_len < item_len - 0.0005 then
-              r.SetMediaItemInfo_Value(item, "D_LENGTH", new_len)
-              changed = changed + 1
-            end
-          end
-        end
-
-        r.DestroyAudioAccessor(accessor)
-      end
-    end
-  end
-
-  return changed
-end
-
--- ---------- Spread ----------
-local function spread_cfg()
-  return {
-    enable = parse_bool(get_ext("SPREAD_ENABLE", "1"), true),
-    min_s = parse_num(get_ext("SPREAD_MIN_S", "1.0"), 1.0),
-    max_s = parse_num(get_ext("SPREAD_MAX_S", "5.0"), 5.0),
-    random = parse_bool(get_ext("SPREAD_RANDOM", "1"), true),
-    prompt = parse_bool(get_ext("SPREAD_PROMPT", "1"), true),
-  }
-end
-
-local function spread_prompt(cfg)
-  local ok, out = r.GetUserInputs(
-    "IFLS Spread (gaps for FX tails)",
-    3,
-    "Gap min (s),Gap max (s),Random 1/0",
-    string.format("%.3f,%.3f,%d", cfg.min_s, cfg.max_s, cfg.random and 1 or 0)
-  )
-  if not ok then return cfg end
-  local a,b,c = out:match("^%s*([^,]+),%s*([^,]+),%s*([^,]+)%s*$")
-  if a then
-    cfg.min_s = math.max(0, parse_num(a, cfg.min_s))
-    cfg.max_s = math.max(cfg.min_s, parse_num(b, cfg.max_s))
-    cfg.random = (parse_num(c, cfg.random and 1 or 0) ~= 0)
-    set_ext("SPREAD_MIN_S", cfg.min_s)
-    set_ext("SPREAD_MAX_S", cfg.max_s)
-    set_ext("SPREAD_RANDOM", cfg.random and 1 or 0)
-  end
-  return cfg
-end
-
-local function spread_selected_items(cfg)
-  if not cfg.enable then return end
-  local n = r.CountSelectedMediaItems(0)
-  if n < 2 then return end
-
-  local items = {}
-  for i=0,n-1 do
-    local it = r.GetSelectedMediaItem(0,i)
-    local pos = r.GetMediaItemInfo_Value(it, "D_POSITION")
-    local len = r.GetMediaItemInfo_Value(it, "D_LENGTH")
-    items[#items+1] = {it=it, pos=pos, len=len}
-  end
-  table.sort(items, function(a,b) return a.pos < b.pos end)
-
-  math.randomseed(tonumber1((tostring(r.time_precise()):gsub("%D","")) or os.time()))
-
-  local t = r.GetCursorPosition()
-  for _,x in ipairs(items) do
-    r.SetMediaItemInfo_Value(x.it, "D_POSITION", t)
-    local gap = cfg.min_s
-    if cfg.random and cfg.max_s > cfg.min_s then
-      gap = cfg.min_s + (cfg.max_s - cfg.min_s) * math.random()
-    end
-    t = t + x.len + gap
-  end
-end
-
--- ---------- ZeroCross post-fix ----------
-local function maybe_zerocross_postfix()
-  local _, v = r.GetProjExtState(0, "IFLS_SLICING", "ZC_RESPECT")
-  if v ~= "1" then return end
-
-  local rp = r.GetResourcePath()
-  local p = join(join(join(rp,"Scripts"),"IFLS_Workbench"), join("Slicing","IFLS_Workbench_Slicing_ZeroCross_PostFix.lua"))
-  local f = io.open(p, "r")
-  if f then f:close(); dofile(p) end
-end
-
--- ---------- main workflow ----------
-local function render_to_stems(all_mono)
-  -- 40788: Render selected tracks to mono stem tracks (and mute originals)
-  -- 40789: Render selected tracks to stereo stem tracks (and mute originals)
-  if all_mono then
-    try_main_cmd(40788)
+local function samplecount_from_ret(ret)
+  if _VERSION:match("5%.3") or _VERSION:match("5%.4") then
+    return ret & 0xFFFFF
+  elseif bit32 then
+    return bit32.band(ret, 0xFFFFF)
   else
-    try_main_cmd(40789)
+    return ret % 0x100000
   end
 end
 
-local function insert_slices_track_before(stem_tr, name)
-  local idx = math.floor(r.GetMediaTrackInfo_Value(stem_tr, "IP_TRACKNUMBER")) - 1 -- to 0-based
-  if idx < 0 then idx = 0 end
-  r.InsertTrackAtIndex(idx, true)
-  local new_tr = r.GetTrack(0, idx)
-  set_track_name(new_tr, name)
-  return new_tr
+local function get_max_peak_in_range(take, t0, dur, peakrate, numch)
+  if dur <= 0 then return 0.0 end
+  local numsamp = math.max(1, math.floor(dur * peakrate))
+  numch = math.max(1, math.min(numch or 2, 2))
+  local buf = R.new_array(numsamp * numch * 2)
+  local ret = R.GetMediaItemTake_Peaks(take, peakrate, t0, numch, numsamp, 0, buf)
+  local sc = samplecount_from_ret(ret)
+  if sc <= 0 then return 0.0 end
+  local tbl = buf.table(1, sc * numch * 2)
+  local maxamp = 0.0
+  local max_block = sc * numch
+  for i=1, max_block do
+    local a = math.abs(tbl[i] or 0.0)
+    if a > maxamp then maxamp = a end
+  end
+  for i=max_block+1, max_block*2 do
+    local a = math.abs(tbl[i] or 0.0)
+    if a > maxamp then maxamp = a end
+  end
+  return maxamp
 end
 
-local function process_stem(stem_tr, slices_tr, spread, tailtrim)
-  -- move items
-  move_items(stem_tr, slices_tr)
+local function detect_onsets_for_item(it, take)
+  local pos, fin = get_item_bounds(it)
+  if fin <= pos then return {pos} end
 
-  -- slice
-  select_only_items_on_track(slices_tr)
+  local pr = CFG.peakrate_onset
+  local dur = fin - pos
 
-  if is_percussive_track(slices_tr) then
-    try_named_cmd("_XENAKIOS_SPLIT_ITEMSATRANSIENTS") -- SWS
+  local peak_item = get_max_peak_in_range(take, pos, dur, pr, 2)
+  local peak_db = amp_to_db(peak_item)
+
+  local thr_db = peak_db + CFG.onset_rel_db
+  if thr_db < CFG.onset_abs_db then thr_db = CFG.onset_abs_db end
+  local thr = db_to_amp(thr_db)
+  msg(("Onset thr %.1fdB"):format(thr_db))
+
+  local confirm = math.max(1, CFG.onset_confirm_frames)
+  local min_gap_frames = math.max(1, math.floor((CFG.onset_min_gap_ms/1000.0) * pr))
+
+  local numch, chunk = 2, 2000
+  local total = math.max(1, math.floor(dur * pr))
+  local buf = R.new_array(chunk * numch * 2)
+
+  local onsets = {pos}
+  local last_onset = -1e9
+  local above_run = 0
+  local idx = 0
+
+  while idx < total do
+    local want = math.min(chunk, total - idx)
+    buf.resize(want * numch * 2)
+    local t0 = pos + (idx / pr)
+    local ret = R.GetMediaItemTake_Peaks(take, pr, t0, numch, want, 0, buf)
+    local got = samplecount_from_ret(ret)
+    if got <= 0 then break end
+
+    local arr = buf.table(1, got * numch * 2)
+    local max_block = got * numch
+
+    for f=0, got-1 do
+      local m = 0.0
+      for ch=1, numch do
+        local vmax = math.abs(arr[f*numch + ch] or 0.0)
+        local vmin = math.abs(arr[max_block + f*numch + ch] or 0.0)
+        local v = (vmax > vmin) and vmax or vmin
+        if v > m then m = v end
+      end
+
+      if m >= thr then
+        above_run = above_run + 1
+        if above_run == confirm then
+          local abs_frame = idx + f - (confirm - 1)
+          if abs_frame - last_onset >= min_gap_frames then
+            onsets[#onsets+1] = pos + (abs_frame / pr)
+            last_onset = abs_frame
+          end
+        end
+      else
+        above_run = 0
+      end
+    end
+
+    idx = idx + got
+    if got < want then break end
   end
-  -- Always run remove-silence (uses last-used settings)
-  try_main_cmd(40315) -- Item: Auto trim/split items (remove silence)...
 
-  -- Post
-  maybe_zerocross_postfix()
+  table.sort(onsets)
 
-  -- Tail trim then spread (keeps items selected)
-  local changed = tailtrim_selected_items(tailtrim)
-  spread_selected_items(spread)
+  local dedup, eps = {}, 0.002
+  for i=1,#onsets do
+    local t = onsets[i]
+    if t >= pos and t < fin then
+      if #dedup==0 or (t - dedup[#dedup]) > eps then
+        dedup[#dedup+1] = t
+      end
+    end
+  end
 
-  -- keep stem muted (stem track now empty, but mute anyway)
-  r.SetMediaTrackInfo_Value(stem_tr, "B_MUTE", 1)
+  return dedup
+end
+
+local function find_tail_end(take, onset_t, search_end_t)
+  local pr = CFG.peakrate_tail
+  local min_len = CFG.tail_min_len_ms/1000.0
+  if search_end_t <= onset_t + min_len then
+    return math.max(onset_t + min_len, search_end_t)
+  end
+
+  local peak_win = math.min(CFG.tail_peak_win_ms/1000.0, search_end_t - onset_t)
+  local local_peak = get_max_peak_in_range(take, onset_t, peak_win, pr, 2)
+  local local_db = amp_to_db(local_peak)
+
+  local thr_db = local_db + CFG.tail_rel_db
+  if thr_db < CFG.tail_abs_floor_db then thr_db = CFG.tail_abs_floor_db end
+  if thr_db > CFG.tail_abs_ceil_db  then thr_db = CFG.tail_abs_ceil_db  end
+  local thr = db_to_amp(thr_db)
+
+  local hold = math.max(1, math.floor((CFG.tail_hold_ms/1000.0) * pr))
+  local numch, chunk = 2, 2000
+  local total = math.max(1, math.floor((search_end_t - onset_t) * pr))
+  local buf = R.new_array(chunk * numch * 2)
+
+  local below = 0
+  local idx = math.floor(min_len * pr)
+
+  while idx < total do
+    local want = math.min(chunk, total - idx)
+    buf.resize(want * numch * 2)
+    local t0 = onset_t + (idx / pr)
+
+    local ret = R.GetMediaItemTake_Peaks(take, pr, t0, numch, want, 0, buf)
+    local got = samplecount_from_ret(ret)
+    if got <= 0 then break end
+
+    local arr = buf.table(1, got * numch * 2)
+    local max_block = got * numch
+
+    for f=0, got-1 do
+      local m = 0.0
+      for ch=1, numch do
+        local vmax = math.abs(arr[f*numch + ch] or 0.0)
+        local vmin = math.abs(arr[max_block + f*numch + ch] or 0.0)
+        local v = (vmax > vmin) and vmax or vmin
+        if v > m then m = v end
+      end
+
+      if m < thr then
+        below = below + 1
+        if below >= hold then
+          local end_frame = (idx + f) - (hold - 1)
+          return math.min(onset_t + (end_frame / pr), search_end_t)
+        end
+      else
+        below = 0
+      end
+    end
+
+    idx = idx + got
+    if got < want then break end
+  end
+
+  return search_end_t
+end
+
+local function build_slice_plan(it, take)
+  local pos, fin = get_item_bounds(it)
+  local onsets = detect_onsets_for_item(it, take)
+  local gap = CFG.gap_ms/1000.0
+  local ends = {}
+
+  for i=1,#onsets do
+    local start_t = onsets[i]
+    local next_t = onsets[i+1]
+    local search_end = next_t and math.max(start_t, next_t - gap) or (fin + (CFG.tail_max_search_ms_last/1000.0))
+
+    local tail_end = find_tail_end(take, start_t, search_end)
+    local end_t = next_t and math.min(tail_end, next_t - gap) or tail_end
+
+    local min_len = CFG.tail_min_len_ms/1000.0
+    if end_t < start_t + min_len then end_t = start_t + min_len end
+    if end_t > fin then end_t = fin end
+    ends[i] = end_t
+  end
+
+  return onsets, ends
+end
+
+local function slice_item_by_plan(it, onsets, ends)
+  if #onsets < 1 then return {} end
+  local slices = {}
+  local cur = it
+
+  for i=2,#onsets do
+    local right = R.SplitMediaItem(cur, onsets[i])
+    if not right then break end
+    slices[#slices+1] = cur
+    cur = right
+  end
+  slices[#slices+1] = cur
+
+  local fade_s = CFG.fadeout_ms/1000.0
+  local min_len = CFG.tail_min_len_ms/1000.0
+
+  for i=1,#slices do
+    local s_it = slices[i]
+    local s_pos = R.GetMediaItemInfo_Value(s_it, "D_POSITION")
+    local e_t = ends[i] or (s_pos + min_len)
+    local new_len = math.max(min_len, e_t - s_pos)
+    R.SetMediaItemInfo_Value(s_it, "D_LENGTH", new_len)
+    if fade_s > 0 then R.SetMediaItemInfo_Value(s_it, "D_FADEOUTLEN", fade_s) end
+  end
+
+  return slices
 end
 
 local function main()
-  local sel = get_selected_tracks()
-  if #sel == 0 then
-    r.MB("Select one or more tracks to print/slice.", "IFLS Smart Slice", 0)
+  local n = R.CountSelectedMediaItems(0)
+  if n == 0 then
+    R.MB("Bitte mindestens 1 Audio-Item selektieren.", "IFLSWB Smart Slice", 0)
     return
   end
 
-  local all_mono = is_all_sources_mono(sel)
-  local before = get_track_guid_set()
+  R.Undo_BeginBlock()
+  R.PreventUIRefresh(1)
 
-  local spread = spread_cfg()
-  local tailtrim = tailtrim_cfg()
-
-  -- Optional: prompt each run for spread (and tailtrim via a separate settings script)
-  if spread.enable and spread.prompt then
-    spread = spread_prompt(spread)
+  local items = {}
+  for i=0,n-1 do items[#items+1] = R.GetSelectedMediaItem(0,i) end
+  if CFG.keep_selection then
+    for i=1,#items do R.SetMediaItemSelected(items[i], false) end
   end
 
-  -- render
-  r.Undo_BeginBlock()
-  r.PreventUIRefresh(1)
-
-  render_to_stems(all_mono)
-
-  local stems = get_new_tracks_since(before)
-  if #stems == 0 then
-    r.PreventUIRefresh(-1)
-    r.Undo_EndBlock("IFLS Smart Slice (no stems created)", -1)
-    r.MB("No stem tracks were created.\n\nCheck your time selection / render settings, and try again.", "IFLS Smart Slice", 0)
-    return
-  end
-
-  -- Insert slices tracks in reverse order so indices don't shift
-  local pairs = {}
-  for i=#stems,1,-1 do
-    local stem_tr = stems[i]
-    local stem_name = get_track_name(stem_tr)
-    local slices_name = "IFLS Slices"
-    if #stems > 1 then
-      slices_name = "IFLS Slices - " .. (stem_name ~= "" and stem_name or tostring(i))
+  local out = {}
+  for _,it in ipairs(items) do
+    local take = R.GetActiveTake(it)
+    if take and not R.TakeIsMIDI(take) then
+      local onsets, ends = build_slice_plan(it, take)
+      local slices = slice_item_by_plan(it, onsets, ends)
+      for i=1,#slices do out[#out+1] = slices[i] end
     end
-    local slices_tr = insert_slices_track_before(stem_tr, slices_name)
-    pairs[#pairs+1] = {stem=stem_tr, slices=slices_tr}
-  end
-  -- process in forward order for predictable selection, etc.
-  for i=#pairs,1,-1 do
-    local p = pairs[i]
-    process_stem(p.stem, p.slices, spread, tailtrim)
   end
 
-  r.PreventUIRefresh(-1)
-  r.UpdateArrange()
-  r.Undo_EndBlock("IFLS Smart Slice (slice + tailtrim + spread)", -1)
+  if CFG.keep_selection then
+    for i=1,#out do R.SetMediaItemSelected(out[i], true) end
+  end
+
+  R.UpdateArrange()
+  R.PreventUIRefresh(-1)
+  R.Undo_EndBlock("IFLSWB Smart Slice (pre-analyze + tail)", -1)
 end
 
 main()

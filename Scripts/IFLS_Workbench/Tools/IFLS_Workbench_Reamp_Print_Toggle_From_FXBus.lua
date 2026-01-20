@@ -1,16 +1,17 @@
 -- @description IFLS Workbench - Reamp Print Toggle (Topology Auto-Find)
 -- @version 1.2.0
 -- @author IFLS Workbench
--- @about
+-- @about Topology-first auto-detection of FX/Coloring/Master buses via routing graph (sends/receives).
 --   Topology-first auto-detection of FX/Coloring/Master buses via routing graph (sends/receives).
 --   First run (ARM): creates/arms "REAMP PRINT (from FX Bus)" right after the FX bus and routes FX->REAMP post-FX.
 --   Second run (FINALIZE): disarms REAMP, routes REAMP to Coloring/Master (if found), and mutes/bypasses FX + sources.
 --   Safety: stores bus GUIDs on the REAMP track for reliable finalize, and aborts if detection confidence is low.
 --   Tip: If your project uses folder-only routing or detection is ambiguous, select the FX bus track and run again.
--- @changelog
+-- Changelog:
 --   1.2.0 - Fix metaheader (@about indentation, remove accidental tag-like lines), store bus GUIDs, stronger heuristics & safety checks.
 --
---   Implementation notes: 
+-- Implementation notes:
+--   - Detection is routing-first (receives/sends). Name is only a fallback.
 --   - We never rely on current selection for finalize: GUIDs are persisted on the REAMP track.
 
 local r = reaper
