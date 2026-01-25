@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="IFLS_Workbench" commit="4f3f78034d36977262eace10184b116e6928bcdd">
+<index version="1" name="IFLS_Workbench" commit="2f5199dc678e6623aa728878072ca61333bcb41d">
   <category name=".iflswb_reapack_backup_20260118_221153/Effects/IFLS_Workbench">
     <reapack name="IFLS_Workbench_Drone_Granular.jsfx" type="effect" desc="IFLS_Workbench_Drone_Granular.jsfx">
       <version name="0.0.1" time="2026-01-18T21:12:05Z">
@@ -2051,13 +2051,13 @@
     </reapack>
   </category>
   <category name="TrackTemplates">
-    <reapack name="IFLSWB_Fieldrec_Slice_RS5k_Rack_Template_Package.lua" type="script" desc="IFLSWB Fieldrec Slice RS5k Rack Track Template">
+    <reapack name="IFLSWB_Fieldrec_Slice_RS5k_Rack_Template_Package.lua" type="script" desc="IFLSWB RS5k Rack Track Template">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Provides the IFLSWB track template used by the Fieldrec -> Smart Slicer -> RS5k rack workflow.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Provides RS5k rack track template for slicing workflows\par}
 }
 ]]></description>
       </metadata>
