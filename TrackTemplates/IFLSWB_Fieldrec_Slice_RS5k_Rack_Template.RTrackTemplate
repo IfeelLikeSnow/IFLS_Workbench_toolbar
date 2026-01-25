@@ -1,10 +1,4 @@
--- @description IFLSWB RS5k Rack Template
--- @version 1.0
--- @author Ifeel
--- @provides
 --   [main] TrackTemplates/IFLSWB_Fieldrec_Slice_RS5k_Rack_Template.RTrackTemplate
--- @about Template for RS5k rack used in slicing workflows
--- @donate https://www.paypal.com/donate/?hosted_button_id=PK9T9DX6UFRZ8
 
 
 
