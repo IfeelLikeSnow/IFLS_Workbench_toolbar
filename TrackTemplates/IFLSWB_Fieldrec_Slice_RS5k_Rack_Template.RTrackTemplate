@@ -1,0 +1,36 @@
+-- @description IFLSWB RS5k Rack Template
+-- @version 1.0
+-- @author Ifeel
+-- @provides
+--   [main] TrackTemplates/IFLSWB_Fieldrec_Slice_RS5k_Rack_Template.RTrackTemplate
+-- @about Template for RS5k rack used in slicing workflows
+-- @donate https://www.paypal.com/donate/?hosted_button_id=PK9T9DX6UFRZ8
+
+
+
+<REAPER_PROJECT 0.1 "7.0" 1700000000
+  RIPPLE 0
+  GROUPOVERRIDE 0 0 0
+  AUTOXFADE 1
+  ENVATTACH 0
+  POOLEDENVATTACH 0
+  MIXERUIFLAGS 11 48
+  PEAKGAIN 1
+  FEEDBACK 0
+  PANLAW 1
+  PROJOFFS 0 0 0
+  MAXPROJLEN 0 0
+  GRID 3199 8 1 8 1 0 0 0
+  <TRACK {D79E2B9B-0000-0000-0000-000000000001}
+    NAME "Fieldrec (raw)"
+    VOLPAN 1 0 -1 -1 1
+  >
+  <TRACK {D79E2B9B-0000-0000-0000-000000000002}
+    NAME "PrintBus (resample)"
+    VOLPAN 1 0 -1 -1 1
+  >
+  <TRACK {D79E2B9B-0000-0000-0000-000000000003}
+    NAME "RS5k Rack (drums)"
+    VOLPAN 1 0 -1 -1 1
+  >
+>

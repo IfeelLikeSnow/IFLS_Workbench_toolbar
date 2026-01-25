@@ -1,8 +1,10 @@
-﻿-- @description IFLS Workbench - Create Fieldrec → Slice → RS5K Rack + Resample Bus (IDM-friendly)
--- @author IFLS / DF95
+-- @description IFLS Workbench - Create Fieldrec → Slice → RS5K Rack + Resample Bus (IDM-friendly)
 -- @version 0.4.0
--- @about
---   Builds a small track layout for field recordings and IDM slicing workflows.
+-- @author IFLS / DF95
+-- @about Creates a field recording IDM template for IFLS workflows. Builds a track layout for slicing & resample buses.
+
+-- Builds a small track layout for field recordings and IDM slicing workflows.
+
 local r = reaper
 local proj = 0
 

@@ -1,8 +1,12 @@
-﻿-- @description IFLS Workbench - Build RS5K Rack from Selected Items (basic)
+-- @description IFLS Workbench - Build RS5K Rack from Selected Items (basic)
 -- @author IFLS / DF95
 -- @version 0.4.0
--- @about
---   Creates a new track "RS5K Rack" and inserts one ReaSamplOmatic5000 instance per selected item,--   loading the item's source file into FILE0 and committing via "DONE".--   Note: mapping (note ranges) is left at defaults; adjust within RS5K or extend this script later.
+-- @about Builds an RS5K rack from selected items for fast triggering
+
+-- Creates a new track "RS5K Rack" and inserts one ReaSamplOmatic5000 instance per selected item,
+-- loading the item's source file into FILE0 and committing via "DONE".
+-- Note: mapping (note ranges) is left at defaults; adjust within RS5K or extend this script later.
+
 local r = reaper
 
 local function get_take_source_path(take)

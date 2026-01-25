@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="IFLS_Workbench" commit="b0898410e66b75be42e72f76f0687586aaf71874">
+<index version="1" name="IFLS_Workbench" commit="4f3f78034d36977262eace10184b116e6928bcdd">
   <category name=".iflswb_reapack_backup_20260118_221153/Effects/IFLS_Workbench">
     <reapack name="IFLS_Workbench_Drone_Granular.jsfx" type="effect" desc="IFLS_Workbench_Drone_Granular.jsfx">
       <version name="0.0.1" time="2026-01-18T21:12:05Z">
@@ -1498,7 +1498,7 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Topology-first auto-detection of FX/Coloring/Master buses via routing graph (sends/receives). Topology-first auto-detection of FX/Coloring/Master buses via routing graph (sends/receives). First run (ARM): creates/arms "REAMP PRINT (from FX Bus)" right after the FX bus and routes FX->REAMP post-FX. Second run (FINALIZE): disarms REAMP, routes REAMP to Coloring/Master (if found), and mutes/bypasses FX + sources. Safety: stores bus GUIDs on the REAMP track for reliable finalize, and aborts if detection confidence is low. Tip: If your project uses folder-only routing or detection is ambiguous, select the FX bus track and run again.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Toggles Reamp Print routing based on FX bus topology. Detects FX, Master and Color buses using topology-first routing.\par}
 }
 ]]></description>
       </metadata>
@@ -1641,7 +1641,7 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Builds a small track layout for field recordings and IDM slicing workflows.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Creates a field recording IDM template for IFLS workflows. Builds a track layout for slicing & resample buses.\par}
 }
 ]]></description>
       </metadata>
@@ -1655,7 +1655,7 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Generates a .ReaperMenu file that can be imported into a REAPER toolbar.-- It references these scripts by their installed actions (named command IDs).-- Steps:-- 1) Load the scripts into Action List first (so named IDs exist)-- 2) Run this script-- 3) Import the generated .ReaperMenu in Customize toolbar\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Generates the SmartSlicer ReaMenu toolbar for fieldrec tools\par}
 }
 ]]></description>
       </metadata>
@@ -1697,7 +1697,7 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Creates a new track "RS5K Rack" and inserts one ReaSamplOmatic5000 instance per selected item,-- loading the item's source file into FILE0 and committing via "DONE".-- Note: mapping (note ranges) is left at defaults; adjust within RS5K or extend this script later.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Builds an RS5K rack from selected items for fast triggering\par}
 }
 ]]></description>
       </metadata>
@@ -1711,7 +1711,7 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Stores this script's Named Command ID (and known filenames) into ExtState so the toolbar generator can reference them.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Stores Command IDs of SmartSlicer sub-tools in extstate for reuse by toolbar generator.\par}
 }
 ]]></description>
       </metadata>
