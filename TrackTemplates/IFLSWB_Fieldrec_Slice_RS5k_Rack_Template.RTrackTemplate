@@ -1,7 +1,8 @@
---   [main] TrackTemplates/IFLSWB_Fieldrec_Slice_RS5k_Rack_Template.RTrackTemplate
-
-
-
+@description IFLSWB Fieldrec Slice RS5k Rack Template
+@version 1.4.6
+@author IfeelLikeSnow
+@about
+  RS5k rack track template used by IFLS Workbench ExportModes/SmartSlicer workflows.
 <REAPER_PROJECT 0.1 "7.0" 1700000000
   RIPPLE 0
   GROUPOVERRIDE 0 0 0
