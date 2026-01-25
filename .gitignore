@@ -9,3 +9,6 @@ Scripts/IFLS_Workbench/_ParamDumps/
 .bak_*
 *.bak
 .iflswb_reapack_backup_*
+
+merge_log.txt
+
