@@ -1,5 +1,7 @@
 -- @description IFLS Workbench: IFLS_Workbench_Slicing_PostFix_Extend_And_TailDetect
-﻿-- @description IFLS Workbench - Slicing PostFix: Extend slices + Tail detect last
+-- @version 1.0.0
+
+ï»¿-- @description IFLS Workbench - Slicing PostFix: Extend slices + Tail detect last
 -- @version 1.0.0
 -- @author IFLS
 -- @about

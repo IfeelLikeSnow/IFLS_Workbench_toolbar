@@ -1,4 +1,5 @@
-﻿-- @version 0.0.1
+-- @version 0.0.1
+
 
 -- @description IFLS Workbench: Toggle Zero-Cross Respect (Slicing)
 -- @version 1.0

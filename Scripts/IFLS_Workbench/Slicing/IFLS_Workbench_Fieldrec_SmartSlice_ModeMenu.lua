@@ -8,6 +8,7 @@
 --     3) SmartSlice: Auto (per-item classification)
 --     4) Toggle HQ Mode (zero-cross snap) [stored]
 
+
 local core = dofile((reaper.GetResourcePath().."/Scripts/IFLS_Workbench/Slicing/IFLSWB_Fieldrec_SmartSlicer_Core.lua"))
 
 if not gfx or not gfx.init then

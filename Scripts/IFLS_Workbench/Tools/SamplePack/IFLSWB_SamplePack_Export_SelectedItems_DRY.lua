@@ -4,6 +4,7 @@
 -- @about Renders each selected item from its media source (no track FX), using render bounds=Selected media items and render source=Selected media items.
 -- @provides [main] .
 
+
 local r = reaper
 
 local function ensure_dir(path)

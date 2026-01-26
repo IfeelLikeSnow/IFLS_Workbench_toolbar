@@ -6,9 +6,10 @@
 --   This avoids the "custom script command IDs differ per install" problem by:
 --     - registering the scripts into your Action List (AddRemoveReaScript),
 --     - writing the toolbar file using the returned command ID numbers.
---
 --   After running:
 --     Options -> Customize toolbars... -> (pick toolbar) -> Import... -> select the created .ReaperMenu
+
+--
 --
 local r = reaper
 

@@ -4,13 +4,14 @@
 -- @about
 --   Repositions selected items sequentially starting at the edit cursor.
 --   Adds a gap between items (min..max seconds). Great after slicing to let FX tails ring out.
---
 --   Settings are stored per-project in ExtState:
 --     Section: IFLS_SLICING
 --     Keys: SPREAD_MIN_S, SPREAD_MAX_S, SPREAD_RANDOM, SPREAD_PROMPT
---
 -- @changelog
 --   + Initial release
+
+--
+--
 
 local r = reaper
 

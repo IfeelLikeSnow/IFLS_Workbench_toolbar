@@ -4,13 +4,14 @@
 -- @about
 --   Trims trailing silence on selected audio items using Take AudioAccessor sampling.
 --   Designed to be used after Smart Slice (to shorten overly long tails).
---
 --   Settings are stored per-project in ExtState:
 --     Section: IFLS_SLICING
 --     Keys: TAILTRIM_DB, TAILTRIM_PAD_MS, TAILTRIM_WIN_MS, TAILTRIM_MAXSCAN_S
---
 -- @changelog
 --   + Initial release (integrates with Smart Slice workflow)
+
+--
+--
 
 local r = reaper
 

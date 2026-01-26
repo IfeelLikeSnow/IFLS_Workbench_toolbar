@@ -4,16 +4,17 @@
 -- @about
 --   Scans REAPER's resource Effects/IFLS_Workbench folder for JSFX and lets you insert them from a single menu.
 --   Intended to replace many toolbar buttons with one "JSFX" button (menu).
---
 --   Targets:
 --     - Track FX: first selected track, else last-touched track, else master.
 --     - Take FX: active take of first selected item (if any).
---
 --   Notes:
 --     - FX name is taken from the JSFX "desc:" line when available.
 --     - Insertion uses TrackFX_AddByName / TakeFX_AddByName with "JS: <name>".
---
 --   No external dependencies.
+
+--
+--
+--
 
 local r = reaper
 

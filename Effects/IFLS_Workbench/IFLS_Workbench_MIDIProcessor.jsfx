@@ -1,3 +1,5 @@
+version: 1.0.0
+
 // @version 0.0.1
 
 desc:IFLS Workbench - MIDI Processor (Microtonal / Pitchbend Mapper)
@@ -6,7 +8,7 @@ desc:IFLS Workbench - MIDI Processor (Microtonal / Pitchbend Mapper)
 // Output Engine - Basis MIDI-Pitchbend-Mapping
 
 slider1:0<0,2,1{Equal12,QuarterTone,FifthShift}>Tuning Profile
-slider2:2<1,48,1>Pitchbend Range (Â±semitones)
+slider2:2<1,48,1>Pitchbend Range (Ã‚Â±semitones)
 slider3:0<-200,200,1>Master Offset (cents)
 slider4:1<0,1,1{Off,On}>Apply to Channel 1 only
 slider5:0<0,1,1{Off,On}>Debug log (console)

@@ -4,6 +4,7 @@
 --   Verifies that the SWS action "Xenakios/SWS: Split items at transients" is available and actually produces splits.
 --   Reports before/after item counts and gives troubleshooting hints if 0 splits happen.
 
+
 local r = reaper
 
 local function msg(s) r.ShowConsoleMsg(tostring(s).."\n") end

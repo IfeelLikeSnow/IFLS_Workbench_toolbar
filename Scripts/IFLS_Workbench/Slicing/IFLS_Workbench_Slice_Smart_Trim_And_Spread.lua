@@ -5,6 +5,7 @@
 --   Convenience macro if you prefer one entry in the Action List.
 --   Calls the Smart Slice script, then trims tails and spreads slices with gaps.
 
+
 local r = reaper
 
 local function join(a,b)

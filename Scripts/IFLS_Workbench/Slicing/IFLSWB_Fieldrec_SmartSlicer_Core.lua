@@ -6,21 +6,22 @@
 --     - IFLS_Workbench_Fieldrec_SmartSlice_Hits.lua
 --     - IFLS_Workbench_Fieldrec_SmartSlice_Textures.lua
 --     - IFLS_Workbench_Fieldrec_SmartSlice_ModeMenu.lua
---
 --   Improvements in v3:
 --     1) Iterative threshold calibration (auto) to hit a target onset-count range
 --     2) Hysteresis + backtracking in onset detection (less retrigger, earlier onsets)
 --     3) HQ Mode (toggle): snap split points to nearest zero crossing (audio-accessor)
---
 --   Uses:
 --     - GetMediaItemTake_Peaks (fast envelope) + CreateTakeAudioAccessor/GetAudioAccessorSamples (HQ snap)
---
 --   Safety:
 --     - Works on selected items (or all items on selected tracks if none selected).
 --     - Non-destructive-ish: splits items but does not glue/render. Use Undo if needed.
---
 --   Notes:
 --     - HQ zero-cross snap is heavier. It only runs on split points and reads a tiny window around them.
+
+--
+--
+--
+--
 --
 
 local M = {}
@@ -309,7 +310,7 @@ local function calibrate_onsets(env, cfg, target_min, target_max, cal)
   return abs_db, last_onsets
 end
 
--- ---------- tail detection (peak-based “until silence”) ----------
+-- ---------- tail detection (peak-based â€œuntil silenceâ€) ----------
 local function detect_tail_end_time(env, start_idx, cfg)
   local a = env.a
   local pr = env.peakrate

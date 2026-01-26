@@ -4,6 +4,7 @@
 -- @about Applies item gain so SAMPLE PEAK reaches -3 dBFS (headroom-friendly DRY standard).
 -- @provides [main] .
 
+
 local r = reaper
 local function db_to_amp(db) return 10^(db/20) end
 

@@ -4,6 +4,7 @@
 -- @about One-click smart slicing: pre-analyze onsets, detect tails by silence (peak-based), then split+trim.
 -- @provides [main] .
 
+
 local R = reaper
 
 local CFG = {

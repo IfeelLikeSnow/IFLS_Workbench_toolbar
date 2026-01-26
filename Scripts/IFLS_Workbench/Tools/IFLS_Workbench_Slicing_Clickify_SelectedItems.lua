@@ -6,9 +6,10 @@
 --   For each selected item, find the maximum peak position (AudioAccessor scan),
 --   then trim the item to a micro-window around that peak (e.g. 2ms pre, 12ms post).
 --   This turns normal slices into "clicks & pops" style micro-samples.
---
 --   Uses CreateTakeAudioAccessor / GetAudioAccessorSamples (REAPER ReaScript API).
 --   See official ReaScript API docs for AudioAccessor functions.
+
+--
 
 local r = reaper
 

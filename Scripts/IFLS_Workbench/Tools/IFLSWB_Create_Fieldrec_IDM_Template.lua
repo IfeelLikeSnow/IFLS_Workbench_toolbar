@@ -1,5 +1,7 @@
 -- @description IFLS Workbench: IFLSWB_Create_Fieldrec_IDM_Template
-﻿-- @description IFLS Workbench - Create Fieldrec → Slice → RS5K Rack + Resample Bus (IDM-friendly)
+-- @version 1.0.0
+
+ï»¿-- @description IFLS Workbench - Create Fieldrec â†’ Slice â†’ RS5K Rack + Resample Bus (IDM-friendly)
 -- @author IFLS / DF95
 -- @version 0.4.0
 -- @about

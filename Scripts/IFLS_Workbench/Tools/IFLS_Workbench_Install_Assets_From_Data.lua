@@ -9,6 +9,7 @@
 --     <ResourcePath>/{FXChains,MenuSets}
 --   so your Workbench tools (e.g. Slicing dropdown) can find them.
 
+
 local r = reaper
 local sep = package.config:sub(1,1)
 
@@ -114,7 +115,7 @@ function IFLSWB_InstallAssetsFromData(opts)
         end
       end
     end
-    log(("OK: %s → %s (%d files)"):format(norm(srcBase), norm(dstBase), #items))
+    log(("OK: %s â†’ %s (%d files)"):format(norm(srcBase), norm(dstBase), #items))
   end
 
   copy_tree(src_fx, join(res, "FXChains"))

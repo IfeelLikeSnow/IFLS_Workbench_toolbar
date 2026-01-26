@@ -4,6 +4,7 @@
 -- @about Applies item gain so TRUE PEAK reaches -1.0 dBTP (safe ceiling for WET prints).
 -- @provides [main] .
 
+
 local r = reaper
 local function db_to_amp(db) return 10^(db/20) end
 

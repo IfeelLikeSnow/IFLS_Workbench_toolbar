@@ -9,9 +9,10 @@
 --   Tip: If your project uses folder-only routing or detection is ambiguous, select the FX bus track and run again.
 -- @changelog
 --   1.2.0 - Fix metaheader (@about indentation, remove accidental tag-like lines), store bus GUIDs, stronger heuristics & safety checks.
---
 --   Implementation notes: 
 --   - We never rely on current selection for finalize: GUIDs are persisted on the REAMP track.
+
+--
 
 local r = reaper
 

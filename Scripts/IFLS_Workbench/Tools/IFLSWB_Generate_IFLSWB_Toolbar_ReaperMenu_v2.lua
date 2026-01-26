@@ -7,6 +7,7 @@
 --   This script is safe to run multiple times; it (re)creates the .ReaperMenu file.
 -- @provides [main] .
 
+
 --[[---------------------------------------------------------------------------
 HOW TO USE (quick):
 1) Run this script once. It writes a .ReaperMenu file into:

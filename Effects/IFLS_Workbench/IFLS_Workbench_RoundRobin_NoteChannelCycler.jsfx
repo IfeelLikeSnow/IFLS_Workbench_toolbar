@@ -1,4 +1,6 @@
-﻿// @description IFLS_Workbench_RoundRobin_NoteChannelCycler.jsfx
+version: 1.0.0
+
+// @description IFLS_Workbench_RoundRobin_NoteChannelCycler.jsfx
 // @version 0.0.1
 
 desc:IFLS Workbench - RoundRobin Note Channel Cycler

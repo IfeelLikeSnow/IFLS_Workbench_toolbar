@@ -4,6 +4,7 @@
 -- @about
 --   Scans selected tracks, detects mic keyword from track name, applies default MicFX chain (Gain + ReaEQ + ReaComp + optional ReaFIR/Meter).
 
+
 -- IFLS_Workbench_Apply_MicFX_ByTrackName_v2.lua
 -- Nutzt DF95_MicProfiles.lua
 -- Ziel:

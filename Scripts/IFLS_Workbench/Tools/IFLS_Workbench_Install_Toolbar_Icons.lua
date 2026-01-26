@@ -7,10 +7,11 @@
 --   If any are missing, copies them from the bundled assets folder:
 --     <ResourcePath>/Scripts/IFLS_Workbench/Tools/_assets/toolbar_icons/
 --   Shows a report: installed / already present / missing sources.
---
 --   Why:
 --   REAPER's toolbar icon selector only lists icons from Data/toolbar_icons. Put your PNGs there.
 --   This installer makes manual ZIP installs foolproof.
+
+--
 
 local r = reaper
 

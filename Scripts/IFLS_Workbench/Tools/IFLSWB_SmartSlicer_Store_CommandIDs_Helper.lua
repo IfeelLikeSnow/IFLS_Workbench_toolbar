@@ -1,5 +1,7 @@
 -- @description IFLS Workbench: IFLSWB_SmartSlicer_Store_CommandIDs_Helper
-﻿-- @description IFLS Workbench - SmartSlicer: Store Command IDs (one-time helper)
+-- @version 1.0.0
+
+ï»¿-- @description IFLS Workbench - SmartSlicer: Store Command IDs (one-time helper)
 -- @version 1.0.0
 -- @author IFLS Workbench
 -- @about

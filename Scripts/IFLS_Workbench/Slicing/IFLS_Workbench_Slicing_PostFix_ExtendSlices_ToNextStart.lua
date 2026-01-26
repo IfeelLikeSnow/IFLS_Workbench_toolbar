@@ -1,5 +1,7 @@
 -- @description IFLS Workbench: IFLS_Workbench_Slicing_PostFix_ExtendSlices_ToNextStart
-﻿-- @description IFLS Workbench - Slicing PostFix: Extend slices to next start
+-- @version 1.0.0
+
+ï»¿-- @description IFLS Workbench - Slicing PostFix: Extend slices to next start
 -- @version 1.0.0
 -- @author IFLS
 -- @about

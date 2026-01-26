@@ -8,6 +8,7 @@
 --   + Improvement: remember last chosen FadeShape, Auto uses it
 --   + Safety: only runs ZeroCross post-fix when items are selected
 
+
 -- NOTE:
 -- This script loads .RfxChain presets from:
 --   <REAPER resource>/FXChains/IFLS Workbench/Slicing_*/
@@ -167,14 +168,14 @@ local function main()
       actions[#actions+1] = function()
         local sel = r.CountSelectedTracks(0)
         if sel == 0 then
-          r.MB("Keine Tracks ausgewählt. Bitte Zielspuren markieren.", "IFLS Slicing", 0)
+          r.MB("Keine Tracks ausgewÃ¤hlt. Bitte Zielspuren markieren.", "IFLS Slicing", 0)
           return
         end
         for i=0, sel-1 do
           local tr = r.GetSelectedTrack(0, i)
           r.TrackFX_AddByName(tr, c.path, false, 1) -- load from .rfxchain
         end
-        msg(string.format("[IFLS] Slicing preset geladen: %s → %d Track(s)\n", c.name, sel))
+        msg(string.format("[IFLS] Slicing preset geladen: %s â†’ %d Track(s)\n", c.name, sel))
         maybe_run_zerocross_postfix()
       end
     end
@@ -186,10 +187,10 @@ local function main()
   actions[#actions+1] = function()
     r.MB(
       "Slicing Menu:\n\n"..
-      "• Lädt FXChain Presets aus: FXChains/IFLS Workbench/Slicing_*\n"..
-      "• Fade Shapes: setzt Default-Fades für ausgewählte Items\n"..
-      "• ZeroCross Respect: aktiviert PostFix-Fades nach dem Preset-Load\n\n"..
-      "Tipp: Für Transient-Splitting brauchst du SWS (Xenakios).",
+      "â€¢ LÃ¤dt FXChain Presets aus: FXChains/IFLS Workbench/Slicing_*\n"..
+      "â€¢ Fade Shapes: setzt Default-Fades fÃ¼r ausgewÃ¤hlte Items\n"..
+      "â€¢ ZeroCross Respect: aktiviert PostFix-Fades nach dem Preset-Load\n\n"..
+      "Tipp: FÃ¼r Transient-Splitting brauchst du SWS (Xenakios).",
       "IFLS Slicing", 0)
   end
 

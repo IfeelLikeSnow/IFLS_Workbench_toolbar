@@ -1,7 +1,8 @@
-@description IFLS Workbench: Resources (JSON)
-@version 0.7.9
+@description IFLS Workbench Resources
+@version 1.0.0
+@author IfeelLikeSnow
 @metapackage
-@about
-  Shared JSON resources used by IFLS Workbench.
 @provides
-  Data/IFLS_Workbench/*.json
+  DF95_ParamMaps_AO_AW.json > IFLS_Workbench/DF95_ParamMaps_AO_AW.json
+  IFLS_Workbench_ParamMaps_AO_AW.json > IFLS_Workbench/IFLS_Workbench_ParamMaps_AO_AW.json
+  MicFX_Profiles_v3.json > IFLS_Workbench/MicFX_Profiles_v3.json
