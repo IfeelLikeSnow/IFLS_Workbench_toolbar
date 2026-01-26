@@ -1,4 +1,4 @@
-@description IFLS Workbench: Resources (Icons, Data, FXChains, MenuSets, TrackTemplates)
+﻿@description IFLS Workbench: Resources (Icons, Data, FXChains, MenuSets, TrackTemplates)
 @version 0.7.8
 @author IFLS Workbench
 @metapackage
@@ -15,4 +15,3 @@
   Data/toolbar_icons/**
   FXChains/IFLS_Workbench/**/*.rfxchain
   MenuSets/**
-  TrackTemplates/**
