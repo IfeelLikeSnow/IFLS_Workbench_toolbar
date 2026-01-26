@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="IFLS_Workbench_Toolbar" commit="a91c4d6b7a417074b46d7aeaebd7742a21c0f647">
+<index version="1" name="IFLS_Workbench_Toolbar" commit="24807b115dba2cad78899c081878c37fa54a2c9c">
   <category name="Data/IFLS_Workbench">
-    <reapack name="IFLS_Workbench_Resources.data" type="data" desc="IFLS Workbench Resources">
+    <reapack name="IFLS_Workbench_Resources.data" type="data" desc="IFLS Workbench Resources (JSON)">
       <version name="1.0.0" author="IfeelLikeSnow" time="2026-01-26T17:01:56Z">
         <source file="IFLS_Workbench/DF95_ParamMaps_AO_AW.json">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a91c4d6b7a417074b46d7aeaebd7742a21c0f647/Data/IFLS_Workbench/DF95_ParamMaps_AO_AW.json</source>
         <source file="IFLS_Workbench/IFLS_Workbench_ParamMaps_AO_AW.json">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a91c4d6b7a417074b46d7aeaebd7742a21c0f647/Data/IFLS_Workbench/IFLS_Workbench_ParamMaps_AO_AW.json</source>
