@@ -1,20 +1,20 @@
--- @description IFLS Workbench - MicFX Profile GUI (FXChain-aware .fxlist loader)
+﻿-- @description IFLS Workbench - MicFX Profile GUI (FXChain-aware .fxlist loader)
 -- @version 0.1.0
 -- @author IFLS (ported from DF95)
 -- @about
---   Kleine GUI zum Laden von MicFXâ€‘Profilen.
---   Erwartet .fxlistâ€‘Dateien unter Scripts/IFLS/MicFX
---   sowie optionale METAâ€‘Tags in FXChains/IFLS_Workbench/Mic/*.rfxchain.
+--   Kleine GUI zum Laden von MicFXÃ¢â‚¬â€˜Profilen.
+--   Erwartet .fxlistÃ¢â‚¬â€˜Dateien unter Scripts/IFLS_Workbench/lib/IFLS/MicFX
+--   sowie optionale METAÃ¢â‚¬â€˜Tags in FXChains/IFLS_Workbench/Mic/*.rfxchain.
 --
 
 --   Workflow:
---     1. Mic auswÃ¤hlen (z.B. B1, NTG4+, XM8500, Geofon, Ether ...).
---     2. Script lÃ¤dt die zugehÃ¶rige .fxlist und instanziiert die FX
+--     1. Mic auswÃƒÂ¤hlen (z.B. B1, NTG4+, XM8500, Geofon, Ether ...).
+--     2. Script lÃƒÂ¤dt die zugehÃƒÂ¶rige .fxlist und instanziiert die FX
 --        auf allen selektierten Tracks.
 --
 --   Hinweis:
---     Dies ist CPUâ€‘light und arbeitet im selben Spirit wie
---     DF95_MicFX_Manager.lua, nur mit expliziter Profilâ€‘Auswahl.
+--     Dies ist CPUÃ¢â‚¬â€˜light und arbeitet im selben Spirit wie
+--     DF95_MicFX_Manager.lua, nur mit expliziter ProfilÃ¢â‚¬â€˜Auswahl.
 
 local r = reaper
 local sep = package.config:sub(1,1)
@@ -47,7 +47,7 @@ local function load_fxlist_for_mic(mic_name)
   local path = base .. mic_name .. ".fxlist"
   local f = io.open(path, "r")
   if not f then
-    r.ShowMessageBox("Keine .fxlist fÃ¼r Mic '" .. mic_name .. "' gefunden:\n" .. path, "IFLS Workbench MicFX", 0)
+    r.ShowMessageBox("Keine .fxlist fÃƒÂ¼r Mic '" .. mic_name .. "' gefunden:\n" .. path, "IFLS Workbench MicFX", 0)
     return nil
   end
   local list = {}
@@ -59,7 +59,7 @@ local function load_fxlist_for_mic(mic_name)
   end
   f:close()
   if #list == 0 then
-    r.ShowMessageBox("Leere .fxlist fÃ¼r Mic '" .. mic_name .. "'", "IFLS Workbench MicFX", 0)
+    r.ShowMessageBox("Leere .fxlist fÃƒÂ¼r Mic '" .. mic_name .. "'", "IFLS Workbench MicFX", 0)
     return nil
   end
   return list
@@ -69,7 +69,7 @@ local function add_chain_to_track(tr, mic_name, fxlist)
   if not tr or not fxlist then return end
   r.Undo_BeginBlock()
   for _, fxname in ipairs(fxlist) do
-    -- genau wie DF95_MicFX_Manager: TrackFX_AddByName mit FXâ€‘Namen (z.B. "VST: ReaEQ (Cockos)")
+    -- genau wie DF95_MicFX_Manager: TrackFX_AddByName mit FXÃ¢â‚¬â€˜Namen (z.B. "VST: ReaEQ (Cockos)")
     r.TrackFX_AddByName(tr, fxname, false, -1)
   end
   r.Undo_EndBlock("IFLS Workbench MicFX: " .. mic_name, -1)
@@ -81,7 +81,7 @@ local function show_menu()
     items[#items+1] = m
   end
   local menu_str = table.concat(items, "|")
-  -- GFXâ€‘basierte MenÃ¼â€‘Anzeige (kontextsensitiv, an Mausposition)
+  -- GFXÃ¢â‚¬â€˜basierte MenÃƒÂ¼Ã¢â‚¬â€˜Anzeige (kontextsensitiv, an Mausposition)
   gfx.init("IFLS Workbench MicFX", 0, 0)
   gfx.x, gfx.y = gfx.mouse_x, gfx.mouse_y
   local idx = gfx.showmenu(menu_str)
