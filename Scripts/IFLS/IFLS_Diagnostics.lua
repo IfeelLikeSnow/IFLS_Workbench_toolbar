@@ -1,4 +1,5 @@
 -- @description IFLS (compat stub): IFLS_Diagnostics.lua -> IFLS_Workbench_Diagnostics.lua
+-- @noindex
 -- @version 0.7.8
 -- @author IFLS
 -- @about Compatibility wrapper. Use the IFLS_Workbench version going forward.

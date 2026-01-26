@@ -1,3 +1,4 @@
+-- @description IFLS Workbench: IFLS_Workbench_Install_Toolbar
 ﻿-- @description IFLS Workbench: Install helpers (register scripts + open Action List / generate toolbar file)
 -- @version 1.2
 -- @author I feel like snow

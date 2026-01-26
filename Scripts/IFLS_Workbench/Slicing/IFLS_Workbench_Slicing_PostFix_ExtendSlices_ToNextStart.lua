@@ -1,55 +1,54 @@
--- @description IFLS WB: PostFix (Extend slices to next start)
+-- @description IFLS Workbench: IFLS_Workbench_Slicing_PostFix_ExtendSlices_ToNextStart
+﻿-- @description IFLS Workbench - Slicing PostFix: Extend slices to next start
 -- @version 1.0.0
--- @author IFLS Workbench
--- @about Extends each selected slice's length so it reaches the next slice start (per track). Useful after transient-only slicing.
+-- @author IFLS
+-- @about
+--   Fixes micro-slices by extending each selected item to the next selected item's start (minus gap).
+--   Use after Smart Slicing (PrintBus) to restore meaningful slice lengths.
 -- @provides [main] .
 
-local r = reaper
+local GAP_MS     = 5      -- gap between slices (avoid overlap)
+local MIN_LEN_MS = 40     -- never shorter than this
+local function s2ms(s) return s*1000 end
 
-local function sort_items_by_pos(items)
-  table.sort(items, function(a,b)
-    return r.GetMediaItemInfo_Value(a,"D_POSITION") < r.GetMediaItemInfo_Value(b,"D_POSITION")
-  end)
+local function get_sel_items_sorted()
+  local t = {}
+  local n = reaper.CountSelectedMediaItems(0)
+  for i=0,n-1 do
+    local it = reaper.GetSelectedMediaItem(0,i)
+    local pos = reaper.GetMediaItemInfo_Value(it, "D_POSITION")
+    t[#t+1] = {item=it, pos=pos}
+  end
+  table.sort(t, function(a,b) return a.pos < b.pos end)
+  return t
 end
 
-local function get_selected_items_by_track()
-  local by_tr = {}
-  local n = r.CountSelectedMediaItems(0)
-  for i=0,n-1 do
-    local it = r.GetSelectedMediaItem(0,i)
-    local tr = r.GetMediaItem_Track(it)
-    by_tr[tr] = by_tr[tr] or {}
-    table.insert(by_tr[tr], it)
-  end
-  return by_tr
+local function set_item_len(it, len_s)
+  local min_s = MIN_LEN_MS/1000.0
+  if len_s < min_s then len_s = min_s end
+  reaper.SetMediaItemInfo_Value(it, "D_LENGTH", len_s)
 end
 
 local function main()
-  local by_tr = get_selected_items_by_track()
-  local any = false
-  for tr, items in pairs(by_tr) do
-    if #items >= 2 then
-      any = true
-      sort_items_by_pos(items)
-      for i=1,#items-1 do
-        local a = items[i]
-        local b = items[i+1]
-        local a_pos = r.GetMediaItemInfo_Value(a,"D_POSITION")
-        local b_pos = r.GetMediaItemInfo_Value(b,"D_POSITION")
-        r.SetMediaItemInfo_Value(a,"D_LENGTH", math.max(0.0, b_pos - a_pos))
-      end
-    end
+  local items = get_sel_items_sorted()
+  if #items < 2 then return end
+
+  reaper.Undo_BeginBlock()
+  reaper.PreventUIRefresh(1)
+
+  local gap_s = GAP_MS/1000.0
+  for i=1,#items-1 do
+    local it  = items[i].item
+    local pos = items[i].pos
+    local next_pos = items[i+1].pos
+    local new_len = (next_pos - gap_s) - pos
+    set_item_len(it, new_len)
   end
 
-  if not any then
-    r.MB("Select at least 2 items on a track to extend them to the next start.", "IFLSWB PostFix", 0)
-    return
-  end
-  r.UpdateArrange()
+  -- last item: leave as is (optional tail detection can be added if you want)
+  reaper.UpdateArrange()
+  reaper.PreventUIRefresh(-1)
+  reaper.Undo_EndBlock("IFLSWB PostFix: Extend slices to next start", -1)
 end
 
-r.Undo_BeginBlock()
-r.PreventUIRefresh(1)
 main()
-r.PreventUIRefresh(-1)
-r.Undo_EndBlock("IFLS WB: PostFix Extend slices to next start", -1)

@@ -1,9 +1,7 @@
-﻿-- @description IFLS Workbench: Fix Misinstalled Nested Folders (move/merge to ResourcePath root)
+-- @description IFLS Workbench: Fix Misinstalled Nested Folders (move/merge to ResourcePath root)
 -- @version 0.7.9
 -- @author IFLS
 -- @about
---   See README.md for usage / docs.
-
 --  Fixes a common manual-install mistake where the whole bundle was extracted into:
 --    <ResourcePath>/Scripts/IFLS Workbench Toolbar/IFLS Workbench/
 --  or:

@@ -2,6 +2,7 @@
 
 -- @description IFLS Workbench: Toggle Zero-Cross Respect (Slicing)
 -- @version 1.0
+-- @about Auto-added @about (please replace with a real description).
 
 local r = reaper
 local _, v = r.GetProjExtState(0, "IFLS_SLICING", "ZC_RESPECT")

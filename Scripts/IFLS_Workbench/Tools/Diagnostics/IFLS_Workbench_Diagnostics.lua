@@ -1,9 +1,7 @@
-﻿-- @description IFLS: Diagnostics (ReaPack/Dependencies/Paths)
+-- @description IFLS: Diagnostics (ReaPack/Dependencies/Paths)
 -- @version 0.1
 -- @author I feel like snow
 -- @about
---   See README.md for usage / docs.
-
 --   Prints a quick diagnostics report for common IFLS Workbench install issues:
 --   - Missing dependencies (ReaImGui, SWS, ReaPack)
 --   - Missing IFLS script files
@@ -11,7 +9,6 @@
 --
 --   Safe: does not modify anything.
 --
-
 local r = reaper
 
 local function msg(s) r.ShowConsoleMsg(tostring(s) .. "\n") end

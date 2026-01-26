@@ -14,52 +14,33 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
+      - uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.2"
-
-      - name: Install build deps
-        run: |
+      - run: |
           sudo apt-get update
           sudo apt-get install -y cmake pkg-config libssl-dev
-
-      - name: Install reapack-index
-        run: gem install reapack-index
-
-      - name: Validate packages
-        run: reapack-index --check
+      - run: gem install reapack-index
+      - run: reapack-index --check
 
   build_index:
     if: github.event_name == 'push' && github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
+      - uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.2"
-
-      - name: Install build deps
-        run: |
+      - run: |
           sudo apt-get update
-          sudo apt-get install -y cmake pkg-config libssl-dev pandoc
-
-      - name: Install reapack-index
-        run: gem install reapack-index
-
-      - name: Generate index.xml
-        run: reapack-index
-
+          sudo apt-get install -y cmake pkg-config libssl-dev
+      - run: gem install reapack-index
+      - run: reapack-index
       - name: Commit index.xml (if changed)
         run: |
           if git diff --quiet -- index.xml; then

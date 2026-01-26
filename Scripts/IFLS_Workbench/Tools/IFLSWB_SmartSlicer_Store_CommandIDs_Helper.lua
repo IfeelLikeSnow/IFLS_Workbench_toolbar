@@ -1,10 +1,9 @@
--- @description IFLS Workbench - SmartSlicer: Store Command IDs (one-time helper)
+-- @description IFLS Workbench: IFLSWB_SmartSlicer_Store_CommandIDs_Helper
+﻿-- @description IFLS Workbench - SmartSlicer: Store Command IDs (one-time helper)
 -- @version 1.0.0
 -- @author IFLS Workbench
--- @about Stores Command IDs of SmartSlicer sub-tools in extstate for reuse by toolbar generator.
-
--- Stores this script's Named Command ID (and known filenames) into ExtState so the toolbar generator can reference them.
-
+-- @about
+--   Stores this script's Named Command ID (and known filenames) into ExtState so the toolbar generator can reference them.
 local r = reaper
 
 -- When a ReaScript is loaded, REAPER assigns it a named command ID like "_RSxxxxxx".
