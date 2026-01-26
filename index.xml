@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="IFLS_Workbench" commit="a3049ff587397055b1cf2b22b97e2382e3af88aa">
+<index version="1" name="IFLS_Workbench_Toolbar" commit="a91c4d6b7a417074b46d7aeaebd7742a21c0f647">
+  <category name="Data/IFLS_Workbench">
+    <reapack name="IFLS_Workbench_Resources.data" type="data" desc="IFLS Workbench Resources">
+      <version name="1.0.0" author="IfeelLikeSnow" time="2026-01-26T17:01:56Z">
+        <source file="IFLS_Workbench/DF95_ParamMaps_AO_AW.json">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a91c4d6b7a417074b46d7aeaebd7742a21c0f647/Data/IFLS_Workbench/DF95_ParamMaps_AO_AW.json</source>
+        <source file="IFLS_Workbench/IFLS_Workbench_ParamMaps_AO_AW.json">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a91c4d6b7a417074b46d7aeaebd7742a21c0f647/Data/IFLS_Workbench/IFLS_Workbench_ParamMaps_AO_AW.json</source>
+        <source file="IFLS_Workbench/MicFX_Profiles_v3.json">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a91c4d6b7a417074b46d7aeaebd7742a21c0f647/Data/IFLS_Workbench/MicFX_Profiles_v3.json</source>
+      </version>
+    </reapack>
+  </category>
   <category name="Effects/IFLS_Workbench">
     <reapack name="IFLS_Workbench_Drone_Granular.jsfx" type="effect" desc="IFLS_Workbench_Drone_Granular.jsfx">
       <version name="1.0" author="DF95" time="2026-01-13T21:00:15Z">
@@ -13,10 +22,16 @@
       <version name="0.0.1" time="2026-01-17T15:12:30Z">
         <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Effects/IFLS_Workbench/IFLS_Workbench_Drum_RR_Velocity_Mapper_Phase112.jsfx</source>
       </version>
+      <version name="1.0.0" time="2026-01-26T17:01:56Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a91c4d6b7a417074b46d7aeaebd7742a21c0f647/Effects/IFLS_Workbench/IFLS_Workbench_Drum_RR_Velocity_Mapper_Phase112.jsfx</source>
+      </version>
     </reapack>
     <reapack name="IFLS_Workbench_Dynamic_Meter_v1.jsfx" type="effect">
       <version name="0.0.1" time="2026-01-17T15:12:30Z">
         <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Effects/IFLS_Workbench/IFLS_Workbench_Dynamic_Meter_v1.jsfx</source>
+      </version>
+      <version name="1.0.0" time="2026-01-26T17:01:56Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a91c4d6b7a417074b46d7aeaebd7742a21c0f647/Effects/IFLS_Workbench/IFLS_Workbench_Dynamic_Meter_v1.jsfx</source>
       </version>
     </reapack>
     <reapack name="IFLS_Workbench_Euclid_Slicer.jsfx" type="effect" desc="IFLS_Workbench_Euclid_Slicer.jsfx">
@@ -87,18 +102,27 @@
       <version name="0.0.1" time="2026-01-17T15:12:30Z">
         <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Effects/IFLS_Workbench/IFLS_Workbench_MIDIProcessor.jsfx</source>
       </version>
+      <version name="1.0.0" time="2026-01-26T17:01:56Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a91c4d6b7a417074b46d7aeaebd7742a21c0f647/Effects/IFLS_Workbench/IFLS_Workbench_MIDIProcessor.jsfx</source>
+      </version>
     </reapack>
-    <reapack name="IFLS_Workbench_ReampSuite_Analyzer_FFT.jsfx" type="effect" desc="IFLS_Workbench_ReampSuite_Analyzer_FFT.jsfx">
+    <reapack name="IFLS_Workbench_ReampSuite_Analyzer_FFT.jsfx" type="effect">
       <version name="0.0.1" time="2026-01-17T15:12:30Z">
         <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Effects/IFLS_Workbench/IFLS_Workbench_ReampSuite_Analyzer_FFT.jsfx</source>
       </version>
+      <version name="1.0.0" time="2026-01-26T17:01:56Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a91c4d6b7a417074b46d7aeaebd7742a21c0f647/Effects/IFLS_Workbench/IFLS_Workbench_ReampSuite_Analyzer_FFT.jsfx</source>
+      </version>
     </reapack>
-    <reapack name="IFLS_Workbench_RoundRobin_NoteChannelCycler.jsfx" type="effect" desc="IFLS_Workbench_RoundRobin_NoteChannelCycler.jsfx">
+    <reapack name="IFLS_Workbench_RoundRobin_NoteChannelCycler.jsfx" type="effect">
       <version name="1.1" author="DF95" time="2026-01-13T21:00:15Z">
         <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Effects/IFLS_Workbench/IFLS_Workbench_RoundRobin_NoteChannelCycler.jsfx</source>
       </version>
       <version name="0.0.1" time="2026-01-17T15:12:30Z">
         <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Effects/IFLS_Workbench/IFLS_Workbench_RoundRobin_NoteChannelCycler.jsfx</source>
+      </version>
+      <version name="1.0.0" time="2026-01-26T17:01:56Z">
+        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a91c4d6b7a417074b46d7aeaebd7742a21c0f647/Effects/IFLS_Workbench/IFLS_Workbench_RoundRobin_NoteChannelCycler.jsfx</source>
       </version>
     </reapack>
     <reapack name="IFLS_Workbench_Stereo_Alternator.jsfx" type="effect" desc="IFLS_Workbench_Stereo_Alternator.jsfx">
@@ -131,11 +155,10 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Stellt sicher, dass IFLSWB FX/Coloring/Master-Busse existieren, explodiert bei Bedarf Polywav/Multichannel-Items zu Einzelspuren und richtet anschlie\u223 ?end ein Basis-Routing ein:\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Stellt sicher, dass IFLSWB FX/Coloring/Master-Busse existieren, explodiert bei Bedarf Polywav/Multichannel-Items zu Einzelspuren und richtet anschlie\u195 ?\u376 ?end ein Basis-Routing ein:\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab alle Quelltracks -> FX Bus (Send, Post-Fader, 0 dB)\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab FX Bus -> Coloring Bus\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Coloring Bus -> Master Bus Optional k\u246 ?nnen Master/FX/Coloring-Selector-Actions ausgef\u252 ?hrt werden.\sa180\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Hinweis: Um Doppelrouting zu vermeiden, werden die Master/Parent-Sends der Quelltracks deaktiviert (B_MAINSEND=0), so dass nur der Buspfad aktiv ist. Die Busse selbst senden weiterhin zum REAPER-Master.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Coloring Bus -> Master Bus Optional k\u195 ?\u182 ?nnen Master/FX/Coloring-Selector-Actions ausgef\u195 ?\u188 ?hrt werden. Hinweis: Um Doppelrouting zu vermeiden, werden die Master/Parent-Sends der Quelltracks deaktiviert (B_MAINSEND=0), so dass nur der Buspfad aktiv ist. Die Busse selbst senden weiterhin zum REAPER-Master.\sa180\par}
 }
 ]]></description>
       </metadata>
@@ -160,24 +183,15 @@
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/d3157be310a6e3e08780a2ae37841dee0e8c2d24/Scripts/IFLS_Workbench/IFLS_Workbench_Explode_Fieldrec.lua</source>
       </version>
     </reapack>
-    <reapack name="IFLS_Workbench_Install_Toolbar.lua" type="script" desc="IFLS Workbench: Install helpers (register scripts + open Action List / generate toolbar file)">
-      <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
-{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
-\widowctrl\hyphauto
-
-{\pard \ql \f0 \sa180 \li0 \fi0 Convenience helper after installing via ReaPack/ZIP:\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 1)\tx360\tab Registers IFLS Workbench scripts into the Action List.\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 2)\tx360\tab Opens the Action List (so you can search/add to toolbars).\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 3)\tx360\tab Optional: generate a Floating Toolbar import file (.ReaperMenu).\sa180\par}
-}
-]]></description>
-      </metadata>
+    <reapack name="IFLS_Workbench_Install_Toolbar.lua" type="script" desc="IFLS Workbench: IFLS_Workbench_Install_Toolbar">
       <version name="1.2" author="I feel like snow" time="2026-01-17T15:12:30Z">
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Scripts/IFLS_Workbench/IFLS_Workbench_Install_Toolbar.lua</source>
       </version>
+      <version name="1.0.0" time="2026-01-26T17:01:56Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a91c4d6b7a417074b46d7aeaebd7742a21c0f647/Scripts/IFLS_Workbench/IFLS_Workbench_Install_Toolbar.lua</source>
+      </version>
     </reapack>
-    <reapack name="IFLS_Workbench_MicFX_ParamApply_v3_6.lua" type="script" desc="IFLS Workbench - MicFX ParamApply v3.6 (LiveAware – JSFX Meter, Drive &amp; Comp Bias)">
+    <reapack name="IFLS_Workbench_MicFX_ParamApply_v3_6.lua" type="script" desc="IFLS Workbench - MicFX ParamApply v3.6 (LiveAware â€“ JSFX Meter, Drive &amp; Comp Bias)">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
@@ -197,11 +211,9 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Kleine GUI zum Laden von MicFX\u8209 ?Profilen. Erwartet .fxlist\u8209 ?Dateien unter Scripts/IFLS/MicFX sowie optionale META\u8209 ?Tags in FXChains/IFLS Workbench/Mic/*.rfxchain.\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Workflow:\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 1.\tx360\tab Mic ausw\u228 ?hlen (z.B. B1, NTG4+, XM8500, Geofon, Ether ...).\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 2.\tx360\tab Script l\u228 ?dt die zugeh\u246 ?rige .fxlist und instanziiert die FX auf allen selektierten Tracks.\sa180\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Hinweis: Dies ist CPU\u8209 ?light und arbeitet im selben Spirit wie DF95_MicFX_Manager.lua, nur mit expliziter Profil\u8209 ?Auswahl.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Kleine GUI zum Laden von MicFX\u226 ?\u8364 ?\u8216'Profilen. Erwartet .fxlist\u226 ?\u8364 ?\u8216'Dateien unter Scripts/IFLS/MicFX sowie optionale META\u226 ?\u8364 ?\u8216'Tags in FXChains/IFLS Workbench/Mic/*.rfxchain. Workflow:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 1.\tx360\tab Mic ausw\u195 ?\u164 ?hlen (z.B. B1, NTG4+, XM8500, Geofon, Ether ...).\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 2.\tx360\tab Script l\u195 ?\u164 ?dt die zugeh\u195 ?\u182 ?rige .fxlist und instanziiert die FX auf allen selektierten Tracks. Hinweis: Dies ist CPU\u226 ?\u8364 ?\u8216'light und arbeitet im selben Spirit wie DF95_MicFX_Manager.lua, nur mit expliziter Profil\u226 ?\u8364 ?\u8216'Auswahl.\sa180\par}
 }
 ]]></description>
       </metadata>
@@ -222,8 +234,7 @@
 
 {\pard \ql \f0 \sa180 \li0 \fi0 Creates a ready-to-import .ReaperMenu file for a Floating Toolbar (1-16). This avoids the "custom script command IDs differ per install" problem by:\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab registering the scripts into your Action List (AddRemoveReaScript),\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab writing the toolbar file using the returned command ID numbers.\sa180\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 After running: Options -> Customize toolbars... -> (pick toolbar) -> Import... -> select the created .ReaperMenu\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab writing the toolbar file using the returned command ID numbers. After running: Options -> Customize toolbars... -> (pick toolbar) -> Import... -> select the created .ReaperMenu\sa180\par}
 }
 ]]></description>
       </metadata>
@@ -239,8 +250,7 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Slices selected items (or items on selected tracks) as short one-shots. Includes: iterative threshold calibration + hysteresis/backtrack + HQ zero-cross snap (toggle).\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 HQ toggle is stored in ExtState (IFLSWB_SmartSlicer/HQ). Default is ON in v3.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Slices selected items (or items on selected tracks) as short one-shots. Includes: iterative threshold calibration + hysteresis/backtrack + HQ zero-cross snap (toggle). HQ toggle is stored in ExtState (IFLSWB_SmartSlicer/HQ). Default is ON in v3.\par}
 }
 ]]></description>
       </metadata>
@@ -286,8 +296,7 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Slices selected items (or items on selected tracks) into longer chunks for textures/scrapes. Includes: iterative threshold calibration + hysteresis/backtrack + HQ zero-cross snap (toggle).\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 HQ toggle is stored in ExtState (IFLSWB_SmartSlicer/HQ). Default is ON in v3.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Slices selected items (or items on selected tracks) into longer chunks for textures/scrapes. Includes: iterative threshold calibration + hysteresis/backtrack + HQ zero-cross snap (toggle). HQ toggle is stored in ExtState (IFLSWB_SmartSlicer/HQ). Default is ON in v3.\par}
 }
 ]]></description>
       </metadata>
@@ -322,7 +331,7 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Schneidet ausgew\u228 ?hlte Items direkt an Time Selection oder Edit-Cursor.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Schneidet ausgew\u195 ?\u164 ?hlte Items direkt an Time Selection oder Edit-Cursor.\par}
 }
 ]]></description>
       </metadata>
@@ -392,7 +401,7 @@
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a6514f60fc97a5ce4fb2b1a7a5b333d51561f65f/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Smart_Trim_And_Spread.lua</source>
       </version>
     </reapack>
-    <reapack name="IFLS_Workbench_Slicing_FadeShape_Set_Fast.lua" type="script" desc="IFLS Workbench: Slicing FadeShape Set – Fast (2/5 ms)">
+    <reapack name="IFLS_Workbench_Slicing_FadeShape_Set_Fast.lua" type="script" desc="IFLS Workbench: Slicing FadeShape Set â€“ Fast (2/5 ms)">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
@@ -409,7 +418,7 @@
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/20b3d009f88765f7fe1ede98697f1845242906ac/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_FadeShape_Set_Fast.lua</source>
       </version>
     </reapack>
-    <reapack name="IFLS_Workbench_Slicing_FadeShape_Set_Linear.lua" type="script" desc="IFLS Workbench: Slicing FadeShape Set – Linear (5/8 ms)">
+    <reapack name="IFLS_Workbench_Slicing_FadeShape_Set_Linear.lua" type="script" desc="IFLS Workbench: Slicing FadeShape Set â€“ Linear (5/8 ms)">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
@@ -426,7 +435,7 @@
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/20b3d009f88765f7fe1ede98697f1845242906ac/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_FadeShape_Set_Linear.lua</source>
       </version>
     </reapack>
-    <reapack name="IFLS_Workbench_Slicing_FadeShape_Set_Slow.lua" type="script" desc="IFLS Workbench: Slicing FadeShape Set – Slow (10/14 ms)">
+    <reapack name="IFLS_Workbench_Slicing_FadeShape_Set_Slow.lua" type="script" desc="IFLS Workbench: Slicing FadeShape Set â€“ Slow (10/14 ms)">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
@@ -443,30 +452,12 @@
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/20b3d009f88765f7fe1ede98697f1845242906ac/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_FadeShape_Set_Slow.lua</source>
       </version>
     </reapack>
-    <reapack name="IFLS_Workbench_Slicing_PostFix_Extend_And_TailDetect.lua" type="script" desc="IFLS Workbench - Slicing PostFix: Extend slices + Tail detect last">
-      <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
-{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
-\widowctrl\hyphauto
-
-{\pard \ql \f0 \sa180 \li0 \fi0 Fix micro-slices by extending each selected item to next selected item's start (minus gap). Then extends the LAST selected item until "silence" using peak scanning (GetMediaItemTake_Peaks).\par}
-}
-]]></description>
-      </metadata>
+    <reapack name="IFLS_Workbench_Slicing_PostFix_Extend_And_TailDetect.lua" type="script" desc="IFLS Workbench: IFLS_Workbench_Slicing_PostFix_Extend_And_TailDetect">
       <version name="1.0.0" author="IFLS" time="2026-01-19T21:30:25Z">
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/2129bd347e381a25790b742d338e9cccb73636b3/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_PostFix_Extend_And_TailDetect.lua</source>
       </version>
     </reapack>
-    <reapack name="IFLS_Workbench_Slicing_PostFix_ExtendSlices_ToNextStart.lua" type="script" desc="IFLS Workbench - Slicing PostFix: Extend slices to next start">
-      <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
-{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
-\widowctrl\hyphauto
-
-{\pard \ql \f0 \sa180 \li0 \fi0 Fixes micro-slices by extending each selected item to the next selected item's start (minus gap). Use after Smart Slicing (PrintBus) to restore meaningful slice lengths.\par}
-}
-]]></description>
-      </metadata>
+    <reapack name="IFLS_Workbench_Slicing_PostFix_ExtendSlices_ToNextStart.lua" type="script" desc="IFLS Workbench: IFLS_Workbench_Slicing_PostFix_ExtendSlices_ToNextStart">
       <version name="1.0.0" author="IFLS" time="2026-01-19T21:30:25Z">
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/2129bd347e381a25790b742d338e9cccb73636b3/Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slicing_PostFix_ExtendSlices_ToNextStart.lua</source>
       </version>
@@ -505,17 +496,13 @@
 {\pard \ql \f0 \sa180 \li0 \fi0 Core library used by:\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab IFLS_Workbench_Fieldrec_SmartSlice_Hits.lua\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab IFLS_Workbench_Fieldrec_SmartSlice_Textures.lua\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab IFLS_Workbench_Fieldrec_SmartSlice_ModeMenu.lua\sa180\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Improvements in v3:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab IFLS_Workbench_Fieldrec_SmartSlice_ModeMenu.lua Improvements in v3:\sa180\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 1)\tx360\tab Iterative threshold calibration (auto) to hit a target onset-count range\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 2)\tx360\tab Hysteresis + backtracking in onset detection (less retrigger, earlier onsets)\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 3)\tx360\tab HQ Mode (toggle): snap split points to nearest zero crossing (audio-accessor)\sa180\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Uses:\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab GetMediaItemTake_Peaks (fast envelope) + CreateTakeAudioAccessor/GetAudioAccessorSamples (HQ snap)\sa180\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Safety:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 3)\tx360\tab HQ Mode (toggle): snap split points to nearest zero crossing (audio-accessor) Uses:\sa180\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab GetMediaItemTake_Peaks (fast envelope) + CreateTakeAudioAccessor/GetAudioAccessorSamples (HQ snap) Safety:\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Works on selected items (or all items on selected tracks if none selected).\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Non-destructive-ish: splits items but does not glue/render. Use Undo if needed.\sa180\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Notes:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Non-destructive-ish: splits items but does not glue/render. Use Undo if needed. Notes:\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab HQ zero-cross snap is heavier. It only runs on split points and reads a tiny window around them.\sa180\par}
 }
 ]]></description>
@@ -559,18 +546,12 @@
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/b7dca698cfbb96baf646dd4ba166707e32ae0619/Scripts/IFLS_Workbench/Tools/IFLS_Export_InstalledFX_List.lua</source>
       </version>
     </reapack>
-    <reapack name="IFLS_Workbench_Dump_All_FX_Params_EnumInstalledFX_PreferVST3_StrongMatch_Resume_CSV_NDJSON.lua" type="script" desc="IFLS Workbench: Dump ALL FX params (EnumInstalledFX, prefer VST3, strong match, resume, CSV+NDJSON)">
-      <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
-{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
-\widowctrl\hyphauto
-
-{\pard \ql \f0 \sa180 \li0 \fi0 Enumerates all REAPER-recognized FX via EnumInstalledFX(). Stronger matching + dedupe: prefers VST3 when VST2 and VST3 appear to be the same plugin.\par}
-}
-]]></description>
-      </metadata>
+    <reapack name="IFLS_Workbench_Dump_All_FX_Params_EnumInstalledFX_PreferVST3_StrongMatch_Resume_CSV_NDJSON.lua" type="script" desc="IFLS Workbench: IFLS_Workbench_Dump_All_FX_Params_EnumInstalledFX_PreferVST3_StrongMatch_Resume_CSV_NDJSON">
       <version name="0.4.4" author="IFLS (ported from DF95)" time="2026-01-17T15:12:30Z">
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Dump_All_FX_Params_EnumInstalledFX_PreferVST3_StrongMatch_Resume_CSV_NDJSON.lua</source>
+      </version>
+      <version name="1.0.0" time="2026-01-26T17:01:56Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a91c4d6b7a417074b46d7aeaebd7742a21c0f647/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Dump_All_FX_Params_EnumInstalledFX_PreferVST3_StrongMatch_Resume_CSV_NDJSON.lua</source>
       </version>
     </reapack>
     <reapack name="IFLS_Workbench_Dump_All_FX_Params_EnumInstalledFX_Resume_CSV_NDJSON.lua" type="script" desc="IFLS Workbench: Dump All FX Params (EnumInstalledFX, Resume, CSV+NDJSON)">
@@ -582,8 +563,7 @@
 {\pard \ql \f0 \sa180 \li0 \fi0 Scans installed FX via EnumInstalledFX() and instantiates them on a temporary track to read parameters. Outputs:\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 1)\tx360\tab CSV (summary) 2) NDJSON (one FX per line, easy for big datasets) Resume: keeps a progress file so you can continue after cancel/crash. Notes:\sa180\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Some plugins may open UI, require license dialogs, or fail to instantiate.\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab For REAPER versions without EnumInstalledFX(), the script will stop (this tool targets REAPER 7+).\sa180\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Repository: IFLS Workbench Toolbar\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab For REAPER versions without EnumInstalledFX(), the script will stop (this tool targets REAPER 7+). Repository: IFLS Workbench Toolbar\sa180\par}
 }
 ]]></description>
       </metadata>
@@ -597,9 +577,7 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Moves duplicate IFLS_Workbench installations out of /Scripts into /Scripts/_IFLS_QUARANTINE//. Canonical install folder is: /Scripts/IFLS_Workbench/\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Optionally tries to remove quarantined scripts from the Action List.\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Safe defaults: dry-run first, then explicit confirmation.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Moves duplicate IFLS_Workbench installations out of /Scripts into /Scripts/_IFLS_QUARANTINE//. Canonical install folder is: /Scripts/IFLS_Workbench/ Optionally tries to remove quarantined scripts from the Action List. Safe defaults: dry-run first, then explicit confirmation.\par}
 }
 ]]></description>
       </metadata>
@@ -627,8 +605,7 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Checks if IFLSWB toolbar icons are present in: /Data/toolbar_icons/ If any are missing, copies them from the bundled assets folder: /Scripts/IFLS_Workbench/Tools/_assets/toolbar_icons/ Shows a report: installed / already present / missing sources.\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Why: REAPER's toolbar icon selector only lists icons from Data/toolbar_icons. Put your PNGs there. This installer makes manual ZIP installs foolproof.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Checks if IFLSWB toolbar icons are present in: /Data/toolbar_icons/ If any are missing, copies them from the bundled assets folder: /Scripts/IFLS_Workbench/Tools/_assets/toolbar_icons/ Shows a report: installed / already present / missing sources. Why: REAPER's toolbar icon selector only lists icons from Data/toolbar_icons. Put your PNGs there. This installer makes manual ZIP installs foolproof.\par}
 }
 ]]></description>
       </metadata>
@@ -674,8 +651,7 @@ Implementation notes:
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Post-process after Smart Slice: For each selected item, find the maximum peak position (AudioAccessor scan), then trim the item to a micro-window around that peak (e.g. 2ms pre, 12ms post). This turns normal slices into "clicks & pops" style micro-samples.\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Uses CreateTakeAudioAccessor / GetAudioAccessorSamples (REAPER ReaScript API). See official ReaScript API docs for AudioAccessor functions.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Post-process after Smart Slice: For each selected item, find the maximum peak position (AudioAccessor scan), then trim the item to a micro-window around that peak (e.g. 2ms pre, 12ms post). This turns normal slices into "clicks & pops" style micro-samples. Uses CreateTakeAudioAccessor / GetAudioAccessorSamples (REAPER ReaScript API). See official ReaScript API docs for AudioAccessor functions.\par}
 }
 ]]></description>
       </metadata>
@@ -693,13 +669,9 @@ Implementation notes:
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Mode: Normal / Clicks&Pops / Drones\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab PostFX: TailTrim (AudioAccessor) + Spread gaps (seconds or beats)\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Routing: Select IFLS Slices items, route-to-slices-track\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Advanced: optional "Dynamic Split" hook via user-provided Named Command ID\sa180\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Requires ReaImGui extension (distributed via ReaPack in ReaTeam Extensions). ReaImGui scripting pattern is based on ReaTeam templates (CreateContext + defer loop).\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Notes:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Advanced: optional "Dynamic Split" hook via user-provided Named Command ID Requires ReaImGui extension (distributed via ReaPack in ReaTeam Extensions). ReaImGui scripting pattern is based on ReaTeam templates (CreateContext + defer loop). Notes:\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab This panel {\i drives} existing IFLS scripts by registering/running them by file path.\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab It persists settings in ExtState (global) so they survive REAPER restarts.\sa180\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Install: Put this file in: %APPDATA%\\REAPER\\Scripts\\IFLS_Workbench\\Tools\line Load it once via Actions -> ReaScript -> Load...\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Tip: For best UX, dock the panel (ReaImGui supports docking).\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab It persists settings in ExtState (global) so they survive REAPER restarts. Install: Put this file in: %APPDATA%\\REAPER\\Scripts\\IFLS_Workbench\\Tools\line Load it once via Actions -> ReaScript -> Load... Tip: For best UX, dock the panel (ReaImGui supports docking).\sa180\par}
 }
 ]]></description>
       </metadata>
@@ -744,8 +716,7 @@ Implementation notes:
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Repositions selected items sequentially starting at the edit cursor. Adds a gap between items (min..max seconds). Great after slicing to let FX tails ring out.\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Settings are stored per-project in ExtState: Section: IFLS_SLICING Keys: SPREAD_MIN_S, SPREAD_MAX_S, SPREAD_RANDOM, SPREAD_PROMPT\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Repositions selected items sequentially starting at the edit cursor. Adds a gap between items (min..max seconds). Great after slicing to let FX tails ring out. Settings are stored per-project in ExtState: Section: IFLS_SLICING Keys: SPREAD_MIN_S, SPREAD_MAX_S, SPREAD_RANDOM, SPREAD_PROMPT\par}
 }
 ]]></description>
       </metadata>
@@ -760,8 +731,7 @@ Implementation notes:
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Trims trailing silence on selected audio items using Take AudioAccessor sampling. Designed to be used after Smart Slice (to shorten overly long tails).\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Settings are stored per-project in ExtState: Section: IFLS_SLICING Keys: TAILTRIM_DB, TAILTRIM_PAD_MS, TAILTRIM_WIN_MS, TAILTRIM_MAXSCAN_S\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Trims trailing silence on selected audio items using Take AudioAccessor sampling. Designed to be used after Smart Slice (to shorten overly long tails). Settings are stored per-project in ExtState: Section: IFLS_SLICING Keys: TAILTRIM_DB, TAILTRIM_PAD_MS, TAILTRIM_WIN_MS, TAILTRIM_MAXSCAN_S\par}
 }
 ]]></description>
       </metadata>
@@ -801,30 +771,15 @@ Implementation notes:
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/c5820a3692d838c6084a2c7314f16ab57b886b9d/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Test_SWS_Split_Items_At_Transients.lua</source>
       </version>
     </reapack>
-    <reapack name="IFLSWB_Create_Fieldrec_IDM_Template.lua" type="script" desc="IFLS Workbench - Create Fieldrec → Slice → RS5K Rack + Resample Bus (IDM-friendly)">
-      <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
-{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
-\widowctrl\hyphauto
-
-{\pard \ql \f0 \sa180 \li0 \fi0 Builds a small track layout for field recordings and IDM slicing workflows.\par}
-}
-]]></description>
-      </metadata>
+    <reapack name="IFLSWB_Create_Fieldrec_IDM_Template.lua" type="script" desc="IFLS Workbench: IFLSWB_Create_Fieldrec_IDM_Template">
       <version name="0.4.0" author="IFLS / DF95" time="2026-01-20T21:54:36Z">
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/b0898410e66b75be42e72f76f0687586aaf71874/Scripts/IFLS_Workbench/Tools/IFLSWB_Create_Fieldrec_IDM_Template.lua</source>
       </version>
+      <version name="1.0.0" time="2026-01-26T17:01:56Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a91c4d6b7a417074b46d7aeaebd7742a21c0f647/Scripts/IFLS_Workbench/Tools/IFLSWB_Create_Fieldrec_IDM_Template.lua</source>
+      </version>
     </reapack>
-    <reapack name="IFLSWB_Generate_Fieldrec_SmartSlicer_Toolbar_ReaperMenu.lua" type="script" desc="IFLS Workbench - Generate Fieldrec SmartSlicer Toolbar (ReaperMenu)">
-      <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
-{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
-\widowctrl\hyphauto
-
-{\pard \ql \f0 \sa180 \li0 \fi0 Generates a .ReaperMenu file that can be imported into a REAPER toolbar.-- It references these scripts by their installed actions (named command IDs).-- Steps:-- 1) Load the scripts into Action List first (so named IDs exist)-- 2) Run this script-- 3) Import the generated .ReaperMenu in Customize toolbar\par}
-}
-]]></description>
-      </metadata>
+    <reapack name="IFLSWB_Generate_Fieldrec_SmartSlicer_Toolbar_ReaperMenu.lua" type="script" desc="IFLS Workbench: IFLSWB_Generate_Fieldrec_SmartSlicer_Toolbar_ReaperMenu">
       <version name="1.0.0" author="IFLS Workbench" time="2026-01-20T21:54:36Z">
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/b0898410e66b75be42e72f76f0687586aaf71874/Scripts/IFLS_Workbench/Tools/IFLSWB_Generate_Fieldrec_SmartSlicer_Toolbar_ReaperMenu.lua</source>
       </version>
@@ -857,30 +812,15 @@ Implementation notes:
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/cc1fea1aafe457911b6db48f842cfe2435cb1080/Scripts/IFLS_Workbench/Tools/IFLSWB_Generate_IFLSWB_Toolbar_ReaperMenu_v3.lua</source>
       </version>
     </reapack>
-    <reapack name="IFLSWB_RS5K_Rack_From_SelectedItems.lua" type="script" desc="IFLS Workbench - Build RS5K Rack from Selected Items (basic)">
-      <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
-{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
-\widowctrl\hyphauto
-
-{\pard \ql \f0 \sa180 \li0 \fi0 Creates a new track "RS5K Rack" and inserts one ReaSamplOmatic5000 instance per selected item,-- loading the item's source file into FILE0 and committing via "DONE".-- Note: mapping (note ranges) is left at defaults; adjust within RS5K or extend this script later.\par}
-}
-]]></description>
-      </metadata>
+    <reapack name="IFLSWB_RS5K_Rack_From_SelectedItems.lua" type="script" desc="IFLS Workbench: IFLSWB_RS5K_Rack_From_SelectedItems">
       <version name="0.4.0" author="IFLS / DF95" time="2026-01-20T21:54:36Z">
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/b0898410e66b75be42e72f76f0687586aaf71874/Scripts/IFLS_Workbench/Tools/IFLSWB_RS5K_Rack_From_SelectedItems.lua</source>
       </version>
+      <version name="1.0.0" time="2026-01-26T17:01:56Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a91c4d6b7a417074b46d7aeaebd7742a21c0f647/Scripts/IFLS_Workbench/Tools/IFLSWB_RS5K_Rack_From_SelectedItems.lua</source>
+      </version>
     </reapack>
-    <reapack name="IFLSWB_SmartSlicer_Store_CommandIDs_Helper.lua" type="script" desc="IFLS Workbench - SmartSlicer: Store Command IDs (one-time helper)">
-      <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
-{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
-\widowctrl\hyphauto
-
-{\pard \ql \f0 \sa180 \li0 \fi0 Stores this script's Named Command ID (and known filenames) into ExtState so the toolbar generator can reference them.\par}
-}
-]]></description>
-      </metadata>
+    <reapack name="IFLSWB_SmartSlicer_Store_CommandIDs_Helper.lua" type="script" desc="IFLS Workbench: IFLSWB_SmartSlicer_Store_CommandIDs_Helper">
       <version name="1.0.0" author="IFLS Workbench" time="2026-01-20T21:54:36Z">
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/b0898410e66b75be42e72f76f0687586aaf71874/Scripts/IFLS_Workbench/Tools/IFLSWB_SmartSlicer_Store_CommandIDs_Helper.lua</source>
       </version>
@@ -926,8 +866,7 @@ Implementation notes:
 {\pard \ql \f0 \sa180 \li0 \fi0 Prints a quick diagnostics report for common IFLS Workbench install issues:\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Missing dependencies (ReaImGui, SWS, ReaPack)\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Missing IFLS script files\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Duplicate installs (same filename in multiple folders)\sa180\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Safe: does not modify anything.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Duplicate installs (same filename in multiple folders) Safe: does not modify anything.\sa180\par}
 }
 ]]></description>
       </metadata>
@@ -955,8 +894,7 @@ Implementation notes:
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Fixes a common manual-install mistake where the whole bundle was extracted into: /Scripts/IFLS Workbench Toolbar/IFLS Workbench/ or: /Scripts/IFLS_Workbench_toolbar/...\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Correct layout is: /Scripts/IFLS_Workbench/... /Effects/IFLS_Workbench/... /FXChains/IFLS_Workbench/... /Data/IFLS_Workbench/... /Data/toolbar_icons/...\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Fixes a common manual-install mistake where the whole bundle was extracted into: /Scripts/IFLS Workbench Toolbar/IFLS Workbench/ or: /Scripts/IFLS_Workbench_toolbar/... Correct layout is: /Scripts/IFLS_Workbench/... /Effects/IFLS_Workbench/... /FXChains/IFLS_Workbench/... /Data/IFLS_Workbench/... /Data/toolbar_icons/...\par}
 }
 ]]></description>
       </metadata>
@@ -964,18 +902,12 @@ Implementation notes:
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/5b2f08d080ad4880f7b2d81e2f8f502db0df95c3/Scripts/IFLS_Workbench/Tools/Diagnostics/IFLS_Workbench_Fix_Misinstalled_Nested_Folders.lua</source>
       </version>
     </reapack>
-    <reapack name="IFLS_Workbench_InstallDoctor_Fix_Nested_Folders.lua" type="script" desc="IFLS Workbench: Install Doctor (Fix nested &quot;Scripts/IFLS Workbench Toolbar&quot; installs)">
-      <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
-{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
-\widowctrl\hyphauto
-
-{\pard \ql \f0 \sa180 \li0 \fi0 See README.md for usage / docs.\par}
-}
-]]></description>
-      </metadata>
+    <reapack name="IFLS_Workbench_InstallDoctor_Fix_Nested_Folders.lua" type="script" desc="IFLS Workbench: IFLS_Workbench_InstallDoctor_Fix_Nested_Folders">
       <version name="0.7.9" author="I feel like snow" time="2026-01-17T15:12:30Z">
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Scripts/IFLS_Workbench/Tools/Diagnostics/IFLS_Workbench_InstallDoctor_Fix_Nested_Folders.lua</source>
+      </version>
+      <version name="1.0.0" time="2026-01-26T17:01:56Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a91c4d6b7a417074b46d7aeaebd7742a21c0f647/Scripts/IFLS_Workbench/Tools/Diagnostics/IFLS_Workbench_InstallDoctor_Fix_Nested_Folders.lua</source>
       </version>
     </reapack>
     <reapack name="IFLSWB_TestSuite_CompileAll.lua" type="script" desc="IFLSWB TestSuite - Compile all Lua scripts in a repo folder">
@@ -1070,14 +1002,11 @@ Implementation notes:
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Scans REAPER's resource Effects/IFLS_Workbench folder for JSFX and lets you insert them from a single menu. Intended to replace many toolbar buttons with one "JSFX" button (menu).\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Targets:\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Scans REAPER's resource Effects/IFLS_Workbench folder for JSFX and lets you insert them from a single menu. Intended to replace many toolbar buttons with one "JSFX" button (menu). Targets:\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Track FX: first selected track, else last-touched track, else master.\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Take FX: active take of first selected item (if any).\sa180\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Notes:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Take FX: active take of first selected item (if any). Notes:\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab FX name is taken from the JSFX "desc:" line when available.\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Insertion uses TrackFX_AddByName / TakeFX_AddByName with "JS: ".\sa180\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 No external dependencies.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Insertion uses TrackFX_AddByName / TakeFX_AddByName with "JS: ". No external dependencies.\sa180\par}
 }
 ]]></description>
       </metadata>
@@ -1091,8 +1020,7 @@ Implementation notes:
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Dropdown menu to insert IFLS Workbench JSFX (DSP) onto selected tracks. JSFX live in /Effects/IFLS_Workbench/ After installing/updating, use FX browser or TrackFX_AddByName with "JS:".\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Notes:\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Dropdown menu to insert IFLS Workbench JSFX (DSP) onto selected tracks. JSFX live in /Effects/IFLS_Workbench/ After installing/updating, use FX browser or TrackFX_AddByName with "JS:". Notes:\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Inserts as last FX on each selected track.\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab If no track selected, inserts on the last touched track (if any), else shows a message.\sa180\par}
 }
