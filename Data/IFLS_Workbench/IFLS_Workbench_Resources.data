@@ -1,13 +1,7 @@
-@description IFLS Workbench: Resources (data/icons/fxchains/menus/templates)
+@description IFLS Workbench: Resources (JSON)
 @version 0.7.9
 @metapackage
 @about
-  Installs shared resources used by IFLS Workbench.
+  Shared JSON resources used by IFLS Workbench.
 @provides
-  Data/IFLS_Workbench/_resources_placeholder.txt
-  Data/IFLS_Workbench/**/*
-  Data/InstalledFX/**/*
-  Data/toolbar_icons/**/*
-  FXChains/IFLS_Workbench/**/*
-  MenuSets/**/*
-  TrackTemplates/**/*
+  Data/IFLS_Workbench/*.json
