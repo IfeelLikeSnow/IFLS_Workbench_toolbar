@@ -1259,22 +1259,6 @@ Implementation notes:
       </version>
     </reapack>
   </category>
-  <category name="TrackTemplates">
-    <reapack name="IFLSWB_Fieldrec_Slice_RS5k_Rack_Template.RTrackTemplate" type="tracktpl" desc="IFLSWB Fieldrec Slice RS5k Rack Template">
-      <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
-{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
-\widowctrl\hyphauto
-
-{\pard \ql \f0 \sa180 \li0 \fi0 RS5k rack track template used by IFLS Workbench ExportModes/SmartSlicer workflows.\par}
-}
-]]></description>
-      </metadata>
-      <version name="1.4.6" time="2026-01-25T16:03:08Z">
-        <source>https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/aceec83197e21d8a9f7a7e20c103d48661725bf3/TrackTemplates/IFLSWB_Fieldrec_Slice_RS5k_Rack_Template.RTrackTemplate</source>
-      </version>
-    </reapack>
-  </category>
   <metadata>
     <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
