@@ -19,3 +19,6 @@ merge_log.txt
 merge_log.txt
 .iflswb_repo_backup_*
 IFLS_Workbench__OLD*
+.iflswb_repo_backup_*
+.iflswb_reapack_backup_*
+IFLS_Workbench__OLD*
