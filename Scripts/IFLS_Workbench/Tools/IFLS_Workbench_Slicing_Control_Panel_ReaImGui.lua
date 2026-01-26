@@ -1,9 +1,7 @@
-﻿-- @description IFLS Workbench: Slicing Control Panel (ReaImGui)
+-- @description IFLS Workbench: Slicing Control Panel (ReaImGui)
 -- @version 0.7.6
 -- @author IFLS
 -- @about
---   See README.md for usage / docs.
-
 --   A single control panel UI for IFLS slicing workflows:
 --   - Mode: Normal / Clicks&Pops / Drones
 --   - PostFX: TailTrim (AudioAccessor) + Spread gaps (seconds or beats)

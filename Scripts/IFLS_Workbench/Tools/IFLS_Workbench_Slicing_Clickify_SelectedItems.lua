@@ -1,9 +1,7 @@
-﻿-- @description IFLS Workbench: Clickify selected slices (turn each into a click/pop)
+-- @description IFLS Workbench: Clickify selected slices (turn each into a click/pop)
 -- @version 0.7.6
 -- @author IFLS
 -- @about
---   See README.md for usage / docs.
-
 --   Post-process after Smart Slice:
 --   For each selected item, find the maximum peak position (AudioAccessor scan),
 --   then trim the item to a micro-window around that peak (e.g. 2ms pre, 12ms post).

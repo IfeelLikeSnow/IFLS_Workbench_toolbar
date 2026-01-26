@@ -1,9 +1,7 @@
-﻿-- @description IFLS Workbench: Install toolbar icons (copy into REAPER/Data/toolbar_icons)
+-- @description IFLS Workbench: Install toolbar icons (copy into REAPER/Data/toolbar_icons)
 -- @version 0.7.6
 -- @author IFLS
 -- @about
---   See README.md for usage / docs.
-
 --   Checks if IFLSWB toolbar icons are present in:
 --     <ResourcePath>/Data/toolbar_icons/
 --   If any are missing, copies them from the bundled assets folder:

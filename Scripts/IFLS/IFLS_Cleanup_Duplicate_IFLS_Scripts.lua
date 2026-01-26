@@ -1,4 +1,5 @@
 -- @description IFLS (compat stub): IFLS_Cleanup_Duplicate_IFLS_Scripts.lua -> IFLS_Workbench_Cleanup_Duplicate_Workbench_Scripts.lua
+-- @noindex
 -- @version 0.7.8
 -- @author IFLS
 -- @about Compatibility wrapper. Use the IFLS_Workbench version going forward.

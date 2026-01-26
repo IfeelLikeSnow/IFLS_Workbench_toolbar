@@ -4,13 +4,12 @@
 -- @about
 --   Stellt sicher, dass IFLSWB FX/Coloring/Master-Busse existieren,
 --   explodiert bei Bedarf Polywav/Multichannel-Items zu Einzelspuren
---   und richtet anschlieÃŸend ein Basis-Routing ein:
+--   und richtet anschließend ein Basis-Routing ein:
 --     * alle Quelltracks -> FX Bus (Send, Post-Fader, 0 dB)
 --     * FX Bus -> Coloring Bus
 --     * Coloring Bus -> Master Bus
---   Optional kÃ¶nnen Master/FX/Coloring-Selector-Actions ausgefÃ¼hrt werden.
+--   Optional können Master/FX/Coloring-Selector-Actions ausgeführt werden.
 --
-
 --   Hinweis: Um Doppelrouting zu vermeiden, werden die Master/Parent-Sends
 --   der Quelltracks deaktiviert (B_MAINSEND=0), so dass nur der Buspfad
 --   aktiv ist. Die Busse selbst senden weiterhin zum REAPER-Master.
@@ -32,7 +31,7 @@ local CMD_IFLSWB_MASTER_SELECTOR   = 0 -- 0 = aus
 local CMD_IFLSWB_FXBUS_SELECTOR    = 0 -- 0 = aus
 local CMD_IFLSWB_COLORING_SELECTOR = 0 -- 0 = aus
 
--- Command-ID fÃ¼r "Item: Explode multichannel audio or MIDI items to new one-channel items"
+-- Command-ID für "Item: Explode multichannel audio or MIDI items to new one-channel items"
 -- Bitte in deiner Action-Liste verifizieren (Standard: 40224)
 local CMD_EXPLODE_MULTI_CANDIDATES = {40224, 40894}
 

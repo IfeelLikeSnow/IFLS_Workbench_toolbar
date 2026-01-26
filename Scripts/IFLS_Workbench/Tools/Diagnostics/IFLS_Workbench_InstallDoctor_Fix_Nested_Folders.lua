@@ -1,3 +1,4 @@
+-- @description IFLS Workbench: IFLS_Workbench_InstallDoctor_Fix_Nested_Folders
 ﻿-- @description IFLS Workbench: Install Doctor (Fix nested "Scripts/IFLS Workbench Toolbar" installs)
 -- @version 0.7.9
 -- @author I feel like snow

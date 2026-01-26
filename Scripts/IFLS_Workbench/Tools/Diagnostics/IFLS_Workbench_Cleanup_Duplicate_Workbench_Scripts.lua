@@ -1,4 +1,4 @@
-﻿-- @description IFLS: Cleanup helper (find duplicate IFLS scripts)
+-- @description IFLS: Cleanup helper (find duplicate IFLS scripts)
 -- @version 0.1
 -- @author I feel like snow
 -- @about
@@ -6,7 +6,6 @@
 --   - Finds multiple copies of common IFLS scripts in REAPER/Scripts
 --   - Opens the Scripts folder so you can remove old copies manually
 --
-
 local r = reaper
 local res = r.GetResourcePath()
 local scripts_dir = res .. "/Scripts"
@@ -49,7 +48,7 @@ for _,fn in ipairs(suspects) do
 end
 
 if not any then
-  msg("\nNo obvious duplicates found. ðŸŽ‰")
+  msg("\nNo obvious duplicates found. 🎉")
 else
   msg("\nRecommendation: keep ONLY the newest copy (this repo), delete older duplicates.")
 end

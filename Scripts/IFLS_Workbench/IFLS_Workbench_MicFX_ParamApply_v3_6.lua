@@ -1,6 +1,6 @@
-﻿-- @description IFLS Workbench - MicFX ParamApply v3.6 (LiveAware â€“ JSFX Meter, Drive & Comp Bias)
+-- @description IFLS Workbench - MicFX ParamApply v3.6 (LiveAware – JSFX Meter, Drive & Comp Bias)
 -- @version 0.1.0
-
+-- @about Auto-added @about (please replace with a real description).
 local r = reaper
 
 local function find_fx(tr)
@@ -50,7 +50,7 @@ local function apply_track(tr)
       end
       if ln:find("pressure") and maps and maps.airwindows and maps.airwindows.pressure and maps.airwindows.pressure.weights then
         -- optional: adjust drive/compress balance (heuristic)
-        -- intentionally conservative â€“ handled in apply_mapped_drive scaling
+        -- intentionally conservative – handled in apply_mapped_drive scaling
       end
       if (ln:find("britpre") or ln:find("burier")) and maps and maps.analogobsession then
         link_output_to_input(tr, fx.flavor)
@@ -86,7 +86,7 @@ r.UpdateArrange()
 
 -- DF95 ParamMap loader
 local function load_param_maps()
-  local p = reaper.GetResourcePath() .. "/Data/IFLS_Workbench/IFLS_Workbench_ParamMaps_AO_AW.json"
+  local p = reaper.GetResourcePath() .. "/Data/IFLS Workbench/DF95_ParamMaps_AO_AW.json"
   local f = io.open(p,"rb"); if not f then return nil end
   local d = f:read("*all"); f:close()
   if reaper.JSON_Decode then return reaper.JSON_Decode(d) end
