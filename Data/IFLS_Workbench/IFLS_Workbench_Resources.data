@@ -1,18 +1,14 @@
-@description IFLS Workbench: Resources (Icons, Data, FXChains, MenuSets, TrackTemplates)
-@version 0.7.8
-@author IFLS Workbench
-@metapackage
-@about
-  Installs required non-script resources for IFLS Workbench:
-  - Toolbar icons (Data/toolbar_icons)
-  - JSON/CSV/MD data files (Data/**)
-  - FXChains (FXChains/**)
-  - Toolbar/MenuSets (MenuSets/**)
-  - Track templates (TrackTemplates/**)
-@provides
-  Data/IFLS_Workbench/*.json
-  Data/InstalledFX/**
-  Data/toolbar_icons/**
-  FXChains/IFLS_Workbench/**/*.rfxchain
-  MenuSets/**
-  TrackTemplates/**
+-- @description IFLS Workbench: Resources (JSON + Icons + FXChains + MenuSets + TrackTemplates)
+-- @version 0.7.9
+-- @author I feel like snow
+-- @about
+--   Shared resources used by IFLS Workbench scripts.
+
+-- @metapackage
+-- @provides
+--   Data/IFLS_Workbench/*.json
+--   Data/InstalledFX/**/*
+--   Data/toolbar_icons/**/*
+--   FXChains/IFLS_Workbench/**/*.rfxchain
+--   MenuSets/**/*
+--   TrackTemplates/**/*
