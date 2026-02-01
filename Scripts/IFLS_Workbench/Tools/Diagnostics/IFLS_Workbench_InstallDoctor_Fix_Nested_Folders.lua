@@ -1,11 +1,10 @@
--- @description IFLS Workbench: IFLS_Workbench_InstallDoctor_Fix_Nested_Folders
--- @version 1.0.0
-
-ï»¿-- @description IFLS Workbench: Install Doctor (Fix nested "Scripts/IFLS Workbench Toolbar" installs)
--- @version 0.7.9
+-- @description IFLS Workbench: Install Doctor (fix nested / wrong ZIP installs)
+-- @version 0.8.0
 -- @author I feel like snow
 -- @about
---   See README.md for usage / docs.
+--   Detects common broken manual installs that create nested paths like:
+--     <ResourcePath>/Scripts/IFLS_Workbench_Toolbar/Scripts/IFLS_Workbench/...
+--   and merges them back into the correct locations under <ResourcePath>/.
 
 --   Repairs the most common manual-install mistake:
 --     Unzipping the whole repository into <ResourcePath>/Scripts/
@@ -91,17 +90,51 @@ local function copy_tree(src_dir, dst_dir, counters)
 end
 
 local function looks_like_repo_root(p)
-  return dir_exists(join(p,"Scripts")) and dir_exists(join(p,"Effects")) and dir_exists(join(p,"Data"))
+  -- accept full repo roots, but also partial 'Scripts-only' wrappers (common broken ZIP installs)
+  if dir_exists(join(p, "Scripts/IFLS_Workbench")) then return true end
+  if dir_exists(join(p, "Scripts")) and (dir_exists(join(p,"Effects")) or dir_exists(join(p,"Data")) or dir_exists(join(p,"FXChains")) or dir_exists(join(p,"MenuSets"))) then return true end
+  return false
 end
 
 local rp = r.GetResourcePath()
 
 -- Known bad install folders (under Scripts/)
-local bad_roots = {
-  join(rp, "Scripts/IFLS Workbench Toolbar"),
-  join(rp, "Scripts/IFLS_Workbench_toolbar"),
-  join(rp, "Scripts/IFLS_Workbench_toolbar_COMPLETE"),
+-- NOTE: Users sometimes unzip GitHub ZIPs directly into <ResourcePath>/Scripts/.
+-- GitHub ZIP names vary (e.g. IFLS_Workbench_toolbar-main), and users may also rename folders.
+-- So we keep some known names and also scan for IFLS/Workbench/Toolbar wrappers.
+local bad_roots = {}
+local function add_root(p)
+  if dir_exists(p) then bad_roots[#bad_roots+1] = p end
+end
+
+-- explicit known wrapper folder names
+local known = {
+  "IFLS Workbench Toolbar",
+  "IFLS_Workbench_Toolbar",
+  "IFLS_Workbench_toolbar",
+  "IFLS_Workbench_toolbar-main",
+  "IFLS_Workbench_toolbar-main (1)",
+  "IFLS_Workbench_toolbar-main (2)",
+  "IFLS_Workbench_toolbar_COMPLETE",
+  "IFLS Workbench",
+  "IFLS_Workbench",
 }
+for _,name in ipairs(known) do
+  add_root(join(rp, "Scripts/"..name))
+end
+
+-- heuristic scan under <ResourcePath>/Scripts/
+local scripts_dir = join(rp, "Scripts")
+local i = 0
+while true do
+  local dn = r.EnumerateSubdirectories(scripts_dir, i)
+  if not dn then break end
+  local low = (dn or ""):lower()
+  if (low:find("ifls") and low:find("workbench")) or (low:find("ifls") and low:find("toolbar")) then
+    add_root(join(scripts_dir, dn))
+  end
+  i = i + 1
+end
 
 local found = {}
 for _,b in ipairs(bad_roots) do

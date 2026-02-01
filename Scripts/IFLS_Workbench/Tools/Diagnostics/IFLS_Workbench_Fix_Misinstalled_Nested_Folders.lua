@@ -1,5 +1,5 @@
 -- @description IFLS Workbench: Fix Misinstalled Nested Folders (move/merge to ResourcePath root)
--- @version 0.7.9
+-- @version 0.8.0
 -- @author IFLS
 -- @about
 --  Fixes a common manual-install mistake where the whole bundle was extracted into:
@@ -73,12 +73,31 @@ local resource = r.GetResourcePath()
 local scripts = join(resource, "Scripts")
 
 local candidates = {
+  -- common wrapper names from GitHub ZIP downloads or manual renames
   join(join(scripts, "IFLS Workbench Toolbar"), "IFLS Workbench"),
   join(scripts, "IFLS Workbench Toolbar"),
   join(scripts, "IFLS_Workbench_toolbar"),
+  join(scripts, "IFLS_Workbench_Toolbar"),
+  join(scripts, "IFLS_Workbench_toolbar-main"),
+  join(scripts, "IFLS_Workbench_toolbar-main (1)"),
+  join(scripts, "IFLS_Workbench_toolbar-main (2)"),
   join(join(scripts, "IFLS_Workbench_toolbar"), "IFLS_Workbench_toolbar"),
-  join(join(scripts, "IFLS_Workbench_toolbar"), "IFLS_Workbench"),
+  join(join(scripts, "IFLS_Workbench_Toolbar"), "IFLS_Workbench_Toolbar"),
 }
+
+-- heuristic scan: any folder under <ResourcePath>/Scripts that looks like an IFLS Workbench wrapper
+do
+  local i = 0
+  while true do
+    local dn = r.EnumerateSubdirectories(scripts, i)
+    if not dn then break end
+    local low = (dn or ""):lower()
+    if (low:find("ifls") and low:find("workbench")) or (low:find("ifls") and low:find("toolbar")) then
+      candidates[#candidates+1] = join(scripts, dn)
+    end
+    i = i + 1
+  end
+end
 
 local bad = nil
 for _,c in ipairs(candidates) do

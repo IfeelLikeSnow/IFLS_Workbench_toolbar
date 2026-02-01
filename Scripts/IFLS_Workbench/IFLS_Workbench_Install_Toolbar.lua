@@ -1,15 +1,11 @@
--- @description IFLS Workbench: IFLS_Workbench_Install_Toolbar
--- @version 1.0.0
-
-ï»¿-- @description IFLS Workbench: Install helpers (register scripts + open Action List / generate toolbar file)
--- @version 1.2
+-- @description IFLS Workbench: Install helper (register scripts + toolbar setup)
+-- @version 1.2.1
 -- @author I feel like snow
 -- @about
---   Convenience helper after installing via ReaPack/ZIP:
---   1) Registers IFLS Workbench scripts into the Action List.
---   2) Opens the Action List (so you can search/add to toolbars).
---   3) Optional: generate a Floating Toolbar import file (.ReaperMenu).
---
+--   Runs after installing via ReaPack or ZIP:
+--   - Registers scripts into the Action List
+--   - Installs assets / generates menus (if present)
+--   If a nested/wrong ZIP install is detected, it offers to run Install Doctor.
 
 local r = reaper
 local sep = package.config:sub(1,1)
@@ -59,6 +55,63 @@ local function collect_scripts(dir, out)
 end
 
 local base = script_dir()
+
+-- Detect nested manual installs (e.g. .../Scripts/IFLS_Workbench_Toolbar/Scripts/IFLS_Workbench/...)
+local rp = r.GetResourcePath()
+local function norm(p) return (p or ""):gsub("\","/"):lower() end
+local function file_exists(p)
+  local f = io.open(p, "rb")
+  if f then f:close(); return true end
+  return false
+end
+
+local nb = norm(base)
+local nested = false
+do
+  local first = nb:find("/scripts/")
+  if first then
+    local second = nb:find("/scripts/", first+1)
+    if second then nested = true end
+  end
+  if nb:find("/scripts/ifls_workbench_toolbar") or nb:find("/scripts/ifls workbench toolbar") then
+    nested = true
+  end
+end
+
+if nested then
+  local doc = join(base, "Tools/Diagnostics/IFLS_Workbench_InstallDoctor_Fix_Nested_Folders.lua")
+  local msg = "Nested/wrong ZIP install detected.
+
+" ..
+              "Your current path is:
+  " .. base .. "
+
+" ..
+              "This usually happens when a GitHub ZIP was extracted into <ResourcePath>/Scripts/
+" ..
+              "creating an extra wrapper folder (e.g. IFLS_Workbench_Toolbar).
+
+" ..
+              "Run Install Doctor now to merge everything back to:
+  " .. join(rp, "Scripts/IFLS_Workbench") .. "
+
+" ..
+              "Recommended: YES (then restart REAPER)."
+  local ret = r.ShowMessageBox(msg, "IFLS Workbench - Install helper", 4)
+  if ret == 6 then
+    if file_exists(doc) then
+      dofile(doc)
+    else
+      r.ShowMessageBox("InstallDoctor script not found at:
+" .. doc .. "
+
+Please run it from:
+Scripts/IFLS_Workbench/Tools/Diagnostics/ (if already installed correctly).", "IFLS Workbench - Install helper", 0)
+    end
+  end
+  return
+end
+
 local scripts = collect_scripts(base, {})
 table.sort(scripts)
 
