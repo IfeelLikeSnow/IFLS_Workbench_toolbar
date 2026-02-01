@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="IFLS_Workbench_Toolbar" commit="24807b115dba2cad78899c081878c37fa54a2c9c">
+<index version="1" name="IFLS_Workbench_Toolbar" commit="4a7e6ca0abefe17a049b138e5926d15fc926e957">
   <category name="Data/IFLS_Workbench">
     <reapack name="IFLS_Workbench_Resources.data" type="data" desc="IFLS Workbench Resources (JSON)">
       <version name="1.0.0" author="IfeelLikeSnow" time="2026-01-26T17:01:56Z">
@@ -183,12 +183,26 @@
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/d3157be310a6e3e08780a2ae37841dee0e8c2d24/Scripts/IFLS_Workbench/IFLS_Workbench_Explode_Fieldrec.lua</source>
       </version>
     </reapack>
-    <reapack name="IFLS_Workbench_Install_Toolbar.lua" type="script" desc="IFLS Workbench: IFLS_Workbench_Install_Toolbar">
+    <reapack name="IFLS_Workbench_Install_Toolbar.lua" type="script" desc="IFLS Workbench: Install helper (register scripts + toolbar setup)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Runs after installing via ReaPack or ZIP:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Registers scripts into the Action List\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Installs assets / generates menus (if present) If a nested/wrong ZIP install is detected, it offers to run Install Doctor.\sa180\par}
+}
+]]></description>
+      </metadata>
       <version name="1.2" author="I feel like snow" time="2026-01-17T15:12:30Z">
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Scripts/IFLS_Workbench/IFLS_Workbench_Install_Toolbar.lua</source>
       </version>
       <version name="1.0.0" time="2026-01-26T17:01:56Z">
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a91c4d6b7a417074b46d7aeaebd7742a21c0f647/Scripts/IFLS_Workbench/IFLS_Workbench_Install_Toolbar.lua</source>
+      </version>
+      <version name="1.2.1" author="I feel like snow" time="2026-02-01T15:55:42Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/4a7e6ca0abefe17a049b138e5926d15fc926e957/Scripts/IFLS_Workbench/IFLS_Workbench_Install_Toolbar.lua</source>
       </version>
     </reapack>
     <reapack name="IFLS_Workbench_MicFX_ParamApply_v3_6.lua" type="script" desc="IFLS Workbench - MicFX ParamApply v3.6 (LiveAware â€“ JSFX Meter, Drive &amp; Comp Bias)">
@@ -901,13 +915,28 @@ Implementation notes:
       <version name="0.7.9" author="IFLS" time="2026-01-13T21:58:43Z">
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/5b2f08d080ad4880f7b2d81e2f8f502db0df95c3/Scripts/IFLS_Workbench/Tools/Diagnostics/IFLS_Workbench_Fix_Misinstalled_Nested_Folders.lua</source>
       </version>
+      <version name="0.8.0" author="IFLS" time="2026-02-01T15:55:42Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/4a7e6ca0abefe17a049b138e5926d15fc926e957/Scripts/IFLS_Workbench/Tools/Diagnostics/IFLS_Workbench_Fix_Misinstalled_Nested_Folders.lua</source>
+      </version>
     </reapack>
-    <reapack name="IFLS_Workbench_InstallDoctor_Fix_Nested_Folders.lua" type="script" desc="IFLS Workbench: IFLS_Workbench_InstallDoctor_Fix_Nested_Folders">
+    <reapack name="IFLS_Workbench_InstallDoctor_Fix_Nested_Folders.lua" type="script" desc="IFLS Workbench: Install Doctor (fix nested / wrong ZIP installs)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Detects common broken manual installs that create nested paths like: /Scripts/IFLS_Workbench_Toolbar/Scripts/IFLS_Workbench/... and merges them back into the correct locations under /.\par}
+}
+]]></description>
+      </metadata>
       <version name="0.7.9" author="I feel like snow" time="2026-01-17T15:12:30Z">
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/25dfb7b284b24f6a7162a12d0df62e885b469301/Scripts/IFLS_Workbench/Tools/Diagnostics/IFLS_Workbench_InstallDoctor_Fix_Nested_Folders.lua</source>
       </version>
       <version name="1.0.0" time="2026-01-26T17:01:56Z">
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/a91c4d6b7a417074b46d7aeaebd7742a21c0f647/Scripts/IFLS_Workbench/Tools/Diagnostics/IFLS_Workbench_InstallDoctor_Fix_Nested_Folders.lua</source>
+      </version>
+      <version name="0.8.0" author="I feel like snow" time="2026-02-01T15:55:42Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_Workbench_toolbar/raw/4a7e6ca0abefe17a049b138e5926d15fc926e957/Scripts/IFLS_Workbench/Tools/Diagnostics/IFLS_Workbench_InstallDoctor_Fix_Nested_Folders.lua</source>
       </version>
     </reapack>
     <reapack name="IFLSWB_TestSuite_CompileAll.lua" type="script" desc="IFLSWB TestSuite - Compile all Lua scripts in a repo folder">
