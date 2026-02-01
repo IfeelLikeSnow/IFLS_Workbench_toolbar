@@ -1,15 +1,16 @@
 -- @version 0.0.1
 
+
 -- @description IFLS Workbench: PolyWAV Toolbox (ImGui)
 -- @author I feel like snow (based on IFLSWB)
 -- @version 1.0
 -- @about
---   ImGui-Toolbox fÃ¼r Multichannel/PolyWAV-Items (z.B. Zoom F6).
+--   ImGui-Toolbox fÃƒÂ¼r Multichannel/PolyWAV-Items (z.B. Zoom F6).
 --   Funktionen:
 --   * Anzeige selektierter Multichannel-Items
 --   * Explode via REAPER-Standard-Action
 --   * ZoomF6-Mapping (Name/Farbe/Pan) mit Presets
---   * SampleDB Multi-UCS Bridge (ZoomF6-EintrÃ¤ge + AI-Felder)
+--   * SampleDB Multi-UCS Bridge (ZoomF6-EintrÃƒÂ¤ge + AI-Felder)
 --   * Home-Zone-Heuristik aus Pfadnamen
 --   * Log-Bereich im GUI
 --   * Extra-Buttons: Nur Mapping / Nur SampleDB
@@ -118,7 +119,7 @@ end
 -- Zoom F6 Mapping Presets
 ------------------------------------------------------------
 
-local CMD_EXPLODE_MULTICHANNEL = 40438  -- ggf. im Action-List prÃ¼fen
+local CMD_EXPLODE_MULTICHANNEL = 40438  -- ggf. im Action-List prÃƒÂ¼fen
 
 local ZOOMF6_PRESETS = {
   ["Standard (Boom + 2 Lav + Stereo Amb)"] = {
@@ -162,7 +163,7 @@ end
 
 local function rename_track_and_items_for_channel(tr, map_entry)
   if not tr or not map_entry then return end
-  local base_name = string.format("F6 %s â€“ %s",
+  local base_name = string.format("F6 %s Ã¢â‚¬â€œ %s",
     map_entry.short or ("CH"..tostring(map_entry.ch or "?")),
     map_entry.role or "")
 
@@ -343,7 +344,7 @@ local function save_sampledb_multi_ucs(db, db_path)
   if not f then
     r.ShowMessageBox(
       "Kann IFLSWB SampleDB Multi-UCS nicht schreiben:\n"..tostring(db_path),
-      "IFLS Workbench PolyWAV Toolbox â€“ SampleDB Bridge", 0)
+      "IFLS Workbench PolyWAV Toolbox Ã¢â‚¬â€œ SampleDB Bridge", 0)
     return false
   end
   f:write(json_encode_simple(db, ""))
@@ -354,7 +355,7 @@ end
 local function infer_home_zone_from_path(path)
   if not path then return nil end
   local p = path:lower()
-  if p:find("kitchen") or p:find("kÃ¼che") or p:find("k%c3%bcche") then
+  if p:find("kitchen") or p:find("kÃƒÂ¼che") or p:find("k%c3%bcche") then
     return "KITCHEN"
   elseif p:find("bathroom") or p:find("bad") or p:find("bath") or p:find("toilet") or p:find("wc") then
     return "BATHROOM"
@@ -444,7 +445,7 @@ local function remap_selected_tracks_as_zoomf6()
   end
   local mapping = get_zoomf6_mapping()
   if not mapping then
-    log("Remap: kein ZoomF6-Preset ausgewÃ¤hlt.")
+    log("Remap: kein ZoomF6-Preset ausgewÃƒÂ¤hlt.")
     return
   end
 
@@ -484,13 +485,13 @@ local function add_selected_items_to_sampledb()
   end
 
   if #items == 0 then
-    log("SampleDB: keine gÃ¼ltigen Dateien fÃ¼r Bridge gefunden.")
+    log("SampleDB: keine gÃƒÂ¼ltigen Dateien fÃƒÂ¼r Bridge gefunden.")
     return
   end
 
   local added = insert_zoomf6_items_into_sampledb(items)
   if added and added > 0 then
-    log(string.format("SampleDB: %d Items hinzugefÃ¼gt (nur DB).", added))
+    log(string.format("SampleDB: %d Items hinzugefÃƒÂ¼gt (nur DB).", added))
   else
     log("SampleDB: keine neuen Items (nur DB).")
   end
@@ -504,8 +505,8 @@ local function do_explode_multichannel(opt_enable_mapping, opt_enable_sampledb)
   local items = collect_poly_items()
   if #items == 0 then
     r.ShowMessageBox(
-      "Keine Multichannel-Items ausgewÃ¤hlt.\n\n" ..
-      "Bitte wÃ¤hle mindestens ein Item mit mehr als einem Kanal aus\n" ..
+      "Keine Multichannel-Items ausgewÃƒÂ¤hlt.\n\n" ..
+      "Bitte wÃƒÂ¤hle mindestens ein Item mit mehr als einem Kanal aus\n" ..
       "(z.B. Zoom F6 PolyWAV) und versuche es erneut.",
       "IFLS Workbench PolyWAV Toolbox",
       0
@@ -548,13 +549,13 @@ local function do_explode_multichannel(opt_enable_mapping, opt_enable_sampledb)
     if added and added > 0 then
       log(string.format("Explode: %d ZoomF6-Items in SampleDB eingetragen.", added))
     else
-      log("Explode: keine neuen SampleDB-EintrÃ¤ge (alles vorhanden).")
+      log("Explode: keine neuen SampleDB-EintrÃƒÂ¤ge (alles vorhanden).")
     end
   else
     log("Explode: SampleDB Bridge deaktiviert.")
   end
 
-  r.Undo_EndBlock("IFLS Workbench PolyWAV Toolbox â€“ Explode + ZoomF6 + SampleDB", -1)
+  r.Undo_EndBlock("IFLS Workbench PolyWAV Toolbox Ã¢â‚¬â€œ Explode + ZoomF6 + SampleDB", -1)
 end
 
 ------------------------------------------------------------
@@ -572,7 +573,7 @@ local function ensure_imgui()
   if not r.ImGui_CreateContext then
     r.ShowMessageBox(
       "ReaImGui scheint nicht installiert zu sein.\n\n" ..
-      "Bitte Ã¼ber ReaPack das Paket 'ReaImGui' installieren.",
+      "Bitte ÃƒÂ¼ber ReaPack das Paket 'ReaImGui' installieren.",
       "IFLS Workbench PolyWAV Toolbox", 0)
     return nil
   end
@@ -589,7 +590,7 @@ local function loop()
   if not ctx then return end
 
   r.ImGui_SetNextWindowSize(ctx, 640, 420, r.ImGui_Cond_FirstUseEver())
-  local visible, open = r.ImGui_Begin(ctx, "IFLS Workbench PolyWAV Toolbox â€“ ZoomF6", true)
+  local visible, open = r.ImGui_Begin(ctx, "IFLS Workbench PolyWAV Toolbox Ã¢â‚¬â€œ ZoomF6", true)
 
   if visible then
     r.ImGui_Text(ctx, "Selektierte Multichannel-Items (z.B. Zoom F6 PolyWAV):")
@@ -600,8 +601,8 @@ local function loop()
     else
       if r.ImGui_BeginTable(ctx, "poly_items", 4, r.ImGui_TableFlags_Borders() | r.ImGui_TableFlags_RowBg()) then
         r.ImGui_TableSetupColumn(ctx, "Datei")
-        r.ImGui_TableSetupColumn(ctx, "KanÃ¤le")
-        r.ImGui_TableSetupColumn(ctx, "LÃ¤nge (s)")
+        r.ImGui_TableSetupColumn(ctx, "KanÃƒÂ¤le")
+        r.ImGui_TableSetupColumn(ctx, "LÃƒÂ¤nge (s)")
         r.ImGui_TableSetupColumn(ctx, "Samplerate")
         r.ImGui_TableHeadersRow(ctx)
 
@@ -651,7 +652,7 @@ local function loop()
       do_explode_multichannel(opt_enable_mapping, opt_enable_sampledb)
     end
     r.ImGui_SameLine(ctx)
-    r.ImGui_Text(ctx, "â†’ nutzt REAPER-Action + IFLSWB-Mapping/Bridge")
+    r.ImGui_Text(ctx, "Ã¢â€ â€™ nutzt REAPER-Action + IFLSWB-Mapping/Bridge")
 
     r.ImGui_Dummy(ctx, 0, 8)
 

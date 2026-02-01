@@ -3,6 +3,7 @@
 -- @author IFLS Workbench
 -- @about Toolbar toggle for HQ Mode. HQ = snap split points to nearest zero crossing.
 
+
 -- Register as a toggle action:
 -- The action state is persisted using ExtState IFLSWB_SmartSlicer/HQ (default ON).
 

@@ -9,8 +9,9 @@
 --   Notes:
 --     - Some plugins may open UI, require license dialogs, or fail to instantiate.
 --     - For REAPER versions without EnumInstalledFX(), the script will stop (this tool targets REAPER 7+).
---
 --   Repository: IFLS Workbench Toolbar
+
+--
 
 local r = reaper
 

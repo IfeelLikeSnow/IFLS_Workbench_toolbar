@@ -1,5 +1,7 @@
 -- @description IFLS Workbench: IFLSWB_RS5K_Rack_From_SelectedItems
-﻿-- @description IFLS Workbench - Build RS5K Rack from Selected Items (basic)
+-- @version 1.0.0
+
+ï»¿-- @description IFLS Workbench - Build RS5K Rack from Selected Items (basic)
 -- @author IFLS / DF95
 -- @version 0.4.0
 -- @about

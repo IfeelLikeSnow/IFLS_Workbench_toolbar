@@ -7,6 +7,7 @@
 --   2) Split into segments of random or fixed length (seconds).
 --   3) Apply fades to each segment for smoothness.
 
+
 local r = reaper
 local EXT_NS  = "IFLS_WORKBENCH_SLICING"
 local EXT_KEY = "DRONE_CHOP_SETTINGS" -- len_min,len_max,random,fade_ms,glue

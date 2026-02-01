@@ -6,6 +6,7 @@
 --   Tail trim threshold/pad and Spread gap range.
 --   Settings are stored in project extstate (IFLS_SLICING).
 
+
 local r = reaper
 
 local function get_ext(key, default)

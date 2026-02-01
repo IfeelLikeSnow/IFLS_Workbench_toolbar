@@ -3,6 +3,7 @@
 -- @author IFLS
 -- @about Inserts the JSFX "IFLS Workbench - Euclid Slicer (tempo-synced Euclidean gate)" onto all selected tracks (or last touched track).
 
+
 local r = reaper
 
 local function get_targets()

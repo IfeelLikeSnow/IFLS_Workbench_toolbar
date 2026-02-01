@@ -6,8 +6,9 @@
 --   - Missing dependencies (ReaImGui, SWS, ReaPack)
 --   - Missing IFLS script files
 --   - Duplicate installs (same filename in multiple folders)
---
 --   Safe: does not modify anything.
+
+--
 --
 local r = reaper
 

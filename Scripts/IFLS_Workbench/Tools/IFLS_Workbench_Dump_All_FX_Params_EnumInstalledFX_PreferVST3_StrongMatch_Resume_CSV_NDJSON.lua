@@ -1,5 +1,7 @@
 -- @description IFLS Workbench: IFLS_Workbench_Dump_All_FX_Params_EnumInstalledFX_PreferVST3_StrongMatch_Resume_CSV_NDJSON
-﻿--@description IFLS Workbench: Dump ALL FX params (EnumInstalledFX, prefer VST3, strong match, resume, CSV+NDJSON)
+-- @version 1.0.0
+
+ï»¿--@description IFLS Workbench: Dump ALL FX params (EnumInstalledFX, prefer VST3, strong match, resume, CSV+NDJSON)
 -- @version 0.4.4
 --@author IFLS (ported from DF95)
 --@about

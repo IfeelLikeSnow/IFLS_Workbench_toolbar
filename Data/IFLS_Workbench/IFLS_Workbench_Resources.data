@@ -1,18 +1,8 @@
-@description IFLS Workbench: Resources (Icons, Data, FXChains, MenuSets, TrackTemplates)
-@version 0.7.8
-@author IFLS Workbench
+@description IFLS Workbench Resources (JSON)
+@version 1.0.0
+@author IfeelLikeSnow
 @metapackage
-@about
-  Installs required non-script resources for IFLS Workbench:
-  - Toolbar icons (Data/toolbar_icons)
-  - JSON/CSV/MD data files (Data/**)
-  - FXChains (FXChains/**)
-  - Toolbar/MenuSets (MenuSets/**)
-  - Track templates (TrackTemplates/**)
 @provides
-  Data/IFLS_Workbench/*.json
-  Data/InstalledFX/**
-  Data/toolbar_icons/**
-  FXChains/IFLS_Workbench/**/*.rfxchain
-  MenuSets/**
-  TrackTemplates/**
+  DF95_ParamMaps_AO_AW.json > Data/IFLS_Workbench/DF95_ParamMaps_AO_AW.json
+  IFLS_Workbench_ParamMaps_AO_AW.json > Data/IFLS_Workbench/IFLS_Workbench_ParamMaps_AO_AW.json
+  MicFX_Profiles_v3.json > Data/IFLS_Workbench/MicFX_Profiles_v3.json

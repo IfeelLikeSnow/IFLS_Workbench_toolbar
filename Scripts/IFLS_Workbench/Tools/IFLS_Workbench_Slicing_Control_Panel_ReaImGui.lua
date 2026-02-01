@@ -7,21 +7,22 @@
 --   - PostFX: TailTrim (AudioAccessor) + Spread gaps (seconds or beats)
 --   - Routing: Select IFLS Slices items, route-to-slices-track
 --   - Advanced: optional "Dynamic Split" hook via user-provided Named Command ID
---
 --   Requires ReaImGui extension (distributed via ReaPack in ReaTeam Extensions).
 --   ReaImGui scripting pattern is based on ReaTeam templates (CreateContext + defer loop).
---
 --   Notes:
 --   - This panel *drives* existing IFLS scripts by registering/running them by file path.
 --   - It persists settings in ExtState (global) so they survive REAPER restarts.
---
 --   Install:
 --     Put this file in:
 --       %APPDATA%\REAPER\Scripts\IFLS_Workbench\Tools\
 --     Load it once via Actions -> ReaScript -> Load...
---
 --   Tip:
 --     For best UX, dock the panel (ReaImGui supports docking).
+
+--
+--
+--
+--
 
 local r = reaper
 

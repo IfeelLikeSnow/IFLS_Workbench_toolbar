@@ -3,6 +3,7 @@
 -- @author IFLS
 -- @about Inserts the JSFX "IFLS Workbench - ReampSuite Analyzer FFT" onto all selected tracks (or last touched track).
 
+
 local r = reaper
 
 local function get_targets()

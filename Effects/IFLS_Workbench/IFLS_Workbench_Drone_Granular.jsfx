@@ -1,12 +1,13 @@
-﻿// @description IFLS_Workbench_Drone_Granular.jsfx
+version: 1.0.0
+// @description IFLS_Workbench_Drone_Granular.jsfx
 // @version 0.0.1
 
 desc:IFLS Workbench - Drone Granular Texture
 author:DF95
 version:1.0
 about:
-  Ein einfacher granularer Textur-Prozessor fÃ¼r Drones/Atmos.
-  Nutzt mehrere Ã¼berlappende Grains aus einem zirkulÃ¤ren Buffer
+  Ein einfacher granularer Textur-Prozessor fÃƒÂ¼r Drones/Atmos.
+  Nutzt mehrere ÃƒÂ¼berlappende Grains aus einem zirkulÃƒÂ¤ren Buffer
   mit Hann-Fenster, leichter Pitch-Randomisierung und Jitter.
 
 slider1:grain_len=0.150<0.020,0.800,0.005>Grain length (s)
@@ -28,7 +29,7 @@ slider7:mix=0.65<0,1,0.01>Wet Mix
   );
   grain_count = 4;
 
-  // Arrays fÃ¼r Grain-State
+  // Arrays fÃƒÂ¼r Grain-State
   i = 0;
   loop(grain_count,
     g_phase[i] = 0;
@@ -57,8 +58,8 @@ slider7:mix=0.65<0,1,0.01>Wet Mix
   bufL[wpos] = spl0 + bufL[wpos]*fb_gain;
   bufR[wpos] = spl1 + bufR[wpos]*fb_gain;
 
-  // neue Grains zufÃ¤llig triggern
-  // Wahrscheinlichkeit ~ density * (grain_len / Buffer-LÃ¤nge)
+  // neue Grains zufÃƒÂ¤llig triggern
+  // Wahrscheinlichkeit ~ density * (grain_len / Buffer-LÃƒÂ¤nge)
   prob = density_clamped * (grain_len_s / max_buf_s);
   prob > 1 ? prob = 1;
   rnd = rand(1);

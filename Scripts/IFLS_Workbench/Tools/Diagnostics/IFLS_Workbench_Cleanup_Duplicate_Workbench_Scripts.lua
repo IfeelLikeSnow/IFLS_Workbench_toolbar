@@ -5,6 +5,7 @@
 --   Safe cleanup helper for "duplicate script installs":
 --   - Finds multiple copies of common IFLS scripts in REAPER/Scripts
 --   - Opens the Scripts folder so you can remove old copies manually
+
 --
 local r = reaper
 local res = r.GetResourcePath()
@@ -48,7 +49,7 @@ for _,fn in ipairs(suspects) do
 end
 
 if not any then
-  msg("\nNo obvious duplicates found. 🎉")
+  msg("\nNo obvious duplicates found. ðŸŽ‰")
 else
   msg("\nRecommendation: keep ONLY the newest copy (this repo), delete older duplicates.")
 end

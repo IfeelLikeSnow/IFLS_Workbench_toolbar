@@ -1,5 +1,7 @@
 -- @description IFLS Workbench: IFLSWB_Generate_Fieldrec_SmartSlicer_Toolbar_ReaperMenu
-﻿-- @description IFLS Workbench - Generate Fieldrec SmartSlicer Toolbar (ReaperMenu)
+-- @version 1.0.0
+
+ï»¿-- @description IFLS Workbench - Generate Fieldrec SmartSlicer Toolbar (ReaperMenu)
 -- @version 1.0.0
 -- @author IFLS Workbench
 -- @about
@@ -29,7 +31,7 @@ local function find_cmd_id_by_filename(filename)
 end
 
 local function ensure_hint()
-  r.MB("IMPORTANT:\n\n1) Load these scripts in Actions → ReaScript: Load:\n- IFLS_Workbench_Fieldrec_SmartSlice_ModeMenu.lua\n- IFLS_Workbench_Fieldrec_SmartSlice_Hits.lua\n- IFLS_Workbench_Fieldrec_SmartSlice_Textures.lua\n- IFLS_Workbench_Fieldrec_SmartSlice_HQ_Toggle.lua\n\n2) Run each once (so REAPER assigns IDs).\n3) Re-run this generator.\n\nThis is a REAPER limitation: scripts get their command IDs at load-time.", "IFLSWB Toolbar Generator", 0)
+  r.MB("IMPORTANT:\n\n1) Load these scripts in Actions â†’ ReaScript: Load:\n- IFLS_Workbench_Fieldrec_SmartSlice_ModeMenu.lua\n- IFLS_Workbench_Fieldrec_SmartSlice_Hits.lua\n- IFLS_Workbench_Fieldrec_SmartSlice_Textures.lua\n- IFLS_Workbench_Fieldrec_SmartSlice_HQ_Toggle.lua\n\n2) Run each once (so REAPER assigns IDs).\n3) Re-run this generator.\n\nThis is a REAPER limitation: scripts get their command IDs at load-time.", "IFLSWB Toolbar Generator", 0)
 end
 
 local ids = {
@@ -62,4 +64,4 @@ end
 f:write(content)
 f:close()
 
-r.MB("Wrote toolbar menu:\n"..out_path.."\n\nImport it via: Toolbar → Customize → Import", "IFLSWB Toolbar Generator", 0)
+r.MB("Wrote toolbar menu:\n"..out_path.."\n\nImport it via: Toolbar â†’ Customize â†’ Import", "IFLSWB Toolbar Generator", 0)

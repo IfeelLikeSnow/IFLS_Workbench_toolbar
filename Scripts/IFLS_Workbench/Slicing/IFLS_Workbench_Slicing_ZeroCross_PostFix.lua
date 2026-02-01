@@ -7,6 +7,7 @@
 --   + Safer: apply minimal fades only (prevents clicks after slicing)
 --   + Preserve existing fades (only increases if needed)
 
+
 -- What this does:
 --   If IFLS_SLICING/ZC_RESPECT == 1, apply short fades to selected items.
 --   This is a robust "click prevention" post-fix after heavy slicing (transients, remove-silence, etc).
