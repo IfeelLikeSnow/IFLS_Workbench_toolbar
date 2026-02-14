@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "yamaha_pss_580",
+  "name_de": "Yamaha PSS‑580",
+  "manufacturer": "Yamaha",
+  "model": "PSS‑580",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Synthesizer & Keyboards",
+    "Unterkategorie": "Keyboard (Home)",
+    "Kategorie-Typ": "Keyboard (Home)"
+  },
+  "priority_group": "synth",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• HEADPHONES/AUX OUT (3,5 mm)\n• MIDI In/Out",
+  "controls_raw_de": "49 Mini‑Keys\n100 FM‑Voices + Edit\n100 Rhythmen / 400 Variationen\n5 User‑Voices, Simple‑Sequencer",
+  "controls": [
+    {
+      "name_en": "49 Mini‑Keys",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "100 FM‑Voices + Edit",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "100 Rhythmen / 400 Variationen",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "5 User‑Voices, Simple‑Sequencer",
+      "type": "unknown",
+      "notes_de": ""
+    }
+  ],
+  "power_raw_de": "6×C / 9–12 V\nPortaSound ca. 1989",
+  "notes_raw_de": "2‑OP‑FM mit Edit‑Funktion\n5 speicherbare User‑Sounds\nSequencer + umfangreiche Begleitautomatik\nMIDI‑In/Out",
+  "tech_raw_de": "FM/PCM Keyboard mit Sequencer",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "source",
+    "pads",
+    "bass",
+    "leads",
+    "drone_source"
+  ],
+  "danger_zones_de": []
+}

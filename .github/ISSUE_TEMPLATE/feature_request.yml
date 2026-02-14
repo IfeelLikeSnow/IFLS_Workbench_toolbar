@@ -1,0 +1,17 @@
+name: Feature request
+description: Propose a feature (use SIP if larger)
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What problem does this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: approach
+    attributes:
+      label: Proposed approach
+      description: Include routing model, recall implications, risks.

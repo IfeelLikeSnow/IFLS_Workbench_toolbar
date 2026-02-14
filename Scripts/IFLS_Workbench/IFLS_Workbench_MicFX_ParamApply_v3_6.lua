@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - IFLS_Workbench_MicFX_ParamApply_v3_6.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench - MicFX ParamApply v3.6 (LiveAware â€“ JSFX Meter, Drive & Comp Bias)
 -- @version 0.1.0
 -- @about Auto-added @about (please replace with a real description).

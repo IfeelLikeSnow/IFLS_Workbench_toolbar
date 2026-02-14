@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "controls_completeness": "unknown",
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "id": "mosky_mini_muff",
+  "name_de": "Mosky Mini Muff",
+  "manufacturer": "Mosky",
+  "model": "Mini Muff",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Effektpedale",
+    "Unterkategorie": "Distortion / Overdrive / Fuzz & Bitcrushing",
+    "Kategorie-Typ": "Fuzz"
+  },
+  "priority_group": "routing",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In (TS)\n• Out (TS)",
+  "controls_raw_de": "Volume\n• Tone\n• Sustain",
+  "controls": [
+    {
+      "name_en": "Volume",
+      "type": "unknown",
+      "notes_de": "(generisch) Bitte verifizieren mit Manual/Foto/Video.",
+      "function_de": "Ausgangspegel/Output-Level"
+    },
+    {
+      "name_en": "Tone",
+      "type": "unknown",
+      "notes_de": "(generisch) Bitte verifizieren mit Manual/Foto/Video.",
+      "function_de": "Klangregelung/Filter (heller/dunkler)"
+    },
+    {
+      "name_en": "Sustain",
+      "type": "unknown",
+      "notes_de": ""
+    }
+  ],
+  "power_raw_de": "≈ 5 mA",
+  "notes_raw_de": "cremiger Sustain",
+  "tech_raw_de": "Big‑Muff‑Fuzz",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": [],
+  "controls_contextual": {},
+  "warnings_de": [
+    "Power-Specs fehlen (To-do): bitte Manual/Panel/Listing verlinken."
+  ]
+}

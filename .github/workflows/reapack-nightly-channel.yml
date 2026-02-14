@@ -1,0 +1,38 @@
+name: ReaPack Nightly Channel - Update nightly/index.xml
+on:
+  push:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+jobs:
+  nightly:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+
+      - name: Install reapack-index
+        run: gem install reapack-index
+
+      - name: Generate nightly index
+        run: |
+          mkdir -p nightly
+          reapack-index . --name "IFLS Workbench (Nightly)" --output nightly/index.xml
+
+      - name: Commit updated nightly index (if changed)
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add nightly/index.xml
+          git commit -m "ci: update nightly index.xml"
+          git push

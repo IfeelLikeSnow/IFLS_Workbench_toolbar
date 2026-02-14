@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "controls_completeness": "unknown",
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "id": "mooer_lofi_machine",
+  "name_de": "Mooer LoFi Machine",
+  "manufacturer": "Mooer",
+  "model": "LoFi Machine",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Effektpedale",
+    "Unterkategorie": "Distortion / Overdrive / Fuzz & Bitcrushing",
+    "Kategorie-Typ": "Bitcrusher/Lo‑Fi"
+  },
+  "priority_group": "routing",
+  "signal_role": [
+    "bitcrusher",
+    "degrade",
+    "glitch",
+    "lofi"
+  ],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In (TS)\n• Out (TS)",
+  "controls_raw_de": "Mix\n• Bit\n• Sample\n• Mode (SYNTH/GTR/BASS)",
+  "controls": [
+    {
+      "name_en": "Mode Switch (Guitar/Bass/Synth)",
+      "type": "switch",
+      "notes_de": "3 Modi; EQ/Charakter je nach Quelle."
+    },
+    {
+      "name_en": "SAMPLE RATE",
+      "type": "knob",
+      "notes_de": "Sampling Rate reduzieren (31250Hz→60Hz) für Alias/Grain."
+    },
+    {
+      "name_en": "BIT",
+      "type": "knob",
+      "notes_de": "Bit Depth reduzieren (16Bit→5Bit) für Crunch."
+    },
+    {
+      "name_en": "MIX",
+      "type": "knob",
+      "notes_de": "Wet/Dry Mix."
+    },
+    {
+      "name_en": "TRUE BYPASS Footswitch",
+      "type": "footswitch",
+      "notes_de": "Bypass/On."
+    },
+    {
+      "name_en": "ON/OFF LED",
+      "type": "led",
+      "notes_de": "Status."
+    },
+    {
+      "name_en": "DC IN (9V)",
+      "type": "power",
+      "notes_de": "9V DC (Polarität beachten laut Manual)."
+    },
+    {
+      "name_en": "INPUT Jack",
+      "type": "jack",
+      "notes_de": "1/4\" mono in."
+    },
+    {
+      "name_en": "OUTPUT Jack",
+      "type": "jack",
+      "notes_de": "1/4\" mono out."
+    }
+  ],
+  "power_raw_de": "≈ 40 mA",
+  "notes_raw_de": "Glitch / Tape‑Stop",
+  "tech_raw_de": "Bitcrusher + SRR",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://www.strumentimusicali.net/manuali/2017/10/24/6b/mooer-lofimachinelofieffect-en.pdf",
+    "https://www.mooeraudio.com/product/Lofi-Machine--125.html"
+  ],
+  "enriched": true,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": [
+    "Low SAMPLE RATE kann starke Höhen-Aliasing erzeugen (perfekt für Hats/perc).",
+    "Bei MIX=100% kann Transient-Definition stark abnehmen."
+  ],
+  "controls_contextual": {},
+  "warnings_de": [
+    "Power-Specs fehlen (To-do): bitte Manual/Panel/Listing verlinken."
+  ]
+}

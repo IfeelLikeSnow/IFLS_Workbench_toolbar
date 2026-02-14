@@ -1,0 +1,39 @@
+id,name,manufacturer,tag,controls_count,controls_missing_desc,has_specs_power,manual_sources,video_sources,web_sources,controls_completeness
+danelectro_bacon_n_eggs_dj_16,Danelectro Bacon ’n’ Eggs (DJ-16),Danelectro,?,2,0,False,0,0,0,unknown
+danelectro_fab_fuzz_d_7,Danelectro Fab Fuzz (D-7),Danelectro,?,3,1,False,0,0,0,unknown
+danelectro_fab_metal_d_3,Danelectro Fab Metal (D-3),Danelectro,?,3,0,False,0,0,0,unknown
+digitech_whammy_5,DigiTech Whammy 5,DigiTech,?,12,0,False,0,0,0,unknown
+electro_harmonix_attack_decay,Electro‑Harmonix Attack Decay,Electro‑Harmonix,?,8,3,False,0,0,0,unknown
+golden_bull_tremolo,Golden Bull Tremolo,Golden Bull,?,2,1,False,0,0,0,unknown
+irin_talent_octave,IRIN Talent Octave,IRIN,?,4,3,False,0,0,0,unknown
+iset_analog_flanger,ISET Analog Flanger,ISET,?,4,2,False,0,0,0,unknown
+mooer_lofi_machine,Mooer LoFi Machine,Mooer,?,9,0,False,0,0,0,unknown
+mosky_mini_muff,Mosky Mini Muff,Mosky,?,3,1,False,0,0,0,unknown
+nux_mod_core_mk1,NUX Mod Core MK1,NUX,?,8,0,False,0,0,0,unknown
+palmer_bertreiber,Palmer Übertreiber,Palmer,?,5,2,False,0,0,0,unknown
+t_rex_tonebug_fuzz,T‑Rex ToneBug Fuzz,T‑Rex,?,3,0,False,0,0,0,unknown
+aliexpress_mini_crunch_distortion,AliExpress Mini Crunch Distortion,AliExpress,MR,7,0,True,0,1,0,manual_verified
+aliexpress_mini_vintage_overdrive,AliExpress Mini Vintage Overdrive,AliExpress,MR,7,0,True,0,0,1,manual_verified
+amuzik_oem_rowin_vibrock_re_02,Amuzik (OEM: Rowin) Vibrock (RE‑02),Amuzik (OEM: Rowin),MR,8,0,True,0,0,0,manual_verified
+behringer_bsy600,Behringer BSY600,Behringer,MR,7,0,True,0,0,0,manual_verified
+behringer_dd400_digital_delay,Behringer DD400 Digital Delay,Behringer,MR,8,0,True,0,0,0,manual_verified
+behringer_dr100_digital_reverb,Behringer DR100 Digital Reverb,Behringer,MR,7,0,True,0,0,0,manual_verified
+behringer_ut300_ultra_tremolo,Behringer UT300 Ultra Tremolo,Behringer,MR,7,0,True,0,0,0,manual_verified
+behringer_vp1_vintage_phaser,Behringer VP1 Vintage Phaser,Behringer,MR,5,0,True,0,0,0,manual_verified
+electro_harmonix_deluxe_memory_boy,Electro‑Harmonix Deluxe Memory Boy,Electro‑Harmonix,MR,10,0,True,0,0,0,manual_verified
+electro_harmonix_super_space_drum_pedal,Electro‑Harmonix Super Space Drum (Pedal),Electro‑Harmonix,MR,14,0,True,0,0,0,manual_verified
+flamma_fc11_envelope_filter,Flamma FC11 Envelope Filter,Flamma,MR,6,0,True,0,0,0,manual_verified
+gokko_gk_22_dripping_delay,GOKKO GK‑22 Dripping Delay,GOKKO,MR,8,0,True,1,1,0,manual_verified
+m_vave_mini_universe,M‑VAVE Mini Universe,M‑VAVE,MR,12,0,True,2,1,1,manual_verified
+oem_mini_tremolo_2knob,OEM Mini Tremolo (2-Knob),,PV,6,0,False,0,0,0,panel_verified
+amuzik_oem_rowin_tom_sline_fame_ocean_verb,Amuzik (OEM: Rowin/Tom'sline/Fame) Ocean Verb,Amuzik (OEM: Rowin/Tom'sline/Fame),PV,9,0,True,0,1,1,panel_verified
+aroma_amo_3_mario_bit_crusher,Aroma AMO-3 Mario Bit Crusher,Aroma,PV,8,0,False,0,0,0,panel_verified
+dolamo_d_10_mixing_boost,Dolamo D-10 Mixing Boost,Dolamo,PV,6,0,True,0,0,1,panel_verified
+eno_tcube_reverb,ENO T‑Cube Reverb,ENO,PV,8,0,False,0,0,0,panel_verified
+gokko_gk22_dripping_delay,GOKKO GK‑22 Dripping Delay,GOKKO,PV,7,0,False,0,0,0,panel_verified
+m_vave_elemental,M‑VAVE Elemental,M‑VAVE,PV,11,0,True,1,3,0,panel_verified
+oem_mini_crunch_distortion_3knob_blue,OEM Mini Crunch Distortion (3 Knobs) – Blue,OEM,PV,7,0,False,0,0,0,panel_verified
+oem_mini_tremolo_2knob_goldenbull,OEM Mini Tremolo (2 Knobs) – Golden Bull,OEM,PV,6,0,False,0,0,0,panel_verified
+oem_mini_overdrive_3knob_green,OEM Mini Vintage Overdrive (3 Knobs) – Green,OEM,PV,7,0,False,0,0,0,panel_verified
+eno_t_cube_reverb,ENO T‑Cube Reverb,ENO,VV,9,0,True,0,1,0,video_verified
+ginean_modulator_ringmod,Ginean Modulator Ringmod,Ginean,VV,5,0,True,0,2,0,video_verified

@@ -1,0 +1,22 @@
+{
+  "created_at_utc": "2026-02-02T22:02:41Z",
+  "sources": [
+    "Evidence/video_transcripts/mini_crunch_dist_transcript.txt"
+  ],
+  "claims": [
+    {
+      "type": "controls",
+      "knobs": [
+        "GAIN(label)",
+        "VOLUME(label)",
+        "TONE"
+      ],
+      "confidence": "high"
+    },
+    {
+      "type": "warning",
+      "text": "GAIN and VOLUME labels swapped (behavior inverted)",
+      "confidence": "high"
+    }
+  ]
+}

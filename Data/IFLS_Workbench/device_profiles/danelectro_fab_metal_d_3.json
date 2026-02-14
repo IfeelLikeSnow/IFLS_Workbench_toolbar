@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "controls_completeness": "unknown",
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "id": "danelectro_fab_metal_d_3",
+  "name_de": "Danelectro Fab Metal (D-3)",
+  "manufacturer": "Danelectro",
+  "model": "Fab Metal (D-3)",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Effektpedale",
+    "Unterkategorie": "Distortion / Overdrive / Fuzz & Bitcrushing",
+    "Kategorie-Typ": "Distortion"
+  },
+  "priority_group": "routing",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In (TS)\n• Out (TS)",
+  "controls_raw_de": "Gain\n• Tone\n• Level",
+  "controls": [
+    {
+      "name_en": "Gain",
+      "type": "unknown",
+      "notes_de": "(generisch) Bitte verifizieren mit Manual/Foto/Video.",
+      "function_de": "Gain/Drive (Verzerrungsgrad / Sättigung)"
+    },
+    {
+      "name_en": "Tone",
+      "type": "unknown",
+      "notes_de": "(generisch) Bitte verifizieren mit Manual/Foto/Video.",
+      "function_de": "Klangregelung/Filter (heller/dunkler)"
+    },
+    {
+      "name_en": "Level",
+      "type": "unknown",
+      "notes_de": "(generisch) Bitte verifizieren mit Manual/Foto/Video.",
+      "function_de": "Ausgangspegel/Output-Level"
+    }
+  ],
+  "power_raw_de": "≈ 30 mA",
+  "notes_raw_de": "aggressiver Mittenbiss",
+  "tech_raw_de": "High-Gain Dist",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": [],
+  "controls_contextual": {},
+  "warnings_de": [
+    "Power-Specs fehlen (To-do): bitte Manual/Panel/Listing verlinken."
+  ]
+}

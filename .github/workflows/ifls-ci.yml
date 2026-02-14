@@ -1,0 +1,56 @@
+name: IFLS CI (Lua + JSON)
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  luacheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Luacheck
+        uses: nebularg/actions-luacheck@v1
+        with:
+          args: --config .luacheckrc Scripts Workbench
+
+  validate-schemas:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate JSON Schemas
+        uses: dmnemec/json-schema-validate@v1
+        with:
+          schema: json-schema
+          files: |
+            Docs/schemas/*.schema.json
+
+  validate-json:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate Workbench data JSONs (schema)
+        uses: vanekj/validate-json-action@v1
+        with:
+          schema: Docs/schemas/ifls_workbench_data.schema.json
+          pattern: |
+            Scripts/IFLS_Workbench/Data/*.json
+            Scripts/IFLS_Workbench/Data/**/*.json
+            Data/IFLS_Workbench/**/*.json
+
+      - name: Validate FB01 patch manifest
+        uses: vanekj/validate-json-action@v1
+        with:
+          schema: Docs/schemas/fb01_patch_manifest.schema.json
+          pattern: |
+            Workbench/FB01/PatchLibrary/Patches/manifest.json
+
+      - name: Validate PSS580 patch manifest
+        uses: vanekj/validate-json-action@v1
+        with:
+          schema: Docs/schemas/pss580_patch_manifest.schema.json
+          pattern: |
+            Workbench/PSS580/Patches/manifest.json

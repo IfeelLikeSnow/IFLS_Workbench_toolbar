@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - IFLS_Workbench_Explode_AutoBus_Smart_Route.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: Explode AutoBus Smart + Route (FX/Color/Master)
 -- @version 1.0
 -- @author I feel like snow (based on IFLSWB)

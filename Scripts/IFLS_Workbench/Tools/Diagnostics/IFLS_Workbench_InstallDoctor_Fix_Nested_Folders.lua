@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/Diagnostics/IFLS_Workbench_InstallDoctor_Fix_Nested_Folders.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: Install Doctor (fix nested / wrong ZIP installs)
 -- @version 0.8.0
 -- @author I feel like snow

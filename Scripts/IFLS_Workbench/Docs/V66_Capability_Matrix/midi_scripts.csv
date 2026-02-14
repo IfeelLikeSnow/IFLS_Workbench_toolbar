@@ -1,0 +1,67 @@
+script,capabilities,cap_count
+_packages/IFLS_Workbench_FULL.lua,"Chains/Presets/Wizard, FX Inventory/Param Catalog, MIDI Routing/Setup, MIDI SysEx, Patchbay/Routing Engine, Pedal Profiles/Controls, QA/Doctor/Validation, Slicing/Sampler, Synth Modules FB01, Synth Modules PSS580, Toolbar/Menu/Installer",11
+Tools/IFLS_Workbench_Chain_Builder_Wizard.lua,"Chains/Presets/Wizard, MIDI CC/PC/Notes, MIDI Routing/Setup, Patchbay/Routing Engine, Pedal Profiles/Controls, Slicing/Sampler",6
+Tools/IFLS_Workbench_Doctor_v2.lua,"Chains/Presets/Wizard, MIDI SysEx, Patchbay/Routing Engine, QA/Doctor/Validation, Synth Modules FB01, Synth Modules PSS580",6
+Tools/IFLS_Workbench_Doctor.lua,"MIDI Routing/Setup, MIDI SysEx, Patchbay/Routing Engine, Pedal Profiles/Controls, QA/Doctor/Validation",5
+Tools/IFLS_Workbench_Validate_Data_JSON.lua,"Chains/Presets/Wizard, MIDI Routing/Setup, Patchbay/Routing Engine, QA/Doctor/Validation, Synth Modules FB01",5
+Tools/JSFX/IFLS_Workbench_Menu_JSFX_DSP_Tools.lua,"Chains/Presets/Wizard, MIDI Routing/Setup, Patchbay/Routing Engine, Pedal Profiles/Controls, Slicing/Sampler",5
+Workbench/FB01/Pack_v2/Scripts/IFLS_FB01_Create_8Part_Rack_1824c.lua,"Chains/Presets/Wizard, MIDI CC/PC/Notes, MIDI Routing/Setup, MIDI SysEx, Synth Modules FB01",5
+Workbench/FB01/Pack_v3/Scripts/IFLS_FB01_SysEx_Toolkit.lua,"MIDI CC/PC/Notes, MIDI Routing/Setup, MIDI SysEx, Synth Modules FB01, Synth Modules PSS580",5
+Workbench/FB01/Pack_v5/Scripts/IFLS_FB01_SysEx_Toolkit.lua,"MIDI CC/PC/Notes, MIDI Routing/Setup, MIDI SysEx, Synth Modules FB01, Synth Modules PSS580",5
+Workbench/FB01/Pack_v5/Scripts/IFLS_FB01_VoiceMacro_GUI.lua,"Chains/Presets/Wizard, MIDI Routing/Setup, MIDI SysEx, Pedal Profiles/Controls, Synth Modules FB01",5
+Workbench/FB01/Pack_v7/Scripts/IFLS_FB01_VoiceMacro_GUI.lua,"Chains/Presets/Wizard, MIDI Routing/Setup, MIDI SysEx, Pedal Profiles/Controls, Synth Modules FB01",5
+Workbench/ToolbarRepo/Scripts/IFLS_Workbench/IFLS_Workbench_PolyWAV_Toolbox.lua,"Chains/Presets/Wizard, MIDI Routing/Setup, QA/Doctor/Validation, Slicing/Sampler, Toolbar/Menu/Installer",5
+Workbench/ToolbarRepo/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Slicing_Control_Panel_ReaImGui.lua,"Chains/Presets/Wizard, MIDI Routing/Setup, QA/Doctor/Validation, Slicing/Sampler, Toolbar/Menu/Installer",5
+Workbench/ToolbarRepo/Scripts/IFLS_Workbench/Tools/JSFX/IFLS_Workbench_Menu_JSFX_DSP_Tools.lua,"Chains/Presets/Wizard, MIDI Routing/Setup, Pedal Profiles/Controls, Slicing/Sampler, Toolbar/Menu/Installer",5
+IFLS_Workbench_PolyWAV_Toolbox.lua,"Chains/Presets/Wizard, MIDI Routing/Setup, QA/Doctor/Validation, Slicing/Sampler",4
+PSS580/IFLS_PSS580_Create_Tracks_Template.lua,"MIDI CC/PC/Notes, MIDI Routing/Setup, MIDI SysEx, Synth Modules PSS580",4
+PSS580/IFLS_PSS580_ImportSYX_UpdateManifest.lua,"Chains/Presets/Wizard, MIDI CC/PC/Notes, MIDI SysEx, Synth Modules PSS580",4
+PSS580/IFLS_PSS580_Lib.lua,"MIDI Routing/Setup, MIDI SysEx, Patchbay/Routing Engine, Synth Modules PSS580",4
+Tools/IFLS_Export_FX_ParamCatalog_NoMidiCC_Toggles_VST3Preferred.lua,"FX Inventory/Param Catalog, MIDI CC/PC/Notes, MIDI Routing/Setup, Patchbay/Routing Engine",4
+Tools/IFLS_Workbench_Gear_And_Patchbay_View.lua,"Chains/Presets/Wizard, MIDI Routing/Setup, Patchbay/Routing Engine, Pedal Profiles/Controls",4
+Tools/IFLS_Workbench_Slicing_Control_Panel_ReaImGui.lua,"Chains/Presets/Wizard, MIDI Routing/Setup, QA/Doctor/Validation, Slicing/Sampler",4
+Tools/SamplePack/IFLSWB_AutoSplit_MixedContent.lua,"Chains/Presets/Wizard, MIDI Routing/Setup, Patchbay/Routing Engine, Slicing/Sampler",4
+Workbench/FB01/Pack_v2/Scripts/IFLS_FB01_CC_MixPanel.lua,"MIDI CC/PC/Notes, MIDI Routing/Setup, Pedal Profiles/Controls, Synth Modules FB01",4
+Workbench/FB01/Pack_v2/Scripts/IFLS_FB01_Send_SysEx_SWS.lua,"MIDI CC/PC/Notes, MIDI Routing/Setup, MIDI SysEx, Synth Modules FB01",4
+Workbench/FB01/Pack_v7/Scripts/IFLS_FB01_Request_Dump.lua,"MIDI Routing/Setup, MIDI SysEx, Synth Modules FB01, Synth Modules PSS580",4
+Workbench/ToolbarRepo/Scripts/IFLS_Workbench/IFLS_Workbench_Explode_Fieldrec.lua,"Chains/Presets/Wizard, MIDI Routing/Setup, Pedal Profiles/Controls, Toolbar/Menu/Installer",4
+Workbench/ToolbarRepo/Scripts/IFLS_Workbench/Slicing/IFLSWB_Fieldrec_SmartSlicer_Core.lua,"Chains/Presets/Wizard, MIDI Routing/Setup, Slicing/Sampler, Toolbar/Menu/Installer",4
+Workbench/ToolbarRepo/Scripts/IFLS_Workbench/Tools/IFLS_Export_FX_ParamCatalog_NoMidiCC_Toggles_VST3Preferred.lua,"FX Inventory/Param Catalog, MIDI CC/PC/Notes, MIDI Routing/Setup, Toolbar/Menu/Installer",4
+Workbench/ToolbarRepo/Scripts/IFLS_Workbench/Tools/SamplePack/IFLSWB_AutoSplit_MixedContent.lua,"Chains/Presets/Wizard, MIDI Routing/Setup, Slicing/Sampler, Toolbar/Menu/Installer",4
+Engine/IFLS_Patchbay_RoutingEngine.lua,"Chains/Presets/Wizard, MIDI Routing/Setup, Patchbay/Routing Engine",3
+IFLS_Workbench_Explode_Fieldrec.lua,"Chains/Presets/Wizard, MIDI Routing/Setup, Pedal Profiles/Controls",3
+PSS580/IFLS_PSS580_Browser.lua,"MIDI Routing/Setup, MIDI SysEx, Synth Modules PSS580",3
+PSS580/IFLS_PSS580_CaptureDump_Helper.lua,"MIDI Routing/Setup, MIDI SysEx, Synth Modules PSS580",3
+PSS580/IFLS_PSS580_Send_Project_Recall.lua,"MIDI Routing/Setup, MIDI SysEx, Synth Modules PSS580",3
+Slicing/IFLSWB_Fieldrec_SmartSlicer_Core.lua,"Chains/Presets/Wizard, MIDI Routing/Setup, Slicing/Sampler",3
+Tools/IFLS_Workbench_External_Insert_Wizard.lua,"Chains/Presets/Wizard, MIDI Routing/Setup, Patchbay/Routing Engine",3
+Tools/IFLS_Workbench_Reamp_Print_Toggle_From_FXBus.lua,"MIDI Routing/Setup, Patchbay/Routing Engine, Toolbar/Menu/Installer",3
+Tools/IFLS_Workbench_SelfTest.lua,"MIDI Routing/Setup, Patchbay/Routing Engine, QA/Doctor/Validation",3
+Workbench/FB01/Pack_v7/Scripts/IFLS_FB01_Import_Dump_From_Selected_Item.lua,"MIDI Routing/Setup, MIDI SysEx, Synth Modules FB01",3
+Workbench/FB01/Pack_v8/Scripts/IFLS_FB01_AutoDump_Record.lua,"MIDI Routing/Setup, MIDI SysEx, Synth Modules FB01",3
+Workbench/FB01/Pack_v8/Scripts/IFLS_FB01_AutoDump_Record_Adaptive.lua,"MIDI Routing/Setup, MIDI SysEx, Synth Modules FB01",3
+Workbench/FB01/Pack_v8/Scripts/IFLS_FB01_Export_SelectedItem_SysEx_To_SYX.lua,"MIDI Routing/Setup, MIDI SysEx, Synth Modules FB01",3
+Workbench/FB01/Pack_v8/Scripts/IFLS_FB01_StoreDump_To_ExtState.lua,"MIDI Routing/Setup, MIDI SysEx, Synth Modules FB01",3
+Workbench/FB01/Pack_v8/Scripts/IFLS_FB01_SysEx_Analyzer_SelectedItem.lua,"MIDI Routing/Setup, MIDI SysEx, Synth Modules FB01",3
+Workbench/FB01/PatchLibrary/Scripts/IFLS_FB01_Send_SYX_File.lua,"MIDI Routing/Setup, MIDI SysEx, Synth Modules FB01",3
+Workbench/ToolbarRepo/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Slicing_Clickify_SelectedItems.lua,"MIDI Routing/Setup, Slicing/Sampler, Toolbar/Menu/Installer",3
+Workbench/ToolbarRepo/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Slicing_TailTrim_SelectedItems.lua,"MIDI Routing/Setup, Slicing/Sampler, Toolbar/Menu/Installer",3
+Workbench/ToolbarRepo/Scripts/IFLS_Workbench/Tools/SamplePack/IFLSWB_SamplePack_Export_SelectedItems_POSTBUS.lua,"MIDI Routing/Setup, Slicing/Sampler, Toolbar/Menu/Installer",3
+Engine/IFLS_SafeApply.lua,"MIDI Routing/Setup, Patchbay/Routing Engine",2
+Tools/IFLS_Workbench_HW_Conflict_View.lua,"MIDI Routing/Setup, Patchbay/Routing Engine",2
+Tools/IFLS_Workbench_HW_Recall_Apply.lua,"MIDI Routing/Setup, Patchbay/Routing Engine",2
+Tools/IFLS_Workbench_Slicing_Clickify_SelectedItems.lua,"MIDI Routing/Setup, Slicing/Sampler",2
+Tools/IFLS_Workbench_Slicing_TailTrim_SelectedItems.lua,"MIDI Routing/Setup, Slicing/Sampler",2
+Tools/SamplePack/IFLSWB_SamplePack_Export_SelectedItems_POSTBUS.lua,"MIDI Routing/Setup, Slicing/Sampler",2
+Workbench/FB01/Pack_v7/Scripts/IFLS_FB01_Apply_Slot_To_FB01.lua,"MIDI SysEx, Synth Modules FB01",2
+Workbench/FB01/Pack_v8/Scripts/IFLS_FB01_ReplayDump_From_ExtState.lua,"MIDI SysEx, Synth Modules FB01",2
+Workbench/FB01/Pack_v8/Scripts/IFLS_FB01_Replay_SYX_File_Safe.lua,"MIDI SysEx, Synth Modules FB01",2
+Workbench/ToolbarRepo/Scripts/IFLS_Workbench/IFLS_Workbench_Explode_AutoBus_Smart_Route.lua,"MIDI Routing/Setup, Toolbar/Menu/Installer",2
+Workbench/ToolbarRepo/Scripts/IFLS_Workbench/IFLS_Workbench_MicFX_ParamApply_v3_6.lua,"MIDI Routing/Setup, Toolbar/Menu/Installer",2
+Workbench/ToolbarRepo/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Eliminate_Duplicate_Installations_v0.7.5.lua,"MIDI Routing/Setup, Toolbar/Menu/Installer",2
+Workbench/ToolbarRepo/Scripts/IFLS_Workbench/Tools/IFLS_Workbench_Reamp_Print_Toggle_From_FXBus.lua,"MIDI Routing/Setup, Toolbar/Menu/Installer",2
+_bootstrap.lua,"MIDI SysEx, Synth Modules FB01",2
+IFLS_Workbench_Explode_AutoBus_Smart_Route.lua,MIDI Routing/Setup,1
+IFLS_Workbench_MicFX_ParamApply_v3_6.lua,MIDI Routing/Setup,1
+Tools/IFLS_Workbench_Eliminate_Duplicate_Installations_v0.7.5.lua,MIDI Routing/Setup,1
+Workbench/Scripts/IFLS_Workbench_Repo_Diagnostics.lua,MIDI SysEx,1

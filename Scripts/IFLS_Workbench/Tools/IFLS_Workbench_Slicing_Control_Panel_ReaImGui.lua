@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/IFLS_Workbench_Slicing_Control_Panel_ReaImGui.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: Slicing Control Panel (ReaImGui)
 -- @version 0.7.6
 -- @author IFLS

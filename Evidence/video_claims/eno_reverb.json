@@ -1,0 +1,31 @@
+{
+  "created_at_utc": "2026-02-02T22:02:41Z",
+  "sources": [
+    "Evidence/video_transcripts/eno_reverb_transcript.txt"
+  ],
+  "claims": [
+    {
+      "type": "controls",
+      "knobs": [
+        "LEVEL",
+        "DRY/WET",
+        "TIME"
+      ],
+      "confidence": "high"
+    },
+    {
+      "type": "modes",
+      "modes": [
+        "ROOM",
+        "SPRING",
+        "WELL"
+      ],
+      "confidence": "high"
+    },
+    {
+      "type": "warning",
+      "text": "volume spikes when turning knobs; output drop/tone suck reported",
+      "confidence": "high"
+    }
+  ]
+}

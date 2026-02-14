@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.7",
+  "generated_at_utc": "2026-02-04T15:58:04Z",
+  "use_cases": [
+    {
+      "id": "glitch_idm_fx",
+      "name_de": "Glitch / IDM FX Chaos",
+      "name_en": "Glitch / IDM FX Chaos",
+      "tags": [
+        "experimental",
+        "mix_ready",
+        "drums",
+        "fx"
+      ],
+      "description_de": "Digitale Artefakte, rhythmische Zerstörung, Ringmod & verbogene Delays."
+    },
+    {
+      "id": "idm_drums_punch",
+      "name_de": "IDM Drums Punch (Kick/Snare)",
+      "name_en": "IDM Drums Punch (Kick/Snare)",
+      "tags": [
+        "mix_ready",
+        "drums"
+      ],
+      "description_de": "Aggressive, maschinelle Drums: Boost → Tremolo/Gate-Reverb."
+    },
+    {
+      "id": "pads_lofi_space",
+      "name_de": "Pads: Warm → LoFi → Space",
+      "name_en": "Pads: Warm → LoFi → Space",
+      "tags": [
+        "mix_ready",
+        "pads",
+        "stereo"
+      ],
+      "description_de": "LoFi-Färbung plus großer Raum, stereo und musikalisch."
+    },
+    {
+      "id": "drones_dark_ambient",
+      "name_de": "Drones / Dark Ambient",
+      "name_en": "Drones / Dark Ambient",
+      "tags": [
+        "experimental",
+        "drones",
+        "stereo"
+      ],
+      "description_de": "Pitch-Bewegung, resonante Sweeps, riesige Räume."
+    },
+    {
+      "id": "glitch_leads_mono",
+      "name_de": "Glitch Leads (Mono Synth)",
+      "name_en": "Glitch Leads (Mono Synth)",
+      "tags": [
+        "experimental",
+        "leads",
+        "mono"
+      ],
+      "description_de": "Oktave/Fuzz/Tremolo: kaputte Leads, tempo-synced chops."
+    },
+    {
+      "id": "insert_hardware_chain",
+      "name_de": "Hardware Insert (Patchbay)",
+      "name_en": "Hardware Insert (Patchbay)",
+      "tags": [
+        "mix_ready",
+        "routing",
+        "hardware"
+      ],
+      "description_de": "ReaInsert + Patchbay: DAW → Pedale → zurück, mit sicheren Gain-Stages."
+    },
+    {
+      "id": "field_recordings_idm",
+      "name_de": "Field Recordings → IDM Mangling",
+      "name_en": "Field Recordings → IDM Mangling",
+      "tags": [
+        "experimental",
+        "mix_ready",
+        "field",
+        "idm"
+      ],
+      "description_de": "Einzelhits & Geräusche in mixbare IDM-Hits, Glitches & Texturen verwandeln (ReaInsert → Pedale → Reaper FX)."
+    },
+    {
+      "id": "field_hits_idm_drums",
+      "name_de": "Field Hits → IDM Drums (Kick/Snare/Hat)",
+      "name_en": "Field Hits → IDM Drums",
+      "tags": [
+        "mix_ready",
+        "experimental",
+        "field",
+        "drums"
+      ],
+      "description_de": "Einzelhits (Foley) in druckvolle, einzigartige IDM-Drums verwandeln: Pre-VST → ReaInsert → Pedale → Post-VST."
+    },
+    {
+      "id": "field_textures_beds",
+      "name_de": "Field Textures → Beds/Clouds",
+      "name_en": "Field Textures → Beds/Clouds",
+      "tags": [
+        "mix_ready",
+        "experimental",
+        "field",
+        "textures",
+        "stereo"
+      ],
+      "description_de": "Ambience/Noise zu kontrollierten Texturen für IDM, mit Ducking, Width und Supermassive tails."
+    },
+    {
+      "id": "metallic_perc_mangling",
+      "name_de": "Metallic Perc Mangling",
+      "name_en": "Metallic Perc Mangling",
+      "tags": [
+        "experimental",
+        "mix_ready",
+        "percussion",
+        "metallic"
+      ],
+      "description_de": "Metallische Objects → inharmonik + ringmod + gated space, aber mixbar."
+    },
+    {
+      "id": "field_clicks_pops",
+      "name_de": "Field Clicks/Pops → IDM Perc",
+      "name_en": "Field Clicks/Pops → IDM Perc",
+      "tags": [
+        "field",
+        "drums",
+        "glitch",
+        "mix_ready"
+      ],
+      "description_de": "Klicks, Pops, Objekt-Hits zu IDM-Perc/Hats/Snares."
+    },
+    {
+      "id": "field_metallic",
+      "name_de": "Field Metallic → Tonal/Robot Perc",
+      "name_en": "Field Metallic → Tonal/Robot Perc",
+      "tags": [
+        "field",
+        "metallic",
+        "experimental",
+        "mix_ready"
+      ],
+      "description_de": "Metallische Field Hits zu tonal/resonant/robotic Sounds."
+    },
+    {
+      "id": "field_beds_drones_nomelda",
+      "name_de": "Field Beds/Drones (no Melda)",
+      "name_en": "Field Beds/Drones (no Melda)",
+      "tags": [
+        "field",
+        "drones",
+        "textures",
+        "mix_ready"
+      ],
+      "description_de": "Textur-Beds und Drones mit Valhalla + Glitchmachines + Kilohearts (ohne Melda)."
+    },
+    {
+      "id": "synth_glitch_nomelda",
+      "name_de": "Synth Glitch/IDM (no Melda)",
+      "name_en": "Synth Glitch/IDM (no Melda)",
+      "tags": [
+        "synth",
+        "glitch",
+        "mix_ready"
+      ],
+      "description_de": "Synths durch Hardware + Glitch/Transient Tools (ohne Melda)."
+    }
+  ]
+}

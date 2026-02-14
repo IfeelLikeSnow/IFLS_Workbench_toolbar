@@ -1,0 +1,75 @@
+id,name_de,manufacturer,category_de,controls_count,controls_completeness,panel_verified,manual_sources_count
+aliexpress_mini_crunch_distortion,AliExpress Mini Crunch Distortion,AliExpress,,7,partial_manual,True,2
+aliexpress_mini_vintage_overdrive,AliExpress Mini Vintage Overdrive,AliExpress,,7,partial_manual,True,2
+amuzik_oem_rowin_vibrock_re_02,Amuzik (OEM: Rowin) Vibrock (RE‑02),Amuzik (OEM: Rowin),,8,partial_manual,False,2
+amuzik_oem_rowin_tom_sline_fame_ocean_verb,Amuzik (OEM: Rowin/Tom'sline/Fame) Ocean Verb,Amuzik (OEM: Rowin/Tom'sline/Fame),,8,,True,1
+aroma_amo_3_mario_bit_crusher,Aroma AMO-3 Mario Bit Crusher,Aroma,,8,panel_verified,True,5
+arturia_keystep,Arturia KeyStep,Arturia,,5,,False,0
+arturia_microfreak,Arturia MicroFreak,Arturia,,9,,False,0
+behringer_bsy600,Behringer BSY600,Behringer,,7,partial_manual,False,1
+behringer_b_1,Behringer B‑1,Behringer,,2,,False,0
+behringer_c_2,Behringer C‑2,Behringer,,1,,False,0
+behringer_dd400_digital_delay,Behringer DD400 Digital Delay,Behringer,,8,partial_manual,False,1
+behringer_di20,Behringer DI20,Behringer,,3,,False,0
+behringer_di400p,Behringer DI400P,Behringer,,5,,False,2
+behringer_di4800a,Behringer DI4800A,Behringer,,3,,False,0
+behringer_dr100_digital_reverb,Behringer DR100 Digital Reverb,Behringer,,7,partial_manual,False,1
+behringer_edge,Behringer Edge,Behringer,,9,,False,0
+behringer_neutron,Behringer Neutron,Behringer,,5,,False,0
+behringer_ut300_ultra_tremolo,Behringer UT300 Ultra Tremolo,Behringer,,7,manual_rich,True,1
+behringer_vp1_vintage_phaser,Behringer VP1 Vintage Phaser,Behringer,,5,partial_manual,False,1
+behringer_xm8500,Behringer XM8500,Behringer,,1,,False,0
+behringer_xenyx_1204_usb,Behringer Xenyx 1204 USB,Behringer,,5,,False,0
+bontempi_ms_40,Bontempi MS‑40,Bontempi,,1,,False,0
+boredbrain_patchulator_8000,Boredbrain Patchulator 8000,Boredbrain,,1,,False,0
+boss_cs_3_compression_sustainer,Boss CS‑3 Compression Sustainer,Boss,,9,,False,1
+casio_sa_21,Casio SA-21,Casio,,6,,False,0
+casio_vl_1_vl_tone,Casio VL-1 (VL-Tone),Casio,,4,,False,0
+doremidi_midi_thru_3,DOREMiDi MIDI THRU‑3,DOREMiDi,,1,,False,0
+doremidi_midi_thru_box,DOREMiDi MIDI Thru Box,DOREMiDi,,1,,False,0
+danelectro_bacon_n_eggs_dj_16,Danelectro Bacon ’n’ Eggs (DJ-16),Danelectro,,2,,False,0
+danelectro_fab_fuzz_d_7,Danelectro Fab Fuzz (D-7),Danelectro,,3,,False,0
+danelectro_fab_metal_d_3,Danelectro Fab Metal (D-3),Danelectro,,3,,False,0
+digitech_whammy_5,DigiTech Whammy 5,DigiTech,,12,,False,1
+dolamo_d_10_mixing_boost,Dolamo D-10 Mixing Boost,Dolamo,,6,,True,1
+eno_t_cube_reverb,ENO T‑Cube Reverb,ENO,,8,web_verified,False,2
+eno_tcube_reverb,ENO T‑Cube Reverb,ENO,Reverb,8,panel_verified,True,3
+electro_harmonix_attack_decay,Electro‑Harmonix Attack Decay,Electro‑Harmonix,,8,,False,2
+electro_harmonix_deluxe_memory_boy,Electro‑Harmonix Deluxe Memory Boy,Electro‑Harmonix,,10,partial_manual,False,1
+electro_harmonix_super_space_drum_pedal,Electro‑Harmonix Super Space Drum (Pedal),Electro‑Harmonix,,14,partial_manual,False,2
+flamma_fc11_envelope_filter,Flamma FC11 Envelope Filter,Flamma,,6,partial_manual,False,1
+gokko_gk_22_dripping_delay,GOKKO GK‑22 Dripping Delay,GOKKO,,8,web_verified,False,2
+gokko_gk22_dripping_delay,GOKKO GK‑22 Dripping Delay,GOKKO,Delay,7,panel_verified,True,3
+ginean_modulator_ringmod,Ginean Modulator Ringmod,Ginean,,5,,False,0
+golden_bull_tremolo,Golden Bull Tremolo,Golden Bull,,2,,False,0
+irin_talent_octave,IRIN Talent Octave,IRIN,,4,,False,0
+iset_analog_flanger,ISET Analog Flanger,ISET,,4,,False,0
+lom_geof_n,LOM Geofón,LOM,,1,,False,0
+mcm_36_010_telephone_pick_up_coil,MCM 36‑010 Telephone Pick‑Up Coil,MCM,,1,,False,0
+mini_ab_y_channel_switch,Mini AB/Y Channel Switch,Mini,,5,,True,1
+mooer_lofi_machine,Mooer LoFi Machine,Mooer,,9,,False,2
+mosky_mini_muff,Mosky Mini Muff,Mosky,,3,,False,0
+m_vave_elemental,M‑VAVE Elemental,M‑VAVE,,11,,True,1
+m_vave_mini_universe,M‑VAVE Mini Universe,M‑VAVE,,11,,True,1
+nux_mod_core_mk1,NUX Mod Core MK1,NUX,,8,,False,1
+novation_circuit_rhythm,Novation Circuit Rhythm,Novation,,5,,False,0
+oem_mini_crunch_distortion_3knob_blue,OEM Mini Crunch Distortion (3 Knobs) – Blue,OEM,Distortion,7,panel_verified,True,1
+oem_mini_tremolo_2knob_goldenbull,OEM Mini Tremolo (2 Knobs) – Golden Bull,OEM,Tremolo,6,panel_verified,True,1
+oem_mini_overdrive_3knob_green,OEM Mini Vintage Overdrive (3 Knobs) – Green,OEM,Overdrive,7,panel_verified,True,1
+oxi_instruments_oxi_one_mkii,OXI Instruments OXI ONE MKII,OXI Instruments,,3,,False,0
+palmer_daccapo,Palmer DACCAPO,Palmer,,4,,False,2
+palmer_bertreiber,Palmer Übertreiber,Palmer,,5,,False,0
+presonus_studio_1824c,PreSonus Studio 1824c,PreSonus,,4,,False,0
+r_de_ntg4,RØDE NTG4+,RØDE,,4,,False,0
+soma_ether,SOMA Ether,SOMA,,1,,False,0
+sonicake_portal_qds_06,Sonicake Portal QDS‑06,Sonicake,,11,,True,2
+steinberg_ur22mkii,Steinberg UR22mkII,Steinberg,,7,,False,0
+synare_ehx_super_space_drum_syndrum,Synare/EHX Super Space Drum (Syndrum),Synare/EHX,,1,,False,0
+tc_electronic_m350,TC Electronic M350,TC Electronic,,13,manual_rich,False,3
+t_rex_tonebug_fuzz,T‑Rex ToneBug Fuzz,T‑Rex,,3,,False,0
+yamaha_pss_380,Yamaha PSS‑380,Yamaha,,4,,False,0
+yamaha_pss_580,Yamaha PSS‑580,Yamaha,,4,,False,0
+zoom_f6,Zoom F6,Zoom,,2,,False,0
+zoom_h5,Zoom H5,Zoom,,4,,False,0
+dbx_266xs,dbx 266xs,dbx,,9,,False,2
+oem_mini_tremolo_2knob,OEM Mini Tremolo (2-Knob),,,6,,True,0

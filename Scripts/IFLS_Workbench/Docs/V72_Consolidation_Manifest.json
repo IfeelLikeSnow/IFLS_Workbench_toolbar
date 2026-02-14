@@ -1,0 +1,18 @@
+{
+  "version": "0.72.0",
+  "generated_utc": "2026-02-07T20:13:09.293243Z",
+  "inputs": {
+    "v60": "IFLS_Workbench_Repo_Merge_v60_PSS580_LibraryTools.zip",
+    "v71": "IFLS_Workbench_v71_20260207_200232_AutoDoctor.zip"
+  },
+  "outputs": {
+    "repo_root": ".",
+    "scripts_path": "Scripts/IFLS_Workbench/"
+  },
+  "stats": {
+    "total_files_repo": 1598,
+    "total_files_scripts": 803,
+    "lua_files_scanned": 203,
+    "syntax_findings": 5
+  }
+}

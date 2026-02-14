@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "behringer_c_2",
+  "name_de": "Behringer C‑2",
+  "manufacturer": "Behringer",
+  "model": "C‑2",
+  "count": 2,
+  "categories_de": {
+    "Hauptkategorie": "Mikrofone",
+    "Unterkategorie": "Kondensator (SDC)",
+    "Kategorie-Typ": "Kondensator (SDC)"
+  },
+  "priority_group": "fx",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• XLR‑3M (bal.)",
+  "controls_raw_de": "—",
+  "controls": [
+    {
+      "name_en": "—",
+      "type": "unknown",
+      "notes_de": ""
+    }
+  ],
+  "power_raw_de": "20 Hz–20 kHz\n• ~75 Ω\n• Niere",
+  "notes_raw_de": "Overheads/Stereo",
+  "tech_raw_de": "Kleinmembran‑Paar",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "glitch",
+    "idmdrums",
+    "pads",
+    "drones"
+  ],
+  "danger_zones_de": []
+}

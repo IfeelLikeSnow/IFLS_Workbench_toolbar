@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/IFLS_Workbench_Slicing_Clickify_SelectedItems.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: Clickify selected slices (turn each into a click/pop)
 -- @version 0.7.6
 -- @author IFLS

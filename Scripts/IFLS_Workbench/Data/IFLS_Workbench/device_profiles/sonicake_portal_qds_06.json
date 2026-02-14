@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "panel_verified": true,
+    "panel_verified_at_utc": "2026-02-01T21:25:43Z"
+  },
+  "id": "sonicake_portal_qds_06",
+  "name_de": "Sonicake Portal QDS‑06",
+  "manufacturer": "Sonicake",
+  "model": "Portal QDS‑06",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Utility",
+    "Unterkategorie": "Signal Routing & Mix",
+    "Kategorie-Typ": "Signal Routing & Mix"
+  },
+  "priority_group": "routing",
+  "signal_role": [
+    "aby",
+    "fx_loop",
+    "hub",
+    "mixer",
+    "parallel_processing",
+    "routing",
+    "series_chain"
+  ],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• Kanal C: In/Out (TS)\n• Kanal A/B: je 1× Send & Return (TS)\n• Phase-Invert-Schalter pro Kanal",
+  "controls_raw_de": "Wet/Dry\n• Serial/Parallel\n• PhaseFlip\n• Loop1/2 Level",
+  "controls": [
+    {
+      "name_en": "Channel A LEVEL",
+      "type": "knob",
+      "notes_de": "Level für Channel/Loop A."
+    },
+    {
+      "name_en": "Channel B LEVEL",
+      "type": "knob",
+      "notes_de": "Level für Channel/Loop B."
+    },
+    {
+      "name_en": "Channel C LEVEL",
+      "type": "knob",
+      "notes_de": "Level für Channel C / Main/third input (modellabhängig je nach Mode)."
+    },
+    {
+      "name_en": "Footswitch A",
+      "type": "footswitch",
+      "notes_de": "Aktiviert/bypasst Channel A."
+    },
+    {
+      "name_en": "Footswitch B",
+      "type": "footswitch",
+      "notes_de": "Aktiviert/bypasst Channel B."
+    },
+    {
+      "name_en": "Footswitch C",
+      "type": "footswitch",
+      "notes_de": "Aktiviert/bypasst Channel C / True-bypass when all off (laut Herstellerbeschreibung)."
+    },
+    {
+      "name_en": "Mode Switch (PARALLEL/SERIES)",
+      "type": "switch",
+      "notes_de": "Zwei Betriebsarten: Parallel (Mixer/ABY) oder Series (A und B seriell)."
+    },
+    {
+      "name_en": "SND A / RTN A",
+      "type": "routing",
+      "notes_de": "Send/Return Loop A."
+    },
+    {
+      "name_en": "SND B / RTN B",
+      "type": "routing",
+      "notes_de": "Send/Return Loop B."
+    },
+    {
+      "name_en": "INPUT / OUTPUT",
+      "type": "jack",
+      "notes_de": "Main Input/Output."
+    },
+    {
+      "name_en": "DC IN 9V x2",
+      "type": "power",
+      "notes_de": "Zwei DC-Inputs auf dem Panel (wie abgebildet)."
+    }
+  ],
+  "power_raw_de": "≈ 35 mA @ 9 V",
+  "notes_raw_de": "2 FX‑Loops parallel/seriell",
+  "tech_raw_de": "Signal‑Mixer/Router",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://www.sonicake.com/products/portal",
+    "https://reverb.com/item/93526807-sonicake-portal-active-signal-mixer-analog-line-selector-as-aby-and-fx-loop"
+  ],
+  "enriched": true,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": [
+    "Als Active Mixer: Pegel können addieren → Clip-Risiko am Output; Level konservativ starten.",
+    "Parallel Mode: Phasenprobleme möglich, wenn Loops latenzbehaftet (digital) sind."
+  ],
+  "variant_notes_de": "Panel-verifiziert: 3 Kanäle (A/B/C) mit Level + Footswitch + Parallel/Series Mode + 2 Send/Return Loops.",
+  "controls_verified_by_image": true
+}

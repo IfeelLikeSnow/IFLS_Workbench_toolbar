@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/JSFX/IFLS_Workbench_Insert_JSFX_ifls_workbench_reampsuite_analyzer_fft.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: Insert JSFX - IFLS Workbench - ReampSuite Analyzer FFT
 -- @version 0.7.8
 -- @author IFLS
@@ -6,6 +10,7 @@
 
 local r = reaper
 
+local SafeApply = require("IFLS_Workbench/Engine/IFLS_SafeApply")
 local function get_targets()
   local t = {}
   local cnt = r.CountSelectedTracks(0)
@@ -25,12 +30,9 @@ if #targets == 0 then
   return
 end
 
-r.Undo_BeginBlock()
-r.PreventUIRefresh(1)
+return SafeApply.run("IFLS: IFLS Workbench Insert JSFX ifls workbench reampsuite analyzer fft", function()
 for _,tr in ipairs(targets) do
   r.TrackFX_AddByName(tr, "JS:"..fxname, false, -1)
 end
-r.PreventUIRefresh(-1)
 r.TrackList_AdjustWindows(false)
 r.UpdateArrange()
-r.Undo_EndBlock("IFLS: Insert JSFX - "..fxname, -1)

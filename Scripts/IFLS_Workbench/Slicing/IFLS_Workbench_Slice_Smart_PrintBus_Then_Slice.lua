@@ -1,8 +1,11 @@
+-- @description IFLS Workbench - Slicing/IFLS_Workbench_Slice_Smart_PrintBus_Then_Slice.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench - Smart Slice (Pre-Analyze Onsets + Peak Tail Detection)
 -- @version 3.0.0
 -- @author IFLS
 -- @about One-click smart slicing: pre-analyze onsets, detect tails by silence (peak-based), then split+trim.
--- @provides [main] .
 
 
 local R = reaper

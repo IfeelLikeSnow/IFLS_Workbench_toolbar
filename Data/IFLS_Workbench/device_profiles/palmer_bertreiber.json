@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "controls_completeness": "unknown",
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "id": "palmer_bertreiber",
+  "name_de": "Palmer Übertreiber",
+  "manufacturer": "Palmer",
+  "model": "Übertreiber",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Effektpedale",
+    "Unterkategorie": "Distortion / Overdrive / Fuzz & Bitcrushing",
+    "Kategorie-Typ": "Overdrive"
+  },
+  "priority_group": "routing",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In (TS)\n• Out (TS)",
+  "controls_raw_de": "• Clean\n• Gain\n• Tone\n• Level\n• Pad-Schalter (Input-Absenkung)",
+  "controls": [
+    {
+      "name_en": "Clean",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Gain",
+      "type": "unknown",
+      "notes_de": "(generisch) Bitte verifizieren mit Manual/Foto/Video.",
+      "function_de": "Gain/Drive (Verzerrungsgrad / Sättigung)"
+    },
+    {
+      "name_en": "Tone",
+      "type": "unknown",
+      "notes_de": "(generisch) Bitte verifizieren mit Manual/Foto/Video.",
+      "function_de": "Klangregelung/Filter (heller/dunkler)"
+    },
+    {
+      "name_en": "Level",
+      "type": "unknown",
+      "notes_de": "(generisch) Bitte verifizieren mit Manual/Foto/Video.",
+      "function_de": "Ausgangspegel/Output-Level"
+    },
+    {
+      "name_en": "Pad-Schalter (Input-Absenkung)",
+      "type": "unknown",
+      "notes_de": ""
+    }
+  ],
+  "power_raw_de": "≈ 18 mA",
+  "notes_raw_de": "Bass-Overdrive mit Clean-Blend und Pad-Schalter für aktive Bässe\nPunchiger Bass",
+  "tech_raw_de": "Bass OD + Clean‑Blend",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": [],
+  "controls_contextual": {},
+  "warnings_de": [
+    "Power-Specs fehlen (To-do): bitte Manual/Panel/Listing verlinken."
+  ]
+}

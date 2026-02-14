@@ -1,0 +1,4336 @@
+{
+  "schema_version": "1.7",
+  "generated_at_utc": "2026-02-04T15:58:04Z",
+  "notes_de": "V40 FULL: ReaInsert + Pedals + VST/JSFX ONLY from installed-sync list. No Rea* FX. Adds pre_fx_chain (before hardware) and post_fx_chain (after return). Sonicake Portal parallel option annotated. V43: Adds hardware_parallel (Sonicake Portal Loop A/B) and pedal fx_loop sub-chains (Attack Decay, Deluxe Memory Boy). Wizard displays A/B and fx_loop inserts. V44: Adds Monster presets combining Portal A/B + pedal FX loops. Adds patch_instructions_de and Wizard 'Copy patch instructions'. V45: Adds non-Melda IDM presets (Field/Drums/Synth/Drones) using installed VST/JSFX only; explicitly excludes Melda plugins. V46: Adds explicit Sonicake Portal Loop A/B routing and patch instructions to V45 presets.",
+  "use_cases": [
+    {
+      "id": "glitch_idm_fx",
+      "name_de": "Glitch / IDM FX Chaos",
+      "name_en": "Glitch / IDM FX Chaos",
+      "tags": [
+        "experimental",
+        "mix_ready",
+        "drums",
+        "fx"
+      ],
+      "description_de": "Digitale Artefakte, rhythmische Zerstörung, Ringmod & verbogene Delays."
+    },
+    {
+      "id": "idm_drums_punch",
+      "name_de": "IDM Drums Punch (Kick/Snare)",
+      "name_en": "IDM Drums Punch (Kick/Snare)",
+      "tags": [
+        "mix_ready",
+        "drums"
+      ],
+      "description_de": "Aggressive, maschinelle Drums: Boost → Tremolo/Gate-Reverb."
+    },
+    {
+      "id": "pads_lofi_space",
+      "name_de": "Pads: Warm → LoFi → Space",
+      "name_en": "Pads: Warm → LoFi → Space",
+      "tags": [
+        "mix_ready",
+        "pads",
+        "stereo"
+      ],
+      "description_de": "LoFi-Färbung plus großer Raum, stereo und musikalisch."
+    },
+    {
+      "id": "drones_dark_ambient",
+      "name_de": "Drones / Dark Ambient",
+      "name_en": "Drones / Dark Ambient",
+      "tags": [
+        "experimental",
+        "drones",
+        "stereo"
+      ],
+      "description_de": "Pitch-Bewegung, resonante Sweeps, riesige Räume."
+    },
+    {
+      "id": "glitch_leads_mono",
+      "name_de": "Glitch Leads (Mono Synth)",
+      "name_en": "Glitch Leads (Mono Synth)",
+      "tags": [
+        "experimental",
+        "leads",
+        "mono"
+      ],
+      "description_de": "Oktave/Fuzz/Tremolo: kaputte Leads, tempo-synced chops."
+    },
+    {
+      "id": "insert_hardware_chain",
+      "name_de": "Hardware Insert (Patchbay)",
+      "name_en": "Hardware Insert (Patchbay)",
+      "tags": [
+        "mix_ready",
+        "routing",
+        "hardware"
+      ],
+      "description_de": "ReaInsert + Patchbay: DAW → Pedale → zurück, mit sicheren Gain-Stages."
+    },
+    {
+      "id": "field_recordings_idm",
+      "name_de": "Field Recordings → IDM Mangling",
+      "name_en": "Field Recordings → IDM Mangling",
+      "tags": [
+        "experimental",
+        "mix_ready",
+        "field",
+        "idm"
+      ],
+      "description_de": "Einzelhits & Geräusche in mixbare IDM-Hits, Glitches & Texturen verwandeln (ReaInsert → Pedale → Reaper FX)."
+    },
+    {
+      "id": "field_hits_idm_drums",
+      "name_de": "Field Hits → IDM Drums (Kick/Snare/Hat)",
+      "name_en": "Field Hits → IDM Drums",
+      "tags": [
+        "mix_ready",
+        "experimental",
+        "field",
+        "drums"
+      ],
+      "description_de": "Einzelhits (Foley) in druckvolle, einzigartige IDM-Drums verwandeln: Pre-VST → ReaInsert → Pedale → Post-VST."
+    },
+    {
+      "id": "field_textures_beds",
+      "name_de": "Field Textures → Beds/Clouds",
+      "name_en": "Field Textures → Beds/Clouds",
+      "tags": [
+        "mix_ready",
+        "experimental",
+        "field",
+        "textures",
+        "stereo"
+      ],
+      "description_de": "Ambience/Noise zu kontrollierten Texturen für IDM, mit Ducking, Width und Supermassive tails."
+    },
+    {
+      "id": "metallic_perc_mangling",
+      "name_de": "Metallic Perc Mangling",
+      "name_en": "Metallic Perc Mangling",
+      "tags": [
+        "experimental",
+        "mix_ready",
+        "percussion",
+        "metallic"
+      ],
+      "description_de": "Metallische Objects → inharmonik + ringmod + gated space, aber mixbar."
+    },
+    {
+      "id": "field_clicks_pops",
+      "name_de": "Field Clicks/Pops → IDM Perc",
+      "name_en": "Field Clicks/Pops → IDM Perc",
+      "tags": [
+        "field",
+        "drums",
+        "glitch",
+        "mix_ready"
+      ],
+      "description_de": "Klicks, Pops, Objekt-Hits zu IDM-Perc/Hats/Snares."
+    },
+    {
+      "id": "field_metallic",
+      "name_de": "Field Metallic → Tonal/Robot Perc",
+      "name_en": "Field Metallic → Tonal/Robot Perc",
+      "tags": [
+        "field",
+        "metallic",
+        "experimental",
+        "mix_ready"
+      ],
+      "description_de": "Metallische Field Hits zu tonal/resonant/robotic Sounds."
+    },
+    {
+      "id": "field_beds_drones_nomelda",
+      "name_de": "Field Beds/Drones (no Melda)",
+      "name_en": "Field Beds/Drones (no Melda)",
+      "tags": [
+        "field",
+        "drones",
+        "textures",
+        "mix_ready"
+      ],
+      "description_de": "Textur-Beds und Drones mit Valhalla + Glitchmachines + Kilohearts (ohne Melda)."
+    },
+    {
+      "id": "synth_glitch_nomelda",
+      "name_de": "Synth Glitch/IDM (no Melda)",
+      "name_en": "Synth Glitch/IDM (no Melda)",
+      "tags": [
+        "synth",
+        "glitch",
+        "mix_ready"
+      ],
+      "description_de": "Synths durch Hardware + Glitch/Transient Tools (ohne Melda)."
+    }
+  ],
+  "presets": [
+    {
+      "id": "preset_glitch_idm_fx_parallel",
+      "use_case_id": "glitch_idm_fx",
+      "name_de": "Glitch/IDM FX Chaos (Parallel Send)",
+      "mix_ready": true,
+      "experimental": true,
+      "signal_flow_de": "Drums/FX Send → Bitcrush → Dripping Delay → Ringmod → Reverb (kurz) → zurück",
+      "recommended_routing": {
+        "mode": "parallel_send",
+        "notes_de": "Dry bleibt in Reaper; FX-Chain als Return (100% wet oder Mix hoch)."
+      },
+      "steps": [
+        {
+          "role": "Bitcrush",
+          "device_id": "aroma_amo_3_mario_bit_crusher",
+          "note_de": "Zerstört Transienten & gibt 8‑bit/aliasing Charakter.",
+          "knob_hints": {
+            "Bit": 70,
+            "Mix": 65
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Bit": {
+              "pct": 70,
+              "clock": "2:00"
+            },
+            "Mix": {
+              "pct": 65,
+              "clock": "1:30"
+            }
+          },
+          "pedal_settings_de": "Bit: 2:00 (~70%); Mix: 1:30 (~65%)"
+        },
+        {
+          "role": "Delay",
+          "device_id": "gokko_gk_22_dripping_delay",
+          "note_de": "Kurzes Delay mit Repeats nah an Self‑Osc; Time drehen für Pitch‑Bends.",
+          "knob_hints": {
+            "Delay": 25,
+            "Repeat": 80,
+            "Level": 55
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Delay": {
+              "pct": 25,
+              "clock": "9:30"
+            },
+            "Repeat": {
+              "pct": 80,
+              "clock": "3:00"
+            },
+            "Level": {
+              "pct": 55,
+              "clock": "12:30"
+            }
+          },
+          "pedal_settings_de": "Delay: 9:30 (~25%); Repeat: 3:00 (~80%); Level: 12:30 (~55%)"
+        },
+        {
+          "role": "Ringmod",
+          "device_id": "ginean_modulator_ringmod",
+          "note_de": "Inharmonik/Metall; Frequency auf Key oder bewusst daneben.",
+          "knob_hints": {
+            "Ring": 55,
+            "Freq": 45
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Ring": {
+              "pct": 55,
+              "clock": "12:30"
+            },
+            "Freq": {
+              "pct": 45,
+              "clock": "11:30"
+            }
+          },
+          "pedal_settings_de": "Ring: 12:30 (~55%); Freq: 11:30 (~45%)"
+        },
+        {
+          "role": "Reverb",
+          "device_id": "eno_t_cube_reverb",
+          "note_de": "Kurzer Raum zum Verkleben (nicht Ambient).",
+          "knob_hints": {
+            "Mix": 25,
+            "Time": 30
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Mix": {
+              "pct": 25,
+              "clock": "9:30"
+            },
+            "Time": {
+              "pct": 30,
+              "clock": "10:00"
+            }
+          },
+          "pedal_settings_de": "Mix: 9:30 (~25%); Time: 10:00 (~30%)"
+        }
+      ],
+      "fallbacks": [
+        {
+          "role": "Delay",
+          "device_id": "behringer_dd400_digital_delay"
+        },
+        {
+          "role": "Reverb",
+          "device_id": "behringer_dr100_digital_reverb"
+        },
+        {
+          "role": "Bitcrush",
+          "device_id": "mooer_lofi_machine"
+        }
+      ],
+      "schema_notes_de": "V40: no Rea* FX. VST/JSFX chosen from installed sync list.",
+      "pre_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 120Hz",
+            "Mud cut": "-4dB @ 350Hz Q=1.0",
+            "Bite boost": "+3dB @ 2.8kHz Q=1.2",
+            "LPF": "12dB/oct @ 11kHz"
+          },
+          "notes_de": "Pre-shaping BEFORE hardware so pedals react to a tighter signal."
+        },
+        {
+          "fx_name": "VST3: TDR Kotelnikov (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Kotelnikov.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "Ratio": "2:1",
+            "Attack": "20ms",
+            "Release": "120ms",
+            "Target GR": "1–3 dB peaks"
+          },
+          "notes_de": "Gentle leveling before hardware to stabilize gain staging."
+        }
+      ],
+      "post_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 180Hz",
+            "LPF": "12dB/oct @ 9kHz",
+            "Notch": "-6dB @ 3.5kHz Q=6 (optional)"
+          },
+          "notes_de": "Band-limit return so glitch FX sits in mix."
+        },
+        {
+          "fx_name": "JS: Transient Controller",
+          "fx_ident": "loser/TransientController",
+          "format": "JS",
+          "vendor": NaN,
+          "params": {
+            "Attack": "+20%",
+            "Sustain": "-25%"
+          },
+          "notes_de": "Tight stutters and remove tail."
+        },
+        {
+          "fx_name": "VST3: A1TriggerGate (A1AUDIO.de)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\A1AUDIO.de\\A1TriggerGate-x64.vst3",
+          "format": "VST3",
+          "vendor": "A1AUDIO.de",
+          "params": {
+            "Mode": "Trigger/Gate",
+            "Threshold": "-24 dB",
+            "Hold": "35ms",
+            "Release": "55ms"
+          },
+          "notes_de": "IDM-style chops; automate threshold for rhythm."
+        },
+        {
+          "fx_name": "VST3: IVGI2 (Klanghelm)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\IVGI2.vst3",
+          "format": "VST3",
+          "vendor": "Klanghelm",
+          "params": {
+            "Drive": "low",
+            "Ceiling": "-0.8 dB"
+          },
+          "notes_de": "Tame peaks from feedback/self-osc."
+        },
+        {
+          "fx_name": "VST3: ValhallaSupermassive (Valhalla DSP, LLC)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\ValhallaSupermassive.vst3",
+          "format": "VST3",
+          "vendor": "Valhalla DSP, LLC",
+          "params": {
+            "Mode": "Gemini/Orion",
+            "Mix": "0–8% (optional)",
+            "Feedback": "0–10%"
+          },
+          "notes_de": "Optional micro-space; turn off if too busy."
+        }
+      ],
+      "hardware_options": {
+        "parallel_splitter": {
+          "device": "Sonicake Portal (optional)",
+          "note_de": "Wenn sinnvoll: Portal als Parallel-Splitter nutzen (Dry/Wet Blend am Hardware-Switch). Für Return: Wet 100% zurück, Dry im Reaper behalten."
+        }
+      }
+    },
+    {
+      "id": "preset_idm_drums_punch_gate",
+      "use_case_id": "idm_drums_punch",
+      "name_de": "IDM Drums Punch: Boost → Trem → Gate Reverb",
+      "mix_ready": true,
+      "experimental": false,
+      "signal_flow_de": "Kick/Snare Mono → Boost → Tremolo (Square) → Gate Reverb → zurück",
+      "recommended_routing": {
+        "mode": "insert",
+        "notes_de": "Als Insert auf Drum-Bus oder nur Snare-Track. Gate-Reverb besser post-EQ."
+      },
+      "steps": [
+        {
+          "role": "Boost",
+          "device_id": "dolamo_d_10_mixing_boost",
+          "note_de": "Push in Sweet Spot, dann wieder Pegel fangen.",
+          "knob_hints": {
+            "Gain": 25,
+            "Level": 70
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Gain": {
+              "pct": 25,
+              "clock": "9:30"
+            },
+            "Level": {
+              "pct": 70,
+              "clock": "2:00"
+            }
+          },
+          "pedal_settings_de": "Gain: 9:30 (~25%); Level: 2:00 (~70%)"
+        },
+        {
+          "role": "Tremolo",
+          "device_id": "behringer_ut300_ultra_tremolo",
+          "note_de": "Square‑Chop, Rate auf Groove.",
+          "knob_hints": {
+            "Rate": 55,
+            "Depth": 75
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Rate": {
+              "pct": 55,
+              "clock": "12:30"
+            },
+            "Depth": {
+              "pct": 75,
+              "clock": "2:30"
+            }
+          },
+          "pedal_settings_de": "Rate: 12:30 (~55%); Depth: 2:30 (~75%)"
+        },
+        {
+          "role": "Reverb",
+          "device_id": "behringer_dr100_digital_reverb",
+          "note_de": "GATE Mode, kurz & punchy.",
+          "knob_hints": {
+            "Mode": 0,
+            "Time": 20,
+            "Level": 45,
+            "Tone": 50
+          },
+          "routing": {
+            "mode_hint": "mono_or_stereo",
+            "notes_de": "DR100 Gate/Room je nach Song."
+          },
+          "knob_hints_clock": {
+            "Mode": {
+              "pct": 0,
+              "clock": "7:00"
+            },
+            "Time": {
+              "pct": 20,
+              "clock": "9:00"
+            },
+            "Level": {
+              "pct": 45,
+              "clock": "11:30"
+            },
+            "Tone": {
+              "pct": 50,
+              "clock": "12:00"
+            }
+          },
+          "pedal_settings_de": "Mode: 7:00 (~0%); Time: 9:00 (~20%); Level: 11:30 (~45%); Tone: 12:00 (~50%)"
+        }
+      ],
+      "fallbacks": [
+        {
+          "role": "Boost",
+          "device_id": "palmer_bertreiber"
+        }
+      ],
+      "schema_notes_de": "V40: no Rea* FX. VST/JSFX chosen from installed sync list.",
+      "pre_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 120Hz",
+            "Mud cut": "-4dB @ 350Hz Q=1.0",
+            "Bite boost": "+3dB @ 2.8kHz Q=1.2",
+            "LPF": "12dB/oct @ 11kHz"
+          },
+          "notes_de": "Pre-shaping BEFORE hardware so pedals react to a tighter signal."
+        },
+        {
+          "fx_name": "VST3: TDR Kotelnikov (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Kotelnikov.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "Ratio": "2:1",
+            "Attack": "20ms",
+            "Release": "120ms",
+            "Target GR": "1–3 dB peaks"
+          },
+          "notes_de": "Gentle leveling before hardware to stabilize gain staging."
+        }
+      ],
+      "post_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 30Hz",
+            "LPF": "12dB/oct @ 18kHz"
+          },
+          "notes_de": "Safety filtering."
+        },
+        {
+          "fx_name": "VST3: TDR Kotelnikov (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Kotelnikov.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "Ratio": "3:1",
+            "Attack": "10ms",
+            "Release": "120ms",
+            "Target GR": "2–4 dB"
+          },
+          "notes_de": "Catch peaks from pedals."
+        },
+        {
+          "fx_name": "VST3: IVGI2 (Klanghelm)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\IVGI2.vst3",
+          "format": "VST3",
+          "vendor": "Klanghelm",
+          "params": {
+            "Drive": "very low",
+            "Ceiling": "-1 dB"
+          },
+          "notes_de": "Soft-limit pedal spikes."
+        },
+        {
+          "fx_name": "VST3: A1TriggerGate (A1AUDIO.de)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\A1AUDIO.de\\A1TriggerGate-x64.vst3",
+          "format": "VST3",
+          "vendor": "A1AUDIO.de",
+          "params": {
+            "Mode": "Trigger/Gate",
+            "Threshold": "-30 dB",
+            "Hold": "20ms",
+            "Release": "80ms"
+          },
+          "notes_de": "Keep tails short (snare)."
+        }
+      ]
+    },
+    {
+      "id": "preset_pads_lofi_space_stereo",
+      "use_case_id": "pads_lofi_space",
+      "name_de": "Pads: LoFi → Mini Universe → M350 (Stereo)",
+      "mix_ready": true,
+      "experimental": true,
+      "signal_flow_de": "Stereo Pads → LoFi (subtil) → Reverb (texturiert) → M350 (finish)",
+      "recommended_routing": {
+        "mode": "stereo_insert",
+        "notes_de": "Stereo-In/Out wenn möglich. Falls mono: M350 als Stereo-Send in Reaper."
+      },
+      "steps": [
+        {
+          "role": "LoFi",
+          "device_id": "mooer_lofi_machine",
+          "note_de": "Subtile Degradation, Movement.",
+          "knob_hints": {
+            "Mix": 35,
+            "Rate": 25
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Mix": {
+              "pct": 35,
+              "clock": "10:30"
+            },
+            "Rate": {
+              "pct": 25,
+              "clock": "9:30"
+            }
+          },
+          "pedal_settings_de": "Mix: 10:30 (~35%); Rate: 9:30 (~25%)"
+        },
+        {
+          "role": "Reverb",
+          "device_id": "m_vave_mini_universe",
+          "note_de": "Hall/Shimmer je nach Track; Param-Matrix nutzen.",
+          "knob_hints": {
+            "Mix": 45,
+            "Decay": 75,
+            "Param3": 50
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Mix": {
+              "pct": 45,
+              "clock": "11:30"
+            },
+            "Decay": {
+              "pct": 75,
+              "clock": "2:30"
+            },
+            "Param3": {
+              "pct": 50,
+              "clock": "12:00"
+            }
+          },
+          "pedal_settings_de": "Mix: 11:30 (~45%); Decay: 2:30 (~75%); Param3: 12:00 (~50%)"
+        },
+        {
+          "role": "Reverb/Delay",
+          "device_id": "tc_electronic_m350",
+          "note_de": "Final polish: Plate/Hall + optional Slap.",
+          "knob_hints": {
+            "Mix": 25
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Mix": {
+              "pct": 25,
+              "clock": "9:30"
+            }
+          },
+          "pedal_settings_de": "Mix: 9:30 (~25%)"
+        }
+      ],
+      "fallbacks": [
+        {
+          "role": "Reverb",
+          "device_id": "eno_t_cube_reverb"
+        },
+        {
+          "role": "Reverb/Delay",
+          "device_id": "behringer_dr100_digital_reverb"
+        }
+      ],
+      "schema_notes_de": "V40: no Rea* FX. VST/JSFX chosen from installed sync list.",
+      "pre_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "12dB/oct @ 60Hz",
+            "Mud": "-2dB @ 220Hz"
+          },
+          "notes_de": "Pre-clean before hitting pedals for pads."
+        }
+      ],
+      "post_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "12dB/oct @ 70Hz",
+            "Low-mid": "-2dB @ 250Hz Q=0.8",
+            "Air": "+1.5dB @ 9kHz shelf"
+          },
+          "notes_de": "Keep room for bass; add air."
+        },
+        {
+          "fx_name": "VST3: TDR Kotelnikov (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Kotelnikov.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "Ratio": "2:1",
+            "Attack": "30ms",
+            "Release": "200ms",
+            "Target GR": "1–2 dB"
+          },
+          "notes_de": "Very gentle leveling."
+        },
+        {
+          "fx_name": "VST3: A1StereoControl (A1AUDIO.de)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\A1AUDIO.de\\A1StereoControl-x64.vst3",
+          "format": "VST3",
+          "vendor": "A1AUDIO.de",
+          "params": {
+            "Width": "110–125%",
+            "Bass mono": "on <120Hz"
+          },
+          "notes_de": "Controlled stereo width."
+        },
+        {
+          "fx_name": "VST3: ValhallaSupermassive (Valhalla DSP, LLC)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\ValhallaSupermassive.vst3",
+          "format": "VST3",
+          "vendor": "Valhalla DSP, LLC",
+          "params": {
+            "Mode": "Gemini",
+            "Mix": "5–12%",
+            "Feedback": "10–18%"
+          },
+          "notes_de": "Tiny halo; keep subtle for mix."
+        }
+      ]
+    },
+    {
+      "id": "preset_drones_dark_ambient",
+      "use_case_id": "drones_dark_ambient",
+      "name_de": "Drones: Whammy → Super Space Drum → Reverb",
+      "mix_ready": false,
+      "experimental": true,
+      "signal_flow_de": "Drone/Noise → Pitch motion → resonant sweep → huge space",
+      "recommended_routing": {
+        "mode": "stereo_parallel",
+        "notes_de": "Parallel mischen, sonst wird’s schnell zu viel."
+      },
+      "steps": [
+        {
+          "role": "Pitch",
+          "device_id": "digitech_whammy_5",
+          "note_de": "Langsam bewegen; Harmony/Detune für Drift.",
+          "knob_hints": {},
+          "routing": {},
+          "pedal_settings_de": ""
+        },
+        {
+          "role": "Resonator",
+          "device_id": "electro_harmonix_super_space_drum_pedal",
+          "note_de": "Sweep + Mod für unheimliche Texturen.",
+          "knob_hints": {
+            "Time": 70,
+            "Rate": 20,
+            "Depth": 55
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Time": {
+              "pct": 70,
+              "clock": "2:00"
+            },
+            "Rate": {
+              "pct": 20,
+              "clock": "9:00"
+            },
+            "Depth": {
+              "pct": 55,
+              "clock": "12:30"
+            }
+          },
+          "pedal_settings_de": "Time: 2:00 (~70%); Rate: 9:00 (~20%); Depth: 12:30 (~55%)"
+        },
+        {
+          "role": "Reverb",
+          "device_id": "m_vave_mini_universe",
+          "note_de": "Cloud/Swell für Wolken; LoFi für Dreck.",
+          "knob_hints": {
+            "Mix": 60,
+            "Decay": 85
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Mix": {
+              "pct": 60,
+              "clock": "1:00"
+            },
+            "Decay": {
+              "pct": 85,
+              "clock": "3:30"
+            }
+          },
+          "pedal_settings_de": "Mix: 1:00 (~60%); Decay: 3:30 (~85%)"
+        }
+      ],
+      "schema_notes_de": "V40: no Rea* FX. VST/JSFX chosen from installed sync list.",
+      "pre_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "12dB/oct @ 35Hz",
+            "LPF": "12dB/oct @ 14kHz"
+          },
+          "notes_de": "Remove rumble before heavy space."
+        }
+      ],
+      "post_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "12dB/oct @ 70Hz",
+            "Low-mid": "-2dB @ 250Hz Q=0.8",
+            "Air": "+1.5dB @ 9kHz shelf"
+          },
+          "notes_de": "Keep room for bass; add air."
+        },
+        {
+          "fx_name": "VST3: TDR Kotelnikov (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Kotelnikov.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "Ratio": "2:1",
+            "Attack": "30ms",
+            "Release": "200ms",
+            "Target GR": "1–2 dB"
+          },
+          "notes_de": "Very gentle leveling."
+        },
+        {
+          "fx_name": "VST3: A1StereoControl (A1AUDIO.de)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\A1AUDIO.de\\A1StereoControl-x64.vst3",
+          "format": "VST3",
+          "vendor": "A1AUDIO.de",
+          "params": {
+            "Width": "110–125%",
+            "Bass mono": "on <120Hz"
+          },
+          "notes_de": "Controlled stereo width."
+        },
+        {
+          "fx_name": "VST3: ValhallaSupermassive (Valhalla DSP, LLC)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\ValhallaSupermassive.vst3",
+          "format": "VST3",
+          "vendor": "Valhalla DSP, LLC",
+          "params": {
+            "Mode": "Gemini",
+            "Mix": "5–12%",
+            "Feedback": "10–18%"
+          },
+          "notes_de": "Tiny halo; keep subtle for mix."
+        },
+        {
+          "fx_name": "VST3: ValhallaSupermassive (Valhalla DSP, LLC)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\ValhallaSupermassive.vst3",
+          "format": "VST3",
+          "vendor": "Valhalla DSP, LLC",
+          "params": {
+            "Mode": "Andromeda",
+            "Mix": "12–25%",
+            "Feedback": "20–40%"
+          },
+          "notes_de": "Long evolving tail for drones."
+        }
+      ],
+      "hardware_options": {
+        "parallel_splitter": {
+          "device": "Sonicake Portal (optional)",
+          "note_de": "Wenn sinnvoll: Portal als Parallel-Splitter nutzen (Dry/Wet Blend am Hardware-Switch). Für Return: Wet 100% zurück, Dry im Reaper behalten."
+        }
+      }
+    },
+    {
+      "id": "preset_glitch_leads_mono",
+      "use_case_id": "glitch_leads_mono",
+      "name_de": "Glitch Leads: Octave → Fuzz → Tremolo",
+      "mix_ready": true,
+      "experimental": true,
+      "signal_flow_de": "Mono Lead → Octave voices → Muff fuzz → trem chops",
+      "recommended_routing": {
+        "mode": "insert",
+        "notes_de": "Vor allem für Mono Synth oder Guitar. Danach EQ/Comp in Reaper."
+      },
+      "steps": [
+        {
+          "role": "Octave",
+          "device_id": "irin_talent_octave",
+          "note_de": "-1/-2/+1 Stimmen für Schichten.",
+          "knob_hints": {
+            "-1 OCT": 60,
+            "+1 OCT": 35
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "-1 OCT": {
+              "pct": 60,
+              "clock": "1:00"
+            },
+            "+1 OCT": {
+              "pct": 35,
+              "clock": "10:30"
+            }
+          },
+          "pedal_settings_de": "-1 OCT: 1:00 (~60%); +1 OCT: 10:30 (~35%)"
+        },
+        {
+          "role": "Fuzz",
+          "device_id": "mosky_mini_muff",
+          "note_de": "Sustain für singende Leads.",
+          "knob_hints": {
+            "Sustain": 70,
+            "Tone": 45,
+            "Volume": 55
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Sustain": {
+              "pct": 70,
+              "clock": "2:00"
+            },
+            "Tone": {
+              "pct": 45,
+              "clock": "11:30"
+            },
+            "Volume": {
+              "pct": 55,
+              "clock": "12:30"
+            }
+          },
+          "pedal_settings_de": "Sustain: 2:00 (~70%); Tone: 11:30 (~45%); Volume: 12:30 (~55%)"
+        },
+        {
+          "role": "Tremolo",
+          "device_id": "behringer_ut300_ultra_tremolo",
+          "note_de": "Rate auf Tempo, Depth hoch.",
+          "knob_hints": {
+            "Rate": 60,
+            "Depth": 80
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Rate": {
+              "pct": 60,
+              "clock": "1:00"
+            },
+            "Depth": {
+              "pct": 80,
+              "clock": "3:00"
+            }
+          },
+          "pedal_settings_de": "Rate: 1:00 (~60%); Depth: 3:00 (~80%)"
+        }
+      ],
+      "fallbacks": [
+        {
+          "role": "Fuzz",
+          "device_id": "t_rex_tonebug_fuzz"
+        }
+      ],
+      "schema_notes_de": "V40: no Rea* FX. VST/JSFX chosen from installed sync list.",
+      "pre_fx_chain": [
+        {
+          "fx_name": "VST3: IVGI2 (Klanghelm)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\IVGI2.vst3",
+          "format": "VST3",
+          "vendor": "Klanghelm",
+          "params": {
+            "Drive": "low"
+          },
+          "notes_de": "Pre-warm mono lead before pedals."
+        }
+      ],
+      "post_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 30Hz",
+            "LPF": "12dB/oct @ 18kHz"
+          },
+          "notes_de": "Safety filtering."
+        },
+        {
+          "fx_name": "VST3: TDR Kotelnikov (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Kotelnikov.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "Ratio": "3:1",
+            "Attack": "10ms",
+            "Release": "120ms",
+            "Target GR": "2–4 dB"
+          },
+          "notes_de": "Catch peaks from pedals."
+        },
+        {
+          "fx_name": "VST3: IVGI2 (Klanghelm)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\IVGI2.vst3",
+          "format": "VST3",
+          "vendor": "Klanghelm",
+          "params": {
+            "Drive": "very low",
+            "Ceiling": "-1 dB"
+          },
+          "notes_de": "Soft-limit pedal spikes."
+        },
+        {
+          "fx_name": "VST3: Blue Cat's Chorus 4 (Mono) (Blue Cat Audio)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\BC Chorus 4 VST3(Mono).vst3",
+          "format": "VST3",
+          "vendor": "Blue Cat Audio",
+          "params": {
+            "Depth": "low",
+            "Rate": "slow",
+            "Mix": "10–20%"
+          },
+          "notes_de": "Optional width for mono lead."
+        }
+      ]
+    },
+    {
+      "id": "preset_hardware_insert_safe_gain",
+      "use_case_id": "insert_hardware_chain",
+      "name_de": "Hardware Insert Safe Gain: OD → Mod → Delay",
+      "mix_ready": true,
+      "experimental": false,
+      "signal_flow_de": "ReaInsert → Palmer DACCAPO → OD → Phaser → Delay → DI400P → zurück",
+      "recommended_routing": {
+        "mode": "hardware_insert",
+        "notes_de": "Pegeln: Send -18dBFS ≈ line level. OD eher low gain. DI am Ende wenn nötig."
+      },
+      "steps": [
+        {
+          "role": "Overdrive",
+          "device_id": "ali_express_mini_vintage_overdrive",
+          "note_de": "Low gain, als Farbe/Glue.",
+          "knob_hints": {
+            "Drive": 20,
+            "Tone": 45,
+            "Volume": 55
+          },
+          "routing": {
+            "insert": "ReaInsert",
+            "patchbay": "use patchbay.json",
+            "notes_de": "Patchbay outs/ins automatisch vorschlagen."
+          },
+          "knob_hints_clock": {
+            "Drive": {
+              "pct": 20,
+              "clock": "9:00"
+            },
+            "Tone": {
+              "pct": 45,
+              "clock": "11:30"
+            },
+            "Volume": {
+              "pct": 55,
+              "clock": "12:30"
+            }
+          },
+          "pedal_settings_de": "Drive: 9:00 (~20%); Tone: 11:30 (~45%); Volume: 12:30 (~55%)"
+        },
+        {
+          "role": "Modulation",
+          "device_id": "behringer_vp1_vintage_phaser",
+          "note_de": "Langsam, subtil für Breite.",
+          "knob_hints": {
+            "Rate": 25,
+            "Depth": 35
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Rate": {
+              "pct": 25,
+              "clock": "9:30"
+            },
+            "Depth": {
+              "pct": 35,
+              "clock": "10:30"
+            }
+          },
+          "pedal_settings_de": "Rate: 9:30 (~25%); Depth: 10:30 (~35%)"
+        },
+        {
+          "role": "Delay",
+          "device_id": "behringer_dd400_digital_delay",
+          "note_de": "Kurzes Slap oder Ping, je nach Tempo.",
+          "knob_hints": {
+            "Delay Time": 25,
+            "Repeat": 25,
+            "Intensity": 35
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Delay Time": {
+              "pct": 25,
+              "clock": "9:30"
+            },
+            "Repeat": {
+              "pct": 25,
+              "clock": "9:30"
+            },
+            "Intensity": {
+              "pct": 35,
+              "clock": "10:30"
+            }
+          },
+          "pedal_settings_de": "Delay Time: 9:30 (~25%); Repeat: 9:30 (~25%); Intensity: 10:30 (~35%)"
+        }
+      ],
+      "schema_notes_de": "V40: no Rea* FX. VST/JSFX chosen from installed sync list.",
+      "pre_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 30Hz",
+            "LPF": "12dB/oct @ 18kHz"
+          },
+          "notes_de": "Pre safety; keep DC out."
+        }
+      ],
+      "post_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 30Hz",
+            "LPF": "12dB/oct @ 18kHz"
+          },
+          "notes_de": "Safety filtering."
+        },
+        {
+          "fx_name": "VST3: TDR Kotelnikov (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Kotelnikov.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "Ratio": "3:1",
+            "Attack": "10ms",
+            "Release": "120ms",
+            "Target GR": "2–4 dB"
+          },
+          "notes_de": "Catch peaks from pedals."
+        },
+        {
+          "fx_name": "VST3: IVGI2 (Klanghelm)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\IVGI2.vst3",
+          "format": "VST3",
+          "vendor": "Klanghelm",
+          "params": {
+            "Drive": "very low",
+            "Ceiling": "-1 dB"
+          },
+          "notes_de": "Soft-limit pedal spikes."
+        }
+      ]
+    },
+    {
+      "id": "preset_field_foley_snare_parallel",
+      "use_case_id": "field_recordings_idm",
+      "name_de": "Field Hit → Foley Snare (Parallel)",
+      "mix_ready": true,
+      "experimental": true,
+      "signal_flow_de": "Field Hit (Dry) + FX Return: Bitcrush → Short Delay → Ringmod → Gate Reverb → Reaper Sculpt",
+      "recommended_routing": {
+        "mode": "parallel_send",
+        "notes_de": "FX Return in Reaper auf 100% wet; Dry bleibt separat."
+      },
+      "steps": [
+        {
+          "role": "Bitcrush",
+          "device_id": "aroma_amo_3_mario_bit_crusher",
+          "note_de": "Crunch/aliasing auf Transienten.",
+          "knob_hints": {
+            "Bit": 75,
+            "Mix": 65
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Bit": {
+              "pct": 75,
+              "clock": "2:30"
+            },
+            "Mix": {
+              "pct": 65,
+              "clock": "1:30"
+            }
+          },
+          "pedal_settings_de": "Bit: 2:30 (~75%); Mix: 1:30 (~65%)"
+        },
+        {
+          "role": "Delay",
+          "device_id": "gokko_gk_22_dripping_delay",
+          "note_de": "Kurz, Repeats nah an Kante, Time drehen für Pitch-Bends.",
+          "knob_hints": {
+            "Delay": 22,
+            "Repeat": 82,
+            "Level": 55
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Delay": {
+              "pct": 22,
+              "clock": "9:12"
+            },
+            "Repeat": {
+              "pct": 82,
+              "clock": "3:12"
+            },
+            "Level": {
+              "pct": 55,
+              "clock": "12:30"
+            }
+          },
+          "pedal_settings_de": "Delay: 9:12 (~22%); Repeat: 3:12 (~82%); Level: 12:30 (~55%)"
+        },
+        {
+          "role": "Ringmod",
+          "device_id": "ginean_modulator_ringmod",
+          "note_de": "Metallischer 'Kiss' – Freq auf Key oder daneben.",
+          "knob_hints": {
+            "Ring": 40,
+            "Freq": 45
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Ring": {
+              "pct": 40,
+              "clock": "11:00"
+            },
+            "Freq": {
+              "pct": 45,
+              "clock": "11:30"
+            }
+          },
+          "pedal_settings_de": "Ring: 11:00 (~40%); Freq: 11:30 (~45%)"
+        },
+        {
+          "role": "Reverb",
+          "device_id": "behringer_dr100_digital_reverb",
+          "note_de": "GATE/ROOM kurz.",
+          "knob_hints": {
+            "Time": 18,
+            "Level": 38,
+            "Tone": 50
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Time": {
+              "pct": 18,
+              "clock": "8:48"
+            },
+            "Level": {
+              "pct": 38,
+              "clock": "10:48"
+            },
+            "Tone": {
+              "pct": 50,
+              "clock": "12:00"
+            }
+          },
+          "pedal_settings_de": "Time: 8:48 (~18%); Level: 10:48 (~38%); Tone: 12:00 (~50%)"
+        }
+      ],
+      "schema_notes_de": "V40: no Rea* FX. VST/JSFX chosen from installed sync list.",
+      "pre_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 120Hz",
+            "Mud cut": "-4dB @ 350Hz Q=1.0",
+            "Bite boost": "+3dB @ 2.8kHz Q=1.2",
+            "LPF": "12dB/oct @ 11kHz"
+          },
+          "notes_de": "Pre-shaping BEFORE hardware so pedals react to a tighter signal."
+        },
+        {
+          "fx_name": "VST3: TDR Kotelnikov (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Kotelnikov.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "Ratio": "2:1",
+            "Attack": "20ms",
+            "Release": "120ms",
+            "Target GR": "1–3 dB peaks"
+          },
+          "notes_de": "Gentle leveling before hardware to stabilize gain staging."
+        }
+      ],
+      "post_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 180Hz",
+            "LPF": "12dB/oct @ 9kHz",
+            "Notch": "-6dB @ 3.5kHz Q=6 (optional)"
+          },
+          "notes_de": "Band-limit return so glitch FX sits in mix."
+        },
+        {
+          "fx_name": "JS: Transient Controller",
+          "fx_ident": "loser/TransientController",
+          "format": "JS",
+          "vendor": NaN,
+          "params": {
+            "Attack": "+20%",
+            "Sustain": "-25%"
+          },
+          "notes_de": "Tight stutters and remove tail."
+        },
+        {
+          "fx_name": "VST3: A1TriggerGate (A1AUDIO.de)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\A1AUDIO.de\\A1TriggerGate-x64.vst3",
+          "format": "VST3",
+          "vendor": "A1AUDIO.de",
+          "params": {
+            "Mode": "Trigger/Gate",
+            "Threshold": "-24 dB",
+            "Hold": "35ms",
+            "Release": "55ms"
+          },
+          "notes_de": "IDM-style chops; automate threshold for rhythm."
+        },
+        {
+          "fx_name": "VST3: IVGI2 (Klanghelm)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\IVGI2.vst3",
+          "format": "VST3",
+          "vendor": "Klanghelm",
+          "params": {
+            "Drive": "low",
+            "Ceiling": "-0.8 dB"
+          },
+          "notes_de": "Tame peaks from feedback/self-osc."
+        },
+        {
+          "fx_name": "VST3: ValhallaSupermassive (Valhalla DSP, LLC)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\ValhallaSupermassive.vst3",
+          "format": "VST3",
+          "vendor": "Valhalla DSP, LLC",
+          "params": {
+            "Mode": "Gemini/Orion",
+            "Mix": "0–8% (optional)",
+            "Feedback": "0–10%"
+          },
+          "notes_de": "Optional micro-space; turn off if too busy."
+        }
+      ],
+      "hardware_options": {
+        "parallel_splitter": {
+          "device": "Sonicake Portal (optional)",
+          "note_de": "Wenn sinnvoll: Portal als Parallel-Splitter nutzen (Dry/Wet Blend am Hardware-Switch). Für Return: Wet 100% zurück, Dry im Reaper behalten."
+        }
+      }
+    },
+    {
+      "id": "preset_field_hats_microchop",
+      "use_case_id": "field_recordings_idm",
+      "name_de": "Field Noise → IDM Hats Micro-Chop",
+      "mix_ready": true,
+      "experimental": true,
+      "signal_flow_de": "Rascheln/Noise → LoFi (subtil) → Tremolo Chop → Short Room → Reaper Gate + Micro-delay",
+      "recommended_routing": {
+        "mode": "insert_or_parallel",
+        "notes_de": "Für Hats: lieber parallel, damit Dry crisp bleibt."
+      },
+      "steps": [
+        {
+          "role": "LoFi",
+          "device_id": "mooer_lofi_machine",
+          "note_de": "Nur leicht degraden, sonst wird’s zu breit.",
+          "knob_hints": {
+            "Mix": 35,
+            "Rate": 20
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Mix": {
+              "pct": 35,
+              "clock": "10:30"
+            },
+            "Rate": {
+              "pct": 20,
+              "clock": "9:00"
+            }
+          },
+          "pedal_settings_de": "Mix: 10:30 (~35%); Rate: 9:00 (~20%)"
+        },
+        {
+          "role": "Tremolo",
+          "device_id": "behringer_ut300_ultra_tremolo",
+          "note_de": "Square-chop auf Groove.",
+          "knob_hints": {
+            "Rate": 58,
+            "Depth": 78
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Rate": {
+              "pct": 58,
+              "clock": "12:48"
+            },
+            "Depth": {
+              "pct": 78,
+              "clock": "2:48"
+            }
+          },
+          "pedal_settings_de": "Rate: 12:48 (~58%); Depth: 2:48 (~78%)"
+        },
+        {
+          "role": "Reverb",
+          "device_id": "eno_t_cube_reverb",
+          "note_de": "Sehr kurz zum Kleben.",
+          "knob_hints": {
+            "Mix": 15,
+            "Time": 22
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Mix": {
+              "pct": 15,
+              "clock": "8:30"
+            },
+            "Time": {
+              "pct": 22,
+              "clock": "9:12"
+            }
+          },
+          "pedal_settings_de": "Mix: 8:30 (~15%); Time: 9:12 (~22%)"
+        }
+      ],
+      "schema_notes_de": "V40: no Rea* FX. VST/JSFX chosen from installed sync list.",
+      "pre_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 120Hz",
+            "Mud cut": "-4dB @ 350Hz Q=1.0",
+            "Bite boost": "+3dB @ 2.8kHz Q=1.2",
+            "LPF": "12dB/oct @ 11kHz"
+          },
+          "notes_de": "Pre-shaping BEFORE hardware so pedals react to a tighter signal."
+        },
+        {
+          "fx_name": "VST3: TDR Kotelnikov (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Kotelnikov.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "Ratio": "2:1",
+            "Attack": "20ms",
+            "Release": "120ms",
+            "Target GR": "1–3 dB peaks"
+          },
+          "notes_de": "Gentle leveling before hardware to stabilize gain staging."
+        }
+      ],
+      "post_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 180Hz",
+            "LPF": "12dB/oct @ 9kHz",
+            "Notch": "-6dB @ 3.5kHz Q=6 (optional)"
+          },
+          "notes_de": "Band-limit return so glitch FX sits in mix."
+        },
+        {
+          "fx_name": "JS: Transient Controller",
+          "fx_ident": "loser/TransientController",
+          "format": "JS",
+          "vendor": NaN,
+          "params": {
+            "Attack": "+20%",
+            "Sustain": "-25%"
+          },
+          "notes_de": "Tight stutters and remove tail."
+        },
+        {
+          "fx_name": "VST3: A1TriggerGate (A1AUDIO.de)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\A1AUDIO.de\\A1TriggerGate-x64.vst3",
+          "format": "VST3",
+          "vendor": "A1AUDIO.de",
+          "params": {
+            "Mode": "Trigger/Gate",
+            "Threshold": "-24 dB",
+            "Hold": "35ms",
+            "Release": "55ms"
+          },
+          "notes_de": "IDM-style chops; automate threshold for rhythm."
+        },
+        {
+          "fx_name": "VST3: IVGI2 (Klanghelm)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\IVGI2.vst3",
+          "format": "VST3",
+          "vendor": "Klanghelm",
+          "params": {
+            "Drive": "low",
+            "Ceiling": "-0.8 dB"
+          },
+          "notes_de": "Tame peaks from feedback/self-osc."
+        },
+        {
+          "fx_name": "VST3: ValhallaSupermassive (Valhalla DSP, LLC)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\ValhallaSupermassive.vst3",
+          "format": "VST3",
+          "vendor": "Valhalla DSP, LLC",
+          "params": {
+            "Mode": "Gemini/Orion",
+            "Mix": "0–8% (optional)",
+            "Feedback": "0–10%"
+          },
+          "notes_de": "Optional micro-space; turn off if too busy."
+        }
+      ],
+      "hardware_options": {
+        "parallel_splitter": {
+          "device": "Sonicake Portal (optional)",
+          "note_de": "Wenn sinnvoll: Portal als Parallel-Splitter nutzen (Dry/Wet Blend am Hardware-Switch). Für Return: Wet 100% zurück, Dry im Reaper behalten."
+        }
+      }
+    },
+    {
+      "id": "preset_field_texture_cloud",
+      "use_case_id": "field_recordings_idm",
+      "name_de": "Field Ambience → Granular-ish Cloud (Mixbar)",
+      "mix_ready": true,
+      "experimental": true,
+      "signal_flow_de": "Ambience → Mini Universe (Cloud/Swell) → M350 Polish → Reaper EQ/Comp + optional ReaDelay",
+      "recommended_routing": {
+        "mode": "stereo_parallel",
+        "notes_de": "Parallel mischen + Sidechain Ducking vom Kick empfohlen."
+      },
+      "steps": [
+        {
+          "role": "Reverb",
+          "device_id": "m_vave_mini_universe",
+          "note_de": "Cloud/Swell/Bloom – Param-Matrix nutzen.",
+          "knob_hints": {
+            "Mix": 62,
+            "Decay": 88,
+            "Param3": 70
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Mix": {
+              "pct": 62,
+              "clock": "1:12"
+            },
+            "Decay": {
+              "pct": 88,
+              "clock": "3:48"
+            },
+            "Param3": {
+              "pct": 70,
+              "clock": "2:00"
+            }
+          },
+          "pedal_settings_de": "Mix: 1:12 (~62%); Decay: 3:48 (~88%); Param3: 2:00 (~70%)"
+        },
+        {
+          "role": "Reverb/Delay",
+          "device_id": "tc_electronic_m350",
+          "note_de": "Finish: Plate/Hall + leises Delay.",
+          "knob_hints": {
+            "Mix": 25
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Mix": {
+              "pct": 25,
+              "clock": "9:30"
+            }
+          },
+          "pedal_settings_de": "Mix: 9:30 (~25%)"
+        }
+      ],
+      "schema_notes_de": "V40: no Rea* FX. VST/JSFX chosen from installed sync list.",
+      "pre_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 120Hz",
+            "Mud cut": "-4dB @ 350Hz Q=1.0",
+            "Bite boost": "+3dB @ 2.8kHz Q=1.2",
+            "LPF": "12dB/oct @ 11kHz"
+          },
+          "notes_de": "Pre-shaping BEFORE hardware so pedals react to a tighter signal."
+        },
+        {
+          "fx_name": "VST3: TDR Kotelnikov (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Kotelnikov.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "Ratio": "2:1",
+            "Attack": "20ms",
+            "Release": "120ms",
+            "Target GR": "1–3 dB peaks"
+          },
+          "notes_de": "Gentle leveling before hardware to stabilize gain staging."
+        }
+      ],
+      "post_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 180Hz",
+            "LPF": "12dB/oct @ 9kHz",
+            "Notch": "-6dB @ 3.5kHz Q=6 (optional)"
+          },
+          "notes_de": "Band-limit return so glitch FX sits in mix."
+        },
+        {
+          "fx_name": "JS: Transient Controller",
+          "fx_ident": "loser/TransientController",
+          "format": "JS",
+          "vendor": NaN,
+          "params": {
+            "Attack": "+20%",
+            "Sustain": "-25%"
+          },
+          "notes_de": "Tight stutters and remove tail."
+        },
+        {
+          "fx_name": "VST3: A1TriggerGate (A1AUDIO.de)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\A1AUDIO.de\\A1TriggerGate-x64.vst3",
+          "format": "VST3",
+          "vendor": "A1AUDIO.de",
+          "params": {
+            "Mode": "Trigger/Gate",
+            "Threshold": "-24 dB",
+            "Hold": "35ms",
+            "Release": "55ms"
+          },
+          "notes_de": "IDM-style chops; automate threshold for rhythm."
+        },
+        {
+          "fx_name": "VST3: IVGI2 (Klanghelm)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\IVGI2.vst3",
+          "format": "VST3",
+          "vendor": "Klanghelm",
+          "params": {
+            "Drive": "low",
+            "Ceiling": "-0.8 dB"
+          },
+          "notes_de": "Tame peaks from feedback/self-osc."
+        },
+        {
+          "fx_name": "VST3: ValhallaSupermassive (Valhalla DSP, LLC)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\ValhallaSupermassive.vst3",
+          "format": "VST3",
+          "vendor": "Valhalla DSP, LLC",
+          "params": {
+            "Mode": "Gemini/Orion",
+            "Mix": "0–8% (optional)",
+            "Feedback": "0–10%"
+          },
+          "notes_de": "Optional micro-space; turn off if too busy."
+        }
+      ],
+      "hardware_options": {
+        "parallel_splitter": {
+          "device": "Sonicake Portal (optional)",
+          "note_de": "Wenn sinnvoll: Portal als Parallel-Splitter nutzen (Dry/Wet Blend am Hardware-Switch). Für Return: Wet 100% zurück, Dry im Reaper behalten."
+        }
+      }
+    },
+    {
+      "id": "preset_field_metal_clicks_pops",
+      "use_case_id": "metallic_perc_mangling",
+      "name_de": "Field Metal → Klicks/Pops/Snare-Foley (Parallel)",
+      "mix_ready": true,
+      "experimental": true,
+      "signal_flow_de": "Metallische Gegenstände → Bitcrush → Ringmod → Gate Reverb → VST bandlimit/transient/gate.",
+      "recommended_routing": {
+        "mode": "parallel_send",
+        "notes_de": "Dry getrennt lassen, Return band-limit & kontrollieren."
+      },
+      "steps": [
+        {
+          "role": "Bitcrush",
+          "device_id": "aroma_amo_3_mario_bit_crusher",
+          "note_de": "Aliasing für Klicks/Pops.",
+          "knob_hints": {
+            "Bit": 80,
+            "Mix": 55
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Bit": {
+              "pct": 80,
+              "clock": "3:00"
+            },
+            "Mix": {
+              "pct": 55,
+              "clock": "12:30"
+            }
+          },
+          "pedal_settings_de": "Bit: 3:00 (~80%); Mix: 12:30 (~55%)"
+        },
+        {
+          "role": "Ringmod",
+          "device_id": "ginean_modulator_ringmod",
+          "note_de": "Metallisch/inharmonisch; Freq als Tonhöhenregler.",
+          "knob_hints": {
+            "Ring": 55,
+            "Freq": 60
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Ring": {
+              "pct": 55,
+              "clock": "12:30"
+            },
+            "Freq": {
+              "pct": 60,
+              "clock": "1:00"
+            }
+          },
+          "pedal_settings_de": "Ring: 12:30 (~55%); Freq: 1:00 (~60%)"
+        },
+        {
+          "role": "Reverb",
+          "device_id": "behringer_dr100_digital_reverb",
+          "note_de": "GATE/PLATE kurz für Snare-Körper.",
+          "knob_hints": {
+            "Time": 20,
+            "Level": 35,
+            "Tone": 55
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Time": {
+              "pct": 20,
+              "clock": "9:00"
+            },
+            "Level": {
+              "pct": 35,
+              "clock": "10:30"
+            },
+            "Tone": {
+              "pct": 55,
+              "clock": "12:30"
+            }
+          },
+          "pedal_settings_de": "Time: 9:00 (~20%); Level: 10:30 (~35%); Tone: 12:30 (~55%)"
+        }
+      ],
+      "pre_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 250Hz",
+            "Boost": " +4dB @ 3.2kHz Q=1.2",
+            "LPF": "12dB/oct @ 12kHz"
+          },
+          "notes_de": "Focus on metallic band before pedals."
+        }
+      ],
+      "post_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 180Hz",
+            "LPF": "12dB/oct @ 9kHz",
+            "Notch": "-6dB @ 3.5kHz Q=6 (optional)"
+          },
+          "notes_de": "Band-limit return so glitch FX sits in mix."
+        },
+        {
+          "fx_name": "JS: Transient Controller",
+          "fx_ident": "loser/TransientController",
+          "format": "JS",
+          "vendor": NaN,
+          "params": {
+            "Attack": "+20%",
+            "Sustain": "-25%"
+          },
+          "notes_de": "Tight stutters and remove tail."
+        },
+        {
+          "fx_name": "VST3: A1TriggerGate (A1AUDIO.de)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\A1AUDIO.de\\A1TriggerGate-x64.vst3",
+          "format": "VST3",
+          "vendor": "A1AUDIO.de",
+          "params": {
+            "Mode": "Trigger/Gate",
+            "Threshold": "-24 dB",
+            "Hold": "35ms",
+            "Release": "55ms"
+          },
+          "notes_de": "IDM-style chops; automate threshold for rhythm."
+        },
+        {
+          "fx_name": "VST3: IVGI2 (Klanghelm)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\IVGI2.vst3",
+          "format": "VST3",
+          "vendor": "Klanghelm",
+          "params": {
+            "Drive": "low",
+            "Ceiling": "-0.8 dB"
+          },
+          "notes_de": "Tame peaks from feedback/self-osc."
+        },
+        {
+          "fx_name": "VST3: ValhallaSupermassive (Valhalla DSP, LLC)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\ValhallaSupermassive.vst3",
+          "format": "VST3",
+          "vendor": "Valhalla DSP, LLC",
+          "params": {
+            "Mode": "Gemini",
+            "Mix": "6–12%",
+            "Feedback": "8–15%"
+          },
+          "notes_de": "Tiny tail for IDM placement."
+        }
+      ],
+      "hardware_options": {
+        "parallel_splitter": {
+          "device": "Sonicake Portal (optional)",
+          "note_de": "Portal kann Dry/Wet parallel fahren. Empfehlung: Wet 100% retour, Dry im Reaper."
+        }
+      },
+      "schema_notes_de": "V40: VST/JSFX only (from installed sync)."
+    },
+    {
+      "id": "preset_field_ambience_idm_bed_ducked",
+      "use_case_id": "field_textures_beds",
+      "name_de": "Field Ambience → IDM Bed (Duck + Width + Supermassive)",
+      "mix_ready": true,
+      "experimental": true,
+      "signal_flow_de": "Ambience → Universe/M350 → Post: Nova+Kotelnikov+StereoControl+Supermassive; optional gating/ducking.",
+      "recommended_routing": {
+        "mode": "stereo_parallel",
+        "notes_de": "Dry getrennt lassen, Return band-limit & kontrollieren."
+      },
+      "steps": [
+        {
+          "role": "Reverb",
+          "device_id": "m_vave_mini_universe",
+          "note_de": "Cloud/Swell; Param3 Bewegung.",
+          "knob_hints": {
+            "Mix": 62,
+            "Decay": 88,
+            "Param3": 70
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Mix": {
+              "pct": 62,
+              "clock": "1:12"
+            },
+            "Decay": {
+              "pct": 88,
+              "clock": "3:48"
+            },
+            "Param3": {
+              "pct": 70,
+              "clock": "2:00"
+            }
+          },
+          "pedal_settings_de": "Mix: 1:12 (~62%); Decay: 3:48 (~88%); Param3: 2:00 (~70%)"
+        },
+        {
+          "role": "Reverb/Delay",
+          "device_id": "tc_electronic_m350",
+          "note_de": "Polish; Plate/Hall und ggf. leises Delay.",
+          "knob_hints": {
+            "Mix": 25
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Mix": {
+              "pct": 25,
+              "clock": "9:30"
+            }
+          },
+          "pedal_settings_de": "Mix: 9:30 (~25%)"
+        }
+      ],
+      "pre_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "12dB/oct @ 60Hz",
+            "Mud": "-3dB @ 220Hz"
+          },
+          "notes_de": "Pre-clean ambience before pedals."
+        },
+        {
+          "fx_name": "VST3: TDR Kotelnikov (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Kotelnikov.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "Ratio": "2:1",
+            "Attack": "30ms",
+            "Release": "200ms",
+            "Target GR": "1–2 dB"
+          },
+          "notes_de": "Even ambience level before space processors."
+        }
+      ],
+      "post_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "12dB/oct @ 70Hz",
+            "Low-mid": "-2dB @ 250Hz Q=0.8",
+            "Air": "+1.5dB @ 9kHz shelf"
+          },
+          "notes_de": "Keep room for bass; add air."
+        },
+        {
+          "fx_name": "VST3: TDR Kotelnikov (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Kotelnikov.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "Ratio": "2:1",
+            "Attack": "30ms",
+            "Release": "200ms",
+            "Target GR": "1–2 dB"
+          },
+          "notes_de": "Very gentle leveling."
+        },
+        {
+          "fx_name": "VST3: A1StereoControl (A1AUDIO.de)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\A1AUDIO.de\\A1StereoControl-x64.vst3",
+          "format": "VST3",
+          "vendor": "A1AUDIO.de",
+          "params": {
+            "Width": "110–125%",
+            "Bass mono": "on <120Hz"
+          },
+          "notes_de": "Controlled stereo width."
+        },
+        {
+          "fx_name": "VST3: ValhallaSupermassive (Valhalla DSP, LLC)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\ValhallaSupermassive.vst3",
+          "format": "VST3",
+          "vendor": "Valhalla DSP, LLC",
+          "params": {
+            "Mode": "Gemini",
+            "Mix": "5–12%",
+            "Feedback": "10–18%"
+          },
+          "notes_de": "Tiny halo; keep subtle for mix."
+        },
+        {
+          "fx_name": "VST3: A1TriggerGate (A1AUDIO.de)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\A1AUDIO.de\\A1TriggerGate-x64.vst3",
+          "format": "VST3",
+          "vendor": "A1AUDIO.de",
+          "params": {
+            "Mode": "Trigger/Gate",
+            "Threshold": "(sidechain optional)",
+            "Hold": "0–20ms",
+            "Release": "120–220ms"
+          },
+          "notes_de": "Optional rhythmic gating for IDM beds."
+        }
+      ],
+      "hardware_options": {
+        "parallel_splitter": {
+          "device": "Sonicake Portal (optional)",
+          "note_de": "Portal kann Dry/Wet parallel fahren. Empfehlung: Wet 100% retour, Dry im Reaper."
+        }
+      },
+      "schema_notes_de": "V40: VST/JSFX only (from installed sync)."
+    },
+    {
+      "id": "preset_portal_metallic_perc_ab",
+      "use_case_id": "metallic_perc_mangling",
+      "name_de": "Portal A/B: Metallic Perc Engine (A=Character, B=Space)",
+      "mix_ready": true,
+      "experimental": true,
+      "signal_flow_de": "Field Hit → pre VST focus → ReaInsert → Sonicake Portal (Loop A + Loop B parallel) → Return → post VST control",
+      "recommended_routing": {
+        "mode": "hardware_parallel",
+        "notes_de": "Portal parallel: Dry im Reaper behalten; Portal Loops möglichst wet-only zurück."
+      },
+      "pre_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 120Hz",
+            "Mud cut": "-4dB @ 350Hz Q=1.0",
+            "Bite boost": "+3dB @ 2.8kHz Q=1.2",
+            "LPF": "12dB/oct @ 11kHz"
+          },
+          "notes_de": "Pre-shaping BEFORE hardware so pedals react to a tighter signal."
+        },
+        {
+          "fx_name": "VST3: TDR Kotelnikov (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Kotelnikov.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "Ratio": "2:1",
+            "Attack": "20ms",
+            "Release": "120ms",
+            "Target GR": "1–3 dB peaks"
+          },
+          "notes_de": "Gentle leveling before hardware to stabilize gain staging."
+        }
+      ],
+      "post_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 180Hz",
+            "LPF": "12dB/oct @ 9kHz",
+            "Notch": "-6dB @ 3.5kHz Q=6 (optional)"
+          },
+          "notes_de": "Band-limit return so glitch FX sits in mix."
+        },
+        {
+          "fx_name": "JS: Transient Controller",
+          "fx_ident": "loser/TransientController",
+          "format": "JS",
+          "vendor": NaN,
+          "params": {
+            "Attack": "+20%",
+            "Sustain": "-25%"
+          },
+          "notes_de": "Tight stutters and remove tail."
+        },
+        {
+          "fx_name": "VST3: A1TriggerGate (A1AUDIO.de)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\A1AUDIO.de\\A1TriggerGate-x64.vst3",
+          "format": "VST3",
+          "vendor": "A1AUDIO.de",
+          "params": {
+            "Mode": "Trigger/Gate",
+            "Threshold": "-24 dB",
+            "Hold": "35ms",
+            "Release": "55ms"
+          },
+          "notes_de": "IDM-style chops; automate threshold for rhythm."
+        },
+        {
+          "fx_name": "VST3: IVGI2 (Klanghelm)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\IVGI2.vst3",
+          "format": "VST3",
+          "vendor": "Klanghelm",
+          "params": {
+            "Drive": "low",
+            "Ceiling": "-0.8 dB"
+          },
+          "notes_de": "Tame peaks from feedback/self-osc."
+        },
+        {
+          "fx_name": "VST3: ValhallaSupermassive (Valhalla DSP, LLC)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\ValhallaSupermassive.vst3",
+          "format": "VST3",
+          "vendor": "Valhalla DSP, LLC",
+          "params": {
+            "Mode": "Gemini/Orion",
+            "Mix": "0–8% (optional)",
+            "Feedback": "0–10%"
+          },
+          "notes_de": "Optional micro-space; turn off if too busy."
+        }
+      ],
+      "steps": [
+        {
+          "role": "Hardware Parallel",
+          "device_id": "sonicake_portal",
+          "note_de": "Siehe hardware_parallel Loop A/B.",
+          "knob_hints": {},
+          "routing": {},
+          "pedal_settings_de": ""
+        }
+      ],
+      "schema_notes_de": "V43: Portal Loop A/B + pedal fx_loop subchains.",
+      "hardware_parallel": {
+        "device": "sonicake_portal",
+        "notes_de": "2× FX Insert/Return: Loop A + Loop B parallel. Empfehlung: Portal Wet 100% retour, Dry in Reaper separat.",
+        "dry_strategy": "dry_in_reaper",
+        "loopA": {
+          "name_de": "Loop A (Character/Metal)",
+          "steps": [
+            {
+              "role": "Bitcrush",
+              "device_id": "aroma_amo_3_mario_bit_crusher",
+              "note_de": "Aliasing/Crunch auf Transienten.",
+              "knob_hints": {
+                "Bit": 80,
+                "Mix": 55
+              },
+              "routing": {},
+              "knob_hints_clock": {
+                "Bit": {
+                  "pct": 80,
+                  "clock": "3:00"
+                },
+                "Mix": {
+                  "pct": 55,
+                  "clock": "12:30"
+                }
+              },
+              "pedal_settings_de": "Bit: 3:00 (~80%); Mix: 12:30 (~55%)"
+            },
+            {
+              "role": "Ringmod",
+              "device_id": "ginean_modulator_ringmod",
+              "note_de": "Inharmonik/Metall; Freq als Tonhöhenregler.",
+              "knob_hints": {
+                "Ring": 55,
+                "Freq": 60
+              },
+              "routing": {},
+              "knob_hints_clock": {
+                "Ring": {
+                  "pct": 55,
+                  "clock": "12:30"
+                },
+                "Freq": {
+                  "pct": 60,
+                  "clock": "1:00"
+                }
+              },
+              "pedal_settings_de": "Ring: 12:30 (~55%); Freq: 1:00 (~60%)"
+            }
+          ],
+          "mix_hint_de": "Beginne bei 10–25% Loop A im Mix"
+        },
+        "loopB": {
+          "name_de": "Loop B (Space/Movement)",
+          "steps": [
+            {
+              "role": "Delay",
+              "device_id": "gokko_gk_22_dripping_delay",
+              "note_de": "Kurzer Delay; Repeat nah an Kante; Time drehen für Pitch-Bends.",
+              "knob_hints": {
+                "Delay": 22,
+                "Repeat": 78,
+                "Level": 55
+              },
+              "routing": {},
+              "knob_hints_clock": {
+                "Delay": {
+                  "pct": 22,
+                  "clock": "9:12"
+                },
+                "Repeat": {
+                  "pct": 78,
+                  "clock": "2:48"
+                },
+                "Level": {
+                  "pct": 55,
+                  "clock": "12:30"
+                }
+              },
+              "pedal_settings_de": "Delay: 9:12 (~22%); Repeat: 2:48 (~78%); Level: 12:30 (~55%)"
+            },
+            {
+              "role": "Reverb",
+              "device_id": "behringer_dr100_digital_reverb",
+              "note_de": "Gate/Room kurz, damit es 'percussive' bleibt.",
+              "knob_hints": {
+                "Time": 18,
+                "Level": 35,
+                "Tone": 55
+              },
+              "routing": {},
+              "knob_hints_clock": {
+                "Time": {
+                  "pct": 18,
+                  "clock": "8:48"
+                },
+                "Level": {
+                  "pct": 35,
+                  "clock": "10:30"
+                },
+                "Tone": {
+                  "pct": 55,
+                  "clock": "12:30"
+                }
+              },
+              "pedal_settings_de": "Time: 8:48 (~18%); Level: 10:30 (~35%); Tone: 12:30 (~55%)"
+            }
+          ],
+          "mix_hint_de": "Beginne bei 10–20% Loop B im Mix"
+        }
+      }
+    },
+    {
+      "id": "preset_attack_decay_fxloop_grains",
+      "use_case_id": "field_hits_idm_drums",
+      "name_de": "Attack Decay FX-Loop: Grainy Envelope Perc (parallel)",
+      "mix_ready": true,
+      "experimental": true,
+      "signal_flow_de": "Field Click/Hit → pre VST tighten → ReaInsert → Attack Decay (FX loop insert) → Return → post VST gate/transient",
+      "recommended_routing": {
+        "mode": "hardware_parallel",
+        "notes_de": "Portal parallel: Dry im Reaper behalten; Portal Loops möglichst wet-only zurück."
+      },
+      "pre_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 120Hz",
+            "Mud cut": "-4dB @ 350Hz Q=1.0",
+            "Bite boost": "+3dB @ 2.8kHz Q=1.2",
+            "LPF": "12dB/oct @ 11kHz"
+          },
+          "notes_de": "Pre-shaping BEFORE hardware so pedals react to a tighter signal."
+        },
+        {
+          "fx_name": "VST3: TDR Kotelnikov (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Kotelnikov.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "Ratio": "2:1",
+            "Attack": "20ms",
+            "Release": "120ms",
+            "Target GR": "1–3 dB peaks"
+          },
+          "notes_de": "Gentle leveling before hardware to stabilize gain staging."
+        }
+      ],
+      "post_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 180Hz",
+            "LPF": "12dB/oct @ 9kHz",
+            "Notch": "-6dB @ 3.5kHz Q=6 (optional)"
+          },
+          "notes_de": "Band-limit return so glitch FX sits in mix."
+        },
+        {
+          "fx_name": "JS: Transient Controller",
+          "fx_ident": "loser/TransientController",
+          "format": "JS",
+          "vendor": NaN,
+          "params": {
+            "Attack": "+20%",
+            "Sustain": "-25%"
+          },
+          "notes_de": "Tight stutters and remove tail."
+        },
+        {
+          "fx_name": "VST3: A1TriggerGate (A1AUDIO.de)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\A1AUDIO.de\\A1TriggerGate-x64.vst3",
+          "format": "VST3",
+          "vendor": "A1AUDIO.de",
+          "params": {
+            "Mode": "Trigger/Gate",
+            "Threshold": "-24 dB",
+            "Hold": "35ms",
+            "Release": "55ms"
+          },
+          "notes_de": "IDM-style chops; automate threshold for rhythm."
+        },
+        {
+          "fx_name": "VST3: IVGI2 (Klanghelm)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\IVGI2.vst3",
+          "format": "VST3",
+          "vendor": "Klanghelm",
+          "params": {
+            "Drive": "low",
+            "Ceiling": "-0.8 dB"
+          },
+          "notes_de": "Tame peaks from feedback/self-osc."
+        },
+        {
+          "fx_name": "VST3: ValhallaSupermassive (Valhalla DSP, LLC)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\ValhallaSupermassive.vst3",
+          "format": "VST3",
+          "vendor": "Valhalla DSP, LLC",
+          "params": {
+            "Mode": "Gemini/Orion",
+            "Mix": "0–8% (optional)",
+            "Feedback": "0–10%"
+          },
+          "notes_de": "Optional micro-space; turn off if too busy."
+        }
+      ],
+      "steps": [
+        {
+          "role": "Envelope",
+          "device_id": "electro_harmonix_attack_decay",
+          "note_de": "Attack/Decay erzeugt Swells; FX-Loop verfremdet nur den Effektpfad (granular-ish).",
+          "knob_hints": {
+            "Attack": 35,
+            "Decay": 55,
+            "Blend": 60
+          },
+          "routing": {},
+          "fx_loop": {
+            "type": "send_return",
+            "notes_de": "FX Send → Insert chain → FX Return (im Pedal).",
+            "insert_steps": [
+              {
+                "role": "Bitcrush",
+                "device_id": "aroma_amo_3_mario_bit_crusher",
+                "note_de": "Nur im FX-Pfad: Körner/Artefakte.",
+                "knob_hints": {
+                  "Bit": 70,
+                  "Mix": 50
+                },
+                "routing": {},
+                "knob_hints_clock": {
+                  "Bit": {
+                    "pct": 70,
+                    "clock": "2:00"
+                  },
+                  "Mix": {
+                    "pct": 50,
+                    "clock": "12:00"
+                  }
+                },
+                "pedal_settings_de": "Bit: 2:00 (~70%); Mix: 12:00 (~50%)"
+              },
+              {
+                "role": "Tremolo",
+                "device_id": "behringer_ut300_ultra_tremolo",
+                "note_de": "Chop im FX-Pfad für rhythmische Swells.",
+                "knob_hints": {
+                  "Rate": 55,
+                  "Depth": 70
+                },
+                "routing": {},
+                "knob_hints_clock": {
+                  "Rate": {
+                    "pct": 55,
+                    "clock": "12:30"
+                  },
+                  "Depth": {
+                    "pct": 70,
+                    "clock": "2:00"
+                  }
+                },
+                "pedal_settings_de": "Rate: 12:30 (~55%); Depth: 2:00 (~70%)"
+              }
+            ]
+          },
+          "knob_hints_clock": {
+            "Attack": {
+              "pct": 35,
+              "clock": "10:30"
+            },
+            "Decay": {
+              "pct": 55,
+              "clock": "12:30"
+            },
+            "Blend": {
+              "pct": 60,
+              "clock": "1:00"
+            }
+          },
+          "pedal_settings_de": "Attack: 10:30 (~35%); Decay: 12:30 (~55%); Blend: 1:00 (~60%)"
+        }
+      ],
+      "schema_notes_de": "V43: Portal Loop A/B + pedal fx_loop subchains."
+    },
+    {
+      "id": "preset_memory_boy_fxloop_living_delay",
+      "use_case_id": "field_textures_beds",
+      "name_de": "Deluxe Memory Boy FX-Loop: Living Delay / Drone Engine",
+      "mix_ready": true,
+      "experimental": true,
+      "signal_flow_de": "Ambience/Pad/Hit → pre VST clean → ReaInsert → Deluxe Memory Boy (FX loop insert) → Return → post VST width + supermassive",
+      "recommended_routing": {
+        "mode": "hardware_parallel",
+        "notes_de": "Portal parallel: Dry im Reaper behalten; Portal Loops möglichst wet-only zurück."
+      },
+      "pre_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 120Hz",
+            "Mud cut": "-4dB @ 350Hz Q=1.0",
+            "Bite boost": "+3dB @ 2.8kHz Q=1.2",
+            "LPF": "12dB/oct @ 11kHz"
+          },
+          "notes_de": "Pre-shaping BEFORE hardware so pedals react to a tighter signal."
+        },
+        {
+          "fx_name": "VST3: TDR Kotelnikov (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Kotelnikov.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "Ratio": "2:1",
+            "Attack": "20ms",
+            "Release": "120ms",
+            "Target GR": "1–3 dB peaks"
+          },
+          "notes_de": "Gentle leveling before hardware to stabilize gain staging."
+        }
+      ],
+      "post_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "12dB/oct @ 70Hz",
+            "Low-mid": "-2dB @ 250Hz Q=0.8",
+            "Air": "+1.5dB @ 9kHz shelf"
+          },
+          "notes_de": "Keep room for bass; add air."
+        },
+        {
+          "fx_name": "VST3: TDR Kotelnikov (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Kotelnikov.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "Ratio": "2:1",
+            "Attack": "30ms",
+            "Release": "200ms",
+            "Target GR": "1–2 dB"
+          },
+          "notes_de": "Very gentle leveling."
+        },
+        {
+          "fx_name": "VST3: A1StereoControl (A1AUDIO.de)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\A1AUDIO.de\\A1StereoControl-x64.vst3",
+          "format": "VST3",
+          "vendor": "A1AUDIO.de",
+          "params": {
+            "Width": "110–125%",
+            "Bass mono": "on <120Hz"
+          },
+          "notes_de": "Controlled stereo width."
+        },
+        {
+          "fx_name": "VST3: ValhallaSupermassive (Valhalla DSP, LLC)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\ValhallaSupermassive.vst3",
+          "format": "VST3",
+          "vendor": "Valhalla DSP, LLC",
+          "params": {
+            "Mode": "Gemini",
+            "Mix": "5–12%",
+            "Feedback": "10–18%"
+          },
+          "notes_de": "Tiny halo; keep subtle for mix."
+        }
+      ],
+      "steps": [
+        {
+          "role": "Delay",
+          "device_id": "electro_harmonix_deluxe_memory_boy",
+          "note_de": "Delay-Repeats werden über FX loop lebendig/instabil (IDM tails).",
+          "knob_hints": {
+            "Delay": 45,
+            "Feedback": 55,
+            "Blend": 45,
+            "Depth": 35,
+            "Rate": 25
+          },
+          "routing": {},
+          "fx_loop": {
+            "type": "send_return",
+            "notes_de": "FX Send/Return im Pedal: wirkt besonders auf Feedback/Repeats (je nach Patch).",
+            "insert_steps": [
+              {
+                "role": "Phaser",
+                "device_id": "behringer_vp1_vintage_phaser",
+                "note_de": "Movement auf Repeats.",
+                "knob_hints": {
+                  "Rate": 25,
+                  "Depth": 35
+                },
+                "routing": {},
+                "knob_hints_clock": {
+                  "Rate": {
+                    "pct": 25,
+                    "clock": "9:30"
+                  },
+                  "Depth": {
+                    "pct": 35,
+                    "clock": "10:30"
+                  }
+                },
+                "pedal_settings_de": "Rate: 9:30 (~25%); Depth: 10:30 (~35%)"
+              },
+              {
+                "role": "Ringmod",
+                "device_id": "ginean_modulator_ringmod",
+                "note_de": "Inharmonik nur auf Repeats (sehr IDM).",
+                "knob_hints": {
+                  "Ring": 25,
+                  "Freq": 45
+                },
+                "routing": {},
+                "knob_hints_clock": {
+                  "Ring": {
+                    "pct": 25,
+                    "clock": "9:30"
+                  },
+                  "Freq": {
+                    "pct": 45,
+                    "clock": "11:30"
+                  }
+                },
+                "pedal_settings_de": "Ring: 9:30 (~25%); Freq: 11:30 (~45%)"
+              }
+            ]
+          },
+          "knob_hints_clock": {
+            "Delay": {
+              "pct": 45,
+              "clock": "11:30"
+            },
+            "Feedback": {
+              "pct": 55,
+              "clock": "12:30"
+            },
+            "Blend": {
+              "pct": 45,
+              "clock": "11:30"
+            },
+            "Depth": {
+              "pct": 35,
+              "clock": "10:30"
+            },
+            "Rate": {
+              "pct": 25,
+              "clock": "9:30"
+            }
+          },
+          "pedal_settings_de": "Delay: 11:30 (~45%); Feedback: 12:30 (~55%); Blend: 11:30 (~45%); Depth: 10:30 (~35%); Rate: 9:30 (~25%)"
+        }
+      ],
+      "schema_notes_de": "V43: Portal Loop A/B + pedal fx_loop subchains."
+    },
+    {
+      "id": "preset_monster_portal_attackdecay_memoryboy",
+      "use_case_id": "field_recordings_idm",
+      "name_de": "MONSTER: Portal A=Attack Decay FX-Loop + Portal B=Memory Boy FX-Loop",
+      "mix_ready": true,
+      "experimental": true,
+      "signal_flow_de": "Field/Synth → pre VST → ReaInsert → Portal: Loop A Envelope-Grains, Loop B Living Delay → Return → post VST control",
+      "recommended_routing": {
+        "mode": "hardware_parallel",
+        "notes_de": "Dry in Reaper behalten. Portal Loops wet-only, dann Return bandlimit/gate/clip."
+      },
+      "pre_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 120Hz",
+            "Mud cut": "-4dB @ 350Hz Q=1.0",
+            "Bite boost": "+3dB @ 2.8kHz Q=1.2",
+            "LPF": "12dB/oct @ 11kHz"
+          },
+          "notes_de": "Pre-shaping BEFORE hardware so pedals react to a tighter signal."
+        },
+        {
+          "fx_name": "VST3: TDR Kotelnikov (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Kotelnikov.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "Ratio": "2:1",
+            "Attack": "20ms",
+            "Release": "120ms",
+            "Target GR": "1–3 dB peaks"
+          },
+          "notes_de": "Gentle leveling before hardware to stabilize gain staging."
+        }
+      ],
+      "post_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 180Hz",
+            "LPF": "12dB/oct @ 9kHz",
+            "Notch": "-6dB @ 3.5kHz Q=6 (optional)"
+          },
+          "notes_de": "Band-limit return so glitch FX sits in mix."
+        },
+        {
+          "fx_name": "JS: Transient Controller",
+          "fx_ident": "loser/TransientController",
+          "format": "JS",
+          "vendor": NaN,
+          "params": {
+            "Attack": "+20%",
+            "Sustain": "-25%"
+          },
+          "notes_de": "Tight stutters and remove tail."
+        },
+        {
+          "fx_name": "VST3: A1TriggerGate (A1AUDIO.de)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\A1AUDIO.de\\A1TriggerGate-x64.vst3",
+          "format": "VST3",
+          "vendor": "A1AUDIO.de",
+          "params": {
+            "Mode": "Trigger/Gate",
+            "Threshold": "-24 dB",
+            "Hold": "35ms",
+            "Release": "55ms"
+          },
+          "notes_de": "IDM-style chops; automate threshold for rhythm."
+        },
+        {
+          "fx_name": "VST3: IVGI2 (Klanghelm)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\IVGI2.vst3",
+          "format": "VST3",
+          "vendor": "Klanghelm",
+          "params": {
+            "Drive": "low",
+            "Ceiling": "-0.8 dB"
+          },
+          "notes_de": "Tame peaks from feedback/self-osc."
+        },
+        {
+          "fx_name": "VST3: ValhallaSupermassive (Valhalla DSP, LLC)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\ValhallaSupermassive.vst3",
+          "format": "VST3",
+          "vendor": "Valhalla DSP, LLC",
+          "params": {
+            "Mode": "Gemini/Orion",
+            "Mix": "0–8% (optional)",
+            "Feedback": "0–10%"
+          },
+          "notes_de": "Optional micro-space; turn off if too busy."
+        }
+      ],
+      "hardware_parallel": {
+        "device": "sonicake_portal",
+        "dry_strategy": "dry_in_reaper",
+        "notes_de": "Portal 2× FX Insert/Return: zwei komplette Parallel-Loops. Ideal zum Resampling.",
+        "loopA": {
+          "name_de": "Loop A (Envelope/Grains)",
+          "steps": [
+            {
+              "role": "Envelope",
+              "device_id": "electro_harmonix_attack_decay",
+              "note_de": "Envelope/Swell-Engine; FX Loop verfremdet nur den Effektpfad.",
+              "knob_hints": {
+                "Attack": 35,
+                "Decay": 55,
+                "Blend": 60
+              },
+              "routing": {},
+              "fx_loop": {
+                "type": "send_return",
+                "notes_de": "Attack Decay FX Send → Insert chain → FX Return.",
+                "insert_steps": [
+                  {
+                    "role": "Bitcrush",
+                    "device_id": "aroma_amo_3_mario_bit_crusher",
+                    "note_de": "Körner/Artefakte im FX-Pfad.",
+                    "knob_hints": {
+                      "Bit": 70,
+                      "Mix": 50
+                    },
+                    "routing": {},
+                    "knob_hints_clock": {
+                      "Bit": {
+                        "pct": 70,
+                        "clock": "2:00"
+                      },
+                      "Mix": {
+                        "pct": 50,
+                        "clock": "12:00"
+                      }
+                    },
+                    "pedal_settings_de": "Bit: 2:00 (~70%); Mix: 12:00 (~50%)"
+                  },
+                  {
+                    "role": "Tremolo",
+                    "device_id": "behringer_ut300_ultra_tremolo",
+                    "note_de": "Rhythmische Swells (Square/Depth hoch).",
+                    "knob_hints": {
+                      "Rate": 55,
+                      "Depth": 70
+                    },
+                    "routing": {},
+                    "knob_hints_clock": {
+                      "Rate": {
+                        "pct": 55,
+                        "clock": "12:30"
+                      },
+                      "Depth": {
+                        "pct": 70,
+                        "clock": "2:00"
+                      }
+                    },
+                    "pedal_settings_de": "Rate: 12:30 (~55%); Depth: 2:00 (~70%)"
+                  }
+                ]
+              },
+              "knob_hints_clock": {
+                "Attack": {
+                  "pct": 35,
+                  "clock": "10:30"
+                },
+                "Decay": {
+                  "pct": 55,
+                  "clock": "12:30"
+                },
+                "Blend": {
+                  "pct": 60,
+                  "clock": "1:00"
+                }
+              },
+              "pedal_settings_de": "Attack: 10:30 (~35%); Decay: 12:30 (~55%); Blend: 1:00 (~60%)"
+            }
+          ],
+          "mix_hint_de": "10–30% für Perc; 30–60% für Texturen"
+        },
+        "loopB": {
+          "name_de": "Loop B (Living Delay/Tails)",
+          "steps": [
+            {
+              "role": "Delay",
+              "device_id": "electro_harmonix_deluxe_memory_boy",
+              "note_de": "Delay-Repeats über FX Loop instabil machen (IDM tails).",
+              "knob_hints": {
+                "Delay": 45,
+                "Feedback": 55,
+                "Blend": 45,
+                "Depth": 35,
+                "Rate": 25
+              },
+              "routing": {},
+              "fx_loop": {
+                "type": "send_return",
+                "notes_de": "Memory Boy FX Send → Insert chain → FX Return (wirkt stark auf Repeats).",
+                "insert_steps": [
+                  {
+                    "role": "Phaser",
+                    "device_id": "behringer_vp1_vintage_phaser",
+                    "note_de": "Bewegung auf Repeats.",
+                    "knob_hints": {
+                      "Rate": 25,
+                      "Depth": 35
+                    },
+                    "routing": {},
+                    "knob_hints_clock": {
+                      "Rate": {
+                        "pct": 25,
+                        "clock": "9:30"
+                      },
+                      "Depth": {
+                        "pct": 35,
+                        "clock": "10:30"
+                      }
+                    },
+                    "pedal_settings_de": "Rate: 9:30 (~25%); Depth: 10:30 (~35%)"
+                  },
+                  {
+                    "role": "Ringmod",
+                    "device_id": "ginean_modulator_ringmod",
+                    "note_de": "Inharmonik nur auf Repeats (sehr IDM).",
+                    "knob_hints": {
+                      "Ring": 25,
+                      "Freq": 45
+                    },
+                    "routing": {},
+                    "knob_hints_clock": {
+                      "Ring": {
+                        "pct": 25,
+                        "clock": "9:30"
+                      },
+                      "Freq": {
+                        "pct": 45,
+                        "clock": "11:30"
+                      }
+                    },
+                    "pedal_settings_de": "Ring: 9:30 (~25%); Freq: 11:30 (~45%)"
+                  }
+                ]
+              },
+              "knob_hints_clock": {
+                "Delay": {
+                  "pct": 45,
+                  "clock": "11:30"
+                },
+                "Feedback": {
+                  "pct": 55,
+                  "clock": "12:30"
+                },
+                "Blend": {
+                  "pct": 45,
+                  "clock": "11:30"
+                },
+                "Depth": {
+                  "pct": 35,
+                  "clock": "10:30"
+                },
+                "Rate": {
+                  "pct": 25,
+                  "clock": "9:30"
+                }
+              },
+              "pedal_settings_de": "Delay: 11:30 (~45%); Feedback: 12:30 (~55%); Blend: 11:30 (~45%); Depth: 10:30 (~35%); Rate: 9:30 (~25%)"
+            }
+          ],
+          "mix_hint_de": "5–20% für Drums; 20–50% für Drones"
+        }
+      },
+      "steps": [
+        {
+          "role": "Hardware Parallel",
+          "device_id": "sonicake_portal",
+          "note_de": "Siehe hardware_parallel (Loop A/B).",
+          "knob_hints": {},
+          "routing": {},
+          "pedal_settings_de": ""
+        }
+      ],
+      "patch_instructions_de": "PATCH (ReaInsert → Portal → Return):\n1) ReaInsert SEND L/R → Sonicake Portal INPUT L/R\n2) Portal OUTPUT L/R → ReaInsert RETURN L/R\n\nPORTAL LOOP A (Envelope/Grains):\n3) Portal FX SEND A → Attack Decay INPUT\n4) Attack Decay OUTPUT → Portal FX RETURN A\n5) Attack Decay FX SEND → AMO-3 INPUT → AMO-3 OUTPUT → UT300 INPUT → UT300 OUTPUT → Attack Decay FX RETURN\n\nPORTAL LOOP B (Living Delay/Tails):\n6) Portal FX SEND B → Deluxe Memory Boy INPUT\n7) Memory Boy OUTPUT → Portal FX RETURN B\n8) Memory Boy FX SEND → VP1 INPUT → VP1 OUTPUT → Ginean Ringmod INPUT → Ringmod OUTPUT → Memory Boy FX RETURN\n\nTIP:\n- Portal Mix: starte Loop A/B jeweils leise (10–20%) und taste dich hoch.\n- Resample 30–60s Return, dann slicen (IDM workflow)."
+    },
+    {
+      "id": "preset_monster_metal_ring_delay_fxloop",
+      "use_case_id": "metallic_perc_mangling",
+      "name_de": "MONSTER: Metal Ring (Loop A) + Memory Boy FX-Loop (Loop B)",
+      "mix_ready": true,
+      "experimental": true,
+      "signal_flow_de": "Metal hits → pre focus → ReaInsert → Portal A metal character + Portal B living delay tails → Return → post control",
+      "recommended_routing": {
+        "mode": "hardware_parallel",
+        "notes_de": "Für Klicks/Pops: Loop A dominant, Loop B leise. Für Drones: Loop B hoch, Loop A moderat."
+      },
+      "pre_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 120Hz",
+            "Mud cut": "-4dB @ 350Hz Q=1.0",
+            "Bite boost": "+3dB @ 2.8kHz Q=1.2",
+            "LPF": "12dB/oct @ 11kHz"
+          },
+          "notes_de": "Pre-shaping BEFORE hardware so pedals react to a tighter signal."
+        },
+        {
+          "fx_name": "VST3: TDR Kotelnikov (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Kotelnikov.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "Ratio": "2:1",
+            "Attack": "20ms",
+            "Release": "120ms",
+            "Target GR": "1–3 dB peaks"
+          },
+          "notes_de": "Gentle leveling before hardware to stabilize gain staging."
+        }
+      ],
+      "post_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 180Hz",
+            "LPF": "12dB/oct @ 9kHz",
+            "Notch": "-6dB @ 3.5kHz Q=6 (optional)"
+          },
+          "notes_de": "Band-limit return so glitch FX sits in mix."
+        },
+        {
+          "fx_name": "JS: Transient Controller",
+          "fx_ident": "loser/TransientController",
+          "format": "JS",
+          "vendor": NaN,
+          "params": {
+            "Attack": "+20%",
+            "Sustain": "-25%"
+          },
+          "notes_de": "Tight stutters and remove tail."
+        },
+        {
+          "fx_name": "VST3: A1TriggerGate (A1AUDIO.de)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\A1AUDIO.de\\A1TriggerGate-x64.vst3",
+          "format": "VST3",
+          "vendor": "A1AUDIO.de",
+          "params": {
+            "Mode": "Trigger/Gate",
+            "Threshold": "-24 dB",
+            "Hold": "35ms",
+            "Release": "55ms"
+          },
+          "notes_de": "IDM-style chops; automate threshold for rhythm."
+        },
+        {
+          "fx_name": "VST3: IVGI2 (Klanghelm)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\IVGI2.vst3",
+          "format": "VST3",
+          "vendor": "Klanghelm",
+          "params": {
+            "Drive": "low",
+            "Ceiling": "-0.8 dB"
+          },
+          "notes_de": "Tame peaks from feedback/self-osc."
+        },
+        {
+          "fx_name": "VST3: ValhallaSupermassive (Valhalla DSP, LLC)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\ValhallaSupermassive.vst3",
+          "format": "VST3",
+          "vendor": "Valhalla DSP, LLC",
+          "params": {
+            "Mode": "Gemini/Orion",
+            "Mix": "0–8% (optional)",
+            "Feedback": "0–10%"
+          },
+          "notes_de": "Optional micro-space; turn off if too busy."
+        }
+      ],
+      "hardware_parallel": {
+        "device": "sonicake_portal",
+        "dry_strategy": "dry_in_reaper",
+        "loopA": {
+          "name_de": "Loop A (Metal/Attack)",
+          "steps": [
+            {
+              "role": "Bitcrush",
+              "device_id": "aroma_amo_3_mario_bit_crusher",
+              "note_de": "Härte/aliased clicks.",
+              "knob_hints": {
+                "Bit": 85,
+                "Mix": 60
+              },
+              "routing": {},
+              "knob_hints_clock": {
+                "Bit": {
+                  "pct": 85,
+                  "clock": "3:30"
+                },
+                "Mix": {
+                  "pct": 60,
+                  "clock": "1:00"
+                }
+              },
+              "pedal_settings_de": "Bit: 3:30 (~85%); Mix: 1:00 (~60%)"
+            },
+            {
+              "role": "Ringmod",
+              "device_id": "ginean_modulator_ringmod",
+              "note_de": "Metallischer Ton; Freq auf Song-Key für tonal perc.",
+              "knob_hints": {
+                "Ring": 60,
+                "Freq": 55
+              },
+              "routing": {},
+              "knob_hints_clock": {
+                "Ring": {
+                  "pct": 60,
+                  "clock": "1:00"
+                },
+                "Freq": {
+                  "pct": 55,
+                  "clock": "12:30"
+                }
+              },
+              "pedal_settings_de": "Ring: 1:00 (~60%); Freq: 12:30 (~55%)"
+            }
+          ],
+          "mix_hint_de": "10–40%"
+        },
+        "loopB": {
+          "name_de": "Loop B (Delay Tails)",
+          "steps": [
+            {
+              "role": "Delay",
+              "device_id": "electro_harmonix_deluxe_memory_boy",
+              "note_de": "Kurz für Ghosts oder lang für Drones.",
+              "knob_hints": {
+                "Delay": 40,
+                "Feedback": 50,
+                "Blend": 40,
+                "Depth": 30,
+                "Rate": 20
+              },
+              "routing": {},
+              "fx_loop": {
+                "type": "send_return",
+                "notes_de": "FX loop nur auf Repeats.",
+                "insert_steps": [
+                  {
+                    "role": "Flanger",
+                    "device_id": "iset_analog_flanger",
+                    "note_de": "Kammfilter-Bewegung auf Tails.",
+                    "knob_hints": {
+                      "Rate": 30,
+                      "Depth": 45
+                    },
+                    "routing": {},
+                    "knob_hints_clock": {
+                      "Rate": {
+                        "pct": 30,
+                        "clock": "10:00"
+                      },
+                      "Depth": {
+                        "pct": 45,
+                        "clock": "11:30"
+                      }
+                    },
+                    "pedal_settings_de": "Rate: 10:00 (~30%); Depth: 11:30 (~45%)"
+                  },
+                  {
+                    "role": "LoFi",
+                    "device_id": "mooer_lofi_machine",
+                    "note_de": "Leichter digitaler Dreck auf Repeats.",
+                    "knob_hints": {
+                      "Mix": 25,
+                      "Rate": 15
+                    },
+                    "routing": {},
+                    "knob_hints_clock": {
+                      "Mix": {
+                        "pct": 25,
+                        "clock": "9:30"
+                      },
+                      "Rate": {
+                        "pct": 15,
+                        "clock": "8:30"
+                      }
+                    },
+                    "pedal_settings_de": "Mix: 9:30 (~25%); Rate: 8:30 (~15%)"
+                  }
+                ]
+              },
+              "knob_hints_clock": {
+                "Delay": {
+                  "pct": 40,
+                  "clock": "11:00"
+                },
+                "Feedback": {
+                  "pct": 50,
+                  "clock": "12:00"
+                },
+                "Blend": {
+                  "pct": 40,
+                  "clock": "11:00"
+                },
+                "Depth": {
+                  "pct": 30,
+                  "clock": "10:00"
+                },
+                "Rate": {
+                  "pct": 20,
+                  "clock": "9:00"
+                }
+              },
+              "pedal_settings_de": "Delay: 11:00 (~40%); Feedback: 12:00 (~50%); Blend: 11:00 (~40%); Depth: 10:00 (~30%); Rate: 9:00 (~20%)"
+            }
+          ],
+          "mix_hint_de": "5–25%"
+        }
+      },
+      "steps": [
+        {
+          "role": "Hardware Parallel",
+          "device_id": "sonicake_portal",
+          "note_de": "Siehe hardware_parallel (Loop A/B).",
+          "knob_hints": {},
+          "routing": {},
+          "pedal_settings_de": ""
+        }
+      ],
+      "patch_instructions_de": "PATCH:\nReaInsert SEND → Portal INPUT; Portal OUTPUT → ReaInsert RETURN\n\nLoop A:\nPortal FX SEND A → AMO-3 → Ringmod → Portal FX RETURN A\n\nLoop B:\nPortal FX SEND B → Deluxe Memory Boy → Portal FX RETURN B\nMemory Boy FX SEND → ISET Flanger → Mooer LoFi → Memory Boy FX RETURN\n\nTIP:\n- Klicks/Pops: Loop A 20–40%, Loop B 5–15%\n- Drones: Loop B 20–50%, Loop A 10–25%"
+    },
+    {
+      "id": "preset_v45_field_clicks_pops_microperc",
+      "use_case_id": "field_clicks_pops",
+      "name_de": "Field Clicks/Pops → Micro Perc (tight & mix-safe)",
+      "mix_ready": true,
+      "experimental": true,
+      "signal_flow_de": "Field click → pre transient focus → ReaInsert → (AMO-3 + UT300) → Return → Gate/Transient/Clip",
+      "recommended_routing": {
+        "mode": "parallel_send",
+        "notes_de": "Dry als Track behalten. Hardware-Return 100% wet, dann post chain."
+      },
+      "pre_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 250Hz",
+            "+presence": "+4dB @ 3–5kHz",
+            "LPF": "12dB/oct @ 12kHz"
+          },
+          "notes_de": "Nur Klick-Band in die Pedale."
+        },
+        {
+          "fx_name": "VST3: kHs Transient Shaper (Kilohearts)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\Kilohearts\\kHs Transient Shaper.vst3",
+          "format": "VST3",
+          "vendor": "Kilohearts",
+          "params": {
+            "Attack": "+25%",
+            "Sustain": "-30%"
+          },
+          "notes_de": "Klick wird 'snappy'."
+        }
+      ],
+      "post_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 180Hz",
+            "LPF": "12dB/oct @ 10kHz",
+            "Notch": "-6dB @ 3.5kHz Q=6 (optional)"
+          },
+          "notes_de": "Bandlimit für IDM-Mix."
+        },
+        {
+          "fx_name": "VST3: A1TriggerGate (A1AUDIO.de)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\A1AUDIO.de\\A1TriggerGate-x64.vst3",
+          "format": "VST3",
+          "vendor": "A1AUDIO.de",
+          "params": {
+            "Pattern": "1/16 oder 1/8",
+            "Mix": "100% (auf Return Track)"
+          },
+          "notes_de": "Rhythmische Chops (automatisieren)."
+        },
+        {
+          "fx_name": "VST3: kHs Transient Shaper (Kilohearts)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\Kilohearts\\kHs Transient Shaper.vst3",
+          "format": "VST3",
+          "vendor": "Kilohearts",
+          "params": {
+            "Attack": "+15–30%",
+            "Sustain": "-20–40%"
+          },
+          "notes_de": "Transienten festnageln, Tail kürzen."
+        },
+        {
+          "fx_name": "VST3: kHs Clipper (Kilohearts)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\Kilohearts\\kHs Clipper.vst3",
+          "format": "VST3",
+          "vendor": "Kilohearts",
+          "params": {
+            "Ceiling": "-1 dB",
+            "Drive": "low"
+          },
+          "notes_de": "Peak-Safety nach Feedback/FX."
+        }
+      ],
+      "steps": [
+        {
+          "role": "Bitcrush",
+          "device_id": "aroma_amo_3_mario_bit_crusher",
+          "note_de": "Aliasing für Klicks/Pops.",
+          "knob_hints": {
+            "Bit": 80,
+            "Mix": 55
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Bit": {
+              "pct": 80,
+              "clock": "3:00"
+            },
+            "Mix": {
+              "pct": 55,
+              "clock": "12:30"
+            }
+          },
+          "pedal_settings_de": "Bit: 3:00 (~80%); Mix: 12:30 (~55%)"
+        },
+        {
+          "role": "Tremolo",
+          "device_id": "behringer_ut300_ultra_tremolo",
+          "note_de": "Square-Chop für IDM-Groove.",
+          "knob_hints": {
+            "Rate": 55,
+            "Depth": 75
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Rate": {
+              "pct": 55,
+              "clock": "12:30"
+            },
+            "Depth": {
+              "pct": 75,
+              "clock": "2:30"
+            }
+          },
+          "pedal_settings_de": "Rate: 12:30 (~55%); Depth: 2:30 (~75%)"
+        }
+      ],
+      "schema_notes_de": "V45: No Melda plugins. VST/JSFX from installed sync only.",
+      "hardware_options": {
+        "parallel_splitter": {
+          "device": "sonicake_portal",
+          "note_de": "Optional: Portal Loop A/B parallel nutzen; starte beide Loops leise (10–20%)."
+        }
+      },
+      "hardware_parallel": {
+        "device": "sonicake_portal",
+        "dry_strategy": "dry_in_reaper",
+        "notes_de": "Portal 2× FX Loop parallel. Loops möglichst wet-only fahren.",
+        "loopA": {
+          "name_de": "Loop A",
+          "steps": [
+            {
+              "role": "Bitcrush",
+              "device_id": "aroma_amo_3_mario_bit_crusher",
+              "note_de": "Klick-Härte.",
+              "knob_hints": {
+                "Bit": 80,
+                "Mix": 55
+              },
+              "knob_hints_clock": {
+                "Bit": {
+                  "pct": 80,
+                  "clock": "3:00"
+                },
+                "Mix": {
+                  "pct": 55,
+                  "clock": "12:30"
+                }
+              },
+              "pedal_settings_de": "Bit: 3:00 (~80%); Mix: 12:30 (~55%)",
+              "routing": {}
+            }
+          ],
+          "mix_hint_de": "Start 10–25%"
+        },
+        "loopB": {
+          "name_de": "Loop B",
+          "steps": [
+            {
+              "role": "Tremolo",
+              "device_id": "behringer_ut300_ultra_tremolo",
+              "note_de": "Rhythmisches Choppen.",
+              "knob_hints": {
+                "Rate": 55,
+                "Depth": 75
+              },
+              "knob_hints_clock": {
+                "Rate": {
+                  "pct": 55,
+                  "clock": "12:30"
+                },
+                "Depth": {
+                  "pct": 75,
+                  "clock": "2:30"
+                }
+              },
+              "pedal_settings_de": "Rate: 12:30 (~55%); Depth: 2:30 (~75%)",
+              "routing": {}
+            }
+          ],
+          "mix_hint_de": "Start 10–25%"
+        }
+      },
+      "patch_instructions_de": "PATCH:\nReaInsert SEND → Portal IN; Portal OUT → ReaInsert RETURN\nLoop A: Portal SEND A → AMO-3 → RETURN A\nLoop B: Portal SEND B → UT300 → RETURN B"
+    },
+    {
+      "id": "preset_v45_field_metal_robot_perc",
+      "use_case_id": "field_metallic",
+      "name_de": "Field Metal → Robot/Tonal Perc (ringmod + freq echo)",
+      "mix_ready": true,
+      "experimental": true,
+      "signal_flow_de": "Metal hit → pre reson/comb → ReaInsert → Ringmod + Delay → Return → FreqEcho + Supermassive (low)",
+      "recommended_routing": {
+        "mode": "parallel_send",
+        "notes_de": "Dry als Track behalten. Hardware-Return 100% wet, dann post chain."
+      },
+      "pre_fx_chain": [
+        {
+          "fx_name": "VST3: kHs Resonator (Kilohearts)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\Kilohearts\\kHs Resonator.vst3",
+          "format": "VST3",
+          "vendor": "Kilohearts",
+          "params": {
+            "Tune": "Song key",
+            "Mix": "20–40%",
+            "Decay": "medium"
+          },
+          "notes_de": "Tonalize the metal before pedals."
+        },
+        {
+          "fx_name": "VST3: kHs Comb Filter (Kilohearts)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\Kilohearts\\kHs Comb Filter.vst3",
+          "format": "VST3",
+          "vendor": "Kilohearts",
+          "params": {
+            "Freq": "match key",
+            "Feedback": "20–40%",
+            "Mix": "10–25%"
+          },
+          "notes_de": "Adds metallic formants."
+        }
+      ],
+      "post_fx_chain": [
+        {
+          "fx_name": "VST3: ValhallaFreqEcho (Valhalla DSP, LLC)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\ValhallaFreqEcho.vst3",
+          "format": "VST3",
+          "vendor": "Valhalla DSP, LLC",
+          "params": {
+            "Mix": "5–15%",
+            "Feedback": "0–15%",
+            "Freq": "small offset"
+          },
+          "notes_de": "Robot edge / pitch smear."
+        },
+        {
+          "fx_name": "VST3: ValhallaSupermassive (Valhalla DSP, LLC)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\ValhallaSupermassive.vst3",
+          "format": "VST3",
+          "vendor": "Valhalla DSP, LLC",
+          "params": {
+            "Mode": "Gemini",
+            "Mix": "5–12%",
+            "Feedback": "10–18%"
+          },
+          "notes_de": "Kleiner Halo, mixbar."
+        },
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 180Hz",
+            "LPF": "12dB/oct @ 10kHz",
+            "Notch": "-6dB @ 3.5kHz Q=6 (optional)"
+          },
+          "notes_de": "Bandlimit für IDM-Mix."
+        },
+        {
+          "fx_name": "VST3: A1TriggerGate (A1AUDIO.de)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\A1AUDIO.de\\A1TriggerGate-x64.vst3",
+          "format": "VST3",
+          "vendor": "A1AUDIO.de",
+          "params": {
+            "Pattern": "1/16 oder 1/8",
+            "Mix": "100% (auf Return Track)"
+          },
+          "notes_de": "Rhythmische Chops (automatisieren)."
+        },
+        {
+          "fx_name": "VST3: kHs Transient Shaper (Kilohearts)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\Kilohearts\\kHs Transient Shaper.vst3",
+          "format": "VST3",
+          "vendor": "Kilohearts",
+          "params": {
+            "Attack": "+15–30%",
+            "Sustain": "-20–40%"
+          },
+          "notes_de": "Transienten festnageln, Tail kürzen."
+        },
+        {
+          "fx_name": "VST3: kHs Clipper (Kilohearts)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\Kilohearts\\kHs Clipper.vst3",
+          "format": "VST3",
+          "vendor": "Kilohearts",
+          "params": {
+            "Ceiling": "-1 dB",
+            "Drive": "low"
+          },
+          "notes_de": "Peak-Safety nach Feedback/FX."
+        }
+      ],
+      "steps": [
+        {
+          "role": "Ringmod",
+          "device_id": "ginean_modulator_ringmod",
+          "note_de": "Freq auf Song-Key; Ring vorsichtig.",
+          "knob_hints": {
+            "Ring": 45,
+            "Freq": 55
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Ring": {
+              "pct": 45,
+              "clock": "11:30"
+            },
+            "Freq": {
+              "pct": 55,
+              "clock": "12:30"
+            }
+          },
+          "pedal_settings_de": "Ring: 11:30 (~45%); Freq: 12:30 (~55%)"
+        },
+        {
+          "role": "Delay",
+          "device_id": "gokko_gk_22_dripping_delay",
+          "note_de": "Kurze Ghosts; Time drehen für Pitch artifacts.",
+          "knob_hints": {
+            "Delay": 22,
+            "Repeat": 78,
+            "Level": 55
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Delay": {
+              "pct": 22,
+              "clock": "9:12"
+            },
+            "Repeat": {
+              "pct": 78,
+              "clock": "2:48"
+            },
+            "Level": {
+              "pct": 55,
+              "clock": "12:30"
+            }
+          },
+          "pedal_settings_de": "Delay: 9:12 (~22%); Repeat: 2:48 (~78%); Level: 12:30 (~55%)"
+        }
+      ],
+      "schema_notes_de": "V45: No Melda plugins. VST/JSFX from installed sync only.",
+      "hardware_options": {
+        "parallel_splitter": {
+          "device": "sonicake_portal",
+          "note_de": "Optional: Portal Loop A/B parallel nutzen; starte beide Loops leise (10–20%)."
+        }
+      },
+      "hardware_parallel": {
+        "device": "sonicake_portal",
+        "dry_strategy": "dry_in_reaper",
+        "notes_de": "Portal 2× FX Loop parallel. Loops möglichst wet-only fahren.",
+        "loopA": {
+          "name_de": "Loop A",
+          "steps": [
+            {
+              "role": "Ringmod",
+              "device_id": "ginean_modulator_ringmod",
+              "note_de": "Tonal/Robot.",
+              "knob_hints": {
+                "Ring": 45,
+                "Freq": 55
+              },
+              "knob_hints_clock": {
+                "Ring": {
+                  "pct": 45,
+                  "clock": "11:30"
+                },
+                "Freq": {
+                  "pct": 55,
+                  "clock": "12:30"
+                }
+              },
+              "pedal_settings_de": "Ring: 11:30 (~45%); Freq: 12:30 (~55%)",
+              "routing": {}
+            }
+          ],
+          "mix_hint_de": "Start 10–25%"
+        },
+        "loopB": {
+          "name_de": "Loop B",
+          "steps": [
+            {
+              "role": "Delay",
+              "device_id": "gokko_gk_22_dripping_delay",
+              "note_de": "Ghost delays.",
+              "knob_hints": {
+                "Delay": 22,
+                "Repeat": 78,
+                "Level": 55
+              },
+              "knob_hints_clock": {
+                "Delay": {
+                  "pct": 22,
+                  "clock": "9:12"
+                },
+                "Repeat": {
+                  "pct": 78,
+                  "clock": "2:48"
+                },
+                "Level": {
+                  "pct": 55,
+                  "clock": "12:30"
+                }
+              },
+              "pedal_settings_de": "Delay: 9:12 (~22%); Repeat: 2:48 (~78%); Level: 12:30 (~55%)",
+              "routing": {}
+            }
+          ],
+          "mix_hint_de": "Start 10–25%"
+        }
+      },
+      "patch_instructions_de": "PATCH:\nReaInsert SEND → Portal IN; Portal OUT → ReaInsert RETURN\nLoop A: Portal SEND A → Ringmod → RETURN A\nLoop B: Portal SEND B → GK-22 Delay → RETURN B"
+    },
+    {
+      "id": "preset_v45_field_glitch_fill_generator",
+      "use_case_id": "field_clicks_pops",
+      "name_de": "Field One-shot → Glitch Fill Generator (BufferOverride + FractureXT)",
+      "mix_ready": true,
+      "experimental": true,
+      "signal_flow_de": "One-shot → Buffer Override (pre) → ReaInsert pedals → Return → FractureXT/Hysteresis subtle + control",
+      "recommended_routing": {
+        "mode": "parallel_send",
+        "notes_de": "Dry als Track behalten. Hardware-Return 100% wet, dann post chain."
+      },
+      "pre_fx_chain": [
+        {
+          "fx_name": "VST: Buffer Override (Destroy FX)",
+          "fx_ident": "C:\\Program Files (x86)\\Steinberg\\VSTPlugins\\dfx Buffer Override.dll",
+          "format": "VST",
+          "vendor": "Destroy FX",
+          "params": {
+            "Buffer": "small",
+            "Mix": "20–40%",
+            "Speed": "mod/var"
+          },
+          "notes_de": "Stutter vor Hardware."
+        },
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 120Hz",
+            "LPF": "12dB/oct @ 14kHz"
+          },
+          "notes_de": "Sicheres Pre-filtering."
+        }
+      ],
+      "post_fx_chain": [
+        {
+          "fx_name": "VST3: FractureXT (Glitchmachines)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\FractureXT.vst3",
+          "format": "VST3",
+          "vendor": "Glitchmachines",
+          "params": {
+            "Mix": "10–25%",
+            "Buffer/Mod": "subtle"
+          },
+          "notes_de": "Pattern/Scatter (parallel feel)."
+        },
+        {
+          "fx_name": "VST3: Hysteresis (Glitchmachines)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\Hysteresis.vst3",
+          "format": "VST3",
+          "vendor": "Glitchmachines",
+          "params": {
+            "Mix": "5–20%",
+            "Delay": "short",
+            "Glitch": "low"
+          },
+          "notes_de": "Ghost repeats / pitchy tails."
+        },
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 180Hz",
+            "LPF": "12dB/oct @ 10kHz",
+            "Notch": "-6dB @ 3.5kHz Q=6 (optional)"
+          },
+          "notes_de": "Bandlimit für IDM-Mix."
+        },
+        {
+          "fx_name": "VST3: A1TriggerGate (A1AUDIO.de)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\A1AUDIO.de\\A1TriggerGate-x64.vst3",
+          "format": "VST3",
+          "vendor": "A1AUDIO.de",
+          "params": {
+            "Pattern": "1/16 oder 1/8",
+            "Mix": "100% (auf Return Track)"
+          },
+          "notes_de": "Rhythmische Chops (automatisieren)."
+        },
+        {
+          "fx_name": "VST3: kHs Transient Shaper (Kilohearts)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\Kilohearts\\kHs Transient Shaper.vst3",
+          "format": "VST3",
+          "vendor": "Kilohearts",
+          "params": {
+            "Attack": "+15–30%",
+            "Sustain": "-20–40%"
+          },
+          "notes_de": "Transienten festnageln, Tail kürzen."
+        },
+        {
+          "fx_name": "VST3: kHs Clipper (Kilohearts)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\Kilohearts\\kHs Clipper.vst3",
+          "format": "VST3",
+          "vendor": "Kilohearts",
+          "params": {
+            "Ceiling": "-1 dB",
+            "Drive": "low"
+          },
+          "notes_de": "Peak-Safety nach Feedback/FX."
+        }
+      ],
+      "steps": [
+        {
+          "role": "Reverb",
+          "device_id": "behringer_dr100_digital_reverb",
+          "note_de": "Kurzer Gate-Room für Körper.",
+          "knob_hints": {
+            "Time": 18,
+            "Level": 30,
+            "Tone": 55
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Time": {
+              "pct": 18,
+              "clock": "8:48"
+            },
+            "Level": {
+              "pct": 30,
+              "clock": "10:00"
+            },
+            "Tone": {
+              "pct": 55,
+              "clock": "12:30"
+            }
+          },
+          "pedal_settings_de": "Time: 8:48 (~18%); Level: 10:00 (~30%); Tone: 12:30 (~55%)"
+        }
+      ],
+      "schema_notes_de": "V45: No Melda plugins. VST/JSFX from installed sync only.",
+      "hardware_options": {
+        "parallel_splitter": {
+          "device": "sonicake_portal",
+          "note_de": "Optional: Portal Loop A/B parallel nutzen; starte beide Loops leise (10–20%)."
+        }
+      },
+      "hardware_parallel": {
+        "device": "sonicake_portal",
+        "dry_strategy": "dry_in_reaper",
+        "notes_de": "Portal 2× FX Loop parallel. Loops möglichst wet-only fahren.",
+        "loopA": {
+          "name_de": "Loop A",
+          "steps": [
+            {
+              "role": "Reverb",
+              "device_id": "behringer_dr100_digital_reverb",
+              "note_de": "Body.",
+              "knob_hints": {
+                "Time": 18,
+                "Level": 30,
+                "Tone": 55
+              },
+              "knob_hints_clock": {
+                "Time": {
+                  "pct": 18,
+                  "clock": "8:48"
+                },
+                "Level": {
+                  "pct": 30,
+                  "clock": "10:00"
+                },
+                "Tone": {
+                  "pct": 55,
+                  "clock": "12:30"
+                }
+              },
+              "pedal_settings_de": "Time: 8:48 (~18%); Level: 10:00 (~30%); Tone: 12:30 (~55%)",
+              "routing": {}
+            }
+          ],
+          "mix_hint_de": "Start 10–25%"
+        },
+        "loopB": {
+          "name_de": "Loop B",
+          "steps": [],
+          "mix_hint_de": "Start 10–25%"
+        }
+      },
+      "patch_instructions_de": "PATCH:\nReaInsert SEND → Portal IN; Portal OUT → ReaInsert RETURN\nLoop A: Portal SEND A → DR100 → RETURN A"
+    },
+    {
+      "id": "preset_v45_field_tape_dirt_hats",
+      "use_case_id": "field_clicks_pops",
+      "name_de": "Field Noise → Tape-Dirt Hats (Vinyl + LoFi + Gate)",
+      "mix_ready": true,
+      "experimental": true,
+      "signal_flow_de": "Noise/hiss → Vinyl pre → ReaInsert → LoFi/Phaser → Return → TriggerGate + Nova shelf",
+      "recommended_routing": {
+        "mode": "parallel_send",
+        "notes_de": "Dry als Track behalten. Hardware-Return 100% wet, dann post chain."
+      },
+      "pre_fx_chain": [
+        {
+          "fx_name": "VST3: Vinyl (iZotope)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\iZotope\\Vinyl.vst3",
+          "format": "VST3",
+          "vendor": "iZotope",
+          "params": {
+            "Year": "1970–1990",
+            "Wear": "10–25",
+            "Dust": "0–10",
+            "Mechanical": "5–15"
+          },
+          "notes_de": "Tape-ish dirt."
+        },
+        {
+          "fx_name": "VST3: kHs Bitcrush (Kilohearts)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\Kilohearts\\kHs Bitcrush.vst3",
+          "format": "VST3",
+          "vendor": "Kilohearts",
+          "params": {
+            "Downsample": "low",
+            "Mix": "10–20%"
+          },
+          "notes_de": "Digital edge (light)."
+        }
+      ],
+      "post_fx_chain": [
+        {
+          "fx_name": "VST3: A1TriggerGate (A1AUDIO.de)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\A1AUDIO.de\\A1TriggerGate-x64.vst3",
+          "format": "VST3",
+          "vendor": "A1AUDIO.de",
+          "params": {
+            "Pattern": "1/16",
+            "Hold": "short",
+            "Release": "30–60ms"
+          },
+          "notes_de": "Tight hats."
+        },
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 500Hz",
+            "Shelf": "+2dB @ 10kHz"
+          },
+          "notes_de": "Air + remove mud."
+        },
+        {
+          "fx_name": "VST3: kHs Clipper (Kilohearts)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\Kilohearts\\kHs Clipper.vst3",
+          "format": "VST3",
+          "vendor": "Kilohearts",
+          "params": {
+            "Ceiling": "-1 dB",
+            "Drive": "low"
+          },
+          "notes_de": "Peaks."
+        }
+      ],
+      "steps": [
+        {
+          "role": "LoFi",
+          "device_id": "mooer_lofi_machine",
+          "note_de": "LoFi on hats.",
+          "knob_hints": {
+            "Mix": 25,
+            "Rate": 15
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Mix": {
+              "pct": 25,
+              "clock": "9:30"
+            },
+            "Rate": {
+              "pct": 15,
+              "clock": "8:30"
+            }
+          },
+          "pedal_settings_de": "Mix: 9:30 (~25%); Rate: 8:30 (~15%)"
+        },
+        {
+          "role": "Phaser",
+          "device_id": "behringer_vp1_vintage_phaser",
+          "note_de": "Subtle movement.",
+          "knob_hints": {
+            "Rate": 20,
+            "Depth": 25
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Rate": {
+              "pct": 20,
+              "clock": "9:00"
+            },
+            "Depth": {
+              "pct": 25,
+              "clock": "9:30"
+            }
+          },
+          "pedal_settings_de": "Rate: 9:00 (~20%); Depth: 9:30 (~25%)"
+        }
+      ],
+      "schema_notes_de": "V45: No Melda plugins. VST/JSFX from installed sync only.",
+      "hardware_options": {
+        "parallel_splitter": {
+          "device": "sonicake_portal",
+          "note_de": "Optional: Portal Loop A/B parallel nutzen; starte beide Loops leise (10–20%)."
+        }
+      },
+      "hardware_parallel": {
+        "device": "sonicake_portal",
+        "dry_strategy": "dry_in_reaper",
+        "notes_de": "Portal 2× FX Loop parallel. Loops möglichst wet-only fahren.",
+        "loopA": {
+          "name_de": "Loop A",
+          "steps": [
+            {
+              "role": "LoFi",
+              "device_id": "mooer_lofi_machine",
+              "note_de": "Digital dirt.",
+              "knob_hints": {
+                "Mix": 25,
+                "Rate": 15
+              },
+              "knob_hints_clock": {
+                "Mix": {
+                  "pct": 25,
+                  "clock": "9:30"
+                },
+                "Rate": {
+                  "pct": 15,
+                  "clock": "8:30"
+                }
+              },
+              "pedal_settings_de": "Mix: 9:30 (~25%); Rate: 8:30 (~15%)",
+              "routing": {}
+            }
+          ],
+          "mix_hint_de": "Start 10–25%"
+        },
+        "loopB": {
+          "name_de": "Loop B",
+          "steps": [
+            {
+              "role": "Phaser",
+              "device_id": "behringer_vp1_vintage_phaser",
+              "note_de": "Movement.",
+              "knob_hints": {
+                "Rate": 20,
+                "Depth": 25
+              },
+              "knob_hints_clock": {
+                "Rate": {
+                  "pct": 20,
+                  "clock": "9:00"
+                },
+                "Depth": {
+                  "pct": 25,
+                  "clock": "9:30"
+                }
+              },
+              "pedal_settings_de": "Rate: 9:00 (~20%); Depth: 9:30 (~25%)",
+              "routing": {}
+            }
+          ],
+          "mix_hint_de": "Start 10–25%"
+        }
+      },
+      "patch_instructions_de": "PATCH:\nReaInsert SEND → Portal IN; Portal OUT → ReaInsert RETURN\nLoop A: Portal SEND A → Mooer LoFi → RETURN A\nLoop B: Portal SEND B → VP1 Phaser → RETURN B"
+    },
+    {
+      "id": "preset_v45_field_bed_drone_cloud_nomelda",
+      "use_case_id": "field_beds_drones_nomelda",
+      "name_de": "Field Ambience → Cloud Bed/Drone (Universe + Supermassive) [no Melda]",
+      "mix_ready": true,
+      "experimental": true,
+      "signal_flow_de": "Ambience → pre clean/comp → ReaInsert → Mini Universe + M350 finish → Return → Supermassive + StereoControl + Kotelnikov",
+      "recommended_routing": {
+        "mode": "stereo_parallel",
+        "notes_de": "Dry als Track behalten. Hardware-Return 100% wet, dann post chain."
+      },
+      "pre_fx_chain": [
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "12dB/oct @ 70Hz",
+            "Mud": "-3dB @ 220Hz"
+          },
+          "notes_de": "Pre-clean."
+        },
+        {
+          "fx_name": "VST3: TDR Kotelnikov (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Kotelnikov.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "Ratio": "2:1",
+            "Attack": "30ms",
+            "Release": "200ms",
+            "Target GR": "1–2 dB"
+          },
+          "notes_de": "Level for space."
+        }
+      ],
+      "post_fx_chain": [
+        {
+          "fx_name": "VST3: ValhallaSupermassive (Valhalla DSP, LLC)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\ValhallaSupermassive.vst3",
+          "format": "VST3",
+          "vendor": "Valhalla DSP, LLC",
+          "params": {
+            "Mode": "Orion/Gemini",
+            "Mix": "12–25%",
+            "Feedback": "20–40%"
+          },
+          "notes_de": "Evolving tail."
+        },
+        {
+          "fx_name": "VST3: A1StereoControl (A1AUDIO.de)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\A1AUDIO.de\\A1StereoControl-x64.vst3",
+          "format": "VST3",
+          "vendor": "A1AUDIO.de",
+          "params": {
+            "Width": "120–140%",
+            "Bass mono": "<150Hz"
+          },
+          "notes_de": "Wide but controlled."
+        },
+        {
+          "fx_name": "VST3: TDR Kotelnikov (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Kotelnikov.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "Ratio": "2:1",
+            "Attack": "40ms",
+            "Release": "250ms",
+            "Target GR": "1–2 dB"
+          },
+          "notes_de": "Glue."
+        },
+        {
+          "fx_name": "VST3: kHs Clipper (Kilohearts)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\Kilohearts\\kHs Clipper.vst3",
+          "format": "VST3",
+          "vendor": "Kilohearts",
+          "params": {
+            "Ceiling": "-1 dB",
+            "Drive": "very low"
+          },
+          "notes_de": "Safety."
+        }
+      ],
+      "steps": [
+        {
+          "role": "Reverb",
+          "device_id": "m_vave_mini_universe",
+          "note_de": "Cloud/Swell; beweglich.",
+          "knob_hints": {
+            "Mix": 62,
+            "Decay": 88,
+            "Param3": 70
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Mix": {
+              "pct": 62,
+              "clock": "1:12"
+            },
+            "Decay": {
+              "pct": 88,
+              "clock": "3:48"
+            },
+            "Param3": {
+              "pct": 70,
+              "clock": "2:00"
+            }
+          },
+          "pedal_settings_de": "Mix: 1:12 (~62%); Decay: 3:48 (~88%); Param3: 2:00 (~70%)"
+        },
+        {
+          "role": "Reverb/Delay",
+          "device_id": "tc_electronic_m350",
+          "note_de": "Polish/Plate leise als Finish.",
+          "knob_hints": {
+            "Mix": 20
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Mix": {
+              "pct": 20,
+              "clock": "9:00"
+            }
+          },
+          "pedal_settings_de": "Mix: 9:00 (~20%)"
+        }
+      ],
+      "schema_notes_de": "V45: No Melda plugins. VST/JSFX from installed sync only.",
+      "hardware_options": {
+        "parallel_splitter": {
+          "device": "sonicake_portal",
+          "note_de": "Optional: Portal Loop A/B parallel nutzen; starte beide Loops leise (10–20%)."
+        }
+      },
+      "hardware_parallel": {
+        "device": "sonicake_portal",
+        "dry_strategy": "dry_in_reaper",
+        "notes_de": "Portal 2× FX Loop parallel. Loops möglichst wet-only fahren.",
+        "loopA": {
+          "name_de": "Loop A",
+          "steps": [
+            {
+              "role": "Reverb",
+              "device_id": "m_vave_mini_universe",
+              "note_de": "Cloud swell.",
+              "knob_hints": {
+                "Mix": 62,
+                "Decay": 88,
+                "Param3": 70
+              },
+              "knob_hints_clock": {
+                "Mix": {
+                  "pct": 62,
+                  "clock": "1:12"
+                },
+                "Decay": {
+                  "pct": 88,
+                  "clock": "3:48"
+                },
+                "Param3": {
+                  "pct": 70,
+                  "clock": "2:00"
+                }
+              },
+              "pedal_settings_de": "Mix: 1:12 (~62%); Decay: 3:48 (~88%); Param3: 2:00 (~70%)",
+              "routing": {}
+            }
+          ],
+          "mix_hint_de": "Start 10–25%"
+        },
+        "loopB": {
+          "name_de": "Loop B",
+          "steps": [
+            {
+              "role": "Reverb/Delay",
+              "device_id": "tc_electronic_m350",
+              "note_de": "Polish.",
+              "knob_hints": {
+                "Mix": 20
+              },
+              "knob_hints_clock": {
+                "Mix": {
+                  "pct": 20,
+                  "clock": "9:00"
+                }
+              },
+              "pedal_settings_de": "Mix: 9:00 (~20%)",
+              "routing": {}
+            }
+          ],
+          "mix_hint_de": "Start 10–25%"
+        }
+      },
+      "patch_instructions_de": "PATCH:\nReaInsert SEND → Portal IN; Portal OUT → ReaInsert RETURN\nLoop A: Portal SEND A → Mini Universe → RETURN A\nLoop B: Portal SEND B → M350 → RETURN B"
+    },
+    {
+      "id": "preset_v45_synth_glitch_freqshift_hysteresis",
+      "use_case_id": "synth_glitch_nomelda",
+      "name_de": "Synth → Glitch Lead (FreqShift + Hysteresis + Hardware)",
+      "mix_ready": true,
+      "experimental": true,
+      "signal_flow_de": "Synth → pre freq-shift → ReaInsert (pedals) → Return → Hysteresis + Gate + Clipper",
+      "recommended_routing": {
+        "mode": "insert",
+        "notes_de": "Dry als Track behalten. Hardware-Return 100% wet, dann post chain."
+      },
+      "pre_fx_chain": [
+        {
+          "fx_name": "VST3: kHs Frequency Shifter (Kilohearts)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\Kilohearts\\kHs Frequency Shifter.vst3",
+          "format": "VST3",
+          "vendor": "Kilohearts",
+          "params": {
+            "Shift": "small (±5–20Hz)",
+            "Mix": "10–30%"
+          },
+          "notes_de": "Robot shimmer before pedals."
+        },
+        {
+          "fx_name": "VST3: kHs Shaper (Kilohearts)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\Kilohearts\\kHs Shaper.vst3",
+          "format": "VST3",
+          "vendor": "Kilohearts",
+          "params": {
+            "Drive": "low",
+            "Mix": "10–20%"
+          },
+          "notes_de": "Pre-warm lead."
+        }
+      ],
+      "post_fx_chain": [
+        {
+          "fx_name": "VST3: Hysteresis (Glitchmachines)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\Hysteresis.vst3",
+          "format": "VST3",
+          "vendor": "Glitchmachines",
+          "params": {
+            "Mix": "10–25%",
+            "Delay": "short",
+            "Glitch": "medium"
+          },
+          "notes_de": "Glitch tails."
+        },
+        {
+          "fx_name": "VST3: TDR Nova (Tokyo Dawn Labs)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\TDR Nova.vst3",
+          "format": "VST3",
+          "vendor": "Tokyo Dawn Labs",
+          "params": {
+            "HPF": "24dB/oct @ 180Hz",
+            "LPF": "12dB/oct @ 10kHz",
+            "Notch": "-6dB @ 3.5kHz Q=6 (optional)"
+          },
+          "notes_de": "Bandlimit für IDM-Mix."
+        },
+        {
+          "fx_name": "VST3: A1TriggerGate (A1AUDIO.de)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\A1AUDIO.de\\A1TriggerGate-x64.vst3",
+          "format": "VST3",
+          "vendor": "A1AUDIO.de",
+          "params": {
+            "Pattern": "1/16 oder 1/8",
+            "Mix": "100% (auf Return Track)"
+          },
+          "notes_de": "Rhythmische Chops (automatisieren)."
+        },
+        {
+          "fx_name": "VST3: kHs Transient Shaper (Kilohearts)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\Kilohearts\\kHs Transient Shaper.vst3",
+          "format": "VST3",
+          "vendor": "Kilohearts",
+          "params": {
+            "Attack": "+15–30%",
+            "Sustain": "-20–40%"
+          },
+          "notes_de": "Transienten festnageln, Tail kürzen."
+        },
+        {
+          "fx_name": "VST3: kHs Clipper (Kilohearts)",
+          "fx_ident": "C:\\Program Files\\Common Files\\VST3\\Kilohearts\\kHs Clipper.vst3",
+          "format": "VST3",
+          "vendor": "Kilohearts",
+          "params": {
+            "Ceiling": "-1 dB",
+            "Drive": "low"
+          },
+          "notes_de": "Peak-Safety nach Feedback/FX."
+        }
+      ],
+      "steps": [
+        {
+          "role": "Overdrive",
+          "device_id": "aliexpress_mini_vintage_overdrive",
+          "note_de": "Edge/drive; low gain.",
+          "knob_hints": {
+            "Gain": 25,
+            "Tone": 55,
+            "Level": 55
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Gain": {
+              "pct": 25,
+              "clock": "9:30"
+            },
+            "Tone": {
+              "pct": 55,
+              "clock": "12:30"
+            },
+            "Level": {
+              "pct": 55,
+              "clock": "12:30"
+            }
+          },
+          "pedal_settings_de": "Gain: 9:30 (~25%); Tone: 12:30 (~55%); Level: 12:30 (~55%)"
+        },
+        {
+          "role": "Delay",
+          "device_id": "behringer_dd400_digital_delay",
+          "note_de": "Short delay for width; keep low mix.",
+          "knob_hints": {
+            "Repeat": 30,
+            "Echo": 25,
+            "Intensity": 35
+          },
+          "routing": {},
+          "knob_hints_clock": {
+            "Repeat": {
+              "pct": 30,
+              "clock": "10:00"
+            },
+            "Echo": {
+              "pct": 25,
+              "clock": "9:30"
+            },
+            "Intensity": {
+              "pct": 35,
+              "clock": "10:30"
+            }
+          },
+          "pedal_settings_de": "Repeat: 10:00 (~30%); Echo: 9:30 (~25%); Intensity: 10:30 (~35%)"
+        }
+      ],
+      "schema_notes_de": "V45: No Melda plugins. VST/JSFX from installed sync only.",
+      "hardware_options": {
+        "parallel_splitter": {
+          "device": "sonicake_portal",
+          "note_de": "Optional: Portal Loop A/B parallel nutzen; starte beide Loops leise (10–20%)."
+        }
+      },
+      "hardware_parallel": {
+        "device": "sonicake_portal",
+        "dry_strategy": "dry_in_reaper",
+        "notes_de": "Portal 2× FX Loop parallel. Loops möglichst wet-only fahren.",
+        "loopA": {
+          "name_de": "Loop A",
+          "steps": [
+            {
+              "role": "Overdrive",
+              "device_id": "aliexpress_mini_vintage_overdrive",
+              "note_de": "Edge.",
+              "knob_hints": {
+                "Gain": 25,
+                "Tone": 55,
+                "Level": 55
+              },
+              "knob_hints_clock": {
+                "Gain": {
+                  "pct": 25,
+                  "clock": "9:30"
+                },
+                "Tone": {
+                  "pct": 55,
+                  "clock": "12:30"
+                },
+                "Level": {
+                  "pct": 55,
+                  "clock": "12:30"
+                }
+              },
+              "pedal_settings_de": "Gain: 9:30 (~25%); Tone: 12:30 (~55%); Level: 12:30 (~55%)",
+              "routing": {}
+            }
+          ],
+          "mix_hint_de": "Start 10–25%"
+        },
+        "loopB": {
+          "name_de": "Loop B",
+          "steps": [
+            {
+              "role": "Delay",
+              "device_id": "behringer_dd400_digital_delay",
+              "note_de": "Short width delay.",
+              "knob_hints": {
+                "Repeat": 30,
+                "Echo": 25,
+                "Intensity": 35
+              },
+              "knob_hints_clock": {
+                "Repeat": {
+                  "pct": 30,
+                  "clock": "10:00"
+                },
+                "Echo": {
+                  "pct": 25,
+                  "clock": "9:30"
+                },
+                "Intensity": {
+                  "pct": 35,
+                  "clock": "10:30"
+                }
+              },
+              "pedal_settings_de": "Repeat: 10:00 (~30%); Echo: 9:30 (~25%); Intensity: 10:30 (~35%)",
+              "routing": {}
+            }
+          ],
+          "mix_hint_de": "Start 10–25%"
+        }
+      },
+      "patch_instructions_de": "PATCH:\nReaInsert SEND → Portal IN; Portal OUT → ReaInsert RETURN\nLoop A: Portal SEND A → Overdrive → RETURN A\nLoop B: Portal SEND B → DD400 → RETURN B"
+    }
+  ]
+}

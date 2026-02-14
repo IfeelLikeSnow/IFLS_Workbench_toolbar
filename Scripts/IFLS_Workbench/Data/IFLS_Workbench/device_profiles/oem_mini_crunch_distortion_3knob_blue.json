@@ -1,0 +1,74 @@
+{
+  "id": "oem_mini_crunch_distortion_3knob_blue",
+  "name_de": "OEM Mini Crunch Distortion (3 Knobs) – Blue",
+  "manufacturer": "OEM",
+  "model": "Mini Crunch Distortion 3-Knob",
+  "priority_group": "fx",
+  "category_de": "Distortion",
+  "type_de": "Drive",
+  "count": 1,
+  "io_raw_de": "Mono In/Out, DC 9V",
+  "enriched": true,
+  "manual_sources": [
+    "panel_verified_by_user_image"
+  ],
+  "controls": [
+    {
+      "name_en": "VOLUME",
+      "type": "knob",
+      "notes_de": "Ausgangspegel."
+    },
+    {
+      "name_en": "GAIN",
+      "type": "knob",
+      "notes_de": "Zerrgrad."
+    },
+    {
+      "name_en": "TONE",
+      "type": "knob",
+      "notes_de": "Klangfarbe/Höhen."
+    },
+    {
+      "name_en": "Bypass Footswitch",
+      "type": "footswitch",
+      "notes_de": "True bypass."
+    },
+    {
+      "name_en": "Status LED",
+      "type": "led",
+      "notes_de": "Effekt an/aus."
+    },
+    {
+      "name_en": "INPUT/OUTPUT Jacks",
+      "type": "jack",
+      "notes_de": "Mono I/O."
+    },
+    {
+      "name_en": "DC IN 9V",
+      "type": "power",
+      "notes_de": "9V DC."
+    }
+  ],
+  "signal_role": [
+    "distortion",
+    "crunch",
+    "idm_drive",
+    "gain_staging"
+  ],
+  "variant_notes_de": "Panel-verifiziert: 3 Knobs (Volume/Gain/Tone), keine Switches.",
+  "danger_zones_de": [
+    "Als Insert: Output kann boosten → Return Headroom lassen."
+  ],
+  "controls_verified_by_image": true,
+  "meta": {
+    "controls_completeness": "panel_verified",
+    "manual_verified": false,
+    "panel_verified": true,
+    "panel_verified_at_utc": "2026-02-01T21:35:15Z",
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "controls_contextual": {},
+  "warnings_de": [
+    "Power-Specs fehlen (To-do): bitte Manual/Panel/Listing verlinken."
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "mcm_36_010_telephone_pick_up_coil",
+  "name_de": "MCM 36‑010 Telephone Pick‑Up Coil",
+  "manufacturer": "MCM",
+  "model": "36‑010 Telephone Pick‑Up Coil",
+  "count": 2,
+  "categories_de": {
+    "Hauptkategorie": "Recorder & Pickups",
+    "Unterkategorie": "EMF / Induktion",
+    "Kategorie-Typ": "EMF / Induktion"
+  },
+  "priority_group": "routing",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• Output: 3,5 mm TS (Mono)",
+  "controls_raw_de": "—",
+  "controls": [
+    {
+      "name_en": "—",
+      "type": "unknown",
+      "notes_de": ""
+    }
+  ],
+  "power_raw_de": "passiv",
+  "notes_raw_de": "Saugnapf, Telefonabnahme",
+  "tech_raw_de": "Induktions‑Pickup",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": []
+}

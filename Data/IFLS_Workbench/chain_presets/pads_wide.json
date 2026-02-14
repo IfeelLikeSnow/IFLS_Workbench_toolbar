@@ -1,0 +1,22 @@
+{
+  "id": "pads_wide",
+  "intent_de": "Breite, bewegte Pads mit Tiefe",
+  "intent_en": "Wide evolving pads with movement and depth",
+  "targets": [
+    "pads",
+    "poly_synth",
+    "toy_synth"
+  ],
+  "recommended_roles": [
+    "chorus",
+    "vibrato",
+    "phaser",
+    "delay",
+    "reverb"
+  ],
+  "routing_template": "interface_out -> palmer_daccapo -> modulation -> delay -> reverb -> di400p -> interface_in",
+  "notes_de": [
+    "DACCAPO Level (+4/-10) passend setzen, damit Pedale nicht überfahren werden.",
+    "Modulation langsam, Delay modulated/ping-pong, Reverb lang."
+  ]
+}

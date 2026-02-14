@@ -1,8 +1,11 @@
+-- @description IFLS Workbench - Tools/SamplePack/IFLSWB_SamplePack_GainStage_Loops_LUFSI_TP.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS WB: SamplePack GainStage (Loops LUFS-I -> TP safe)
 -- @version 1.0.0
 -- @author IFLS Workbench
 -- @about Normalizes selected loop items to a LUFS-I target, then clamps to a true-peak ceiling (-1 dBTP). Targets are sample-pack friendly.
--- @provides [main] .
 
 
 local r = reaper

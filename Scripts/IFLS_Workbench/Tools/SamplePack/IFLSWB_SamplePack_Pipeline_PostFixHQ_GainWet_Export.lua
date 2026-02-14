@@ -1,8 +1,11 @@
+-- @description IFLS Workbench - Tools/SamplePack/IFLSWB_SamplePack_Pipeline_PostFixHQ_GainWet_Export.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS WB: SamplePack Pipeline (PostFix HQ -> GainStage WET -> Export)
 -- @version 1.0.0
 -- @author IFLS Workbench
 -- @about Runs: PostFix HQ (extend+tail-detect) -> GainStage WET (TP -1) -> Export selected items (last render settings).
--- @provides [main] .
 
 
 local r = reaper

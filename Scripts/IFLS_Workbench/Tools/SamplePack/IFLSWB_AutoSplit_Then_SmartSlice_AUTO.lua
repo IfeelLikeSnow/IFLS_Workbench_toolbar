@@ -1,8 +1,11 @@
+-- @description IFLS Workbench - Tools/SamplePack/IFLSWB_AutoSplit_Then_SmartSlice_AUTO.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS WB: AutoSplit + SmartSlice AUTO (mixed content heuristic)
 -- @version 1.0.3
 -- @author IFLS Workbench
 -- @about One-click: AutoSplit mixed content into HIT_/TEX_/MIX_ chunks using confidence scoring, then runs SmartSlice(Hits) for HIT and SmartSlice(Textures) for TEX+MIX. Optional PostFix HQ over the affected time-range.
--- @provides [main] .
 
 
 local r = reaper

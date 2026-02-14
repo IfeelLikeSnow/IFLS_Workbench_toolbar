@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - IFLS_Workbench_MicFX_Profile_GUI.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench - MicFX Profile GUI (FXChain-aware .fxlist loader)
 -- @version 0.1.0
 -- @author IFLS (ported from DF95)

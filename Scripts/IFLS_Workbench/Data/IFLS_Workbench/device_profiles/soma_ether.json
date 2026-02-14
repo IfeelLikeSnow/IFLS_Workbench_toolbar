@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "soma_ether",
+  "name_de": "SOMA Ether",
+  "manufacturer": "SOMA",
+  "model": "Ether",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Recorder & Pickups",
+    "Unterkategorie": "EMF / Induktion",
+    "Kategorie-Typ": "EMF / Induktion"
+  },
+  "priority_group": "routing",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• Output: 3,5 mm Stereo",
+  "controls_raw_de": "Audio Out 3,5 mm",
+  "controls": [
+    {
+      "name_en": "Audio Out 3,5 mm",
+      "type": "unknown",
+      "notes_de": ""
+    }
+  ],
+  "power_raw_de": "passiv\n2× AAA Batterien, >300 h Laufzeit\n3,5 mm Stereo‑Out",
+  "notes_raw_de": "Elektromagnetische Felder hörbar\nWide‑Band EM‑Receiver („Anti‑Radio“)\n2 Zusatz‑Antennenpins für Kontakt‑Abnahme",
+  "tech_raw_de": "EMF‑Receiver",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": []
+}

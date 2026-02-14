@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "synare_ehx_super_space_drum_syndrum",
+  "name_de": "Synare/EHX Super Space Drum (Syndrum)",
+  "manufacturer": "Synare/EHX",
+  "model": "Super Space Drum (Syndrum)",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Synthesizer & Keyboards",
+    "Unterkategorie": "Drum‑Synth",
+    "Kategorie-Typ": "Drum‑Synth"
+  },
+  "priority_group": "synth",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• Audio Out (6,3 mm)\n• Phones (3,5 mm)\n• MIDI/USB (ggf. CV/Gate)",
+  "controls_raw_de": "Tune/Sweep/Decay (je nach Version)",
+  "controls": [
+    {
+      "name_en": "Tune/Sweep/Decay (je nach Version)",
+      "type": "unknown",
+      "notes_de": ""
+    }
+  ],
+  "power_raw_de": "9 V DC\n9 V DC (Center‑Neg), ca. 35 mA\nAux‑In & Ext. Trig (6,35 mm)",
+  "notes_raw_de": "Single‑Pad Drum‑Voice\nFußtaster startet/stoppt Trigger\nLFO‑Mod (DEPTH/RATE)",
+  "tech_raw_de": "Analog Drum‑Synth",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "source",
+    "pads",
+    "bass",
+    "leads",
+    "drone_source"
+  ],
+  "danger_zones_de": []
+}

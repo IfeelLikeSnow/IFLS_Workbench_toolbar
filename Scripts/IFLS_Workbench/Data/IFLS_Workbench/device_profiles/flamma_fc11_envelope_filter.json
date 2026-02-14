@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "controls_completeness": "manual_verified",
+    "manual_verified": true,
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "id": "flamma_fc11_envelope_filter",
+  "name_de": "Flamma FC11 Envelope Filter",
+  "manufacturer": "Flamma",
+  "model": "FC11 Envelope Filter",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Effektpedale",
+    "Unterkategorie": "Modulation",
+    "Kategorie-Typ": "Envelope Filter"
+  },
+  "priority_group": "routing",
+  "signal_role": [
+    "auto_wah",
+    "envelope_filter",
+    "funk",
+    "percussion_fx"
+  ],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In (TS)\n• Out (TS)",
+  "controls_raw_de": "Sensitivity\n• Tone\n• Decay\n• Q",
+  "controls": [
+    {
+      "name_en": "SENSITIVITY",
+      "type": "knob",
+      "notes_de": "Trigger/Envelope Sensitivity."
+    },
+    {
+      "name_en": "TONE",
+      "type": "knob",
+      "notes_de": "Tone/Voicing."
+    },
+    {
+      "name_en": "DECAY",
+      "type": "knob",
+      "notes_de": "Envelope Decay."
+    },
+    {
+      "name_en": "Q",
+      "type": "knob",
+      "notes_de": "Resonanz/Q-Faktor."
+    },
+    {
+      "name_en": "Footswitch",
+      "type": "footswitch",
+      "notes_de": "On/Off."
+    },
+    {
+      "name_en": "Status LED",
+      "type": "led",
+      "notes_de": "Effekt an/aus."
+    }
+  ],
+  "power_raw_de": "≈ 50 mA",
+  "notes_raw_de": "funkiger Quack",
+  "tech_raw_de": "Auto‑Wah",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://flammainnovation.com/download.html"
+  ],
+  "enriched": true,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": [],
+  "controls_contextual": {
+    "specs": {
+      "power_v_dc": 9,
+      "polarity": "center_negative"
+    }
+  },
+  "warnings_de": [
+    "Power-Specs ergänzt als Default (9V center-negative) basierend auf vorhandenen Quellen-Text; bitte gegen Manual/Panel verifizieren."
+  ]
+}

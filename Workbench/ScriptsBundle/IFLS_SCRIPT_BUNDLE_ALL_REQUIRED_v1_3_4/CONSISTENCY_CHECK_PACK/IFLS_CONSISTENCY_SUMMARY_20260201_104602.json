@@ -1,0 +1,39 @@
+{
+  "installed_rows": 1808,
+  "master_rows": 1770,
+  "installed_minus_master": 38,
+  "master_minus_installed": 0,
+  "master_idents_with_contents_path": 64,
+  "master_idents_non_normalized": 63,
+  "format_mismatches_in_master": 2,
+  "multi_family_groups_count": 198,
+  "multi_family_breakdown": {
+    "['VST', 'VST3']": 187,
+    "['JS', 'VST']": 4,
+    "['CLAP', 'VST', 'VST3']": 3,
+    "['CLAP', 'VST3']": 3,
+    "['JS', 'VST3']": 1
+  },
+  "top_vendors_with_contents_path": {
+    "AnalogObsession": 18,
+    "chowdsp": 8,
+    "BABY Audio": 6,
+    "Acqua": 4,
+    "Auburn Sounds": 2,
+    "Lese": 2,
+    "Sixth Sample": 2,
+    "Surge Synth Team": 2,
+    "Metric Halo": 2,
+    "Viator DSP": 1,
+    "Excite Audio": 1,
+    "Toybox": 1,
+    "Mastrcode Music": 1,
+    "Sonosaurus": 1,
+    "discoDSP": 1,
+    "Neutone": 1,
+    "Airwindows": 1,
+    "Tritik": 1,
+    "Kazrog": 1,
+    "Tracktion": 1
+  }
+}

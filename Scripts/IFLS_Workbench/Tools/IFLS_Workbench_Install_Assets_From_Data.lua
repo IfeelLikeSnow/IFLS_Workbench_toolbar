@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/IFLS_Workbench_Install_Assets_From_Data.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: Install Assets (FXChains + MenuSets) from ReaPack Data cache
 -- @version 0.7.10
 -- @author I feel like snow

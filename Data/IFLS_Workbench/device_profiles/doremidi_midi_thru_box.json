@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "doremidi_midi_thru_box",
+  "name_de": "DOREMiDi MIDI Thru Box",
+  "manufacturer": "DOREMiDi",
+  "model": "MIDI Thru Box",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Utility",
+    "Unterkategorie": "MIDI Routing",
+    "Kategorie-Typ": "MIDI Thru"
+  },
+  "priority_group": "routing",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• 1× MIDI In (5‑Pin DIN)\n• 3× MIDI Thru (5‑Pin DIN)\n• USB (Strom)",
+  "controls_raw_de": "Keine Regler",
+  "controls": [
+    {
+      "name_en": "Keine Regler",
+      "type": "unknown",
+      "notes_de": ""
+    }
+  ],
+  "power_raw_de": "Passiv oder 9V DC (modellabhängig)",
+  "notes_raw_de": "Verteilt 1 MIDI-Eingang auf mehrere Ausgänge\n• Nützlich für paralleles Sequencing",
+  "tech_raw_de": "MIDI Thru (1 In → 3 Thru)",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": []
+}

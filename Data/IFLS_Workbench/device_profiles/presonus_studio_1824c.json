@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "presonus_studio_1824c",
+  "name_de": "PreSonus Studio 1824c",
+  "manufacturer": "PreSonus",
+  "model": "Studio 1824c",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "19'' Geräte",
+    "Unterkategorie": "Audio Interface",
+    "Kategorie-Typ": "Audio Interface"
+  },
+  "priority_group": "routing",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• Inputs: 8× Combo Mic/Line/Inst (XLR/TRS)\n• Outputs: 8× Line TRS, 2× Main TRS, 2× Phones\n• Digital: ADAT I/O, S/PDIF I/O, Word Clock Out\n• MIDI I/O (DIN), USB‑C (Audio/MIDI)",
+  "controls_raw_de": "8x Combo In (Gain)\n• Main Out\n• Phones\n• Monitor Mix",
+  "controls": [
+    {
+      "name_en": "8x Combo In (Gain)",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Main Out",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Phones",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Monitor Mix",
+      "type": "unknown",
+      "notes_de": ""
+    }
+  ],
+  "power_raw_de": "USB-C Buspower oder Netzteil\n• ≈ 18 W\n12 V DC Netzteil ERFORDERLICH (nicht USB‑buspowered)\n18×20 @48 kHz; ADAT 8ch (4ch @96 kHz)\nDC‑gekoppelte Ausgänge (CV-fähig)",
+  "notes_raw_de": "18x18 I/O\n• ADAT\n• S/PDIF\n• MIDI I/O\n• DSP-Mixer (UC Surface)\n• Studio One Artist\n2× Kopfhörer-Outs\nWord Clock Out\nMIDI In/Out\nS/PDIF I/O",
+  "tech_raw_de": "USB-C Audio Interface 24bit/192kHz",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": []
+}

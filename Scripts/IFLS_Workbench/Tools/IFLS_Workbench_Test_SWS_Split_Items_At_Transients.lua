@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/IFLS_Workbench_Test_SWS_Split_Items_At_Transients.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: Test SWS Xenakios Split Items At Transients
 -- @version 0.7.5
 -- @about

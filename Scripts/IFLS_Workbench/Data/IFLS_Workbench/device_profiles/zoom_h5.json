@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "zoom_h5",
+  "name_de": "Zoom H5",
+  "manufacturer": "Zoom",
+  "model": "H5",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Recorder & Pickups",
+    "Unterkategorie": "Field Recorder",
+    "Kategorie-Typ": "Field Recorder (Zoom-Serie)"
+  },
+  "priority_group": "routing",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• Inputs: 2× XLR/TRS-Combo (Mic/Line, +48 V), 1× 3,5 mm Mic/Line an XY-Kapsel\n• Outputs: 3,5 mm Line Out (regelbar), 3,5 mm Kopfhörerausgang\n• USB 2.0 (Audio-Interface 4-in/2-out)",
+  "controls_raw_de": "• 4-Spur-Aufnahme (2× XLR/TRS + XY-Kapsel)\n• Wechselkapsel-System\n• Low-Cut, Kompressor, Limiter\n• Pre-Record, Auto-Record, Backup-Record",
+  "controls": [
+    {
+      "name_en": "4-Spur-Aufnahme (2× XLR/TRS + XY-Kapsel)",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Wechselkapsel-System",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Low-Cut, Kompressor, Limiter",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Pre-Record, Auto-Record, Backup-Record",
+      "type": "unknown",
+      "notes_de": ""
+    }
+  ],
+  "power_raw_de": "• WAV bis 96 kHz / 16–24 Bit, MP3\n• Aufnahme auf SD/SDHC (bis 32 GB)\n• 2× AA oder USB-Buspower",
+  "notes_raw_de": "Mobiler 4-Input/4-Track-Recorder mit austauschbaren Kapseln\nkann mehrere Spuren (inkl. Backup) gleichzeitig aufzeichnen\nintegrierter 4-in/2-out USB-Audio-Interface-Modus.",
+  "tech_raw_de": "Handheld Field Recorder",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": []
+}

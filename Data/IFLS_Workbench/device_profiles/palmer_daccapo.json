@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "palmer_daccapo",
+  "name_de": "Palmer DACCAPO",
+  "manufacturer": "Palmer",
+  "model": "DACCAPO",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Utility",
+    "Unterkategorie": "Re‑Amp & DI",
+    "Kategorie-Typ": "Re‑Amp & DI"
+  },
+  "priority_group": "routing",
+  "signal_role": [
+    "reamp",
+    "level_match"
+  ],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• Input: XLR (bal.)\n• Output: 6,3 mm TS",
+  "controls_raw_de": "Level\n• Ground\n• +4 dBu",
+  "controls": [
+    {
+      "name_en": "Level",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Ground",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "+4 dBu",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "+4 dBu / -10 dBV switch",
+      "type": "switch",
+      "notes_de": "Pegelumschaltung (Studio/Consumer)."
+    }
+  ],
+  "power_raw_de": "passiv",
+  "notes_raw_de": "XLR → TS Re‑Amp",
+  "tech_raw_de": "Re‑Amp Box",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://www.manualslib.com/manual/1503288/Palmer-Daccapo.html",
+    "https://www.manualslib.com/manual/1503288/Palmer-Daccapo.html?page=2"
+  ],
+  "enriched": true,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": []
+}

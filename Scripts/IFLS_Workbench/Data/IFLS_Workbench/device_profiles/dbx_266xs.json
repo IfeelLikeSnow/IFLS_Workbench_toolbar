@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "dbx_266xs",
+  "name_de": "dbx 266xs",
+  "manufacturer": "dbx",
+  "model": "266xs",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "19'' Geräte",
+    "Unterkategorie": "Dynamics (Comp/Gate)",
+    "Kategorie-Typ": "Dynamics (Comp/Gate)"
+  },
+  "priority_group": "routing",
+  "signal_role": [
+    "compressor",
+    "gate",
+    "transient_shaper"
+  ],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• CH1/2 In: XLR & TRS\n• CH1/2 Out: XLR & TRS\n• CH1/2 Sidechain Insert (TRS)",
+  "controls_raw_de": "Threshold\n• Ratio\n• Output",
+  "controls": [
+    {
+      "name_en": "Threshold",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Ratio",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Output",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Threshold",
+      "type": "knob",
+      "notes_de": "Schwelle für Kompression/Gate."
+    },
+    {
+      "name_en": "Ratio",
+      "type": "knob",
+      "notes_de": "Kompressionsverhältnis."
+    },
+    {
+      "name_en": "Attack",
+      "type": "knob",
+      "notes_de": "Ansprechzeit."
+    },
+    {
+      "name_en": "Release",
+      "type": "knob",
+      "notes_de": "Rücklaufzeit."
+    },
+    {
+      "name_en": "OverEasy",
+      "type": "button",
+      "notes_de": "Weicher Übergang um Threshold."
+    },
+    {
+      "name_en": "AutoDynamic Attack/Release",
+      "type": "button",
+      "notes_de": "Programmabhängige Zeiten."
+    }
+  ],
+  "power_raw_de": "≈ 15 W",
+  "notes_raw_de": "Studio/Livemix‑Dynamics",
+  "tech_raw_de": "Compressor/Gate",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://dbxpro.com/en-US/product_documents/dbx266xsownersmanualpdf",
+    "https://dbxpro.com/en/products/266xs"
+  ],
+  "enriched": true,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": []
+}

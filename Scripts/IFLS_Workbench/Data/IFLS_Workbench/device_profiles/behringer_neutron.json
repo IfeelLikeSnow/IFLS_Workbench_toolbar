@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "behringer_neutron",
+  "name_de": "Behringer Neutron",
+  "manufacturer": "Behringer",
+  "model": "Neutron",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Synthesizer & Keyboards",
+    "Unterkategorie": "Synthesizer (Hybrid/Semi‑modular)",
+    "Kategorie-Typ": "Synthesizer (Hybrid/Semi‑modular)"
+  },
+  "priority_group": "synth",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• Audio: In (6,3 mm), Out (6,3 mm)\n• Patchbay: 32 In / 24 Out (3,5 mm)\n• MIDI In/Thru (DIN), USB",
+  "controls_raw_de": "2×3340 VCO\n• Multimode VCF\n• 2 ADSR\n• LFO\n• BBD Delay",
+  "controls": [
+    {
+      "name_en": "2×3340 VCO",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Multimode VCF",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "2 ADSR",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "LFO",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "BBD Delay",
+      "type": "unknown",
+      "notes_de": ""
+    }
+  ],
+  "power_raw_de": "≈ 200 mA @ 9 V",
+  "notes_raw_de": "Große Patch‑Bay",
+  "tech_raw_de": "Semi‑modular Mono",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "source",
+    "pads",
+    "bass",
+    "leads",
+    "drone_source"
+  ],
+  "danger_zones_de": []
+}

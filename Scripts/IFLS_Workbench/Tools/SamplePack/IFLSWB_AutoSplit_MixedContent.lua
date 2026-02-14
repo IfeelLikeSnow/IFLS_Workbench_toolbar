@@ -1,12 +1,16 @@
+-- @description IFLS Workbench - Tools/SamplePack/IFLSWB_AutoSplit_MixedContent.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS WB: AutoSplit Mixed Content (analyze -> split into HIT/TEX chunks)
 -- @version 1.0.3
 -- @author IFLS Workbench
 -- @about Analyzes selected audio items and splits them into HIT_/TEX_/MIX_ chunks using transient density, duration and confidence scoring (fieldrec mixed content).
--- @provides [main] .
 
 
 local r = reaper
 
+local SafeApply = require("IFLS_Workbench/Engine/IFLS_SafeApply")
 local function msg(s) r.ShowConsoleMsg(tostring(s).."\n") end
 local function clamp(x,a,b) if x<a then return a elseif x>b then return b else return x end end
 local function db_to_amp(db) return 10^(db/20) end
@@ -298,5 +302,6 @@ local function main()
 
   msg(("AutoSplit complete. Created %d chunk items."):format(total_created))
 end
-
-main()
+SafeApply.run("IFLS: AutoSplit MixedContent", function()
+  main()
+end)

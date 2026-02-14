@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "controls_completeness": "manual_verified",
+    "manual_verified": true,
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "id": "electro_harmonix_deluxe_memory_boy",
+  "name_de": "Electro‑Harmonix Deluxe Memory Boy",
+  "manufacturer": "Electro‑Harmonix",
+  "model": "Deluxe Memory Boy",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Effektpedale",
+    "Unterkategorie": "Delay & Reverb",
+    "Kategorie-Typ": "Delay"
+  },
+  "priority_group": "fx",
+  "signal_role": [
+    "analog",
+    "delay",
+    "drones",
+    "glitch",
+    "mod_delay"
+  ],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In (TS)\n• Out (TS)",
+  "controls_raw_de": "Delay\n• Feedback\n• Blend\n• Mod\n• Tap\n• EXP",
+  "controls": [
+    {
+      "name_en": "BLEND",
+      "type": "knob",
+      "notes_de": "Wet/Dry Mix."
+    },
+    {
+      "name_en": "DELAY",
+      "type": "knob",
+      "notes_de": "Delay Time (Tap Tempo möglich)."
+    },
+    {
+      "name_en": "FEEDBACK",
+      "type": "knob",
+      "notes_de": "Repeats."
+    },
+    {
+      "name_en": "DEPTH",
+      "type": "knob",
+      "notes_de": "Modulation Depth (Chorus/Vibrato auf Delayzeit)."
+    },
+    {
+      "name_en": "RATE",
+      "type": "knob",
+      "notes_de": "Modulation Rate."
+    },
+    {
+      "name_en": "TAP / TAP DIVIDE",
+      "type": "button",
+      "notes_de": "Tap Tempo + Unterteilungen."
+    },
+    {
+      "name_en": "GAIN (input)",
+      "type": "knob",
+      "notes_de": "Input Gain (laut Manual)."
+    },
+    {
+      "name_en": "FX LOOP (feedback path)",
+      "type": "routing",
+      "notes_de": "Insert in Feedback-Loop für self‑oscillating textures."
+    },
+    {
+      "name_en": "Expression (4 params)",
+      "type": "exp",
+      "notes_de": "Expression steuert u.a. Delay/Feedback/Depth/Rate (abhängig vom Setting)."
+    },
+    {
+      "name_en": "Bypass Footswitch",
+      "type": "footswitch",
+      "notes_de": "On/Off."
+    }
+  ],
+  "power_raw_de": "≈ 85 mA",
+  "notes_raw_de": "warmes Tape‑Echo",
+  "tech_raw_de": "Analog‑Delay 30–700 ms",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://www.ehx.com/wp-content/uploads/2021/01/deluxe-memory-boy-manual.pdf"
+  ],
+  "enriched": true,
+  "best_for_tags": [
+    "glitch",
+    "idmdrums",
+    "pads",
+    "drones"
+  ],
+  "danger_zones_de": [],
+  "controls_contextual": {
+    "specs": {
+      "power_v_dc": 9,
+      "polarity": "center_negative"
+    }
+  },
+  "warnings_de": [
+    "Power-Specs ergänzt als Default (9V center-negative) basierend auf vorhandenen Quellen-Text; bitte gegen Manual/Panel verifizieren."
+  ]
+}

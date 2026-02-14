@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "controls_completeness": "manual_verified",
+    "manual_verified": true,
+    "panel_verified": true,
+    "panel_verified_at_utc": "2026-02-01T21:25:43Z",
+    "variant_may_differ": true,
+    "video_verified": true,
+    "video_verified_at_utc": "2026-02-02T22:02:41Z",
+    "video_sources": [
+      "Evidence/video_transcripts/mini_crunch_dist_transcript.txt"
+    ],
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "id": "aliexpress_mini_crunch_distortion",
+  "name_de": "AliExpress Mini Crunch Distortion",
+  "manufacturer": "AliExpress",
+  "model": "Mini Crunch Distortion",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Effektpedale",
+    "Unterkategorie": "Distortion / Overdrive / Fuzz & Bitcrushing",
+    "Kategorie-Typ": "Distortion"
+  },
+  "priority_group": "routing",
+  "signal_role": [
+    "british_crunch",
+    "crunch",
+    "distortion",
+    "idm_drive"
+  ],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In (TS)\n• Out (TS)",
+  "controls_raw_de": "Gain\n• Tone\n• Level",
+  "controls": [
+    {
+      "name_en": "VOLUME",
+      "type": "knob",
+      "notes_de": "Achtung: Beschriftung vertauscht – dieser Regler verhält sich wie GAIN (Video)."
+    },
+    {
+      "name_en": "GAIN",
+      "type": "knob",
+      "notes_de": "Achtung: Beschriftung vertauscht – dieser Regler verhält sich wie VOLUME (Video)."
+    },
+    {
+      "name_en": "TONE",
+      "type": "knob",
+      "notes_de": "Klangfarbe/Höhen."
+    },
+    {
+      "name_en": "Bypass Footswitch",
+      "type": "footswitch",
+      "notes_de": "True bypass."
+    },
+    {
+      "name_en": "Status LED",
+      "type": "led",
+      "notes_de": "Effekt an/aus."
+    },
+    {
+      "name_en": "INPUT/OUTPUT Jacks",
+      "type": "jack",
+      "notes_de": "Mono I/O."
+    },
+    {
+      "name_en": "DC IN 9V",
+      "type": "power",
+      "notes_de": "9V DC."
+    }
+  ],
+  "power_raw_de": "≈ 8 mA @ 9 V",
+  "notes_raw_de": "dichter Amp-in-a-Box-Sound",
+  "tech_raw_de": "High-Gain Dist (US Dream/Riot)",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://ploutone.com/products/irin-electric-guitar-effects-pedal-vintage-overdrive-crunch-distortion-analog-delay-us-dream-classic-chorus-ultimate-drive-pedal-9",
+    "https://www.amazon.de/-/en/Effects-Distortion-Overdrive-Segment-Electric/dp/B0CBRW268K"
+  ],
+  "enriched": true,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": [
+    "Als Insert: Output kann boosten → Return Headroom lassen."
+  ],
+  "variant_notes_de": "Panel-verifiziert: 3 Knobs (Volume/Gain/Tone), keine Switches. Hinweis: Dieses Profil kann eine OEM/Listing-Variante sein. Für dein blaues 3-Knob Pedal nutze das OEM-Panel-Profil.",
+  "controls_verified_by_image": true,
+  "warnings_de": [
+    "GAIN/VOLUME Beschriftung ist vertauscht: Gain-Knob verhält sich wie Volume und umgekehrt (Video).",
+    "Power-Specs ergänzt als Default (9V center-negative) basierend auf vorhandenen Quellen-Text; bitte gegen Manual/Panel verifizieren."
+  ],
+  "controls_contextual": {
+    "specs": {
+      "power_v_dc": 9,
+      "polarity": "center_negative"
+    }
+  }
+}

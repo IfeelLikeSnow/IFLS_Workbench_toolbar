@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "arturia_keystep",
+  "name_de": "Arturia KeyStep",
+  "manufacturer": "Arturia",
+  "model": "KeyStep",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Groovebox / Sequencer",
+    "Unterkategorie": "Controller / Keyboard‑Sequencer",
+    "Kategorie-Typ": "Controller / Keyboard‑Sequencer"
+  },
+  "priority_group": "synth",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• MIDI In/Out (DIN)\n• CV/Gate/Mod Out (3,5 mm)\n• Sync In/Out (3,5 mm)\n• Sustain (6,3 mm), USB",
+  "controls_raw_de": "Arp\n• Seq\n• Tap\n• Hold/Chord\n• CV/Gate",
+  "controls": [
+    {
+      "name_en": "Arp",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Seq",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Tap",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Hold/Chord",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "CV/Gate",
+      "type": "unknown",
+      "notes_de": ""
+    }
+  ],
+  "power_raw_de": "USB / 9 V DC\nUSB‑Bus‑Power ODER 9 V DC (Center‑Positiv)",
+  "notes_raw_de": "Standalone, Clock/Sync\nCV/Gate/Mod Out\nDIN‑Sync & MIDI (TRS‑to‑DIN‑Adapter)",
+  "tech_raw_de": "Keyboard/Sequencer",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "source",
+    "pads",
+    "bass",
+    "leads",
+    "drone_source"
+  ],
+  "danger_zones_de": []
+}

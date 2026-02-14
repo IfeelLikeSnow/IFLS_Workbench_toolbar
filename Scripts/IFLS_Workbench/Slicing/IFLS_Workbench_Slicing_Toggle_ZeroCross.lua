@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Slicing/IFLS_Workbench_Slicing_Toggle_ZeroCross.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @version 0.0.1
 
 

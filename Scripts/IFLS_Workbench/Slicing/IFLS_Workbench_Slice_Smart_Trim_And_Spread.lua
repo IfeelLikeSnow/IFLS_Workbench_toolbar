@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Slicing/IFLS_Workbench_Slice_Smart_Trim_And_Spread.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: Smart Slice -> TailTrim -> Spread (one-shot macro)
 -- @author IFLS / DF95
 -- @version 0.7.6

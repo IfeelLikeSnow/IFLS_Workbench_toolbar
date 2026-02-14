@@ -1,8 +1,11 @@
+-- @description IFLS Workbench - Tools/SamplePack/IFLSWB_SamplePack_GainStage_SelectedItems_DRY.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS WB: SamplePack GainStage (DRY one-shots peak -3 dBFS)
 -- @version 1.0.0
 -- @author IFLS Workbench
 -- @about Applies item gain so SAMPLE PEAK reaches -3 dBFS (headroom-friendly DRY standard).
--- @provides [main] .
 
 
 local r = reaper

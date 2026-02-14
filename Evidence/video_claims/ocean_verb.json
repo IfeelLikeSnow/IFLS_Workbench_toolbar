@@ -1,0 +1,37 @@
+{
+  "created_at_utc": "2026-02-02T22:02:41Z",
+  "sources": [
+    "Evidence/video_transcripts/ocean_verb_transcript.txt"
+  ],
+  "claims": [
+    {
+      "type": "controls",
+      "knobs": [
+        "MIX",
+        "TONE",
+        "DECAY"
+      ],
+      "confidence": "high"
+    },
+    {
+      "type": "modes",
+      "switch": "3-way",
+      "positions": {
+        "up": "ROOM",
+        "mid": "SPRING",
+        "down": "SHIMMER"
+      },
+      "confidence": "high"
+    },
+    {
+      "type": "power",
+      "dc": "9V center-negative",
+      "confidence": "high"
+    },
+    {
+      "type": "unknown",
+      "topic": "shimmer interval/pitch",
+      "confidence": "unknown"
+    }
+  ]
+}

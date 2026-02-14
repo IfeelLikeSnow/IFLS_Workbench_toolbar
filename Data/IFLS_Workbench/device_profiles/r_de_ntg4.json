@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "r_de_ntg4",
+  "name_de": "RØDE NTG4+",
+  "manufacturer": "RØDE",
+  "model": "NTG4+",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Mikrofone",
+    "Unterkategorie": "Shotgun (Kondensator)",
+    "Kategorie-Typ": "Shotgun (Kondensator)"
+  },
+  "priority_group": "routing",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• XLR‑3M (bal.)\n• Micro‑USB (Laden)",
+  "controls_raw_de": "Digitale Taster:\n• High‑Pass 75 Hz\n• Pad (‑10 dB)\n• HF‑Boost",
+  "controls": [
+    {
+      "name_en": "Digitale Taster:",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "High‑Pass 75 Hz",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Pad (‑10 dB)",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "HF‑Boost",
+      "type": "unknown",
+      "notes_de": ""
+    }
+  ],
+  "power_raw_de": "Superniere\n20 Hz–20 kHz\n200 Ω\nMax. 135 dB SPL\n16 dBA Eigenrauschen\n48 V Phantom oder interner Li‑Ion‑Akku (~150 h)",
+  "notes_raw_de": "Broadcast‑Shotgun\ninterner Akku + Phantom\nschnelle Schalter für HPF/Pad/HF‑Boost – ideal für Boom & Location Recording",
+  "tech_raw_de": "Richtrohr‑Kondensator",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": []
+}

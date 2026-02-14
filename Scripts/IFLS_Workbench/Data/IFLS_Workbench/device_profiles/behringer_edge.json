@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "behringer_edge",
+  "name_de": "Behringer Edge",
+  "manufacturer": "Behringer",
+  "model": "Edge",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Synthesizer & Keyboards",
+    "Unterkategorie": "Synthesizer (Semi‑mod Perc)",
+    "Kategorie-Typ": "Synthesizer (Semi‑mod Perc)"
+  },
+  "priority_group": "synth",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• Audio Out (6,3 mm), Ext Audio In\n• Patchbay: Clock/Trig In, CV/Gate I/O (3,5 mm)\n• USB‑MIDI",
+  "controls_raw_de": "OSC1/2\n• PW\n• Mix\n• Noise\n• Cutoff/Res\n• Decay\n• Accent\n• FM\n• LFO",
+  "controls": [
+    {
+      "name_en": "OSC1/2",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "PW",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Mix",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Noise",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Cutoff/Res",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Decay",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Accent",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "FM",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "LFO",
+      "type": "unknown",
+      "notes_de": ""
+    }
+  ],
+  "power_raw_de": "≈ 150 mA",
+  "notes_raw_de": "Patch‑Bay, USB‑MIDI",
+  "tech_raw_de": "Percussion‑Synth (DFAM‑Style)",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "source",
+    "pads",
+    "bass",
+    "leads",
+    "drone_source"
+  ],
+  "danger_zones_de": []
+}

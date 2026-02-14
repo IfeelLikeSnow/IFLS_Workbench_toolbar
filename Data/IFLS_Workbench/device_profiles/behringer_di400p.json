@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "behringer_di400p",
+  "name_de": "Behringer DI400P",
+  "manufacturer": "Behringer",
+  "model": "DI400P",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Utility",
+    "Unterkategorie": "Re‑Amp & DI",
+    "Kategorie-Typ": "Re‑Amp & DI"
+  },
+  "priority_group": "routing",
+  "signal_role": [
+    "di",
+    "return_level_match"
+  ],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In (TS) mit Link\n• XLR Out (bal.)",
+  "controls_raw_de": "Pad\n• Ground",
+  "controls": [
+    {
+      "name_en": "Pad",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Ground",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "GND LIFT",
+      "type": "switch",
+      "notes_de": "Trennt Masse zur Brummreduktion."
+    },
+    {
+      "name_en": "Parallel 1/4\" IN/OUT",
+      "type": "routing",
+      "notes_de": "Durchschleifen zum Amp/Monitor."
+    },
+    {
+      "name_en": "XLR balanced mic-level OUT",
+      "type": "routing",
+      "notes_de": "Symmetrischer Ausgang zum Interface/Preamp."
+    }
+  ],
+  "power_raw_de": "passiv",
+  "notes_raw_de": "Instrument → XLR",
+  "tech_raw_de": "Passive DI",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://www.bhphotovideo.com/lit_files/84889.pdf",
+    "https://images.thomann.de/pics/atg/atgdata/document/manual/193193.pdf"
+  ],
+  "enriched": true,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": []
+}

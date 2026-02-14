@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Slicing/IFLS_Workbench_Menu_Slicing_Dropdown.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench - Slicing Menu (Dropdown)
 -- @author IFLS / DF95
 -- @version 0.7.6

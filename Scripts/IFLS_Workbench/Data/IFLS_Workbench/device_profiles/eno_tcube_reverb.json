@@ -1,0 +1,80 @@
+{
+  "id": "eno_tcube_reverb",
+  "name_de": "ENO T‑Cube Reverb",
+  "manufacturer": "ENO",
+  "model": "T-Cube Reverb",
+  "priority_group": "fx",
+  "category_de": "Reverb",
+  "type_de": "Time FX",
+  "count": 1,
+  "io_raw_de": "Mono In/Out, DC 9V",
+  "enriched": true,
+  "manual_sources": [
+    "https://reverb.com/item/41624113-eno-t-cube-series-reverb-room-well-spring",
+    "https://reverb.com/item/20490850-eno-t-cube-series-reverb-pedal",
+    "https://modulargrid.net/p/eno-music-eno-reverb-guitar-effect-pedal-true-bypass"
+  ],
+  "controls": [
+    {
+      "name_en": "LEVEL",
+      "type": "knob",
+      "notes_de": "Ausgangspegel."
+    },
+    {
+      "name_en": "TIME",
+      "type": "knob",
+      "notes_de": "Decay/Reverb Time."
+    },
+    {
+      "name_en": "DRY/WET",
+      "type": "knob",
+      "notes_de": "Mix (Reverb-Anteil)."
+    },
+    {
+      "name_en": "MODE selector",
+      "type": "knob",
+      "notes_de": "3 Modi: ROOM / SPRING / WELL (großer Mode-Regler)."
+    },
+    {
+      "name_en": "Status LED (color by mode)",
+      "type": "led",
+      "notes_de": "Rot=Room, Grün=Spring, Rot/Grün Mix=Well."
+    },
+    {
+      "name_en": "Bypass Footswitch",
+      "type": "footswitch",
+      "notes_de": "True bypass."
+    },
+    {
+      "name_en": "INPUT/OUTPUT Jacks",
+      "type": "jack",
+      "notes_de": "Mono I/O."
+    },
+    {
+      "name_en": "DC IN 9V",
+      "type": "power",
+      "notes_de": "9V DC."
+    }
+  ],
+  "signal_role": [
+    "reverb",
+    "space",
+    "ambient",
+    "pads",
+    "drones"
+  ],
+  "variant_notes_de": "Panel-verifiziert (User-Foto) + Listing: Level/Time/Dry-Wet + MODE (Room/Spring/Well) mit LED-Farben.",
+  "controls_verified_by_image": true,
+  "meta": {
+    "controls_completeness": "panel_verified",
+    "manual_verified": false,
+    "panel_verified": true,
+    "manual_enriched_at_utc": "2026-02-01T21:46:39Z",
+    "panel_verified_at_utc": "2026-02-01T22:08:37Z",
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "controls_contextual": {},
+  "warnings_de": [
+    "Power-Specs fehlen (To-do): bitte Manual/Panel/Listing verlinken."
+  ]
+}

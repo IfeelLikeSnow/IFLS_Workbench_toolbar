@@ -1,0 +1,217 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "panel_verified": true,
+    "panel_verified_at_utc": "2026-02-01T21:22:43Z",
+    "video_verified": true,
+    "video_verified_at_utc": "2026-02-02T21:10:40Z",
+    "video_sources": [
+      {
+        "video_id": "SojnTakQ9fI",
+        "url": "https://youtu.be/SojnTakQ9fI"
+      },
+      {
+        "video_id": "Cdp5EFev2OM",
+        "url": "https://youtu.be/Cdp5EFev2OM"
+      },
+      {
+        "video_id": "Jp60r7E-YgI",
+        "url": "https://youtu.be/Jp60r7E-YgI"
+      }
+    ],
+    "manual_attached": true,
+    "manual_sources": [
+      {
+        "path": "Evidence/manuals/m_vave_elemental.pdf",
+        "sha256": "18d702a4dcf933fddf9d3d93e4a51075d2b846ed73629cd2ac69a0b941c159d2"
+      }
+    ],
+    "controls_completeness": "panel_verified",
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "id": "m_vave_elemental",
+  "name_de": "M‑VAVE Elemental",
+  "manufacturer": "M‑VAVE",
+  "model": "Elemental",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Effektpedale",
+    "Unterkategorie": "Delay & Reverb",
+    "Kategorie-Typ": "Delay"
+  },
+  "priority_group": "routing",
+  "signal_role": [
+    "delay",
+    "glitch",
+    "idm",
+    "rhythmic_fx",
+    "time_fx"
+  ],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In (TS)\n• Out (TS)",
+  "controls_raw_de": "Time\n• Feedback\n• Mix\n• Mode",
+  "controls": [
+    {
+      "name_en": "TIME",
+      "type": "knob",
+      "notes_de": "Delay Time."
+    },
+    {
+      "name_en": "TYPE (TREM/DUCK/DUAL/ANALOG/REVERSE/TAPE/ICE/LOFI/PATTERN)",
+      "type": "knob",
+      "notes_de": "Algorithmuswahl."
+    },
+    {
+      "name_en": "FEEDBACK",
+      "type": "knob",
+      "notes_de": "Repeats/Feedback."
+    },
+    {
+      "name_en": "MIX",
+      "type": "knob",
+      "notes_de": "Wet/Dry."
+    },
+    {
+      "name_en": "PARAM",
+      "type": "knob",
+      "notes_de": "Mode-abhängig (contextual)."
+    },
+    {
+      "name_en": "MOD",
+      "type": "knob",
+      "notes_de": "Modulation (modeabhängig)."
+    },
+    {
+      "name_en": "TAP/HOLD Footswitch",
+      "type": "footswitch",
+      "notes_de": "Tap tempo / Hold-Funktion (abhängig vom Mode)."
+    },
+    {
+      "name_en": "Status LED",
+      "type": "led",
+      "notes_de": "Effekt an/aus."
+    },
+    {
+      "name_en": "INPUT/OUTPUT Jacks",
+      "type": "jack",
+      "notes_de": "Mono I/O."
+    },
+    {
+      "name_en": "USB-C",
+      "type": "usb",
+      "notes_de": "USB-C Port (laut Panel)."
+    },
+    {
+      "name_en": "DC IN",
+      "type": "power",
+      "notes_de": "9V DC."
+    }
+  ],
+  "power_raw_de": "≈ 40 mA",
+  "notes_raw_de": "Reverse, Duck, Freeze",
+  "tech_raw_de": "Digital Delay (9 Algos)",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://device.report/manuals/elemental-delay-pedal-pd42-instruction-manual"
+  ],
+  "enriched": true,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": [
+    "ICE/LOFI/PATTERN können extrem peaken – Feedback konservativ starten.",
+    "Tap/Hold Funktion je nach Algorithmus anders (vorher checken)."
+  ],
+  "controls_contextual": {
+    "delay_types": [
+      "Analog",
+      "Duo",
+      "Duck",
+      "Tremolo",
+      "Reverse",
+      "dTAPE",
+      "ICE",
+      "LOFI",
+      "PATTERN"
+    ],
+    "param_matrix": [
+      {
+        "type": "Analog",
+        "mod": "Phaser frequency",
+        "param": "Phaser depth",
+        "source": "SojnTakQ9fI"
+      },
+      {
+        "type": "Duo",
+        "mod": "Chorus speed",
+        "param": "Repeat time offset inside chorus",
+        "source": "SojnTakQ9fI"
+      },
+      {
+        "type": "Duck",
+        "mod": "Chorus speed",
+        "param": "Swell/unpack speed",
+        "source": "SojnTakQ9fI"
+      },
+      {
+        "type": "Tremolo",
+        "mod": "Tremolo speed",
+        "param": "Tremolo/Delay interaction amount",
+        "source": "SojnTakQ9fI"
+      },
+      {
+        "type": "Reverse",
+        "mod": "Modulation frequency",
+        "param": "Phaser amount",
+        "source": "SojnTakQ9fI"
+      },
+      {
+        "type": "dTAPE",
+        "mod": "Wow/flutter irregularities rate",
+        "param": "Grit/damage amount",
+        "source": "SojnTakQ9fI"
+      },
+      {
+        "type": "ICE",
+        "mod": "Chop/slice rate (mod cut)",
+        "param": "Pitch amount for octave artifacts",
+        "source": "SojnTakQ9fI"
+      },
+      {
+        "type": "LOFI",
+        "mod": "Chorus/pulse speed",
+        "param": "Grit/drive on wet signal",
+        "source": "SojnTakQ9fI"
+      },
+      {
+        "type": "PATTERN",
+        "mod": "Pattern speed",
+        "param": "Pattern select/amount",
+        "source": "SojnTakQ9fI"
+      }
+    ],
+    "tap_hold_logic": {
+      "tap_mode": "automatic on tapping",
+      "hold_mode": "footswitch hold enables hold/freeze (infinite delay)",
+      "hold_exit_seconds": 3,
+      "bypass_trails": false
+    },
+    "specs": {
+      "power_v_dc": 9,
+      "polarity": "center_negative"
+    }
+  },
+  "variant_notes_de": "Panel-verifiziert: 9 TYPE Algorithmen; PARAM/MOD sind modeabhängig; Footswitch = TAP/HOLD. | Video-verified: Param/MOD je Algorithmus; Tap automatisch; Hold/Freeze (Exit ~3s); keine Trails.",
+  "controls_verified_by_image": true,
+  "warnings_de": [
+    "True Bypass: keine Trails im Bypass (Video-verified).",
+    "Keine Presets: Live-Wechsel erfordert manuelles Nachregeln (Video-verified).",
+    "Manual liegt als Bild-PDF vor; Mode/Param-Tabelle muss noch sauber transkribiert werden (To-do).",
+    "Power-Specs ergänzt als Default (9V center-negative) basierend auf vorhandenen Quellen-Text; bitte gegen Manual/Panel verifizieren."
+  ]
+}

@@ -1,0 +1,280 @@
+{
+  "schema_version": "1.3.0",
+  "name": "IFLS MIDI Network Profile (DAW + OXI + Hardware)",
+  "devices": [
+    {
+      "id": "daw",
+      "type": "software",
+      "name": "DAW (REAPER/Ableton)",
+      "clock_role": "master"
+    },
+    {
+      "id": "oxi",
+      "type": "hardware",
+      "name": "OXI One",
+      "clock_role": "slave",
+      "notes": "Set clock source external; avoid clock out loops.",
+      "reaper_out_contains": "mioXM",
+      "reaper_in_contains": "mioXM",
+      "reaper_in_exact": "",
+      "reaper_out_exact": ""
+    },
+    {
+      "id": "fb01",
+      "type": "hardware",
+      "name": "Yamaha FB-01",
+      "rx_sysex": true,
+      "multi_timbre_parts": 8,
+      "default_channels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "connection": "DIN via mioXM DIN C",
+      "reaper_out_contains": "mioXM",
+      "reaper_in_contains": "mioXM",
+      "reaper_in_exact": "",
+      "reaper_out_exact": ""
+    },
+    {
+      "id": "pss580",
+      "type": "hardware",
+      "name": "Yamaha PSS-580",
+      "rx_sysex": true,
+      "default_channel": 1,
+      "banks": 5,
+      "connection": "DIN via mioXM DIN B",
+      "reaper_out_contains": "mioXM",
+      "reaper_in_contains": "mioXM",
+      "reaper_in_exact": "",
+      "reaper_out_exact": ""
+    },
+    {
+      "id": "microfreak",
+      "type": "hardware",
+      "name": "Arturia MicroFreak",
+      "rx_sysex": "via MCC exports",
+      "default_channel": 1,
+      "connection": "DIN/TRS via mioXM DIN A",
+      "reaper_out_contains": "mioXM",
+      "reaper_in_contains": "mioXM",
+      "reaper_in_exact": "",
+      "reaper_out_exact": ""
+    },
+    {
+      "id": "neutron",
+      "type": "hardware",
+      "name": "Behringer Neutron",
+      "rx_sysex": "unknown/limited",
+      "default_channel": 1,
+      "cc_control": "limited; mostly note/clock",
+      "connection": "USB host #2 on mioXM",
+      "reaper_out_contains": "mioXM",
+      "reaper_in_contains": "mioXM",
+      "reaper_in_exact": "",
+      "reaper_out_exact": ""
+    },
+    {
+      "id": "circuit_rhythm",
+      "type": "hardware",
+      "name": "Novation Circuit Rhythm",
+      "rx_sysex": "see programmer reference",
+      "default_channel": 10
+    },
+    {
+      "id": "edge",
+      "type": "hardware",
+      "name": "Behringer EDGE",
+      "rx_sysex": "unknown/none",
+      "default_channel": 10,
+      "connection": "USB host #1 on mioXM",
+      "reaper_out_contains": "mioXM",
+      "reaper_in_contains": "mioXM",
+      "reaper_in_exact": "",
+      "reaper_out_exact": ""
+    }
+  ],
+  "routes": [
+    {
+      "id": "daw_to_oxi",
+      "from": "daw",
+      "to": "oxi",
+      "transport": true,
+      "clock": true,
+      "notes_cc": true,
+      "pc": true,
+      "sysex": false,
+      "filters": {
+        "sysex": "block",
+        "active_sensing": "block",
+        "realtime": {
+          "clock": "allow",
+          "start_stop": "allow"
+        }
+      },
+      "to_port_hint": "mioXM -> OXI (your chosen route)"
+    },
+    {
+      "id": "oxi_to_fb01",
+      "from": "oxi",
+      "to": "fb01",
+      "transport": false,
+      "clock": false,
+      "notes_cc": true,
+      "pc": true,
+      "sysex": false,
+      "filters": {
+        "realtime": {
+          "clock": "block",
+          "start_stop": "block"
+        }
+      },
+      "to_port_hint": "mioXM DIN C"
+    },
+    {
+      "id": "daw_to_fb01_sysex",
+      "from": "daw",
+      "to": "fb01",
+      "transport": false,
+      "clock": false,
+      "notes_cc": false,
+      "pc": false,
+      "sysex": true,
+      "filters": {
+        "sysex": "allow_only_to_fb01",
+        "realtime": {
+          "clock": "block",
+          "start_stop": "block"
+        }
+      },
+      "to_port_hint": "mioXM DIN C"
+    },
+    {
+      "id": "oxi_to_microfreak",
+      "from": "oxi",
+      "to": "microfreak",
+      "transport": false,
+      "clock": false,
+      "notes_cc": true,
+      "pc": true,
+      "sysex": false,
+      "filters": {
+        "realtime": {
+          "clock": "block",
+          "start_stop": "block"
+        }
+      },
+      "to_port_hint": "mioXM DIN A"
+    },
+    {
+      "id": "oxi_to_pss580",
+      "from": "oxi",
+      "to": "pss580",
+      "transport": false,
+      "clock": false,
+      "notes_cc": true,
+      "pc": true,
+      "sysex": false,
+      "filters": {
+        "realtime": {
+          "clock": "block",
+          "start_stop": "block"
+        }
+      },
+      "to_port_hint": "mioXM DIN B"
+    },
+    {
+      "id": "daw_to_pss580_sysex",
+      "from": "daw",
+      "to": "pss580",
+      "transport": false,
+      "clock": false,
+      "notes_cc": false,
+      "pc": false,
+      "sysex": true,
+      "filters": {
+        "sysex": "allow_only_to_pss580",
+        "realtime": {
+          "clock": "block",
+          "start_stop": "block"
+        }
+      },
+      "to_port_hint": "mioXM DIN B"
+    },
+    {
+      "id": "oxi_to_neutron_or_circuit",
+      "from": "oxi",
+      "to": "neutron|circuit_rhythm",
+      "transport": false,
+      "clock": false,
+      "notes_cc": true,
+      "pc": true,
+      "sysex": false,
+      "filters": {
+        "realtime": {
+          "clock": "block",
+          "start_stop": "block"
+        }
+      },
+      "to_port_hint": "mioXM USB host #2 (Neutron) OR other port for Circuit Rhythm"
+    }
+  ],
+  "port_strategy": {
+    "recommended": "port_per_device",
+    "reason": "Avoid channel-mix and SysEx/Clock congestion; easier filtering and debugging."
+  },
+  "port_map": {
+    "mioxm": {
+      "din": {
+        "A": {
+          "role": "PSS-580",
+          "device_id": "pss580"
+        },
+        "B": {
+          "role": "FB-01",
+          "device_id": "fb01"
+        },
+        "C": {
+          "role": "MicroFreak",
+          "device_id": "microfreak",
+          "notes": "MicroFreak uses TRS-MIDI adapter (Type A) to 5-pin DIN. Confirm adapter type; default Type A."
+        },
+        "D": {
+          "role": "spare",
+          "device_id": null
+        }
+      },
+      "usb_host": {
+        "1": {
+          "role": "Behringer EDGE",
+          "device_id": "edge"
+        },
+        "2": {
+          "role": "Behringer Neutron",
+          "device_id": "neutron"
+        },
+        "3": {
+          "role": "OXI One",
+          "device_id": "oxi_one"
+        },
+        "4": {
+          "role": "spare",
+          "device_id": null
+        }
+      }
+    },
+    "daw": {
+      "midi_out": "mioXM aggregate",
+      "midi_in": "mioXM aggregate"
+    }
+  },
+  "reaper_port_matching": {
+    "strategy": "substring",
+    "notes": "Use GetMIDIInputName/GetMIDIOutputName and match by substring. Set per-device 'reaper_out_contains' and 'reaper_in_contains'."
+  }
+}

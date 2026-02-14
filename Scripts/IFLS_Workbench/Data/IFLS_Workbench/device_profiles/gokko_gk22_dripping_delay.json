@@ -1,0 +1,75 @@
+{
+  "id": "gokko_gk22_dripping_delay",
+  "name_de": "GOKKO GK‑22 Dripping Delay",
+  "manufacturer": "GOKKO",
+  "model": "GK-22 Dripping Delay",
+  "priority_group": "fx",
+  "category_de": "Delay",
+  "type_de": "Time FX",
+  "count": 1,
+  "io_raw_de": "Mono In/Out, DC 9V / Batterie",
+  "enriched": true,
+  "manual_sources": [
+    "https://www.gokkoaudio.com/h-pd-5.html",
+    "https://www.effectsdatabase.com/model/gokko/dripping",
+    "https://reverb.com/item/27791016-gokko-audio-dripping-delay-gk-22-pedal-purple"
+  ],
+  "controls": [
+    {
+      "name_en": "LEVEL",
+      "type": "knob",
+      "notes_de": "Level des Delay-Signals (wet)."
+    },
+    {
+      "name_en": "DELAY",
+      "type": "knob",
+      "notes_de": "Delay Time (25–600 ms laut Reverb-Listing)."
+    },
+    {
+      "name_en": "REPEAT",
+      "type": "knob",
+      "notes_de": "Feedback/Repeats."
+    },
+    {
+      "name_en": "Bypass Footswitch",
+      "type": "footswitch",
+      "notes_de": "True bypass."
+    },
+    {
+      "name_en": "Status LED",
+      "type": "led",
+      "notes_de": "Effekt an/aus."
+    },
+    {
+      "name_en": "INPUT/OUTPUT Jacks",
+      "type": "jack",
+      "notes_de": "Mono I/O."
+    },
+    {
+      "name_en": "DC IN 9V",
+      "type": "power",
+      "notes_de": "9V DC."
+    }
+  ],
+  "signal_role": [
+    "delay",
+    "analog_style",
+    "slapback",
+    "ambient",
+    "glitch"
+  ],
+  "variant_notes_de": "Panel-verifiziert (User-Foto): 3 Knobs (Level/Delay/Repeat). Hersteller erwähnt 'optional modulation', aber kein separater Regler/Schalter am Panel.",
+  "controls_verified_by_image": true,
+  "meta": {
+    "controls_completeness": "panel_verified",
+    "manual_verified": false,
+    "panel_verified": true,
+    "manual_enriched_at_utc": "2026-02-01T21:46:39Z",
+    "panel_verified_at_utc": "2026-02-01T22:08:37Z",
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "controls_contextual": {},
+  "warnings_de": [
+    "Power-Specs fehlen (To-do): bitte Manual/Panel/Listing verlinken."
+  ]
+}

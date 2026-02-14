@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "casio_sa_21",
+  "name_de": "Casio SA-21",
+  "manufacturer": "Casio",
+  "model": "SA-21",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Synthesizer & Keyboards",
+    "Unterkategorie": "Keyboard (Home)",
+    "Kategorie-Typ": "Keyboard (Home)"
+  },
+  "priority_group": "synth",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• Output Jack (Headphones/Amp): Zout 100 Ω, 2.0 V RMS max\n• DC In: 7.5 V (AC adaptor jack)\n• Built‑in speakers",
+  "controls_raw_de": "Tone select (2‑digit)\n• Rhythm/Pattern select\n• Tempo\n• Volume\n• Super Accompaniment\n• 5 Percussion Pads",
+  "controls": [
+    {
+      "name_en": "Tone select (2‑digit)",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Rhythm/Pattern select",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Tempo",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Volume",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Super Accompaniment",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "5 Percussion Pads",
+      "type": "unknown",
+      "notes_de": ""
+    }
+  ],
+  "power_raw_de": "DC: 5× AA (SUM‑3/R6P), Batterielaufzeit ca. 6 h\n• AC‑Adapter: Casio AD‑1 (optional), DC 7.5 V\n• Leistungsaufnahme: 1.6 W",
+  "notes_raw_de": "100 Tones\n• 4‑Note Polyphony\n• 19 Auto‑Rhythms + 13 Super Accompaniment Patterns\n• Demo Songs: 5\n• Lautsprecher: 0.5 W + 0.5 W\n• Maße/Gewicht: 612×176×61 mm, 1.2 kg\nQuelle: https://arch.casio-intl.com/asia-mea/en/emi/past/mini/sa21.html ; https://analogrelics.wordpress.com/wp-content/uploads/2011/12/casio-sa-21-manual.pdf",
+  "tech_raw_de": "Mini-Keyboard (Tone Bank), 32 Mini-Keys, 4‑Note Polyphony, 100 Tones",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "source",
+    "pads",
+    "bass",
+    "leads",
+    "drone_source"
+  ],
+  "danger_zones_de": []
+}

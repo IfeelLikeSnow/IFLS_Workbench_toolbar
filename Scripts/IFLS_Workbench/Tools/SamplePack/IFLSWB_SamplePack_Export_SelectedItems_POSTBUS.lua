@@ -1,8 +1,11 @@
+-- @description IFLS Workbench - Tools/SamplePack/IFLSWB_SamplePack_Export_SelectedItems_POSTBUS.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS WB: SamplePack Export POST-BUS (Selected items via master)
 -- @version 1.0.1
 -- @author IFLS Workbench
 -- @about Renders each selected item *via master* (includes FX-Bus -> Coloring -> Master routing), using render bounds=Selected media items and render source=Selected media items via master.
--- @provides [main] .
 
 
 local r = reaper

@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "controls_completeness": "manual_verified",
+    "manual_verified": true,
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "id": "behringer_vp1_vintage_phaser",
+  "name_de": "Behringer VP1 Vintage Phaser",
+  "manufacturer": "Behringer",
+  "model": "VP1 Vintage Phaser",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Effektpedale",
+    "Unterkategorie": "Modulation",
+    "Kategorie-Typ": "Phaser"
+  },
+  "priority_group": "routing",
+  "signal_role": [
+    "modulation",
+    "movement",
+    "phaser"
+  ],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In (TS)\n• Out (TS)",
+  "controls_raw_de": "Rate\n• Tone (Schalter)",
+  "controls": [
+    {
+      "name_en": "RATE",
+      "type": "knob",
+      "notes_de": "Geschwindigkeit des Phaser-LFO."
+    },
+    {
+      "name_en": "TONE",
+      "type": "switch",
+      "notes_de": "Tone-Schalter (Charakter/Voicing)."
+    },
+    {
+      "name_en": "Footswitch",
+      "type": "footswitch",
+      "notes_de": "On/Off."
+    },
+    {
+      "name_en": "Status LED",
+      "type": "led",
+      "notes_de": "Effekt an/aus."
+    },
+    {
+      "name_en": "IN/OUT jacks",
+      "type": "jack",
+      "notes_de": "Mono I/O."
+    }
+  ],
+  "power_raw_de": "≈ 30 mA",
+  "notes_raw_de": "Uni‑Vibe‑Schwebung",
+  "tech_raw_de": "Phaser",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://images.thomann.de/pics/atg/atgdata/document/manual/189490_manual_deu.pdf"
+  ],
+  "enriched": true,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": [],
+  "controls_contextual": {
+    "specs": {
+      "power_v_dc": 9,
+      "polarity": "center_negative"
+    }
+  },
+  "warnings_de": [
+    "Power-Specs ergänzt als Default (9V center-negative) basierend auf vorhandenen Quellen-Text; bitte gegen Manual/Panel verifizieren."
+  ]
+}

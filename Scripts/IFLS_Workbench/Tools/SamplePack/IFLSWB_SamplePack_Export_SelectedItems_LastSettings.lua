@@ -1,8 +1,11 @@
+-- @description IFLS Workbench - Tools/SamplePack/IFLSWB_SamplePack_Export_SelectedItems_LastSettings.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS WB: SamplePack Export (Render selected items via master, last settings)
 -- @version 1.0.0
 -- @author IFLS Workbench
 -- @about Sets render bounds to selected media items, sets output folder/pattern, then triggers "Render project using the most recent render settings" (41824).
--- @provides [main] .
 
 
 local r = reaper

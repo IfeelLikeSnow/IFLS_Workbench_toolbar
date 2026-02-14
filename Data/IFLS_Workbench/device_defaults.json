@@ -1,0 +1,40 @@
+{
+  "version": "1.0",
+  "audio_inputs": {
+    "microfreak": {
+      "name": "MicroFreak",
+      "mode": "mono",
+      "reaper_input": 3
+    },
+    "edge": {
+      "name": "Edge",
+      "mode": "mono",
+      "reaper_input": 4
+    },
+    "neutron": {
+      "name": "Neutron",
+      "mode": "mono",
+      "reaper_input": 5
+    },
+    "pss580": {
+      "name": "PSS-580",
+      "mode": "mono",
+      "reaper_input": 6
+    },
+    "fb01": {
+      "name": "FB-01",
+      "mode": "stereo",
+      "reaper_input_pair": [
+        7,
+        8
+      ]
+    }
+  },
+  "reamp": {
+    "pedal_send": {
+      "reaper_hw_out": 16,
+      "patchbay_channel": 16,
+      "return_reaper_input": 1
+    }
+  }
+}

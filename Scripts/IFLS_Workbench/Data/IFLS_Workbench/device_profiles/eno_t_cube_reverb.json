@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "controls_completeness": "video_verified",
+    "manual_enriched_at_utc": "2026-02-01T21:52:09Z",
+    "video_verified": true,
+    "video_verified_at_utc": "2026-02-02T22:02:41Z",
+    "video_sources": [
+      "Evidence/video_transcripts/eno_reverb_transcript.txt"
+    ],
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "id": "eno_t_cube_reverb",
+  "name_de": "ENO T‑Cube Reverb",
+  "manufacturer": "ENO",
+  "model": "T‑Cube Reverb",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Effektpedale",
+    "Unterkategorie": "Delay & Reverb",
+    "Kategorie-Typ": "Reverb"
+  },
+  "priority_group": "fx",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In (TS)\n• Out (TS)",
+  "controls_raw_de": "Dry/Wet\n• Level\n• Time\n• Mode",
+  "controls": [
+    {
+      "name_en": "LEVEL",
+      "type": "knob",
+      "notes_de": "Ausgangspegel.",
+      "name_de": "Level",
+      "function_de": "Ausgangspegel"
+    },
+    {
+      "name_en": "TIME",
+      "type": "knob",
+      "notes_de": "Decay/Reverb Time.",
+      "name_de": "Time",
+      "function_de": "Reverb-Zeit/Decay (je nach Mode)"
+    },
+    {
+      "name_en": "WAVE-BAND (MODE)",
+      "type": "knob",
+      "notes_de": "Reverb-Mode/Voicing (Room/Spring/Well)."
+    },
+    {
+      "name_en": "DRY/WET",
+      "type": "knob",
+      "notes_de": "Reverb-Anteil (Mix).",
+      "name_de": "Dry/Wet",
+      "function_de": "Dry/Wet-Mix"
+    },
+    {
+      "name_en": "Status LED (color by mode)",
+      "type": "led",
+      "notes_de": "Rot=Room, Grün=Spring, Rot/Grün Mix=Well (laut Listing)."
+    },
+    {
+      "name_en": "Bypass Footswitch",
+      "type": "footswitch",
+      "notes_de": "True bypass."
+    },
+    {
+      "name_en": "INPUT/OUTPUT Jacks",
+      "type": "jack",
+      "notes_de": "Mono I/O."
+    },
+    {
+      "name_en": "DC IN 9V",
+      "type": "power",
+      "notes_de": "9V DC."
+    },
+    {
+      "name_en": "Mode",
+      "type": "switch",
+      "name_de": "Mode",
+      "function_de": "Room / Spring / Well"
+    }
+  ],
+  "power_raw_de": "≈ 50 mA",
+  "notes_raw_de": "Spring/Plate/Room/Hall/Duck/Space",
+  "tech_raw_de": "Mini‑Reverb",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://reverb.com/item/41624113-eno-t-cube-series-reverb-room-well-spring",
+    "https://modulargrid.net/p/eno-music-eno-reverb-guitar-effect-pedal-true-bypass"
+  ],
+  "enriched": false,
+  "best_for_tags": [
+    "glitch",
+    "idmdrums",
+    "pads",
+    "drones"
+  ],
+  "danger_zones_de": [],
+  "variant_notes_de": "Web-verifiziert (Listings): 4 Knobs + LED-Modefarben (Room/Spring/Well). Nicht alle Reverb-Algorithmen/Revisionen eindeutig dokumentiert.",
+  "controls_contextual": {
+    "modes": [
+      "room",
+      "spring",
+      "well"
+    ],
+    "specs": {
+      "power_v_dc": 9,
+      "polarity": "center_negative"
+    }
+  },
+  "warnings_de": [
+    "Volume-Spikes bei Reglerbewegung möglich (Video).",
+    "Output-Drop/Tone-suck möglich, besonders um 12-Uhr-Stellungen (Video).",
+    "Modes klingen im Vergleich eher ähnlich (Video).",
+    "Power-Specs ergänzt als Default (9V center-negative) basierend auf vorhandenen Quellen-Text; bitte gegen Manual/Panel verifizieren."
+  ]
+}

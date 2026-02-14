@@ -1,0 +1,13 @@
+{
+  "created_at_utc": "2026-02-02T22:02:41Z",
+  "sources": [
+    "Evidence/video_transcripts/dolamo_batch_transcript.txt"
+  ],
+  "claims": [
+    {
+      "type": "character",
+      "text": "Mixing Boost can go dirty/noisy; chorus behaves like doubler; orange fuzz is muff-like; trem usable range limited",
+      "confidence": "medium"
+    }
+  ]
+}

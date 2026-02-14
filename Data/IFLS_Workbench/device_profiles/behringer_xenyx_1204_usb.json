@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "behringer_xenyx_1204_usb",
+  "name_de": "Behringer Xenyx 1204 USB",
+  "manufacturer": "Behringer",
+  "model": "Xenyx 1204 USB",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Utility",
+    "Unterkategorie": "Mixer",
+    "Kategorie-Typ": "Mixer"
+  },
+  "priority_group": "routing",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• 4× Mic/Line (XLR/TRS) + 2× Stereo Line (TRS)\n• Main Out L/R (XLR/TRS), Ctrl Room Out\n• 2‑Track In/Out (RCA), Phones\n• USB I/O, Inserts (CH1/2)",
+  "controls_raw_de": "Gain\n• 3‑Band‑EQ\n• Pan\n• Aux\n• Fader",
+  "controls": [
+    {
+      "name_en": "Gain",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "3‑Band‑EQ",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Pan",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Aux",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Fader",
+      "type": "unknown",
+      "notes_de": ""
+    }
+  ],
+  "power_raw_de": "USB ≈ 250 mA / 48 V Phantom\nNetzanschluss (IEC)\n• internes Netzteil\n48 V Phantomspeisung",
+  "notes_raw_de": "4 Preamps, Alt 3/4, Inserts (1/2)",
+  "tech_raw_de": "Analog‑Mixer/USB",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": []
+}

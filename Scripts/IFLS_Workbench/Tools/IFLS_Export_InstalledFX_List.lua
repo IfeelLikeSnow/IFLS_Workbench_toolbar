@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/IFLS_Export_InstalledFX_List.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS: Export Installed FX List (Prefer VST3, dedupe)
 -- @version 1.2
 -- @author IFLS

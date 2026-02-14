@@ -1,0 +1,59 @@
+# V32 Pedal Coverage Report
+
+Timestamp: 2026-02-03T04:30:14Z
+
+## Summary (by tag)
+
+| tag   |   count |
+|:------|--------:|
+| ?     |      13 |
+| MR    |      13 |
+| PV    |      10 |
+| VV    |       2 |
+
+
+## Gaps (needs work)
+
+| id                                      | name                                         | manufacturer        | tag   |   gap_controls_missing_desc | gap_no_power_specs   | gap_no_sources   | notes                                                    |
+|:----------------------------------------|:---------------------------------------------|:--------------------|:------|----------------------------:|:---------------------|:-----------------|:---------------------------------------------------------|
+| danelectro_bacon_n_eggs_dj_16           | Danelectro Bacon ’n’ Eggs (DJ-16)            | Danelectro          | ?     |                           2 | True                 | True             | Tone; Volume                                             |
+| danelectro_fab_fuzz_d_7                 | Danelectro Fab Fuzz (D-7)                    | Danelectro          | ?     |                           3 | True                 | True             | Fuzz; Tone; Volume                                       |
+| danelectro_fab_metal_d_3                | Danelectro Fab Metal (D-3)                   | Danelectro          | ?     |                           3 | True                 | True             | Gain; Tone; Level                                        |
+| digitech_whammy_5                       | DigiTech Whammy 5                            | DigiTech            | ?     |                           0 | True                 | True             |                                                          |
+| electro_harmonix_attack_decay           | Electro‑Harmonix Attack Decay                | Electro‑Harmonix    | ?     |                           3 | True                 | True             | Auto‑Swells; Poly; EXP                                   |
+| golden_bull_tremolo                     | Golden Bull Tremolo                          | Golden Bull         | ?     |                           2 | True                 | True             | Intensity; Rate                                          |
+| irin_talent_octave                      | IRIN Talent Octave                           | IRIN                | ?     |                           4 | True                 | True             | -1 OCT; -2 OCT; +1 OCT; Tone                             |
+| iset_analog_flanger                     | ISET Analog Flanger                          | ISET                | ?     |                           4 | True                 | True             | Rate; Range; Color; Mode (Normal/Filter)                 |
+| mooer_lofi_machine                      | Mooer LoFi Machine                           | Mooer               | ?     |                           0 | True                 | True             |                                                          |
+| mosky_mini_muff                         | Mosky Mini Muff                              | Mosky               | ?     |                           3 | True                 | True             | Volume; Tone; Sustain                                    |
+| nux_mod_core_mk1                        | NUX Mod Core MK1                             | NUX                 | ?     |                           0 | True                 | True             |                                                          |
+| palmer_bertreiber                       | Palmer Übertreiber                           | Palmer              | ?     |                           5 | True                 | True             | Clean; Gain; Tone; Level; Pad-Schalter (Input-Absenkung) |
+| t_rex_tonebug_fuzz                      | T‑Rex ToneBug Fuzz                           | T‑Rex               | ?     |                           3 | True                 | True             | Gain; Level; Tone                                        |
+| aliexpress_mini_crunch_distortion       | AliExpress Mini Crunch Distortion            | AliExpress          | MR    |                           0 | True                 | False            |                                                          |
+| aliexpress_mini_vintage_overdrive       | AliExpress Mini Vintage Overdrive            | AliExpress          | MR    |                           0 | True                 | False            |                                                          |
+| amuzik_oem_rowin_vibrock_re_02          | Amuzik (OEM: Rowin) Vibrock (RE‑02)          | Amuzik (OEM: Rowin) | MR    |                           0 | True                 | True             |                                                          |
+| behringer_bsy600                        | Behringer BSY600                             | Behringer           | MR    |                           0 | True                 | True             |                                                          |
+| behringer_dd400_digital_delay           | Behringer DD400 Digital Delay                | Behringer           | MR    |                           0 | True                 | True             |                                                          |
+| behringer_dr100_digital_reverb          | Behringer DR100 Digital Reverb               | Behringer           | MR    |                           0 | True                 | True             |                                                          |
+| behringer_ut300_ultra_tremolo           | Behringer UT300 Ultra Tremolo                | Behringer           | MR    |                           0 | True                 | True             |                                                          |
+| behringer_vp1_vintage_phaser            | Behringer VP1 Vintage Phaser                 | Behringer           | MR    |                           0 | True                 | True             |                                                          |
+| electro_harmonix_deluxe_memory_boy      | Electro‑Harmonix Deluxe Memory Boy           | Electro‑Harmonix    | MR    |                           0 | True                 | True             |                                                          |
+| electro_harmonix_super_space_drum_pedal | Electro‑Harmonix Super Space Drum (Pedal)    | Electro‑Harmonix    | MR    |                           0 | True                 | True             |                                                          |
+| flamma_fc11_envelope_filter             | Flamma FC11 Envelope Filter                  | Flamma              | MR    |                           0 | True                 | True             |                                                          |
+| oem_mini_tremolo_2knob                  | OEM Mini Tremolo (2-Knob)                    |                     | PV    |                           0 | True                 | True             |                                                          |
+| aroma_amo_3_mario_bit_crusher           | Aroma AMO-3 Mario Bit Crusher                | Aroma               | PV    |                           0 | True                 | True             |                                                          |
+| dolamo_d_10_mixing_boost                | Dolamo D-10 Mixing Boost                     | Dolamo              | PV    |                           0 | True                 | False            |                                                          |
+| eno_tcube_reverb                        | ENO T‑Cube Reverb                            | ENO                 | PV    |                           0 | True                 | True             |                                                          |
+| gokko_gk22_dripping_delay               | GOKKO GK‑22 Dripping Delay                   | GOKKO               | PV    |                           0 | True                 | True             |                                                          |
+| m_vave_elemental                        | M‑VAVE Elemental                             | M‑VAVE              | PV    |                           0 | True                 | False            |                                                          |
+| oem_mini_crunch_distortion_3knob_blue   | OEM Mini Crunch Distortion (3 Knobs) – Blue  | OEM                 | PV    |                           0 | True                 | True             |                                                          |
+| oem_mini_tremolo_2knob_goldenbull       | OEM Mini Tremolo (2 Knobs) – Golden Bull     | OEM                 | PV    |                           0 | True                 | True             |                                                          |
+| oem_mini_overdrive_3knob_green          | OEM Mini Vintage Overdrive (3 Knobs) – Green | OEM                 | PV    |                           0 | True                 | True             |                                                          |
+| eno_t_cube_reverb                       | ENO T‑Cube Reverb                            | ENO                 | VV    |                           0 | True                 | False            |                                                          |
+| ginean_modulator_ringmod                | Ginean Modulator Ringmod                     | Ginean              | VV    |                           4 | True                 | False            | Gain; Level; Freq; Ring                                  |
+
+
+Notes:
+- Tag MR/PV/VV/WV/PM/? reflect verification tier.
+- `controls_missing_desc` counts controls without function/notes fields.
+- `has_specs_power` looks for power specs in controls_contextual.specs.

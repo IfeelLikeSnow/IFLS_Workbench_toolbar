@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "panel_verified": true,
+    "panel_verified_at_utc": "2026-02-01T21:22:43Z",
+    "video_verified": true,
+    "video_verified_at_utc": "2026-02-02T22:02:41Z",
+    "controls_completeness": "panel_verified",
+    "video_sources": [
+      "Evidence/video_transcripts/ocean_verb_transcript.txt"
+    ],
+    "web_sources": [
+      "Evidence/web_sources/v26_sources.md"
+    ],
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "id": "amuzik_oem_rowin_tom_sline_fame_ocean_verb",
+  "name_de": "Amuzik (OEM: Rowin/Tom'sline/Fame) Ocean Verb",
+  "manufacturer": "Amuzik (OEM: Rowin/Tom'sline/Fame)",
+  "model": "Ocean Verb",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Effektpedale",
+    "Unterkategorie": "Delay & Reverb",
+    "Kategorie-Typ": "Reverb"
+  },
+  "priority_group": "routing",
+  "signal_role": [
+    "ambient",
+    "drones",
+    "pads",
+    "reverb",
+    "shimmer",
+    "space"
+  ],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In (TS)\n• Out (TS)",
+  "controls_raw_de": "Mix\n• Tone\n• Decay\n• Mode (Room/Spring/Shimmer)",
+  "controls": [
+    {
+      "name_en": "MIX",
+      "type": "knob",
+      "notes_de": "Wet/Dry Mischung.",
+      "name_de": "Mix",
+      "function_de": "Wet/Dry-Mischung"
+    },
+    {
+      "name_en": "DECAY",
+      "type": "knob",
+      "notes_de": "Reverb Tail / Decay Länge.",
+      "name_de": "Decay",
+      "function_de": "Reverb-Länge/Decay"
+    },
+    {
+      "name_en": "TONE",
+      "type": "knob",
+      "notes_de": "Höhenanteil / Dämpfung.",
+      "name_de": "Tone",
+      "function_de": "Klangfarbe/Filter des Reverbs"
+    },
+    {
+      "name_en": "MODE Toggle (ROOM/SPRING/SHIMMER)",
+      "type": "switch",
+      "notes_de": "Algorithmuswahl."
+    },
+    {
+      "name_en": "Bypass Footswitch",
+      "type": "footswitch",
+      "notes_de": "True bypass."
+    },
+    {
+      "name_en": "Status LED",
+      "type": "led",
+      "notes_de": "Effekt an/aus."
+    },
+    {
+      "name_en": "INPUT/OUTPUT Jacks",
+      "type": "jack",
+      "notes_de": "Mono I/O."
+    },
+    {
+      "name_en": "DC IN 9V",
+      "type": "power",
+      "notes_de": "9V DC (center negative üblich)."
+    },
+    {
+      "name_en": "Mode",
+      "type": "switch",
+      "name_de": "Mode",
+      "function_de": "Reverb-Typ wählen (Room/Spring/Shimmer)"
+    }
+  ],
+  "power_raw_de": "9 V DC (Center‑Negativ)\n• True Bypass",
+  "notes_raw_de": "Mini‑Reverb mit Shimmer‑Algo\nTrue Bypass\n3 Modi: Room\n• Spring\n• Shimmer",
+  "tech_raw_de": "Digital Reverb (Mini)",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://www.capitolguitars.com/tomsline-ocean-verb-digital-reverb-nano-pedal-free-cable/"
+  ],
+  "enriched": true,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": [],
+  "variant_notes_de": "Panel-verifiziert: 3 Modi per Toggle (Room/Spring/Shimmer).",
+  "controls_verified_by_image": true,
+  "controls_contextual": {
+    "mode_switch_map": {
+      "up": "room",
+      "mid": "spring",
+      "down": "shimmer"
+    },
+    "specs": {
+      "power_v_dc": 9,
+      "polarity": "center_negative"
+    }
+  },
+  "warnings_de": [
+    "Shimmer-Intervall/Pitch-Logik nicht verifiziert (noch offen)."
+  ]
+}

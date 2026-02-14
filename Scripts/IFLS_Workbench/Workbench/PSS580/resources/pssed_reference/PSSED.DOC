@@ -1,0 +1,365 @@
+PSSED - A sound editor for Yamaha PSS series keyboards.
+Programmed by Bryan Kennerley. (c) Blue Whale Software 1989.
+A Public Domain program.
+
+14th December, 1989.
+
+    Right, instructions. In case you hadn't realised already, you will only be
+able to use this program if you have an ST with color monitor/TV, a Yamaha PSS
+synth which is capable of sending/receiving midi data and a pair of midi leads.
+This program is only concerned with the creation, editing and librarifying(?)
+sounds for storage in the PSS's 5 synth banks.
+    The program runs in low resolution only but can be called from medium rez.
+PSSED can be placed in any sub-directory (up to a depth of 4 folders) but any
+library files should be in the same directory as the program. I haven't been
+able to test it out on anything other than my 1040 and 1Mb internal drive but
+since all the disk access routines are via GEMDOS there shouldn't be any
+problem.
+    I should make it clear that I own a PSS-680, and I can only vouch for
+matters concerning that model and its manual. If I refer to the manual in this
+text, it will be the 680 manual - other versions may differ so some of my
+writings may not apply. As far as I know PSSED should work with other models in
+the series but if you encounter any problems, either with compatability or
+(shock, horror) bugs, let me know and I will see what I can do.
+    Although the program is called PSSED, this is no reflection on my current
+degree of inebriation. I just thought I'd make that point.
+    When you load the program, you will notice that it uses custom windowing
+routines to replace the rather boring GEM environment. This seems to be rather
+in vogue at the moment, especially amongst sequencers and other music programs.
+I must admit (although it pains me to do so - honest) that even I am surprised
+at how much faster it is than certain programs I could mention. In fact, the
+only operating system routines used are those concerning disk access and a tiny
+bit of initialization. The point is that several sections will operate slightly
+differently from their GEM counterparts, although I have tried to make it
+operate as logically as possible so you should be able to guess how to use it
+to some extent. There are some bits that you won't be able to work out so it is
+important that you read this file in order to get the most out of PSSED.
+
+The Main Screen.
+    This is divided into (1..2..3..4..) eight windows.
+    The top half of the screen is dedicated to the two synthesizer operators,
+the modulator on the left and the carrier on the right - the action of these
+two waves should be described in your manual. Clicking on the title bar of
+these windows will switch between the two variable fields - volume control and
+frequency control. Well that's the idea but I kinda ran out of space so RKS is
+in the frequency window (explained later). The two waves are controlled in
+exactly the same way, as dictated by the variables in these two windows. Each
+variable can be decreased by clicking with the left mouse button and increased
+with the right one. If a stat has an LED next to it, clicking on it will toggle
+between on and off. I will attempt to describe the effects of each of the
+variables in a separate section later on.
+    At the bottom left side of the screen there is another window which
+contains various other stats which wouldn't readily go into the wave windows.
+These too will be described later.
+    The bank selector sits in the middle and operates in a similar manner to
+that on the Yamaha. The bank which is currently active is shown by a little LED
+that lights up next to it. You should note that any changes to a sound are
+permanent unless you have saved the sound in a library or set (keep reading).
+    To the right of the bank display is the midi function window. This contains
+two buttons: one for sending to the keyboard and one for receiving. You can
+transmit the five banks to the synth at any time simply by clicking on the
+'send' button (y'don't say). As well as sending the sound descriptions, PSSED
+will also switch the keyboard to the bank currently selected and displayed on
+screen, although you can of course switch to other banks using the Yam's
+controls. This auto-switching uses midi channel 1 so make sure that the
+keyboard can receive on that channel (refer to manual).
+ Clicking on the midi recieve button brings up another window on screen with
+only one button - cancel. This is a signal for you to invoke the PSS 'memory
+bulk dump' function which is, on the 680 at least, achieved by pressing button
+"e" twice and then pressing "+" (both on the Yam of course). Once this is done,
+the program will return to the main display almost immediately. Clicking on
+'cancel' will abort the operation.
+    Next up is the library switch. Pressing this will take you to a whole new
+screen for filing and naming your sounds. This will be described later.
+    The window on the far right is for the loading and saving of the sounds
+currently in the 5 banks. Both functions are carried out in exactly the same
+way. Clicking on the appropriate button will bring up a custom file selector
+(more later) so enter the filename you want and press 'Return' or click on the
+'OK' button. If you select 'load set' with the right hand mouse button, the
+data will automatically be sent to the synth once loaded. This can be useful if
+you only load the program to switch between two or more frequently used sets.
+    The sets are saved in the same format as they are received from the Yam so
+the files are compatible with the PRO-24 dump module section. I would have
+prefered to give them a .SET extender but that uses .SND - if it's good enough
+for Steinberg it's good enough for lil' ole' me.
+    In the bottom right hand corner of the screen is the credit box. this
+contains a button labelled 'Quit' which when double-clicked will bring up the
+option of leaving PSSED and returning to the desktop. Remember to save your
+work before quitting.
+    At the very bottom of the screen is the scrolly message line which will
+tell you some very interesting things when performing certain operations, but
+mostly just get on your nerves.
+
+The Custom File Selector.
+    This is functionally similar to the GEM file selector but of course does a
+few extra things as well. Across the top you've got the drive selectors. If a
+drive isn't present, the letter will be dark grey; if a drive is present but
+not currently selected, it will be brown and the drive that is currently
+selected is shown by a red letter. They are supposed to look like letters with
+LEDs behind them, or not as the case may be. Click on one to switch to that
+drive. Clicking on the current drive will return to the root directory.
+    The current directory is shown in the directory box (where else?) and the
+filespec is in its usual place. If you click on the directory control bar, you
+can toggle between the filespec "*.*" and whatever extender the current
+operation uses. The list can be scrolled using the on-screen arrows, slowly
+with the left mouse button and quickly with the right. You can't slide the bar
+as with GEM but the fast scroll almost makes up for it. You can select the
+filename by clicking on it or choose it by double-clicking.
+    The 'current selection' box works as you would expect and you can type the
+filename as you will.
+    The OK/cancel box is self-explanatory (I hope).
+    The box down in the bottom right keeps track of the folders that you have
+opened. For the sake of screen space you cannot go deeper than four
+directories. This shouldn't be a problem unless you have a mega-complex
+hard-disk filing system or you enjoy creating sub-directories just for the hell
+of it. As you enter a folder, its name appears in the list and is removed when
+you close it - much simpler than that pathname line in GEM and what's more,
+this doesn't crash. So ends another section.
+
+The Library.
+    Pressing the 'library' button on the main screen will invoke quite a
+complicated looking screen which, not very surprisingly, is the library.
+    PSSED does in fact allow the loading and handling of up to four libraries
+at any one time. A library consists of an 8 character library name and 100
+sound definitions each with a 16 character name. When the program is first
+loaded, the current directory is scanned for libraries which are then installed
+in the program, so if you want a library to be automatically loaded it must be
+in the same directory as the PSSED.TOS file. The file DEFAULT.LIB will always
+be loaded into slot 1 if found. I recommend that you keep a separate library
+for your own sounds rather than adding to the BLUEY (hey, that's me!) file
+because it may get updated at a later date.
+    When the library is entered, or anything altered within it, a search of the
+currently loaded libraries is carried out in an attempt to put names to the
+sounds in the banks. The results of this search are displayed down the left
+hand side of the screen. Each box displays the bank number, the name of the
+library the sound was located in, the name of the sound and the position of the
+sound in the library. If the sound cannot be identified, appropriate messages
+will be shown. It looks more complicated than it is.
+    The main source of action lies in the right half of the screen. The 4
+libraries can be selected by clicking on the 'library' button (top right) with
+the left and right mouse buttons. The current library name is displayed next to
+this button.
+    The library can be scanned by clicking on the 'up' and 'down' buttons,
+slowly with the left mouse button, quickly with the right.
+    You can load a library into or save a library from the current slot by
+pressing the appropriate button below the main display - the current library
+name will be copied into the file selector for convenience. It is all too easy
+to store all your sounds in the library and then forget to save it to disk, so
+make a mental note.
+    The bank data can be sent to the Yam from this screen by clicking on the
+'midi send' button.
+    Now, can you guess what the remaining button labelled 'Exit to Main' is
+for? I thought so.
+    That's a quick overview of the library screen but there isn't any
+immediately obvious way to transfer sounds to and from the library. The method
+I have used takes a bit of getting used to and involves double clicking on the
+library list whilst simultaneously holding a key down. Here's a little table
+that should make things clear.
+
+Left mouse button double-click = save bank to library
+Right mouse button double click = load bank from library
+
+Keypress  Effect
+~~~~~~~~  ~~~~~~
+ 1 = bank 1
+ 2 = bank 2
+ 3 = bank 3
+ 4 = bank 4
+ 5 = bank 5
+ Q = quick load (bank 1-5)
+ D = delete bank
+
+    To load a sound(s) you must always double click on the library list with
+the RIGHT mouse button. The key you hold down will be "1", "2", etc. for single
+banks or "Q" to load a chain of 5 banks (quick load).
+    To save a sound(s) you double click with the LEFT button and follow the
+same key convention as with loading.
+    To delete an entry in a library, simply hold the "D" key down and double
+click on the entry with either mouse button.
+    It sounds rather complicated but once you get used to it it's passable.
+    There is more to come (groan) because of course you will want to name your
+own creations and libraries. This is a bit simpler because all you have to do
+is point at the text you want to change and double-click with either button.
+Type merrily away with full cursor control, backspace and delete and press
+'return' when finished. You can press 'Esc' to blank the entry if you want,
+just like GEM, but remember that any trailing underscores will be replaced by
+spaces. You should also be aware of the fact that while you are in text entry
+mode, you cannot perform any sound load/save/delete operations since these
+would require holding a key down. I think that's all for the library.
+
+Explanations and other gunk.
+    Right, time for a few words about all the variables. I'll take it a window
+at a time. The front panel referred to is the PSS console.
+
+
+First up is the frequency domain window.
+
+Sine: Not on front panel.
+ The shape of the wave does not necessarily have to be a sine curve. By
+using different shaped waves the sound can be changed quite drastically. The
+wave can either be a sine wave, squared sine wave, sine half wave or squared
+sine half wave. Since either wave can take any of these forms, this makes 16
+combinations and since any of these can be of 16 frequencies there are ooh,
+several possible sounds. The trouble is that most of the combinations sound
+plain awful.
+
+Frequency: (4/5) on front panel.
+ This is a measure of the...well, of the frequency of the wave. Doubling
+this number will increase it's pitch by an octave. This does not necessarily
+mean that the final note will be an octave higher because modulation can be
+unpredictable at times.
+
+Fine Detune: Not on front panel.
+ This has the effect of moving the wave slightly off pitch, either up or
+down. This adds a touch more 'body' to the note.
+
+Coarse Detune: Not on front panel.
+ This is similar to fine detune but is either on or off. It raises the
+wave's pitch noticeably and makes it quite definately out of tune. Examples of
+what this can do are (Timpani - Default 66) and (School Piano - Bluey 8).
+
+LKS lo/LKS hi: Not on front panel.
+ These are gonna be real doozies to explain. If you open your manual at the
+pages detailing the System Exclusive data format, in particular the Voice Data
+description you will see a weird little diagram which looks rather like Sir
+Robin Day's neck might if he'd had a few drinks (no slur intended, it's just a
+simile). I'm sure the lines are crooked for a good reason.
+ LKS stands for Level Key Scaling, which put simply means that you can
+change the way volume varies along the length of the keyboard. For example, you
+may want the low notes to be quiet and the high notes to be louder. In this
+case, LKS is your man (or woman). Looking at the diagram (if you haven't got
+one then you're knackered), numbers near the top of the y-axis signify high
+volume while numbers at the bottom signify low volume. The volume of Middle C
+is not affected by LKS. So basically, 0 is very loud and 15 is very quiet.
+Maybe an example will help.
+    Assume that you have set LKS lo to 1 and LKS hi also to 1. The notes down
+the bottom of the keyboard will be very loud, but as you go up the keyboard,
+the notes will become quieter until you reach middle C. Then the notes will
+again become steadily louder, reaching a crescendo at the top end of the
+keyboard.
+    Unfortunately, things are a bit more complicated than that as you will see
+from the diagram (if you have one of course), because LKS hi does not follow a
+particularly regular pattern and most certainly does not guarantee the same
+effect as LKS lo. It's easy enough to just fiddle with it until you get the
+effect you want.
+
+RKS: Not on front panel.
+ This stands for Rate Key Scaling and really belongs in the volume domain.
+It alters the speed at which the volume of the wave changes: 0=none, 3=a lot.
+The higher the number, the more quickly the high notes will attack and decay.
+This simulates the way in which string instruments behave - high tension/high
+pitch notes die much quicker than low tension/low notes. An example of this is
+(Piano 1 - Default 3).
+
+
+Next up is the volume domain window (ADSR).
+
+Attack Rate: (0/1) on front panel.
+    This is the rate at which the note builds up to its maximum volume. High
+values give percussive, stabbing sounds such as a piano hammer hitting the
+string. Lower values mean the wave slowly builds up to a maximum. This can make
+a sound interesting if applied to the modulator wave, making the sound slowly
+change as the key is held down.
+
+Decay 1 Rate: Not on front panel.
+    Once the wave has reached its maximum volume, it can immediately decay to a
+lower level. The speed at which it does this is the Decay 1 Rate.
+
+Decay 1 Level: Not on front panel.
+    The level to which the wave volume drops once the attack has ended. If this
+is set to maximum, no change will be made. If set to zero, the wave will fade
+to silence immediately.
+
+Decay 2 Rate: (2/3) on front panel.
+    Once the volume has dropped to the decay 1 level, it can then fade off once
+more until it has reached silence. This is the rate at which it fades while the
+key is held down.
+
+Release Rate: Not on front panel.
+    This is the rate at which the sound fades when the key is released. A high
+value will make the sound stop dead while a short one will give a long sustain
+effect.
+
+Sustain Release Rate: Not on front panel.
+    This is the special release rate used when Sustain is switched on. It is a
+good idea to keep this value lower than the standard Release Rate just for
+convention's sake.
+
+AM enable: Not on front panel.
+    This enables the AM (Amplitude Modulation) - see next page.
+
+Last up is the general stats window.
+
+Modulation Level: (7) on front panel.
+    This is a measure of the modulator wave's volume and thus how much it
+modulates the carrier wave. This isn't the easiest thing to describe but very
+easy to hear. It can be fun to hook the synth's output to a realtime
+oscilloscope display, such as that in better ST sound samplers, and watch the
+effect of modulation. But perhaps I have a strange idea of fun.
+
+Carrier Level: (8) on front panel.
+    Also called the Total Level, this is a measure of the carrier wave's volume
+and effectively the total volume of the sound.
+
+Feed Back: (6) on front panel.
+    This is a measure of how much the modulator wave modulates itself. This is
+one of the reasons I hated physics at school.
+
+FM level: Not on front panel.
+    (Frequency Modulation) This is the amount that the sound's pitch will
+'warble' when the FM (vibrato) is enabled. A high vibrato level will give an
+effect like (Musical Saw - Default 98) but even that is not the maximum.
+
+AM level: Not on front panel.
+    (Amplitude Modulation) This is the amount that the sound's volume will
+'warble' when the AM is enabled. An example of this is (Tremolo Guitar -
+Default 69).
+
+FM Delay: Not on front panel.
+    This is the amount of time before the FM (vibrato) kicks in. It has no
+bearing on the AM however - this starts as soon as the key is pressed.
+
+FM enable: Vibrato on front panel.
+    This enables the FM (vibrato). Quelle surprise.
+
+Sustain enable: Sustain on front panel
+    This enables the sustain - the sustain release rate will then be used
+instead of the standard release rate.
+
+ -----------------------
+    If you have any comments/criticisms, my address will be coming up in a
+minute. But first, I must tell you about this little idea I have dreamt up,
+entitled the "Be a friend to a programmer scheme". What it entails is this: you
+send me something that might make me happy to be alive, be it money or some
+other interesting item, and if I am suitably impressed (which isn't exactly
+difficult) you will become a "Friend for life". This will entitle you to a
+certificate proclaiming you as such and whatever else I feel appropriate (I'm
+open to suggestions). Then, at any time in the rest of your natural life (and
+of course mine), you will be elligible for hints, help, chat, and attempted
+help with most other needs you may have - all you have to do is ask. Your name
+will also be included on any scrolly messages that I produce in future
+demos/whatever (how can you refuse?). If anybody's would like to see some
+ridiculously interesting source code then I might be able to help you out there
+too. Don't delay, be a friend to a programmer today. I am house-trained,
+reasonably clean, and haven't been known to bite - not as yet anyway. Well, ok,
+but not hard.
+
+Bryan Kennerley,
+Genius & all round nice guy,
+21 Graham Drive,
+Rhyl,
+Clwyd.
+LL18 3RS
+
+    One final comment just for reading to the end of this file. If a window has
+no obvious clickable purpose, try double clicking on it. Remember that there
+are two mouse buttons.
+
+2nd April, 1990
+
+    The original version of PSSED crashed when run on half meg machines. The
+program has been extensively reworked and the bug seems to have been cured. The
+program was shortened by the rewriting and is now packed using 4-pak.
+ Many thanks to F.L.Clarke and Andy Seymour for bringing the problem to my
+attention.
+

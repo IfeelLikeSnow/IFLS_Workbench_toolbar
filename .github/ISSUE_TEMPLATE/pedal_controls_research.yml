@@ -1,0 +1,57 @@
+name: Pedal Controls Research
+description: Verify and capture full control/switch/function set for a pedal profile
+title: "[Pedal Research] <manufacturer> <model>"
+labels: ["pedal-research"]
+body:
+  - type: input
+    id: profile_id
+    attributes:
+      label: Profile ID
+      placeholder: e.g. m_vave_mini_universe
+    validations:
+      required: true
+  - type: input
+    id: profile_path
+    attributes:
+      label: Profile JSON path
+      placeholder: Data/IFLS_Workbench/device_profiles/...
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources (URLs)
+      description: Add manual PDF, manufacturer page, Reverb/eBay listings, YouTube demos, etc.
+      placeholder: |
+        - https://...
+        - https://...
+    validations:
+      required: true
+  - type: textarea
+    id: controls
+    attributes:
+      label: Controls / Switches / Hidden functions (verified)
+      description: List each control and what it does; include any alternate/hold functions.
+      placeholder: |
+        - KNOB: function
+        - SWITCH: positions
+        - FOOTSWITCH: tap/hold/bypass/trails
+    validations:
+      required: true
+  - type: textarea
+    id: power
+    attributes:
+      label: Power / I/O specs
+      placeholder: |
+        - DC: 9V center-negative, xx mA
+        - USB: 5V, xx mA (if any)
+        - I/O: mono/stereo, TRS/TS
+    validations:
+      required: false
+  - type: checkboxes
+    id: done
+    attributes:
+      label: Completion
+      options:
+        - label: Update profile JSON (controls + meta sources) and bump tag to WV/VV/PV/MR as appropriate
+          required: true

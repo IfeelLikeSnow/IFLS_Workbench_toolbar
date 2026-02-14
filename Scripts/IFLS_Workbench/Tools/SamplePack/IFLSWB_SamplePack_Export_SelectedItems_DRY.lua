@@ -1,8 +1,11 @@
+-- @description IFLS Workbench - Tools/SamplePack/IFLSWB_SamplePack_Export_SelectedItems_DRY.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS WB: SamplePack Export DRY (Selected media items)
 -- @version 1.0.1
 -- @author IFLS Workbench
 -- @about Renders each selected item from its media source (no track FX), using render bounds=Selected media items and render source=Selected media items.
--- @provides [main] .
 
 
 local r = reaper

@@ -1,0 +1,33 @@
+name: CI - Validate ReaPack indexes
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+
+      - name: Install reapack-index
+        run: gem install reapack-index
+
+      - name: Generate stable index.xml
+        run: reapack-index .
+
+      - name: Generate nightly index.xml
+        run: |
+          mkdir -p nightly
+          reapack-index . --name "IFLS Workbench (Nightly)" --output nightly/index.xml
+
+      - name: Fail if indexes differ
+        run: |
+          git diff --exit-code index.xml
+          git diff --exit-code nightly/index.xml

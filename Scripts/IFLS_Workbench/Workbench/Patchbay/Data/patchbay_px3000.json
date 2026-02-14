@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "version": "px3000_v1_fixed_pss580_stereo",
+    "generated_utc": "2026-02-09T07:00:37.641724Z",
+    "patchbay_model": "Behringer ULTRAPATCH PRO PX3000",
+    "interface_model": "PreSonus Studio 1824c",
+    "mode_convention": "Inputs are bottom row, Outputs are top row (Front panel); matrix lists rear wiring mapping for labeling."
+  },
+  "channels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "legend": {
+    "symbols": {
+      "✓": "active connection",
+      "x": "no connection"
+    }
+  },
+  "outputs": [
+    {
+      "name": "Presonus Studio 1824c",
+      "patchbay_channels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "name": "DBX 266XS",
+      "patchbay_channels": [
+        9,
+        10
+      ]
+    },
+    {
+      "name": "TC Electronic m350",
+      "patchbay_channels": [
+        12,
+        13
+      ]
+    },
+    {
+      "name": "Behringer ULTRAGAIN PRO MIC2200",
+      "patchbay_channels": [
+        14,
+        15
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "name": "Presonus Studio 1824c",
+      "patchbay_channels": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "name": "SYNTH: Arturia MicroFreak (USB) → Input 3",
+      "patchbay_channels": [
+        3
+      ]
+    },
+    {
+      "name": "SYNTH: Behringer Neutron (USB) → Input 4",
+      "patchbay_channels": [
+        4
+      ]
+    },
+    {
+      "name": "SYNTH: Yamaha PSS-580 R (stereo) → Input 5",
+      "patchbay_channels": [
+        5
+      ]
+    },
+    {
+      "name": "SYNTH: Yamaha FB-01 L → Input 6",
+      "patchbay_channels": [
+        6
+      ]
+    },
+    {
+      "name": "SYNTH: Yamaha FB-01 R → Input 7",
+      "patchbay_channels": [
+        7
+      ]
+    },
+    {
+      "name": "SYNTH: Yamaha PSS-580 L (stereo) → Input 6",
+      "patchbay_channels": [
+        6
+      ]
+    },
+    {
+      "name": "HINWEIS: Behringer Edge (Audio) → PreSonus Input 1 (Front, NICHT Patchbay)",
+      "patchbay_channels": []
+    },
+    {
+      "name": "DBX 266XS",
+      "patchbay_channels": [
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "name": "TC Electronic m350",
+      "patchbay_channels": [
+        12,
+        13
+      ]
+    },
+    {
+      "name": "Behringer ULTRAGAIN PRO MIC2200",
+      "patchbay_channels": [
+        14,
+        15
+      ]
+    },
+    {
+      "name": "Palmer Reamp Box",
+      "patchbay_channels": []
+    },
+    {
+      "name": "Output Patchbay",
+      "patchbay_channels": []
+    },
+    {
+      "name": "Kanal",
+      "patchbay_channels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "name": "Input Patchbay (Synth-Zuspielung → PreSonus Inputs 3–8)",
+      "patchbay_channels": []
+    },
+    {
+      "name": "Kanal",
+      "patchbay_channels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "name": "Hinweis",
+      "patchbay_channels": [
+        1
+      ]
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "controls_completeness": "manual_verified",
+    "manual_verified": true,
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "id": "behringer_bsy600",
+  "name_de": "Behringer BSY600",
+  "manufacturer": "Behringer",
+  "model": "BSY600",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Effektpedale",
+    "Unterkategorie": "Pitch / Synth / Specials",
+    "Kategorie-Typ": "Synth/Mono"
+  },
+  "priority_group": "synth",
+  "signal_role": [
+    "glitch_bass",
+    "special",
+    "synth_fx"
+  ],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In (TS)\n• Out (TS)",
+  "controls_raw_de": "11 Modi\n• EXP",
+  "controls": [
+    {
+      "name_en": "DIRECT",
+      "type": "knob",
+      "notes_de": "Level des direkten Signals."
+    },
+    {
+      "name_en": "EFFECT",
+      "type": "knob",
+      "notes_de": "Level des Synth-Effekts."
+    },
+    {
+      "name_en": "RES",
+      "type": "knob",
+      "notes_de": "Filter-Resonanz."
+    },
+    {
+      "name_en": "DECAY",
+      "type": "knob",
+      "notes_de": "Hüllkurven-Decay/Abklingzeit."
+    },
+    {
+      "name_en": "MODE",
+      "type": "switch",
+      "notes_de": "Synth-Mode Auswahl (mehrere Modi)."
+    },
+    {
+      "name_en": "RANGE",
+      "type": "switch",
+      "notes_de": "Tonhöhen-/Oktavbereich (abhängig vom Mode)."
+    },
+    {
+      "name_en": "Footswitch",
+      "type": "footswitch",
+      "notes_de": "On/Off."
+    }
+  ],
+  "power_raw_de": "9 V DC",
+  "notes_raw_de": "Synth‑Bass/Filter‑FX",
+  "tech_raw_de": "Bass‑Synth (mono)",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://www.woodbrass.com/images/woodbrass/BEHRINGER%2B000%2B52400%2BBSY600.PDF"
+  ],
+  "enriched": true,
+  "best_for_tags": [
+    "source",
+    "pads",
+    "bass",
+    "leads",
+    "drone_source"
+  ],
+  "danger_zones_de": [],
+  "controls_contextual": {
+    "specs": {
+      "power_v_dc": 9,
+      "polarity": "center_negative"
+    }
+  },
+  "warnings_de": [
+    "Power-Specs ergänzt als Default (9V center-negative) basierend auf vorhandenen Quellen-Text; bitte gegen Manual/Panel verifizieren."
+  ]
+}

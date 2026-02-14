@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "controls_completeness": "panel_verified",
+    "manual_enriched_at_utc": "2026-02-01T21:52:09Z",
+    "panel_verified": true,
+    "panel_verified_at_utc": "2026-02-01T22:08:37Z",
+    "manual_verified": false,
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "id": "aroma_amo_3_mario_bit_crusher",
+  "name_de": "Aroma AMO-3 Mario Bit Crusher",
+  "manufacturer": "Aroma",
+  "model": "AMO-3 Mario Bit Crusher",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Effektpedale",
+    "Unterkategorie": "Distortion / Overdrive / Fuzz & Bitcrushing",
+    "Kategorie-Typ": "Bitcrusher/Lo‑Fi"
+  },
+  "priority_group": "routing",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In (TS)\n• Out (TS)",
+  "controls_raw_de": "BitDepth\n• SampleRate\n• Mix\n• LP/BP/HP",
+  "controls": [
+    {
+      "name_en": "MIX",
+      "type": "knob",
+      "notes_de": "Dry/Wet Verhältnis."
+    },
+    {
+      "name_en": "CRUSH",
+      "type": "knob",
+      "notes_de": "Sample-Rate-Reduktion (großer zentraler Regler)."
+    },
+    {
+      "name_en": "BIT",
+      "type": "knob",
+      "notes_de": "Bit-Depth-Reduktion."
+    },
+    {
+      "name_en": "3-way FILTER switch (HP / NORMAL / LP)",
+      "type": "switch",
+      "notes_de": "Filter-Voicing."
+    },
+    {
+      "name_en": "Bypass Footswitch",
+      "type": "footswitch",
+      "notes_de": "True bypass."
+    },
+    {
+      "name_en": "Status LED",
+      "type": "led",
+      "notes_de": "Effekt an/aus."
+    },
+    {
+      "name_en": "INPUT/OUTPUT Jacks",
+      "type": "jack",
+      "notes_de": "Mono I/O."
+    },
+    {
+      "name_en": "DC IN 9V",
+      "type": "power",
+      "notes_de": "9V DC."
+    }
+  ],
+  "power_raw_de": "≈ 20 mA",
+  "notes_raw_de": "8‑Bit-Geratter ↔ Aliasing",
+  "tech_raw_de": "Bitcrusher + SRR",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://www.ebay.de/itm/294931883538",
+    "https://www.amazon.de/-/en/Fragrance-Crusher-Electric-Guitar-Effect/dp/B0BNVKDHYT",
+    "https://www.fruugo.de/aroma-amo-3-mario-bit-crusher-e-gitarre-effekt-pedal-mini-single-effekt-mit-true-bypass/p-371363867",
+    "https://www.tonebox.com/pedal/tomsline-mario-bit-crusher",
+    "https://reverb.com/p/tomsline-amo-3-mario-bit-crusher"
+  ],
+  "enriched": false,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": [],
+  "variant_notes_de": "Panel-verifiziert (User-Foto + Tonebox/Reverb): MIX/CRUSH/BIT + 3-way HP/Normal/LP. Kein zusätzlicher Button bei dieser Revision.",
+  "controls_verified_by_image": true,
+  "controls_contextual": {},
+  "warnings_de": [
+    "Power-Specs fehlen (To-do): bitte Manual/Panel/Listing verlinken."
+  ]
+}

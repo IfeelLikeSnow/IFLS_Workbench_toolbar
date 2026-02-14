@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/IFLS_Export_FX_ParamCatalog_NoMidiCC_Toggles_VST3Preferred.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS: Export FX Param Catalog (No MIDI CC + Toggle Info + Prefer VST3)
 -- @version 1.0
 -- @author IFLS
@@ -12,6 +16,7 @@
 
 local r = reaper
 
+local SafeApply = require("IFLS_Workbench/Engine/IFLS_SafeApply")
 local function esc(s)
   s = tostring(s or "")
   s = s:gsub("\\","\\\\"):gsub("\"","\\\""):gsub("\r","\\r"):gsub("\n","\\n")
@@ -51,7 +56,7 @@ local function append_line(path, s)
   local f = io.open(path, "a")
   if not f then return false end
   f:write(s); f:write("\n"); f:close()
-  return true
+end)
 end
 
 local function write_text(path, s)
@@ -195,10 +200,8 @@ local function main()
   fx = prefer_vst3(fx)
 
   -- create temp track
-  r.Undo_BeginBlock()
-  r.PreventUIRefresh(1)
-
-  local tr_idx = r.CountTracks(0)
+  return SafeApply.run("IFLS: IFLS Export FX ParamCatalog NoMidiCC Toggles VST3Preferred", function()
+local tr_idx = r.CountTracks(0)
   r.InsertTrackAtIndex(tr_idx, true)
   local tr = r.GetTrack(0, tr_idx)
   r.GetSetMediaTrackInfo_String(tr, "P_NAME", "IFLS FX PARAM SCAN (TEMP)", true)
@@ -268,10 +271,7 @@ local function main()
   -- cleanup temp track
   r.DeleteTrack(tr)
 
-  r.PreventUIRefresh(-1)
   r.UpdateArrange()
-  r.Undo_EndBlock("IFLS: Export FX Param Catalog", -1)
-
   write_text(out_stats, json_any({
     started=started, finished=now_iso(),
     total_after_prefer_vst3=#fx,

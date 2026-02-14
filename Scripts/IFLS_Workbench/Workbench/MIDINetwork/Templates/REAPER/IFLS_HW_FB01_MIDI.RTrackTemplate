@@ -1,0 +1,12 @@
+<REAPER_TRACK 0 0 0 0 0 0 0 0 0
+  NAME "HW: Yamaha FB-01 (MIDI Only)"
+  NOTES "Assign MIDI HW output to FB-01 port. Use IFLS FB-01 SysEx tools for dump/recall. Keep clock blocked to FB-01; SysEx only from DAW when needed."
+  VOLPAN 1 0 1 -1
+  MUTESOLO 0 0 0
+  IPHASE 0
+  PLAYOFFS 0 1
+  ISBUS 0 0
+  BUSCOMP 0 0 0 0 0
+  SHOWINMIX 1 0.6667 0.5 1 0.5 0 0
+>
+</REAPER_TRACK>

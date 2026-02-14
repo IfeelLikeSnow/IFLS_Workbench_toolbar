@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "controls_completeness": "manual_verified",
+    "manual_verified": true,
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "id": "behringer_dr100_digital_reverb",
+  "name_de": "Behringer DR100 Digital Reverb",
+  "manufacturer": "Behringer",
+  "model": "DR100 Digital Reverb",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Effektpedale",
+    "Unterkategorie": "Delay & Reverb",
+    "Kategorie-Typ": "Reverb"
+  },
+  "priority_group": "routing",
+  "signal_role": [
+    "drones",
+    "pads",
+    "reverb",
+    "space"
+  ],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In A/B (TS), Out A/B (TS)",
+  "controls_raw_de": "Level\n• Tone\n• Time\n• Mode",
+  "controls": [
+    {
+      "name_en": "LEVEL",
+      "type": "knob",
+      "notes_de": "Reverb Level."
+    },
+    {
+      "name_en": "TONE",
+      "type": "knob",
+      "notes_de": "Klangfarbe/Höhen."
+    },
+    {
+      "name_en": "TIME",
+      "type": "knob",
+      "notes_de": "Reverb Time/Decay."
+    },
+    {
+      "name_en": "MODE",
+      "type": "knob",
+      "notes_de": "Reverb Type (Spring/Plate/Hall/… laut Manual)."
+    },
+    {
+      "name_en": "Footswitch",
+      "type": "footswitch",
+      "notes_de": "On/Off."
+    },
+    {
+      "name_en": "Status LED",
+      "type": "led",
+      "notes_de": "Effekt an/aus."
+    },
+    {
+      "name_en": "Stereo IN/OUT jacks",
+      "type": "jack",
+      "notes_de": "Stereo I/O (je nach Verkabelung)."
+    }
+  ],
+  "power_raw_de": "≈ 90 mA",
+  "notes_raw_de": "Spring/Plate/Hall/Room/Gate/Mod",
+  "tech_raw_de": "Stereo Reverb",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://www.hspshop.it/WebRoot/epagesIT/Shops/167668/5AED/F394/D4A1/B160/556E/0A0A/B011/69A4/DR100_P0415_M_EN.pdf"
+  ],
+  "enriched": true,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": [],
+  "controls_contextual": {
+    "specs": {
+      "power_v_dc": 9,
+      "polarity": "center_negative"
+    }
+  },
+  "warnings_de": [
+    "Power-Specs ergänzt als Default (9V center-negative) basierend auf vorhandenen Quellen-Text; bitte gegen Manual/Panel verifizieren."
+  ]
+}

@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/IFLS_Workbench_Slicing_TailTrim_SelectedItems.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: Trim tails of selected items (AudioAccessor)
 -- @author IFLS / DF95
 -- @version 0.7.6

@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/IFLSWB_Create_Fieldrec_IDM_Template.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: IFLSWB_Create_Fieldrec_IDM_Template
 -- @version 1.0.0
 
@@ -7,6 +11,7 @@
 -- @about
 --   Builds a small track layout for field recordings and IDM slicing workflows.
 local r = reaper
+local SafeApply = require("IFLS_Workbench/Engine/IFLS_SafeApply")
 local proj = 0
 
 local function add_track(name)
@@ -29,9 +34,7 @@ local function make_send(src, dst, vol)
   return send
 end
 
-r.Undo_BeginBlock()
-r.PreventUIRefresh(1)
-
+return SafeApply.run("IFLS: IFLSWB Create Fieldrec IDM Template", function()
 local tr_in    = add_track("FIELDREC_IN")
 local tr_print = add_track("PRINTBUS")
 local tr_slices= add_track("SLICES")
@@ -50,7 +53,4 @@ r.SetMediaTrackInfo_Value(tr_res, "I_RECMON", 1)
 
 r.TrackList_AdjustWindows(false)
 r.UpdateArrange()
-r.PreventUIRefresh(-1)
-r.Undo_EndBlock("Create Fieldrec IDM Template", -1)
-
 r.MB("Template created.\n\nWorkflow:\n1) Drop audio onto FIELDREC_IN.\n2) (Optional) FX on PRINTBUS, record output.\n3) Run SmartSlice on printed items.\n4) Move slices to SLICES track.\n5) Build RS5K Rack from selected slices.\n6) Resample via RESAMPLE BUS.", "IFLSWB Template", 0)

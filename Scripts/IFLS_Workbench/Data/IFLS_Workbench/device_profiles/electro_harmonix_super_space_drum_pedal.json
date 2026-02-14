@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "controls_completeness": "manual_verified",
+    "manual_verified": true,
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "id": "electro_harmonix_super_space_drum_pedal",
+  "name_de": "Electro‑Harmonix Super Space Drum (Pedal)",
+  "manufacturer": "Electro‑Harmonix",
+  "model": "Super Space Drum (Pedal)",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Effektpedale",
+    "Unterkategorie": "Pitch / Synth / Specials",
+    "Kategorie-Typ": "Synth/Mono"
+  },
+  "priority_group": "synth",
+  "signal_role": [
+    "drum_synth",
+    "glitch",
+    "percussion_fx",
+    "sweep"
+  ],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In (TS)\n• Out (TS)",
+  "controls_raw_de": "FREQ\n• TIME\n• SENS\n• VOLUME\n• MOD\n• DEPTH\n• RATE",
+  "controls": [
+    {
+      "name_en": "START",
+      "type": "knob",
+      "notes_de": "Startfrequenz des Sweeps."
+    },
+    {
+      "name_en": "STOP",
+      "type": "knob",
+      "notes_de": "Endfrequenz des Sweeps."
+    },
+    {
+      "name_en": "TIME",
+      "type": "knob",
+      "notes_de": "Sweep-Dauer START→STOP."
+    },
+    {
+      "name_en": "SENS",
+      "type": "knob",
+      "notes_de": "Empfindlichkeit für externen Trigger."
+    },
+    {
+      "name_en": "VOLUME",
+      "type": "knob",
+      "notes_de": "Ausgangspegel."
+    },
+    {
+      "name_en": "MOD Switch (ON/OFF)",
+      "type": "switch",
+      "notes_de": "Modulation aktivieren."
+    },
+    {
+      "name_en": "DEPTH",
+      "type": "knob",
+      "notes_de": "Modulationstiefe."
+    },
+    {
+      "name_en": "RATE",
+      "type": "knob",
+      "notes_de": "Modulationsgeschwindigkeit."
+    },
+    {
+      "name_en": "Trigger Pushbutton",
+      "type": "button",
+      "notes_de": "Manueller Trigger."
+    },
+    {
+      "name_en": "EXT TRIG Input",
+      "type": "jack",
+      "notes_de": "Externer Trigger-Eingang (non-MIDI pad)."
+    },
+    {
+      "name_en": "OUTPUT",
+      "type": "jack",
+      "notes_de": "Audio Out."
+    },
+    {
+      "name_en": "DC IN",
+      "type": "power",
+      "notes_de": "Netzteil."
+    },
+    {
+      "name_en": "BYPASS Footswitch",
+      "type": "footswitch",
+      "notes_de": "Bypass/On."
+    },
+    {
+      "name_en": "Status LED",
+      "type": "led",
+      "notes_de": "Status."
+    }
+  ],
+  "power_raw_de": "≈ 35 mA @ 9 V\n9 V DC (Center‑Neg), ca. 35 mA\nAux‑In & Ext. Trig (6,35 mm)",
+  "notes_raw_de": "Sweep‑Drum, Trigger\nFußtaster startet/stoppt Trigger\nLFO‑Mod (DEPTH/RATE)",
+  "tech_raw_de": "Drum Synth/Pedal",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://www.ehx.com/wp-content/uploads/2021/01/super-space-drum-manual.pdf",
+    "https://www.ehx.com/products/super-space-drum/"
+  ],
+  "enriched": true,
+  "best_for_tags": [
+    "source",
+    "pads",
+    "bass",
+    "leads",
+    "drone_source"
+  ],
+  "danger_zones_de": [
+    "Sehr dynamisch: Output kann peaken – beim Printen Headroom lassen.",
+    "Trigger-Empfindlichkeit (SENS) bei hot signals reduzieren, sonst Doppeltrigger möglich."
+  ],
+  "controls_contextual": {
+    "specs": {
+      "power_v_dc": 9,
+      "polarity": "center_negative"
+    }
+  },
+  "warnings_de": [
+    "Power-Specs ergänzt als Default (9V center-negative) basierend auf vorhandenen Quellen-Text; bitte gegen Manual/Panel verifizieren."
+  ]
+}

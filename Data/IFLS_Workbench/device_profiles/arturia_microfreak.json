@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "arturia_microfreak",
+  "name_de": "Arturia MicroFreak",
+  "manufacturer": "Arturia",
+  "model": "MicroFreak",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Synthesizer & Keyboards",
+    "Unterkategorie": "Synthesizer (Hybrid/Semi‑modular)",
+    "Kategorie-Typ": "Synthesizer (Hybrid/Semi‑modular)"
+  },
+  "priority_group": "synth",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• Outputs: 6,3 mm Line, 3,5 mm Phones\n• CV, Gate, Pressure Out (3,5 mm)\n• MIDI In/Out (TRS‑A), USB\n• Clock Sync In/Out (3,5 mm)",
+  "controls_raw_de": "Osc Type\n• Wave\n• Timbre\n• Shape\n• Cutoff\n• Res\n• EnvAmt\n• ADSR\n• LFO",
+  "controls": [
+    {
+      "name_en": "Osc Type",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Wave",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Timbre",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Shape",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Cutoff",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Res",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "EnvAmt",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "ADSR",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "LFO",
+      "type": "unknown",
+      "notes_de": ""
+    }
+  ],
+  "power_raw_de": "USB 5 V ≈ 150 mA\nUSB 5 V\n• ~150 mA",
+  "notes_raw_de": "Matrix, CV/Gate, Seq\nDigital‑Osc\n• Analog‑Filter\nCV/Gate/Pressure‑Out",
+  "tech_raw_de": "Hybrid Paraphonic Synth",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "source",
+    "pads",
+    "bass",
+    "leads",
+    "drone_source"
+  ],
+  "danger_zones_de": []
+}

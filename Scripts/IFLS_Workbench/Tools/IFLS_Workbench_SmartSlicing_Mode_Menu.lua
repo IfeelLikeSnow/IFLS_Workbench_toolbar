@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/IFLS_Workbench_SmartSlicing_Mode_Menu.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: Smart Slicing Mode Menu (Normal / Clicks&Pops / Drones)
 -- @version 0.7.6
 -- @author IFLS

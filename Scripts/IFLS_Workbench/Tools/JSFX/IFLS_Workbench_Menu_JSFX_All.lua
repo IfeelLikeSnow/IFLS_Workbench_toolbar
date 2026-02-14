@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/JSFX/IFLS_Workbench_Menu_JSFX_All.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench - JSFX Menu (compact launcher)
 -- @version 0.7.9
 -- @author IfeelLikeSnow
@@ -18,6 +22,7 @@
 
 local r = reaper
 
+local SafeApply = require("IFLS_Workbench/Engine/IFLS_SafeApply")
 -- -------------------------
 -- Helpers
 -- -------------------------
@@ -243,16 +248,16 @@ local function try_insert_take(entry)
 end
 
 if choice.kind == "track" then
-  r.Undo_BeginBlock()
-  local idx = try_insert_track(choice.fx)
-  r.Undo_EndBlock("IFLS: Insert JSFX (Track FX): " .. (choice.fx.display or choice.fx.name), -1)
+  return SafeApply.run("IFLS: IFLS Workbench Menu JSFX All", function()
+local idx = try_insert_track(choice.fx)
+  : " .. (choice.fx.display or choice.fx.name), -1)
   if idx < 0 then
     r.ShowMessageBox("Couldn't insert JSFX on track.\nTried:\n  JS: " .. (choice.fx.display or "") .. "\n  JS: " .. (choice.fx.name or ""), "IFLS JSFX Menu", 0)
   end
 elseif choice.kind == "take" then
   r.Undo_BeginBlock()
   local idx, err = try_insert_take(choice.fx)
-  r.Undo_EndBlock("IFLS: Insert JSFX (Take FX): " .. (choice.fx.display or choice.fx.name), -1)
+  : " .. (choice.fx.display or choice.fx.name), -1)
   if idx < 0 then
     r.ShowMessageBox("Couldn't insert JSFX on take.\n" .. (err or "") .. "\nTried:\n  JS: " .. (choice.fx.display or "") .. "\n  JS: " .. (choice.fx.name or ""), "IFLS JSFX Menu", 0)
   end

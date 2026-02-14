@@ -1,0 +1,14 @@
+name: ReaPack Nightly (optional)
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+jobs:
+  nightly:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: (Placeholder) Generate ReaPack index
+        run: |
+          echo "TODO: generate index.xml and update nightly channel"
+          echo "This workflow is a stub. Enable when ready."

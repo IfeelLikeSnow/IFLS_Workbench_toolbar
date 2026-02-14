@@ -1,0 +1,19 @@
+name: luacheck
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  luacheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Lua + Luacheck
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y luarocks lua5.3
+          sudo luarocks install luacheck
+      - name: Run luacheck on scripts
+        run: |
+          luacheck Scripts/IFLS_Workbench --config .luacheckrc

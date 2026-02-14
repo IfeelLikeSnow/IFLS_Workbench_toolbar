@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - IFLS_Workbench_Explode_Fieldrec.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: Explode Fieldrec + Mic FX + Buses
 -- @version 0.1.3
 -- @author I feel like snow

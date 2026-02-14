@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "controls_completeness": "unknown",
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "id": "nux_mod_core_mk1",
+  "name_de": "NUX Mod Core MK1",
+  "manufacturer": "NUX",
+  "model": "Mod Core MK1",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Effektpedale",
+    "Unterkategorie": "Modulation",
+    "Kategorie-Typ": "Modulation (Multi)"
+  },
+  "priority_group": "routing",
+  "signal_role": [
+    "modulation",
+    "movement",
+    "pads",
+    "stereo_fake"
+  ],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In (TS)\n• Out (TS)",
+  "controls_raw_de": "Rate\n• Depth\n• Level\n• Type",
+  "controls": [
+    {
+      "name_en": "RATE",
+      "type": "knob",
+      "notes_de": "Geschwindigkeit der Modulation."
+    },
+    {
+      "name_en": "DEPTH",
+      "type": "knob",
+      "notes_de": "Intensität der Modulation."
+    },
+    {
+      "name_en": "TYPE",
+      "type": "knob",
+      "notes_de": "Wählt Mod-Algorithmus (Chorus/Flanger/Phaser/Tremolo/Rotary/Pan/U-Vibe/Vibrato)."
+    },
+    {
+      "name_en": "LEVEL",
+      "type": "knob",
+      "notes_de": "Output-/Mix-Level (je nach Modell)."
+    },
+    {
+      "name_en": "Footswitch",
+      "type": "footswitch",
+      "notes_de": "On/Off."
+    },
+    {
+      "name_en": "Status LED",
+      "type": "led",
+      "notes_de": "On/Off Anzeige."
+    },
+    {
+      "name_en": "INPUT/OUTPUT Jacks",
+      "type": "jack",
+      "notes_de": "Mono I/O."
+    },
+    {
+      "name_en": "DC IN",
+      "type": "power",
+      "notes_de": "9V DC."
+    }
+  ],
+  "power_raw_de": "≈ 70 mA",
+  "notes_raw_de": "Chorus, Flanger, Rotary …",
+  "tech_raw_de": "Mod‑Multi",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://imagescdn.juno.co.uk/manual/607979-01U.pdf"
+  ],
+  "enriched": true,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": [
+    "Bei manchen Modes kann LEVEL die Lautheit stark ändern – beim Printen Peak checken."
+  ],
+  "controls_contextual": {},
+  "warnings_de": [
+    "Power-Specs fehlen (To-do): bitte Manual/Panel/Listing verlinken."
+  ]
+}

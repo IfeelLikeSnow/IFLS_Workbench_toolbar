@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "panel_verified": true,
+    "panel_verified_at_utc": "2026-02-01T21:25:43Z"
+  },
+  "id": "mini_ab_y_channel_switch",
+  "name_de": "Mini AB/Y Channel Switch",
+  "manufacturer": "Mini",
+  "model": "AB/Y Channel Switch",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Utility",
+    "Unterkategorie": "Signal Routing & Mix",
+    "Kategorie-Typ": "Signal Routing & Mix"
+  },
+  "priority_group": "routing",
+  "signal_role": [
+    "aby",
+    "parallel_fx",
+    "routing",
+    "split"
+  ],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• 1× Input (TS)\n• 2× Output A/B (TS)",
+  "controls_raw_de": "Footswitch\n• A+B Toggle\n• LEDs",
+  "controls": [
+    {
+      "name_en": "Footswitch (A/B/A+B cycle)",
+      "type": "footswitch",
+      "notes_de": "Ein Taster schaltet typischerweise A → B → A+B (abhängig vom OEM)."
+    },
+    {
+      "name_en": "LED A/B (green)",
+      "type": "led",
+      "notes_de": "Statusanzeige für A/B."
+    },
+    {
+      "name_en": "LED A+B (red)",
+      "type": "led",
+      "notes_de": "Statusanzeige für A+B."
+    },
+    {
+      "name_en": "Jacks A, B, Y",
+      "type": "jack",
+      "notes_de": "A & B = I/O je nach Mode; Y = Output (laut Panel)."
+    },
+    {
+      "name_en": "DC IN 9V",
+      "type": "power",
+      "notes_de": "Strom nur für LEDs nötig; Routing oft auch passiv möglich (modellabhängig)."
+    }
+  ],
+  "power_raw_de": "passiv",
+  "notes_raw_de": "A/B/A+B Umschalter",
+  "tech_raw_de": "Router",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://storage.donnermusic.com/user/202308/EC1162_ABY_Box__Manual_V03_190809.pdf"
+  ],
+  "enriched": true,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": [],
+  "variant_notes_de": "Panel-verifiziert: Single-footswitch ABY mit 2 LEDs (A/B grün, A+B rot). OEM kann im Detail variieren.",
+  "controls_verified_by_image": true
+}

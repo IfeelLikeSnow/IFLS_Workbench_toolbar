@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "boredbrain_patchulator_8000",
+  "name_de": "Boredbrain Patchulator 8000",
+  "manufacturer": "Boredbrain",
+  "model": "Patchulator 8000",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Utility",
+    "Unterkategorie": "Patchbay",
+    "Kategorie-Typ": "Patchbay"
+  },
+  "priority_group": "routing",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• 8× Send/Return (je 2× 6,3 mm)\n• 8× Mini‑Patchpunkte (3,5 mm)",
+  "controls_raw_de": "8 Kanäle / 16 Patchpunkte",
+  "controls": [
+    {
+      "name_en": "8 Kanäle / 16 Patchpunkte",
+      "type": "unknown",
+      "notes_de": ""
+    }
+  ],
+  "power_raw_de": "passiv",
+  "notes_raw_de": "Schnell‑Routing",
+  "tech_raw_de": "Patchbay (Desktop)",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": []
+}

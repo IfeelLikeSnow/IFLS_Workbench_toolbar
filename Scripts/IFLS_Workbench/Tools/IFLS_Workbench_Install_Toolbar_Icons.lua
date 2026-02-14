@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/IFLS_Workbench_Install_Toolbar_Icons.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: Install toolbar icons (copy into REAPER/Data/toolbar_icons)
 -- @version 0.7.6
 -- @author IFLS

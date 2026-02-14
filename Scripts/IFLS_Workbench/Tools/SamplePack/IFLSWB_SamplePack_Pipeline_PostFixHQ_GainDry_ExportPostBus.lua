@@ -1,8 +1,11 @@
+-- @description IFLS Workbench - Tools/SamplePack/IFLSWB_SamplePack_Pipeline_PostFixHQ_GainDry_ExportPostBus.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS WB: SamplePack Pipeline (PostFix HQ -> GainStage DRY -> Export POST-BUS)
 -- @version 1.0.0
 -- @author IFLS Workbench
 -- @about Runs: PostFix HQ (extend+tail-detect) -> GainStage DRY (peak -3) -> Export POST-BUS (selected items via master: FX-Bus -> Coloring -> Master).
--- @provides [main] .
 
 
 local r = reaper

@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/IFLS_Workbench_Dump_All_FX_Params_EnumInstalledFX_PreferVST3_StrongMatch_Resume_CSV_NDJSON.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: IFLS_Workbench_Dump_All_FX_Params_EnumInstalledFX_PreferVST3_StrongMatch_Resume_CSV_NDJSON
 -- @version 1.0.0
 
@@ -15,6 +19,7 @@
 
 local r = reaper
 
+local SafeApply = require("IFLS_Workbench/Engine/IFLS_SafeApply")
 -- Paths (declared early so helper closures capture locals)
 local progress_js, progress_done_txt, cursor_txt
 
@@ -50,7 +55,7 @@ local function should_skip_fx(fx)
   local t = (fx.fx_type or ""):upper()
   if (t == "VST3" and not SCAN_VST3) or (t == "VST" and not SCAN_VST2) or (t == "JS" and not SCAN_JSFX)
      or (t == "CLAP" and not SCAN_CLAP) or (t == "AU" and not SCAN_AU) or (t == "DX" and not SCAN_DX) then
-    return true
+end)
   end
 
   -- skip explicit blacklist entries
@@ -334,9 +339,7 @@ table.sort(final_list, function(a,b) return (a.name:lower() < b.name:lower()) en
 ----------------------------------------------------------------
 -- Prepare temp track & outputs
 ----------------------------------------------------------------
-r.Undo_BeginBlock()
-r.PreventUIRefresh(1)
-
+return SafeApply.run("IFLS: IFLS Workbench Dump All FX Params EnumInstalledFX PreferVST3 StrongMatch Resume CSV NDJSON", function()
 local proj = 0
 local track_count = r.CountTracks(proj)
 r.InsertTrackAtIndex(track_count, true)
@@ -413,8 +416,7 @@ local f_fail    = io.open(failures_tx, file_exists(failures_tx) and "a" or "w")
 
 if not f_plugins or not f_params or not f_ndjson or not f_fail then
   r.DeleteTrack(tmp_tr)
-  r.PreventUIRefresh(-1)
-  r.Undo_EndBlock("DF95 Param Dump V3 (failed open files)", -1)
+  ", -1)
   r.MB("Could not open output files in:\n" .. out_dir, "DF95 Param Dump V3", 0)
   return
 end
@@ -732,15 +734,12 @@ f_ndjson:close()
 f_fail:close()
 
 r.DeleteTrack(tmp_tr)
-r.PreventUIRefresh(-1)
 if auto_rerun then
   local _, _, _, cmdID = r.get_action_context()
   if cmdID and cmdID ~= 0 then
     r.defer(function() r.Main_OnCommand(cmdID, 0) end)
   end
 end
-
-r.Undo_EndBlock("IFLS Workbench Param Dump", -1)
 
 if (not auto_rerun) and SHOW_FINAL_SUMMARY then
   local total_n  = tonumber(total) or (final_list and #final_list) or 0

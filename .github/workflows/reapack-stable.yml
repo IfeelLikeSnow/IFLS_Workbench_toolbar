@@ -1,0 +1,15 @@
+name: ReaPack Stable (optional)
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*"
+jobs:
+  stable:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: (Placeholder) Publish stable ReaPack index
+        run: |
+          echo "TODO: publish stable index.xml from tag"
+          echo "This workflow is a stub. Enable when ready."

@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/IFLS_Workbench_Select_Items_On_IFLS_Slices_Tracks.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: Select all items on IFLS Slices tracks
 -- @version 0.7.6
 -- @author IFLS
@@ -7,6 +11,7 @@
 
 
 local r = reaper
+local SafeApply = require("IFLS_Workbench/Engine/IFLS_SafeApply")
 local PREFIX = "IFLS Slices"
 
 local function track_name(tr)
@@ -18,10 +23,8 @@ local function main()
   local n = r.CountTracks(0)
   if n == 0 then return end
 
-  r.Undo_BeginBlock()
-  r.PreventUIRefresh(1)
-
-  r.Main_OnCommand(40289, 0) -- Unselect all items
+  return SafeApply.run("IFLS: IFLS Workbench Select Items On IFLS Slices Tracks", function()
+r.Main_OnCommand(40289, 0) -- Unselect all items
 
   local selected = 0
   for i=0,n-1 do
@@ -37,9 +40,8 @@ local function main()
     end
   end
 
-  r.PreventUIRefresh(-1)
   r.UpdateArrange()
-  r.Undo_EndBlock("IFLS: Select items on IFLS Slices tracks ("..selected..")", -1)
+  ", -1)
 end
 
 main()

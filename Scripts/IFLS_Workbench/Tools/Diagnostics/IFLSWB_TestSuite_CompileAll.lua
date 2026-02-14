@@ -1,8 +1,11 @@
+-- @description IFLS Workbench - Tools/Diagnostics/IFLSWB_TestSuite_CompileAll.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLSWB TestSuite - Compile all Lua scripts in a repo folder
 -- @version 1.0.0
 -- @author IFLS
 -- @about Scans a repo root and tries to load/compile every *.lua (no execution). Prints FAIL list to console.
--- @provides [main] .
 
 
 -- Set this to your repo root (absolute path). Example:

@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/ifls_workbench_data.schema.json",
+  "title": "IFLS Workbench Data",
+  "type": "object",
+  "oneOf": [
+    { "$ref": "#/$defs/GearFile" },
+    { "$ref": "#/$defs/PatchbayFile" }
+  ],
+  "$defs": {
+    "Meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "generated_at_utc", "source_files"],
+      "properties": {
+        "schema_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+        "generated_at_utc": { "type": "string", "format": "date-time" },
+        "source_files": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1
+        }
+      }
+    },
+
+    "GearItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "main_category",
+        "sub_category",
+        "category_type",
+        "manufacturer",
+        "model",
+        "count"
+      ],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "main_category": { "type": "string" },
+        "sub_category": { "type": "string" },
+        "category_type": { "type": "string" },
+        "manufacturer": { "type": "string" },
+        "model": { "type": "string" },
+        "count": { "type": "integer", "minimum": 0 },
+
+        "io_text": { "type": "string", "default": "" },
+        "controls_text": { "type": "string", "default": "" },
+        "power_text": { "type": "string", "default": "" },
+        "notes_text": { "type": "string", "default": "" },
+        "tech_text": { "type": "string", "default": "" },
+
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": []
+        }
+      }
+    },
+
+    "GearFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["meta", "gear"],
+      "properties": {
+        "meta": { "$ref": "#/$defs/Meta" },
+        "gear": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/GearItem" }
+        }
+      }
+    },
+
+    "PatchMark": {
+      "type": "string",
+      "enum": ["none", "present", "left", "right", "sidechain_in", "unknown"]
+    },
+
+    "PatchbayMatrix": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["channels", "devices"],
+      "properties": {
+        "channels": {
+          "type": "array",
+          "items": { "type": "integer", "minimum": 1 }
+        },
+        "devices": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name", "map"],
+            "properties": {
+              "name": { "type": "string", "minLength": 1 },
+              "map": {
+                "type": "object",
+                "additionalProperties": { "$ref": "#/$defs/PatchMark" },
+                "propertyNames": { "pattern": "^[0-9]+$" }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "PatchbayFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["meta", "outputs"],
+      "properties": {
+        "meta": { "$ref": "#/$defs/Meta" },
+        "outputs": { "$ref": "#/$defs/PatchbayMatrix" },
+        "inputs": { "$ref": "#/$defs/PatchbayMatrix" }
+      }
+    }
+  }
+}

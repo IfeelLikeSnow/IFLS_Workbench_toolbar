@@ -1,0 +1,12 @@
+<REAPER_TRACK 0 0 0 0 0 0 0 0 0
+  NAME "HW: Yamaha PSS-580 (MIDI Only)"
+  NOTES "Assign MIDI HW output to PSS-580 port. Use IFLS PSS580 tools for bank/patch recall. Keep SysEx route dedicated."
+  VOLPAN 1 0 1 -1
+  MUTESOLO 0 0 0
+  IPHASE 0
+  PLAYOFFS 0 1
+  ISBUS 0 0
+  BUSCOMP 0 0 0 0 0
+  SHOWINMIX 1 0.6667 0.5 1 0.5 0 0
+>
+</REAPER_TRACK>

@@ -1,0 +1,27 @@
+{
+  "id": "glitch_idm_drums",
+  "intent_de": "Rhythmische Zerstörung + Micro-Variation (IDM/Glitch Drums)",
+  "intent_en": "Rhythmic destruction + micro-variation for IDM/Glitch drums",
+  "targets": [
+    "bd",
+    "sd",
+    "hh",
+    "toms",
+    "fx"
+  ],
+  "recommended_roles": [
+    "gate",
+    "compressor",
+    "lofi",
+    "bitcrusher",
+    "ring_mod",
+    "pitch",
+    "delay",
+    "reverb"
+  ],
+  "routing_template": "interface_out -> reamp (optional) -> fx_chain -> di -> interface_in",
+  "notes_de": [
+    "Drum-Elemente getrennt schicken: HH/perc profitieren stark von Bitcrusher + RingMod.",
+    "Gate vor LoFi hält Transienten tight; Delay/Reverb danach erzeugen Artefakt-Tails."
+  ]
+}

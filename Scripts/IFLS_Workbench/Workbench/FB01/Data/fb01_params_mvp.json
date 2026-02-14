@@ -1,0 +1,263 @@
+{
+  "meta": {
+    "version": "0.90.0",
+    "source": "Derived from open-source FB-01 editors (juhakivekas/LasDesu)",
+    "value_encoding": "voice/operator use nibble-split 8-bit; instrument uses 7-bit"
+  },
+  "voice_params": [
+    {
+      "id": 0,
+      "name": "Algorithm",
+      "param": 0
+    },
+    {
+      "id": 1,
+      "name": "Feedback",
+      "param": 1
+    },
+    {
+      "id": 2,
+      "name": "Transpose",
+      "param": 2
+    },
+    {
+      "id": 3,
+      "name": "Poly/Mono",
+      "param": 3
+    },
+    {
+      "id": 4,
+      "name": "Portamento",
+      "param": 4
+    },
+    {
+      "id": 5,
+      "name": "Pitch Bend Range",
+      "param": 5
+    },
+    {
+      "id": 6,
+      "name": "Controller Set",
+      "param": 6
+    },
+    {
+      "id": 7,
+      "name": "LFO Speed",
+      "param": 7
+    },
+    {
+      "id": 8,
+      "name": "LFO Wave",
+      "param": 8
+    },
+    {
+      "id": 9,
+      "name": "LFO Load",
+      "param": 9
+    },
+    {
+      "id": 10,
+      "name": "LFO Key Sync",
+      "param": 10
+    },
+    {
+      "id": 11,
+      "name": "LFO AMD",
+      "param": 11
+    },
+    {
+      "id": 12,
+      "name": "LFO AMS",
+      "param": 12
+    },
+    {
+      "id": 13,
+      "name": "LFO PMD",
+      "param": 13
+    },
+    {
+      "id": 14,
+      "name": "LFO PMS",
+      "param": 14
+    },
+    {
+      "id": 15,
+      "name": "Enable OP1",
+      "param": 15
+    },
+    {
+      "id": 16,
+      "name": "Enable OP2",
+      "param": 16
+    },
+    {
+      "id": 17,
+      "name": "Enable OP3",
+      "param": 17
+    },
+    {
+      "id": 18,
+      "name": "Enable OP4",
+      "param": 18
+    }
+  ],
+  "operator_params": [
+    {
+      "id": 0,
+      "name": "Volume",
+      "param": 0
+    },
+    {
+      "id": 1,
+      "name": "Level Curb",
+      "param": 1
+    },
+    {
+      "id": 2,
+      "name": "Level Velocity",
+      "param": 2
+    },
+    {
+      "id": 3,
+      "name": "Level Depth",
+      "param": 3
+    },
+    {
+      "id": 4,
+      "name": "Adjust",
+      "param": 4
+    },
+    {
+      "id": 5,
+      "name": "Fine",
+      "param": 5
+    },
+    {
+      "id": 6,
+      "name": "Multiple",
+      "param": 6
+    },
+    {
+      "id": 7,
+      "name": "Rate Depth",
+      "param": 7
+    },
+    {
+      "id": 8,
+      "name": "Attack",
+      "param": 8
+    },
+    {
+      "id": 9,
+      "name": "Modulator",
+      "param": 9
+    },
+    {
+      "id": 10,
+      "name": "Attack Velocity",
+      "param": 10
+    },
+    {
+      "id": 11,
+      "name": "Decay 1",
+      "param": 11
+    },
+    {
+      "id": 12,
+      "name": "Coarse",
+      "param": 12
+    },
+    {
+      "id": 13,
+      "name": "Decay 2",
+      "param": 13
+    },
+    {
+      "id": 14,
+      "name": "Sustain",
+      "param": 14
+    },
+    {
+      "id": 15,
+      "name": "Release",
+      "param": 15
+    }
+  ],
+  "instrument_params": [
+    {
+      "id": 0,
+      "name": "MIDI Channel",
+      "param": 0
+    },
+    {
+      "id": 1,
+      "name": "Lowest Note",
+      "param": 1
+    },
+    {
+      "id": 2,
+      "name": "Highest Note",
+      "param": 2
+    },
+    {
+      "id": 3,
+      "name": "Bank",
+      "param": 3
+    },
+    {
+      "id": 4,
+      "name": "Voice",
+      "param": 4
+    },
+    {
+      "id": 5,
+      "name": "Volume",
+      "param": 5
+    },
+    {
+      "id": 6,
+      "name": "Pan",
+      "param": 6
+    },
+    {
+      "id": 7,
+      "name": "Detune",
+      "param": 7
+    },
+    {
+      "id": 8,
+      "name": "Transpose",
+      "param": 8
+    },
+    {
+      "id": 9,
+      "name": "Output Assign",
+      "param": 9
+    },
+    {
+      "id": 10,
+      "name": "LFO Enable",
+      "param": 10
+    },
+    {
+      "id": 11,
+      "name": "Portamento Enable",
+      "param": 11
+    },
+    {
+      "id": 12,
+      "name": "Pitch Bend Enable",
+      "param": 12
+    },
+    {
+      "id": 13,
+      "name": "Aftertouch Enable",
+      "param": 13
+    },
+    {
+      "id": 14,
+      "name": "Mod Wheel Enable",
+      "param": 14
+    }
+  ]
+}

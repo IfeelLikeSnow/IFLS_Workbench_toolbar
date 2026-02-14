@@ -1,0 +1,48 @@
+version: 1.0.0
+// @description IFLS_Workbench_IDM_Chopper.jsfx
+// @version 0.0.1
+
+desc:IFLS Workbench - IDM Chopper (tempo-synced gate)
+author: DF95
+version: 1.0
+
+slider1:16<1,32,1>Note division (1/x)
+slider2:1<0,1,0.01>Depth
+slider3:0.5<0,1,0.01>Pulse width
+slider4:0.1<0,1,0.01>Smoothing
+slider5:1<0,1,1>Random phase on play
+
+@init
+phase = 0;
+last_play_state = -1;
+smooth_env = 0;
+
+@slider
+rate_div  = max(1, slider1);
+depth     = slider2;
+pw        = slider3;
+smooth    = slider4;
+rand_on   = slider5|0;
+
+@block
+bpm       = tempo > 0 ? tempo : 120;
+freq      = (bpm / 60) * rate_div;
+
+(play_state != last_play_state) && (play_state == 1 || play_state == 2) ? (
+  rand_on ? phase = rand(1) : 0;
+);
+last_play_state = play_state;
+
+@sample
+phase += freq / srate;
+phase >= 1 ? phase -= floor(phase);
+
+gate = (phase < pw) ? 1 : 0;
+
+smooth_coef = smooth;
+smooth_env = smooth_env + (gate - smooth_env) * (1 - smooth_coef);
+
+g = 1 - depth + depth * smooth_env;
+
+spl0 *= g;
+spl1 *= g;

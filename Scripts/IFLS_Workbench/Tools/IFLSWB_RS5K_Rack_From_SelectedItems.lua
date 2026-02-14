@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/IFLSWB_RS5K_Rack_From_SelectedItems.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: IFLSWB_RS5K_Rack_From_SelectedItems
 -- @version 1.0.0
 
@@ -8,6 +12,7 @@
 --   Creates a new track "RS5K Rack" and inserts one ReaSamplOmatic5000 instance per selected item,--   loading the item's source file into FILE0 and committing via "DONE".--   Note: mapping (note ranges) is left at defaults; adjust within RS5K or extend this script later.
 local r = reaper
 
+local SafeApply = require("IFLS_Workbench/Engine/IFLS_SafeApply")
 local function get_take_source_path(take)
   local src = r.GetMediaItemTake_Source(take)
   if not src then return nil end
@@ -21,9 +26,7 @@ local proj = 0
 local n = r.CountSelectedMediaItems(proj)
 if n == 0 then r.MB("Select sliced items first.", "RS5K Rack", 0) return end
 
-r.Undo_BeginBlock()
-r.PreventUIRefresh(1)
-
+return SafeApply.run("IFLS: IFLSWB RS5K Rack From SelectedItems", function()
 local idx = r.CountTracks(proj)
 r.InsertTrackAtIndex(idx, true)
 local tr = r.GetTrack(proj, idx)
@@ -44,5 +47,3 @@ end
 
 r.TrackList_AdjustWindows(false)
 r.UpdateArrange()
-r.PreventUIRefresh(-1)
-r.Undo_EndBlock("Build RS5K Rack from selected items", -1)

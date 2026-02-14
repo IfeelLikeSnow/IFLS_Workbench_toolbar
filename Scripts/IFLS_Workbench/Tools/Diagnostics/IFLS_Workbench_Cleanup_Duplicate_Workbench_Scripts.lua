@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/Diagnostics/IFLS_Workbench_Cleanup_Duplicate_Workbench_Scripts.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS: Cleanup helper (find duplicate IFLS scripts)
 -- @version 0.1
 -- @author I feel like snow

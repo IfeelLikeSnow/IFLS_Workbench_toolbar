@@ -1,0 +1,16 @@
+{
+  "id": "glitch_idm_bd",
+  "title_de": "Glitch/IDM Drums – Kick (BD)",
+  "intent_de": "Glitch/IDM Drums",
+  "focus": "bd",
+  "recommended_roles": [
+    "gate",
+    "lofi",
+    "distortion",
+    "delay",
+    "reverb",
+    "modulation"
+  ],
+  "notes_de": "Variante fokussiert auf bd. Nutze 'Only panel-verified devices' für OEM-Minis.",
+  "created_at_utc": "2026-02-01T21:46:39Z"
+}

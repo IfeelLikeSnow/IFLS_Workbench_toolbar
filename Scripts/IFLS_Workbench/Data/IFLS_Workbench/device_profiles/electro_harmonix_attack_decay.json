@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "controls_completeness": "unknown",
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "id": "electro_harmonix_attack_decay",
+  "name_de": "Electro‑Harmonix Attack Decay",
+  "manufacturer": "Electro‑Harmonix",
+  "model": "Attack Decay",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Effektpedale",
+    "Unterkategorie": "Pitch / Synth / Specials",
+    "Kategorie-Typ": "Envelope/Attack‑Decay"
+  },
+  "priority_group": "synth",
+  "signal_role": [
+    "envelope",
+    "glitch",
+    "pads",
+    "drones"
+  ],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In (TS)\n• Out (TS)",
+  "controls_raw_de": "Auto‑Swells\n• Poly\n• EXP",
+  "controls": [
+    {
+      "name_en": "Auto‑Swells",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Poly",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "EXP",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Attack",
+      "type": "knob",
+      "notes_de": "Einschwingzeit / Fade-in."
+    },
+    {
+      "name_en": "Decay",
+      "type": "knob",
+      "notes_de": "Ausklingzeit / Fade-out."
+    },
+    {
+      "name_en": "Poly",
+      "type": "switch",
+      "notes_de": "Separate Hüllkurve pro Note."
+    },
+    {
+      "name_en": "Effects Loop (Return)",
+      "type": "routing",
+      "notes_de": "Envelope auf externes Signal im Return legen."
+    },
+    {
+      "name_en": "Expression/CV/Clock input",
+      "type": "cv",
+      "notes_de": "Externe Steuerung/Clock."
+    }
+  ],
+  "power_raw_de": "9 V DC",
+  "notes_raw_de": "Envelope‑Shaping/Swells",
+  "tech_raw_de": "Vol‑Env + Fuzz",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://www.ehx.com/wp-content/uploads/2021/01/attack-decay-manual.pdf",
+    "https://www.ehx.com/products/attack-decay/"
+  ],
+  "enriched": true,
+  "best_for_tags": [
+    "source",
+    "pads",
+    "bass",
+    "leads",
+    "drone_source"
+  ],
+  "danger_zones_de": [],
+  "controls_contextual": {},
+  "warnings_de": [
+    "Power-Specs fehlen (To-do): bitte Manual/Panel/Listing verlinken."
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "casio_vl_1_vl_tone",
+  "name_de": "Casio VL-1 (VL-Tone)",
+  "manufacturer": "Casio",
+  "model": "VL-1 (VL-Tone)",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Synthesizer & Keyboards",
+    "Unterkategorie": "Keyboard (Home)",
+    "Kategorie-Typ": "Keyboard (Home)"
+  },
+  "priority_group": "synth",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• Audio Out (6,3 mm)\n• Phones (3,5 mm)\n• MIDI/USB (ggf. CV/Gate)",
+  "controls_raw_de": "Oktavschalter (3)\n• 5 Presets + ADSR User (Code: Wave, A/D/S/R, Vibrato, Tremolo)\n• 10 Rhythmen\n• Sequencer (~100 Noten)",
+  "controls": [
+    {
+      "name_en": "Oktavschalter (3)",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "5 Presets + ADSR User (Code: Wave, A/D/S/R, Vibrato, Tremolo)",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "10 Rhythmen",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Sequencer (~100 Noten)",
+      "type": "unknown",
+      "notes_de": ""
+    }
+  ],
+  "power_raw_de": "4×AA oder 6 V DC Netzteil",
+  "notes_raw_de": "Kultklassiker („Da Da Da“)\n• Rechnen + Spielen\n• VL‑Tone-Reihe\nADSR User-Tone (über Taschenrechner-Modus):\n• Code 1: Waveform (1=Pulse, 2=Square, 3=Saw, 4=Brass, 5=Piano)\n• Code 2: Attack (0–9)\n• Code 3: Decay (0–9)\n• Code 4: Sustain (0–9)\n• Code 5: Release (0–9)\n• Code 6: Vibrato (0=aus, 1=ein)\n• Code 7: Tremolo (0=aus, 1=ein)\n→ Eingabe: [CAL]-Taste, Code eingeben, dann [M+], um Klang zu speichern.",
+  "tech_raw_de": "Mini-Keyboard/Calculator, monophon, 29 Tasten",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "source",
+    "pads",
+    "bass",
+    "leads",
+    "drone_source"
+  ],
+  "danger_zones_de": []
+}

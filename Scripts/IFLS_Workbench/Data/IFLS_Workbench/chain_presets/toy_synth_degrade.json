@@ -1,0 +1,23 @@
+{
+  "id": "toy_synth_degrade",
+  "intent_de": "Toy-Synth ‘Degrade’ (LoFi + Pitch + Time)",
+  "intent_en": "Toy synth degrade chain (LoFi + pitch + time)",
+  "targets": [
+    "toy_synth",
+    "mono_synth",
+    "one_shots"
+  ],
+  "recommended_roles": [
+    "lofi",
+    "bitcrusher",
+    "pitch",
+    "chorus",
+    "delay",
+    "reverb"
+  ],
+  "routing_template": "toy_synth_out -> reamp/level_match -> lofi -> pitch -> time_fx -> return",
+  "notes_de": [
+    "LoFi vor Pitch erzeugt ‘old sampler’ Gefühl; Pitch vor Delay erzeugt starker movement.",
+    "Optional parallel clean mischen."
+  ]
+}

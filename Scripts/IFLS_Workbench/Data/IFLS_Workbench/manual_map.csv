@@ -1,0 +1,21 @@
+id,name_de,manual_url,status,notes,panel_verified
+behringer_c_2,Behringer C‑2,,todo,,False
+behringer_xm8500,Behringer XM8500,,todo,,False
+eno_t_cube_reverb,ENO T‑Cube Reverb,,todo,,False
+electro_harmonix_deluxe_memory_boy,Electro‑Harmonix Deluxe Memory Boy,https://www.ehx.com/wp-content/uploads/2021/01/deluxe-memory-boy-manual.pdf,enriched,,False
+gokko_gk_22_dripping_delay,GOKKO GK‑22 Dripping Delay,,todo,,False
+tc_electronic_m350,TC Electronic M350,,todo,,False
+zoom_f6,Zoom F6,,todo,,False
+behringer_dd400_digital_delay,Behringer DD400 Digital Delay,https://cdn.mediavalet.com/aunsw/musictribe/ajKd6ZbrkEC57C043KNPbQ/WAd96hE-PUG4MjOclZKNLw/Original/8849892835358.pdf,enriched,,False
+behringer_dr100_digital_reverb,Behringer DR100 Digital Reverb,https://www.hspshop.it/WebRoot/epagesIT/Shops/167668/5AED/F394/D4A1/B160/556E/0A0A/B011/69A4/DR100_P0415_M_EN.pdf,enriched,,False
+behringer_vp1_vintage_phaser,Behringer VP1 Vintage Phaser,https://images.thomann.de/pics/atg/atgdata/document/manual/189490_manual_deu.pdf,enriched,,False
+behringer_ut300_ultra_tremolo,Behringer UT300 Ultra Tremolo,https://www.partysound.ro/manuals/party/UT300.pdf,enriched,,True
+behringer_bsy600,Behringer BSY600,https://www.woodbrass.com/images/woodbrass/BEHRINGER%2B000%2B52400%2BBSY600.PDF,enriched,,False
+flamma_fc11_envelope_filter,Flamma FC11 Envelope Filter,https://flammainnovation.com/download.html,enriched,,False
+amuzik_oem_rowin_vibrock_re_02,Amuzik (OEM: Rowin) Vibrock (RE‑02),https://reverb.com/item/63510536-rowin-vibrock-vibrato-vibe-chorus-settings-re-02-true-bypass,enriched,,False
+aliexpress_mini_vintage_overdrive,AliExpress Mini Vintage Overdrive,https://reverb.com/de/item/82928297-irin-vintage-overdrive-guitar-pedal,enriched,,True
+aliexpress_mini_crunch_distortion,AliExpress Mini Crunch Distortion,https://ploutone.com/products/irin-electric-guitar-effects-pedal-vintage-overdrive-crunch-distortion-analog-delay-us-dream-classic-chorus-ultimate-drive-pedal-9,enriched,,True
+electro_harmonix_super_space_drum_pedal,Electro‑Harmonix Super Space Drum (Pedal),https://www.ehx.com/wp-content/uploads/2021/01/super-space-drum-manual.pdf,enriched,,False
+oem_mini_tremolo_2knob_goldenbull,OEM Mini Tremolo (2 Knobs) – Golden Bull,panel_verified_by_user_image,enriched,2-knob OEM mini tremolo (Intensity/Rate); separate from UT300.,True
+oem_mini_overdrive_3knob_green,OEM Mini Vintage Overdrive (3 Knobs) – Green,panel_verified_by_user_image,enriched,Panel-verified OEM green 3-knob overdrive; no toggles.,True
+oem_mini_crunch_distortion_3knob_blue,OEM Mini Crunch Distortion (3 Knobs) – Blue,panel_verified_by_user_image,enriched,Panel-verified OEM blue 3-knob crunch distortion; no switches.,True

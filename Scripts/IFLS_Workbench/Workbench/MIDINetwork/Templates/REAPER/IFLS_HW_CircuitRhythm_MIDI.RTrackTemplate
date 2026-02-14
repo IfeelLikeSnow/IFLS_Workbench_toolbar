@@ -1,0 +1,12 @@
+<REAPER_TRACK 0 0 0 0 0 0 0 0 0
+  NAME "HW: Novation Circuit Rhythm (MIDI Only)"
+  NOTES "Configure Circuit Rhythm MIDI settings for RX/TX Note/CC/PC/Clock. Keep DAW as clock master; filter clock on non-needed routes."
+  VOLPAN 1 0 1 -1
+  MUTESOLO 0 0 0
+  IPHASE 0
+  PLAYOFFS 0 1
+  ISBUS 0 0
+  BUSCOMP 0 0 0 0 0
+  SHOWINMIX 1 0.6667 0.5 1 0.5 0 0
+>
+</REAPER_TRACK>

@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - IFLS_Workbench_Toolbar_Generate_ReaperMenu.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: Generate toolbar .ReaperMenu (floating toolbar import file)
 -- @version 0.3
 -- @author I feel like snow

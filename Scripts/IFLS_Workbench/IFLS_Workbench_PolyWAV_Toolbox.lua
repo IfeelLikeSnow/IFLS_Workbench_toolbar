@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - IFLS_Workbench_PolyWAV_Toolbox.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @version 0.0.1
 
 

@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/IFLS_Workbench_Slicing_Spread_SelectedItems_With_Gaps.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: Spread selected slices with gaps (for delay/reverb tails)
 -- @author IFLS / DF95
 -- @version 0.7.6

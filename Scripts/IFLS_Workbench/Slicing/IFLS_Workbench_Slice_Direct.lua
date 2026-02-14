@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Slicing/IFLS_Workbench_Slice_Direct.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: Slice Direct (cursor or time selection)
 -- @version 1.0
 -- @about Schneidet ausgewÃ¤hlte Items direkt an Time Selection oder Edit-Cursor.

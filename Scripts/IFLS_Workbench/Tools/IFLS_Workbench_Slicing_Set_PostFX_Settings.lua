@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/IFLS_Workbench_Slicing_Set_PostFX_Settings.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: Set Spread/Trim settings (project)
 -- @author IFLS / DF95
 -- @version 0.7.6

@@ -1,0 +1,22 @@
+{
+  "id": "drones_feedback",
+  "intent_de": "Kontrollierte Feedback-Drones / Evolutionsflächen",
+  "intent_en": "Controlled feedback drones and evolving textures",
+  "targets": [
+    "drones",
+    "textures",
+    "ambient"
+  ],
+  "recommended_roles": [
+    "envelope",
+    "ring_mod",
+    "delay",
+    "reverb",
+    "compressor_safety"
+  ],
+  "routing_template": "interface_out -> envelope/texture -> delay(feedback) -> reverb -> (optional compressor safety) -> interface_in",
+  "warnings_de": [
+    "Feedback kann schnell eskalieren: Gain staging konservativ starten.",
+    "Limiter/Kompressor nach der Kette beim Printen empfohlen."
+  ]
+}

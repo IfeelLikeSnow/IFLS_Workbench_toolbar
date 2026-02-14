@@ -1,0 +1,16 @@
+{
+  "id": "glitch_idm_sd",
+  "title_de": "Glitch/IDM Drums – Snare (SD)",
+  "intent_de": "Glitch/IDM Drums",
+  "focus": "sd",
+  "recommended_roles": [
+    "gate",
+    "lofi",
+    "distortion",
+    "delay",
+    "reverb",
+    "modulation"
+  ],
+  "notes_de": "Variante fokussiert auf sd. Nutze 'Only panel-verified devices' für OEM-Minis.",
+  "created_at_utc": "2026-02-01T21:46:39Z"
+}

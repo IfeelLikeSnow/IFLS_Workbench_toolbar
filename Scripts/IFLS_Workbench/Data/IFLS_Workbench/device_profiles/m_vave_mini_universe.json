@@ -1,0 +1,291 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "panel_verified": true,
+    "panel_verified_at_utc": "2026-02-01T21:22:43Z",
+    "video_verified": true,
+    "video_verified_at_utc": "2026-02-02T21:10:40Z",
+    "video_sources": [
+      {
+        "video_id": "-0e9VE_CZ6s",
+        "url": "https://youtu.be/-0e9VE_CZ6s"
+      }
+    ],
+    "manual_verified": true,
+    "manual_verified_at_utc": "2026-02-02T22:17:08Z",
+    "controls_completeness": "manual_verified",
+    "manual_sources": [
+      {
+        "path": "Evidence/manuals/m_vave_mini_universe.pdf",
+        "sha256": "5cff6d94ff8b1be394a69e88f564f2a0b444a2cb00ad5684c8c454cc3d96ba10"
+      },
+      "Evidence/manuals/M-Vave mini universe.pdf"
+    ],
+    "web_sources": [
+      "Evidence/web_sources/v28_sources.md"
+    ],
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "id": "m_vave_mini_universe",
+  "name_de": "M‑VAVE Mini Universe",
+  "manufacturer": "M‑VAVE",
+  "model": "Mini Universe",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Effektpedale",
+    "Unterkategorie": "Delay & Reverb",
+    "Kategorie-Typ": "Reverb"
+  },
+  "priority_group": "routing",
+  "signal_role": [
+    "ambient",
+    "drones",
+    "lfo_space",
+    "pads",
+    "reverb"
+  ],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In (TS)\n• Out (TS)",
+  "controls_raw_de": "Mix\n• Decay\n• Tone\n• Type",
+  "controls": [
+    {
+      "name_en": "DECAY",
+      "type": "knob",
+      "notes_de": "Decay/Length.",
+      "name_de": "Decay",
+      "function_de": "Reverb-Länge/Decay"
+    },
+    {
+      "name_en": "TYPE (Room/Hall/Plate/Spring/Shimmer/Cloud/Bloom/Swell/LoFi)",
+      "type": "knob",
+      "notes_de": "Algorithmuswahl."
+    },
+    {
+      "name_en": "MIX",
+      "type": "knob",
+      "notes_de": "Wet/Dry.",
+      "name_de": "Mix",
+      "function_de": "Dry/Wet-Mix"
+    },
+    {
+      "name_en": "PARAM1",
+      "type": "knob",
+      "notes_de": "Mode-abhängig (contextual).",
+      "name_de": "Param1",
+      "function_de": "Mode-abhängiger Parameter 1"
+    },
+    {
+      "name_en": "PARAM2",
+      "type": "knob",
+      "notes_de": "Mode-abhängig (contextual).",
+      "name_de": "Param2",
+      "function_de": "Mode-abhängiger Parameter 2"
+    },
+    {
+      "name_en": "PARAM3",
+      "type": "knob",
+      "notes_de": "Mode-abhängig (contextual).",
+      "name_de": "Param3",
+      "function_de": "Mode-abhängiger Parameter 3"
+    },
+    {
+      "name_en": "Bypass Footswitch",
+      "type": "footswitch",
+      "notes_de": "True bypass."
+    },
+    {
+      "name_en": "Status LED",
+      "type": "led",
+      "notes_de": "Effekt an/aus."
+    },
+    {
+      "name_en": "INPUT/OUTPUT Jacks",
+      "type": "jack",
+      "notes_de": "Mono I/O."
+    },
+    {
+      "name_en": "USB (5V/1A)",
+      "type": "power",
+      "notes_de": "USB Versorgung (laut Panel)."
+    },
+    {
+      "name_en": "DC IN 9V",
+      "type": "power",
+      "notes_de": "9V DC (laut Panel)."
+    },
+    {
+      "name_en": "Type",
+      "type": "knob",
+      "name_de": "Type",
+      "function_de": "Reverb-Typ (9 Algorithmen) auswählen"
+    }
+  ],
+  "power_raw_de": "≈ 35 mA",
+  "notes_raw_de": "Shimmer, Cloud",
+  "tech_raw_de": "Digital Reverb (9 Algos)",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://manuals.plus/asin/B0DVSVRBJZ"
+  ],
+  "enriched": true,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": [
+    "PARAM1-3 sind pro TYPE unterschiedlich – Presets/Settings dokumentieren.",
+    "LoFi Mode kann Höhen stark aliasen (kreativ für IDM)."
+  ],
+  "controls_contextual": {
+    "reverb_types": [
+      "Room",
+      "Hall",
+      "Plate",
+      "Spring",
+      "Shimmer",
+      "Cloud",
+      "Bloom",
+      "Swell",
+      "LoFi"
+    ],
+    "param_table_location": "back label/table (Video-verified)",
+    "param_examples": [
+      {
+        "types": "multiple (see manual tables)",
+        "param1": "High-Pass",
+        "param2": "Low-Pass",
+        "param3": "Drift",
+        "source": "manual"
+      },
+      {
+        "type": "LoFi",
+        "param1": "Sample Rate (wet only)",
+        "param2": "White Noise",
+        "param3": "Drift",
+        "source": "manual"
+      }
+    ],
+    "reverb_modes": [
+      "room",
+      "hall",
+      "plate",
+      "spring",
+      "shimmer",
+      "cloud",
+      "bloom",
+      "swell",
+      "lofi"
+    ],
+    "type_knob_positions": [
+      {
+        "index": 1,
+        "label": "GEAR1",
+        "mode": "room"
+      },
+      {
+        "index": 2,
+        "label": "GEAR2",
+        "mode": "hall"
+      },
+      {
+        "index": 3,
+        "label": "GEAR3",
+        "mode": "plate"
+      },
+      {
+        "index": 4,
+        "label": "GEAR4",
+        "mode": "spring"
+      },
+      {
+        "index": 5,
+        "label": "GEAR5",
+        "mode": "shimmer"
+      },
+      {
+        "index": 6,
+        "label": "GEAR6",
+        "mode": "cloud"
+      },
+      {
+        "index": 7,
+        "label": "GEAR7",
+        "mode": "bloom"
+      },
+      {
+        "index": 8,
+        "label": "GEAR8",
+        "mode": "swell"
+      },
+      {
+        "index": 9,
+        "label": "GEAR9",
+        "mode": "lofi"
+      }
+    ],
+    "param_matrix": {
+      "room": {
+        "param1": "high_pass (wet only)",
+        "param2": "low_pass (wet only)",
+        "param3": "drift"
+      },
+      "hall": {
+        "param1": "high_pass (wet only)",
+        "param2": "low_pass (wet only)",
+        "param3": "drift"
+      },
+      "plate": {
+        "param1": "high_pass (wet only)",
+        "param2": "low_pass (wet only)",
+        "param3": "drift"
+      },
+      "spring": {
+        "param1": "high_pass (wet only)",
+        "param2": "low_pass (wet only)",
+        "param3": "dwell"
+      },
+      "shimmer": {
+        "param1": "high_pass (wet only)",
+        "param2": "pitch (0..+2 oct)",
+        "param3": "amount"
+      },
+      "cloud": {
+        "param1": "high_pass (wet only)",
+        "param2": "low_pass (wet only)",
+        "param3": "diffusion"
+      },
+      "bloom": {
+        "param1": "high_pass (wet only)",
+        "param2": "low_pass (wet only)",
+        "param3": "length"
+      },
+      "swell": {
+        "param1": "high_pass (wet only)",
+        "param2": "low_pass (wet only)",
+        "param3": "risetime"
+      },
+      "lofi": {
+        "param1": "sample_rate (wet only)",
+        "param2": "white_noise",
+        "param3": "drift"
+      }
+    },
+    "specs": {
+      "power_v_dc": 9,
+      "polarity": "center_negative",
+      "power_dc_current_ma": 300,
+      "power_usb": "5V 300mA"
+    }
+  },
+  "variant_notes_de": "Panel-verifiziert: TYPE hat 9 Modi; PARAM1-3 sind modeabhängig. | Video-verified: 9 Reverbs; Param-Tabelle auf Rückseite; lauter Pop beim Engage; Type-Selector unpräzise. | Manual-verified: Param1/2/3 je GEAR; LoFi: SampleRate/Noise/Drift.",
+  "controls_verified_by_image": true,
+  "warnings_de": [
+    "Lauter Pop/Schaltknacks beim Aktivieren möglich (Video-verified).",
+    "Type-Selector kann unpräzise/mehrdeutig rasten; Mode-Wechsel live riskant (Video-verified).",
+    "USB claim (Firmware updates / basic audio interface) ist erwähnt (Video); Funktionsumfang hängt von Firmware/Host ab."
+  ]
+}

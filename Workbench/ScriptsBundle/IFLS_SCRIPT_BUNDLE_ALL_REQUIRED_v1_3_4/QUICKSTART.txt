@@ -1,0 +1,42 @@
+IFLS Script Bundle (All Required Files)
+======================================
+
+This bundle contains everything needed to run:
+- IFLS Installed FX Scanner (v1.4)
+- IFLS FX Folder Generator (v1.3.4)
+- Optional workflow helper: FX Chains / Track Templates script
+
+Where to put the scripts
+------------------------
+Copy the .lua scripts into your REAPER Scripts folder:
+REAPER -> Options -> Show REAPER resource path -> Scripts
+
+Then in REAPER:
+Actions -> Show action list -> ReaScript -> Load...
+Select the scripts you copied.
+
+Recommended workflow (clean, no duplicates)
+-------------------------------------------
+1) Run Scanner v1.4:
+   - It writes a CSV into the REAPER resource path.
+   - Optional: enable ident_norm export (VST3/CLAP package-root).
+
+2) Run Generator v1.3.4:
+   - Select the Master CSV from MASTER_ALWAYS_LATEST_WITH_INSTALLED_SYNC/
+   - Choose: Format-split = NO (dedup)
+   - Choose: Use Scanner CSV = YES
+   - Choose: Hard-Preferred = optional (strict)
+   - Choose: Ident normalization = YES if your idents include VST3 "Contents" paths
+   - Optional: write Audit report = YES
+
+3) Import generated folders:
+   Preferences -> Plug-ins -> FX folders -> Import...
+   Import the file:
+   reaper-fxfolders.IFLS.generated.ini
+   (This file will be written into your REAPER resource path.)
+
+Notes
+-----
+- REAPER FX folders require "raw installed ident" strings.
+- The generator uses normalization only for matching; output stays raw.
+- CONSISTENCY_CHECK_PACK is optional (diagnostics/audit).

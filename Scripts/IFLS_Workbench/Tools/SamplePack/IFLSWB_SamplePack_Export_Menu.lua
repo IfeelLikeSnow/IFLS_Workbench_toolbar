@@ -1,8 +1,11 @@
+-- @description IFLS Workbench - Tools/SamplePack/IFLSWB_SamplePack_Export_Menu.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS WB: SamplePack Export Menu (DRY / POST-BUS / Last settings)
 -- @version 1.0.0
 -- @author IFLS Workbench
 -- @about Popup menu that runs one of the export scripts: DRY (selected media items), POST-BUS (selected media items via master), or legacy export (last settings).
--- @provides [main] .
 
 
 local r = reaper

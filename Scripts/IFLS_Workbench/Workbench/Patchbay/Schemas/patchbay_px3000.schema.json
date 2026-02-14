@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ifeellikesnow.github.io/ifls_workbench/schemas/patchbay_px3000.schema.json",
+  "title": "IFLS Patchbay PX3000 Matrix",
+  "type": "object",
+  "required": [
+    "meta",
+    "channels",
+    "legend",
+    "outputs",
+    "inputs"
+  ],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": [
+        "version",
+        "generated_utc",
+        "patchbay_model",
+        "interface_model",
+        "mode_convention"
+      ],
+      "properties": {
+        "version": {
+          "type": "string"
+        },
+        "generated_utc": {
+          "type": "string"
+        },
+        "patchbay_model": {
+          "type": "string"
+        },
+        "interface_model": {
+          "type": "string"
+        },
+        "mode_convention": {
+          "type": "string"
+        }
+      }
+    },
+    "channels": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      },
+      "minItems": 1
+    },
+    "legend": {
+      "type": "object",
+      "required": [
+        "symbols"
+      ],
+      "properties": {
+        "symbols": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "outputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "patchbay_channels"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "patchbay_channels": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "patchbay_channels"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "patchbay_channels": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+    }
+  }
+}

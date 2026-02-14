@@ -1,0 +1,12 @@
+track,mode,output,channel,device,notes
+1,MultiTrack,MIDI OUT 1,1,FB-01 Part1,FB-01 multitimbral (ch1-8)
+2,MultiTrack,MIDI OUT 1,2,FB-01 Part2,
+3,MultiTrack,MIDI OUT 1,3,FB-01 Part3,
+4,MultiTrack,MIDI OUT 1,4,FB-01 Part4,
+5,MultiTrack,MIDI OUT 1,5,FB-01 Part5,
+6,MultiTrack,MIDI OUT 1,6,FB-01 Part6,
+7,MultiTrack,MIDI OUT 1,7,FB-01 Part7,
+8,MultiTrack,MIDI OUT 1,8,FB-01 Part8,
+9,Mono/Chord,MIDI OUT 2,1,PSS-580,Bank 1-5 recall via device or IFLS tools
+10,Mono/Chord,MIDI OUT 3,1,MicroFreak,Use IFLS CC panel + recall
+11,Mono/Chord,MIDI OUT 4,1,Neutron OR Circuit Rhythm,Choose one device on this port; keep filters clean

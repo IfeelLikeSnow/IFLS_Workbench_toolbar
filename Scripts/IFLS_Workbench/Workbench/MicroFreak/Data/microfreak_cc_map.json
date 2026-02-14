@@ -1,0 +1,210 @@
+{
+  "device": "Arturia MicroFreak",
+  "midi": {
+    "channel_default": 1,
+    "range": [
+      0,
+      127
+    ]
+  },
+  "cc": [
+    {
+      "name": "Spice",
+      "cc": 2,
+      "range": [
+        0,
+        127
+      ],
+      "group": "Performance"
+    },
+    {
+      "name": "Glide",
+      "cc": 5,
+      "range": [
+        0,
+        127
+      ],
+      "group": "Performance"
+    },
+    {
+      "name": "Oscillator Type",
+      "cc": 9,
+      "range": [
+        0,
+        127
+      ],
+      "group": "Oscillator"
+    },
+    {
+      "name": "Oscillator Wave",
+      "cc": 10,
+      "range": [
+        0,
+        127
+      ],
+      "group": "Oscillator"
+    },
+    {
+      "name": "Oscillator Timbre",
+      "cc": 12,
+      "range": [
+        0,
+        127
+      ],
+      "group": "Oscillator"
+    },
+    {
+      "name": "Oscillator Shape",
+      "cc": 13,
+      "range": [
+        0,
+        127
+      ],
+      "group": "Oscillator"
+    },
+    {
+      "name": "Filter Cutoff",
+      "cc": 23,
+      "range": [
+        0,
+        127
+      ],
+      "group": "Filter"
+    },
+    {
+      "name": "Cycling Env Amount",
+      "cc": 24,
+      "range": [
+        0,
+        127
+      ],
+      "group": "Cycling Envelope"
+    },
+    {
+      "name": "Filter Amount",
+      "cc": 26,
+      "range": [
+        0,
+        127
+      ],
+      "group": "Envelope"
+    },
+    {
+      "name": "Cycling Env Hold",
+      "cc": 28,
+      "range": [
+        0,
+        127
+      ],
+      "group": "Cycling Envelope"
+    },
+    {
+      "name": "Envelope Sustain",
+      "cc": 29,
+      "range": [
+        0,
+        127
+      ],
+      "group": "Envelope"
+    },
+    {
+      "name": "Keyboard Hold (toggle)",
+      "cc": 64,
+      "range": [
+        0,
+        127
+      ],
+      "group": "Keyboard/Arp"
+    },
+    {
+      "name": "Filter Resonance",
+      "cc": 83,
+      "range": [
+        0,
+        127
+      ],
+      "group": "Filter"
+    },
+    {
+      "name": "ARP/SEQ rate (free)",
+      "cc": 91,
+      "range": [
+        0,
+        127
+      ],
+      "group": "Arp/Seq"
+    },
+    {
+      "name": "ARP/SEQ rate (sync)",
+      "cc": 92,
+      "range": [
+        0,
+        127
+      ],
+      "group": "Arp/Seq"
+    },
+    {
+      "name": "LFO rate (free)",
+      "cc": 93,
+      "range": [
+        0,
+        127
+      ],
+      "group": "LFO"
+    },
+    {
+      "name": "LFO rate (sync)",
+      "cc": 94,
+      "range": [
+        0,
+        127
+      ],
+      "group": "LFO"
+    },
+    {
+      "name": "Cycling Env Rise",
+      "cc": 102,
+      "range": [
+        0,
+        127
+      ],
+      "group": "Cycling Envelope"
+    },
+    {
+      "name": "Cycling Env Fall",
+      "cc": 103,
+      "range": [
+        0,
+        127
+      ],
+      "group": "Cycling Envelope"
+    },
+    {
+      "name": "Envelope Attack",
+      "cc": 105,
+      "range": [
+        0,
+        127
+      ],
+      "group": "Envelope"
+    },
+    {
+      "name": "Envelope Decay/Release",
+      "cc": 106,
+      "range": [
+        0,
+        127
+      ],
+      "group": "Envelope"
+    }
+  ],
+  "notes": [
+    "Official manual states 20 CC codes are available; Appendix D provides defaults.",
+    "Speech oscillator uses CC10 (Wave/category), CC12 (Timbre/formant), CC13 (Shape/word) with value ranges depending on category."
+  ],
+  "speech_oscillator": {
+    "cc_wave_category": 10,
+    "cc_timbre_formant": 12,
+    "cc_shape_word": 13
+  }
+}

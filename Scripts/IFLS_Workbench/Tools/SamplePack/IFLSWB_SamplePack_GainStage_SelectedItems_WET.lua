@@ -1,8 +1,11 @@
+-- @description IFLS Workbench - Tools/SamplePack/IFLSWB_SamplePack_GainStage_SelectedItems_WET.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS WB: SamplePack GainStage (WET one-shots true peak -1 dBTP)
 -- @version 1.0.0
 -- @author IFLS Workbench
 -- @about Applies item gain so TRUE PEAK reaches -1.0 dBTP (safe ceiling for WET prints).
--- @provides [main] .
 
 
 local r = reaper

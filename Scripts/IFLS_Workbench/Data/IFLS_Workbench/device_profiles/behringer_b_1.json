@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "behringer_b_1",
+  "name_de": "Behringer B‑1",
+  "manufacturer": "Behringer",
+  "model": "B‑1",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Mikrofone",
+    "Unterkategorie": "Kondensator (LDC)",
+    "Kategorie-Typ": "Kondensator (LDC)"
+  },
+  "priority_group": "routing",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• XLR‑3M (bal.)",
+  "controls_raw_de": "Pad‑Schalter (‑10 dB)\nLow‑Cut‑Schalter (75 Hz)",
+  "controls": [
+    {
+      "name_en": "Pad‑Schalter (‑10 dB)",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Low‑Cut‑Schalter (75 Hz)",
+      "type": "unknown",
+      "notes_de": ""
+    }
+  ],
+  "power_raw_de": "20 Hz–20 kHz\n• 50 Ω\n• Niere\n• 48 V Phantom, ≈3 mA",
+  "notes_raw_de": "Günstiges 1\"‑Großmembran‑Studio‑Mic\nflacher Frequenzgang mit Präsenzanhebung\ninkl. Spinne, Windschutz & Case",
+  "tech_raw_de": "Großmembran‑Kondensator",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": []
+}

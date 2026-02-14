@@ -1,8 +1,11 @@
+-- @description IFLS Workbench - Tools/IFLSWB_Generate_IFLSWB_Toolbar_ReaperMenu_v3.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS WB: Generate Toolbar v3 (SmartSlicing + SamplePack + ReampPrint)
 -- @version 3.1.3
 -- @author IFLS Workbench
 -- @about Generates IFLSWB_Toolbar_v3.ReaperMenu (JSFX menu only + SmartSlicing + SamplePack buttons + ReampPrint + AutoSplit AUTO).
--- @provides [main] .
 
 
 local r = reaper

@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "video_verified": true,
+    "video_verified_at_utc": "2026-02-02T21:10:40Z",
+    "video_sources": [
+      {
+        "video_id": "p2xxmulI-o4",
+        "url": "https://youtu.be/p2xxmulI-o4"
+      },
+      {
+        "video_id": "F78XMjXcxPU",
+        "url": "https://www.youtube.com/watch?v=F78XMjXcxPU"
+      }
+    ],
+    "controls_completeness": "video_verified",
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "id": "ginean_modulator_ringmod",
+  "name_de": "Ginean Modulator Ringmod",
+  "manufacturer": "Ginean",
+  "model": "Modulator Ringmod",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Effektpedale",
+    "Unterkategorie": "Pitch / Synth / Specials",
+    "Kategorie-Typ": "Ring Mod"
+  },
+  "priority_group": "synth",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In (TS)\n• Out (TS)",
+  "controls_raw_de": "Gain\n• Level\n• Freq\n• Ring\n• Sunk",
+  "controls": [
+    {
+      "name_en": "Gain",
+      "type": "unknown",
+      "notes_de": "(generisch) Bitte verifizieren mit Manual/Foto/Video.",
+      "function_de": "Gain/Drive (Verzerrungsgrad / Sättigung)"
+    },
+    {
+      "name_en": "Level",
+      "type": "unknown",
+      "notes_de": "(generisch) Bitte verifizieren mit Manual/Foto/Video.",
+      "function_de": "Ausgangspegel/Output-Level"
+    },
+    {
+      "name_en": "Freq",
+      "type": "unknown",
+      "notes_de": "(generisch) Bitte verifizieren mit Manual/Foto/Video.",
+      "function_de": "Frequenz (Carrier/LFO je nach Effekt)"
+    },
+    {
+      "name_en": "Ring",
+      "type": "unknown",
+      "notes_de": "(generisch) Bitte verifizieren mit Manual/Foto/Video.",
+      "function_de": "Ringmod-Mix/Amount"
+    },
+    {
+      "name_en": "Sunk",
+      "type": "unknown",
+      "notes_de": "Distortion Amount/Level (entspricht 'Distortion' beim DOD Gonkulator; Video-verified)."
+    }
+  ],
+  "power_raw_de": "9 V DC",
+  "notes_raw_de": "metallisch, glitchig",
+  "tech_raw_de": "Ring‑Mod + Drive",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "source",
+    "pads",
+    "bass",
+    "leads",
+    "drone_source"
+  ],
+  "danger_zones_de": [],
+  "controls_contextual": {
+    "supports_ring_only": true,
+    "supports_distortion_only": true,
+    "noise_floor_notes_de": "Hoher Noise/Carrier-Bleed möglich; FREQ kann Hintergrundton stimmen (Video-verified).",
+    "specs": {
+      "power_v_dc": 9,
+      "polarity": "center_negative"
+    }
+  },
+  "variant_notes_de": "Video-verified: SUNK = Distortion; Ring+Freq = Ringmod Carrier/Amount; hoher tunable noise.",
+  "warnings_de": [
+    "Power-Specs ergänzt als Default (9V center-negative) basierend auf vorhandenen Quellen-Text; bitte gegen Manual/Panel verifizieren."
+  ]
+}

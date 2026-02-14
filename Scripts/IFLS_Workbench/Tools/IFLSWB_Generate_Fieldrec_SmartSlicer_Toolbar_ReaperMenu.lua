@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/IFLSWB_Generate_Fieldrec_SmartSlicer_Toolbar_ReaperMenu.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: IFLSWB_Generate_Fieldrec_SmartSlicer_Toolbar_ReaperMenu
 -- @version 1.0.0
 

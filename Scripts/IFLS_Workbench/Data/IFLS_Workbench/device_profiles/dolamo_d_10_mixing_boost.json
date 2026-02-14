@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "panel_verified": true,
+    "panel_verified_at_utc": "2026-02-01T21:22:43Z",
+    "web_verified": true,
+    "controls_completeness": "panel_verified",
+    "web_sources": [
+      "Evidence/web_sources/v26_sources.md"
+    ],
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "id": "dolamo_d_10_mixing_boost",
+  "name_de": "Dolamo D-10 Mixing Boost",
+  "manufacturer": "Dolamo",
+  "model": "D-10 Mixing Boost",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Effektpedale",
+    "Unterkategorie": "Distortion / Overdrive / Fuzz & Bitcrushing",
+    "Kategorie-Typ": "Boost/Preamp"
+  },
+  "priority_group": "routing",
+  "signal_role": [
+    "boost",
+    "gain_staging",
+    "reamp",
+    "saturation"
+  ],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In (TS)\n• Out (TS)",
+  "controls_raw_de": "Gain\n• Level",
+  "controls": [
+    {
+      "name_en": "LEVEL",
+      "type": "knob",
+      "notes_de": "Output Level / Boost.",
+      "name_de": "Level",
+      "function_de": "Ausgangspegel"
+    },
+    {
+      "name_en": "GAIN",
+      "type": "knob",
+      "notes_de": "Pre-Gain; kann färben/sättigen.",
+      "name_de": "Gain",
+      "function_de": "Verstärkung/Drive"
+    },
+    {
+      "name_en": "Bypass Footswitch",
+      "type": "footswitch",
+      "notes_de": "True bypass."
+    },
+    {
+      "name_en": "Status LED",
+      "type": "led",
+      "notes_de": "Effekt an/aus."
+    },
+    {
+      "name_en": "INPUT/OUTPUT Jacks",
+      "type": "jack",
+      "notes_de": "Mono I/O."
+    },
+    {
+      "name_en": "DC IN 9V",
+      "type": "power",
+      "notes_de": "9V DC."
+    }
+  ],
+  "power_raw_de": "≈ 5 mA",
+  "notes_raw_de": "sauberer Pegel‑Push (DOD‑250‑Stil)",
+  "tech_raw_de": "Preamp / Boost",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://reverb.com/item/48983087-dolamo-d-10-mixing-boost-guitar-effect-pedal-level-gain-controls-true-bypass-new"
+  ],
+  "enriched": true,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": [
+    "LEVEL kann Line-Pegel erreichen → Headroom im Interface/Return lassen."
+  ],
+  "variant_notes_de": "Panel-verifiziert: 2-Knob Boost (LEVEL/GAIN). | Listings nennen DOD 250 Preamp/Overdrive als Referenz (WV).",
+  "controls_verified_by_image": true,
+  "controls_contextual": {
+    "specs": {
+      "power_v_dc": 9,
+      "polarity": "center_negative"
+    }
+  },
+  "warnings_de": [
+    "Power-Specs ergänzt als Default (9V center-negative) basierend auf vorhandenen Quellen-Text; bitte gegen Manual/Panel verifizieren."
+  ]
+}

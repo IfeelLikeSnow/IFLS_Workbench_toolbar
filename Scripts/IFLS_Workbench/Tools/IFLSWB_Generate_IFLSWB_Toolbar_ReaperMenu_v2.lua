@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/IFLSWB_Generate_IFLSWB_Toolbar_ReaperMenu_v2.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS WB: Generate Toolbar v2 (no individual JSFX buttons)
 -- @version 2.0.0
 -- @author IFLS Workbench
@@ -5,7 +9,6 @@
 --   Generates a .ReaperMenu toolbar definition that contains IFLS Workbench core buttons,
 --   but removes the individual "Insert JSFX: ..." buttons (use the JSFX Menu instead).
 --   This script is safe to run multiple times; it (re)creates the .ReaperMenu file.
--- @provides [main] .
 
 
 --[[---------------------------------------------------------------------------

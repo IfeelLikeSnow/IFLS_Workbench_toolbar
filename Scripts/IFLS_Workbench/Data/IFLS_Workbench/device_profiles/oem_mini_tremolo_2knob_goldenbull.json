@@ -1,0 +1,70 @@
+{
+  "id": "oem_mini_tremolo_2knob_goldenbull",
+  "name_de": "OEM Mini Tremolo (2 Knobs) – Golden Bull",
+  "manufacturer": "OEM",
+  "model": "Mini Tremolo 2-Knob",
+  "priority_group": "fx",
+  "category_de": "Tremolo",
+  "type_de": "Modulation",
+  "count": 1,
+  "io_raw_de": "Mono In/Out, DC 9V",
+  "enriched": true,
+  "manual_sources": [
+    "panel_verified_by_user_image"
+  ],
+  "controls": [
+    {
+      "name_en": "INTENSITY",
+      "type": "knob",
+      "notes_de": "Tremolo Depth/Amount."
+    },
+    {
+      "name_en": "RATE",
+      "type": "knob",
+      "notes_de": "Tremolo Speed."
+    },
+    {
+      "name_en": "Bypass Footswitch",
+      "type": "footswitch",
+      "notes_de": "True bypass."
+    },
+    {
+      "name_en": "Status LED",
+      "type": "led",
+      "notes_de": "Effekt an/aus."
+    },
+    {
+      "name_en": "INPUT/OUTPUT Jacks",
+      "type": "jack",
+      "notes_de": "Mono I/O."
+    },
+    {
+      "name_en": "DC IN 9V",
+      "type": "power",
+      "notes_de": "9V DC."
+    }
+  ],
+  "signal_role": [
+    "tremolo",
+    "movement",
+    "vintage_mod",
+    "rhythm_chop",
+    "glitch"
+  ],
+  "variant_notes_de": "Panel-verifiziert: 2-Knob OEM Mini Tremolo (Intensity/Rate), kein Wave-Regler/Schalter.",
+  "danger_zones_de": [
+    "Bei INTENSITY hoch und RATE schnell entsteht harter Gate-Charakter; Pegel bleibt konstant, aber Wahrnehmung kann lauter wirken."
+  ],
+  "controls_verified_by_image": true,
+  "meta": {
+    "controls_completeness": "panel_verified",
+    "manual_verified": false,
+    "panel_verified": true,
+    "panel_verified_at_utc": "2026-02-01T21:29:55Z",
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "controls_contextual": {},
+  "warnings_de": [
+    "Power-Specs fehlen (To-do): bitte Manual/Panel/Listing verlinken."
+  ]
+}

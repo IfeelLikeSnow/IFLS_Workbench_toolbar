@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "controls_completeness": "manual_verified",
+    "manual_verified": true,
+    "panel_verified": true,
+    "panel_verified_at_utc": "2026-02-01T21:29:55Z",
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "id": "behringer_ut300_ultra_tremolo",
+  "name_de": "Behringer UT300 Ultra Tremolo",
+  "manufacturer": "Behringer",
+  "model": "UT300 Ultra Tremolo",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Effektpedale",
+    "Unterkategorie": "Modulation",
+    "Kategorie-Typ": "Tremolo"
+  },
+  "priority_group": "routing",
+  "signal_role": [
+    "gate_fx",
+    "glitch",
+    "idm",
+    "modulation",
+    "rhythm_chop",
+    "rhythmic_modulation",
+    "tremolo"
+  ],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In (TS)\n• Out (TS)",
+  "controls_raw_de": "Wave\n• Rate\n• Depth",
+  "controls": [
+    {
+      "name_en": "RATE",
+      "type": "knob",
+      "notes_de": "Tremolo-Geschwindigkeit."
+    },
+    {
+      "name_en": "DEPTH",
+      "type": "knob",
+      "notes_de": "Tremolo-Intensität (Depth)."
+    },
+    {
+      "name_en": "WAVE",
+      "type": "knob",
+      "notes_de": "Wellenform-Morph: smooth (triangle) ↔ hard (square)."
+    },
+    {
+      "name_en": "Bypass Footswitch",
+      "type": "footswitch",
+      "notes_de": "On/Off."
+    },
+    {
+      "name_en": "ON/BATT Indicator",
+      "type": "led",
+      "notes_de": "Status/ Batteriecheck."
+    },
+    {
+      "name_en": "INPUT/OUTPUT Jacks",
+      "type": "jack",
+      "notes_de": "Mono I/O."
+    },
+    {
+      "name_en": "DC IN 9V / Battery",
+      "type": "power",
+      "notes_de": "9V Versorgung / Batterie."
+    }
+  ],
+  "power_raw_de": "≈ 30 mA",
+  "notes_raw_de": "Säge-/Triangle‑Gate",
+  "tech_raw_de": "Tremolo",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://www.partysound.ro/manuals/party/UT300.pdf"
+  ],
+  "enriched": true,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": [],
+  "variant_notes_de": "Panel- & manual-verifiziert: RATE/DEPTH/WAVE (triangle↔square Morph).",
+  "controls_verified_by_image": true,
+  "controls_contextual": {
+    "specs": {
+      "power_v_dc": 9,
+      "polarity": "center_negative"
+    }
+  },
+  "warnings_de": [
+    "Power-Specs ergänzt als Default (9V center-negative) basierend auf vorhandenen Quellen-Text; bitte gegen Manual/Panel verifizieren."
+  ]
+}

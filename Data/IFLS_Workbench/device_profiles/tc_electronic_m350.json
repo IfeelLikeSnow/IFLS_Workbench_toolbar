@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "manual_verified": true,
+    "controls_completeness": "manual_rich",
+    "manual_enriched_at_utc": "2026-02-01T21:52:09Z"
+  },
+  "id": "tc_electronic_m350",
+  "name_de": "TC Electronic M350",
+  "manufacturer": "TC Electronic",
+  "model": "M350",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "19'' Geräte",
+    "Unterkategorie": "Multi‑FX / Reverb / Delay",
+    "Kategorie-Typ": "Multi‑FX / Reverb / Delay"
+  },
+  "priority_group": "fx",
+  "signal_role": [
+    "delay",
+    "dual_engine",
+    "midi_control",
+    "modulation",
+    "rack_fx",
+    "reverb",
+    "studio_routing"
+  ],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In L/R, Out L/R (TRS)\n• S/PDIF In/Out\n• MIDI In, USB (Control)",
+  "controls_raw_de": "Input\n• Mix\n• FX‑Balance",
+  "controls": [
+    {
+      "name_en": "REVERB TYPE selector",
+      "type": "knob",
+      "notes_de": "15 Reverb-Typen (Engine 1, Reverb-only)."
+    },
+    {
+      "name_en": "MULTI-FX TYPE selector",
+      "type": "knob",
+      "notes_de": "15 Effekttypen (Engine 2: Delay/Mod/De-ess/Comp etc.)."
+    },
+    {
+      "name_en": "REVERB LEVEL",
+      "type": "knob",
+      "notes_de": "Reverb Return/Level (Engine 1)."
+    },
+    {
+      "name_en": "FX LEVEL",
+      "type": "knob",
+      "notes_de": "FX Return/Level (Engine 2)."
+    },
+    {
+      "name_en": "EDIT PARAM 1–3 (per engine)",
+      "type": "knob",
+      "notes_de": "3 Edit-Parameter pro Engine; Mapping abhängig vom gewählten Algorithmus."
+    },
+    {
+      "name_en": "ENGINE 1/2 SELECT",
+      "type": "button",
+      "notes_de": "Wählt Engine zum Editieren/Anzeigen."
+    },
+    {
+      "name_en": "BYPASS / MUTE",
+      "type": "button",
+      "notes_de": "Bypass/Mute je nach Mode."
+    },
+    {
+      "name_en": "PROGRAM / PRESET selector + display",
+      "type": "encoder",
+      "notes_de": "Preset-Auswahl; Anzeige zeigt aktuelle Programme."
+    },
+    {
+      "name_en": "TAP (for delay-based FX)",
+      "type": "button",
+      "notes_de": "Tap Tempo für Delay-basierte FX (Engine 2)."
+    },
+    {
+      "name_en": "ROUTING MODE (Serial/Parallel/Dual Input)",
+      "type": "function",
+      "notes_de": "Betriebsarten: Engines seriell/parallel; Dual Input nutzt Engines unabhängig."
+    },
+    {
+      "name_en": "Digital Auto Sensing (S/PDIF)",
+      "type": "function",
+      "notes_de": "Automatische Erkennung/Clocking für Digitalein-/ausgang (laut Cut Sheet)."
+    },
+    {
+      "name_en": "MIDI In/Thru",
+      "type": "midi",
+      "notes_de": "Program Change/CC/SysEx laut MIDI Implementation Chart."
+    },
+    {
+      "name_en": "Footswitch input (if available)",
+      "type": "jack",
+      "notes_de": "Externes Tap/BYP (modellabhängig je nach Revision)."
+    }
+  ],
+  "power_raw_de": "≈ 5 W",
+  "notes_raw_de": "Reverb + Multi‑FX (Rack)",
+  "tech_raw_de": "Dual FX",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://toneprints.com/media/217184/tc_electronic_m350_manual_english.pdf",
+    "https://www.tcelectronic.com/product.html?modelCode=0828-AAM",
+    "https://service-tcgroup.tcelectronic.com/media/M350_JP.pdf"
+  ],
+  "enriched": true,
+  "best_for_tags": [
+    "glitch",
+    "idmdrums",
+    "pads",
+    "drones"
+  ],
+  "danger_zones_de": [],
+  "variant_notes_de": "Manual-verifiziert: Dual-Engine (15 Reverbs + 15 Multi-FX), Serial/Parallel/Dual-Input Routing, MIDI (PC/CC/SysEx), Digital Auto-Sensing."
+}

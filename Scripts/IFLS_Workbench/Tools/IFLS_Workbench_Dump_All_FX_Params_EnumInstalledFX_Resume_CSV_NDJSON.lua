@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/IFLS_Workbench_Dump_All_FX_Params_EnumInstalledFX_Resume_CSV_NDJSON.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: Dump All FX Params (EnumInstalledFX, Resume, CSV+NDJSON)
 -- @version 0.3.1
 -- @author IFLS (ported from IFLSWB)
@@ -15,6 +19,7 @@
 
 local r = reaper
 
+local SafeApply = require("IFLS_Workbench/Engine/IFLS_SafeApply")
 ----------------------------------------------------------------
 -- USER OPTIONS
 ----------------------------------------------------------------
@@ -53,7 +58,7 @@ local function write_file(p, content)
   if not f then return false end
   f:write(content or "")
   f:close()
-  return true
+end)
 end
 
 local function json_escape(s)
@@ -242,9 +247,7 @@ table.sort(final_list, function(a,b) return (a.name:lower() < b.name:lower()) en
 ----------------------------------------------------------------
 -- Prepare temp track & outputs
 ----------------------------------------------------------------
-r.Undo_BeginBlock()
-r.PreventUIRefresh(1)
-
+return SafeApply.run("IFLS: IFLS Workbench Dump All FX Params EnumInstalledFX Resume CSV NDJSON", function()
 local proj = 0
 local track_count = r.CountTracks(proj)
 r.InsertTrackAtIndex(track_count, true)
@@ -271,8 +274,7 @@ local f_fail    = io.open(failures_tx, file_exists(failures_tx) and "a" or "w")
 
 if not f_plugins or not f_params or not f_ndjson or not f_fail then
   r.DeleteTrack(tmp_tr)
-  r.PreventUIRefresh(-1)
-  r.Undo_EndBlock("IFLSWB Param Dump V3 (failed open files)", -1)
+  ", -1)
   r.MB("Could not open output files in:\n" .. out_dir, "IFLSWB Param Dump V3", 0)
   return
 end
@@ -498,9 +500,6 @@ f_ndjson:close()
 f_fail:close()
 
 r.DeleteTrack(tmp_tr)
-r.PreventUIRefresh(-1)
-r.Undo_EndBlock("IFLSWB Param Dump V3", -1)
-
 r.MB(
   ("Done.\nTotal candidates: %d\nScanned: %d\nSkipped(resume): %d\nFailed: %d\n\nOutput folder:\n%s")
   :format(total, scanned, skipped, failed, out_dir),

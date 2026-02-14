@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Slicing/IFLS_Workbench_Fieldrec_SmartSlice_ModeMenu.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench - Fieldrec SmartSlice (Mode Menu + HQ Toggle) [v3]
 -- @version 3.0.0
 -- @author IFLS Workbench

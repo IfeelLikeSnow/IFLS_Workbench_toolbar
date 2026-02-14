@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "zoom_f6",
+  "name_de": "Zoom F6",
+  "manufacturer": "Zoom",
+  "model": "F6",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Recorder & Pickups",
+    "Unterkategorie": "Field Recorder",
+    "Kategorie-Typ": "Field Recorder (Zoom-Serie)"
+  },
+  "priority_group": "fx",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• Inputs: 6× XLR (Mic/Line)\n• Outputs: 3,5 mm Line Out, 3,5 mm Phones\n• Timecode In/Out (3,5 mm)\n• USB‑C, SD‑Slot",
+  "controls_raw_de": "6 Kanäle\n• 32‑Bit Float",
+  "controls": [
+    {
+      "name_en": "6 Kanäle",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "32‑Bit Float",
+      "type": "unknown",
+      "notes_de": ""
+    }
+  ],
+  "power_raw_de": "Batterie/Netz\nStrom: 4×AA oder Sony L‑Serie Akku oder USB‑C 5 V\nTimecode In/Out (3,5 mm)",
+  "notes_raw_de": "XLR/TRS\n• Timecode\n32‑Bit Float + Dual A/D\n6× XLR mit Locking",
+  "tech_raw_de": "Field Recorder",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "glitch",
+    "idmdrums",
+    "pads",
+    "drones"
+  ],
+  "danger_zones_de": []
+}

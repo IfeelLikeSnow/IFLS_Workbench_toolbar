@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "bontempi_ms_40",
+  "name_de": "Bontempi MS‑40",
+  "manufacturer": "Bontempi",
+  "model": "MS‑40",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Synthesizer & Keyboards",
+    "Unterkategorie": "Keyboard (Home)",
+    "Kategorie-Typ": "Keyboard (Home)"
+  },
+  "priority_group": "synth",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• Audio Out (6,3 mm)\n• Phones (3,5 mm)\n• MIDI/USB (ggf. CV/Gate)",
+  "controls_raw_de": "40 Keys, 3 Timbres",
+  "controls": [
+    {
+      "name_en": "40 Keys, 3 Timbres",
+      "type": "unknown",
+      "notes_de": ""
+    }
+  ],
+  "power_raw_de": "9 V DC/Batt",
+  "notes_raw_de": "kein MIDI, Vibrato",
+  "tech_raw_de": "Home‑Keyboard",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "source",
+    "pads",
+    "bass",
+    "leads",
+    "drone_source"
+  ],
+  "danger_zones_de": []
+}

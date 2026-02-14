@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "controls_completeness": "unknown",
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "id": "digitech_whammy_5",
+  "name_de": "DigiTech Whammy 5",
+  "manufacturer": "DigiTech",
+  "model": "Whammy 5",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Effektpedale",
+    "Unterkategorie": "Pitch / Synth / Specials",
+    "Kategorie-Typ": "Pitch Shifter/Whammy"
+  },
+  "priority_group": "synth",
+  "signal_role": [
+    "glitch",
+    "midi_control",
+    "performance",
+    "pitch"
+  ],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In (TS), Out (TS)\n• MIDI In (Program)",
+  "controls_raw_de": "Presets\n• Expression",
+  "controls": [
+    {
+      "name_en": "Expression Pedal",
+      "type": "pedal",
+      "notes_de": "Steuert Pitch-Bend Amount (toe down = mehr)."
+    },
+    {
+      "name_en": "Classic/Chords Switch",
+      "type": "switch",
+      "notes_de": "Classic (Single Notes) vs Chords (akkordfest)."
+    },
+    {
+      "name_en": "Selector Knob",
+      "type": "knob",
+      "notes_de": "Wählt Whammy/Harmony/Detune Preset."
+    },
+    {
+      "name_en": "Harmony LEDs",
+      "type": "led",
+      "notes_de": "Zeigt gewählten Harmony-Mode."
+    },
+    {
+      "name_en": "Whammy LEDs",
+      "type": "led",
+      "notes_de": "Zeigt gewählten Whammy-Mode."
+    },
+    {
+      "name_en": "Detune LEDs",
+      "type": "led",
+      "notes_de": "Zeigt Detune-Mode; Expression mischt Detune-Anteil."
+    },
+    {
+      "name_en": "Status LED",
+      "type": "led",
+      "notes_de": "Effekt aktiv/bypass."
+    },
+    {
+      "name_en": "Effect On/Off Footswitch",
+      "type": "footswitch",
+      "notes_de": "Schaltet Effekt an/aus."
+    },
+    {
+      "name_en": "Instrument Input Jack",
+      "type": "jack",
+      "notes_de": "1/4\" Eingang."
+    },
+    {
+      "name_en": "Output Jack",
+      "type": "jack",
+      "notes_de": "1/4\" Ausgang."
+    },
+    {
+      "name_en": "MIDI Input (5-pin DIN)",
+      "type": "midi",
+      "notes_de": "Remote control; PC wählt Effekte, CC steuert Pedalposition."
+    },
+    {
+      "name_en": "Power Input",
+      "type": "power",
+      "notes_de": "Nur vorgesehenes Netzteil."
+    }
+  ],
+  "power_raw_de": "9 V DC",
+  "notes_raw_de": "±2 Okt., Harmony/Detune, MIDI",
+  "tech_raw_de": "Pitch‑Shift",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://digitech.com/wp-content/uploads/2022/09/Whammy_OM_EN.pdf"
+  ],
+  "enriched": true,
+  "best_for_tags": [
+    "source",
+    "pads",
+    "bass",
+    "leads",
+    "drone_source"
+  ],
+  "danger_zones_de": [
+    "Pitch + Feedback: bei Delay/Reverb danach Pegel konservativ starten.",
+    "Chords-Mode kann je nach Material mehr Artefakte erzeugen (kreativ nutzbar)."
+  ],
+  "controls_contextual": {},
+  "warnings_de": [
+    "Power-Specs fehlen (To-do): bitte Manual/Panel/Listing verlinken."
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "lom_geof_n",
+  "name_de": "LOM Geofón",
+  "manufacturer": "LOM",
+  "model": "Geofón",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Recorder & Pickups",
+    "Unterkategorie": "Geophon / Spezial",
+    "Kategorie-Typ": "Geophon / Spezial"
+  },
+  "priority_group": "routing",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• Output: XLR‑3M (bal.)",
+  "controls_raw_de": "—",
+  "controls": [
+    {
+      "name_en": "—",
+      "type": "unknown",
+      "notes_de": ""
+    }
+  ],
+  "power_raw_de": "passiv\npassiv\n• 3,5 kΩ Impedanz\nFrequenzgang: 10–1000+ Hz",
+  "notes_raw_de": "Boden‑Vibrationen\nXLR‑3M balanciert\nResonanzfrequenz 14 Hz",
+  "tech_raw_de": "Geophon",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": []
+}

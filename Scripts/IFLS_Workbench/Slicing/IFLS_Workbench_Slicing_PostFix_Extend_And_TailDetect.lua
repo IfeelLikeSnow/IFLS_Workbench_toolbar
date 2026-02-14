@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Slicing/IFLS_Workbench_Slicing_PostFix_Extend_And_TailDetect.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: IFLS_Workbench_Slicing_PostFix_Extend_And_TailDetect
 -- @version 1.0.0
 
@@ -7,7 +11,6 @@
 -- @about
 --   Fix micro-slices by extending each selected item to next selected item's start (minus gap).
 --   Then extends the LAST selected item until "silence" using peak scanning (GetMediaItemTake_Peaks).
--- @provides [main] .
 
 -- =========================
 -- User settings

@@ -1,0 +1,376 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z"
+  },
+  "devices": [
+    {
+      "id": "oem_mini_tremolo_2knob",
+      "name_de": "OEM Mini Tremolo (2-Knob)"
+    },
+    {
+      "id": "behringer_c_2",
+      "name_de": "Behringer C‑2",
+      "priority_group": "fx"
+    },
+    {
+      "id": "behringer_xm8500",
+      "name_de": "Behringer XM8500",
+      "priority_group": "fx"
+    },
+    {
+      "id": "eno_t_cube_reverb",
+      "name_de": "ENO T‑Cube Reverb",
+      "priority_group": "fx"
+    },
+    {
+      "id": "eno_tcube_reverb",
+      "name_de": "ENO T‑Cube Reverb",
+      "priority_group": "fx"
+    },
+    {
+      "id": "electro_harmonix_deluxe_memory_boy",
+      "name_de": "Electro‑Harmonix Deluxe Memory Boy",
+      "priority_group": "fx"
+    },
+    {
+      "id": "gokko_gk_22_dripping_delay",
+      "name_de": "GOKKO GK‑22 Dripping Delay",
+      "priority_group": "fx"
+    },
+    {
+      "id": "gokko_gk22_dripping_delay",
+      "name_de": "GOKKO GK‑22 Dripping Delay",
+      "priority_group": "fx"
+    },
+    {
+      "id": "oem_mini_crunch_distortion_3knob_blue",
+      "name_de": "OEM Mini Crunch Distortion (3 Knobs) – Blue",
+      "priority_group": "fx"
+    },
+    {
+      "id": "oem_mini_tremolo_2knob_goldenbull",
+      "name_de": "OEM Mini Tremolo (2 Knobs) – Golden Bull",
+      "priority_group": "fx"
+    },
+    {
+      "id": "oem_mini_overdrive_3knob_green",
+      "name_de": "OEM Mini Vintage Overdrive (3 Knobs) – Green",
+      "priority_group": "fx"
+    },
+    {
+      "id": "tc_electronic_m350",
+      "name_de": "TC Electronic M350",
+      "priority_group": "fx"
+    },
+    {
+      "id": "zoom_f6",
+      "name_de": "Zoom F6",
+      "priority_group": "fx"
+    },
+    {
+      "id": "aliexpress_mini_crunch_distortion",
+      "name_de": "AliExpress Mini Crunch Distortion",
+      "priority_group": "routing"
+    },
+    {
+      "id": "aliexpress_mini_vintage_overdrive",
+      "name_de": "AliExpress Mini Vintage Overdrive",
+      "priority_group": "routing"
+    },
+    {
+      "id": "amuzik_oem_rowin_vibrock_re_02",
+      "name_de": "Amuzik (OEM: Rowin) Vibrock (RE‑02)",
+      "priority_group": "routing"
+    },
+    {
+      "id": "amuzik_oem_rowin_tom_sline_fame_ocean_verb",
+      "name_de": "Amuzik (OEM: Rowin/Tom'sline/Fame) Ocean Verb",
+      "priority_group": "routing"
+    },
+    {
+      "id": "aroma_amo_3_mario_bit_crusher",
+      "name_de": "Aroma AMO-3 Mario Bit Crusher",
+      "priority_group": "routing"
+    },
+    {
+      "id": "behringer_b_1",
+      "name_de": "Behringer B‑1",
+      "priority_group": "routing"
+    },
+    {
+      "id": "behringer_dd400_digital_delay",
+      "name_de": "Behringer DD400 Digital Delay",
+      "priority_group": "routing"
+    },
+    {
+      "id": "behringer_di20",
+      "name_de": "Behringer DI20",
+      "priority_group": "routing"
+    },
+    {
+      "id": "behringer_di400p",
+      "name_de": "Behringer DI400P",
+      "priority_group": "routing"
+    },
+    {
+      "id": "behringer_di4800a",
+      "name_de": "Behringer DI4800A",
+      "priority_group": "routing"
+    },
+    {
+      "id": "behringer_dr100_digital_reverb",
+      "name_de": "Behringer DR100 Digital Reverb",
+      "priority_group": "routing"
+    },
+    {
+      "id": "behringer_ut300_ultra_tremolo",
+      "name_de": "Behringer UT300 Ultra Tremolo",
+      "priority_group": "routing"
+    },
+    {
+      "id": "behringer_vp1_vintage_phaser",
+      "name_de": "Behringer VP1 Vintage Phaser",
+      "priority_group": "routing"
+    },
+    {
+      "id": "behringer_xenyx_1204_usb",
+      "name_de": "Behringer Xenyx 1204 USB",
+      "priority_group": "routing"
+    },
+    {
+      "id": "boredbrain_patchulator_8000",
+      "name_de": "Boredbrain Patchulator 8000",
+      "priority_group": "routing"
+    },
+    {
+      "id": "boss_cs_3_compression_sustainer",
+      "name_de": "Boss CS‑3 Compression Sustainer",
+      "priority_group": "routing"
+    },
+    {
+      "id": "doremidi_midi_thru_3",
+      "name_de": "DOREMiDi MIDI THRU‑3",
+      "priority_group": "routing"
+    },
+    {
+      "id": "doremidi_midi_thru_box",
+      "name_de": "DOREMiDi MIDI Thru Box",
+      "priority_group": "routing"
+    },
+    {
+      "id": "danelectro_bacon_n_eggs_dj_16",
+      "name_de": "Danelectro Bacon ’n’ Eggs (DJ-16)",
+      "priority_group": "routing"
+    },
+    {
+      "id": "danelectro_fab_fuzz_d_7",
+      "name_de": "Danelectro Fab Fuzz (D-7)",
+      "priority_group": "routing"
+    },
+    {
+      "id": "danelectro_fab_metal_d_3",
+      "name_de": "Danelectro Fab Metal (D-3)",
+      "priority_group": "routing"
+    },
+    {
+      "id": "dolamo_d_10_mixing_boost",
+      "name_de": "Dolamo D-10 Mixing Boost",
+      "priority_group": "routing"
+    },
+    {
+      "id": "flamma_fc11_envelope_filter",
+      "name_de": "Flamma FC11 Envelope Filter",
+      "priority_group": "routing"
+    },
+    {
+      "id": "golden_bull_tremolo",
+      "name_de": "Golden Bull Tremolo",
+      "priority_group": "routing"
+    },
+    {
+      "id": "iset_analog_flanger",
+      "name_de": "ISET Analog Flanger",
+      "priority_group": "routing"
+    },
+    {
+      "id": "lom_geof_n",
+      "name_de": "LOM Geofón",
+      "priority_group": "routing"
+    },
+    {
+      "id": "mcm_36_010_telephone_pick_up_coil",
+      "name_de": "MCM 36‑010 Telephone Pick‑Up Coil",
+      "priority_group": "routing"
+    },
+    {
+      "id": "mini_ab_y_channel_switch",
+      "name_de": "Mini AB/Y Channel Switch",
+      "priority_group": "routing"
+    },
+    {
+      "id": "mooer_lofi_machine",
+      "name_de": "Mooer LoFi Machine",
+      "priority_group": "routing"
+    },
+    {
+      "id": "mosky_mini_muff",
+      "name_de": "Mosky Mini Muff",
+      "priority_group": "routing"
+    },
+    {
+      "id": "m_vave_elemental",
+      "name_de": "M‑VAVE Elemental",
+      "priority_group": "routing"
+    },
+    {
+      "id": "m_vave_mini_universe",
+      "name_de": "M‑VAVE Mini Universe",
+      "priority_group": "routing"
+    },
+    {
+      "id": "nux_mod_core_mk1",
+      "name_de": "NUX Mod Core MK1",
+      "priority_group": "routing"
+    },
+    {
+      "id": "palmer_daccapo",
+      "name_de": "Palmer DACCAPO",
+      "priority_group": "routing"
+    },
+    {
+      "id": "palmer_bertreiber",
+      "name_de": "Palmer Übertreiber",
+      "priority_group": "routing"
+    },
+    {
+      "id": "presonus_studio_1824c",
+      "name_de": "PreSonus Studio 1824c",
+      "priority_group": "routing"
+    },
+    {
+      "id": "r_de_ntg4",
+      "name_de": "RØDE NTG4+",
+      "priority_group": "routing"
+    },
+    {
+      "id": "soma_ether",
+      "name_de": "SOMA Ether",
+      "priority_group": "routing"
+    },
+    {
+      "id": "sonicake_portal_qds_06",
+      "name_de": "Sonicake Portal QDS‑06",
+      "priority_group": "routing"
+    },
+    {
+      "id": "steinberg_ur22mkii",
+      "name_de": "Steinberg UR22mkII",
+      "priority_group": "routing"
+    },
+    {
+      "id": "t_rex_tonebug_fuzz",
+      "name_de": "T‑Rex ToneBug Fuzz",
+      "priority_group": "routing"
+    },
+    {
+      "id": "zoom_h5",
+      "name_de": "Zoom H5",
+      "priority_group": "routing"
+    },
+    {
+      "id": "dbx_266xs",
+      "name_de": "dbx 266xs",
+      "priority_group": "routing"
+    },
+    {
+      "id": "arturia_keystep",
+      "name_de": "Arturia KeyStep",
+      "priority_group": "synth"
+    },
+    {
+      "id": "arturia_microfreak",
+      "name_de": "Arturia MicroFreak",
+      "priority_group": "synth"
+    },
+    {
+      "id": "behringer_bsy600",
+      "name_de": "Behringer BSY600",
+      "priority_group": "synth"
+    },
+    {
+      "id": "behringer_edge",
+      "name_de": "Behringer Edge",
+      "priority_group": "synth"
+    },
+    {
+      "id": "behringer_neutron",
+      "name_de": "Behringer Neutron",
+      "priority_group": "synth"
+    },
+    {
+      "id": "bontempi_ms_40",
+      "name_de": "Bontempi MS‑40",
+      "priority_group": "synth"
+    },
+    {
+      "id": "casio_sa_21",
+      "name_de": "Casio SA-21",
+      "priority_group": "synth"
+    },
+    {
+      "id": "casio_vl_1_vl_tone",
+      "name_de": "Casio VL-1 (VL-Tone)",
+      "priority_group": "synth"
+    },
+    {
+      "id": "digitech_whammy_5",
+      "name_de": "DigiTech Whammy 5",
+      "priority_group": "synth"
+    },
+    {
+      "id": "electro_harmonix_attack_decay",
+      "name_de": "Electro‑Harmonix Attack Decay",
+      "priority_group": "synth"
+    },
+    {
+      "id": "electro_harmonix_super_space_drum_pedal",
+      "name_de": "Electro‑Harmonix Super Space Drum (Pedal)",
+      "priority_group": "synth"
+    },
+    {
+      "id": "ginean_modulator_ringmod",
+      "name_de": "Ginean Modulator Ringmod",
+      "priority_group": "synth"
+    },
+    {
+      "id": "irin_talent_octave",
+      "name_de": "IRIN Talent Octave",
+      "priority_group": "synth"
+    },
+    {
+      "id": "novation_circuit_rhythm",
+      "name_de": "Novation Circuit Rhythm",
+      "priority_group": "synth"
+    },
+    {
+      "id": "oxi_instruments_oxi_one_mkii",
+      "name_de": "OXI Instruments OXI ONE MKII",
+      "priority_group": "synth"
+    },
+    {
+      "id": "synare_ehx_super_space_drum_syndrum",
+      "name_de": "Synare/EHX Super Space Drum (Syndrum)",
+      "priority_group": "synth"
+    },
+    {
+      "id": "yamaha_pss_380",
+      "name_de": "Yamaha PSS‑380",
+      "priority_group": "synth"
+    },
+    {
+      "id": "yamaha_pss_580",
+      "name_de": "Yamaha PSS‑580",
+      "priority_group": "synth"
+    }
+  ]
+}

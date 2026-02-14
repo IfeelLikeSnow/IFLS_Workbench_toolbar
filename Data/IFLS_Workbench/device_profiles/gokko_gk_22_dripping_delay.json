@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "controls_completeness": "manual_verified",
+    "manual_enriched_at_utc": "2026-02-01T21:52:09Z",
+    "video_verified": true,
+    "video_verified_at_utc": "2026-02-02T21:10:40Z",
+    "video_sources": [
+      {
+        "video_id": "gtuPufO3ueA",
+        "url": "https://youtu.be/gtuPufO3ueA"
+      }
+    ],
+    "manual_verified": true,
+    "manual_verified_at_utc": "2026-02-02T21:58:27Z",
+    "manual_sources": [
+      {
+        "path": "Evidence/manuals/gokko_gk_22_dripping_delay.pdf",
+        "sha256": "ac0c1d9882ead18f3b3f6a81f74576adaf2a5428a99bd9d84395ca6757518660"
+      }
+    ],
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "id": "gokko_gk_22_dripping_delay",
+  "name_de": "GOKKO GK‑22 Dripping Delay",
+  "manufacturer": "GOKKO",
+  "model": "GK‑22 Dripping Delay",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Effektpedale",
+    "Unterkategorie": "Delay & Reverb",
+    "Kategorie-Typ": "Delay"
+  },
+  "priority_group": "fx",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In (TS), Out (TS)",
+  "controls_raw_de": "Level\n• Time\n• Repeat",
+  "controls": [
+    {
+      "name_en": "DELAY",
+      "type": "knob",
+      "notes_de": "Delayzeit (ca. 25ms–600ms laut Listing). Beim Drehen der DELAY-Time während Signal anliegt entstehen Pitch-Bends/\"Spaceship\"-Effekte (Manual)."
+    },
+    {
+      "name_en": "LEVEL",
+      "type": "knob",
+      "notes_de": "Delay-Lautstärke (wet level)."
+    },
+    {
+      "name_en": "REPEAT",
+      "type": "knob",
+      "notes_de": "Feedback/Repeats."
+    },
+    {
+      "name_en": "(Optional) Modulation",
+      "type": "feature",
+      "notes_de": "Hersteller nennt optionale Modulation; kein eigener Panel-Regler in Quellen eindeutig belegt."
+    },
+    {
+      "name_en": "Bypass Footswitch",
+      "type": "footswitch",
+      "notes_de": "True bypass."
+    },
+    {
+      "name_en": "Status LED",
+      "type": "led",
+      "notes_de": "Effekt an/aus."
+    },
+    {
+      "name_en": "INPUT/OUTPUT Jacks",
+      "type": "jack",
+      "notes_de": "Mono I/O."
+    },
+    {
+      "name_en": "DC IN 9V / Battery",
+      "type": "power",
+      "notes_de": "9V Versorgung / Batterie."
+    }
+  ],
+  "power_raw_de": "≈ 30 mA",
+  "notes_raw_de": "dunkel, analog‑voiced",
+  "tech_raw_de": "DSP Delay 300–600 ms",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://www.gokkoaudio.com/h-pd-5.html",
+    "https://reverb.com/item/27791016-gokko-audio-dripping-delay-gk-22-pedal-purple"
+  ],
+  "enriched": false,
+  "best_for_tags": [
+    "glitch",
+    "idmdrums",
+    "pads",
+    "drones"
+  ],
+  "danger_zones_de": [],
+  "variant_notes_de": "Web-verifiziert: 3 Knobs, Delay 25–600ms. Modulation wird erwähnt, aber ohne klaren Extra-Controller. | Video-verified: Repeat bis Feedback möglich; kurze Delay-Zeit wirkt reverb-like.",
+  "controls_contextual": {
+    "behavior_notes_de": [
+      "REPEAT bei hohen Werten kann in Feedback/Selbstfeedback laufen (Video-verified).",
+      "Sehr kurze DELAY-Zeiten wirken reverb-ähnlich (Video-verified)."
+    ],
+    "repeat_examples": [
+      {
+        "position": "12oclock",
+        "approx_repeats": 7,
+        "source": "gtuPufO3ueA"
+      }
+    ],
+    "specs": {
+      "max_delay_ms": 600,
+      "power_v_dc": 9,
+      "current_ma": 50,
+      "polarity": "center_negative"
+    }
+  }
+}

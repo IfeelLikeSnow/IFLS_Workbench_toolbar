@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/IFLSWB_SmartSlicer_Store_CommandIDs_Helper.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: IFLSWB_SmartSlicer_Store_CommandIDs_Helper
 -- @version 1.0.0
 

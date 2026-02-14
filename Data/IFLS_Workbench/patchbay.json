@@ -1,0 +1,636 @@
+{
+  "meta": {
+    "schema_version": "0.1.0",
+    "generated_at_utc": "2026-02-13T22:28:30+00:00",
+    "source_files": [
+      "Patchbay Übersicht.xlsx"
+    ]
+  },
+  "outputs": {
+    "channels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "devices": [
+      {
+        "name": "Presonus Studio 1824c",
+        "map": {
+          "1": "present",
+          "2": "present",
+          "3": "present",
+          "4": "present",
+          "5": "present",
+          "6": "present",
+          "7": "present",
+          "8": "present",
+          "9": "none",
+          "10": "none",
+          "11": "none",
+          "12": "none",
+          "13": "none",
+          "14": "none",
+          "15": "none"
+        }
+      },
+      {
+        "name": "DBX 266XS",
+        "map": {
+          "1": "none",
+          "2": "none",
+          "3": "none",
+          "4": "none",
+          "5": "none",
+          "6": "none",
+          "7": "none",
+          "8": "none",
+          "9": "left",
+          "10": "right",
+          "11": "none",
+          "12": "none",
+          "13": "none",
+          "14": "none",
+          "15": "none"
+        }
+      },
+      {
+        "name": "TC Electronic m350",
+        "map": {
+          "1": "none",
+          "2": "none",
+          "3": "none",
+          "4": "none",
+          "5": "none",
+          "6": "none",
+          "7": "none",
+          "8": "none",
+          "9": "none",
+          "10": "none",
+          "11": "none",
+          "12": "left",
+          "13": "right",
+          "14": "none",
+          "15": "none"
+        }
+      },
+      {
+        "name": "Behringer ULTRAGAIN PRO MIC2200",
+        "map": {
+          "1": "none",
+          "2": "none",
+          "3": "none",
+          "4": "none",
+          "5": "none",
+          "6": "none",
+          "7": "none",
+          "8": "none",
+          "9": "none",
+          "10": "none",
+          "11": "none",
+          "12": "none",
+          "13": "none",
+          "14": "left",
+          "15": "right"
+        }
+      }
+    ]
+  },
+  "inputs": {
+    "channels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "devices": [
+      {
+        "name": "Presonus Studio 1824c",
+        "map": {
+          "1": "none",
+          "2": "none",
+          "3": "present",
+          "4": "present",
+          "5": "present",
+          "6": "present",
+          "7": "present",
+          "8": "present",
+          "9": "none",
+          "10": "none",
+          "11": "none",
+          "12": "none",
+          "13": "none",
+          "14": "none",
+          "15": "none",
+          "16": "none"
+        }
+      },
+      {
+        "name": "DBX 266XS",
+        "map": {
+          "1": "none",
+          "2": "none",
+          "3": "none",
+          "4": "none",
+          "5": "none",
+          "6": "none",
+          "7": "none",
+          "8": "none",
+          "9": "left",
+          "10": "right",
+          "11": "sidechain_in",
+          "12": "none",
+          "13": "none",
+          "14": "none",
+          "15": "none",
+          "16": "none"
+        }
+      },
+      {
+        "name": "TC Electronic m350",
+        "map": {
+          "1": "none",
+          "2": "none",
+          "3": "none",
+          "4": "none",
+          "5": "none",
+          "6": "none",
+          "7": "none",
+          "8": "none",
+          "9": "none",
+          "10": "none",
+          "11": "none",
+          "12": "left",
+          "13": "right",
+          "14": "none",
+          "15": "none",
+          "16": "none"
+        }
+      },
+      {
+        "name": "Behringer ULTRAGAIN PRO MIC2200",
+        "map": {
+          "1": "none",
+          "2": "none",
+          "3": "none",
+          "4": "none",
+          "5": "none",
+          "6": "none",
+          "7": "none",
+          "8": "none",
+          "9": "none",
+          "10": "none",
+          "11": "none",
+          "12": "none",
+          "13": "none",
+          "14": "left",
+          "15": "right",
+          "16": "none"
+        }
+      },
+      {
+        "name": "Palmer Reamp Box",
+        "map": {
+          "1": "none",
+          "2": "none",
+          "3": "none",
+          "4": "none",
+          "5": "none",
+          "6": "none",
+          "7": "none",
+          "8": "none",
+          "9": "none",
+          "10": "none",
+          "11": "none",
+          "12": "none",
+          "13": "none",
+          "14": "none",
+          "15": "none",
+          "16": "present"
+        }
+      },
+      {
+        "name": "Output Patchbay",
+        "map": {
+          "1": "none",
+          "2": "none",
+          "3": "none",
+          "4": "none",
+          "5": "none",
+          "6": "none",
+          "7": "none",
+          "8": "none",
+          "9": "none",
+          "10": "none",
+          "11": "none",
+          "12": "none",
+          "13": "none",
+          "14": "none",
+          "15": "none",
+          "16": "none"
+        }
+      },
+      {
+        "name": "Kanal",
+        "map": {
+          "1": "unknown",
+          "2": "unknown",
+          "3": "unknown",
+          "4": "unknown",
+          "5": "unknown",
+          "6": "none",
+          "7": "none",
+          "8": "none",
+          "9": "none",
+          "10": "none",
+          "11": "none",
+          "12": "none",
+          "13": "none",
+          "14": "none",
+          "15": "none",
+          "16": "none"
+        }
+      },
+      {
+        "name": "1",
+        "map": {
+          "1": "present",
+          "2": "none",
+          "3": "none",
+          "4": "none",
+          "5": "none",
+          "6": "none",
+          "7": "none",
+          "8": "none",
+          "9": "none",
+          "10": "none",
+          "11": "none",
+          "12": "none",
+          "13": "none",
+          "14": "none",
+          "15": "none",
+          "16": "none"
+        }
+      },
+      {
+        "name": "2",
+        "map": {
+          "1": "present",
+          "2": "none",
+          "3": "none",
+          "4": "none",
+          "5": "none",
+          "6": "none",
+          "7": "none",
+          "8": "none",
+          "9": "none",
+          "10": "none",
+          "11": "none",
+          "12": "none",
+          "13": "none",
+          "14": "none",
+          "15": "none",
+          "16": "none"
+        }
+      },
+      {
+        "name": "3",
+        "map": {
+          "1": "present",
+          "2": "none",
+          "3": "none",
+          "4": "none",
+          "5": "none",
+          "6": "none",
+          "7": "none",
+          "8": "none",
+          "9": "none",
+          "10": "none",
+          "11": "none",
+          "12": "none",
+          "13": "none",
+          "14": "none",
+          "15": "none",
+          "16": "none"
+        }
+      },
+      {
+        "name": "4",
+        "map": {
+          "1": "present",
+          "2": "none",
+          "3": "none",
+          "4": "none",
+          "5": "none",
+          "6": "none",
+          "7": "none",
+          "8": "none",
+          "9": "none",
+          "10": "none",
+          "11": "none",
+          "12": "none",
+          "13": "none",
+          "14": "none",
+          "15": "none",
+          "16": "none"
+        }
+      },
+      {
+        "name": "5",
+        "map": {
+          "1": "present",
+          "2": "none",
+          "3": "none",
+          "4": "none",
+          "5": "none",
+          "6": "none",
+          "7": "none",
+          "8": "none",
+          "9": "none",
+          "10": "none",
+          "11": "none",
+          "12": "none",
+          "13": "none",
+          "14": "none",
+          "15": "none",
+          "16": "none"
+        }
+      },
+      {
+        "name": "6",
+        "map": {
+          "1": "present",
+          "2": "none",
+          "3": "none",
+          "4": "none",
+          "5": "none",
+          "6": "none",
+          "7": "none",
+          "8": "none",
+          "9": "none",
+          "10": "none",
+          "11": "none",
+          "12": "none",
+          "13": "none",
+          "14": "none",
+          "15": "none",
+          "16": "none"
+        }
+      },
+      {
+        "name": "7",
+        "map": {
+          "1": "present",
+          "2": "none",
+          "3": "none",
+          "4": "none",
+          "5": "none",
+          "6": "none",
+          "7": "none",
+          "8": "none",
+          "9": "none",
+          "10": "none",
+          "11": "none",
+          "12": "none",
+          "13": "none",
+          "14": "none",
+          "15": "none",
+          "16": "none"
+        }
+      },
+      {
+        "name": "8",
+        "map": {
+          "1": "present",
+          "2": "none",
+          "3": "none",
+          "4": "none",
+          "5": "none",
+          "6": "none",
+          "7": "none",
+          "8": "none",
+          "9": "none",
+          "10": "none",
+          "11": "none",
+          "12": "none",
+          "13": "none",
+          "14": "none",
+          "15": "none",
+          "16": "none"
+        }
+      },
+      {
+        "name": "9",
+        "map": {
+          "1": "none",
+          "2": "present",
+          "3": "none",
+          "4": "none",
+          "5": "none",
+          "6": "none",
+          "7": "none",
+          "8": "none",
+          "9": "none",
+          "10": "none",
+          "11": "none",
+          "12": "none",
+          "13": "none",
+          "14": "none",
+          "15": "none",
+          "16": "none"
+        }
+      },
+      {
+        "name": "10",
+        "map": {
+          "1": "none",
+          "2": "present",
+          "3": "none",
+          "4": "none",
+          "5": "none",
+          "6": "none",
+          "7": "none",
+          "8": "none",
+          "9": "none",
+          "10": "none",
+          "11": "none",
+          "12": "none",
+          "13": "none",
+          "14": "none",
+          "15": "none",
+          "16": "none"
+        }
+      },
+      {
+        "name": "11",
+        "map": {
+          "1": "none",
+          "2": "present",
+          "3": "none",
+          "4": "none",
+          "5": "none",
+          "6": "none",
+          "7": "none",
+          "8": "none",
+          "9": "none",
+          "10": "none",
+          "11": "none",
+          "12": "none",
+          "13": "none",
+          "14": "none",
+          "15": "none",
+          "16": "none"
+        }
+      },
+      {
+        "name": "12",
+        "map": {
+          "1": "none",
+          "2": "none",
+          "3": "present",
+          "4": "none",
+          "5": "none",
+          "6": "none",
+          "7": "none",
+          "8": "none",
+          "9": "none",
+          "10": "none",
+          "11": "none",
+          "12": "none",
+          "13": "none",
+          "14": "none",
+          "15": "none",
+          "16": "none"
+        }
+      },
+      {
+        "name": "13",
+        "map": {
+          "1": "none",
+          "2": "none",
+          "3": "present",
+          "4": "none",
+          "5": "none",
+          "6": "none",
+          "7": "none",
+          "8": "none",
+          "9": "none",
+          "10": "none",
+          "11": "none",
+          "12": "none",
+          "13": "none",
+          "14": "none",
+          "15": "none",
+          "16": "none"
+        }
+      },
+      {
+        "name": "14",
+        "map": {
+          "1": "none",
+          "2": "none",
+          "3": "none",
+          "4": "present",
+          "5": "none",
+          "6": "none",
+          "7": "none",
+          "8": "none",
+          "9": "none",
+          "10": "none",
+          "11": "none",
+          "12": "none",
+          "13": "none",
+          "14": "none",
+          "15": "none",
+          "16": "none"
+        }
+      },
+      {
+        "name": "15",
+        "map": {
+          "1": "none",
+          "2": "none",
+          "3": "none",
+          "4": "present",
+          "5": "none",
+          "6": "none",
+          "7": "none",
+          "8": "none",
+          "9": "none",
+          "10": "none",
+          "11": "none",
+          "12": "none",
+          "13": "none",
+          "14": "none",
+          "15": "none",
+          "16": "none"
+        }
+      },
+      {
+        "name": "16",
+        "map": {
+          "1": "none",
+          "2": "none",
+          "3": "none",
+          "4": "none",
+          "5": "present",
+          "6": "none",
+          "7": "none",
+          "8": "none",
+          "9": "none",
+          "10": "none",
+          "11": "none",
+          "12": "none",
+          "13": "none",
+          "14": "none",
+          "15": "none",
+          "16": "none"
+        }
+      },
+      {
+        "name": "17",
+        "map": {
+          "1": "none",
+          "2": "none",
+          "3": "none",
+          "4": "none",
+          "5": "present",
+          "6": "none",
+          "7": "none",
+          "8": "none",
+          "9": "none",
+          "10": "none",
+          "11": "none",
+          "12": "none",
+          "13": "none",
+          "14": "none",
+          "15": "none",
+          "16": "none"
+        }
+      }
+    ]
+  }
+}

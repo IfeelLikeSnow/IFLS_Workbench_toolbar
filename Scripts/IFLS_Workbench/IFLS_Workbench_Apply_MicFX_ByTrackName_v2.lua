@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - IFLS_Workbench_Apply_MicFX_ByTrackName_v2.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: Apply MicFX By TrackName v2 (default profile)
 -- @version 0.1.0
 -- @author IFLS (ported from DF95)

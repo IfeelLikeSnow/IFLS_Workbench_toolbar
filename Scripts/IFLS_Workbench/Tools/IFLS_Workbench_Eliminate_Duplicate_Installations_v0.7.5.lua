@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/IFLS_Workbench_Eliminate_Duplicate_Installations_v0.7.5.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: Eliminate Duplicate Installations (Quarantine) v0.7.5
 -- @version 0.7.5
 -- @author IFLS

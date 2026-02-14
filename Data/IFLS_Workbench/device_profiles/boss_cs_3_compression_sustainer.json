@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "boss_cs_3_compression_sustainer",
+  "name_de": "Boss CS‑3 Compression Sustainer",
+  "manufacturer": "Boss",
+  "model": "CS‑3 Compression Sustainer",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Utility",
+    "Unterkategorie": "EQ & Dynamics (Pedal)",
+    "Kategorie-Typ": "EQ & Dynamics (Pedal)"
+  },
+  "priority_group": "routing",
+  "signal_role": [
+    "compressor",
+    "sustain",
+    "transient_control"
+  ],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• Input: 6,3 mm TS\n• Output: 6,3 mm TS",
+  "controls_raw_de": "Level\n• Tone\n• Attack\n• Sustain",
+  "controls": [
+    {
+      "name_en": "LEVEL",
+      "type": "knob",
+      "notes_de": "Ausgangspegel."
+    },
+    {
+      "name_en": "TONE",
+      "type": "knob",
+      "notes_de": "Höhenanteil/Brillanz."
+    },
+    {
+      "name_en": "ATTACK",
+      "type": "knob",
+      "notes_de": "Anschlag/Attack-Anteil (mehr = mehr Transient durchlassen)."
+    },
+    {
+      "name_en": "SUSTAIN",
+      "type": "knob",
+      "notes_de": "Kompressions-/Sustain-Menge."
+    },
+    {
+      "name_en": "CHECK Indicator",
+      "type": "led",
+      "notes_de": "Status + Battery Check."
+    },
+    {
+      "name_en": "Pedal Switch",
+      "type": "footswitch",
+      "notes_de": "On/Off."
+    },
+    {
+      "name_en": "INPUT Jack",
+      "type": "jack",
+      "notes_de": "Eingang; Einstecken schaltet Gerät an."
+    },
+    {
+      "name_en": "OUTPUT Jack",
+      "type": "jack",
+      "notes_de": "Ausgang."
+    },
+    {
+      "name_en": "AC Adaptor Jack",
+      "type": "power",
+      "notes_de": "Netzteilanschluss."
+    }
+  ],
+  "power_raw_de": "≈ 11 mA",
+  "notes_raw_de": "Sustain/Leveling",
+  "tech_raw_de": "Compressor",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://static.roland.com/assets/media/pdf/CS-3_M_deu02_W.pdf"
+  ],
+  "enriched": true,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": [
+    "Zu viel SUSTAIN kann Rauschen anheben.",
+    "Vor LoFi/Distortion kann Kompression Pumpen verstärken (gewollt bei IDM)."
+  ]
+}

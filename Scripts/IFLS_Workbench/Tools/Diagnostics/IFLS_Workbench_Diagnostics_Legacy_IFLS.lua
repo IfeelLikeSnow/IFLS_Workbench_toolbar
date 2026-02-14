@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/Diagnostics/IFLS_Workbench_Diagnostics_Legacy_IFLS.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS (compat stub): IFLS_Diagnostics.lua -> IFLS_Workbench_Diagnostics.lua
 -- @version 0.7.8
 -- @author IFLS

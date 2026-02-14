@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "controls_completeness": "manual_verified",
+    "manual_verified": true,
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "id": "amuzik_oem_rowin_vibrock_re_02",
+  "name_de": "Amuzik (OEM: Rowin) Vibrock (RE‑02)",
+  "manufacturer": "Amuzik (OEM: Rowin)",
+  "model": "Vibrock (RE‑02)",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Effektpedale",
+    "Unterkategorie": "Modulation",
+    "Kategorie-Typ": "Vibrato / Chorus (UniVibe)"
+  },
+  "priority_group": "routing",
+  "signal_role": [
+    "chorus",
+    "modulation",
+    "psychedelic",
+    "tremolo",
+    "vibrato"
+  ],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In (TS)\n• Out (TS)",
+  "controls_raw_de": "Speed\n• Depth\n• Level\n• VIBE (On/Off)",
+  "controls": [
+    {
+      "name_en": "SPEED",
+      "type": "knob",
+      "notes_de": "Modulationsgeschwindigkeit."
+    },
+    {
+      "name_en": "DEPTH",
+      "type": "knob",
+      "notes_de": "Modulationstiefe."
+    },
+    {
+      "name_en": "LEVEL",
+      "type": "knob",
+      "notes_de": "Output/Mix (je nach Version)."
+    },
+    {
+      "name_en": "MODE (Chorus/Vibrato/Tremolo)",
+      "type": "switch",
+      "notes_de": "Mode-Umschaltung (Produktbeschreibungen nennen Chorus/Tremolo/Vibe)."
+    },
+    {
+      "name_en": "Footswitch",
+      "type": "footswitch",
+      "notes_de": "On/Off (True Bypass)."
+    },
+    {
+      "name_en": "Status LED",
+      "type": "led",
+      "notes_de": "Effekt an/aus."
+    },
+    {
+      "name_en": "IN/OUT jacks",
+      "type": "jack",
+      "notes_de": "Mono I/O."
+    },
+    {
+      "name_en": "DC IN 9V",
+      "type": "power",
+      "notes_de": "9V DC Versorgung (Center negative üblich)."
+    }
+  ],
+  "power_raw_de": "9 V DC (Center‑Negativ)\n• True Bypass",
+  "notes_raw_de": "Chorus‑/Tremolo‑/Vibe‑Modulation\nVIBE‑Schalter (Kneading/Vibe)\nTrue Bypass\n• Mini‑Gehäuse",
+  "tech_raw_de": "Modulation (Mini)",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://reverb.com/item/63510536-rowin-vibrock-vibrato-vibe-chorus-settings-re-02-true-bypass",
+    "https://www.soundhouse.co.jp/en/products/detail/item/339792/"
+  ],
+  "enriched": true,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": [],
+  "controls_contextual": {
+    "specs": {
+      "power_v_dc": 9,
+      "polarity": "center_negative"
+    }
+  },
+  "warnings_de": [
+    "Power-Specs ergänzt als Default (9V center-negative) basierend auf vorhandenen Quellen-Text; bitte gegen Manual/Panel verifizieren."
+  ]
+}

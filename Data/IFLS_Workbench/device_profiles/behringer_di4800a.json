@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "behringer_di4800a",
+  "name_de": "Behringer DI4800A",
+  "manufacturer": "Behringer",
+  "model": "DI4800A",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "19'' Geräte",
+    "Unterkategorie": "DI / Interface / Routing",
+    "Kategorie-Typ": "DI / Interface / Routing"
+  },
+  "priority_group": "routing",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• 4× Inputs (TS) + 4× Link (TS)\n• 4× XLR Out (bal.)",
+  "controls_raw_de": "Boost\n• Pad\n• Ground",
+  "controls": [
+    {
+      "name_en": "Boost",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Pad",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Ground",
+      "type": "unknown",
+      "notes_de": ""
+    }
+  ],
+  "power_raw_de": "≈ 150 mA",
+  "notes_raw_de": "Rack 1U DI‑Bank",
+  "tech_raw_de": "4‑Ch DI",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": []
+}

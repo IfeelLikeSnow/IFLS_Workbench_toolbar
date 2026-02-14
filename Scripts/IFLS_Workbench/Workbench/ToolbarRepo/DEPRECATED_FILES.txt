@@ -1,0 +1,10 @@
+Legacy/omitted files:
+- README.md  ->  README_MERGED.md
+- Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Fieldrec_Smart_AUTO_Segment.lua  ->  Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Fieldrec_SmartSlice_ModeMenu.lua
+- Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Fieldrec_Smart_HITS.lua  ->  Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Fieldrec_SmartSlice_ModeMenu.lua
+- Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Fieldrec_Smart_MODEMENU.lua  ->  Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Fieldrec_SmartSlice_ModeMenu.lua
+- Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Fieldrec_Smart_TEXTURES.lua  ->  Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Fieldrec_SmartSlice_ModeMenu.lua
+- Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Smart_PrintBus_Then_Slice_HITS.lua  ->  Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Smart_PrintBus_Then_Slice.lua
+- Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Smart_PrintBus_Then_Slice_MODEMENU.lua  ->  Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Smart_PrintBus_Then_Slice.lua
+- Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Smart_PrintBus_Then_Slice_TEXTURES.lua  ->  Scripts/IFLS_Workbench/Slicing/IFLS_Workbench_Slice_Smart_PrintBus_Then_Slice.lua
+- Scripts/IFLS_Workbench/Slicing/_IFLSWB_Fieldrec_SmartSlice_Core.lua  ->  Scripts/IFLS_Workbench/Slicing/IFLSWB_Fieldrec_SmartSlicer_Core.lua

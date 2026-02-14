@@ -1,0 +1,14 @@
+{
+  "video_id": "p2xxmulI-o4",
+  "source_url": "https://youtu.be/p2xxmulI-o4",
+  "created_at": "2026-02-02T21:10:40Z",
+  "devices": [
+    "ginean_modulator_ringmod"
+  ],
+  "claims": [
+    {
+      "claim_de": "SUNK entspricht Distortion Amount/Level; FREQ=Carrier, RING=Amount.",
+      "confidence": "high"
+    }
+  ]
+}

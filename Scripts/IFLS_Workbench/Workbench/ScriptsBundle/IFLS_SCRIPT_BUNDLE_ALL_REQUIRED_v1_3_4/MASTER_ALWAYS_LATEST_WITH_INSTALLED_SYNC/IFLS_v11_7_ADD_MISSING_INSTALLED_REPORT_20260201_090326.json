@@ -1,0 +1,27 @@
+{
+  "timestamp": "20260201_090326",
+  "installed_csv": "IFLS_INSTALLED_FX_WITH_FORMAT_FOLDERS_PREFERRED_20260201_094232.csv",
+  "always_latest_zip": "IFLS_ALWAYS_LATEST_v11_7_20260131_SINGLE_TRUTH_FINAL_AFTER_NEXT200_NEW6_INTEGRITYFIX2.zip",
+  "master_rows_before": 1770,
+  "master_rows_after": 1808,
+  "added_rows": 38,
+  "added_by_vendor": {
+    "IEM": 21,
+    "IFLS Workbench": 15,
+    "ReaTeam": 1,
+    "Glitchmachines": 1
+  },
+  "added_by_primary_category_v11": {
+    "Spatial/3D_Immersive": 21,
+    "Saturation/Character": 5,
+    "MIDI/Utility": 3,
+    "Modulation/AutoPan": 2,
+    "Analysis/Metering": 2,
+    "Dynamics/GateExpander": 2,
+    "Glitch/Granular": 1,
+    "Time/GranularProcessor": 1,
+    "Instrument/Synth_Granular_SampleBased": 1
+  },
+  "web_verified_added": 22,
+  "auto_strict_added": 16
+}

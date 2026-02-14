@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Slicing/IFLSWB_Fieldrec_SmartSlicer_Core.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLSWB Fieldrec SmartSlicer Core (v3) - iterative threshold calibration + hysteresis/backtrack + HQ zero-cross snap
 -- @version 3.0.0
 -- @author IFLS Workbench (generated)

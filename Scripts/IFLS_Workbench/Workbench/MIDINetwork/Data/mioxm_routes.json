@@ -1,0 +1,11 @@
+{
+  "about": "Optional mioXM routing dump for Project Doctor. Fill routes with your Auracle X routing. This file is NOT exported automatically; create manually.",
+  "routes": [
+    {
+      "src": "DIN IN 4",
+      "dst": "DIN OUT 4",
+      "filters": "<optional>",
+      "notes": "If present, Doctor will warn about potential feedback loops."
+    }
+  ]
+}

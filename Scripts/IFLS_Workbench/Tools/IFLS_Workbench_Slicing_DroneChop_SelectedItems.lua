@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/IFLS_Workbench_Slicing_DroneChop_SelectedItems.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: Drone Chop selected material (glue -> time chops with fades)
 -- @version 0.7.6
 -- @author IFLS

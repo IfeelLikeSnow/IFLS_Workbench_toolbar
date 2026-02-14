@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "controls_completeness": "unknown",
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "id": "irin_talent_octave",
+  "name_de": "IRIN Talent Octave",
+  "manufacturer": "IRIN",
+  "model": "Talent Octave",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Effektpedale",
+    "Unterkategorie": "Pitch / Synth / Specials",
+    "Kategorie-Typ": "Octaver"
+  },
+  "priority_group": "synth",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In (TS)\n• Out (TS)",
+  "controls_raw_de": "• -1 OCT\n• -2 OCT\n• +1 OCT\n• Tone",
+  "controls": [
+    {
+      "name_en": "-1 OCT",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "-2 OCT",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "+1 OCT",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Tone",
+      "type": "unknown",
+      "notes_de": "(generisch) Bitte verifizieren mit Manual/Foto/Video.",
+      "function_de": "Klangregelung/Filter (heller/dunkler)"
+    }
+  ],
+  "power_raw_de": "9 V DC",
+  "notes_raw_de": "3-stimmiger Octaver (-1/-2/+1 Okt.) mit Tone-Regler\nFuzz + Oktave",
+  "tech_raw_de": "Octaver + Fuzz",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "source",
+    "pads",
+    "bass",
+    "leads",
+    "drone_source"
+  ],
+  "danger_zones_de": [],
+  "controls_contextual": {},
+  "warnings_de": [
+    "Power-Specs fehlen (To-do): bitte Manual/Panel/Listing verlinken."
+  ]
+}

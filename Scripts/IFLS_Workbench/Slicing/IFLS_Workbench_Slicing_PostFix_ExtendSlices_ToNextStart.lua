@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Slicing/IFLS_Workbench_Slicing_PostFix_ExtendSlices_ToNextStart.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: IFLS_Workbench_Slicing_PostFix_ExtendSlices_ToNextStart
 -- @version 1.0.0
 
@@ -7,7 +11,6 @@
 -- @about
 --   Fixes micro-slices by extending each selected item to the next selected item's start (minus gap).
 --   Use after Smart Slicing (PrintBus) to restore meaningful slice lengths.
--- @provides [main] .
 
 local GAP_MS     = 5      -- gap between slices (avoid overlap)
 local MIN_LEN_MS = 40     -- never shorter than this

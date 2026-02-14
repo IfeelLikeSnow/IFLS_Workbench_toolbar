@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Slicing/IFLS_Workbench_Slicing_ZeroCross_PostFix.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench - Slicing: ZeroCross PostFix (safe fades)
 -- @author IFLS / DF95
 -- @version 0.7.6

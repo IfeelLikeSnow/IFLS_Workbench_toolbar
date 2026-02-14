@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "oxi_instruments_oxi_one_mkii",
+  "name_de": "OXI Instruments OXI ONE MKII",
+  "manufacturer": "OXI Instruments",
+  "model": "OXI ONE MKII",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Groovebox / Sequencer",
+    "Unterkategorie": "Performance‑Sequencer",
+    "Kategorie-Typ": "Performance‑Sequencer"
+  },
+  "priority_group": "synth",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• Audio In/Out\n• Phones (3,5 mm)\n• MIDI/USB",
+  "controls_raw_de": "8 Sequencer\n• Multi‑Modi\n• Song/Arr",
+  "controls": [
+    {
+      "name_en": "8 Sequencer",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Multi‑Modi",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Song/Arr",
+      "type": "unknown",
+      "notes_de": ""
+    }
+  ],
+  "power_raw_de": "USB / 9 V DC",
+  "notes_raw_de": "CV/MIDI/BT",
+  "tech_raw_de": "Performance‑Sequencer",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "source",
+    "pads",
+    "bass",
+    "leads",
+    "drone_source"
+  ],
+  "danger_zones_de": []
+}

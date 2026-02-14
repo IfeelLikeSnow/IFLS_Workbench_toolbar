@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "steinberg_ur22mkii",
+  "name_de": "Steinberg UR22mkII",
+  "manufacturer": "Steinberg",
+  "model": "UR22mkII",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "19'' Geräte",
+    "Unterkategorie": "Audio Interface",
+    "Kategorie-Typ": "Audio Interface"
+  },
+  "priority_group": "routing",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• Inputs: 2× MIC/LINE combo (XLR/6.3mm)\n• Input 2: HI‑Z switch (Gitarre/Bass)\n• Outputs: 2× LINE OUT L/R (6.3mm, impedance balanced)\n• PHONES (stereo)\n• MIDI In/Out (5‑pin DIN)\n• USB 2.0 to computer/iPad\n• 5V DC in (Micro‑USB‑B)",
+  "controls_raw_de": "Input 1 Gain\n• Input 2 Gain\n• HI‑Z switch (Input 2)\n• +48V Phantom\n• MIX (Input↔DAW)\n• OUTPUT (Line Out)\n• PHONES level",
+  "controls": [
+    {
+      "name_en": "Input 1 Gain",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Input 2 Gain",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "HI‑Z switch (Input 2)",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "+48V Phantom",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "MIX (Input↔DAW)",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "OUTPUT (Line Out)",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "PHONES level",
+      "type": "unknown",
+      "notes_de": ""
+    }
+  ],
+  "power_raw_de": "USB 2.0 bus‑powered oder 5V DC (Micro‑USB‑B)\n• Power requirements: 2.5 W\n• 5V DC: 4.8–5.2 V, ≥0.5 A",
+  "notes_raw_de": "2× Class‑A D‑PRE mic preamps\n• Direct monitoring (MIX knob)\n• Loopback function\n• MIDI I/O\nQuelle: https://download.steinberg.net/downloads_hardware/UR22mkII/UR22mkII_documentation/ur22mkII_en_om_a0.pdf ; https://download.steinberg.net/downloads_hardware/UR22mkII/UR22mkII_documentation/ur22mkII_en_gs_a0.pdf ; https://www.steinberg.net/audio-interfaces/ur22c-recording-pack/ur22mkii/",
+  "tech_raw_de": "2×2 USB 2.0 Audio Interface (24‑bit/192 kHz)",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": []
+}

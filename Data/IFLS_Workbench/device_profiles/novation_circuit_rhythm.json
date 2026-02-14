@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx"
+  },
+  "id": "novation_circuit_rhythm",
+  "name_de": "Novation Circuit Rhythm",
+  "manufacturer": "Novation",
+  "model": "Circuit Rhythm",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Groovebox / Sequencer",
+    "Unterkategorie": "Groovebox / Sampler",
+    "Kategorie-Typ": "Groovebox / Sampler"
+  },
+  "priority_group": "synth",
+  "signal_role": [],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• Inputs: 2× 6,3 mm (L/R)\n• Outputs: 2× 6,3 mm (L/R), 3,5 mm Phones\n• MIDI In/Out/Thru (TRS‑A)\n• USB‑C, microSD",
+  "controls_raw_de": "8 Tracks\n• Probability\n• Mutate\n• Grid FX\n• Pattern Chain",
+  "controls": [
+    {
+      "name_en": "8 Tracks",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Probability",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Mutate",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Grid FX",
+      "type": "unknown",
+      "notes_de": ""
+    },
+    {
+      "name_en": "Pattern Chain",
+      "type": "unknown",
+      "notes_de": ""
+    }
+  ],
+  "power_raw_de": "USB‑C 5 V\nUSB‑C\n• Li‑Ion Akku (bis ~4 h)",
+  "notes_raw_de": "Sample Import via Novation Components\nSample‑Zeit: 228 s/Pack (max. 32 s/Pad)\nmicroSD‑Speicher\nGrid FX: Reverser, Beat Repeat, u.a.",
+  "tech_raw_de": "Sampler/Groovebox",
+  "patchbay_name": "",
+  "manual_sources": [],
+  "enriched": false,
+  "best_for_tags": [
+    "source",
+    "pads",
+    "bass",
+    "leads",
+    "drone_source"
+  ],
+  "danger_zones_de": []
+}

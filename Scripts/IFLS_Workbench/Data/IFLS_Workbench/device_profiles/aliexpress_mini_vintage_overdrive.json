@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "controls_completeness": "manual_verified",
+    "manual_verified": true,
+    "panel_verified": true,
+    "panel_verified_at_utc": "2026-02-01T21:22:43Z",
+    "variant_may_differ": true,
+    "web_verified": true,
+    "web_verified_at_utc": "2026-02-02T22:17:08Z",
+    "web_sources": [
+      "Evidence/web_sources/v28_sources.md"
+    ],
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "id": "aliexpress_mini_vintage_overdrive",
+  "name_de": "AliExpress Mini Vintage Overdrive",
+  "manufacturer": "AliExpress",
+  "model": "Mini Vintage Overdrive",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Effektpedale",
+    "Unterkategorie": "Distortion / Overdrive / Fuzz & Bitcrushing",
+    "Kategorie-Typ": "Overdrive"
+  },
+  "priority_group": "routing",
+  "signal_role": [
+    "clipping_modes",
+    "overdrive",
+    "tone_shaping",
+    "ts_style"
+  ],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In (TS)\n• Out (TS)",
+  "controls_raw_de": "Drive\n• Tone\n• Volume",
+  "controls": [
+    {
+      "name_en": "DRIVE",
+      "type": "knob",
+      "notes_de": "Zerrgrad (TS-Style).",
+      "name_de": "Drive",
+      "function_de": "Gain/Overdrive"
+    },
+    {
+      "name_en": "TONE",
+      "type": "knob",
+      "notes_de": "Klangfarbe/Höhen (Tilt).",
+      "name_de": "Tone",
+      "function_de": "Klangregelung"
+    },
+    {
+      "name_en": "VOLUME",
+      "type": "knob",
+      "notes_de": "Ausgangspegel.",
+      "name_de": "Volume",
+      "function_de": "Ausgangspegel"
+    },
+    {
+      "name_en": "Bypass Footswitch",
+      "type": "footswitch",
+      "notes_de": "True bypass."
+    },
+    {
+      "name_en": "Status LED",
+      "type": "led",
+      "notes_de": "Effekt an/aus."
+    },
+    {
+      "name_en": "INPUT/OUTPUT Jacks",
+      "type": "jack",
+      "notes_de": "Mono I/O."
+    },
+    {
+      "name_en": "DC IN 9V",
+      "type": "power",
+      "notes_de": "9V DC."
+    }
+  ],
+  "power_raw_de": "≈ 8 mA",
+  "notes_raw_de": "Mid-Boost, Crunch",
+  "tech_raw_de": "Screamer-OD",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://reverb.com/de/item/82928297-irin-vintage-overdrive-guitar-pedal",
+    "https://m.cafago.com/en/p-i9050.html"
+  ],
+  "enriched": true,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": [
+    "Als Insert: Output/Volume kann stark boosten → Return-Pegel checken."
+  ],
+  "variant_notes_de": "Panel-verifiziert: keine Mode/Clipping-Switches; reiner 3-Knob Overdrive. Hinweis: Dieses Profil kann eine OEM/Listing-Variante sein. Für dein grünes 3-Knob Pedal nutze das OEM-Panel-Profil. | WV: Listings nennen 3-Regler Layout Drive/Volume/Tone + True Bypass.",
+  "controls_verified_by_image": true,
+  "controls_contextual": {
+    "specs": {
+      "power_v_dc": 9,
+      "polarity": "center_negative"
+    }
+  },
+  "warnings_de": [
+    "Power-Specs ergänzt als Default (9V center-negative) basierend auf vorhandenen Quellen-Text; bitte gegen Manual/Panel verifizieren."
+  ]
+}

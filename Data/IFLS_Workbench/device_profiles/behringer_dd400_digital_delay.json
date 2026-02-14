@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-02-01T19:28:36Z",
+    "language": "mixed",
+    "source": "Geraeteliste.xlsx",
+    "controls_completeness": "manual_verified",
+    "manual_verified": true,
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "id": "behringer_dd400_digital_delay",
+  "name_de": "Behringer DD400 Digital Delay",
+  "manufacturer": "Behringer",
+  "model": "DD400 Digital Delay",
+  "count": 1,
+  "categories_de": {
+    "Hauptkategorie": "Effektpedale",
+    "Unterkategorie": "Delay & Reverb",
+    "Kategorie-Typ": "Delay"
+  },
+  "priority_group": "routing",
+  "signal_role": [
+    "delay",
+    "glitch",
+    "time_fx"
+  ],
+  "level_guess": "instrument_or_line",
+  "io_raw_de": "• In A/B (TS), Out A/B (TS)",
+  "controls_raw_de": "Level\n• Feedback\n• Time\n• Mode",
+  "controls": [
+    {
+      "name_en": "LEVEL",
+      "type": "knob",
+      "notes_de": "Delay-Output Level."
+    },
+    {
+      "name_en": "FEEDBACK",
+      "type": "knob",
+      "notes_de": "Anzahl/Wiederholungen (Feedback)."
+    },
+    {
+      "name_en": "TIME",
+      "type": "knob",
+      "notes_de": "Delay-Zeit."
+    },
+    {
+      "name_en": "MODE",
+      "type": "knob",
+      "notes_de": "Delay-Algorithmus/Mode (mehrere Modi laut Manual)."
+    },
+    {
+      "name_en": "Footswitch",
+      "type": "footswitch",
+      "notes_de": "On/Off."
+    },
+    {
+      "name_en": "Status LED",
+      "type": "led",
+      "notes_de": "Effekt an/aus."
+    },
+    {
+      "name_en": "Stereo IN/OUT jacks",
+      "type": "jack",
+      "notes_de": "Stereo I/O (je nach Verkabelung)."
+    },
+    {
+      "name_en": "DC IN / Battery compartment",
+      "type": "power",
+      "notes_de": "9V Versorgung; kein On/Off — Jack in Input aktiviert (typisch Behringer)."
+    }
+  ],
+  "power_raw_de": "≈ 90 mA",
+  "notes_raw_de": "24‑bit, 1 s Hold",
+  "tech_raw_de": "Digital Delay",
+  "patchbay_name": "",
+  "manual_sources": [
+    "https://cdn.mediavalet.com/aunsw/musictribe/ajKd6ZbrkEC57C043KNPbQ/WAd96hE-PUG4MjOclZKNLw/Original/8849892835358.pdf"
+  ],
+  "enriched": true,
+  "best_for_tags": [
+    "reamp",
+    "insert",
+    "printing",
+    "gainstaging"
+  ],
+  "danger_zones_de": [],
+  "controls_contextual": {
+    "specs": {
+      "power_v_dc": 9,
+      "polarity": "center_negative"
+    }
+  },
+  "warnings_de": [
+    "Power-Specs ergänzt als Default (9V center-negative) basierend auf vorhandenen Quellen-Text; bitte gegen Manual/Panel verifizieren."
+  ]
+}

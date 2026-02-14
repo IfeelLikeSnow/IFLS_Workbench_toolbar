@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/JSFX/IFLS_Workbench_Menu_JSFX_DSP_Tools.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: JSFX Menu (DSP Tools)
 -- @version 0.7.8
 -- @author IFLS
@@ -13,6 +17,7 @@
 
 local r = reaper
 
+local SafeApply = require("IFLS_Workbench/Engine/IFLS_SafeApply")
 local FX = {
   {name="IFLS Workbench - Drone Granular Texture"},
   {name="IFLS Workbench - Drum RR & Velocity Mapper (Phase 112)"},
@@ -70,14 +75,10 @@ if #targets == 0 then
   return
 end
 
-r.Undo_BeginBlock()
-r.PreventUIRefresh(1)
-
+return SafeApply.run("IFLS: IFLS Workbench Menu JSFX DSP Tools", function()
 for _,tr in ipairs(targets) do
   insert_fx(tr, choice)
 end
 
-r.PreventUIRefresh(-1)
 r.TrackList_AdjustWindows(false)
 r.UpdateArrange()
-r.Undo_EndBlock("IFLS: Insert JSFX - "..choice, -1)

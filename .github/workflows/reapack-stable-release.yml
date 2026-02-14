@@ -1,0 +1,31 @@
+name: ReaPack Stable - Build index.xml on tag
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+jobs:
+  stable:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+
+      - name: Install reapack-index
+        run: gem install reapack-index
+
+      - name: Generate stable index.xml
+        run: reapack-index .
+
+      - name: Upload stable index.xml artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: index.xml
+          path: index.xml

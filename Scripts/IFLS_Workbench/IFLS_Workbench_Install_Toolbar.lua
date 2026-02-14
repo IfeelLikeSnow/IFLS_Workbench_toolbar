@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - IFLS_Workbench_Install_Toolbar.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: Install helper (register scripts + toolbar setup)
 -- @version 1.2.1
 -- @author I feel like snow

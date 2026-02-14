@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/IFLS_Workbench_Reamp_Print_Toggle_From_FXBus.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench - Reamp Print Toggle (Topology Auto-Find)
 -- @version 1.2.0
 -- @author IFLS Workbench
@@ -16,6 +20,7 @@
 
 local r = reaper
 
+local SafeApply = require("IFLS_Workbench/Engine/IFLS_SafeApply")
 ----------------------------
 -- helpers
 ----------------------------
@@ -401,9 +406,8 @@ end
 -- main
 ----------------------------
 local function main()
-  r.Undo_BeginBlock()
-
-  -- try: if a REAMP track exists and has stored FX guid, use it
+  return SafeApply.run("IFLS: IFLS Workbench Reamp Print Toggle From FXBus", function()
+-- try: if a REAMP track exists and has stored FX guid, use it
   local fx_bus, coloring_bus, master_bus, conf = find_buses_topology()
 
   local reamp = fx_bus and find_reamp_track_near(fx_bus) or nil
@@ -437,7 +441,7 @@ local function main()
   if not fx_bus then
     r.MB("No FX bus could be detected via routing topology.\n\nTip: Select your FX bus track and run again.", "IFLSWB Reamp Print", 0)
     set_toggle_state(false)
-    r.Undo_EndBlock("IFLSWB: Reamp Print Toggle (FX bus not found)", -1)
+    ", -1)
     return
   end
 
@@ -449,7 +453,7 @@ local function main()
       "Detected candidate: "..get_name(fx_bus)
     r.MB(msg, "IFLSWB Reamp Print (Safety)", 0)
     set_toggle_state(false)
-    r.Undo_EndBlock("IFLSWB: Reamp Print Toggle (Ambiguous)", -1)
+    ", -1)
     return
   end
 
@@ -457,14 +461,14 @@ local function main()
   if reamp and (r.GetMediaTrackInfo_Value(reamp, "I_RECARM") or 0) > 0 then
     finalize(fx_bus, reamp, coloring_bus, master_bus)
     set_toggle_state(false)
-    r.Undo_EndBlock("IFLSWB: Reamp Print Toggle (Finalize)", -1)
+    ", -1)
   else
     if not reamp then
       local newtr, err = create_and_arm(fx_bus, coloring_bus or master_bus)
       if not newtr then
         r.MB("Failed to create REAMP PRINT track.\n\n"..tostring(err), "IFLSWB Reamp Print", 0)
         set_toggle_state(false)
-        r.Undo_EndBlock("IFLSWB: Reamp Print Toggle (Create failed)", -1)
+        ", -1)
         return
       end
       reamp = newtr
@@ -483,7 +487,7 @@ local function main()
       set_ext(reamp, "IFLSWB_REAMP_MASGUID", (master_bus and r.GetTrackGUID(master_bus)) or "")
     end
     set_toggle_state(true)
-    r.Undo_EndBlock("IFLSWB: Reamp Print Toggle (Create/Arm)", -1)
+    ", -1)
   end
 
   r.UpdateArrange()

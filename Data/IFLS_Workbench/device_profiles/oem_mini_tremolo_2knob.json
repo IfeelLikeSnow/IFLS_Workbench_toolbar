@@ -1,0 +1,55 @@
+{
+  "id": "oem_mini_tremolo_2knob",
+  "name_de": "OEM Mini Tremolo (2-Knob)",
+  "type": "effect_pedal",
+  "enriched": true,
+  "controls": [
+    {
+      "name_en": "INTENSITY",
+      "type": "knob",
+      "notes_de": "Tremolo Tiefe."
+    },
+    {
+      "name_en": "RATE",
+      "type": "knob",
+      "notes_de": "Tremolo Geschwindigkeit."
+    },
+    {
+      "name_en": "Bypass Footswitch",
+      "type": "footswitch",
+      "notes_de": "True bypass."
+    },
+    {
+      "name_en": "Status LED",
+      "type": "led",
+      "notes_de": "Effekt an/aus."
+    },
+    {
+      "name_en": "INPUT/OUTPUT Jacks",
+      "type": "jack",
+      "notes_de": "Mono I/O."
+    },
+    {
+      "name_en": "DC IN 9V",
+      "type": "power",
+      "notes_de": "9V DC."
+    }
+  ],
+  "signal_role": [
+    "tremolo",
+    "vintage",
+    "movement"
+  ],
+  "variant_notes_de": "OEM Mini Tremolo ohne Wave-Regler (Golden Bull / AliExpress Typ).",
+  "meta": {
+    "panel_verified": true,
+    "panel_verified_at_utc": "2026-02-01T21:29:12Z",
+    "controls_completeness": "panel_verified",
+    "updated_at_utc": "2026-02-03T04:33:51Z"
+  },
+  "controls_verified_by_image": true,
+  "controls_contextual": {},
+  "warnings_de": [
+    "Power-Specs fehlen (To-do): bitte Manual/Panel/Listing verlinken."
+  ]
+}

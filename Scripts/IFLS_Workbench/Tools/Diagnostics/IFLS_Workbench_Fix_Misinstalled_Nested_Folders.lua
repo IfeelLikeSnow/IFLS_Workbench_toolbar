@@ -1,3 +1,7 @@
+-- @description IFLS Workbench - Tools/Diagnostics/IFLS_Workbench_Fix_Misinstalled_Nested_Folders.lua
+-- @version 0.63.0
+-- @author IfeelLikeSnow
+
 -- @description IFLS Workbench: Fix Misinstalled Nested Folders (move/merge to ResourcePath root)
 -- @version 0.8.0
 -- @author IFLS
